@@ -3,7 +3,7 @@
   <channel>
     <title>Jekyll Latex</title>
     <description>A pretty good Jekyll theme</description>
-    <link>https://zhangchenchengsjtu.github.io/website</link>
+    <link>http://localhost:4000/website</link>
     
       
         <item>
@@ -100,8 +100,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/KerHom_KerExt_TP</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/KerHom_KerExt_TP</guid>
+          <link>http://localhost:4000/website/posts/KerHom_KerExt_TP</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/KerHom_KerExt_TP</guid>
         </item>
       
     
@@ -196,8 +196,8 @@ $$&lt;/p&gt;
 &lt;p&gt;待补充.&lt;/p&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Happel_Derived_Equivalence</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Happel_Derived_Equivalence</guid>
+          <link>http://localhost:4000/website/posts/Happel_Derived_Equivalence</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Happel_Derived_Equivalence</guid>
         </item>
       
     
@@ -281,8 +281,105 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Hereditary_TP_Split</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Hereditary_TP_Split</guid>
+          <link>http://localhost:4000/website/posts/Hereditary_TP_Split</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Hereditary_TP_Split</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Gr_iso_is_complete_iso</title>
+          <description>
+</description>
+          <pubDate>2025-04-27T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/website/posts/Gr_Iso_is_Complete_Iso</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Gr_Iso_is_Complete_Iso</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>关于谱序列与滤过复形等</title>
+          <description>&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;滤过完备化具有如下重要的性质:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\frac{𝐌}{𝐅 ^p𝐌} ≃ \frac{M}{F^p M}$ 是同构, 作为推论, $\frac{𝐅^{p-r} 𝐌}{𝐅 ^p𝐌} ≃ \frac{F^{p-r}M}{F^p M}$.&lt;/li&gt;
+    &lt;li&gt;$𝐅^p𝐌$ 穷竭当且仅当 $F^p M$ 穷竭.&lt;/li&gt;
+    &lt;li&gt;$𝐅^p 𝐌$ 是完备的 Hausdorff 的滤过.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;$\frac{𝐌}{𝐅 ^p𝐌} ≃ \frac{M}{F^p M}$ 是同构, 作为推论, $\frac{𝐅^{p-r} 𝐌}{𝐅 ^p𝐌} ≃ \frac{F^{p-r}M}{F^p M}$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;先将 $𝐅^p𝐌 ↪ 𝐌$ 加入正合列. 自然的想法是&lt;/p&gt;
+  &lt;p&gt;$$
+\begin{bmatrix}
+θ_p: &amp;0 &amp; →  &amp; \frac{F^{p} M}{F^{p+l} M} &amp; →  &amp; \frac{M}{F^{p+l} M} &amp; →  &amp; \frac{M}{F^p M} &amp; \rightarrow  &amp; 0\\
+⇓&amp; &amp;  &amp; ⇓ &amp;  &amp; ⇓  &amp;  &amp; ⇓ &amp;  &amp; \\
+\varprojlim_l (θ_p)&amp;0 &amp; → &amp; \mathbf F^p \mathbf M &amp; → &amp; \mathbf M &amp; → &amp; \frac{M}{F^p M} &amp; → &amp; \varprojlim ^1 \frac{F^{p} M}{F^{p+l} M} &amp; → &amp; \cdots
+\end{bmatrix}
+$$&lt;/p&gt;
+  &lt;p&gt;依照导出正合列, 应有&lt;/p&gt;
+  &lt;p&gt;\begin{equation} \cdots → \varprojlim_l {}^1 F^p M → \varprojlim_l {}^1 \frac{F^{p} M}{F^{p+l} M} → 0 \end{equation}&lt;/p&gt;
+  &lt;p&gt;由常数项的导出极限是 $0$, 以上两项均为 $0$. 此时, $\varprojlim_l (θ_p)$ 是短正合列. &lt;br /&gt; &lt;br /&gt; 作为推论, 由同构定理知 \begin{equation} \frac{𝐅^{p-r} 𝐌}{𝐅 ^p𝐌} ≃ \frac{𝐌 / 𝐅 ^p𝐌}{𝐌 / 𝐅^{p-r} 𝐌}≃ \frac{M / F^p M}{M / F^{p-r}M} ≃ \frac{F^{p-r}M}{F^p M}. \end{equation}&lt;/p&gt;
+  &lt;p&gt;这说明完备化态射 $α : M → 𝐌$ 给出同构:&lt;/p&gt;
+  &lt;p&gt;$$
+\mathrm{Gr}_∙(α) : \mathrm{Gr}_∙(M) → \mathrm{Gr}_∙(𝐌)
+$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;$𝐅^p𝐌$ 穷竭当且仅当 $F^p M$ 穷竭.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;穷竭来自滤过余极限的正合性: \begin{equation} \frac{M}{\varinjlim F^p M} ≃ \varinjlim \frac{M}{ F^p M} ≃ \varinjlim \frac{𝐌 }{ 𝐅 ^p 𝐌 } ≃ \frac{𝐌 }{\varinjlim 𝐅 ^p 𝐌}. \end{equation} 左端为 $0$ 当且仅当右端亦然.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;任意滤过的完备化 $(𝐅^p 𝐌)_{p ∈ ℤ}$ 确实是完备的 Hausdorff 的滤过.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;考虑以下正合列&lt;/p&gt;
+  &lt;p&gt;$$
+\begin{bmatrix}
+ψ_p :&amp;    0 &amp; \to &amp; \mathbf F^p \mathbf M &amp; \to &amp; \mathbf M &amp; \to &amp; \frac{M}{F^p M} &amp; \to &amp; 0\\
+⇓ &amp;    &amp;  &amp; ⇓ &amp;  &amp; ⇓ &amp; &amp; ⇓ &amp;  &amp; \\
+\varprojlim _p(ψ_p) : &amp;  0 &amp; \to &amp; \mathbf F^p \mathbf M &amp; \to &amp; \mathbf M &amp; \to &amp; \frac{M}{F^p M} &amp; \to &amp; → &amp; \varprojlim_p ^1\mathbf F^p \mathbf M &amp; → &amp; \cdots
+\end{bmatrix}
+$$&lt;/p&gt;
+  &lt;p&gt;中间 $\mathbf M ≃ \varprojlim_p \frac{M}{F^p M}$ 是同构, 故首尾两项消失.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-27T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/website/posts/FFX_vs_FX</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/FFX_vs_FX</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>滤过完备当且仅当 $\varprojlim {}^1$ 消失</title>
+          <description>&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Complete_Filtration&quot;&gt;证明&lt;/a&gt;) 完备蕴含 Haussdorff. 完备当且仅当 $\varprojlim ^{0,1} F^p M = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;采用导出极限的定义, 考虑正合列系统 \begin{equation} θ _p : 0 → F^pM → M → \frac{M}{F^p M} → 0. \end{equation} 此时有四项短正合列 (由 $\varprojlim{}^1M = 0$): \begin{equation} 0 → \varprojlim F^pM → M → \varprojlim \frac{M}{F^p M} → \varprojlim{}^1 F^pM → 0. \end{equation} 该滤过是完备的, 当且仅当中项 $M → \varprojlim \frac{M}{F^p M}$ 是同构. 此时&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;完备等价于 $\varprojlim ^{0,1} F^p M = 0$.&lt;/li&gt;
+    &lt;li&gt;完备蕴含 Hausdorff, 即 $\varprojlim F^p M = 0$.&lt;/li&gt;
+    &lt;li&gt;假定滤过 Hausdorff, 则完备当且仅当 $\varprojlim ^{1} F^p M = 0$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-27T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/website/posts/Complete_Filtration</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Complete_Filtration</guid>
         </item>
       
     
@@ -291,6 +388,11 @@ $$&lt;/p&gt;
           <title>关于谱序列与滤过复形等</title>
           <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#abstract&quot; id=&quot;markdown-toc-abstract&quot;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#谱序列&quot; id=&quot;markdown-toc-谱序列&quot;&gt;谱序列&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#谱序列的格式&quot; id=&quot;markdown-toc-谱序列的格式&quot;&gt;谱序列的格式&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#滤过复形构造谱序列&quot; id=&quot;markdown-toc-滤过复形构造谱序列&quot;&gt;滤过复形构造谱序列&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;abstract&quot;&gt;
@@ -311,14 +413,293 @@ $$&lt;/p&gt;
       &lt;li&gt;函子同构 $(- ⊗{}_R P) ≃ (P_R, -)$;&lt;/li&gt;
       &lt;li&gt;等等.&lt;/li&gt;
     &lt;/ol&gt;
-    &lt;p&gt;&lt;strong&gt;特别注释: 没有正合耦.&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;关于谱序列早期工作见 &lt;a href=&quot;https://www.semanticscholar.org/paper/On-axiomatic-homology-theory.-Milnor/cef00c184979cbcfcc38bb85d2aae53d56013375&quot;&gt;Milnor 的综述&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;特别注释: 没有正合耦.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;h2 id=&quot;谱序列&quot;&gt;谱序列&lt;/h2&gt;
+
+&lt;h3 id=&quot;谱序列的格式&quot;&gt;谱序列的格式&lt;/h3&gt;
+
+&lt;p&gt;正式介绍谱序列的构造前, 应先明确谱序列的一般格式. 类似链复形与上链复形之别, 谱序列亦有同调类型与上同调类型者.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(上同调谱序列). 称一组资料 $\{(E_r, f_r)\}$ 是 Abel 范畴的上同调谱序列, 若&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;(推广复形对象). 所有 $E_r$ 是 $(ℤ × ℤ)$-分次对象,&lt;/li&gt;
+    &lt;li&gt;(推广微分). $d_r: E_r → E_r$ 的方向是 $(r, 1-r)$, 满足 $d_r ^2 = 0$,&lt;/li&gt;
+    &lt;li&gt;(递推关系) 对 $(E_r, d_r)$ 取 $(ℤ × ℤ)$-分次上同调群, 结果是 $E_r$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;一般地, $E_{r+1}$ 是导出的, 而 $d_r$ 不是内蕴的.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;以上定义纯粹是一类满足特殊关系的箭头, 仅代表上同调谱序列的合法格式.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;习惯上, 将页的指标 $r$ 写在 $E_∙^{∙ , ∙}$ 的下方, 即 $E_r$. 对每一 $r$, 再有双分次对象 $E_r^{∙ , ∙}$.&lt;/p&gt;
+
+&lt;p&gt;此外, 暂时混同复形与微分分次对象.&lt;/p&gt;
+
+&lt;h3 id=&quot;滤过复形构造谱序列&quot;&gt;滤过复形构造谱序列&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(上滤过, 分次). 给定 Abel 范畴的对象 $X$. 一个 $X$ 的 $ℤ$-上滤过是一族子对象 $\{X^p\}_{p ∈ ℤ}$, 满足&lt;/p&gt;
+  &lt;p&gt;\begin{equation} \cdots F^{n-1}X ↩ F^{n}X ↩ F^{n+1}X ↩ \cdots. \end{equation}&lt;/p&gt;
+  &lt;p&gt;特别地, 通常要求 $⋂F^pX = 0$ 以及 $⋃ F^p X= X$. &lt;br /&gt; &lt;br /&gt; 给定上滤过 $F^∙X$, 定义分次对象 \begin{equation} \mathrm{Gr}_p (X) := \frac{F^p}{F^{p+1}} X := \frac{F^p X}{F^{p+1}X}. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;以下通过滤过复形构造谱序列.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;\begin{example}&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\textbf{初始状态 }输入上链复形 $(A^∙, d)$ 和滤过 $F^∙$, 朝向为 \begin{equation}
+% https://q.uiver.app/#q=WzAsMTEsWzEsMSwiRl5wQV57cCtxfSJdLFsyLDIsIkZee3ArMX1BXntwK3F9Il0sWzAsMCwiRl57cC0xfUFee3ArcX0iXSxbMSwwLCJGXntwfUFee3ArcSsxfSJdLFsyLDEsIkZee3ArMX1BXntwK3ErMX0iXSxbMSwyLCJGXntwfUFee3ArcS0xfSJdLFswLDEsIkZee3AtMX1BXntwK3EtMX0iXSxbMCwyLCJcXGJveGVke1xcdGV4dHvovpPlhaV9IFxcIChBLEYpfSJdLFswLDMsIkZee3AtMX1BXlxcYnVsbGV0ICJdLFsxLDMsIkZee3B9QV5cXGJ1bGxldCAiXSxbMiwzLCJGXntwKzF9QV5cXGJ1bGxldCAiXSxbMCwyLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMCwiXFxzdWJzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDMsIlxcc3Vic2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSw2LCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsMl0sWzAsM10sWzUsMF0sWzEsNF0sWzgsOSwiXFxzdXBzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOSwxMCwiXFxzdXBzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0= \begin{tikzcd}[ampersand replacement=\&amp;amp;]
+{F^{p-1}A^{p+q}\} \&amp;amp; {F^{p}A^{p+q+1}\} \\
+{F^{p-1}A^{p+q-1}\} \&amp;amp; {F^pA^{p+q}\} \&amp;amp; {F^{p+1}A^{p+q+1}\} \\
+{\boxed{\text{输入} \ (A,F)}\} \&amp;amp; {F^{p}A^{p+q-1}\} \&amp;amp; {F^{p+1}A^{p+q}\} \\
+{F^{p-1}A^\bullet } \&amp;amp; {F^{p}A^\bullet } \&amp;amp; {F^{p+1}A^\bullet }
+\arrow[from=2-1, to=1-1]
+\arrow[&quot;\subset&quot;{marking, allow upside down}, dotted, no head, from=2-2, to=1-1]
+\arrow[from=2-2, to=1-2]
+\arrow[&quot;\subset&quot;{marking, allow upside down}, dotted, no head, from=2-3, to=1-2]
+\arrow[&quot;\subset&quot;{marking, allow upside down}, dotted, no head, from=3-2, to=2-1]
+\arrow[from=3-2, to=2-2]
+\arrow[&quot;\subset&quot;{marking, allow upside down}, dotted, no head, from=3-3, to=2-2]
+\arrow[from=3-3, to=2-3]
+\arrow[&quot;\supset&quot;{description}, draw=none, from=4-1, to=4-2]
+\arrow[&quot;\supset&quot;{description}, draw=none, from=4-2, to=4-3] \end{tikzcd}. \end{equation} 特别地, $↘$ 朝向的链是对 $A^{p+q}$ 的滤过. 上图不是 $E_0$!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;\textbf{第零步 } 在每点取商, 得 $E_0$: 
+\begin{equation}
+    % https://q.uiver.app/#q=WzAsOCxbMSwxLCJcXGZyYWN7Rl5wQV57cCtxfX17Rl57cCsxfUFee3ArcX19Il0sWzIsMiwiXFxmcmFje0Zee3ArMX1BXntwK3F9fXtGXntwKzJ9QV57cCtxfX0iXSxbMCwwLCJcXGZyYWN7Rl57cC0xfUFee3ArcX19e0ZecEFee3ArcX19Il0sWzEsMCwiXFxmcmFje0Zee3B9QV57cCtxKzF9fXtGXntwKzF9QV57cCtxKzF9fSJdLFsyLDEsIlxcZnJhY3tGXntwKzF9QV57cCtxKzF9fXtGXntwKzJ9QV57cCtxKzF9fSJdLFsxLDIsIlxcZnJhY3tGXntwfUFee3ArcS0xfX17Rl57cCsxfUFee3ArcS0xfX0iXSxbMCwxLCJcXGZyYWN7Rl57cC0xfUFee3ArcS0xfX17Rl57cH1BXntwK3EtMX19Il0sWzAsMiwiXFxib3hlZHtFXzAoQSxGKX0iXSxbMSw0XSxbNSwwXSxbMCwzXSxbNiwyXV0=
+\begin{tikzcd}[ampersand replacement=\&amp;amp;]
+	{\frac{F^{p-1}A^{p+q}}{F^pA^{p+q}}} \&amp;amp; {\frac{F^{p}A^{p+q+1}}{F^{p+1}A^{p+q+1}}} &lt;br /&gt;
+	{\frac{F^{p-1}A^{p+q-1}}{F^{p}A^{p+q-1}}} \&amp;amp; {\frac{F^pA^{p+q}}{F^{p+1}A^{p+q}}} \&amp;amp; {\frac{F^{p+1}A^{p+q+1}}{F^{p+2}A^{p+q+1}}} &lt;br /&gt;
+	{\boxed{E_0(A,F)}} \&amp;amp; {\frac{F^{p}A^{p+q-1}}{F^{p+1}A^{p+q-1}}} \&amp;amp; {\frac{F^{p+1}A^{p+q}}{F^{p+2}A^{p+q}}}
+	\arrow[from=2-1, to=1-1]
+	\arrow[from=2-2, to=1-2]
+	\arrow[from=3-2, to=2-2]
+	\arrow[from=3-3, to=2-3]
+\end{tikzcd}.
+\end{equation}
+此处 $E_0^{p,q} = \frac{F^p A^{p+q}\}{F^{p+1}A^{p+q}\}$, 微分 $d_0$ 继承自 $d$, $(p,q)$-处的同调群是 
+\begin{equation}
+    H^{p,q} = \frac{[F^pA^{p+q} \quad ∩ \quad {\color{red}d^{-1}(F^{p+1}A^{p+q+1})}]\quad + \quad F^{p+1}A^{p+q}}{[F^pA^{p+q} \quad ∩ \quad {\color{blue}d(F^{p}A^{p+q-1})}]\quad + \quad F^{p+1}A^{p+q}}. 
+\end{equation}
+往后同调群的滤过, 决定于\textcolor{red}{红处}与\textcolor{blue}{蓝处}的指标变动, 黑处固定!&lt;/p&gt;
+
+&lt;p&gt;\textbf{第一步 } 将视角从 $ℤ^2$-分次模拓展至 dg-模, 以上同调群整合作
+\begin{equation}
+    H_0^{p,∙} := \frac{Z_0^p}{B_0^p} := \frac{[F^p \quad ∩ \quad {\color{red}d^{-1}(F^{p+1})}]\quad + \quad F^{p+1}}{[F^p \quad ∩ \quad {\color{blue}d(F^{p})}]\quad + \quad F^{p+1}}.
+\end{equation}
+此处 $F^∙A$ 是 dg-模 $A$ 的滤过, 分次模态射之分次是自明的. 定义 
+\begin{enumerate}
+    \item $Z_r ^p = F^p \quad ∩ \quad {\color{red}d^{-1}(F^{p+1\color{black}{+r}\})}\quad +  \ \quad F^{p+1}$; 
+    \item $B_r ^p = F^p \quad ∩ \quad {\color{blue}d(F^{p\color{black}{-r}\})}\qquad + \qquad F^{p+1}$. 
+\end{enumerate}
+以上括号之所以可去, 是因为子商间的模恒等式. 此时有滤过 
+\begin{equation}
+    Z^p_0 ⊃ Z^p_r ⊃ Z^p_∞ ⊃ B^p_∞ ⊃ B^p_r ⊃ B^p_0. 
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;\begin{equation}
+    % https://q.uiver.app/#q=WzAsNixbMCwwLCJGXnAg4oipIGReey0xfShGXntwKzF9KStGXntwKzF9Il0sWzAsMSwiRl5wIOKIqSAoZF57LTF9KEZee3ArcisxfSkpICsgRl57cCsxfSJdLFswLDIsIkZecCDiiKkgKFxca2VyIGQpICsgRl57cCsxfSJdLFsxLDIsIkZecCDiiKkgKFxcbWF0aHJte2ltfVxcIGQpICsgRl57cCsxfSJdLFsxLDEsIkZecCDiiKkgKGQoRl57cC1yfSkpICsgRl57cCsxfSJdLFsxLDAsIkZecCDiiKkgKDApICsgRl57cCsxfSJdLFswLDEsIlxcc3Vwc2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEsMiwiXFxzdXBzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMiwzLCJcXHN1cHNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFszLDQsIlxcc3Vwc2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsNSwiXFxzdXBzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMCwxLCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSwyLCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMiwzLCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw0LCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNCw1LCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMCwxLCIiLDMseyJvZmZzZXQiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxLDIsIiIsMyx7Im9mZnNldCI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIsMywiIiwzLHsib2Zmc2V0IjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw0LCIiLDMseyJvZmZzZXQiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDUsIiIsMyx7Im9mZnNldCI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&amp;amp;]
+	{F^p ∩ d^{-1}(F^{p+1})+F^{p+1}} \&amp;amp; {F^p ∩ (0) + F^{p+1}} &lt;br /&gt;
+	{F^p ∩ (d^{-1}(F^{p+r+1})) + F^{p+1}} \&amp;amp; {F^p ∩ (d(F^{p-r})) + F^{p+1}} &lt;br /&gt;
+	{F^p ∩ (\ker d) + F^{p+1}} \&amp;amp; {F^p ∩ (\mathrm{im}\ d) + F^{p+1}}
+	\arrow[“\supset”{marking, allow upside down}, dotted, from=1-1, to=2-1]
+	\arrow[shift left=3, dotted, from=1-1, to=2-1]
+	\arrow[shift right=3, dotted, from=1-1, to=2-1]
+	\arrow[“\supset”{marking, allow upside down}, dotted, from=2-1, to=3-1]
+	\arrow[shift left=3, dotted, from=2-1, to=3-1]
+	\arrow[shift right=3, dotted, from=2-1, to=3-1]
+	\arrow[“\supset”{marking, allow upside down}, dotted, from=2-2, to=1-2]
+	\arrow[shift left=3, dotted, from=2-2, to=1-2]
+	\arrow[shift right=3, dotted, from=2-2, to=1-2]
+	\arrow[“\supset”{marking, allow upside down}, dotted, from=3-1, to=3-2]
+	\arrow[shift left=3, dotted, from=3-1, to=3-2]
+	\arrow[shift right=3, dotted, from=3-1, to=3-2]
+	\arrow[“\supset”{marking, allow upside down}, dotted, from=3-2, to=2-2]
+	\arrow[shift left=3, dotted, from=3-2, to=2-2]
+	\arrow[shift right=3, dotted, from=3-2, to=2-2]
+\end{tikzcd}.
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;\textbf{第二步 } 取 $E_{r+1}^{p, ∙} = H_r^{p, ∙} := {Z_r^{p, ∙}\} / {B_r^{p, ∙}\}$, 构造 $d^{p, ∙}_r$ 的满-单分解: 
+\begin{equation}
+    E_{r}^p = \frac{Z_{r-1}^p}{B_{r-1}^p} ↠ \frac{Z_{r-1}^p}{Z_{r}^p} ≃ \frac{B_{r}^{p+r}}{B_{r-1}^{p+r}} ↪ \frac{Z_{r-1}^{p+r}}{B_{r-1}^{p+r}} = E_r^{p+r}. 
+\end{equation}
+中间的同构是 Zassenhaus 引理的函子性:&lt;/p&gt;
+
+&lt;p&gt;\begin{align}
+    \frac{Z_{r-1} ^p}{Z_{r} ^p} &amp;amp;= \frac{F^p ∩ (d^{-1}(F^{p+r})) + F^{p+1}}{F^{p} ∩ (d^{-1}(F^{p+r+1})) + F^{p+1}} \[6pt]
+    \left[\frac{A^♯ ∩ {\color{red} X^♯} + A^♭}{A^♯ ∩ {\color{red} X^♭} + A^♭}\right] \ \ &amp;amp;≃ \frac{d(F^p) ∩ {\color{red} F^{p+r}} + d(F^{p+1})}{d(F^{p}) ∩ {\color{red} F^{p+r+1}} + d(F^{p+1})} \[6pt]
+    \left[\frac{/{\color{red} X^♯} ∩ A^♯ + {\color{red} X^♭}}{/{\color{red} X^♯} ∩ A^♭ + {\color{red} X^♭}}\right]  \ \  &amp;amp;≃ \frac{/{\color{red} F^{p+r}} ∩ d(F^p) + {\color{red} F^{p+r+1}}}{/{\color{red} F^{p+r}} ∩ d(F^{p+1}) + {\color{red} F^{p+r+1}}} \quad = \frac{B^{p+r}&lt;em&gt;r}{B^{p+r}&lt;/em&gt;{r-1}}&lt;br /&gt;
+\end{align}&lt;/p&gt;
+
+&lt;p&gt;考虑链复形的 $(X, \ker , \mathrm{cok}, \mathrm{im}, \mathrm{cim}, H)$-六要件, 得 
+\begin{equation}
+    % https://q.uiver.app/#q=WzAsMTEsWzAsMiwiSCJdLFs1LDIsIkgiXSxbMCwwLCJYIl0sWzUsMCwiWCJdLFszLDAsIlxcbWF0aHJte2NpbX0iXSxbNCwxLCJcXG1hdGhybXtjb2t9Il0sWzEsMSwiXFxtYXRocm17a2VyfSJdLFs2LDEsIlxcbWF0aHJte2tlcn0iXSxbNywwLCJcXG1hdGhybXtpbX0iXSxbMiwwLCJcXG1hdGhybXtpbX0iXSxbOCwwLCJcXGNkb3RzIl0sWzAsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNSwzLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsNSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMSw3LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsyLDYsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFszLDcsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFszLDgsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs3LDgsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs1LDEsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs2LDksIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsyLDksIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs5LDQsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzgsMTAsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&amp;amp;,sep=tiny]
+	X \&amp;amp;\&amp;amp; {\mathrm{im}} \&amp;amp; {\mathrm{cim}} \&amp;amp;\&amp;amp; X \&amp;amp;\&amp;amp; {\mathrm{im}} \&amp;amp; \cdots &lt;br /&gt;
+	\&amp;amp; {\mathrm{cok}} \&amp;amp;\&amp;amp;\&amp;amp; {\mathrm{ker}} \&amp;amp;\&amp;amp; {\mathrm{cok}} &lt;br /&gt;
+	H \&amp;amp;\&amp;amp;\&amp;amp;\&amp;amp;\&amp;amp; H
+	\arrow[two heads, from=1-1, to=1-3]
+	\arrow[two heads, from=1-1, to=2-2]
+	\arrow[equals, from=1-3, to=1-4]
+	\arrow[hook, from=1-4, to=1-6]
+	\arrow[hook, from=1-4, to=2-5]
+	\arrow[two heads, from=1-6, to=1-8]
+	\arrow[two heads, from=1-6, to=2-7]
+	\arrow[equals, from=1-8, to=1-9]
+	\arrow[two heads, from=2-2, to=1-3]
+	\arrow[hook, from=2-5, to=1-6]
+	\arrow[two heads, from=2-5, to=3-6]
+	\arrow[two heads, from=2-7, to=1-8]
+	\arrow[hook, from=3-1, to=2-2]
+	\arrow[hook, from=3-6, to=2-7]
+\end{tikzcd}
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;仔细验证``六要件’’, 得 
+\begin{equation}
+    % https://q.uiver.app/#q=WzAsMjIsWzAsMCwiRSIsWzE4MCw2MCw2MCwxXV0sWzUsMCwiRSIsWzE4MCw2MCw2MCwxXV0sWzUsMiwiSCIsWzE4MCw2MCw2MCwxXV0sWzIsMCwiXFxtYXRocm17aW19IixbMTgwLDYwLDYwLDFdXSxbNywwLCJcXG1hdGhybXtpbX0iLFsxODAsNjAsNjAsMV1dLFs0LDEsIlxcbWF0aHJte2tlcn0iLFsxODAsNjAsNjAsMV1dLFs2LDEsIlxcbWF0aHJte2Nva30iLFsxODAsNjAsNjAsMV1dLFsxLDEsIlxcbWF0aHJte2Nva30iLFsxODAsNjAsNjAsMV1dLFswLDIsIkgiLFsxODAsNjAsNjAsMV1dLFs1LDEsIlxcZnJhY3taX3tyLTF9XnB9e0Jfe3ItMX1ecH0iXSxbNywxLCJcXGZyYWN7Wl97ci0xfV5wfXtaX3tyfV5wfSJdLFs4LDAsIlxcY2RvdHMiLFsxODAsNjAsNjAsMV1dLFs4LDEsIlxcY2RvdHMiXSxbNiwyLCJcXGZyYWN7Wl97ci0xfV5wfXtCX3tyfV5wfSJdLFs1LDMsIlxcZnJhY3taX3tyfV5wfXtCX3tyfV5wfSJdLFszLDAsIlxcbWF0aHJte2NpbX0iLFsxODAsNjAsNjAsMV1dLFs0LDIsIlxcZnJhY3taX3tyfV5wfXtCX3tyLTF9XnB9Il0sWzMsMSwiXFxmcmFje0Jfe3J9XntwfX17Ql97ci0xfV57cH19Il0sWzIsMSwiXFxmcmFje1pfe3ItMX1ee3Atcn19e1pfe3J9XntwLXJ9fSJdLFsxLDIsIlxcZnJhY3taX3tyLTF9XntwLXJ9fXtCX3tyfV57cC1yfX0iXSxbMCwxLCJcXGZyYWN7Wl97ci0xfV57cC1yfX17Ql97ci0xfV57cC1yfX0iXSxbMCwzLCJcXGZyYWN7Wl97cn1ee3Atcn19e0Jfe3J9XntwLXJ9fSJdLFswLDMsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDQsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs1LDEsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsNiwiIiwzLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzUsMiwiIiwzLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsNiwiIiwzLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNiw0LCIiLDMseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCw3LCIiLDMseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNywzLCIiLDMseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbOCw3LCIiLDMseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDExLCIiLDIseyJsZXZlbCI6MiwiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMiwiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTQsMTMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzksMTMsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxMywxMCwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzE1LDEsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzE1LDUsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsMTUsIiIsMix7ImxldmVsIjoyLCJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE2LDE0LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMTYsOSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMTcsMTYsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzE4LDE3LCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxOSwxOCwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIxLDE5LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsyMCwxOSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&amp;amp;, sep = tiny]
+	\textcolor{rgb,255:red,92;green,214;blue,214}{E} \&amp;amp;\&amp;amp; \textcolor{rgb,255:red,92;green,214;blue,214}{/{\mathrm{im}}} \&amp;amp; \textcolor{rgb,255:red,92;green,214;blue,214}{/{\mathrm{cim}}} \&amp;amp;\&amp;amp; \textcolor{rgb,255:red,92;green,214;blue,214}{E} \&amp;amp;\&amp;amp; \textcolor{rgb,255:red,92;green,214;blue,214}{/{\mathrm{im}}} \&amp;amp; \textcolor{rgb,255:red,92;green,214;blue,214}{\cdots} &lt;br /&gt;
+	{\frac{Z_{r-1}^{p-r}}{B_{r-1}^{p-r}}} \&amp;amp; \textcolor{rgb,255:red,92;green,214;blue,214}{/{\mathrm{cok}}} \&amp;amp; {\frac{Z_{r-1}^{p-r}}{Z_{r}^{p-r}}} \&amp;amp; {\frac{B_{r}^{p}}{B_{r-1}^{p}}} \&amp;amp; \textcolor{rgb,255:red,92;green,214;blue,214}{/{\mathrm{ker}}} \&amp;amp; {\frac{Z_{r-1}^p}{B_{r-1}^p}} \&amp;amp; \textcolor{rgb,255:red,92;green,214;blue,214}{/{\mathrm{cok}}} \&amp;amp; {\frac{Z_{r-1}^p}{Z_{r}^p}} \&amp;amp; \cdots &lt;br /&gt;
+	\textcolor{rgb,255:red,92;green,214;blue,214}{H} \&amp;amp; {\frac{Z_{r-1}^{p-r}}{B_{r}^{p-r}}} \&amp;amp;\&amp;amp;\&amp;amp; {\frac{Z_{r}^p}{B_{r-1}^p}} \&amp;amp; \textcolor{rgb,255:red,92;green,214;blue,214}{H} \&amp;amp; {\frac{Z_{r-1}^p}{B_{r}^p}} &lt;br /&gt;
+	{\frac{Z_{r}^{p-r}}{B_{r}^{p-r}}} \&amp;amp;\&amp;amp;\&amp;amp;\&amp;amp;\&amp;amp; {\frac{Z_{r}^p}{B_{r}^p}}
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, two heads, from=1-1, to=1-3]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, two heads, from=1-1, to=2-2]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, equals, from=1-3, to=1-4]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, hook, from=1-4, to=1-6]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, hook, from=1-4, to=2-5]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, two heads, from=1-6, to=1-8]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, two heads, from=1-6, to=2-7]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, equals, from=1-8, to=1-9]
+	\arrow[two heads, from=2-1, to=3-2]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, two heads, from=2-2, to=1-3]
+	\arrow[equals, from=2-3, to=2-4]
+	\arrow[hook, from=2-4, to=3-5]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, hook, from=2-5, to=1-6]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, two heads, from=2-5, to=3-6]
+	\arrow[two heads, from=2-6, to=3-7]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, two heads, from=2-7, to=1-8]
+	\arrow[equals, from=2-8, to=2-9]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, hook, from=3-1, to=2-2]
+	\arrow[two heads, from=3-2, to=2-3]
+	\arrow[hook, from=3-5, to=2-6]
+	\arrow[two heads, from=3-5, to=4-6]
+	\arrow[color={rgb,255:red,92;green,214;blue,214}, hook, from=3-6, to=2-7]
+	\arrow[two heads, from=3-7, to=2-8]
+	\arrow[hook, from=4-1, to=3-2]
+	\arrow[hook, from=4-6, to=3-7]
+\end{tikzcd}. 
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;同样地, 同调群之间没有自然诱导的微分, 需借助滤过结构定义.&lt;/p&gt;
+
+&lt;p&gt;\textbf{第三步 (假定逐项收敛)} 此时 $E_∞$ 存在. 由 Zassenhaus 定理得 
+\begin{equation}
+    E_∞^p = \frac{F^p ∩ {\color{red}{\ker d}} + F^{p+1}}{F^p ∩ {\color{blue}{\mathrm{im} \ d}} + F^{p+1}} ≃ \frac{/{\color{red}{\ker d}} ∩ F^p + {\color{blue}{\mathrm{im} \ d}}}{/{\color{red}{\ker d}} ∩ F^{p+1} + {\color{blue}{\mathrm{im} \ d}}}.
+\end{equation}
+依分次拆解之,&lt;br /&gt;
+\begin{equation}
+    E_∞^{p,q} = \frac{/{\color{red}{\ker d}} ∩ F^p + {\color{blue}{\mathrm{im} \ d}}\qquad \text{之 $(p+q)$-分次}}{/{\color{red}{\ker d}} ∩ F^{p+1} + {\color{blue}{\mathrm{im} \ d}}\quad \ \text{之 $(p+q)$-分次}}.
+\end{equation}
+依照假定, 滤过终点是 $F^{-∞}A = A$, 且 $F^{+∞} A = A$.&lt;/p&gt;
+
+&lt;p&gt;依照 Noether 同构取 $H^{l := p+q}(A)$ 之子商如下:
+\begin{equation}
+    E_∞ ^{t, l-t} = \frac{/{\color{red}{\ker d}} ∩ F^t + {\color{blue}{\mathrm{im} \ d}} \ \text{之 $l$-分次} \ \ /\ \ \mathrm{im}(d)\ \text{之 $l$-分次}}{/{\color{red}{\ker d}} ∩ F^{t+1} + {\color{blue}{\mathrm{im} \ d}}\ \text{之 $l$-分次} \ \ /\ \ \mathrm{im}(d) \ \text{之 $l$-分次}}.
+\end{equation}&lt;/p&gt;
+
+&lt;p&gt;因此, 存在 $H^l$ 的滤过 $[ \ \cdots ⊃ F^t H^l ⊃ \cdots \ ]$, 商去相邻子项得 $E_∞^{t,l-t}$. 
+\end{example}
+\newpage&lt;/p&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Spectral_sequence_filtered</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Spectral_sequence_filtered</guid>
+          <link>http://localhost:4000/website/posts/Spectral_sequence_filtered</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Spectral_sequence_filtered</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>完备化, 滤过复形</title>
+          <description>&lt;h2 id=&quot;mathjax_protectedjfxtyxrocm17r3j9x3akmathjax_protected-与完备化&quot;&gt;$\mathrm{Gr}_p$ 与完备化&lt;/h2&gt;
+
+&lt;p&gt;以下命题都是对模范畴 $𝐌𝐨𝐝_R$ 而言的.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Cauchy 列). 对滤过模 $\cdots ⊃ F^s M ⊃ \cdots$, 取 $M$ 为全空间, 诸 $F^p M$ 的陪集为开集. 称 $(x_n)_{n ∈ ℕ} ∈ ∏_ℕ M$ 是 Cauchy 列, 当且仅当&lt;/p&gt;
+  &lt;p&gt;\begin{equation} ∀ p, \ ∃ N ∈ ℕ, \ ∀ (m,n) (n &amp;gt; m ≥ N), ((x_m - x_n) ∈ F^pM). \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;简单地说, 此处的拓扑基是的所有 $F^s M$ 的陪集.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;对满射系统 $\cdots ↠ \frac{M}{F^{p+1} M} ↠ \frac{M}{F^p M} ↠ \cdots$ 做三点定义:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;称之穷竭, 当且仅当 $\varinjlim \frac{M}{F^p M} = 0$, 即 $M=  ⋃ F^p M$;&lt;/li&gt;
+    &lt;li&gt;称之 Hausdorff, 当且仅当 $\varprojlim F^p M = ⋂ F^p M = 0$.&lt;/li&gt;
+    &lt;li&gt;称之完备, 当且仅当 $\varprojlim \frac{M}{F^p M} = M$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;简单地看,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;所谓穷竭, 即是说原点处基本开球 $F^pX$ 的覆盖范围 (随 $p →- ∞$) 趋向全空间.&lt;/li&gt;
+    &lt;li&gt;所谓 Hausdorff, 就是说开球可以任意小, 使得能区分任意不同的两点.&lt;/li&gt;
+    &lt;li&gt;所谓完备, 就是说收敛数列存在极限.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;对模范畴中 $ℤ$-指标的塔, 导出极限 $\varprojlim {}^1$ 消失.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Complete_Filtration&quot;&gt;证明&lt;/a&gt;) 完备蕴含 Haussdorff. 完备当且仅当 $\varprojlim ^{0,1} F^p M = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(完备化). 滤过 $F^∙ M$ 的完备化旨在函子地补全 Cauchy 列的收敛终点. 此处定义做 \begin{equation} 𝐅^p 𝐌 = \varprojlim \ \ \frac{F^p M}{F^{≥ p} M}. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;将极限视作积对象的子对象, $𝐅^p𝐌$ 确实是滤过. 亦可通过 $\varprojlim$ 的左正合性质说明单射 $𝐅^{p+1}𝐌 ↪ 𝐅^p𝐌$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;FFX_vs_FX&quot;&gt;证明&lt;/a&gt;). 滤过完备化具有如下重要的性质:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\frac{𝐌}{𝐅 ^p𝐌} ≃ \frac{M}{F^p M}$ 是同构, 作为推论, $\frac{𝐅^{p-r} 𝐌}{𝐅 ^p𝐌} ≃ \frac{F^{p-r}M}{F^p M}$.&lt;/li&gt;
+    &lt;li&gt;$𝐅^p𝐌$ 穷竭当且仅当 $F^p M$ 穷竭.&lt;/li&gt;
+    &lt;li&gt;$𝐅^p 𝐌$ 是完备的 Hausdorff 的滤过.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$\mathrm{Gr}(f)$ 是同构当且仅当完备化态射 $𝐟$ 是同构. 今取 $f : F^p M → F^p N$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;若 $𝐟$ 是同构, 显然 $\mathrm{Gr}_∙(f) = \mathrm{Gr}_∙(𝐟)$ 也是同构.&lt;/li&gt;
+    &lt;li&gt;若 $\mathrm{Gr}_∙(f)$ 是同构, 取 $\varprojlim \frac{F^p}{F^{p + l}} = 𝐅^p$, 易知 $𝐟$ 也是同构.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-27T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/website/posts/Complete_Z_Filtration</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Complete_Z_Filtration</guid>
         </item>
       
     
@@ -374,8 +755,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Harada_Sai</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Harada_Sai</guid>
+          <link>http://localhost:4000/website/posts/Harada_Sai</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Harada_Sai</guid>
         </item>
       
     
@@ -387,7 +768,7 @@ $$&lt;/p&gt;
 &lt;div class=&quot;definition&quot;&gt;
   &lt;p&gt;给定遗传路代数 $A= kQ$ 上的点 $i$, 使得 $P(i)$ 是&lt;strong&gt;非内射的投射单模&lt;/strong&gt;. 定义 $i$ 点处的 APR tilting 模为&lt;/p&gt;
   &lt;p&gt;$$
-T := τ⁻¹ P(4) ⊕ ⨁_{i ≠ 4} P(i).
+T := τ⁻¹ P(i) ⊕ ⨁_{j ≠ i} P(j).
 $$&lt;/p&gt;
 &lt;/div&gt;
 
@@ -419,8 +800,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-26T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/APR_tilting_def</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/APR_tilting_def</guid>
+          <link>http://localhost:4000/website/posts/APR_tilting_def</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/APR_tilting_def</guid>
         </item>
       
     
@@ -460,8 +841,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-26T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/P_is_Section</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/P_is_Section</guid>
+          <link>http://localhost:4000/website/posts/P_is_Section</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/P_is_Section</guid>
         </item>
       
     
@@ -628,8 +1009,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-26T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Commutative_Diagram_Alg</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Commutative_Diagram_Alg</guid>
+          <link>http://localhost:4000/website/posts/Commutative_Diagram_Alg</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Commutative_Diagram_Alg</guid>
         </item>
       
     
@@ -770,8 +1151,8 @@ $$&lt;/p&gt;
 &lt;p&gt;若去除有限表示条件, 则 $ℤ 𝔓$ 与 $ℤ ℑ$ 是连通分支的子图.&lt;/p&gt;
 </description>
           <pubDate>2025-04-26T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Hereditary-AR-Quiver</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Hereditary-AR-Quiver</guid>
+          <link>http://localhost:4000/website/posts/Hereditary-AR-Quiver</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Hereditary-AR-Quiver</guid>
         </item>
       
     
@@ -811,8 +1192,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-25T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Gabriel_2</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Gabriel_2</guid>
+          <link>http://localhost:4000/website/posts/Gabriel_2</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Gabriel_2</guid>
         </item>
       
     
@@ -886,8 +1267,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-25T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Gabriel_1</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Gabriel_1</guid>
+          <link>http://localhost:4000/website/posts/Gabriel_1</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Gabriel_1</guid>
         </item>
       
     
@@ -982,8 +1363,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-25T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Finite_and_Affine_Root_System</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Finite_and_Affine_Root_System</guid>
+          <link>http://localhost:4000/website/posts/Finite_and_Affine_Root_System</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Finite_and_Affine_Root_System</guid>
         </item>
       
     
@@ -1045,8 +1426,8 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;Proof-Gabriel&quot;&gt;Gabriel 定理的证明&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2025-04-25T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Talk</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Talk</guid>
+          <link>http://localhost:4000/website/posts/Talk</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Talk</guid>
         </item>
       
     
@@ -1100,8 +1481,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/T_Y_Dim</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/T_Y_Dim</guid>
+          <link>http://localhost:4000/website/posts/T_Y_Dim</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/T_Y_Dim</guid>
         </item>
       
     
@@ -1142,8 +1523,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Hom_D_Hereditary</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Hom_D_Hereditary</guid>
+          <link>http://localhost:4000/website/posts/Hom_D_Hereditary</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Hom_D_Hereditary</guid>
         </item>
       
     
@@ -1171,8 +1552,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Gl_Dim_A_B</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Gl_Dim_A_B</guid>
+          <link>http://localhost:4000/website/posts/Gl_Dim_A_B</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Gl_Dim_A_B</guid>
         </item>
       
     
@@ -1282,8 +1663,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Uniqueness_of_Maximal_Orbit</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Uniqueness_of_Maximal_Orbit</guid>
+          <link>http://localhost:4000/website/posts/Uniqueness_of_Maximal_Orbit</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Uniqueness_of_Maximal_Orbit</guid>
         </item>
       
     
@@ -1429,8 +1810,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Ringel_Resolution</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Ringel_Resolution</guid>
+          <link>http://localhost:4000/website/posts/Ringel_Resolution</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Ringel_Resolution</guid>
         </item>
       
     
@@ -1474,8 +1855,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Key_Lemma_Gabriel</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Key_Lemma_Gabriel</guid>
+          <link>http://localhost:4000/website/posts/Key_Lemma_Gabriel</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Key_Lemma_Gabriel</guid>
         </item>
       
     
@@ -1660,8 +2041,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Proof-Gabriel</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Proof-Gabriel</guid>
+          <link>http://localhost:4000/website/posts/Proof-Gabriel</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Proof-Gabriel</guid>
         </item>
       
     
@@ -1699,8 +2080,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/gen_and_cog</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/gen_and_cog</guid>
+          <link>http://localhost:4000/website/posts/gen_and_cog</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/gen_and_cog</guid>
         </item>
       
     
@@ -1784,8 +2165,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Torsion_Pair_Ext_Orth</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Torsion_Pair_Ext_Orth</guid>
+          <link>http://localhost:4000/website/posts/Torsion_Pair_Ext_Orth</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Torsion_Pair_Ext_Orth</guid>
         </item>
       
     
@@ -1866,8 +2247,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Tilting_Obj_Torsion_Pair</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Tilting_Obj_Torsion_Pair</guid>
+          <link>http://localhost:4000/website/posts/Tilting_Obj_Torsion_Pair</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Tilting_Obj_Torsion_Pair</guid>
         </item>
       
     
@@ -1895,8 +2276,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Partial_Tilting_Two_Torsion_pairs</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Partial_Tilting_Two_Torsion_pairs</guid>
+          <link>http://localhost:4000/website/posts/Partial_Tilting_Two_Torsion_pairs</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Partial_Tilting_Two_Torsion_pairs</guid>
         </item>
       
     
@@ -1961,8 +2342,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Hereditary_PBPO</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Hereditary_PBPO</guid>
+          <link>http://localhost:4000/website/posts/Hereditary_PBPO</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Hereditary_PBPO</guid>
         </item>
       
     
@@ -1998,8 +2379,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Gen_Eq_T</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Gen_Eq_T</guid>
+          <link>http://localhost:4000/website/posts/Gen_Eq_T</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Gen_Eq_T</guid>
         </item>
       
     
@@ -2021,8 +2402,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/AR_Formula</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/AR_Formula</guid>
+          <link>http://localhost:4000/website/posts/AR_Formula</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/AR_Formula</guid>
         </item>
       
     
@@ -2120,8 +2501,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-22T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Def_de_TP</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Def_de_TP</guid>
+          <link>http://localhost:4000/website/posts/Def_de_TP</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Def_de_TP</guid>
         </item>
       
     
@@ -2152,8 +2533,8 @@ $$&lt;/p&gt;
 
 </description>
           <pubDate>2025-04-22T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Homological_Wk_Ker</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Homological_Wk_Ker</guid>
+          <link>http://localhost:4000/website/posts/Homological_Wk_Ker</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Homological_Wk_Ker</guid>
         </item>
       
     
@@ -2181,8 +2562,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Yoneda_Homological</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Yoneda_Homological</guid>
+          <link>http://localhost:4000/website/posts/Yoneda_Homological</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Yoneda_Homological</guid>
         </item>
       
     
@@ -2226,8 +2607,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Plat_et_Proj_Cover_Proj</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Plat_et_Proj_Cover_Proj</guid>
+          <link>http://localhost:4000/website/posts/Plat_et_Proj_Cover_Proj</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Plat_et_Proj_Cover_Proj</guid>
         </item>
       
     
@@ -2245,8 +2626,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Mod_Tri_is_Frobenius</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Mod_Tri_is_Frobenius</guid>
+          <link>http://localhost:4000/website/posts/Mod_Tri_is_Frobenius</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Mod_Tri_is_Frobenius</guid>
         </item>
       
     
@@ -2282,8 +2663,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Lazard_thm</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Lazard_thm</guid>
+          <link>http://localhost:4000/website/posts/Lazard_thm</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Lazard_thm</guid>
         </item>
       
     
@@ -2325,8 +2706,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Fp_et_Plat_est_Proj</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Fp_et_Plat_est_Proj</guid>
+          <link>http://localhost:4000/website/posts/Fp_et_Plat_est_Proj</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Fp_et_Plat_est_Proj</guid>
         </item>
       
     
@@ -2356,8 +2737,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Fp_Proj_Plat</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Fp_Proj_Plat</guid>
+          <link>http://localhost:4000/website/posts/Fp_Proj_Plat</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Fp_Proj_Plat</guid>
         </item>
       
     
@@ -2455,8 +2836,8 @@ $$ 由于后两项保持积, 蛇引理给出函子的满的自然变换 $(K ⊗ 
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Finitely_Presented_Functor</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Finitely_Presented_Functor</guid>
+          <link>http://localhost:4000/website/posts/Finitely_Presented_Functor</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Finitely_Presented_Functor</guid>
         </item>
       
     
@@ -2484,8 +2865,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Countable_Karoubi</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Countable_Karoubi</guid>
+          <link>http://localhost:4000/website/posts/Countable_Karoubi</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Countable_Karoubi</guid>
         </item>
       
     
@@ -2539,8 +2920,8 @@ $$ 由于 $(i(-),A)_𝒯$ 是有限表现的平坦对象, 从而投射 (&lt;a hr
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Coreflexive_Contravariantly_Finite</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Coreflexive_Contravariantly_Finite</guid>
+          <link>http://localhost:4000/website/posts/Coreflexive_Contravariantly_Finite</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Coreflexive_Contravariantly_Finite</guid>
         </item>
       
     
@@ -2934,8 +3315,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/mid</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/mid</guid>
+          <link>http://localhost:4000/website/posts/mid</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/mid</guid>
         </item>
       
     
@@ -3041,8 +3422,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/mid-copy</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/mid-copy</guid>
+          <link>http://localhost:4000/website/posts/mid-copy</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/mid-copy</guid>
         </item>
       
     
@@ -3094,8 +3475,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Almost_Split</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Almost_Split</guid>
+          <link>http://localhost:4000/website/posts/Almost_Split</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Almost_Split</guid>
         </item>
       
     
@@ -3440,8 +3821,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-20T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Notes_on_Tilting</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Notes_on_Tilting</guid>
+          <link>http://localhost:4000/website/posts/Notes_on_Tilting</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Notes_on_Tilting</guid>
         </item>
       
     
@@ -3660,8 +4041,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-20T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/template</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/template</guid>
+          <link>http://localhost:4000/website/posts/template</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/template</guid>
         </item>
       
     
@@ -3971,8 +4352,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-20T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Reflexive_sub_cat</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Reflexive_sub_cat</guid>
+          <link>http://localhost:4000/website/posts/Reflexive_sub_cat</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Reflexive_sub_cat</guid>
         </item>
       
     
@@ -4032,8 +4413,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-20T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/syzygy_und_approx</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/syzygy_und_approx</guid>
+          <link>http://localhost:4000/website/posts/syzygy_und_approx</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/syzygy_und_approx</guid>
         </item>
       
     
@@ -4049,8 +4430,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-20T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/stable_subquot</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/stable_subquot</guid>
+          <link>http://localhost:4000/website/posts/stable_subquot</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/stable_subquot</guid>
         </item>
       
     
@@ -4068,8 +4449,8 @@ $$ 依照 $\mathrm{Rad}$ 的性质, 只能由于 $\mathrm{im}(f) = Y$. 故 $f$ �
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-20T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Top_surjective</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Top_surjective</guid>
+          <link>http://localhost:4000/website/posts/Top_surjective</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Top_surjective</guid>
         </item>
       
     
@@ -4103,8 +4484,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-19T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/exists_left_proj_app</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/exists_left_proj_app</guid>
+          <link>http://localhost:4000/website/posts/exists_left_proj_app</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/exists_left_proj_app</guid>
         </item>
       
     
@@ -4134,8 +4515,8 @@ $$ 即为所求之单射.&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-19T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Torsion_Less</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Torsion_Less</guid>
+          <link>http://localhost:4000/website/posts/Torsion_Less</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Torsion_Less</guid>
         </item>
       
     
@@ -4162,8 +4543,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-19T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Left_proj_approx</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Left_proj_approx</guid>
+          <link>http://localhost:4000/website/posts/Left_proj_approx</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/Left_proj_approx</guid>
         </item>
       
     
@@ -4729,8 +5110,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-19T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/AR-notes</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/AR-notes</guid>
+          <link>http://localhost:4000/website/posts/AR-notes</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/AR-notes</guid>
         </item>
       
     
