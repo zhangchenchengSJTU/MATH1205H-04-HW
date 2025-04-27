@@ -9,7 +9,7 @@
 
 
 
-  <title>$\LaTeX$ Template (v 1.2)
+  <title>$\LaTeX$ Template (v 1.2.1)
     ·
     Jekyll Latex</title>
 
@@ -72,7 +72,7 @@
 	<main>
   <article>
     <div class="center">
-      <h1>$\LaTeX$ Template (v 1.2)</h1>
+      <h1>$\LaTeX$ Template (v 1.2.1)</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
@@ -87,6 +87,7 @@
   <li><a href="#abstract" id="markdown-toc-abstract">Abstract</a></li>
   <li><a href="#对原模板的若干修改" id="markdown-toc-对原模板的若干修改">对原模板的若干修改</a></li>
   <li><a href="#why-this-template" id="markdown-toc-why-this-template">Why this template?</a></li>
+  <li><a href="#个性化" id="markdown-toc-个性化">个性化</a></li>
 </ul>
 
 <div class="abstract">
@@ -201,8 +202,15 @@
     a_{1,1} & a_{1,2} & a_{1,3} & \cdots \\
     a_{2,1} & a_{2,2} & a_{2,3} & \cdots \\
     a_{3,1} & a_{3,2} & a_{3,3} & \cdots \\
-    ⋮ & ⋮ & ⋮ & ⋱.
-\end{bmatrix}
+    ⋮ & ⋮ & ⋮ & ⋱
+\end{bmatrix}.
+$$</p>
+  <p>\begin{equation} \mathtt{equation} 环境使用 𝒜 𝔟 ⊭ \frac 汉 字 也不会报错. \end{equation}</p>
+  <p>$$
+\begin{aligned}
+  多行公式, & align\\
+  显然. & Q.E.D.
+\end{aligned}
 $$</p>
 </div>
 
@@ -234,7 +242,7 @@ $$</p>
 
 <div class="example">
   <p>(<code class="language-plaintext highlighter-rouge">Tikz</code> 功能). 使用插件 <code class="language-plaintext highlighter-rouge">quiver</code> 画图.</p>
-  <center> <!-- https://q.uiver.app/#q=WzAsNSxbMCwwLCJcXGJ1bGxldCJdLFsxLDAsIlxcbWF0aHNjciBDIl0sWzAsMSwiXFxtYXRoYmIgQV9rICJdLFsxLDEsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxXSxbMiwzXSxbMyw0XSxbMSw0XSxbNSw3LCIiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV0sWzIsOSwiIiwyLHsic2hvcnRlbiI6eyJ0YXJnZXQiOjIwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNSxbMCwwLCJcXGJ1bGxldCJdLFsxLDAsIlxcbWF0aHNjciBDIl0sWzAsMSwiXFxtYXRoYmIgQV9rICJdLFsxLDEsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxXSxbMiwzXSxbMyw0XSxbMSw0XSxbNSw3LCIiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV0sWzIsOSwiIiwyLHsic2hvcnRlbiI6eyJ0YXJnZXQiOjIwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XV0=&amp;embed" width="432" height="304" style="border-radius: 8px; border: none;"></iframe> </center>
+  <center> <!-- https://q.uiver.app/#q=WzAsNSxbMCwwLCJcXGJ1bGxldCJdLFsxLDAsIlxcbWF0aHNjciBDIl0sWzAsMSwiXFxtYXRoYmIgQV9rICJdLFsxLDEsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxXSxbMiwzXSxbMyw0XSxbMSw0XSxbNSw3LCIiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV0sWzIsOSwiIiwyLHsic2hvcnRlbiI6eyJ0YXJnZXQiOjIwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNSxbMCwwLCJcXGJ1bGxldCJdLFsxLDAsIlxcbWF0aHNjciBDIl0sWzAsMSwiXFxtYXRoYmIgQV9rICJdLFsxLDEsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxXSxbMiwzXSxbMyw0XSxbMSw0XSxbNSw3LCIiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV0sWzIsOSwiIiwyLHsic2hvcnRlbiI6eyJ0YXJnZXQiOjIwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XV0=&amp;embed" width="300" height="200" style="border-radius: 8px; border: dashed;"></iframe> </center>
   <p>图像大小容易失衡, 建议使用 <code class="language-plaintext highlighter-rouge">mathcha</code> 画图, 输出矩阵, 例如</p>
   <p>$$
 \begin{bmatrix}
@@ -251,8 +259,10 @@ $$</p>
   <p><img src="https:/raw.githubusercontent.com/czhang271828/imgs/New_img/n_imgdiagram-20250420%20(2).png" alt="image-20250423194403416" /></p>
 </div>
 
+<h2 id="个性化">个性化</h2>
+
 <div class="example">
-  <p>(Block). 支持 Definition, Theorem, Lemma, Proof, Solution, Example, Remark, Note, Corollary, Proposition, Slogan. 实现方式如下:</p>
+  <p>(自定义 Block). 支持 Definition, Theorem, Lemma, Proof, Solution, Example, Remark, Note, Corollary, Proposition, Slogan. 实现方式如下:</p>
   <ol>
     <li>在 <code class="language-plaintext highlighter-rouge">/_sass/main.scss</code> 中定义 solution 的样式 (包含前, 中, 后, 以及 QED 正方形).</li>
     <li>在 <code class="language-plaintext highlighter-rouge">/_plugins/latex.rb</code> 中定义 solution 公式块环境, 此处使用 {% sol %} {% endsol %} .</li>
@@ -260,9 +270,28 @@ $$</p>
 </div>
 
 <div class="example">
-  <p>(我的写作界面).</p>
-  <p>下图左是简陋的 markdown 编辑器 (<code class="language-plaintext highlighter-rouge">VScode</code>, 配 Unicode-math 输入, 类似 <a href="https://live.lean-lang.org/">L∃∀N</a>, 下图右是 <code class="language-plaintext highlighter-rouge">edge</code> 浏览器. 一般来说, 左侧 $\texttt{ctrl + S}$ 保存, 右侧 $\texttt{ctrl + R}$ 直接刷新即可, 用时不超过一秒.</p>
-  <p><img src="https://raw.githubusercontent.com/czhang271828/imgs/New_img//n_imgimage-20250423194804974.png" alt="image-20250423194804974" /></p>
+  <p>(创建 block 快捷键). 假设你是 <code class="language-plaintext highlighter-rouge">vscode</code> 用户, 以下是创建 <code class="language-plaintext highlighter-rouge">\def</code> 快捷键的方式.</p>
+  <ol>
+    <li>打开 <code class="language-plaintext highlighter-rouge">Ctrl+Shift+P &gt; snippets : Configure Snippets</code>,</li>
+    <li>选择或新建 <code class="language-plaintext highlighter-rouge">liquid.json</code>,</li>
+    <li>输入</li>
+  </ol>
+  <blockquote>
+    <div class="language-plaintext highlighter-rouge">
+      <div class="highlight">
+        <div class="language-plaintext highlight highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"def": {
+  "prefix": ["\\def", "defblock"],
+  "body": [
+  "{% def %}",
+  "$0",
+  "{% enddef %}"
+  ]
+},
+</code></pre></div>        </div>
+      </div>
+    </div>
+  </blockquote>
+  <p>即可通过 <code class="language-plaintext highlighter-rouge">\def</code> + <code class="language-plaintext highlighter-rouge">enter</code> 快速创建 definition 块.</p>
 </div>
 
 

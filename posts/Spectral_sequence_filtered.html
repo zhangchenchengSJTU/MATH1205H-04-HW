@@ -9,12 +9,12 @@
 
 
 
-  <title>$\dim A$ 与 $\dim \mathrm{End}(T_A)$
+  <title>关于谱序列与滤过复形等
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="证明">
+<meta name="description" content="">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -23,7 +23,7 @@
 <link rel="icon" href="https://zhangchenchengsjtu.github.io/website/assets/favicon.png">
 <link rel="apple-touch-icon" href="https://zhangchenchengsjtu.github.io/website/assets/touch-icon.png">
 <link rel="stylesheet" href="https://zhangchenchengsjtu.github.io/website/assets/core.css">
-<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/Gl_Dim_A_B">
+<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/Spectral_sequence_filtered">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -72,36 +72,43 @@
 	<main>
   <article>
     <div class="center">
-      <h1>$\dim A$ 与 $\dim \mathrm{End}(T_A)$</h1>
+      <h1>关于谱序列与滤过复形等</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
-        April 24, 2025
+        April 27, 2025
       </p>
 
     </div>
 
     <div class="divider"></div>
 
-    <h2 id="证明">证明</h2>
+    <ul id="markdown-toc">
+  <li><a href="#abstract" id="markdown-toc-abstract">Abstract</a></li>
+</ul>
 
-<div class="theorem">
-  <p>(整体维数). $|gl.\dim A - gl.\dim B|≤ 1$.</p>
+<div class="abstract">
+  <h5 id="abstract">Abstract</h5>
+  <div>
+    <p>本节通过滤过复形构造谱序列, 并将之引申至双复形的谱序列, 以此证明同调代数中的若干的基本定理.</p>
+    <ol>
+      <li>$2 × 2$ 交换图的同调群, 推出拉回等;</li>
+      <li>复形态射基本定理 (包括正合复形的态射, 强形式的 $3 × 3$ 引理, 强形式蛇引理等);</li>
+      <li>AR 公式与高阶导出函子, 主要是 $\mathrm{Tor}$ (见 torsionless 模), 高阶 $\mathrm{Ext}$ (见 Auslander-Bridger 公式);</li>
+      <li>Grothendieck 谱序列 (复合函子求导);</li>
+      <li>投射维度有限的 tilting 模 (广义 tilting 模) 的 Brenner-Butler 定理.</li>
+    </ol>
+    <p>需要一些技巧, 例如:</p>
+    <ol>
+      <li>$E_2$ 步的长正合列;</li>
+      <li>Eilenberg-Cartan 消解;</li>
+      <li>函子同构 $(- ⊗{}_R P) ≃ (P_R, -)$;</li>
+      <li>等等.</li>
+    </ol>
+    <p><strong>特别注释: 没有正合耦.</strong></p>
+  </div>
 </div>
 
-<div class="proof">
-  <p>任取 $B$-模 $X$, 此时存在投射模 $P$ 使得有 ses $$
-0 → K → P → X → 0
-$$ 由 $P ∈ 𝒴 = (T,𝒯)$ 属于 torsion-free class, 此时子对象 $K ∈ 𝒴$. 不妨假定 $K = (T, M)$, 满足 $M ∈ 𝒯$. 由<a href="T_Y_Dim">此定理</a>, 得</p>
-  <p>$$
-p_B.\dim K = p_B.\dim (T,M) ≤ p_A. \dim M ≤ gl.\dim A.
-$$</p>
-  <p>因此 $p_B.\dim X - 1 ≤ gl.\dim A$. 取左式 $\sup$, 得 $gl.\dim B ≤ gl.\dim A + 1$. <br /> <br /> 由 $\mathrm{End}(_BT) ≃ A$, 得</p>
-  <p>$$
-gl.\dim A ≤ gl.\dim \mathrm{End}(_BT) ≤ gl.\dim B + 1.
-$$</p>
-  <p>综上, $|gl.\dim A - gl.\dim B|≤ 1$.</p>
-</div>
 
 
   </article>
@@ -110,8 +117,8 @@ $$</p>
     
       <a
         class="next"
-        href="https://zhangchenchengsjtu.github.io/website/posts/Hom_D_Hereditary"
-        title="NEXT: 遗传范畴的 $\mathrm{Hom}_{D𝒜}(-,-)$.">&lt;&lt;</a>
+        href="https://zhangchenchengsjtu.github.io/website/posts/Hereditary_TP_Split"
+        title="NEXT: 遗传范畴与可裂 torsion pair">&lt;&lt;</a>
       <span>
         &middot;
       </span>
@@ -126,8 +133,8 @@ $$</p>
       </span>
       <a
         class="prev"
-        href="https://zhangchenchengsjtu.github.io/website/posts/Uniqueness_of_Maximal_Orbit"
-        title="PREV: 关于轨道的若干结论">&gt;&gt;</a>
+        href="https://zhangchenchengsjtu.github.io/website/posts/Harada_Sai"
+        title="PREV: On a lemma of Harada-Sai">&gt;&gt;</a>
     
   </div>
 </main>

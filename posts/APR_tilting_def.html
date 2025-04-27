@@ -9,7 +9,7 @@
 
 
 
-  <title>$\dim A$ 与 $\dim \mathrm{End}(T_A)$
+  <title>APR tilting 模的定义
     ·
     Jekyll Latex</title>
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="https://zhangchenchengsjtu.github.io/website/assets/favicon.png">
 <link rel="apple-touch-icon" href="https://zhangchenchengsjtu.github.io/website/assets/touch-icon.png">
 <link rel="stylesheet" href="https://zhangchenchengsjtu.github.io/website/assets/core.css">
-<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/Gl_Dim_A_B">
+<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/APR_tilting_def">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -72,11 +72,11 @@
 	<main>
   <article>
     <div class="center">
-      <h1>$\dim A$ 与 $\dim \mathrm{End}(T_A)$</h1>
+      <h1>APR tilting 模的定义</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
-        April 24, 2025
+        April 26, 2025
       </p>
 
     </div>
@@ -85,22 +85,38 @@
 
     <h2 id="证明">证明</h2>
 
+<div class="definition">
+  <p>给定遗传路代数 $A= kQ$ 上的点 $i$, 使得 $P(i)$ 是<strong>非内射的投射单模</strong>. 定义 $i$ 点处的 APR tilting 模为</p>
+  <p>$$
+T := τ⁻¹ P(4) ⊕ ⨁_{i ≠ 4} P(i).
+$$</p>
+</div>
+
 <div class="theorem">
-  <p>(整体维数). $|gl.\dim A - gl.\dim B|≤ 1$.</p>
+  <p>APR tilting 模 ($T$) 是 tilting 模.</p>
 </div>
 
 <div class="proof">
-  <p>任取 $B$-模 $X$, 此时存在投射模 $P$ 使得有 ses $$
-0 → K → P → X → 0
-$$ 由 $P ∈ 𝒴 = (T,𝒯)$ 属于 torsion-free class, 此时子对象 $K ∈ 𝒴$. 不妨假定 $K = (T, M)$, 满足 $M ∈ 𝒯$. 由<a href="T_Y_Dim">此定理</a>, 得</p>
-  <p>$$
-p_B.\dim K = p_B.\dim (T,M) ≤ p_A. \dim M ≤ gl.\dim A.
-$$</p>
-  <p>因此 $p_B.\dim X - 1 ≤ gl.\dim A$. 取左式 $\sup$, 得 $gl.\dim B ≤ gl.\dim A + 1$. <br /> <br /> 由 $\mathrm{End}(_BT) ≃ A$, 得</p>
-  <p>$$
-gl.\dim A ≤ gl.\dim \mathrm{End}(_BT) ≤ gl.\dim B + 1.
-$$</p>
-  <p>综上, $|gl.\dim A - gl.\dim B|≤ 1$.</p>
+  <p>依次验证即可.</p>
+  <ol>
+    <li>$p.\dim P ≤ 1$. 这是遗传代数的性质.</li>
+    <li>$A$ 的 $𝐚𝐝𝐝 (T)$-相对内射维数 $≤ 1$. 此时只需验证所有不可分解投射对象的相对内射维度.       <ol>
+        <li>若 $P ∈ 𝐚𝐝𝐝 (T)$, 则显然.</li>
+        <li>若 $P ∉ 𝐚𝐝𝐝 (T)$, 则 $P ≃ P(i)$. 对一切 $i → i'$, 考虑几乎可裂 ses</li>
+      </ol>
+      <p>$$
+   0 → P(i) →  ⨁_{i'} P(i') → τ ⁻¹ P(i) → 0.
+   $$</p>
+      <p>这说明 $P(i)$ 的 $𝐚𝐝𝐝 (T)$-相对内射维数 $≤ 1$.</p>
+    </li>
+    <li>
+      <p>最后考虑 $\mathrm{Ext}^1(T,T)=0$. 只需证明</p>
+      <p>$$
+    \mathrm{Ext}^1(τ⁻¹ P(i), T) = 0.
+    $$</p>
+      <p>由 <a href="AR_Formula">AR 公式</a>, 只需证明 $(T, P(i)) = 0$. 由 $P_i$ 是单投射对象, 故没有 $i$ 指出的箭头. 故 Hom 对象是 $0$.</p>
+    </li>
+  </ol>
 </div>
 
 
@@ -110,8 +126,8 @@ $$</p>
     
       <a
         class="next"
-        href="https://zhangchenchengsjtu.github.io/website/posts/Hom_D_Hereditary"
-        title="NEXT: 遗传范畴的 $\mathrm{Hom}_{D𝒜}(-,-)$.">&lt;&lt;</a>
+        href="https://zhangchenchengsjtu.github.io/website/posts/Harada_Sai"
+        title="NEXT: On a lemma of Harada-Sai">&lt;&lt;</a>
       <span>
         &middot;
       </span>
@@ -126,8 +142,8 @@ $$</p>
       </span>
       <a
         class="prev"
-        href="https://zhangchenchengsjtu.github.io/website/posts/Uniqueness_of_Maximal_Orbit"
-        title="PREV: 关于轨道的若干结论">&gt;&gt;</a>
+        href="https://zhangchenchengsjtu.github.io/website/posts/P_is_Section"
+        title="PREV: $𝔓$ 是 $ℤ 𝔓$ 的截面">&gt;&gt;</a>
     
   </div>
 </main>

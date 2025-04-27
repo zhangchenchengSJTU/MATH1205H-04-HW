@@ -9,7 +9,7 @@
 
 
 
-  <title>$\dim A$ 与 $\dim \mathrm{End}(T_A)$
+  <title>$𝔓$ 是 $ℤ 𝔓$ 的截面
     ·
     Jekyll Latex</title>
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="https://zhangchenchengsjtu.github.io/website/assets/favicon.png">
 <link rel="apple-touch-icon" href="https://zhangchenchengsjtu.github.io/website/assets/touch-icon.png">
 <link rel="stylesheet" href="https://zhangchenchengsjtu.github.io/website/assets/core.css">
-<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/Gl_Dim_A_B">
+<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/P_is_Section">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -72,11 +72,11 @@
 	<main>
   <article>
     <div class="center">
-      <h1>$\dim A$ 与 $\dim \mathrm{End}(T_A)$</h1>
+      <h1>$𝔓$ 是 $ℤ 𝔓$ 的截面</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
-        April 24, 2025
+        April 26, 2025
       </p>
 
     </div>
@@ -85,22 +85,34 @@
 
     <h2 id="证明">证明</h2>
 
-<div class="theorem">
-  <p>(整体维数). $|gl.\dim A - gl.\dim B|≤ 1$.</p>
+<div class="lemma">
+  <p>($𝔓$ 是 $ℤ 𝔓$ 的截面). 给定连通, 有限表示表示的遗传代数.</p>
+  <ol>
+    <li>$𝔓$ 是 $ℤ𝔓$ 的截面.</li>
+    <li>$Γ$ 是 $ℤ𝔓$ 的子图.</li>
+    <li>$ℤ 𝔓$ 视同 $ℤΓ$ 的全子范畴.</li>
+  </ol>
+  <p>内射对象同理.</p>
 </div>
 
 <div class="proof">
-  <p>任取 $B$-模 $X$, 此时存在投射模 $P$ 使得有 ses $$
-0 → K → P → X → 0
-$$ 由 $P ∈ 𝒴 = (T,𝒯)$ 属于 torsion-free class, 此时子对象 $K ∈ 𝒴$. 不妨假定 $K = (T, M)$, 满足 $M ∈ 𝒯$. 由<a href="T_Y_Dim">此定理</a>, 得</p>
+  <p>先明确 $𝔓$ 的结构.</p>
+  <ol>
+    <li>(道路封闭) 由 $A$ 遗传, 投射模的子模是投射模, 从而指向投射模的不可约态射都是 $𝔓$ 中的态射. 这说明 $𝔓$ 对道路封闭.</li>
+    <li>
+      <p>(连通, 无环的全子范畴). 由不可约态射空间的刻画</p>
+      <p>$$
+   \mathrm{Irr}(P(i), P(j)) ≃ e_j ⋅ \frac{\mathrm{Rad}(A)}{\mathrm{Rad}^2(A)} ⋅ e_i,
+   $$</p>
+      <p>得 $𝔓 ≃ Q^{\mathrm{op}}$.</p>
+    </li>
+    <li>(截面). 直接由定义得到.</li>
+  </ol>
+  <p>往后证明 $Γ ⊆ ℤ𝔓$ 是全子范畴. 依照几乎可裂短正合列的性质, 有线性同构</p>
   <p>$$
-p_B.\dim K = p_B.\dim (T,M) ≤ p_A. \dim M ≤ gl.\dim A.
+\mathrm{Irr}(τ X, Y) ≃ \mathrm{Irr}(Y, X) ≃ \cdots .
 $$</p>
-  <p>因此 $p_B.\dim X - 1 ≤ gl.\dim A$. 取左式 $\sup$, 得 $gl.\dim B ≤ gl.\dim A + 1$. <br /> <br /> 由 $\mathrm{End}(_BT) ≃ A$, 得</p>
-  <p>$$
-gl.\dim A ≤ gl.\dim \mathrm{End}(_BT) ≤ gl.\dim B + 1.
-$$</p>
-  <p>综上, $|gl.\dim A - gl.\dim B|≤ 1$.</p>
+  <p>依照反射, 归纳地验证全子范畴 $Γ ⊆ ℤ 𝔓$ 即可. 特别地, $Γ$ 有限连通, 故归纳在有限步内结束.</p>
 </div>
 
 
@@ -110,8 +122,8 @@ $$</p>
     
       <a
         class="next"
-        href="https://zhangchenchengsjtu.github.io/website/posts/Hom_D_Hereditary"
-        title="NEXT: 遗传范畴的 $\mathrm{Hom}_{D𝒜}(-,-)$.">&lt;&lt;</a>
+        href="https://zhangchenchengsjtu.github.io/website/posts/APR_tilting_def"
+        title="NEXT: APR tilting 模的定义">&lt;&lt;</a>
       <span>
         &middot;
       </span>
@@ -126,8 +138,8 @@ $$</p>
       </span>
       <a
         class="prev"
-        href="https://zhangchenchengsjtu.github.io/website/posts/Uniqueness_of_Maximal_Orbit"
-        title="PREV: 关于轨道的若干结论">&gt;&gt;</a>
+        href="https://zhangchenchengsjtu.github.io/website/posts/Commutative_Diagram_Alg"
+        title="PREV: $D_4$ 与交换图方块代数.">&gt;&gt;</a>
     
   </div>
 </main>
