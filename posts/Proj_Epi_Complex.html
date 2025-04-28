@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>上有界复形存在上有界投射分解
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="https://zhangchenchengsjtu.github.io/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="https://zhangchenchengsjtu.github.io/website/assets/touch-icon.png">
+<link rel="stylesheet" href="https://zhangchenchengsjtu.github.io/website/assets/core.css">
+<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/Proj_Epi_Complex">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="https://zhangchenchengsjtu.github.io/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+</head>
+
+<body class="latex-dark">
+
+	<aside class="logo">
+  
+
+  <a href="https://zhangchenchengsjtu.github.io/website/">
+    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
+  </a>
+  <span class="logo-prompt">Back to Home</span>
+
+</aside>
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>上有界复形存在上有界投射分解</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        April 28, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="theorem">
+  <p>假定 $𝒜$ 是有足够投射的 Abel 范畴, $X$ 是负的复形 ($X^{≥ 0 } = X$). 若有足够 $𝒳$ 出发的满态射, 则存在 $𝒳$-复形 $P$ 使得 $P ↠ X$ 是满的拟同构.</p>
+</div>
+
+<div class="proof">
+  <p>(由谱序列). 取 <a href="Spectral_sequence_filtered#技巧-eilenburg-cartan-消解">EC 分解</a> $P^{∙ , ∙ } ⇗ X$, 下证明 $\mathrm{Tot}(P) → X$ 是拟同构. <br /> 由 $P^{∙, ∙}$ 是第三象限双复形, 谱序列收敛至双复形同调的滤过. 先计算纵向微分, 则 $E_1$ 是 $X$, 从而 $P$ 与 $X$ 收敛至相同的上同调群.</p>
+</div>
+
+<p>以上是基于谱序列的做法. 直接的构造是推出拉回.</p>
+
+<h3 id="直接的证明-推出拉回">直接的证明: 推出拉回</h3>
+
+<div class="theorem">
+  <p>假定 $𝒜$ 是有足够投射的 Abel 范畴, $X$ 是负的复形 ($X^{≥ 0 } = X$). 若有足够 $𝒳$ 出发的满态射, 则存在 $𝒳$-复形 $P$ 使得 $P ↠ X$ 是满的拟同构.</p>
+</div>
+
+<div class="proof">
+  <p>(由推出拉回). 取出负复形 $X$, 采用下图归纳之 ($P^i ∈ 𝒳$):</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTQsWzYsMSwiUV4wIl0sWzUsMCwiUF4wIl0sWzUsMiwiWF57LTF9Il0sWzQsMSwiUV57LTF9Il0sWzMsMiwiWF57LTJ9Il0sWzMsMCwiUF57LTF9Il0sWzcsMiwiWF4wIl0sWzIsMSwiUV57LTJ9Il0sWzEsMiwiWF57LTN9Il0sWzEsMCwiUF57LTJ9Il0sWzAsMiwiXFxjZG90cyAiXSxbMCwwLCJcXGNkb3RzICJdLFs1LDEsIlxcdGV4dHvilqZ9Il0sWzMsMSwiXFx0ZXh0e+KWpn0iXSxbMSwwLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMywxXSxbMywyLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNCwyLCJkX1heey0yfSIsMl0sWzQsMSwiIiwwLHsiY3VydmUiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNCwzXSxbNSwzLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCw2LCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDYsImRfWF57LTF9IiwyXSxbMiwwXSxbNyw1XSxbNyw0XSxbOCw0LCJkX1heey0zfSIsMl0sWzgsN10sWzgsNSwiIiwwLHsiY3VydmUiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbOSw3LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMTAsOF0sWzUsMV0sWzksNV0sWzExLDldXQ== --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTQsWzYsMSwiUV4wIl0sWzUsMCwiUF4wIl0sWzUsMiwiWF57LTF9Il0sWzQsMSwiUV57LTF9Il0sWzMsMiwiWF57LTJ9Il0sWzMsMCwiUF57LTF9Il0sWzcsMiwiWF4wIl0sWzIsMSwiUV57LTJ9Il0sWzEsMiwiWF57LTN9Il0sWzEsMCwiUF57LTJ9Il0sWzAsMiwiXFxjZG90cyAiXSxbMCwwLCJcXGNkb3RzICJdLFs1LDEsIlxcdGV4dHvilqZ9Il0sWzMsMSwiXFx0ZXh0e+KWpn0iXSxbMSwwLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMywxXSxbMywyLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNCwyLCJkX1heey0yfSIsMl0sWzQsMSwiIiwwLHsiY3VydmUiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNCwzXSxbNSwzLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCw2LCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDYsImRfWF57LTF9IiwyXSxbMiwwXSxbNyw1XSxbNyw0XSxbOCw0LCJkX1heey0zfSIsMl0sWzgsN10sWzgsNSwiIiwwLHsiY3VydmUiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbOSw3LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMTAsOF0sWzUsMV0sWzksNV0sWzExLDldXQ==&amp;embed" width="600" height="250" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>以上 $Q^{-k}$ 是拉回给出的, 虚线处 (零态射) 诱导了 $X^{-k-1}→ Q^{-k}$, 满态射 $P^{-k} ↠ Q^{-k}$ 是任意选取的. 由于 Abel 范畴中满态射的拉回方块亦是推出, 一切 $▦$ 是推出拉回. <br /> <br /> 去除一切不必要之指标, 将以上交换图精简作下图:</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsOCxbNCwwLCJQIl0sWzQsMiwiWCJdLFszLDEsIlEiXSxbMiwyLCJYIl0sWzIsMCwiUCJdLFsxLDEsIlEiXSxbMCwyLCJYIl0sWzAsMCwiUCJdLFsyLDAsImEiXSxbMiwxLCJjIiwyXSxbMywyLCJkIiwyXSxbNCwyLCJiIl0sWzUsNCwiYSJdLFs1LDMsImMiLDJdLFs2LDUsImQiLDJdLFs3LDUsImIiXSxbNyw0XSxbNCwwXSxbNiwzXSxbMywxXV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsOCxbNCwwLCJQIl0sWzQsMiwiWCJdLFszLDEsIlEiXSxbMiwyLCJYIl0sWzIsMCwiUCJdLFsxLDEsIlEiXSxbMCwyLCJYIl0sWzAsMCwiUCJdLFsyLDAsImEiXSxbMiwxLCJjIiwyXSxbMywyLCJkIiwyXSxbNCwyLCJiIl0sWzUsNCwiYSJdLFs1LDMsImMiLDJdLFs2LDUsImQiLDJdLFs3LDUsImIiXSxbNyw0XSxbNCwwXSxbNiwzXSxbMywxXV0=&amp;embed" width="600" height="250" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>往证映射锥 $\mathrm{Cone}(cb)$ 是无环复形, 其微分是 $D=\binom{-ab\qquad }{cb\quad cd}$.</p>
+  <ul>
+    <li>($\ker$ 项). 此时 $D\binom{x}{y}=0$ 当且仅当 $0=\binom{-abx}{cbx+cdy}=\binom{-a(bx+dy)}{c(bx+dy)}$.</li>
+    <li>($\ker ⊆ \operatorname{im}$). 由 $\binom{-a}{c}$ 单知 $bx+dy=0$. 由 $\mathrm{ker}(b\,\,d)=\mathrm{im}\binom{-a}{c}$ 知 $\binom{x}{y}=\binom{-at}{ct}$. 最后由 $(b\,\,d)$ 满知 $t$ 形如 $bm+dn$, 立得 $\binom{x}{y}=D\binom{m}{n}$.</li>
+  </ul>
+  <p>因此 $\mathrm{Cone}(cb)$ 是无环复形. 依照同伦范畴的同调代数基本定理, $P^\bullet$ 与 $X^\bullet$ 是拟同构.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="https://zhangchenchengsjtu.github.io/website/posts/Six_Lemma"
+        title="NEXT: 六引理 ($\ker$-$\operatorname{cok}$ 序列)">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="https://zhangchenchengsjtu.github.io/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="https://zhangchenchengsjtu.github.io/website/posts/Nine_Lemma"
+        title="PREV: 九引理 ($3 × 3$ 序列)">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+</body>
+
+
+</html>

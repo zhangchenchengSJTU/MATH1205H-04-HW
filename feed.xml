@@ -55,6 +55,46 @@
     
       
         <item>
+          <title>上有界复形存在上有界投射分解</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;假定 $𝒜$ 是有足够投射的 Abel 范畴, $X$ 是负的复形 ($X^{≥ 0 } = X$). 若有足够 $𝒳$ 出发的满态射, 则存在 $𝒳$-复形 $P$ 使得 $P ↠ X$ 是满的拟同构.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;(由谱序列). 取 &lt;a href=&quot;Spectral_sequence_filtered#技巧-eilenburg-cartan-消解&quot;&gt;EC 分解&lt;/a&gt; $P^{∙ , ∙ } ⇗ X$, 下证明 $\mathrm{Tot}(P) → X$ 是拟同构. &lt;br /&gt; 由 $P^{∙, ∙}$ 是第三象限双复形, 谱序列收敛至双复形同调的滤过. 先计算纵向微分, 则 $E_1$ 是 $X$, 从而 $P$ 与 $X$ 收敛至相同的上同调群.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以上是基于谱序列的做法. 直接的构造是推出拉回.&lt;/p&gt;
+
+&lt;h3 id=&quot;直接的证明-推出拉回&quot;&gt;直接的证明: 推出拉回&lt;/h3&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;假定 $𝒜$ 是有足够投射的 Abel 范畴, $X$ 是负的复形 ($X^{≥ 0 } = X$). 若有足够 $𝒳$ 出发的满态射, 则存在 $𝒳$-复形 $P$ 使得 $P ↠ X$ 是满的拟同构.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;(由推出拉回). 取出负复形 $X$, 采用下图归纳之 ($P^i ∈ 𝒳$):&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTQsWzYsMSwiUV4wIl0sWzUsMCwiUF4wIl0sWzUsMiwiWF57LTF9Il0sWzQsMSwiUV57LTF9Il0sWzMsMiwiWF57LTJ9Il0sWzMsMCwiUF57LTF9Il0sWzcsMiwiWF4wIl0sWzIsMSwiUV57LTJ9Il0sWzEsMiwiWF57LTN9Il0sWzEsMCwiUF57LTJ9Il0sWzAsMiwiXFxjZG90cyAiXSxbMCwwLCJcXGNkb3RzICJdLFs1LDEsIlxcdGV4dHvilqZ9Il0sWzMsMSwiXFx0ZXh0e+KWpn0iXSxbMSwwLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMywxXSxbMywyLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNCwyLCJkX1heey0yfSIsMl0sWzQsMSwiIiwwLHsiY3VydmUiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNCwzXSxbNSwzLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCw2LCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDYsImRfWF57LTF9IiwyXSxbMiwwXSxbNyw1XSxbNyw0XSxbOCw0LCJkX1heey0zfSIsMl0sWzgsN10sWzgsNSwiIiwwLHsiY3VydmUiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbOSw3LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMTAsOF0sWzUsMV0sWzksNV0sWzExLDldXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTQsWzYsMSwiUV4wIl0sWzUsMCwiUF4wIl0sWzUsMiwiWF57LTF9Il0sWzQsMSwiUV57LTF9Il0sWzMsMiwiWF57LTJ9Il0sWzMsMCwiUF57LTF9Il0sWzcsMiwiWF4wIl0sWzIsMSwiUV57LTJ9Il0sWzEsMiwiWF57LTN9Il0sWzEsMCwiUF57LTJ9Il0sWzAsMiwiXFxjZG90cyAiXSxbMCwwLCJcXGNkb3RzICJdLFs1LDEsIlxcdGV4dHvilqZ9Il0sWzMsMSwiXFx0ZXh0e+KWpn0iXSxbMSwwLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMywxXSxbMywyLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNCwyLCJkX1heey0yfSIsMl0sWzQsMSwiIiwwLHsiY3VydmUiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNCwzXSxbNSwzLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCw2LCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDYsImRfWF57LTF9IiwyXSxbMiwwXSxbNyw1XSxbNyw0XSxbOCw0LCJkX1heey0zfSIsMl0sWzgsN10sWzgsNSwiIiwwLHsiY3VydmUiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbOSw3LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMTAsOF0sWzUsMV0sWzksNV0sWzExLDldXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;250&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;以上 $Q^{-k}$ 是拉回给出的, 虚线处 (零态射) 诱导了 $X^{-k-1}→ Q^{-k}$, 满态射 $P^{-k} ↠ Q^{-k}$ 是任意选取的. 由于 Abel 范畴中满态射的拉回方块亦是推出, 一切 $▦$ 是推出拉回. &lt;br /&gt; &lt;br /&gt; 去除一切不必要之指标, 将以上交换图精简作下图:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsOCxbNCwwLCJQIl0sWzQsMiwiWCJdLFszLDEsIlEiXSxbMiwyLCJYIl0sWzIsMCwiUCJdLFsxLDEsIlEiXSxbMCwyLCJYIl0sWzAsMCwiUCJdLFsyLDAsImEiXSxbMiwxLCJjIiwyXSxbMywyLCJkIiwyXSxbNCwyLCJiIl0sWzUsNCwiYSJdLFs1LDMsImMiLDJdLFs2LDUsImQiLDJdLFs3LDUsImIiXSxbNyw0XSxbNCwwXSxbNiwzXSxbMywxXV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsOCxbNCwwLCJQIl0sWzQsMiwiWCJdLFszLDEsIlEiXSxbMiwyLCJYIl0sWzIsMCwiUCJdLFsxLDEsIlEiXSxbMCwyLCJYIl0sWzAsMCwiUCJdLFsyLDAsImEiXSxbMiwxLCJjIiwyXSxbMywyLCJkIiwyXSxbNCwyLCJiIl0sWzUsNCwiYSJdLFs1LDMsImMiLDJdLFs2LDUsImQiLDJdLFs3LDUsImIiXSxbNyw0XSxbNCwwXSxbNiwzXSxbMywxXV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;250&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;往证映射锥 $\mathrm{Cone}(cb)$ 是无环复形, 其微分是 $D=\binom{-ab\qquad }{cb\quad cd}$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;($\ker$ 项). 此时 $D\binom{x}{y}=0$ 当且仅当 $0=\binom{-abx}{cbx+cdy}=\binom{-a(bx+dy)}{c(bx+dy)}$.&lt;/li&gt;
+    &lt;li&gt;($\ker ⊆ \operatorname{im}$). 由 $\binom{-a}{c}$ 单知 $bx+dy=0$. 由 $\mathrm{ker}(b\,\,d)=\mathrm{im}\binom{-a}{c}$ 知 $\binom{x}{y}=\binom{-at}{ct}$. 最后由 $(b\,\,d)$ 满知 $t$ 形如 $bm+dn$, 立得 $\binom{x}{y}=D\binom{m}{n}$.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;因此 $\mathrm{Cone}(cb)$ 是无环复形. 依照同伦范畴的同调代数基本定理, $P^\bullet$ 与 $X^\bullet$ 是拟同构.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-28T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Proj_Epi_Complex</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Proj_Epi_Complex</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>九引理 ($3 × 3$ 序列)</title>
           <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
 
@@ -101,20 +141,20 @@
 &lt;div class=&quot;theorem&quot;&gt;
   &lt;p&gt;(Kunneth 谱序列定理, &lt;a href=&quot;Kunneth_Spectral_Seq&quot;&gt;证明&lt;/a&gt;). 记 $A$ 与 $C$ 均是负复形, 一者平坦, 则有&lt;/p&gt;
   &lt;p&gt;$$
-E^{p,q}_2 = ∐_{s + t = q} \mathrm{Tor}_p (H^s(A), H^t(C)) ⇒ H^{p+q} (\mathrm{Tot}(A⊗C)).
+E^{p,q}_2 = ∐\limits_{s + t = q} \mathrm{Tor}_p (H^s(A), H^t(C)) ⇒ H^{p+q} (\mathrm{Tot}(A⊗C)).
 $$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;proof&quot;&gt;
   &lt;p&gt;假定 $C$ 平坦, $F → A$ 是平坦分解, 考虑双复形&lt;/p&gt;
   &lt;p&gt;$$
-M^{p,q} := ∐_{i +j = p}(F^{q,i}⊗ C^j)
+M^{p,q} := ∐\limits_{i +j = p}(F^{q,i}⊗ C^j)
 $$&lt;/p&gt;
   &lt;ol&gt;
-    &lt;li&gt;$q$-向微分由 $F → A$ 直接给出, 形如 $∐_{i +j = p}(d_F^{q,i} ⊗ C^j)$.&lt;/li&gt;
+    &lt;li&gt;$q$-向微分由 $F → A$ 直接给出, 形如 $∐\limits_{i +j = p}(d_F^{q,i} ⊗ C^j)$.&lt;/li&gt;
     &lt;li&gt;$p$-向微分描述如下: 取定 $A^∙$ 的高度为 $q$ 的分解 $F^{q, ∙}$, 计算双复形 $F^{q, ∙} ⊗ C^∙$ 的全复形.&lt;/li&gt;
   &lt;/ol&gt;
-  &lt;p&gt;(计算 $q$-向谱序列). $q$-向微分与正合函子 $- ⊗ C^j$, $∐$ 交换. 从而&lt;/p&gt;
+  &lt;p&gt;(计算 $q$-向谱序列). $q$-向微分与正合函子 $- ⊗ C^j$, $∐\limits$ 交换. 从而&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$E_1^{∙,0} = \mathrm{Tot}(A ⊗ C)$, 剩余横行 $E_1^{∙ , ≠ 0} = 0$;&lt;/li&gt;
     &lt;li&gt;$E_2 = E_∞$, $E_2^{∙,0} = H^∙ (A ⊗ C)$, 剩余横行 $E_2^{∙ , ≠ 0} = 0$.&lt;/li&gt;
@@ -125,14 +165,14 @@ $$&lt;/p&gt;
     &lt;li&gt;($E_0$). 直接地,       &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNyxbMSwxLCJcXGNvcHJvZCBfe2kraiA9IHB9KEZeey0xLGl9IFxcb3RpbWVzIENeaiApIl0sWzIsMSwiXFxjb3Byb2QgX3tpK2ogPSBwKzF9KEZeey0xLGl9IFxcb3RpbWVzIENeaiApIl0sWzAsMSwiXFxib3hlZHtFXzAgfSJdLFsyLDAsIlxcY29wcm9kIF97aStqID0gcCsxfShGXnswLGl9IFxcb3RpbWVzIENeaiApIl0sWzEsMCwiXFxjb3Byb2QgX3tpK2ogPSBwfShGXnswLGl9IFxcb3RpbWVzIENeaiApIl0sWzIsMiwiXFxjb3Byb2QgX3tpK2ogPSBwKzF9KEZeey0yLGl9IFxcb3RpbWVzIENeaiApIl0sWzEsMiwiXFxjb3Byb2QgX3tpK2ogPSBwfShGXnstMixpfSBcXG90aW1lcyBDXmogKSJdLFswLDFdLFs0LDNdLFs2LDVdXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNyxbMSwxLCJcXGNvcHJvZCBfe2kraiA9IHB9KEZeey0xLGl9IFxcb3RpbWVzIENeaiApIl0sWzIsMSwiXFxjb3Byb2QgX3tpK2ogPSBwKzF9KEZeey0xLGl9IFxcb3RpbWVzIENeaiApIl0sWzAsMSwiXFxib3hlZHtFXzAgfSJdLFsyLDAsIlxcY29wcm9kIF97aStqID0gcCsxfShGXnswLGl9IFxcb3RpbWVzIENeaiApIl0sWzEsMCwiXFxjb3Byb2QgX3tpK2ogPSBwfShGXnswLGl9IFxcb3RpbWVzIENeaiApIl0sWzIsMiwiXFxjb3Byb2QgX3tpK2ogPSBwKzF9KEZeey0yLGl9IFxcb3RpbWVzIENeaiApIl0sWzEsMiwiXFxjb3Byb2QgX3tpK2ogPSBwfShGXnstMixpfSBcXG90aW1lcyBDXmogKSJdLFswLDFdLFs0LDNdLFs2LDVdXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
     &lt;/li&gt;
     &lt;li&gt;
-      &lt;p&gt;($E_1$). 为计算 $E_1$, 今假定 $F → A$ 是 EC 分解, 从而 $F^{k, ∙}$ 是可裂复形. 特别地, 以下全复形同调群相同:&lt;/p&gt;
+      &lt;p&gt;($E_1$). 为计算 $E_1$, 今假定 $F → A$ 是 &lt;a href=&quot;Spectral_sequence_filtered#技巧-eilenburg-cartan-消解&quot;&gt;EC 分解&lt;/a&gt;, 从而 $F^{k, ∙}$ 是可裂复形. 特别地, 以下全复形同调群相同:&lt;/p&gt;
       &lt;p&gt;$$
    (F^{k, ∙} ⊗ C^∙, \ d^C_→ , \ d^F_↑) ⇒ (H_↑(F^∙) ⊗ C^∙, \ d^C_→ ,\  d_↑  = 0).
    $$&lt;/p&gt;
-      &lt;p&gt;这说明 $E_1^{p,q} = ∐ _{i+j = p} (H_↑{q,i}(F)⊗H^j(C))$:&lt;/p&gt;
+      &lt;p&gt;这说明 $E_1^{p,q} = ∐\limits _{i+j = p} (H_↑{q,i}(F)⊗H^j(C))$:&lt;/p&gt;
       &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNyxbMSwxLCJcXGNvcHJvZCBfe2kraiA9IHB9KEhfXFx1cGFycm93IF57LTEsIGl9KEYpXFxvdGltZXMgSF5qIChDKSkiXSxbMiwxLCJcXGNvcHJvZCBfe2kraiA9IHArMX0oSF9cXHVwYXJyb3cgXnstMSwgaX0oRilcXG90aW1lcyBIXmogKEMpKSJdLFswLDEsIlxcYm94ZWR7RV8xfSJdLFsyLDAsIlxcY29wcm9kIF97aStqID0gcCsxfShIX1xcdXBhcnJvdyBeezAsIGl9KEYpXFxvdGltZXMgSF5qIChDKSkiXSxbMSwwLCJcXGNvcHJvZCBfe2kraiA9IHB9KEhfXFx1cGFycm93IF57MCwgaX0oRilcXG90aW1lcyBIXmogKEMpKSJdLFsyLDIsIlxcY29wcm9kIF97aStqID0gcCsxfShIX1xcdXBhcnJvdyBeey0yLCBpfShGKVxcb3RpbWVzIEheaiAoQykpIl0sWzEsMiwiXFxjb3Byb2QgX3tpK2ogPSBwfShIX1xcdXBhcnJvdyBeey0yLCBpfShGKVxcb3RpbWVzIEheaiAoQykpIl0sWzEsM10sWzAsNF0sWzYsMF0sWzUsMV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNyxbMSwxLCJcXGNvcHJvZCBfe2kraiA9IHB9KEhfXFx1cGFycm93IF57LTEsIGl9KEYpXFxvdGltZXMgSF5qIChDKSkiXSxbMiwxLCJcXGNvcHJvZCBfe2kraiA9IHArMX0oSF9cXHVwYXJyb3cgXnstMSwgaX0oRilcXG90aW1lcyBIXmogKEMpKSJdLFswLDEsIlxcYm94ZWR7RV8xfSJdLFsyLDAsIlxcY29wcm9kIF97aStqID0gcCsxfShIX1xcdXBhcnJvdyBeezAsIGl9KEYpXFxvdGltZXMgSF5qIChDKSkiXSxbMSwwLCJcXGNvcHJvZCBfe2kraiA9IHB9KEhfXFx1cGFycm93IF57MCwgaX0oRilcXG90aW1lcyBIXmogKEMpKSJdLFsyLDIsIlxcY29wcm9kIF97aStqID0gcCsxfShIX1xcdXBhcnJvdyBeey0yLCBpfShGKVxcb3RpbWVzIEheaiAoQykpIl0sWzEsMiwiXFxjb3Byb2QgX3tpK2ogPSBwfShIX1xcdXBhcnJvdyBeey0yLCBpfShGKVxcb3RpbWVzIEheaiAoQykpIl0sWzEsM10sWzAsNF0sWzYsMF0sWzUsMV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;250&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
     &lt;/li&gt;
-    &lt;li&gt;($E_2$). 依照 EC 的构造, $H_↑(F^{q, ∙})$ 是 $H^q(A)$ 的平坦分解:       &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNyxbMCwxLCJcXGJveGVke0VfMn0iXSxbMiwyLCJcXGNvcHJvZCBfe2kraiA9IHArMX1cXG1hdGhybXtUb3J9XzIoSF5pKEEpLCBIXmogKEMpKSJdLFsxLDIsIlxcY29wcm9kIF97aStqID0gcH1cXG1hdGhybXtUb3J9XzIoSF5pKEEpLCBIXmogKEMpKSJdLFsyLDEsIlxcY29wcm9kIF97aStqID0gcCsxfVxcbWF0aHJte1Rvcn1fMShIXmkoQSksIEheaiAoQykpIl0sWzEsMSwiXFxjb3Byb2QgX3tpK2ogPSBwfVxcbWF0aHJte1Rvcn1fMShIXmkoQSksIEheaiAoQykpIl0sWzEsMCwiXFxjb3Byb2QgX3tpK2ogPSBwfShIXmkoQSkgXFxvdGltZXMgSF5qIChDKSkiXSxbMiwwLCJcXGNvcHJvZCBfe2kraiA9IHArMX0oSF5pKEEpIFxcb3RpbWVzIEheaiAoQykpIl0sWzEsNV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNyxbMCwxLCJcXGJveGVke0VfMn0iXSxbMiwyLCJcXGNvcHJvZCBfe2kraiA9IHArMX1cXG1hdGhybXtUb3J9XzIoSF5pKEEpLCBIXmogKEMpKSJdLFsxLDIsIlxcY29wcm9kIF97aStqID0gcH1cXG1hdGhybXtUb3J9XzIoSF5pKEEpLCBIXmogKEMpKSJdLFsyLDEsIlxcY29wcm9kIF97aStqID0gcCsxfVxcbWF0aHJte1Rvcn1fMShIXmkoQSksIEheaiAoQykpIl0sWzEsMSwiXFxjb3Byb2QgX3tpK2ogPSBwfVxcbWF0aHJte1Rvcn1fMShIXmkoQSksIEheaiAoQykpIl0sWzEsMCwiXFxjb3Byb2QgX3tpK2ogPSBwfShIXmkoQSkgXFxvdGltZXMgSF5qIChDKSkiXSxbMiwwLCJcXGNvcHJvZCBfe2kraiA9IHArMX0oSF5pKEEpIFxcb3RpbWVzIEheaiAoQykpIl0sWzEsNV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;250&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+    &lt;li&gt;($E_2$). 依照 &lt;a href=&quot;Spectral_sequence_filtered#技巧-eilenburg-cartan-消解&quot;&gt;EC&lt;/a&gt; 的构造, $H_↑(F^{q, ∙})$ 是 $H^q(A)$ 的平坦分解:       &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNyxbMCwxLCJcXGJveGVke0VfMn0iXSxbMiwyLCJcXGNvcHJvZCBfe2kraiA9IHArMX1cXG1hdGhybXtUb3J9XzIoSF5pKEEpLCBIXmogKEMpKSJdLFsxLDIsIlxcY29wcm9kIF97aStqID0gcH1cXG1hdGhybXtUb3J9XzIoSF5pKEEpLCBIXmogKEMpKSJdLFsyLDEsIlxcY29wcm9kIF97aStqID0gcCsxfVxcbWF0aHJte1Rvcn1fMShIXmkoQSksIEheaiAoQykpIl0sWzEsMSwiXFxjb3Byb2QgX3tpK2ogPSBwfVxcbWF0aHJte1Rvcn1fMShIXmkoQSksIEheaiAoQykpIl0sWzEsMCwiXFxjb3Byb2QgX3tpK2ogPSBwfShIXmkoQSkgXFxvdGltZXMgSF5qIChDKSkiXSxbMiwwLCJcXGNvcHJvZCBfe2kraiA9IHArMX0oSF5pKEEpIFxcb3RpbWVzIEheaiAoQykpIl0sWzEsNV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNyxbMCwxLCJcXGJveGVke0VfMn0iXSxbMiwyLCJcXGNvcHJvZCBfe2kraiA9IHArMX1cXG1hdGhybXtUb3J9XzIoSF5pKEEpLCBIXmogKEMpKSJdLFsxLDIsIlxcY29wcm9kIF97aStqID0gcH1cXG1hdGhybXtUb3J9XzIoSF5pKEEpLCBIXmogKEMpKSJdLFsyLDEsIlxcY29wcm9kIF97aStqID0gcCsxfVxcbWF0aHJte1Rvcn1fMShIXmkoQSksIEheaiAoQykpIl0sWzEsMSwiXFxjb3Byb2QgX3tpK2ogPSBwfVxcbWF0aHJte1Rvcn1fMShIXmkoQSksIEheaiAoQykpIl0sWzEsMCwiXFxjb3Byb2QgX3tpK2ogPSBwfShIXmkoQSkgXFxvdGltZXMgSF5qIChDKSkiXSxbMiwwLCJcXGNvcHJvZCBfe2kraiA9IHArMX0oSF5pKEEpIFxcb3RpbWVzIEheaiAoQykpIl0sWzEsNV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;250&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
@@ -140,7 +180,7 @@ $$&lt;/p&gt;
 &lt;div class=&quot;theorem&quot;&gt;
   &lt;p&gt;记 $A$ 是负复形, $C$ 是正复形, 假定 $A$ 投射或 $C$ 内射, 则存在第一象限谱序列&lt;/p&gt;
   &lt;p&gt;$$
-E_2 ^{p,q} = ∐_{s + t = q} \mathrm{Ext}^p (H^{-s}(A), H^{t}(C)) ⇒ H^{p+q} (ℋ(A,C)).
+E_2 ^{p,q} = ∐\limits_{s + t = q} \mathrm{Ext}^p (H^{-s}(A), H^{t}(C)) ⇒ H^{p+q} (ℋ(A,C)).
 $$&lt;/p&gt;
 &lt;/div&gt;
 
@@ -163,12 +203,129 @@ $$&lt;/p&gt;
 
 &lt;div class=&quot;proof&quot;&gt;
   &lt;p&gt;$E_2$ 的前五项将满足 $E_3 = E_∞$, 将同调群插入微分得五项长正合列&lt;/p&gt;
-  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsOSxbMCwzLCJcXGJveGVke0VfMn0iXSxbMiw0LCJcXGNvbG9ye2JsdWV9XFxjb3Byb2QgX3tpK2ogPSBwKzF9XFxtYXRocm17VG9yfV8yKEheaShBKSwgSF5qIChDKSkiXSxbMSw0LCJcXGNvcHJvZCBfe2kraiA9IHB9XFxtYXRocm17VG9yfV8yKEheaShBKSwgSF5qIChDKSkiXSxbMiwzLCJcXGNvbG9ye2JsdWV9XFxjb3Byb2QgX3tpK2ogPSBwKzF9XFxtYXRocm17VG9yfV8xKEheaShBKSwgSF5qIChDKSkiXSxbMSwzLCJcXGNvcHJvZCBfe2kraiA9IHB9XFxtYXRocm17VG9yfV8xKEheaShBKSwgSF5qIChDKSkiXSxbMSwyLCJcXGNvbG9ye2JsdWV9XFxjb3Byb2QgX3tpK2ogPSBwfShIXmkoQSkgXFxvdGltZXMgSF5qIChDKSkiXSxbMiwyLCJcXGNvcHJvZCBfe2kraiA9IHArMX0oSF5pKEEpIFxcb3RpbWVzIEheaiAoQykpIl0sWzEsMSwiMCJdLFsxLDAsIjAiXSxbMSw1XSxbMyw3XSxbNiw4XSxbNyw2LCJIXjAiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNSwzLCJcXGNvbG9ye2JsdWV9SF57LTF9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsMSwiXFxjb2xvcntibHVlfUheey0yfSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsOSxbMCwzLCJcXGJveGVke0VfMn0iXSxbMiw0LCJcXGNvbG9ye2JsdWV9XFxjb3Byb2QgX3tpK2ogPSBwKzF9XFxtYXRocm17VG9yfV8yKEheaShBKSwgSF5qIChDKSkiXSxbMSw0LCJcXGNvcHJvZCBfe2kraiA9IHB9XFxtYXRocm17VG9yfV8yKEheaShBKSwgSF5qIChDKSkiXSxbMiwzLCJcXGNvbG9ye2JsdWV9XFxjb3Byb2QgX3tpK2ogPSBwKzF9XFxtYXRocm17VG9yfV8xKEheaShBKSwgSF5qIChDKSkiXSxbMSwzLCJcXGNvcHJvZCBfe2kraiA9IHB9XFxtYXRocm17VG9yfV8xKEheaShBKSwgSF5qIChDKSkiXSxbMSwyLCJcXGNvbG9ye2JsdWV9XFxjb3Byb2QgX3tpK2ogPSBwfShIXmkoQSkgXFxvdGltZXMgSF5qIChDKSkiXSxbMiwyLCJcXGNvcHJvZCBfe2kraiA9IHArMX0oSF5pKEEpIFxcb3RpbWVzIEheaiAoQykpIl0sWzEsMSwiMCJdLFsxLDAsIjAiXSxbMSw1XSxbMyw3XSxbNiw4XSxbNyw2LCJIXjAiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNSwzLCJcXGNvbG9ye2JsdWV9SF57LTF9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsMSwiXFxjb2xvcntibHVlfUheey0yfSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;400&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsOCxbMCwyLCJcXGJveGVke0VfMn0iXSxbMiwzLCJcXGNvbG9ye2JsdWV9XFxjb3Byb2QgX3tpK2ogPSBwKzF9XFxtYXRocm17VG9yfV8yKEheaShBKSwgSF5qIChDKSkiXSxbMSwzLCJcXGNvcHJvZCBfe2kraiA9IHB9XFxtYXRocm17VG9yfV8yKEheaShBKSwgSF5qIChDKSkiXSxbMiwyLCJcXGNvbG9ye2JsdWV9XFxjb3Byb2QgX3tpK2ogPSBwKzF9XFxtYXRocm17VG9yfV8xKEheaShBKSwgSF5qIChDKSkiXSxbMSwyLCJcXGNvcHJvZCBfe2kraiA9IHB9XFxtYXRocm17VG9yfV8xKEheaShBKSwgSF5qIChDKSkiXSxbMSwxLCJcXGNvbG9ye2JsdWV9XFxjb3Byb2QgX3tpK2ogPSBwfShIXmkoQSkgXFxvdGltZXMgSF5qIChDKSkiXSxbMiwxLCJcXGNvcHJvZCBfe2kraiA9IHArMX0oSF5pKEEpIFxcb3RpbWVzIEheaiAoQykpIl0sWzEsMCwiMCJdLFsxLDVdLFszLDddLFs3LDYsIkheMCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs1LDMsIlxcY29sb3J7Ymx1ZX1IXnstMX0iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNCwxLCJcXGNvbG9ye2JsdWV9SF57LTJ9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsOCxbMCwyLCJcXGJveGVke0VfMn0iXSxbMiwzLCJcXGNvbG9ye2JsdWV9XFxjb3Byb2QgX3tpK2ogPSBwKzF9XFxtYXRocm17VG9yfV8yKEheaShBKSwgSF5qIChDKSkiXSxbMSwzLCJcXGNvcHJvZCBfe2kraiA9IHB9XFxtYXRocm17VG9yfV8yKEheaShBKSwgSF5qIChDKSkiXSxbMiwyLCJcXGNvbG9ye2JsdWV9XFxjb3Byb2QgX3tpK2ogPSBwKzF9XFxtYXRocm17VG9yfV8xKEheaShBKSwgSF5qIChDKSkiXSxbMSwyLCJcXGNvcHJvZCBfe2kraiA9IHB9XFxtYXRocm17VG9yfV8xKEheaShBKSwgSF5qIChDKSkiXSxbMSwxLCJcXGNvbG9ye2JsdWV9XFxjb3Byb2QgX3tpK2ogPSBwfShIXmkoQSkgXFxvdGltZXMgSF5qIChDKSkiXSxbMiwxLCJcXGNvcHJvZCBfe2kraiA9IHArMX0oSF5pKEEpIFxcb3RpbWVzIEheaiAoQykpIl0sWzEsMCwiMCJdLFsxLDVdLFszLDddLFs3LDYsIkheMCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs1LDMsIlxcY29sb3J7Ymx1ZX1IXnstMX0iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNCwxLCJcXGNvbG9ye2JsdWV9SF57LTJ9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;($\mathrm{Tor}_{≥ 2}$ 消失, Kunneth 公式). 若 $\mathrm{Tor}_{≥ 2}$ 消失, 则 $E_2$ 是 $∞ × 2$ 规格的. 此时有一串 ses&lt;/p&gt;
+  &lt;p&gt;$$
+∐\limits _{i+j = p-1}(H^i(A) ⊗ H^j (C)) → H^{p}(A ⊗ C) → ∐\limits _{i+j = p}\mathrm{Tor}_p(H^i(A), H^j (C)).
+$$&lt;/p&gt;
+  &lt;p&gt;此处 $p ≤ -1$. 这就是 Kunneth 公式.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;($H$ 在二次导出函子中消失的充分条件). 若 $A$ 与 $\mathrm{im}(d_A)$ 各项满足&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\mathrm{Tor}_{≥ 1}(A,-), \mathrm{Tor}_{≥ 2}(\mathrm{im}(d_A),-)$ 消失, 则 $\mathrm{Tor}_{≥ 2}(H,-)$ 消失;&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Ext}_{≥ 1}(A,-), \mathrm{Ext}_{≥ 2}(\mathrm{im}(d_A),-)$ 消失, 则 $\mathrm{Ext}_{≥ 2}(H,-)$ 消失;&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Ext}_{≥ 1}(-,A), \mathrm{Ext}_{≥ 2}(-,\mathrm{im}(d_A))$ 消失, 则 $\mathrm{Ext}_{≥ 2}(-,H)$ 消失.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;仅证明第一个命题, 后两个命题的证明类似. 考虑 $0 → \mathrm{im} → A → \mathrm{cok} → 0$ 关于 $\mathrm{Tor}$ 的导出长正合列, 得 $\mathrm{coker}$ 平坦. 继而考虑 $0 → H → \mathrm{cok} → \mathrm{im} → 0$ 的导出长正合列, 得 $\mathrm{Tor}_{≥ 2}(H, - )$ 消失.&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
           <link>https://zhangchenchengsjtu.github.io/website/posts/Kunneth_Spectral_Seq</link>
           <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Kunneth_Spectral_Seq</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>马蹄引理</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;给定对象类 $𝒳$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;称存在足够 $𝒳$ 出发的满态射, 若对任意 $M ∈ 𝒜$, 总存在 $X ∈ 𝒳$ 使得有满态射 $X ↠ M$;&lt;/li&gt;
+    &lt;li&gt;称存在足够 $𝒳$ 收尾的单态射, 若对任意 $N ∈ 𝒜$, 总存在 $X ∈ 𝒳$ 使得有单态射 $N ↪ X$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(相对版本的马蹄引理). 假定存在足够 $𝒳$ 出发的满态射, 任意 ses 存在可裂 $𝒳$-复形的相对投射分解.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;下构造归纳步骤. 取定 ses \begin{equation} 0 → L \xrightarrow ι M \xrightarrow π N → 0. \end{equation} 取 $p : P ↠ L$ 与 $q : Q ↠ M$, 此时有&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTAsWzEsMCwiUCJdLFsxLDEsIkwiXSxbMywxLCJNIl0sWzUsMSwiTiJdLFs2LDEsIjAiXSxbMCwxLCIwIl0sWzMsMCwiUCBcXG9wbHVzIFEiXSxbNSwwLCJRIl0sWzAsMCwiMCJdLFs2LDAsIjAiXSxbMCwxLCJwIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzYsMiwiKFxcaW90YSAgcCBcXCBcXCBxKSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDIsIlxcaW90YSJdLFsyLDMsIlxccGkgIl0sWzAsNiwiXFxiaW5vbSAxMCJdLFs1LDFdLFs4LDBdLFs2LDcsIigwIFxcIFxcIFxcIDEpIl0sWzcsMywicSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs3LDldLFszLDRdXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTAsWzEsMCwiUCJdLFsxLDEsIkwiXSxbMywxLCJNIl0sWzUsMSwiTiJdLFs2LDEsIjAiXSxbMCwxLCIwIl0sWzMsMCwiUCBcXG9wbHVzIFEiXSxbNSwwLCJRIl0sWzAsMCwiMCJdLFs2LDAsIjAiXSxbMCwxLCJwIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzYsMiwiKFxcaW90YSAgcCBcXCBcXCBxKSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDIsIlxcaW90YSJdLFsyLDMsIlxccGkgIl0sWzAsNiwiXFxiaW5vbSAxMCJdLFs1LDFdLFs4LDBdLFs2LDcsIigwIFxcIFxcIFxcIDEpIl0sWzcsMywicSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs3LDldLFszLDRdXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;这就完成了归纳.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(相对版本的马蹄引理). 假定存在足够 $𝒳$ 收尾的单态射, 任意 ses 存在可裂 $𝒳$-复形的相对内射分解.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;对偶.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;推广见 &lt;a href=&quot;Spectral_sequence_filtered#技巧-eilenburg-cartan-消解&quot;&gt;EC 分解&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-28T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Horse_Shoe_Lemma</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Horse_Shoe_Lemma</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Grothendieck 谱序列</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Grothendieck 函子的基本资料). 给定 Abel 范畴间的右正合函子 \begin{equation} 𝒜\xrightarrow F ℬ \xrightarrow G 𝒞. \end{equation} 称 $(F, G)$ 是右正合 Grothendieck 谱序列的基本资料, 若&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;范畴有足够投射对象;&lt;/li&gt;
+    &lt;li&gt;对任意 $P ∈ 𝒫_A$, 对象 $F(P) ∈ ℬ$ 关于 $L_{≤ -1}G$ 消失.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;类似地, 可以规定左正合 Grothendieck 谱序列的基本资料.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;为与上链复形配合, 对固定的 $n ∈ ℕ_{≥ 0}$, 以下选用 $L_{-n}F$ 表示 $F$ 的 $n$ 次左导出; 选用 $R^{n}F$ 表示 $F$ 的 $n$ 次右导出. 简单地说,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;将右导出写至上标, 例如 $R^{≥ 0} F$.&lt;/li&gt;
+  &lt;li&gt;将左导出写至下标, 例如 $L_{≤ 0} G$.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Grothendieck 谱序列定理). 给定右正合的 Grothendieck 谱序列资料, 则存在第三象限的谱序列 $E$, 使得&lt;/p&gt;
+  &lt;p&gt;\begin{equation} E_2^{p,q} = L_{-p}G (L_{-q} F(X)) ⇒ (L_{-(p+q)} (G ∘ F)) (X). \end{equation}&lt;/p&gt;
+  &lt;p&gt;相应地, 对于左正合 Grothendieck 谱序列, 存在第一象限的谱序列 \begin{equation} E_2^{p,q} = (R^p G) ∘ (R^q F) ⇒ R^{p+q} (G ∘ F). \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;只证明右正合情形. 取投射分解 $Q^{≤ 0} → X$ 与 &lt;a href=&quot;Spectral_sequence_filtered#技巧-eilenburg-cartan-消解&quot;&gt;EC 分解&lt;/a&gt; $P^{≤ 0, ≤ 0} → F(Q^{≤ 0})$, 得&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTYsWzMsMCwiRlgiLFszMCw2MCw2MCwxXV0sWzIsMCwiRlFeMCIsWzE4MCw2MCw2MCwxXV0sWzEsMCwiRlFeey0xfSIsWzE4MCw2MCw2MCwxXV0sWzAsMCwiRlFeey0yfSIsWzE4MCw2MCw2MCwxXV0sWzAsMSwiUF57LTIsMH0iXSxbMiwxLCJQXnswLDB9Il0sWzEsMSwiUF57LTEsMH0iXSxbMiwyLCJQXnswLC0xfSJdLFsyLDMsIlBeezAsLTJ9Il0sWzEsMiwiUF57LTEsLTF9Il0sWzEsMywiUF57LTEsLTJ9Il0sWzAsMiwiUF57LTIsLTF9Il0sWzAsMywiUF57LTIsLTJ9Il0sWzMsMSwiUF57MSwwfSIsWzE4MCw2MCw2MCwxXV0sWzMsMiwiUF57MSwtMX0iLFsxODAsNjAsNjAsMV1dLFszLDMsIlBeezEsLTJ9IixbMTgwLDYwLDYwLDFdXSxbNCw2XSxbNiw1XSxbMTEsOV0sWzksN10sWzEyLDEwXSxbMTAsOF0sWzEyLDExXSxbMTEsNF0sWzEwLDldLFs5LDZdLFs4LDddLFs3LDVdLFszLDIsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMiwxLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEsMCwiIiwxLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE1LDE0LCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzE0LDEzLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEzLDAsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDMsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs2LDIsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs1LDEsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs3LDE0LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNSwxMywiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzgsMTUsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTYsWzMsMCwiRlgiLFszMCw2MCw2MCwxXV0sWzIsMCwiRlFeMCIsWzE4MCw2MCw2MCwxXV0sWzEsMCwiRlFeey0xfSIsWzE4MCw2MCw2MCwxXV0sWzAsMCwiRlFeey0yfSIsWzE4MCw2MCw2MCwxXV0sWzAsMSwiUF57LTIsMH0iXSxbMiwxLCJQXnswLDB9Il0sWzEsMSwiUF57LTEsMH0iXSxbMiwyLCJQXnswLC0xfSJdLFsyLDMsIlBeezAsLTJ9Il0sWzEsMiwiUF57LTEsLTF9Il0sWzEsMywiUF57LTEsLTJ9Il0sWzAsMiwiUF57LTIsLTF9Il0sWzAsMywiUF57LTIsLTJ9Il0sWzMsMSwiUF57MSwwfSIsWzE4MCw2MCw2MCwxXV0sWzMsMiwiUF57MSwtMX0iLFsxODAsNjAsNjAsMV1dLFszLDMsIlBeezEsLTJ9IixbMTgwLDYwLDYwLDFdXSxbNCw2XSxbNiw1XSxbMTEsOV0sWzksN10sWzEyLDEwXSxbMTAsOF0sWzEyLDExXSxbMTEsNF0sWzEwLDldLFs5LDZdLFs4LDddLFs3LDVdLFszLDIsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMiwxLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEsMCwiIiwxLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE1LDE0LCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzE0LDEzLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEzLDAsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDMsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs2LDIsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs1LDEsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs3LDE0LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNSwxMywiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzgsMTUsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;此处 $P$ 是横行可裂的, 同调群恰是 $R^∙FX$ 的投射分解. 以下计算 $G(P)$ 的双向谱序列. &lt;br /&gt; &lt;br /&gt; (横向 $E_0$).&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTcsWzQsMCwiR0ZYIixbMzAsNjAsNjAsMV1dLFszLDAsIkdGUV4wIixbMTgwLDYwLDYwLDFdXSxbMiwwLCJHRlFeey0xfSIsWzE4MCw2MCw2MCwxXV0sWzEsMCwiR0ZRXnstMn0iLFsxODAsNjAsNjAsMV1dLFsxLDEsIkcoUF57LTIsMH0pIl0sWzMsMSwiRyhQXnswLDB9KSJdLFsyLDEsIkcoUF57LTEsMH0pIl0sWzMsMiwiRyhQXnswLC0xfSkiXSxbMywzLCJHKFBeezAsLTJ9KSJdLFsyLDIsIkcoUF57LTEsLTF9KSJdLFsyLDMsIkcoUF57LTEsLTJ9KSJdLFsxLDIsIkcoUF57LTIsLTF9KSJdLFsxLDMsIkcoUF57LTIsLTJ9KSJdLFs0LDEsIkcoUF57MSwwfSkiLFsxODAsNjAsNjAsMV1dLFs0LDIsIkcoUF57MSwtMX0pIixbMTgwLDYwLDYwLDFdXSxbNCwzLCJHKFBeezEsLTJ9KSIsWzE4MCw2MCw2MCwxXV0sWzAsMywiXFxib3hlZHtFXzB9Il0sWzQsNl0sWzYsNV0sWzExLDldLFs5LDddLFsxMiwxMF0sWzEwLDhdLFszLDIsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMiwxLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEsMCwiIiwxLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzcsMTQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs1LDEzLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCwxNSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTcsWzQsMCwiR0ZYIixbMzAsNjAsNjAsMV1dLFszLDAsIkdGUV4wIixbMTgwLDYwLDYwLDFdXSxbMiwwLCJHRlFeey0xfSIsWzE4MCw2MCw2MCwxXV0sWzEsMCwiR0ZRXnstMn0iLFsxODAsNjAsNjAsMV1dLFsxLDEsIkcoUF57LTIsMH0pIl0sWzMsMSwiRyhQXnswLDB9KSJdLFsyLDEsIkcoUF57LTEsMH0pIl0sWzMsMiwiRyhQXnswLC0xfSkiXSxbMywzLCJHKFBeezAsLTJ9KSJdLFsyLDIsIkcoUF57LTEsLTF9KSJdLFsyLDMsIkcoUF57LTEsLTJ9KSJdLFsxLDIsIkcoUF57LTIsLTF9KSJdLFsxLDMsIkcoUF57LTIsLTJ9KSJdLFs0LDEsIkcoUF57MSwwfSkiLFsxODAsNjAsNjAsMV1dLFs0LDIsIkcoUF57MSwtMX0pIixbMTgwLDYwLDYwLDFdXSxbNCwzLCJHKFBeezEsLTJ9KSIsWzE4MCw2MCw2MCwxXV0sWzAsMywiXFxib3hlZHtFXzB9Il0sWzQsNl0sWzYsNV0sWzExLDldLFs5LDddLFsxMiwxMF0sWzEwLDhdLFszLDIsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMiwxLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEsMCwiIiwxLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzcsMTQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs1LDEzLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCwxNSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;依照 EC 分解, 横向同调群是直和项. 同时, $H_→ ^{p, ∙}(P)$ 是 $L_pFX$ (即 $H^p(F(Q^∙))$) 的投射分解. &lt;br /&gt; (横向 $E_1$).&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTcsWzAsMywiXFxib3hlZHtFXzF9Il0sWzQsMSwiRyhQXnsxLDB9KSIsWzE4MCw2MCw2MCwxXV0sWzQsMiwiRyhQXnsxLC0xfSkiLFsxODAsNjAsNjAsMV1dLFs0LDMsIkcoUF57MSwtMn0pIixbMTgwLDYwLDYwLDFdXSxbNCwwLCJHRlgiLFszMCw2MCw2MCwxXV0sWzMsMSwiRyhIX1xcdG8gXnswLDB9KSJdLFszLDIsIkcoSF9cXHRvIF57MCwtMX0pIl0sWzMsMywiRyhIX1xcdG8gXnswLC0yfSkiXSxbMiwxLCJHKEhfXFx0byBeey0xLDB9KSJdLFsyLDIsIkcoSF9cXHRvIF57LTEsLTF9KSJdLFsyLDMsIkcoSF9cXHRvIF57LTEsLTJ9KSJdLFsxLDEsIkcoSF9cXHRvIF57LTIsMH0pIl0sWzEsMiwiRyhIX1xcdG8gXnstMiwtMX0pIl0sWzEsMywiRyhIX1xcdG8gXnstMiwtMn0pIl0sWzMsMCwiR0ZYIixbMTgwLDYwLDYwLDFdXSxbMiwwLCJHKFJeMSBGWCkiLFsxODAsNjAsNjAsMV1dLFsxLDAsIkcoUl4yIEZYKSIsWzE4MCw2MCw2MCwxXV0sWzMsMl0sWzIsMV0sWzcsNl0sWzYsNV0sWzEwLDldLFs5LDhdLFsxMywxMl0sWzEyLDExXSxbNSwxLCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiwyLCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNywzLCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSw0LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTEsMTYsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs4LDE1LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNSwxNCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTcsWzAsMywiXFxib3hlZHtFXzF9Il0sWzQsMSwiRyhQXnsxLDB9KSIsWzE4MCw2MCw2MCwxXV0sWzQsMiwiRyhQXnsxLC0xfSkiLFsxODAsNjAsNjAsMV1dLFs0LDMsIkcoUF57MSwtMn0pIixbMTgwLDYwLDYwLDFdXSxbNCwwLCJHRlgiLFszMCw2MCw2MCwxXV0sWzMsMSwiRyhIX1xcdG8gXnswLDB9KSJdLFszLDIsIkcoSF9cXHRvIF57MCwtMX0pIl0sWzMsMywiRyhIX1xcdG8gXnswLC0yfSkiXSxbMiwxLCJHKEhfXFx0byBeey0xLDB9KSJdLFsyLDIsIkcoSF9cXHRvIF57LTEsLTF9KSJdLFsyLDMsIkcoSF9cXHRvIF57LTEsLTJ9KSJdLFsxLDEsIkcoSF9cXHRvIF57LTIsMH0pIl0sWzEsMiwiRyhIX1xcdG8gXnstMiwtMX0pIl0sWzEsMywiRyhIX1xcdG8gXnstMiwtMn0pIl0sWzMsMCwiR0ZYIixbMTgwLDYwLDYwLDFdXSxbMiwwLCJHKFJeMSBGWCkiLFsxODAsNjAsNjAsMV1dLFsxLDAsIkcoUl4yIEZYKSIsWzE4MCw2MCw2MCwxXV0sWzMsMl0sWzIsMV0sWzcsNl0sWzYsNV0sWzEwLDldLFs5LDhdLFsxMywxMl0sWzEyLDExXSxbNSwxLCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiwyLCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNywzLCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSw0LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTEsMTYsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs4LDE1LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNSwxNCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;计算 $E_2$ 时, 只需按部就班地取 $L_pFX$ 关于 $G$ 的导出对象. &lt;br /&gt; (横向 $E_2$).&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTAsWzMsMCwiRyhGWCkiLFsxODAsNjAsNjAsMV1dLFszLDEsIihSXjFHKShGWCkiLFszMCw2MCw2MCwxXV0sWzMsMiwiKFJeMkcpKEZYKSIsWzMwLDYwLDYwLDFdXSxbMiwyLCIoUl4yRykoUl4xRlgpIl0sWzIsMSwiKFJeMUcpKFJeMUZYKSJdLFsyLDAsIkcoUl4xRlgpIixbMzAsNjAsNjAsMV1dLFsxLDAsIkcoUl4yRlgpIl0sWzEsMSwiKFJeMUcpKFJeMkZYKSJdLFsxLDIsIihSXjJHKShSXjJGWCkiXSxbMCwyLCJcXGJveGVke0VfMn0iXSxbMiw1LCIiLDAseyJjb2xvdXIiOlszMCw2MCw2MF19XSxbMyw2XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTAsWzMsMCwiRyhGWCkiLFsxODAsNjAsNjAsMV1dLFszLDEsIihSXjFHKShGWCkiLFszMCw2MCw2MCwxXV0sWzMsMiwiKFJeMkcpKEZYKSIsWzMwLDYwLDYwLDFdXSxbMiwyLCIoUl4yRykoUl4xRlgpIl0sWzIsMSwiKFJeMUcpKFJeMUZYKSJdLFsyLDAsIkcoUl4xRlgpIixbMzAsNjAsNjAsMV1dLFsxLDAsIkcoUl4yRlgpIl0sWzEsMSwiKFJeMUcpKFJeMkZYKSJdLFsxLDIsIihSXjJHKShSXjJGWCkiXSxbMCwyLCJcXGJveGVke0VfMn0iXSxbMiw1LCIiLDAseyJjb2xvdXIiOlszMCw2MCw2MF19XSxbMyw2XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;250&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;往后将重点关注以上黄色箭头. &lt;br /&gt; &lt;br /&gt; 横向谱序列的计算较为简单, 因为必要的假定&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;对任意 $P ∈ 𝒫_A$, 对象 $F(P) ∈ ℬ$ 关于 $L_{≤ -1}G$ 消失.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;使得 $E_1$ 退化. 以下一气呵成地计算纵向 $E_{0,1,2}$.&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMzAsWzQsMiwiRyhQXnsxLC0xfSkiLFsxODAsNjAsNjAsMV1dLFszLDMsIkcoUF57MCwtMn0pIl0sWzQsMywiRyhQXnsxLC0yfSkiLFsxODAsNjAsNjAsMV1dLFsyLDIsIkcoUF57LTEsLTF9KSJdLFszLDIsIkcoUF57MCwtMX0pIl0sWzIsMywiRyhQXnstMSwtMn0pIl0sWzEsMywiRyhQXnstMiwtMn0pIl0sWzEsMiwiRyhQXnstMiwtMX0pIl0sWzEsMSwiRyhQXnstMiwwfSkiXSxbMiwxLCJHKFBeey0xLDB9KSJdLFszLDEsIkcoUF57MCwwfSkiXSxbNCwxLCJHKFBeezEsMH0pIixbMTgwLDYwLDYwLDFdXSxbNCwwLCJHRlgiLFszMCw2MCw2MCwxXV0sWzMsMCwiR0ZRXjAiLFsxODAsNjAsNjAsMV1dLFsyLDAsIkdGUV57LTF9IixbMTgwLDYwLDYwLDFdXSxbMSwwLCJHRlFeey0yfSIsWzE4MCw2MCw2MCwxXV0sWzAsMywiXFxib3hlZHtFXzB9Il0sWzMsNCwiR0ZRXjAiXSxbMyw1LCIoUl4xRylGUV4wIixbMCwwLDc1LDFdXSxbMiw0LCJHRlFeMSJdLFsxLDQsIkdGUV4yIl0sWzIsNSwiKFJeMUcpRlFeMSIsWzAsMCw3NSwxXV0sWzEsNSwiKFJeMUcpRlFeMiIsWzAsMCw3NSwxXV0sWzAsNSwiXFxib3hlZHtFXzF9Il0sWzQsNSwiXFx0ZXh0e+a2iOWksX0iLFswLDAsNzUsMV1dLFs0LDQsIkdGWCIsWzMwLDYwLDYwLDFdXSxbMyw2LCIoR0YpWCJdLFsyLDYsIlJeMShHRilYIl0sWzEsNiwiUl4yKEdGKVgiXSxbMCw2LCJcXGJveGVke0VfMn0iXSxbMiwwLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEsNF0sWzUsM10sWzYsN10sWzAsMTEsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCwxMF0sWzMsOV0sWzcsOF0sWzExLDEyLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTAsMTMsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs5LDE0LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCwxNSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIwLDE5XSxbMTksMTddLFsyMiwyMSwiIiwwLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsyMSwxOCwiIiwwLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsxNywyNSwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMzAsWzQsMiwiRyhQXnsxLC0xfSkiLFsxODAsNjAsNjAsMV1dLFszLDMsIkcoUF57MCwtMn0pIl0sWzQsMywiRyhQXnsxLC0yfSkiLFsxODAsNjAsNjAsMV1dLFsyLDIsIkcoUF57LTEsLTF9KSJdLFszLDIsIkcoUF57MCwtMX0pIl0sWzIsMywiRyhQXnstMSwtMn0pIl0sWzEsMywiRyhQXnstMiwtMn0pIl0sWzEsMiwiRyhQXnstMiwtMX0pIl0sWzEsMSwiRyhQXnstMiwwfSkiXSxbMiwxLCJHKFBeey0xLDB9KSJdLFszLDEsIkcoUF57MCwwfSkiXSxbNCwxLCJHKFBeezEsMH0pIixbMTgwLDYwLDYwLDFdXSxbNCwwLCJHRlgiLFszMCw2MCw2MCwxXV0sWzMsMCwiR0ZRXjAiLFsxODAsNjAsNjAsMV1dLFsyLDAsIkdGUV57LTF9IixbMTgwLDYwLDYwLDFdXSxbMSwwLCJHRlFeey0yfSIsWzE4MCw2MCw2MCwxXV0sWzAsMywiXFxib3hlZHtFXzB9Il0sWzMsNCwiR0ZRXjAiXSxbMyw1LCIoUl4xRylGUV4wIixbMCwwLDc1LDFdXSxbMiw0LCJHRlFeMSJdLFsxLDQsIkdGUV4yIl0sWzIsNSwiKFJeMUcpRlFeMSIsWzAsMCw3NSwxXV0sWzEsNSwiKFJeMUcpRlFeMiIsWzAsMCw3NSwxXV0sWzAsNSwiXFxib3hlZHtFXzF9Il0sWzQsNSwiXFx0ZXh0e+a2iOWksX0iLFswLDAsNzUsMV1dLFs0LDQsIkdGWCIsWzMwLDYwLDYwLDFdXSxbMyw2LCIoR0YpWCJdLFsyLDYsIlJeMShHRilYIl0sWzEsNiwiUl4yKEdGKVgiXSxbMCw2LCJcXGJveGVke0VfMn0iXSxbMiwwLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEsNF0sWzUsM10sWzYsN10sWzAsMTEsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCwxMF0sWzMsOV0sWzcsOF0sWzExLDEyLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTAsMTMsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs5LDE0LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCwxNSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIwLDE5XSxbMTksMTddLFsyMiwyMSwiIiwwLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsyMSwxOCwiIiwwLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsxNywyNSwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;550&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;纵向计算得全复形的同调群, 将其插入横向谱序列, 得&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNyxbMiwxLCJHKEZYKSIsWzE4MCw2MCw2MCwxXV0sWzIsMiwiKFJeMUcpKEZYKSIsWzMwLDYwLDYwLDFdXSxbMiwzLCIoUl4yRykoRlgpIixbMzAsNjAsNjAsMV1dLFswLDMsIihSXjJHKShSXjFGWCkiXSxbMCwyLCIoUl4xRykoUl4xRlgpIl0sWzAsMSwiRyhSXjFGWCkiLFszMCw2MCw2MCwxXV0sWzAsMCwiMCJdLFsyLDUsIiIsMCx7ImNvbG91ciI6WzMwLDYwLDYwXX1dLFs1LDEsIkheMSIsMSx7ImNvbG91ciI6WzMwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMzAsNjAsNjAsMV1dLFs0LDIsIkheMiIsMSx7ImNvbG91ciI6WzMwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMzAsNjAsNjAsMV1dLFs2LDAsIkheMCIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX0sWzE4MCw2MCw2MCwxXV0sWzEsNiwiIiwxLHsiY29sb3VyIjpbMzAsNjAsNjBdfV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNyxbMiwxLCJHKEZYKSIsWzE4MCw2MCw2MCwxXV0sWzIsMiwiKFJeMUcpKEZYKSIsWzMwLDYwLDYwLDFdXSxbMiwzLCIoUl4yRykoRlgpIixbMzAsNjAsNjAsMV1dLFswLDMsIihSXjJHKShSXjFGWCkiXSxbMCwyLCIoUl4xRykoUl4xRlgpIl0sWzAsMSwiRyhSXjFGWCkiLFszMCw2MCw2MCwxXV0sWzAsMCwiMCJdLFsyLDUsIiIsMCx7ImNvbG91ciI6WzMwLDYwLDYwXX1dLFs1LDEsIkheMSIsMSx7ImNvbG91ciI6WzMwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMzAsNjAsNjAsMV1dLFs0LDIsIkheMiIsMSx7ImNvbG91ciI6WzMwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMzAsNjAsNjAsMV1dLFs2LDAsIkheMCIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX0sWzE4MCw2MCw2MCwxXV0sWzEsNiwiIiwxLHsiY29sb3VyIjpbMzAsNjAsNjBdfV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;黄色位置对应五项长正合列&lt;/p&gt;
+  &lt;p&gt;\begin{equation} L_2(GF) → (L_2G)F → G(L_1F) → L_1(GF) → (L_1G)F → 0. \end{equation}&lt;/p&gt;
+  &lt;p&gt;作为特例, 有 &lt;a href=&quot;Kunneth_Spectral_Seq&quot;&gt;Kunneth 谱序列&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-28T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Grothendieck_Spectral_Sequence</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Grothendieck_Spectral_Sequence</guid>
         </item>
       
     
@@ -316,6 +473,67 @@ $$&lt;/p&gt;
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
           <link>https://zhangchenchengsjtu.github.io/website/posts/Five_Lemma</link>
           <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Five_Lemma</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>前五项</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(重要应用: 前五项正合列). 若 $E_2$ 落在第一象限 (或第三象限), 则有五项短正合列 \begin{equation} \color{cyan}0 → \color{red}E_2^{1,0} → \color{red}H^1 → \color{red}E_2^{0,1} → \color{Green}E_2^{2,0} → \color{Green}H^2. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;考虑如下 $E_2$:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxjb2xvcntyZWR9RV8yXnswLDF9Il0sWzMsMiwiXFxjb2xvcntHcmVlbn1FXzJeezIsMH0iXSxbMiwxLCJcXGNvbG9ye0dyZWVufUVfMl57MSwxfSJdLFs0LDIsIkVfMl57MywwfSJdLFsyLDIsIlxcY29sb3J7cmVkfUVfMl57MSwwfSJdLFswLDIsIlxcYm94ZWR7RV8yXntcXGJ1bGxldCxcXGJ1bGxldH19Il0sWzEsMiwiXFxjb2xvcntjeWFufUVfMl57MCwwfSJdLFswLDEsIlxcY29sb3J7Y3lhbn0wIl0sWzEsMCwiXFxjb2xvcntHcmVlbn1FXzJeezAsMn0iXSxbMiwwLCJFXzJeezEsMn0iXSxbMywxLCJFXzJeezIsMX0iXSxbMCwwLCJcXGNvbG9ye3JlZH0wIl0sWzAsMV0sWzIsM10sWzQsMCwiXFxjb2xvcntyZWR9SF4xIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEsMiwiXFxjb2xvcntHcmVlbn1IXjIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNiw3LCJcXGNvbG9ye2N5YW59SF4wIiwxXSxbOCwxMF0sWzExLDJdLFs3LDRdXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxjb2xvcntyZWR9RV8yXnswLDF9Il0sWzMsMiwiXFxjb2xvcntHcmVlbn1FXzJeezIsMH0iXSxbMiwxLCJcXGNvbG9ye0dyZWVufUVfMl57MSwxfSJdLFs0LDIsIkVfMl57MywwfSJdLFsyLDIsIlxcY29sb3J7cmVkfUVfMl57MSwwfSJdLFswLDIsIlxcYm94ZWR7RV8yXntcXGJ1bGxldCxcXGJ1bGxldH19Il0sWzEsMiwiXFxjb2xvcntjeWFufUVfMl57MCwwfSJdLFswLDEsIlxcY29sb3J7Y3lhbn0wIl0sWzEsMCwiXFxjb2xvcntHcmVlbn1FXzJeezAsMn0iXSxbMiwwLCJFXzJeezEsMn0iXSxbMywxLCJFXzJeezIsMX0iXSxbMCwwLCJcXGNvbG9ye3JlZH0wIl0sWzAsMV0sWzIsM10sWzQsMCwiXFxjb2xvcntyZWR9SF4xIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEsMiwiXFxjb2xvcntHcmVlbn1IXjIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNiw3LCJcXGNvbG9ye2N5YW59SF4wIiwxXSxbOCwxMF0sWzExLDJdLFs3LDRdXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;以上&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$H^0$ 的滤过仅有一项, $E_2^{0,0}$.&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;$H^1$ 的滤过仅有两项, 此时有 ses&lt;/p&gt;
+      &lt;p&gt;$$
+   0 → E_2^{1,0} → H^1 → \ker [E_2^{0,1} → E_2^{2,0}] → 0.
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;$H^2$ 的滤过有 $3$ 项, 此时有左正合列&lt;/p&gt;
+      &lt;p&gt;$$
+   0 → \operatorname{cok}[E_2^{0,1} → E_2^{2,0}] → H^2 → E_2^{1,1}.
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;拼接短正合列, 得五项正合列.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-28T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/First_Five_Terms</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/First_Five_Terms</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>从 $E_2$ 得到长正合列的小技巧</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;E_2_Trick&quot;&gt;证明&lt;/a&gt;). 假定 $E_3^{p,q} = E_∞^{p,q}$, 且同调群确定. 若 $E_2^{p,q}$ 形如以下&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxLCJcXGJveGVke0VfMl57XFxidWxsZXQsXFxidWxsZXR9fSJdLFswLDFdLFsyLDNdLFs0LDVdLFs2LDddLFs4LDldXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxLCJcXGJveGVke0VfMl57XFxidWxsZXQsXFxidWxsZXR9fSJdLFswLDFdLFsyLDNdLFs0LDVdLFs2LDddLFs4LDldXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;此时有长正合列&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxLCJcXGJveGVke0VfMl57XFxidWxsZXQsXFxidWxsZXR9fSJdLFswLDFdLFsyLDNdLFs0LDVdLFs2LDddLFs4LDldLFs5LDAsIkgiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSwyLCJIIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzMsNCwiSCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs1LDYsIkgiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxLCJcXGJveGVke0VfMl57XFxidWxsZXQsXFxidWxsZXR9fSJdLFswLDFdLFsyLDNdLFs0LDVdLFs2LDddLFs4LDldLFs5LDAsIkgiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSwyLCJIIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzMsNCwiSCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs1LDYsIkgiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;分解计算 $E_2$ 与 $E_3 = E_∞$. 由 $E_∞$ 在 $↘ ↖$ 方向仅有两项非零项, 这两项在 ses 中的扩张就是同调群 $H$. 因此, 可以将同调群的二项滤过嵌入 $E_∞$.&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMjksWzEsMCwiRV8yXntwLHF9Il0sWzMsMSwiRV8yXntwKzIscS0xfSJdLFsyLDAsIkVfMl57cCsxLHF9Il0sWzQsMSwiRV8yXntwKzMscS0xfSJdLFszLDAsIlxcYnVsbGV0Il0sWzUsMSwiXFxidWxsZXQiXSxbNCwwLCJcXGJ1bGxldCJdLFs2LDEsIlxcYnVsbGV0Il0sWzAsMCwiXFxidWxsZXQiXSxbMiwxLCJcXGJ1bGxldCJdLFswLDEsIlxcYm94ZWR7RV8yXntcXGJ1bGxldCxcXGJ1bGxldH19Il0sWzEsMiwiXFxrZXJcXGRlbHRhX3EiXSxbMiwyLCJcXGtlclxcZGVsdGEgX3txKzF9Il0sWzMsMiwiXFxrZXJcXGRlbHRhIF97cSsyfSJdLFszLDMsIlxcb3BlcmF0b3JuYW1le2Nva31cXGRlbHRhX3EiXSxbNCwzLCJcXG9wZXJhdG9ybmFtZXtjb2t9XFxkZWx0YV97cSsxfSJdLFs1LDMsIlxcb3BlcmF0b3JuYW1le2Nva31cXGRlbHRhX3txKzJ9Il0sWzAsMywiXFxib3hlZHtFXzNee1xcYnVsbGV0LFxcYnVsbGV0fX0iXSxbMCw1LCJcXGJveGVke0VfXFxpbmZ0eV57XFxidWxsZXQsXFxidWxsZXR9fSJdLFsxLDQsIlxca2VyXFxkZWx0YSBfe3F9Il0sWzQsMiwiXFxjZG90cyJdLFsyLDMsIlxcY2RvdHMiXSxbMiw0LCJcXGtlclxcZGVsdGEgX3txKzF9Il0sWzMsNCwiXFxrZXJcXGRlbHRhIF97cSsyfSJdLFs0LDUsIlxcb3BlcmF0b3JuYW1le2Nva31cXGRlbHRhX3txKzF9Il0sWzUsNSwiXFxvcGVyYXRvcm5hbWV7Y29rfVxcZGVsdGFfe3ErMn0iXSxbMyw1LCJcXG9wZXJhdG9ybmFtZXtjb2t9XFxkZWx0YV97cX0iXSxbNCw0LCJcXGNkb3RzIl0sWzIsNSwiXFxjZG90cyJdLFswLDEsIlxcZGVsdGFfcSIsMV0sWzIsMywiXFxkZWx0YV97cSsxfSIsMV0sWzQsNSwiXFxjZG90cyIsMV0sWzYsNywiXFxjZG90cyIsMV0sWzgsOSwiXFxjZG90cyIsMV0sWzE3LDE4LCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxNywiIiwxLHsibGV2ZWwiOjJ9XSxbMjYsMjIsIkgiLDFdLFsyNCwyMywiSCIsMV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMjksWzEsMCwiRV8yXntwLHF9Il0sWzMsMSwiRV8yXntwKzIscS0xfSJdLFsyLDAsIkVfMl57cCsxLHF9Il0sWzQsMSwiRV8yXntwKzMscS0xfSJdLFszLDAsIlxcYnVsbGV0Il0sWzUsMSwiXFxidWxsZXQiXSxbNCwwLCJcXGJ1bGxldCJdLFs2LDEsIlxcYnVsbGV0Il0sWzAsMCwiXFxidWxsZXQiXSxbMiwxLCJcXGJ1bGxldCJdLFswLDEsIlxcYm94ZWR7RV8yXntcXGJ1bGxldCxcXGJ1bGxldH19Il0sWzEsMiwiXFxrZXJcXGRlbHRhX3EiXSxbMiwyLCJcXGtlclxcZGVsdGEgX3txKzF9Il0sWzMsMiwiXFxrZXJcXGRlbHRhIF97cSsyfSJdLFszLDMsIlxcb3BlcmF0b3JuYW1le2Nva31cXGRlbHRhX3EiXSxbNCwzLCJcXG9wZXJhdG9ybmFtZXtjb2t9XFxkZWx0YV97cSsxfSJdLFs1LDMsIlxcb3BlcmF0b3JuYW1le2Nva31cXGRlbHRhX3txKzJ9Il0sWzAsMywiXFxib3hlZHtFXzNee1xcYnVsbGV0LFxcYnVsbGV0fX0iXSxbMCw1LCJcXGJveGVke0VfXFxpbmZ0eV57XFxidWxsZXQsXFxidWxsZXR9fSJdLFsxLDQsIlxca2VyXFxkZWx0YSBfe3F9Il0sWzQsMiwiXFxjZG90cyJdLFsyLDMsIlxcY2RvdHMiXSxbMiw0LCJcXGtlclxcZGVsdGEgX3txKzF9Il0sWzMsNCwiXFxrZXJcXGRlbHRhIF97cSsyfSJdLFs0LDUsIlxcb3BlcmF0b3JuYW1le2Nva31cXGRlbHRhX3txKzF9Il0sWzUsNSwiXFxvcGVyYXRvcm5hbWV7Y29rfVxcZGVsdGFfe3ErMn0iXSxbMyw1LCJcXG9wZXJhdG9ybmFtZXtjb2t9XFxkZWx0YV97cX0iXSxbNCw0LCJcXGNkb3RzIl0sWzIsNSwiXFxjZG90cyJdLFswLDEsIlxcZGVsdGFfcSIsMV0sWzIsMywiXFxkZWx0YV97cSsxfSIsMV0sWzQsNSwiXFxjZG90cyIsMV0sWzYsNywiXFxjZG90cyIsMV0sWzgsOSwiXFxjZG90cyIsMV0sWzE3LDE4LCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxNywiIiwxLHsibGV2ZWwiOjJ9XSxbMjYsMjIsIkgiLDFdLFsyNCwyMywiSCIsMV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;拼接 ses, 得长正合列 \begin{equation} \cdots → E_2^{p,q} \xrightarrow{δ _q}E_2^{p+2,q-1} → H^{p+q+1} → E_2^{p+1,q} → \cdots. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-28T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/E_2_Trick</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/E_2_Trick</guid>
         </item>
       
     
@@ -986,7 +1204,63 @@ $$&lt;/p&gt;
 
 &lt;h3 id=&quot;技巧-从-mathjax_protectedjevfmiqmathjax_protected-看出长正合列&quot;&gt;技巧: 从 $E_2$ 看出长正合列&lt;/h3&gt;
 
+&lt;p&gt;该技巧来自同调代数基本定理的长正合列.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;E_2_Trick&quot;&gt;证明&lt;/a&gt;). 假定 $E_3^{p,q} = E_∞^{p,q}$, 且同调群确定. 若 $E_2^{p,q}$ 形如以下&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxLCJcXGJveGVke0VfMl57XFxidWxsZXQsXFxidWxsZXR9fSJdLFswLDFdLFsyLDNdLFs0LDVdLFs2LDddLFs4LDldXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxLCJcXGJveGVke0VfMl57XFxidWxsZXQsXFxidWxsZXR9fSJdLFswLDFdLFsyLDNdLFs0LDVdLFs2LDddLFs4LDldXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;此时有长正合列&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxLCJcXGJveGVke0VfMl57XFxidWxsZXQsXFxidWxsZXR9fSJdLFswLDFdLFsyLDNdLFs0LDVdLFs2LDddLFs4LDldLFs5LDAsIkgiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSwyLCJIIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzMsNCwiSCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs1LDYsIkgiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxLCJcXGJveGVke0VfMl57XFxidWxsZXQsXFxidWxsZXR9fSJdLFswLDFdLFsyLDNdLFs0LDVdLFs2LDddLFs4LDldLFs5LDAsIkgiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSwyLCJIIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzMsNCwiSCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs1LDYsIkgiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;这一技巧对 $↘↖$ 向仅两项非零的 $E_2$-谱序列成立. 类似技巧域证明不予赘述.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(重要应用: 前五项正合列, &lt;a href=&quot;First_Five_Terms&quot;&gt;证明&lt;/a&gt;). 若 $E_2$ 落在第一象限, 则有五项 (左) 短正合列 \begin{equation} \color{cyan}0 → \color{red}E_2^{1,0} → \color{red}H^1 → \color{red}E_2^{0,1} → \color{Green}E_2^{2,0} → \color{Green}H^2. \end{equation} 对第三象限谱序列, 有五项 (右) 短正合列. 证明类似.&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&quot;技巧-eilenburg-cartan-消解&quot;&gt;技巧: Eilenburg-Cartan 消解&lt;/h3&gt;
+
+&lt;p&gt;假定 Abel 范畴有足够投射对象 (内射对象).&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(通常的 Eilenburg-Cartan 分解). 复形 $(X^∙, d^∙)$ 的 Eilenburg-Cartan (余) 分解是指以下 (余) 消解.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;对所有 $\color{red}\mathrm{im}$ 与 $\color{red}H^n$ 取投射分解 (内射分解);&lt;/li&gt;
+    &lt;li&gt;依照马蹄引理, 对所有 $\color{blue}\ker$ 与 $\color{blue}\operatorname {cok}$ 取投射分解 (内射分解);&lt;/li&gt;
+    &lt;li&gt;依照马蹄引理, 对所有 $X$ 取投射分解 (内射分解), 这一步可以从       &lt;ol&gt;
+        &lt;li&gt;$0 → {\color{blue}\ker } → X → {\color{red}\operatorname {im}} → 0$, 或&lt;/li&gt;
+        &lt;li&gt;$0 → {\color{red}\operatorname {im}} → X → {\color{blue}\operatorname {cok}} → 0$ 构造. 其结果都是&lt;/li&gt;
+      &lt;/ol&gt;
+      &lt;p&gt;$$
+   P^k (X^l) = P^k (\operatorname{im}d^l) ⊕ P^k (H^l) ⊕ P^k (\operatorname{im}d^{l-1}).
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;图示如下:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsOSxbNCwwLCJcXGNvbG9ye3JlZH1cXG9wZXJhdG9ybmFtZSB7aW19Il0sWzMsMSwiXFxjb2xvcntibHVlfVxcb3BlcmF0b3JuYW1lIHtjb2t9Il0sWzIsMiwiXFxjb2xvcntyZWR9SCJdLFs1LDEsIlxcY29sb3J7Ymx1ZX1cXG9wZXJhdG9ybmFtZSB7a2VyfSJdLFs2LDIsIlxcY29sb3J7cmVkfUgiXSxbMiwwLCJYIl0sWzYsMCwiWCJdLFsxLDEsIlxcY29sb3J7Ymx1ZX1cXGtlciAiXSxbMCwwLCJcXGNvbG9ye3JlZH1cXG9wZXJhdG9ybmFtZSB7aW19Il0sWzUsMCwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzUsMSwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzEsMCwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzMsNCwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsMSwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMCwzLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDYsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsNiwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNyw1LCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs3LDIsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs4LDUsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs4LDcsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsOSxbNCwwLCJcXGNvbG9ye3JlZH1cXG9wZXJhdG9ybmFtZSB7aW19Il0sWzMsMSwiXFxjb2xvcntibHVlfVxcb3BlcmF0b3JuYW1lIHtjb2t9Il0sWzIsMiwiXFxjb2xvcntyZWR9SCJdLFs1LDEsIlxcY29sb3J7Ymx1ZX1cXG9wZXJhdG9ybmFtZSB7a2VyfSJdLFs2LDIsIlxcY29sb3J7cmVkfUgiXSxbMiwwLCJYIl0sWzYsMCwiWCJdLFsxLDEsIlxcY29sb3J7Ymx1ZX1cXGtlciAiXSxbMCwwLCJcXGNvbG9ye3JlZH1cXG9wZXJhdG9ybmFtZSB7aW19Il0sWzUsMCwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzUsMSwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzEsMCwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzMsNCwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsMSwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMCwzLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDYsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzAsNiwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNyw1LCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs3LDIsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs4LDUsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs4LDcsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;250&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;p&gt;EC 分解来自马蹄引理, 由&lt;a href=&quot;Horse_Shoe_Lemma&quot;&gt;相对版本的马蹄引理&lt;/a&gt;, 得以下相对版本的 EC 分解.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(相对版本的 EC 分解). 给定对象类 $𝒳$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;称存在足够 $𝒳$ 出发的满态射, 若对任意 $M ∈ 𝒜$, 总存在 $X ∈ 𝒳$ 使得有满态射 $X ↠ M$;&lt;/li&gt;
+    &lt;li&gt;称存在足够 $𝒳$ 收尾的单态射, 若对任意 $N ∈ 𝒜$, 总存在 $X ∈ 𝒳$ 使得有单态射 $N ↪ X$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;此时, 对以上两种情形, 分别有&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;任意复形存在可裂 $𝒳$-复形的相对投射分解;&lt;/li&gt;
+    &lt;li&gt;任意复形存在可裂 $𝒳$-复形的相对内射分解.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;(推论, &lt;a href=&quot;Proj_Epi_Complex&quot;&gt;证明&lt;/a&gt;). 上有界投射复形存在上有界的投射分解. 若有足够 $𝒳$ 出发的满态射, 则上有界投射复形存在上有界 $𝒳$-复形相对投射分解. 相对内射的情形对偶.&lt;/p&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;谱序列直接应用&quot;&gt;谱序列直接应用&lt;/h2&gt;
 
@@ -1016,7 +1290,13 @@ $$&lt;/p&gt;
 &lt;p&gt;以下所有对象均是 Artin 代数中的有限表面模, 基本记号等见&lt;a href=&quot;AR-notes#稳定范畴等价&quot;&gt;此处&lt;/a&gt;. 本小结证明&lt;a href=&quot;AR-notes#ar-定理&quot;&gt;此处&lt;/a&gt;的同调定理.&lt;/p&gt;
 
 &lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;(缺陷公式, &lt;a href=&quot;AR_Defect&quot;&gt;证明&lt;/a&gt;). 给定 ses \begin{equation} θ : 0 → K → X → Y → 0. \end{equation} 则有长正合列 \begin{equation} 0 → (-, K) → (-, X) → (-, Y) → K ⊗ \mathrm{Tr}(-) → X ⊗ \mathrm{Tr}(-) → Y ⊗ \mathrm{Tr}(-) → 0. \end{equation}&lt;/p&gt;
+  &lt;p&gt;(缺陷公式, &lt;a href=&quot;AR_Defect&quot;&gt;证明&lt;/a&gt;). 给定 ses \begin{equation} θ : 0 → K → X → Y → 0. \end{equation} 则有长正合列&lt;/p&gt;
+  &lt;p&gt;$$
+\begin{aligned}
+  0 →  (-, K) &amp;→ (-, X) → (-, Y)  →  \\[6pt]
+  &amp;→ K ⊗ \mathrm{Tr}(-) → X ⊗ \mathrm{Tr}(-) →  Y ⊗ \mathrm{Tr}(-) → 0.
+\end{aligned}
+$$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;note&quot;&gt;
@@ -1045,7 +1325,11 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;($\mathrm{Ext}^{≥ 3}(\mathrm{Tr}(M), N)$). $\mathrm{Ext}^{n + 3}(\mathrm{Tr}(M), N) ≃ \mathrm{Ext}^{n}(\mathrm{Tr}(M), N)$.&lt;/p&gt;
+  &lt;p&gt;($\mathrm{Ext}^{≥ 3}(\mathrm{Tr}(M), N)$). $\mathrm{Ext}^{n + 3}(\mathrm{Tr}(M), N) ≃ \mathrm{Ext}^{n}(M^∗, N)$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;&lt;a href=&quot;Torsion_Less&quot;&gt;Torsionless 模&lt;/a&gt;的等价定义使用了上述 AB (Auslander-Bridger) 公式.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;kunneth-公式&quot;&gt;Kunneth 公式&lt;/h3&gt;
@@ -1060,15 +1344,59 @@ $$&lt;/p&gt;
 &lt;div class=&quot;theorem&quot;&gt;
   &lt;p&gt;(Kunneth 谱序列定理, &lt;a href=&quot;Kunneth_Spectral_Seq&quot;&gt;证明&lt;/a&gt;). 记 $A$ 与 $C$ 均是负复形, 一者平坦, 则有&lt;/p&gt;
   &lt;p&gt;$$
-E^{p,q}_2 = ∐_{s + t = q} \mathrm{Tor}_p (H^s(A), H^t(C)) ⇒ H^{p+q} (\mathrm{Tot}(A⊗C)).
+E^{p,q}_2 = ∐\limits_{s + t = q} \mathrm{Tor}_p (H^s(A), H^t(C)) ⇒ H^{p+q} (\mathrm{Tot}(A⊗C)).
 $$&lt;/p&gt;
   &lt;p&gt;记 $A$ 是负复形, $C$ 是正复形, 假定 $A$ 投射或 $C$ 内射, 则存在第一象限谱序列&lt;/p&gt;
   &lt;p&gt;$$
-E_2 ^{p,q} = ∐_{s + t = q} \mathrm{Ext}^p (H^{-s}(A), H^{t}(C)) ⇒ H^{p+q} (ℋ(A,C)).
+E_2 ^{p,q} = ∐\limits_{s + t = q} \mathrm{Ext}^p (H^{-s}(A), H^{t}(C)) ⇒ H^{p+q} (ℋ(A,C)).
 $$&lt;/p&gt;
 &lt;/div&gt;
 
+&lt;p&gt;关于 $\mathrm{Tor}_{≥ 2}$ 消失的特殊结论, 亦见&lt;a href=&quot;Kunneth_Spectral_Seq&quot;&gt;证明&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;Kunneth 谱序列, 本质上是复合函子的谱序列.&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;导出函子相关&quot;&gt;导出函子相关&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Grothendieck 函子的基本资料). 给定 Abel 范畴间的右正合函子 \begin{equation} 𝒜\xrightarrow F ℬ \xrightarrow G 𝒞. \end{equation} 称 $(F, G)$ 是右正合 Grothendieck 谱序列的基本资料, 若&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;范畴有足够投射对象;&lt;/li&gt;
+    &lt;li&gt;对任意 $P ∈ 𝒫_A$, 对象 $F(P) ∈ ℬ$ 关于 $L_{≤ -1}G$ 消失.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;类似地, 可以规定左正合 Grothendieck 谱序列的基本资料.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;为与上链复形配合, 对固定的 $n ∈ ℕ_{≥ 0}$, 以下选用 $L_{-n}F$ 表示 $F$ 的 $n$ 次左导出; 选用 $R^{n}F$ 表示 $F$ 的 $n$ 次右导出. 简单地说,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;将右导出写至上标, 例如 $R^{≥ 0} F$.&lt;/li&gt;
+  &lt;li&gt;将左导出写至下标, 例如 $L_{≤ 0} G$.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Grothendieck 谱序列定理, &lt;a href=&quot;Grothendieck_Spectral_Sequence&quot;&gt;证明&lt;/a&gt;). 给定右正合的 Grothendieck 谱序列资料, 则存在第三象限的谱序列 $E$, 使得&lt;/p&gt;
+  &lt;p&gt;\begin{equation} E_2^{p,q} = L_{-p}G (L_{-q} F(X)) ⇒ (L_{-(p+q)} (G ∘ F)) (X). \end{equation}&lt;/p&gt;
+  &lt;p&gt;相应地, 对于左正合 Grothendieck 谱序列, 存在第一象限的谱序列 \begin{equation} E_2^{p,q} = (R^p G) ∘ (R^q F) ⇒ R^{p+q} (G ∘ F). \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;(前五项).&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;(特殊情形: 短正合列).&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;(特殊情形: 长正合列).&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(前五项态射描述).&lt;/p&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
           <link>https://zhangchenchengsjtu.github.io/website/posts/Spectral_sequence_filtered</link>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>马蹄引理
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="https://zhangchenchengsjtu.github.io/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="https://zhangchenchengsjtu.github.io/website/assets/touch-icon.png">
+<link rel="stylesheet" href="https://zhangchenchengsjtu.github.io/website/assets/core.css">
+<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/Horse_Shoe_Lemma">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="https://zhangchenchengsjtu.github.io/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+</head>
+
+<body class="latex-dark">
+
+	<aside class="logo">
+  
+
+  <a href="https://zhangchenchengsjtu.github.io/website/">
+    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
+  </a>
+  <span class="logo-prompt">Back to Home</span>
+
+</aside>
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>马蹄引理</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        April 28, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="definition">
+  <p>给定对象类 $𝒳$.</p>
+  <ol>
+    <li>称存在足够 $𝒳$ 出发的满态射, 若对任意 $M ∈ 𝒜$, 总存在 $X ∈ 𝒳$ 使得有满态射 $X ↠ M$;</li>
+    <li>称存在足够 $𝒳$ 收尾的单态射, 若对任意 $N ∈ 𝒜$, 总存在 $X ∈ 𝒳$ 使得有单态射 $N ↪ X$.</li>
+  </ol>
+</div>
+
+<div class="theorem">
+  <p>(相对版本的马蹄引理). 假定存在足够 $𝒳$ 出发的满态射, 任意 ses 存在可裂 $𝒳$-复形的相对投射分解.</p>
+</div>
+
+<div class="proof">
+  <p>下构造归纳步骤. 取定 ses \begin{equation} 0 → L \xrightarrow ι M \xrightarrow π N → 0. \end{equation} 取 $p : P ↠ L$ 与 $q : Q ↠ M$, 此时有</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTAsWzEsMCwiUCJdLFsxLDEsIkwiXSxbMywxLCJNIl0sWzUsMSwiTiJdLFs2LDEsIjAiXSxbMCwxLCIwIl0sWzMsMCwiUCBcXG9wbHVzIFEiXSxbNSwwLCJRIl0sWzAsMCwiMCJdLFs2LDAsIjAiXSxbMCwxLCJwIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzYsMiwiKFxcaW90YSAgcCBcXCBcXCBxKSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDIsIlxcaW90YSJdLFsyLDMsIlxccGkgIl0sWzAsNiwiXFxiaW5vbSAxMCJdLFs1LDFdLFs4LDBdLFs2LDcsIigwIFxcIFxcIFxcIDEpIl0sWzcsMywicSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs3LDldLFszLDRdXQ== --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTAsWzEsMCwiUCJdLFsxLDEsIkwiXSxbMywxLCJNIl0sWzUsMSwiTiJdLFs2LDEsIjAiXSxbMCwxLCIwIl0sWzMsMCwiUCBcXG9wbHVzIFEiXSxbNSwwLCJRIl0sWzAsMCwiMCJdLFs2LDAsIjAiXSxbMCwxLCJwIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzYsMiwiKFxcaW90YSAgcCBcXCBcXCBxKSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDIsIlxcaW90YSJdLFsyLDMsIlxccGkgIl0sWzAsNiwiXFxiaW5vbSAxMCJdLFs1LDFdLFs4LDBdLFs2LDcsIigwIFxcIFxcIFxcIDEpIl0sWzcsMywicSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs3LDldLFszLDRdXQ==&amp;embed" width="600" height="200" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>这就完成了归纳.</p>
+</div>
+
+<div class="theorem">
+  <p>(相对版本的马蹄引理). 假定存在足够 $𝒳$ 收尾的单态射, 任意 ses 存在可裂 $𝒳$-复形的相对内射分解.</p>
+</div>
+
+<div class="proof">
+  <p>对偶.</p>
+</div>
+
+<div class="note">
+  <p>推广见 <a href="Spectral_sequence_filtered#技巧-eilenburg-cartan-消解">EC 分解</a>.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="https://zhangchenchengsjtu.github.io/website/posts/Kunneth_Spectral_Seq"
+        title="NEXT: Kunneth 谱序列">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="https://zhangchenchengsjtu.github.io/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="https://zhangchenchengsjtu.github.io/website/posts/Grothendieck_Spectral_Sequence"
+        title="PREV: Grothendieck 谱序列">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+</body>
+
+
+</html>
