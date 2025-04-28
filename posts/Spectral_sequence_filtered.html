@@ -89,6 +89,8 @@
       <li><a href="#滤过复形" id="markdown-toc-滤过复形">滤过复形</a></li>
       <li><a href="#滤过复形构造谱序列" id="markdown-toc-滤过复形构造谱序列">滤过复形构造谱序列</a></li>
       <li><a href="#双复形" id="markdown-toc-双复形">双复形</a></li>
+      <li><a href="#技巧-从-mathjax_protectedjevfmiqmathjax_protected-看出长正合列" id="markdown-toc-技巧-从-mathjax_protectedjevfmiqmathjax_protected-看出长正合列">技巧: 从 $E_2$ 看出长正合列</a></li>
+      <li><a href="#技巧-eilenburg-cartan-消解" id="markdown-toc-技巧-eilenburg-cartan-消解">技巧: Eilenburg-Cartan 消解</a></li>
     </ul>
   </li>
   <li><a href="#谱序列直接应用" id="markdown-toc-谱序列直接应用">谱序列直接应用</a>    <ul>
@@ -278,6 +280,10 @@ $$</p>
   </ol>
 </div>
 
+<h3 id="技巧-从-mathjax_protectedjevfmiqmathjax_protected-看出长正合列">技巧: 从 $E_2$ 看出长正合列</h3>
+
+<h3 id="技巧-eilenburg-cartan-消解">技巧: Eilenburg-Cartan 消解</h3>
+
 <h2 id="谱序列直接应用">谱序列直接应用</h2>
 
 <h3 id="同调代数的简单应用">同调代数的简单应用</h3>
@@ -339,6 +345,24 @@ $$</p>
 </div>
 
 <h3 id="kunneth-公式">Kunneth 公式</h3>
+
+<p>称上链复形 $X$</p>
+
+<ol>
+  <li>是正 (负) 的, 若其支撑在 $ℕ_+$ ($ℕ _-$) 上;</li>
+  <li>是 $𝒳$-的, 若 $X$ 在对象类 $𝒳$ 中取值.</li>
+</ol>
+
+<div class="theorem">
+  <p>(Kunneth 谱序列定理, <a href="Kunneth_Spectral_Seq">证明</a>). 记 $A$ 与 $C$ 均是负复形, 一者平坦, 则有</p>
+  <p>$$
+E^{p,q}_2 = ∐_{s + t = q} \mathrm{Tor}_p (H^s(A), H^t(C)) ⇒ H^{p+q} (\mathrm{Tot}(A⊗C)).
+$$</p>
+  <p>记 $A$ 是负复形, $C$ 是正复形, 假定 $A$ 投射或 $C$ 内射, 则存在第一象限谱序列</p>
+  <p>$$
+E_2 ^{p,q} = ∐_{s + t = q} \mathrm{Ext}^p (H^{-s}(A), H^{t}(C)) ⇒ H^{p+q} (ℋ(A,C)).
+$$</p>
+</div>
 
 <h2 id="导出函子相关">导出函子相关</h2>
 
