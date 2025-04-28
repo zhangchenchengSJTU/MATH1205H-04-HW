@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>完备化, 滤过复形
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="$\mathrm{Gr}_p$ 与完备化">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="https://zhangchenchengsjtu.github.io/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="https://zhangchenchengsjtu.github.io/website/assets/touch-icon.png">
+<link rel="stylesheet" href="https://zhangchenchengsjtu.github.io/website/assets/core.css">
+<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/Complete_Z_Filtration">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="https://zhangchenchengsjtu.github.io/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+</head>
+
+<body class="latex-dark">
+
+	<aside class="logo">
+  
+
+  <a href="https://zhangchenchengsjtu.github.io/website/">
+    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
+  </a>
+  <span class="logo-prompt">Back to Home</span>
+
+</aside>
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>完备化, 滤过复形</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        April 27, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="mathjax_protectedjfxtyxrocm17r3j9x3akmathjax_protected-与完备化">$\mathrm{Gr}_p$ 与完备化</h2>
+
+<p>以下命题都是对模范畴 $𝐌𝐨𝐝_R$ 而言的.</p>
+
+<div class="definition">
+  <p>(Cauchy 列). 对滤过模 $\cdots ⊃ F^s M ⊃ \cdots$, 取 $M$ 为全空间, 诸 $F^p M$ 的陪集为开集. 称 $(x_n)_{n ∈ ℕ} ∈ ∏_ℕ M$ 是 Cauchy 列, 当且仅当</p>
+  <p>\begin{equation} ∀ p, \ ∃ N ∈ ℕ, \ ∀ (m,n) (n &gt; m ≥ N), ((x_m - x_n) ∈ F^pM). \end{equation}</p>
+</div>
+
+<div class="note">
+  <p>简单地说, 此处的拓扑基是的所有 $F^s M$ 的陪集.</p>
+</div>
+
+<div class="definition">
+  <p>对满射系统 $\cdots ↠ \frac{M}{F^{p+1} M} ↠ \frac{M}{F^p M} ↠ \cdots$ 做三点定义:</p>
+  <ol>
+    <li>称之穷竭, 当且仅当 $\varinjlim \frac{M}{F^p M} = 0$, 即 $M=  ⋃ F^p M$;</li>
+    <li>称之 Hausdorff, 当且仅当 $\varprojlim F^p M = ⋂ F^p M = 0$.</li>
+    <li>称之完备, 当且仅当 $\varprojlim \frac{M}{F^p M} = M$.</li>
+  </ol>
+</div>
+
+<div class="note">
+  <p>简单地看,</p>
+  <ol>
+    <li>所谓穷竭, 即是说原点处基本开球 $F^pX$ 的覆盖范围 (随 $p →- ∞$) 趋向全空间.</li>
+    <li>所谓 Hausdorff, 就是说开球可以任意小, 使得能区分任意不同的两点.</li>
+    <li>所谓完备, 就是说收敛数列存在极限.</li>
+  </ol>
+</div>
+
+<div class="theorem">
+  <p>对模范畴中 $ℤ$-指标的塔, 导出极限 $\varprojlim {}^1$ 消失.</p>
+</div>
+
+<div class="lemma">
+  <p>(<a href="Complete_Filtration">证明</a>) 完备蕴含 Haussdorff. 完备当且仅当 $\varprojlim ^{0,1} F^p M = 0$.</p>
+</div>
+
+<div class="definition">
+  <p>(完备化). 滤过 $F^∙ M$ 的完备化旨在函子地补全 Cauchy 列的收敛终点. 此处定义做 \begin{equation} 𝐅^p 𝐌 = \varprojlim \ \ \frac{F^p M}{F^{≥ p} M}. \end{equation}</p>
+</div>
+
+<div class="note">
+  <p>将极限视作积对象的子对象, $𝐅^p𝐌$ 确实是滤过. 亦可通过 $\varprojlim$ 的左正合性质说明单射 $𝐅^{p+1}𝐌 ↪ 𝐅^p𝐌$.</p>
+</div>
+
+<div class="proposition">
+  <p>(<a href="FFX_vs_FX">证明</a>). 滤过完备化具有如下重要的性质:</p>
+  <ol>
+    <li>$\frac{𝐌}{𝐅 ^p𝐌} ≃ \frac{M}{F^p M}$ 是同构, 作为推论, $\frac{𝐅^{p-r} 𝐌}{𝐅 ^p𝐌} ≃ \frac{F^{p-r}M}{F^p M}$.</li>
+    <li>$𝐅^p𝐌$ 穷竭当且仅当 $F^p M$ 穷竭.</li>
+    <li>$𝐅^p 𝐌$ 是完备的 Hausdorff 的滤过.</li>
+  </ol>
+</div>
+
+<div class="theorem">
+  <p>(同构的完备化等价于同构的分次态射. <a href="Gr_Iso_is_Complete_Iso">证明</a>). $\mathrm{Gr}(f)$ 是同构当且仅当完备化态射 $𝐟$ 是同构.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="https://zhangchenchengsjtu.github.io/website/posts/Spectral_sequence_filtered"
+        title="NEXT: 关于谱序列与滤过复形等">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="https://zhangchenchengsjtu.github.io/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="https://zhangchenchengsjtu.github.io/website/posts/Harada_Sai"
+        title="PREV: On a lemma of Harada-Sai">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+</body>
+
+
+</html>

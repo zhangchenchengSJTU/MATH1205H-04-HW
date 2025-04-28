@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>关于谱序列与滤过复形等
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="https://zhangchenchengsjtu.github.io/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="https://zhangchenchengsjtu.github.io/website/assets/touch-icon.png">
+<link rel="stylesheet" href="https://zhangchenchengsjtu.github.io/website/assets/core.css">
+<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/Spectral_sequence_filtered">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="https://zhangchenchengsjtu.github.io/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+</head>
+
+<body class="latex-dark">
+
+	<aside class="logo">
+  
+
+  <a href="https://zhangchenchengsjtu.github.io/website/">
+    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
+  </a>
+  <span class="logo-prompt">Back to Home</span>
+
+</aside>
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>关于谱序列与滤过复形等</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        April 27, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <ul id="markdown-toc">
+  <li><a href="#abstract" id="markdown-toc-abstract">Abstract</a></li>
+  <li><a href="#谱序列的滤过构造" id="markdown-toc-谱序列的滤过构造">谱序列的滤过构造</a>    <ul>
+      <li><a href="#滤过复形" id="markdown-toc-滤过复形">滤过复形</a></li>
+      <li><a href="#滤过复形构造谱序列" id="markdown-toc-滤过复形构造谱序列">滤过复形构造谱序列</a></li>
+      <li><a href="#双复形" id="markdown-toc-双复形">双复形</a></li>
+    </ul>
+  </li>
+  <li><a href="#谱序列直接应用" id="markdown-toc-谱序列直接应用">谱序列直接应用</a>    <ul>
+      <li><a href="#同调代数的简单应用" id="markdown-toc-同调代数的简单应用">同调代数的简单应用</a></li>
+      <li><a href="#ar-转置与谱序列" id="markdown-toc-ar-转置与谱序列">AR 转置与谱序列</a></li>
+      <li><a href="#kunneth-公式" id="markdown-toc-kunneth-公式">Kunneth 公式</a></li>
+    </ul>
+  </li>
+  <li><a href="#导出函子相关" id="markdown-toc-导出函子相关">导出函子相关</a></li>
+</ul>
+
+<div class="abstract">
+  <h5 id="abstract">Abstract</h5>
+  <div>
+    <p>本节通过滤过复形构造谱序列, 并将之引申至双复形的谱序列, 以此证明同调代数中的若干的基本定理.</p>
+    <ol>
+      <li>$2 × 2$ 交换图的同调群, 推出拉回等;</li>
+      <li>复形态射基本定理 (包括正合复形的态射, 强形式的 $3 × 3$ 引理, 强形式蛇引理等);</li>
+      <li>AR 公式与高阶导出函子, 主要是 $\mathrm{Tor}$ (见 torsionless 模), 高阶 $\mathrm{Ext}$ (见 Auslander-Bridger 公式);</li>
+      <li>Grothendieck 谱序列 (复合函子求导);</li>
+      <li>投射维度有限的 tilting 模 (广义 tilting 模) 的 Brenner-Butler 定理.</li>
+    </ol>
+    <p>需要一些技巧, 例如:</p>
+    <ol>
+      <li>$E_2$ 步的长正合列;</li>
+      <li>Eilenberg-Cartan 消解;</li>
+      <li>函子同构 $(- ⊗{}_R P) ≃ (P_R, -)$;</li>
+      <li>等等.</li>
+    </ol>
+    <p>关于谱序列早期工作见 <a href="https://www.semanticscholar.org/paper/On-axiomatic-homology-theory.-Milnor/cef00c184979cbcfcc38bb85d2aae53d56013375">Milnor 的综述</a>.</p>
+    <p>特别注释: 没有正合耦.</p>
+  </div>
+</div>
+
+<h2 id="谱序列的滤过构造">谱序列的滤过构造</h2>
+
+<h3 id="滤过复形">滤过复形</h3>
+
+<p>正式介绍谱序列的构造前, 应先明确谱序列的一般格式. 类似链复形与上链复形之别, 谱序列亦有同调类型与上同调类型者.</p>
+
+<div class="definition">
+  <p>(上同调谱序列). 称一组资料 $\{(E_r, f_r)\}$ 是 Abel 范畴的上同调谱序列, 若</p>
+  <ol>
+    <li>(推广复形对象). 所有 $E_r$ 是 $(ℤ × ℤ)$-分次对象,</li>
+    <li>(推广微分). $d_r: E_r → E_r$ 的方向是 $(r, 1-r)$, 满足 $d_r ^2 = 0$,</li>
+    <li>(递推关系) 对 $(E_r, d_r)$ 取 $(ℤ × ℤ)$-分次上同调群, 结果是 $E_r$.</li>
+  </ol>
+  <p>一般地, $E_{r+1}$ 是导出的, 而 $d_r$ 不是内蕴的.</p>
+</div>
+
+<div class="note">
+  <p>以上定义纯粹是一类满足特殊关系的箭头, 仅代表上同调谱序列的合法格式.</p>
+</div>
+
+<p>习惯上, 将页的指标 $r$ 写在 $E_∙^{∙ , ∙}$ 的下方, 即 $E_r$. 对每一 $r$, 再有双分次对象 $E_r^{∙ , ∙}$.</p>
+
+<p>此外, 暂时混同复形与微分分次对象.</p>
+
+<div class="definition">
+  <p>(上滤过, 分次). 给定 Abel 范畴的对象 $X$. 一个 $X$ 的 $ℤ$-上滤过是一族子对象 ${X^p}_{p ∈ ℤ}$, 满足</p>
+  <p>\begin{equation} \cdots F^{n-1}X ↩ F^{n}X ↩ F^{n+1}X ↩ \cdots. \end{equation}</p>
+  <p>特别地, 通常要求 $⋂F^pX = 0$ 以及 $⋃ F^p X= X$. <br /> 给定上滤过 $F^∙X$, 使用以下记号表示分次对象: \begin{equation} \mathrm{Gr}_p (X) := \frac{F^p}{F^{p+1}} X := \frac{F^p X}{F^{p+1}X}. \end{equation}</p>
+</div>
+
+<p>分次化 $\mathrm{Gr}_∙(-)$ 是加法函子. 关于分次化与完备性的关系见<a href="Complete_Z_Filtration">此文</a>.</p>
+
+<h3 id="滤过复形构造谱序列">滤过复形构造谱序列</h3>
+
+<div class="example">
+  <p>(初始状态). 输入上链复形 $(A^∙, d)$ 和滤过 $F^∙$, 朝向为</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTEsWzEsMSwiRl5wQV57cCtxfSJdLFsyLDIsIkZee3ArMX1BXntwK3F9Il0sWzAsMCwiRl57cC0xfUFee3ArcX0iXSxbMSwwLCJGXntwfUFee3ArcSsxfSJdLFsyLDEsIkZee3ArMX1BXntwK3ErMX0iXSxbMSwyLCJGXntwfUFee3ArcS0xfSJdLFswLDEsIkZee3AtMX1BXntwK3EtMX0iXSxbMCwyLCJcXGJveGVke1xcdGV4dHvovpPlhaV9IFxcIChBLEYpfSJdLFswLDMsIkZee3AtMX1BXlxcYnVsbGV0ICJdLFsxLDMsIkZee3B9QV5cXGJ1bGxldCAiXSxbMiwzLCJGXntwKzF9QV5cXGJ1bGxldCAiXSxbMCwyLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMCwiXFxzdWJzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDMsIlxcc3Vic2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSw2LCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsMl0sWzAsM10sWzUsMF0sWzEsNF0sWzgsOSwiXFxzdXBzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOSwxMCwiXFxzdXBzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTEsWzEsMSwiRl5wQV57cCtxfSJdLFsyLDIsIkZee3ArMX1BXntwK3F9Il0sWzAsMCwiRl57cC0xfUFee3ArcX0iXSxbMSwwLCJGXntwfUFee3ArcSsxfSJdLFsyLDEsIkZee3ArMX1BXntwK3ErMX0iXSxbMSwyLCJGXntwfUFee3ArcS0xfSJdLFswLDEsIkZee3AtMX1BXntwK3EtMX0iXSxbMCwyLCJcXGJveGVke1xcdGV4dHvovpPlhaV9IFxcIChBLEYpfSJdLFswLDMsIkZee3AtMX1BXlxcYnVsbGV0ICJdLFsxLDMsIkZee3B9QV5cXGJ1bGxldCAiXSxbMiwzLCJGXntwKzF9QV5cXGJ1bGxldCAiXSxbMCwyLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMCwiXFxzdWJzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDMsIlxcc3Vic2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSw2LCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsMl0sWzAsM10sWzUsMF0sWzEsNF0sWzgsOSwiXFxzdXBzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOSwxMCwiXFxzdXBzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=&amp;embed" width="600" height="300" style="border-radius: 8px; border: dashed;"></iframe> </center>
+</div>
+
+<div class="note">
+  <p>特别地, $↘$ 朝向的链是对 $A^{p+q}$ 的滤过. 上图不是 $E_0$!</p>
+</div>
+
+<div class="example">
+  <p>(构造 $E_0$). 在每点取商, 得 $E_0$:</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsOCxbMSwxLCJcXGZyYWN7Rl5wQV57cCtxfX17Rl57cCsxfUFee3ArcX19Il0sWzIsMiwiXFxmcmFje0Zee3ArMX1BXntwK3F9fXtGXntwKzJ9QV57cCtxfX0iXSxbMCwwLCJcXGZyYWN7Rl57cC0xfUFee3ArcX19e0ZecEFee3ArcX19Il0sWzEsMCwiXFxmcmFje0Zee3B9QV57cCtxKzF9fXtGXntwKzF9QV57cCtxKzF9fSJdLFsyLDEsIlxcZnJhY3tGXntwKzF9QV57cCtxKzF9fXtGXntwKzJ9QV57cCtxKzF9fSJdLFsxLDIsIlxcZnJhY3tGXntwfUFee3ArcS0xfX17Rl57cCsxfUFee3ArcS0xfX0iXSxbMCwxLCJcXGZyYWN7Rl57cC0xfUFee3ArcS0xfX17Rl57cH1BXntwK3EtMX19Il0sWzAsMiwiXFxib3hlZHtFXzAoQSxGKX0iXSxbMSw0XSxbNSwwXSxbMCwzXSxbNiwyXV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsOCxbMSwxLCJcXGZyYWN7Rl5wQV57cCtxfX17Rl57cCsxfUFee3ArcX19Il0sWzIsMiwiXFxmcmFje0Zee3ArMX1BXntwK3F9fXtGXntwKzJ9QV57cCtxfX0iXSxbMCwwLCJcXGZyYWN7Rl57cC0xfUFee3ArcX19e0ZecEFee3ArcX19Il0sWzEsMCwiXFxmcmFje0Zee3B9QV57cCtxKzF9fXtGXntwKzF9QV57cCtxKzF9fSJdLFsyLDEsIlxcZnJhY3tGXntwKzF9QV57cCtxKzF9fXtGXntwKzJ9QV57cCtxKzF9fSJdLFsxLDIsIlxcZnJhY3tGXntwfUFee3ArcS0xfX17Rl57cCsxfUFee3ArcS0xfX0iXSxbMCwxLCJcXGZyYWN7Rl57cC0xfUFee3ArcS0xfX17Rl57cH1BXntwK3EtMX19Il0sWzAsMiwiXFxib3hlZHtFXzAoQSxGKX0iXSxbMSw0XSxbNSwwXSxbMCwzXSxbNiwyXV0=&amp;embed" width="600" height="300" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>此处 \begin{equation} E_0^{p,q} = \frac{F^p A^{p+q}}{F^{p+1}A^{p+q}}, \end{equation} 微分 $d_0$ 继承自 $d$, $(p,q)$-处的同调群是 \begin{equation} H^{p,q}(E_0) = \frac{[F^pA^{p+q} \quad ∩ \quad {\color{red}d^{-1}(F^{p+1}A^{p+q+1})}]\quad + \quad F^{p+1}A^{p+q}}{[F^pA^{p+q} \quad ∩ \quad {\color{blue}d(F^{p}A^{p+q-1})}]\quad + \quad F^{p+1}A^{p+q}}. \end{equation}</p>
+</div>
+
+<div class="note">
+  <p>往后同调群的滤过, 决定于$\textcolor{red}{红处}$与$\textcolor{blue}{蓝处}$的指标变动, 黑处固定!</p>
+</div>
+
+<div class="example">
+  <p>(构造 $E_1$). 将视角从 $ℤ^2$-分次模拓展至 dg-模, 以上同调群整合作 \begin{equation} H_0^{p,∙} := \frac{Z_0^p}{B_0^p} := \frac{[F^p \quad ∩ \quad {\color{red}d^{-1}(F^{p+1})}]\quad + \quad F^{p+1}}{[F^p \quad ∩ \quad {\color{blue}d(F^{p})}]\quad + \quad F^{p+1}}. \end{equation}</p>
+  <p>此处 $F^∙A$ 是 dg-模 $A$ 的滤过, 分次模态射之分次是自明的. 定义</p>
+  <ol>
+    <li>$Z_r^p = F^p \quad ∩ \quad {\color{red}d^{-1}(F^{p+1\color{black}{+r}})}\quad +  \ \quad F^{p+1}$;</li>
+    <li>$B_r^p = F^p \quad ∩ \quad {\color{blue}d(F^{p\color{black}{-r}})}\qquad + \qquad F^{p+1}$.</li>
+  </ol>
+  <p>以上括号之所以可去, 是因为子商间的模恒等式. 此时有滤过 \begin{equation} Z^p_0 ⊃ Z^p_r ⊃ Z^p_∞ ⊃ B^p_∞ ⊃ B^p_r ⊃ B^p_0. \end{equation}</p>
+  <p>示意图如下</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsNixbMCwwLCJGXnAg4oipIGReey0xfShGXntwKzF9KStGXntwKzF9Il0sWzAsMSwiRl5wIOKIqSAoZF57LTF9KEZee3ArcisxfSkpICsgRl57cCsxfSJdLFswLDIsIkZecCDiiKkgKFxca2VyIGQpICsgRl57cCsxfSJdLFsxLDIsIkZecCDiiKkgKFxcbWF0aHJte2ltfVxcIGQpICsgRl57cCsxfSJdLFsxLDEsIkZecCDiiKkgKGQoRl57cC1yfSkpICsgRl57cCsxfSJdLFsxLDAsIkZecCDiiKkgKDApICsgRl57cCsxfSJdLFswLDEsIlxcc3Vwc2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEsMiwiXFxzdXBzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMiwzLCJcXHN1cHNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFszLDQsIlxcc3Vwc2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsNSwiXFxzdXBzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMCwxLCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSwyLCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMiwzLCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw0LCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNCw1LCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMCwxLCIiLDMseyJvZmZzZXQiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxLDIsIiIsMyx7Im9mZnNldCI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIsMywiIiwzLHsib2Zmc2V0IjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw0LCIiLDMseyJvZmZzZXQiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDUsIiIsMyx7Im9mZnNldCI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNixbMCwwLCJGXnAg4oipIGReey0xfShGXntwKzF9KStGXntwKzF9Il0sWzAsMSwiRl5wIOKIqSAoZF57LTF9KEZee3ArcisxfSkpICsgRl57cCsxfSJdLFswLDIsIkZecCDiiKkgKFxca2VyIGQpICsgRl57cCsxfSJdLFsxLDIsIkZecCDiiKkgKFxcbWF0aHJte2ltfVxcIGQpICsgRl57cCsxfSJdLFsxLDEsIkZecCDiiKkgKGQoRl57cC1yfSkpICsgRl57cCsxfSJdLFsxLDAsIkZecCDiiKkgKDApICsgRl57cCsxfSJdLFswLDEsIlxcc3Vwc2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEsMiwiXFxzdXBzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMiwzLCJcXHN1cHNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFszLDQsIlxcc3Vwc2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsNSwiXFxzdXBzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMCwxLCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSwyLCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMiwzLCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw0LCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNCw1LCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMCwxLCIiLDMseyJvZmZzZXQiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxLDIsIiIsMyx7Im9mZnNldCI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIsMywiIiwzLHsib2Zmc2V0IjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw0LCIiLDMseyJvZmZzZXQiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDUsIiIsMyx7Im9mZnNldCI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d&amp;embed" width="600" height="300" style="border-radius: 8px; border: dashed;"></iframe> </center>
+</div>
+
+<div class="example">
+  <p>(构造翻页 $E_{r} → H(E_r) := E_{r+1}$). 取</p>
+  <p>$$
+E_{r+1}^{p, ∙} = H_r^{p, ∙} := {Z_r^{p, ∙} } / {B_r^{p, ∙} },
+$$</p>
+  <p>构造 $d^{p, ∙}_r$ 的满-单分解: \begin{equation} E_{r}^p = \frac{Z_{r-1}^p}{B_{r-1}^p} ↠ \frac{Z_{r-1}^p}{Z_{r}^p} ≃ \frac{B_{r}^{p+r}}{B_{r-1}^{p+r}} ↪ \frac{Z_{r-1}^{p+r}}{B_{r-1}^{p+r}} = E_r^{p+r}. \end{equation} 中间的同构是 Zassenhaus 引理的函子性:</p>
+  <p>$$
+\begin{aligned}
+\frac{Z_{r-1} ^p}{Z_{r} ^p} &= \frac{F^p ∩ (d^{-1}(F^{p+r})) + F^{p+1}}{F^{p} ∩ (d^{-1}(F^{p+r+1})) + F^{p+1}} \\[6pt]
+    \left[\frac{A^♯ ∩ {\color{red} X^♯} + A^♭}{A^♯ ∩ {\color{red} X^♭} + A^♭}\right] \ \ &≃ \frac{d(F^p) ∩ {\color{red} F^{p+r}} + d(F^{p+1})}{d(F^{p}) ∩ {\color{red} F^{p+r+1}} + d(F^{p+1})} \\[6pt]
+    \left[\frac{ {\color{red} X^♯} ∩ A^♯ + {\color{red} X^♭}}{ {\color{red} X^♯} ∩ A^♭ + {\color{red} X^♭}}\right]  \ \  &≃ \frac{ {\color{red} F^{p+r}} ∩ d(F^p) + {\color{red} F^{p+r+1}}}{ {\color{red} F^{p+r}} ∩ d(F^{p+1}) + {\color{red} F^{p+r+1}}} \quad = \frac{B^{p+r}_r}{B^{p+r}_{r-1}}  
+\end{aligned}
+$$</p>
+  <p>考虑链复形的 $(X, \ker , \mathrm{cok}, \mathrm{im}, \mathrm{cim}, H)$-六要件, 得以下翻页:</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMjIsWzAsMCwiRSIsWzE4MCw2MCw2MCwxXV0sWzUsMCwiRSIsWzE4MCw2MCw2MCwxXV0sWzUsMiwiSCIsWzE4MCw2MCw2MCwxXV0sWzIsMCwiXFxtYXRocm17aW19IixbMTgwLDYwLDYwLDFdXSxbNywwLCJcXG1hdGhybXtpbX0iLFsxODAsNjAsNjAsMV1dLFs0LDEsIlxcbWF0aHJte2tlcn0iLFsxODAsNjAsNjAsMV1dLFs2LDEsIlxcbWF0aHJte2Nva30iLFsxODAsNjAsNjAsMV1dLFsxLDEsIlxcbWF0aHJte2Nva30iLFsxODAsNjAsNjAsMV1dLFswLDIsIkgiLFsxODAsNjAsNjAsMV1dLFs1LDEsIlxcZnJhY3taX3tyLTF9XnB9e0Jfe3ItMX1ecH0iXSxbNywxLCJcXGZyYWN7Wl97ci0xfV5wfXtaX3tyfV5wfSJdLFs4LDAsIlxcY2RvdHMiLFsxODAsNjAsNjAsMV1dLFs4LDEsIlxcY2RvdHMiXSxbNiwyLCJcXGZyYWN7Wl97ci0xfV5wfXtCX3tyfV5wfSJdLFs1LDMsIlxcZnJhY3taX3tyfV5wfXtCX3tyfV5wfSJdLFszLDAsIlxcbWF0aHJte2NpbX0iLFsxODAsNjAsNjAsMV1dLFs0LDIsIlxcZnJhY3taX3tyfV5wfXtCX3tyLTF9XnB9Il0sWzMsMSwiXFxmcmFje0Jfe3J9XntwfX17Ql97ci0xfV57cH19Il0sWzIsMSwiXFxmcmFje1pfe3ItMX1ee3Atcn19e1pfe3J9XntwLXJ9fSJdLFsxLDIsIlxcZnJhY3taX3tyLTF9XntwLXJ9fXtCX3tyfV57cC1yfX0iXSxbMCwxLCJcXGZyYWN7Wl97ci0xfV57cC1yfX17Ql97ci0xfV57cC1yfX0iXSxbMCwzLCJcXGZyYWN7Wl97cn1ee3Atcn19e0Jfe3J9XntwLXJ9fSJdLFswLDMsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDQsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs1LDEsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsNiwiIiwzLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzUsMiwiIiwzLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsNiwiIiwzLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNiw0LCIiLDMseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCw3LCIiLDMseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNywzLCIiLDMseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbOCw3LCIiLDMseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDExLCIiLDIseyJsZXZlbCI6MiwiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMiwiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTQsMTMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzksMTMsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxMywxMCwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzE1LDEsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzE1LDUsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsMTUsIiIsMix7ImxldmVsIjoyLCJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE2LDE0LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMTYsOSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMTcsMTYsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzE4LDE3LCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxOSwxOCwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIxLDE5LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsyMCwxOSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV1d --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMjIsWzAsMCwiRSIsWzE4MCw2MCw2MCwxXV0sWzUsMCwiRSIsWzE4MCw2MCw2MCwxXV0sWzUsMiwiSCIsWzE4MCw2MCw2MCwxXV0sWzIsMCwiXFxtYXRocm17aW19IixbMTgwLDYwLDYwLDFdXSxbNywwLCJcXG1hdGhybXtpbX0iLFsxODAsNjAsNjAsMV1dLFs0LDEsIlxcbWF0aHJte2tlcn0iLFsxODAsNjAsNjAsMV1dLFs2LDEsIlxcbWF0aHJte2Nva30iLFsxODAsNjAsNjAsMV1dLFsxLDEsIlxcbWF0aHJte2Nva30iLFsxODAsNjAsNjAsMV1dLFswLDIsIkgiLFsxODAsNjAsNjAsMV1dLFs1LDEsIlxcZnJhY3taX3tyLTF9XnB9e0Jfe3ItMX1ecH0iXSxbNywxLCJcXGZyYWN7Wl97ci0xfV5wfXtaX3tyfV5wfSJdLFs4LDAsIlxcY2RvdHMiLFsxODAsNjAsNjAsMV1dLFs4LDEsIlxcY2RvdHMiXSxbNiwyLCJcXGZyYWN7Wl97ci0xfV5wfXtCX3tyfV5wfSJdLFs1LDMsIlxcZnJhY3taX3tyfV5wfXtCX3tyfV5wfSJdLFszLDAsIlxcbWF0aHJte2NpbX0iLFsxODAsNjAsNjAsMV1dLFs0LDIsIlxcZnJhY3taX3tyfV5wfXtCX3tyLTF9XnB9Il0sWzMsMSwiXFxmcmFje0Jfe3J9XntwfX17Ql97ci0xfV57cH19Il0sWzIsMSwiXFxmcmFje1pfe3ItMX1ee3Atcn19e1pfe3J9XntwLXJ9fSJdLFsxLDIsIlxcZnJhY3taX3tyLTF9XntwLXJ9fXtCX3tyfV57cC1yfX0iXSxbMCwxLCJcXGZyYWN7Wl97ci0xfV57cC1yfX17Ql97ci0xfV57cC1yfX0iXSxbMCwzLCJcXGZyYWN7Wl97cn1ee3Atcn19e0Jfe3J9XntwLXJ9fSJdLFswLDMsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDQsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs1LDEsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsNiwiIiwzLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzUsMiwiIiwzLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsNiwiIiwzLHsiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNiw0LCIiLDMseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCw3LCIiLDMseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNywzLCIiLDMseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbOCw3LCIiLDMseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs0LDExLCIiLDIseyJsZXZlbCI6MiwiY29sb3VyIjpbMTgwLDYwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMiwiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTQsMTMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzksMTMsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxMywxMCwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzE1LDEsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzE1LDUsIiIsMyx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsMTUsIiIsMix7ImxldmVsIjoyLCJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE2LDE0LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMTYsOSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMTcsMTYsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzE4LDE3LCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxOSwxOCwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIxLDE5LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsyMCwxOSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV1d&amp;embed" width="600" height="300" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>同样地, 同调群之间没有自然诱导的微分, 需借助滤过结构定义.</p>
+</div>
+
+<p>谱序列的微分向 $↘$ 方向移动. 若谱序列在 $↘$ 向有限, 则收敛.</p>
+
+<div class="example">
+  <p>(收敛性). 假定谱序列每项收敛, 此时 $E_∞$ 存在. 由 Zassenhaus 定理得 \begin{equation} E_∞^p = \frac{F^p ∩ {\color{red}{\ker d}} + F^{p+1}}{F^p ∩ {\color{blue}{\mathrm{im} \ d}} + F^{p+1}} ≃ \frac{ {\color{red}{\ker d}} ∩ F^p + {\color{blue}{\mathrm{im} \ d}}}{ {\color{red}{\ker d}} ∩ F^{p+1} + {\color{blue}{\mathrm{im} \ d}}}. \end{equation} 依分次拆解之,<br /> \begin{equation} E_∞^{p,q} = \frac{ {\color{red}{\ker d}} ∩ F^p + {\color{blue}{\mathrm{im} \ d}}\qquad \text{之 $(p+q)$-分次}}{ {\color{red}{\ker d}} ∩ F^{p+1} + {\color{blue}{\mathrm{im} \ d}}\quad \ \text{之 $(p+q)$-分次}}. \end{equation} 依照假定, 滤过终点是 $F^{-∞}A = A$, 且 $F^{+∞} A = A$.</p>
+  <p>依照 Noether 同构取 $H^{l := p+q}(A)$ 之子商如下: \begin{equation} E_∞ ^{t, l-t} = \frac{ {\color{red}{\ker d}} ∩ F^t + {\color{blue}{\mathrm{im} \ d}} \ \text{之 $l$-分次} \ \ /\ \ \mathrm{im}(d)\ \text{之 $l$-分次}}{ {\color{red}{\ker d}} ∩ F^{t+1} + {\color{blue}{\mathrm{im} \ d}}\ \text{之 $l$-分次} \ \ /\ \ \mathrm{im}(d) \ \text{之 $l$-分次}}. \end{equation}</p>
+  <p>因此, 存在 $H^l$ 的滤过 $[ \ \cdots ⊃ F^t H^l ⊃ \cdots \ ]$, 商去相邻子项得 $E_∞^{t,l-t}$.</p>
+</div>
+
+<div class="note">
+  <p>谱序列是逐项计算的. 双复形的局部有限性是指, 每一 $↖↘$ 斜向线上有且仅有有限项非零. 例如 $(p × ∞)$-型, $(∞ × q)$-型, 第一(三)象限型. <br /> 若谱序列在 $↘↖$-方向无限, 则 $E_∙$ 未必收敛至同调群的滤过. <a href="Z_Infty_Spectral_Not_Converge">反例</a>.</p>
+</div>
+
+<h3 id="双复形">双复形</h3>
+
+<div class="definition">
+  <p>双复形 $(A,d_↑, d_→)$ 是 $(ℤ × ℤ)$-微分分次对象. 满足</p>
+  <ol>
+    <li>$d_→ : A^{p,q} → A^{p+1, q}, d_↑ : A^{p,q} → A^{p, q+1}$,</li>
+    <li>$d_↑ ∘ d_↑ = d_→ ∘ d_→ = 0, d_→ ∘ d_↑ + d_↑ ∘ d_→ = 0$.</li>
+  </ol>
+</div>
+
+<p>有时规定 $I:= →$ 与 $II:= ↑$.</p>
+
+<div class="definition">
+  <p>(全复形). 记 $\mathrm{Tot}(X)$ 是双复形 $X$ 的全复形,</p>
+  <ol>
+    <li>$l$-分次为 $∐_{p+q = l} X^{p,q}$;</li>
+    <li>$l$-分次微分为 $∐_{p+q = l}(d^{p,q}_→ + d^{p,q}_↑)$.</li>
+  </ol>
+</div>
+
+<div class="note">
+  <p>依照谱序列的计算, 双复形的符号不重要. 全复形亦可选作 $∏$-复形.</p>
+</div>
+
+<div class="example">
+  <p>(双复形滤过). 考虑全复形 $\mathrm{Tot}(X)$ 的如下滤过</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTIsWzEsMSwi4oiQX3tzK3QgPSBwK3F9XntzIFxcZ2VxIHF9IFhee3MsdH0iXSxbMCwwLCLiiJBfe3MrdCA9IHArcX1ee3MgXFxnZXEgcS0xfSBYXntzLHR9Il0sWzIsMiwi4oiQX3tzK3QgPSBwK3F9XntzIFxcZ2VxIHErMX0gWF57cyx0fSJdLFsxLDAsIuKIkF97cyt0ID0gcCtxKzF9XntzIFxcZ2VxIHF9IFhee3MsdH0iXSxbMSwyLCLiiJBfe3MrdCA9IHArcS0xfV57cyBcXGdlcSBxfSBYXntzLHR9Il0sWzIsMSwi4oiQX3tzK3QgPSBwK3ErMX1ee3MgXFxnZXEgcSsxfSBYXntzLHR9Il0sWzIsMCwi4oiQX3tzK3QgPSBwK3ErMn1ee3MgXFxnZXEgcSsxfSBYXntzLHR9Il0sWzAsMSwi4oiQX3tzK3QgPSBwK3EtMX1ee3MgXFxnZXEgcS0xfSBYXntzLHR9Il0sWzAsMiwi4oiQX3tzK3QgPSBwK3EtMn1ee3MgXFxnZXEgcS0xfSBYXntzLHR9Il0sWzEsMywiRl5xKFxcbWF0aHJte1RvdH0oWCkpIl0sWzAsMywiRl57cS0xfShcXG1hdGhybXtUb3R9KFgpKSJdLFsyLDMsIkZee3ErMX0oXFxtYXRocm17VG90fShYKSkiXSxbOCw3XSxbNywxXSxbNCwwXSxbMCwzXSxbMiw1XSxbNSw2XSxbMCwxLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMCwiXFxzdWJzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDMsIlxcc3Vic2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCw3LCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEwLDksIlxcc3Vwc2V0ZXEgIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzksMTEsIlxcc3Vwc2V0ZXEgIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTIsWzEsMSwi4oiQX3tzK3QgPSBwK3F9XntzIFxcZ2VxIHF9IFhee3MsdH0iXSxbMCwwLCLiiJBfe3MrdCA9IHArcX1ee3MgXFxnZXEgcS0xfSBYXntzLHR9Il0sWzIsMiwi4oiQX3tzK3QgPSBwK3F9XntzIFxcZ2VxIHErMX0gWF57cyx0fSJdLFsxLDAsIuKIkF97cyt0ID0gcCtxKzF9XntzIFxcZ2VxIHF9IFhee3MsdH0iXSxbMSwyLCLiiJBfe3MrdCA9IHArcS0xfV57cyBcXGdlcSBxfSBYXntzLHR9Il0sWzIsMSwi4oiQX3tzK3QgPSBwK3ErMX1ee3MgXFxnZXEgcSsxfSBYXntzLHR9Il0sWzIsMCwi4oiQX3tzK3QgPSBwK3ErMn1ee3MgXFxnZXEgcSsxfSBYXntzLHR9Il0sWzAsMSwi4oiQX3tzK3QgPSBwK3EtMX1ee3MgXFxnZXEgcS0xfSBYXntzLHR9Il0sWzAsMiwi4oiQX3tzK3QgPSBwK3EtMn1ee3MgXFxnZXEgcS0xfSBYXntzLHR9Il0sWzEsMywiRl5xKFxcbWF0aHJte1RvdH0oWCkpIl0sWzAsMywiRl57cS0xfShcXG1hdGhybXtUb3R9KFgpKSJdLFsyLDMsIkZee3ErMX0oXFxtYXRocm17VG90fShYKSkiXSxbOCw3XSxbNywxXSxbNCwwXSxbMCwzXSxbMiw1XSxbNSw2XSxbMCwxLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMCwiXFxzdWJzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDMsIlxcc3Vic2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCw3LCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEwLDksIlxcc3Vwc2V0ZXEgIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzksMTEsIlxcc3Vwc2V0ZXEgIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d&amp;embed" width="600" height="400" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>计算 $E_0$ 与 $E_1$, 结果如下:</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMjAsWzEsMSwiWF57cSxwfSJdLFswLDAsIlhee3EtMSwgcCsxfSJdLFsyLDIsIlhee3ErMSwgcC0xfSJdLFsxLDAsIlhee3EscCsxfSJdLFsxLDIsIlhee3EscC0xfSJdLFsyLDEsIlhee3ErMSwgcH0iXSxbMiwwLCJYXntxKzEsIHArMX0iXSxbMCwxLCJYXntxLTEsIHB9Il0sWzAsMiwiWF57cS0xLCBwLTF9Il0sWzAsMywiXFxib3hlZHtFXzB9Il0sWzMsMywiXFxib3hlZHtFXzF9Il0sWzMsMiwiSF9cXHVwYXJyb3cgXntxLTEscC0xfSJdLFszLDEsIkhfXFx1cGFycm93IF57cS0xLHB9Il0sWzMsMCwiSF9cXHVwYXJyb3cgXntxLTEscCsxfSJdLFs0LDIsIkhfXFx1cGFycm93IF57cSxwLTF9Il0sWzUsMiwiSF9cXHVwYXJyb3cgXntxKzEscC0xfSJdLFs1LDEsIkhfXFx1cGFycm93IF57cSsxLHB9Il0sWzUsMCwiSF9cXHVwYXJyb3cgXntxKzEscCsxfSJdLFs0LDEsIkhfXFx1cGFycm93IF57cSxwfSJdLFs0LDAsIkhfXFx1cGFycm93IF57cSxwKzF9Il0sWzgsNywiZF9cXHVwYXJyb3cgIl0sWzcsMSwiZF9cXHVwYXJyb3cgIl0sWzQsMCwiZF9cXHVwYXJyb3cgIl0sWzAsMywiZF9cXHVwYXJyb3cgIl0sWzIsNSwiZF9cXHVwYXJyb3cgIl0sWzUsNiwiZF9cXHVwYXJyb3cgIl0sWzEzLDE5LCI/Il0sWzE5LDE3LCI/Il0sWzEyLDE4LCI/Il0sWzE4LDE2LCI/Il0sWzExLDE0LCI/Il0sWzE0LDE1LCI/Il1d --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMjAsWzEsMSwiWF57cSxwfSJdLFswLDAsIlhee3EtMSwgcCsxfSJdLFsyLDIsIlhee3ErMSwgcC0xfSJdLFsxLDAsIlhee3EscCsxfSJdLFsxLDIsIlhee3EscC0xfSJdLFsyLDEsIlhee3ErMSwgcH0iXSxbMiwwLCJYXntxKzEsIHArMX0iXSxbMCwxLCJYXntxLTEsIHB9Il0sWzAsMiwiWF57cS0xLCBwLTF9Il0sWzAsMywiXFxib3hlZHtFXzB9Il0sWzMsMywiXFxib3hlZHtFXzF9Il0sWzMsMiwiSF9cXHVwYXJyb3cgXntxLTEscC0xfSJdLFszLDEsIkhfXFx1cGFycm93IF57cS0xLHB9Il0sWzMsMCwiSF9cXHVwYXJyb3cgXntxLTEscCsxfSJdLFs0LDIsIkhfXFx1cGFycm93IF57cSxwLTF9Il0sWzUsMiwiSF9cXHVwYXJyb3cgXntxKzEscC0xfSJdLFs1LDEsIkhfXFx1cGFycm93IF57cSsxLHB9Il0sWzUsMCwiSF9cXHVwYXJyb3cgXntxKzEscCsxfSJdLFs0LDEsIkhfXFx1cGFycm93IF57cSxwfSJdLFs0LDAsIkhfXFx1cGFycm93IF57cSxwKzF9Il0sWzgsNywiZF9cXHVwYXJyb3cgIl0sWzcsMSwiZF9cXHVwYXJyb3cgIl0sWzQsMCwiZF9cXHVwYXJyb3cgIl0sWzAsMywiZF9cXHVwYXJyb3cgIl0sWzIsNSwiZF9cXHVwYXJyb3cgIl0sWzUsNiwiZF9cXHVwYXJyb3cgIl0sWzEzLDE5LCI/Il0sWzE5LDE3LCI/Il0sWzEyLDE4LCI/Il0sWzE4LDE2LCI/Il0sWzExLDE0LCI/Il0sWzE0LDE1LCI/Il1d&amp;embed" width="600" height="300" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>以上,</p>
+  <ol>
+    <li>$E_0^{s,t}$ 各项由 $F^s(\mathrm{Tot}(X)^{s+t})$ 商去相邻子对象所得, 即 $X^{s,t}$.</li>
+    <li>$E_1$ 涉及一串 $H_↑^{s,t}(X) → H_↑^{s+1, t}$ 的微分, 我们希望是 $H_↑(d_→)$.</li>
+  </ol>
+  <p>由追图法 (或蝾螈引理等), 问号处的满-单分解为 \begin{equation} \frac{d_\uparrow^{-1}(0^{s,t+1})}{d_\uparrow(X^{s,t-1})} ↠ \frac{d_\uparrow^{-1}(0^{s,t+1})}{d_\to ^{-1}(d_\uparrow(X^{s+1,t-1}))} ≃ \frac{d_\to (d_\uparrow^{-1}(0^{s,t+1}))}{d_\uparrow(X^{s+1,t-1})} ↪ \frac{d_\uparrow^{-1}(0^{s+1,t+1})}{d_\uparrow(X^{s+1,t-1})}. \end{equation} 这就是上同调函子诱导的 $H_↑(d_→)$.</p>
+</div>
+
+<div class="example">
+  <p>(关于纵向谱序列). 相应地, 取转置 $\mathrm{Tot}(X^T)$ 的滤过, $E_1$ 页的微分是 $H_→ (d_↑)$. 谱序列微分方向如下图所示</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTAsWzAsMCwiXFxidWxsZXQiXSxbMSwxLCJcXGJ1bGxldCJdLFsyLDIsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbMCwyLCJcXGJveGVke1xcdGV4dHvnurV9fSJdLFszLDIsIlxcYm94ZWR7XFx0ZXh0e+aoqn19Il0sWzQsMiwiXFxidWxsZXQiXSxbNSwyLCJcXGJ1bGxldCJdLFs0LDEsIlxcYnVsbGV0Il0sWzMsMCwiXFxidWxsZXQiXSxbMywwLCJkXzA9ZF9cXHVwYXJyb3cgIl0sWzMsMSwiZF8xPSBIX1xcdXBhcnJvdyAoZF9cXHRvICkiXSxbMywyLCJkXzIiLDJdLFs2LDcsImRfMCA9IGRfXFx0byAiLDJdLFs2LDgsImRfMSA9IEhfXFx0byAoZF9cXHVwYXJyb3cgKSIsMl0sWzYsOSwiZF8yIl0sWzAsMSwiIiwxLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsxLDIsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNyw4LCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzgsOSwiIiwxLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dXQ== --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTAsWzAsMCwiXFxidWxsZXQiXSxbMSwxLCJcXGJ1bGxldCJdLFsyLDIsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbMCwyLCJcXGJveGVke1xcdGV4dHvnurV9fSJdLFszLDIsIlxcYm94ZWR7XFx0ZXh0e+aoqn19Il0sWzQsMiwiXFxidWxsZXQiXSxbNSwyLCJcXGJ1bGxldCJdLFs0LDEsIlxcYnVsbGV0Il0sWzMsMCwiXFxidWxsZXQiXSxbMywwLCJkXzA9ZF9cXHVwYXJyb3cgIl0sWzMsMSwiZF8xPSBIX1xcdXBhcnJvdyAoZF9cXHRvICkiXSxbMywyLCJkXzIiLDJdLFs2LDcsImRfMCA9IGRfXFx0byAiLDJdLFs2LDgsImRfMSA9IEhfXFx0byAoZF9cXHVwYXJyb3cgKSIsMl0sWzYsOSwiZF8yIl0sWzAsMSwiIiwxLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsxLDIsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNyw4LCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzgsOSwiIiwxLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dXQ==&amp;embed" width="600" height="300" style="border-radius: 8px; border: dashed;"></iframe> </center>
+</div>
+
+<div class="theorem">
+  <p>(双复形能成为谱序列的 $E_2$-项). 给定交换或反交换的双复形 $X^{∙ , ∙ }$.</p>
+  <ol>
+    <li>存在收敛至全复形的谱序列, 满足       <ol>
+        <li>$0$-页是 $X^{∙, ∙}$ 与 $d_↑$;</li>
+        <li>$1$-页是 $H_↑^{∙ , ∙}(X)$ 与 $H_↑(d_→)$;</li>
+        <li>$2$-页是 $H_→ (H_↑)$, 微分从略.</li>
+      </ol>
+    </li>
+    <li>存在收敛至全复形的谱序列, 满足       <ol>
+        <li>$0$-页是 $X^{∙, ∙}$ 与 $d_→$;</li>
+        <li>$1$-页是 $H_→^{∙ , ∙}(X)$ 与 $H_→(d_↑)$;</li>
+        <li>$2$-页是 $H_↑ (H_→)$, 微分从略.</li>
+      </ol>
+    </li>
+  </ol>
+</div>
+
+<h2 id="谱序列直接应用">谱序列直接应用</h2>
+
+<h3 id="同调代数的简单应用">同调代数的简单应用</h3>
+
+<div class="theorem">
+  <p>(同调代数基本定理, <a href="Fundamental_Thm_Homological_Algebra">证明</a>). 以下是三种常见形式.</p>
+  <ol>
+    <li>(通常形式). 给定上链复形 (dg-模) 的正合列 $0 → K → X → Q → 0$, 此时有长正合列 \begin{equation} \cdots → H^{p-1} (Q) → H^p (K) → H^p (X) → H^p (Q) → H^{p+1} (K) → \cdots. \end{equation}</li>
+    <li>(同伦形式). 给定复形态射 $f : X → Y$, 取全复形 $E : = \mathrm{Cone}(f)$, 此时有长正合列 \begin{equation} \cdots → H^{p-1} (Y) → H^p (X) → H^p (E) → H^p (Y) → H^{p+1} (X) → \cdots. \end{equation}</li>
+    <li>(正合复形的态射). 给定正合复形间的态射 $f : X → Y$, 则 $H^{p+1}(\ker) ≃ H^{p-1}(\mathrm{cok})$. 这是强形式的蛇引理.</li>
+  </ol>
+</div>
+
+<div class="proposition">
+  <p>(蛇引理). 见正合复形的态射. 特别地, 有以下变式.</p>
+  <ol>
+    <li><a href="Four_Lemma">$2 × 2$ 交换方块</a>, 以及推出拉回等.</li>
+    <li><a href="Five_Lemma">五项引理</a>, 以及单四引理, 满四引理等.</li>
+    <li><a href="Six_Lemma">ker-cok 六项序列</a>, 以及指标公式等.</li>
+    <li><a href="Nine_Lemma">$3 × 3$ 引理</a>, 以及强 $3 × 3$ 引理等.</li>
+  </ol>
+</div>
+
+<h3 id="ar-转置与谱序列">AR 转置与谱序列</h3>
+
+<p>以下所有对象均是 Artin 代数中的有限表面模, 基本记号等见<a href="AR-notes#稳定范畴等价">此处</a>. 本小结证明<a href="AR-notes#ar-定理">此处</a>的同调定理.</p>
+
+<div class="lemma">
+  <p>(缺陷公式, <a href="AR_Defect">证明</a>). 给定 ses \begin{equation} θ : 0 → K → X → Y → 0. \end{equation} 则有长正合列 \begin{equation} 0 → (-, K) → (-, X) → (-, Y) → K ⊗ \mathrm{Tr}(-) → X ⊗ \mathrm{Tr}(-) → Y ⊗ \mathrm{Tr}(-) → 0. \end{equation}</p>
+</div>
+
+<div class="note">
+  <p>回顾缺陷公式的<a href="AR_Defect">证明</a>, 可使用投射分解与 AR 转置快速计算一次导出函子.</p>
+</div>
+
+<div class="lemma">
+  <p>($\mathrm{Tor}_{1,2}(Y, \mathrm{Tr}(X))$, 稳定 $\mathrm{Hom}$, <a href="AR_Tor">证明</a>). 存在函子的四项正合列</p>
+  <p>$$
+0 → \mathrm{Tor}_2(Y, \mathrm{Tr}(X)) → Y ⊗ X^∗ → (X, Y) → \mathrm{Tor}_1(Y, \mathrm{Tr}(X)) → 0
+$$</p>
+  <p>此处, $\mathrm{Tor}_1(Y, \mathrm{Tr}(X)) ≃ \underline {(X,Y)}$.</p>
+</div>
+
+<div class="lemma">
+  <p>($\mathrm{Tor}_{≥ 3}(Y, \mathrm{Tr}(X))$, <a href="AR_Tor">证明</a>). $\mathrm{Tor}_{n+3}(Y, \mathrm{Tr}(X)) ≃ \mathrm{Tor}_{n+1}(Y, X^∗)$.</p>
+</div>
+
+<p>以下两条对偶命题证明略.</p>
+
+<div class="lemma">
+  <p>($\mathrm{Ext}^{1,2}(\mathrm{Tr}(M), N)$, AB 公式). 存在函子的四项正合列</p>
+  <p>$$
+0 → \mathrm{Ext}^1(\mathrm{Tr}(M), N) → N ⊗ M → (M^∗, N) → \mathrm{Ext}^2(\mathrm{Tr}(M), N) → 0
+$$</p>
+</div>
+
+<div class="lemma">
+  <p>($\mathrm{Ext}^{≥ 3}(\mathrm{Tr}(M), N)$). $\mathrm{Ext}^{n + 3}(\mathrm{Tr}(M), N) ≃ \mathrm{Ext}^{n}(\mathrm{Tr}(M), N)$.</p>
+</div>
+
+<h3 id="kunneth-公式">Kunneth 公式</h3>
+
+<h2 id="导出函子相关">导出函子相关</h2>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="https://zhangchenchengsjtu.github.io/website/posts/Complete_Filtration"
+        title="NEXT: 滤过完备当且仅当 $\varprojlim {}^1$ 消失">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="https://zhangchenchengsjtu.github.io/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="https://zhangchenchengsjtu.github.io/website/posts/Complete_Z_Filtration"
+        title="PREV: 完备化, 滤过复形">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+</body>
+
+
+</html>
