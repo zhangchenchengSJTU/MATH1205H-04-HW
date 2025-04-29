@@ -7,6 +7,69 @@
     
       
         <item>
+          <title>$\varprojlim{}_{ℕ}^1$ 消失的充分条件</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;($\varprojlim{}_ℕ^1$ 消失的充分条件). 假定 $𝒜$ 是满足 AB4* 的局部小范畴. 假定范畴存在投射生成元, 则 Mittag-Leffler 条件使得 $\varprojlim ^1 = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;投射生成元保持并反射 Mittag-Leffler 条件.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;模范畴中, Mittag-Leffler 条件使得 $\varprojlim ^1 = 0$.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-29T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Projlim_1_Vanish</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Projlim_1_Vanish</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>$\varprojlim$ 与 $\mathrm{Ext}$ 的正合列</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;若 $𝒜$ 有正合的滤过余极限, 则逆向塔的 $\varinjlim_{-1}$ 消失. 若进一步假定余积正合, 则有短正合列 ($p ≥ 0$): \begin{equation} 0 → \varprojlim {}^1\mathrm{Ext}^p(X_∙, Y) → \mathrm{Ext}^{p+1}(\varinjlim X_∙,Y) → \varprojlim \mathrm{Ext}^{p+1}(X_∙, Y) → 0. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;例行公事地写出谱序列. 由 $\varinjlim^1=0$, 得若干短正合列. &lt;br /&gt; &lt;br /&gt; 也可以适用同调方法, 大致思路是先使用 $(A, -)$ 构成的四项短正合列, 再用维数移动归纳. 证明时需要使用两个条件: $\mathrm{Ext}^p$ 与 $∐$ 交换, 以及 $∐ → ∐$ 是单射.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-29T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Injlim_Ext_Seq</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Injlim_Ext_Seq</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>AB5 下 $\varinjlim{}_{-1}$ 消失</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;若 $𝒜$ 满足 AB5 (滤过余极限正合), 则对余塔 $A_0 → A_∙$ 总有短正合列 \begin{equation} 0 → ∐ A_∙ \xrightarrow{\mathrm{id}-A_{i+1, i}} ∐ A_∙ → \varinjlim A_∙ → 0. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;对短正合列截断构造滤过系统即可:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTUsWzEsMCwiXFxjb3Byb2QgX3tcXGxlcSBwfUFfXFxidWxsZXQiXSxbMiwwLCJcXGNvcHJvZCBfe1xcbGVxIHArMX1BX1xcYnVsbGV0Il0sWzMsMCwiQ19wIl0sWzQsMCwiMCJdLFswLDAsIjAiXSxbMSwxLCJcXGNvcHJvZCBfe1xcbGVxIHArMX1BX1xcYnVsbGV0Il0sWzIsMSwiXFxjb3Byb2QgX3tcXGxlcSBwKzJ9QV9cXGJ1bGxldCJdLFswLDEsIjAiXSxbMywxLCJDX3twKzF9Il0sWzQsMSwiMCJdLFsxLDIsIlxcdmRvdHMgIl0sWzIsMiwiXFx2ZG90cyAiXSxbMywyLCJcXHZkb3RzICJdLFs0LDIsIjAiXSxbMCwyLCIwIl0sWzQsMF0sWzEsMl0sWzIsM10sWzAsNSwiYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsNiwiYiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzcsNV0sWzYsOF0sWzgsOV0sWzAsMSwiYSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzUsNiwiYiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsOCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzE0LDEwXSxbMTAsMTFdLFsxMSwxMl0sWzEyLDEzXSxbNSwxMF0sWzYsMTFdLFs4LDEyLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTUsWzEsMCwiXFxjb3Byb2QgX3tcXGxlcSBwfUFfXFxidWxsZXQiXSxbMiwwLCJcXGNvcHJvZCBfe1xcbGVxIHArMX1BX1xcYnVsbGV0Il0sWzMsMCwiQ19wIl0sWzQsMCwiMCJdLFswLDAsIjAiXSxbMSwxLCJcXGNvcHJvZCBfe1xcbGVxIHArMX1BX1xcYnVsbGV0Il0sWzIsMSwiXFxjb3Byb2QgX3tcXGxlcSBwKzJ9QV9cXGJ1bGxldCJdLFswLDEsIjAiXSxbMywxLCJDX3twKzF9Il0sWzQsMSwiMCJdLFsxLDIsIlxcdmRvdHMgIl0sWzIsMiwiXFx2ZG90cyAiXSxbMywyLCJcXHZkb3RzICJdLFs0LDIsIjAiXSxbMCwyLCIwIl0sWzQsMF0sWzEsMl0sWzIsM10sWzAsNSwiYSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsNiwiYiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzcsNV0sWzYsOF0sWzgsOV0sWzAsMSwiYSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzUsNiwiYiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsOCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzE0LDEwXSxbMTAsMTFdLFsxMSwxMl0sWzEyLDEzXSxbNSwxMF0sWzYsMTFdLFs4LDEyLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+</description>
+          <pubDate>2025-04-29T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/AB5_Derived_Limit</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/AB5_Derived_Limit</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>$E_1 ⇏ H$ 的反例</title>
           <description>&lt;h2 id=&quot;反例&quot;&gt;反例&lt;/h2&gt;
 
@@ -277,7 +340,14 @@ $$&lt;/p&gt;
       
         <item>
           <title>Grothendieck 谱序列</title>
-          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+          <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#证明&quot; id=&quot;markdown-toc-证明&quot;&gt;证明&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#前五项&quot; id=&quot;markdown-toc-前五项&quot;&gt;前五项&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#特殊情形&quot; id=&quot;markdown-toc-特殊情形&quot;&gt;特殊情形&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#前五项态射的描述&quot; id=&quot;markdown-toc-前五项态射的描述&quot;&gt;前五项态射的描述&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
   &lt;p&gt;(Grothendieck 函子的基本资料). 给定 Abel 范畴间的右正合函子 \begin{equation} 𝒜\xrightarrow F ℬ \xrightarrow G 𝒞. \end{equation} 称 $(F, G)$ 是右正合 Grothendieck 谱序列的基本资料, 若&lt;/p&gt;
@@ -318,9 +388,64 @@ $$&lt;/p&gt;
   &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMzAsWzQsMiwiRyhQXnsxLC0xfSkiLFsxODAsNjAsNjAsMV1dLFszLDMsIkcoUF57MCwtMn0pIl0sWzQsMywiRyhQXnsxLC0yfSkiLFsxODAsNjAsNjAsMV1dLFsyLDIsIkcoUF57LTEsLTF9KSJdLFszLDIsIkcoUF57MCwtMX0pIl0sWzIsMywiRyhQXnstMSwtMn0pIl0sWzEsMywiRyhQXnstMiwtMn0pIl0sWzEsMiwiRyhQXnstMiwtMX0pIl0sWzEsMSwiRyhQXnstMiwwfSkiXSxbMiwxLCJHKFBeey0xLDB9KSJdLFszLDEsIkcoUF57MCwwfSkiXSxbNCwxLCJHKFBeezEsMH0pIixbMTgwLDYwLDYwLDFdXSxbNCwwLCJHRlgiLFszMCw2MCw2MCwxXV0sWzMsMCwiR0ZRXjAiLFsxODAsNjAsNjAsMV1dLFsyLDAsIkdGUV57LTF9IixbMTgwLDYwLDYwLDFdXSxbMSwwLCJHRlFeey0yfSIsWzE4MCw2MCw2MCwxXV0sWzAsMywiXFxib3hlZHtFXzB9Il0sWzMsNCwiR0ZRXjAiXSxbMyw1LCIoUl4xRylGUV4wIixbMCwwLDc1LDFdXSxbMiw0LCJHRlFeMSJdLFsxLDQsIkdGUV4yIl0sWzIsNSwiKFJeMUcpRlFeMSIsWzAsMCw3NSwxXV0sWzEsNSwiKFJeMUcpRlFeMiIsWzAsMCw3NSwxXV0sWzAsNSwiXFxib3hlZHtFXzF9Il0sWzQsNSwiXFx0ZXh0e+a2iOWksX0iLFswLDAsNzUsMV1dLFs0LDQsIkdGWCIsWzMwLDYwLDYwLDFdXSxbMyw2LCIoR0YpWCJdLFsyLDYsIlJeMShHRilYIl0sWzEsNiwiUl4yKEdGKVgiXSxbMCw2LCJcXGJveGVke0VfMn0iXSxbMiwwLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEsNF0sWzUsM10sWzYsN10sWzAsMTEsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCwxMF0sWzMsOV0sWzcsOF0sWzExLDEyLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTAsMTMsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs5LDE0LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCwxNSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIwLDE5XSxbMTksMTddLFsyMiwyMSwiIiwwLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsyMSwxOCwiIiwwLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsxNywyNSwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMzAsWzQsMiwiRyhQXnsxLC0xfSkiLFsxODAsNjAsNjAsMV1dLFszLDMsIkcoUF57MCwtMn0pIl0sWzQsMywiRyhQXnsxLC0yfSkiLFsxODAsNjAsNjAsMV1dLFsyLDIsIkcoUF57LTEsLTF9KSJdLFszLDIsIkcoUF57MCwtMX0pIl0sWzIsMywiRyhQXnstMSwtMn0pIl0sWzEsMywiRyhQXnstMiwtMn0pIl0sWzEsMiwiRyhQXnstMiwtMX0pIl0sWzEsMSwiRyhQXnstMiwwfSkiXSxbMiwxLCJHKFBeey0xLDB9KSJdLFszLDEsIkcoUF57MCwwfSkiXSxbNCwxLCJHKFBeezEsMH0pIixbMTgwLDYwLDYwLDFdXSxbNCwwLCJHRlgiLFszMCw2MCw2MCwxXV0sWzMsMCwiR0ZRXjAiLFsxODAsNjAsNjAsMV1dLFsyLDAsIkdGUV57LTF9IixbMTgwLDYwLDYwLDFdXSxbMSwwLCJHRlFeey0yfSIsWzE4MCw2MCw2MCwxXV0sWzAsMywiXFxib3hlZHtFXzB9Il0sWzMsNCwiR0ZRXjAiXSxbMyw1LCIoUl4xRylGUV4wIixbMCwwLDc1LDFdXSxbMiw0LCJHRlFeMSJdLFsxLDQsIkdGUV4yIl0sWzIsNSwiKFJeMUcpRlFeMSIsWzAsMCw3NSwxXV0sWzEsNSwiKFJeMUcpRlFeMiIsWzAsMCw3NSwxXV0sWzAsNSwiXFxib3hlZHtFXzF9Il0sWzQsNSwiXFx0ZXh0e+a2iOWksX0iLFswLDAsNzUsMV1dLFs0LDQsIkdGWCIsWzMwLDYwLDYwLDFdXSxbMyw2LCIoR0YpWCJdLFsyLDYsIlJeMShHRilYIl0sWzEsNiwiUl4yKEdGKVgiXSxbMCw2LCJcXGJveGVke0VfMn0iXSxbMiwwLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEsNF0sWzUsM10sWzYsN10sWzAsMTEsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCwxMF0sWzMsOV0sWzcsOF0sWzExLDEyLCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTAsMTMsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs5LDE0LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCwxNSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIwLDE5XSxbMTksMTddLFsyMiwyMSwiIiwwLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsyMSwxOCwiIiwwLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsxNywyNSwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;550&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
   &lt;p&gt;纵向计算得全复形的同调群, 将其插入横向谱序列, 得&lt;/p&gt;
   &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNyxbMiwxLCJHKEZYKSIsWzE4MCw2MCw2MCwxXV0sWzIsMiwiKFJeMUcpKEZYKSIsWzMwLDYwLDYwLDFdXSxbMiwzLCIoUl4yRykoRlgpIixbMzAsNjAsNjAsMV1dLFswLDMsIihSXjJHKShSXjFGWCkiXSxbMCwyLCIoUl4xRykoUl4xRlgpIl0sWzAsMSwiRyhSXjFGWCkiLFszMCw2MCw2MCwxXV0sWzAsMCwiMCJdLFsyLDUsIiIsMCx7ImNvbG91ciI6WzMwLDYwLDYwXX1dLFs1LDEsIkheMSIsMSx7ImNvbG91ciI6WzMwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMzAsNjAsNjAsMV1dLFs0LDIsIkheMiIsMSx7ImNvbG91ciI6WzMwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMzAsNjAsNjAsMV1dLFs2LDAsIkheMCIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX0sWzE4MCw2MCw2MCwxXV0sWzEsNiwiIiwxLHsiY29sb3VyIjpbMzAsNjAsNjBdfV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNyxbMiwxLCJHKEZYKSIsWzE4MCw2MCw2MCwxXV0sWzIsMiwiKFJeMUcpKEZYKSIsWzMwLDYwLDYwLDFdXSxbMiwzLCIoUl4yRykoRlgpIixbMzAsNjAsNjAsMV1dLFswLDMsIihSXjJHKShSXjFGWCkiXSxbMCwyLCIoUl4xRykoUl4xRlgpIl0sWzAsMSwiRyhSXjFGWCkiLFszMCw2MCw2MCwxXV0sWzAsMCwiMCJdLFsyLDUsIiIsMCx7ImNvbG91ciI6WzMwLDYwLDYwXX1dLFs1LDEsIkheMSIsMSx7ImNvbG91ciI6WzMwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMzAsNjAsNjAsMV1dLFs0LDIsIkheMiIsMSx7ImNvbG91ciI6WzMwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMzAsNjAsNjAsMV1dLFs2LDAsIkheMCIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX0sWzE4MCw2MCw2MCwxXV0sWzEsNiwiIiwxLHsiY29sb3VyIjpbMzAsNjAsNjBdfV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
-  &lt;p&gt;黄色位置对应五项长正合列&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;前五项&quot;&gt;前五项&lt;/h2&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;以上黄色位置对应五项长正合列&lt;/p&gt;
   &lt;p&gt;\begin{equation} L_2(GF) → (L_2G)F → G(L_1F) → L_1(GF) → (L_1G)F → 0. \end{equation}&lt;/p&gt;
+  &lt;p&gt;对应地, 对右导出的复合, 有前五项正合列 \begin{equation} 0 → (R^1G)F → R^1(GF) → (R^1F)G → (R^2 G)F → R^2(GF). \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
   &lt;p&gt;作为特例, 有 &lt;a href=&quot;Kunneth_Spectral_Seq&quot;&gt;Kunneth 谱序列&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;特殊情形&quot;&gt;特殊情形&lt;/h2&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(前五项可延续的充分条件). 若 Grothendieck 谱序列的内侧函子的第二次导出为 $0$ ($F^2 = 0$), 则 $E_2 = R^pG(R^qF(-))$ 变成两列. 将同调群 $R^∙ (GF)$ 插入 $E_2$, 得三周期长正合列&lt;/p&gt;
+  &lt;p&gt;$$
+\begin{aligned}
+  0 &amp;→ GF^1 → (GF)^{1} → G^{2}F\\[6pt]
+  &amp; → \cdots \\[6pt]
+  &amp;→ G^kF^1 → (GF)^{k+1} → G^{k+1}F\\[6pt]
+  &amp;→ G^{k+1}F^1 → (GF)^{k+2} → G^{k+2}F \\[6pt]
+  &amp;→ \cdots.
+\end{aligned}
+$$&lt;/p&gt;
+  &lt;p&gt;对左导出的类似表述略.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(ses). 若 Grothendieck 谱序列的外侧函子的第二次导出为 $0$ ($G^2 = 0$), 则 $E_2 = R^pG(R^qF(-))$ 变成两行. 将同调群 $R^∙ (GF)$ 插入 $E_2$, 得三周期长正合列&lt;/p&gt;
+  &lt;p&gt;$$
+\begin{aligned}
+  0 &amp; → GF^1 → (GF)^{1} → 0\\[6pt]
+  0 &amp; → GF^1 → (GF)^{1} → G^{1}F → 0\\[6pt]
+  &amp; \cdots \\[6pt]
+  0 &amp; → GF^{k+1} → (GF)^{k+1} → G^{1}F^k → 0 \\[6pt]
+  &amp; \cdots \\[6pt]
+\end{aligned}
+$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;前五项态射的描述&quot;&gt;前五项态射的描述&lt;/h2&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;以下给出 Grothendieck 谱序列中 $E_2$ 的态射, 以 \begin{equation} 0 → (R^1G)F → R^1(GF) → G(R^1F) → (R^2G)F → R^2(GF) \end{equation} 为例.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;态射 $(R^pG)FX → R^p(GF)X$ 由投射分解诱导的复形态射 $F[X → I] ⇒ [FX → J]$ 给出:       &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzAsMSwiRlgiXSxbMSwxLCJKXjAiXSxbMCwwLCJGWCJdLFsxLDAsIkZJXjAiXSxbMiwwLCJcXGNkb3RzICJdLFsyLDEsIlxcY2RvdHMgIl0sWzMsMSwiSl5wIl0sWzMsMCwiRklecCAiXSxbNCwwLCJGSV5cXGJ1bGxldCAiXSxbNCwxLCJKXlxcYnVsbGV0ICJdLFs1LDAsIkhecCAoR0ZJXlxcYnVsbGV0ICkiXSxbNSwxLCJIXnAoR0peXFxidWxsZXQpIl0sWzIsMCwiIiwxLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw0XSxbMSw1XSxbNCw3XSxbNyw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNSw2XSxbOCw5LCJcXHRoZXRhICIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMCwxMSwiSF5wIChHKFxcdGhldGEpKSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDUsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzAsMSwiRlgiXSxbMSwxLCJKXjAiXSxbMCwwLCJGWCJdLFsxLDAsIkZJXjAiXSxbMiwwLCJcXGNkb3RzICJdLFsyLDEsIlxcY2RvdHMgIl0sWzMsMSwiSl5wIl0sWzMsMCwiRklecCAiXSxbNCwwLCJGSV5cXGJ1bGxldCAiXSxbNCwxLCJKXlxcYnVsbGV0ICJdLFs1LDAsIkhecCAoR0ZJXlxcYnVsbGV0ICkiXSxbNSwxLCJIXnAoR0peXFxidWxsZXQpIl0sWzIsMCwiIiwxLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw0XSxbMSw1XSxbNCw3XSxbNyw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNSw2XSxbOCw5LCJcXHRoZXRhICIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMCwxMSwiSF5wIChHKFxcdGhldGEpKSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDUsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+      &lt;p&gt;此处 $H^p (G(θ)) : (R^pG)FX → R^p(GF)X$.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;态射 $R^p(GF) → G(R^p F)$ 由 Kan 延拓的泛性质给出:       &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNSxbNCwwLCJcXG1hdGhzY3IgQyJdLFs0LDEsIkRcXG1hdGhzY3IgQyJdLFsyLDAsIlxcbWF0aHNjciBCIl0sWzIsMSwiRCBcXG1hdGhzY3IgQiJdLFswLDAsIlxcbWF0aHNjciBBIl0sWzAsMV0sWzIsM10sWzIsMCwiRyJdLFszLDEsIkRHIiwyXSxbNCwyLCJGIl0sWzQsMywiUl5cXGJ1bGxldCBGIiwyXSxbNCwxLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNSxbNCwwLCJcXG1hdGhzY3IgQyJdLFs0LDEsIkRcXG1hdGhzY3IgQyJdLFsyLDAsIlxcbWF0aHNjciBCIl0sWzIsMSwiRCBcXG1hdGhzY3IgQiJdLFswLDAsIlxcbWF0aHNjciBBIl0sWzAsMV0sWzIsM10sWzIsMCwiRyJdLFszLDEsIkRHIiwyXSxbNCwyLCJGIl0sWzQsMywiUl5cXGJ1bGxldCBGIiwyXSxbNCwxLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+      &lt;p&gt;特別地, 自然变换 $α : (GF)^∙ ⇒ DG ∘ (R^∙ F)$ 给出 \begin{equation} H^p(α_X) : (GF)^p X→ G(F^p X). \end{equation}&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;态射 $G(R^1 F)X → (R^2 G)(FX)$ 由內射分解 $FI^∙ → J^∙$ 作用 $G$ 后给出. 特別地, 所谓的维数移动来自以下错位的投射分解交换图:       &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTEsWzQsMCwiRyhSXjEgRilYIl0sWzQsMywiKFJeMiBHKShGWCkiXSxbMCwyLCJHRlgiXSxbMiwyLCJHSl4xIl0sWzMsMiwiR0peMiJdLFsxLDIsIkdKXjAiXSxbMywzLCJIXjIgKEdKXlxcYnVsbGV0KSJdLFszLDAsIkdIXjEoRkleXFxidWxsZXQgKSJdLFszLDEsIkdGSV4xIl0sWzIsMSwiR0ZJXjAiXSxbMSwxLCJHRlgiXSxbMCwxLCJIXjEoXFxzaWdtYSApIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsM10sWzMsNF0sWzksOF0sWzIsNV0sWzEwLDldLFs4LDQsIlxcc2lnbWFeMSIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMCw1XSxbOSwzLCJcXHNpZ21hIF4wIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzcsMCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiwxLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTEsWzQsMCwiRyhSXjEgRilYIl0sWzQsMywiKFJeMiBHKShGWCkiXSxbMCwyLCJHRlgiXSxbMiwyLCJHSl4xIl0sWzMsMiwiR0peMiJdLFsxLDIsIkdKXjAiXSxbMywzLCJIXjIgKEdKXlxcYnVsbGV0KSJdLFszLDAsIkdIXjEoRkleXFxidWxsZXQgKSJdLFszLDEsIkdGSV4xIl0sWzIsMSwiR0ZJXjAiXSxbMSwxLCJHRlgiXSxbMCwxLCJIXjEoXFxzaWdtYSApIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsM10sWzMsNF0sWzksOF0sWzIsNV0sWzEwLDldLFs4LDQsIlxcc2lnbWFeMSIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMCw1XSxbOSwzLCJcXHNpZ21hIF4wIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzcsMCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiwxLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;谱序列将这些貌合神离的东西联系在一起. \end{example}&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
@@ -1021,7 +1146,12 @@ $$&lt;/p&gt;
       &lt;li&gt;&lt;a href=&quot;#kunneth-公式&quot; id=&quot;markdown-toc-kunneth-公式&quot;&gt;Kunneth 公式&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#导出函子相关&quot; id=&quot;markdown-toc-导出函子相关&quot;&gt;导出函子相关&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#导出函子相关&quot; id=&quot;markdown-toc-导出函子相关&quot;&gt;导出函子相关&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#grothendieck-谱序列&quot; id=&quot;markdown-toc-grothendieck-谱序列&quot;&gt;Grothendieck 谱序列&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#导出极限&quot; id=&quot;markdown-toc-导出极限&quot;&gt;导出极限&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#brenner-butler-理论&quot; id=&quot;markdown-toc-brenner-butler-理论&quot;&gt;Brenner-Butler 理论&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;abstract&quot;&gt;
@@ -1360,6 +1490,8 @@ $$&lt;/p&gt;
 
 &lt;h2 id=&quot;导出函子相关&quot;&gt;导出函子相关&lt;/h2&gt;
 
+&lt;h3 id=&quot;grothendieck-谱序列&quot;&gt;Grothendieck 谱序列&lt;/h3&gt;
+
 &lt;div class=&quot;definition&quot;&gt;
   &lt;p&gt;(Grothendieck 函子的基本资料). 给定 Abel 范畴间的右正合函子 \begin{equation} 𝒜\xrightarrow F ℬ \xrightarrow G 𝒞. \end{equation} 称 $(F, G)$ 是右正合 Grothendieck 谱序列的基本资料, 若&lt;/p&gt;
   &lt;ol&gt;
@@ -1383,20 +1515,89 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;corollary&quot;&gt;
-  &lt;p&gt;(前五项).&lt;/p&gt;
+  &lt;p&gt;(前五项, &lt;a href=&quot;Grothendieck_Spectral_Sequence#前五项&quot;&gt;证明&lt;/a&gt;). 对左导出的复合, 有前五项正合列 \begin{equation} L_{-2}(GF) → (L_{-2}G)F → G(L_{-1}F) → L_{-1}(GF) → (L_{-1}G)F → 0. \end{equation} 对右导出的复合, 有前五项正合列 \begin{equation} 0 → (R^1G)F → R^1(GF) → (R^1F)G → (R^2 G)F → R^2(GF). \end{equation}&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;corollary&quot;&gt;
-  &lt;p&gt;(特殊情形: 短正合列).&lt;/p&gt;
+  &lt;p&gt;(特殊情形: 短正合列, &lt;a href=&quot;Grothendieck_Spectral_Sequence#特殊情形&quot;&gt;证明&lt;/a&gt;). 若复合函子的外侧二次导出消失, 则前五项正合列可延续.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;corollary&quot;&gt;
-  &lt;p&gt;(特殊情形: 长正合列).&lt;/p&gt;
+  &lt;p&gt;(特殊情形: 长正合列, &lt;a href=&quot;Grothendieck_Spectral_Sequence#特殊情形&quot;&gt;证明&lt;/a&gt;). 若复合函子的内侧二次导出消失, 则谱序列断作若干 ses.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;(前五项态射描述).&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;Grothendieck_Spectral_Sequence#前五项态射的描述&quot;&gt;前五项态射描述&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
+
+&lt;h3 id=&quot;导出极限&quot;&gt;导出极限&lt;/h3&gt;
+
+&lt;p&gt;假定 $𝒜$ 是满足 AB4* 的局部小范畴. $\varprojlim_ℕ$ 是二次导出消失的函子, 适用 &lt;a href=&quot;Grothendieck_Spectral_Sequence#特殊情形&quot;&gt;Gorthendieck 谱序列的特殊情形&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(塔与极限) 称函子 $Y: ℕ^{\mathrm{op}} → 𝒜$ 是塔, 若 $Y$ 映至 \begin{equation} \cdots → Y_2 → Y_1 → Y_0. \end{equation} 依照熟知结论, 自同态 $φ : (\mathrm{id} - ∑ Y_{(i+1) → i})$ 给出函子的短正合列&lt;/p&gt;
+  &lt;p&gt;$$
+0 → \varprojlim Y → ∏_{ℕ} Y_∙ \xrightarrow φ  ∏_{ℕ} Y_∙ → \varprojlim{} ^1 Y → 0.
+$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;假定范畴有正合的可数积 (AB4*), 则 $\varprojlim{}^1$ 就是经典导出函子, 且 $\varprojlim^{≥ 2} = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;($\varprojlim{}_ℕ^1$ 消失的充分条件, &lt;a href=&quot;Projlim_1_Vanish&quot;&gt;证明&lt;/a&gt;). 假定 $𝒜$ 是满足 AB4* 的局部小范畴. 假定范畴存在投射生成元, 则 Mittag-Leffler 条件使得 $\varprojlim ^1 = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(导出极限). 假定 $𝒜$ 是满足 AB4* 的局部小范畴. 取塔 $Y : ℕ^{\mathrm{op}}→ 𝒜$, 则极限的二次导出消失. 取函子&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNCxbMCwxLCJcXG1hdGhzY3IgQSJdLFsyLDEsIlxcbWF0aGJme0FifSJdLFswLDAsIlxcbWF0aHNjcntBfV57XFxtYXRoYmIgTl57XFxtYXRocm17b3B9fX0iXSxbMiwwLCJcXG1hdGhiZntBYn1ee1xcbWF0aGJiIE5ee1xcbWF0aHJte29wfX19Il0sWzIsMywiRjo9IChYLC0pIl0sWzIsMCwiRzo9XFx2YXJwcm9qbGltICIsMl0sWzAsMSwiRjo9IChYLC0pIiwyXSxbMywxLCJHOj1cXHZhcnByb2psaW0gIl1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNCxbMCwxLCJcXG1hdGhzY3IgQSJdLFsyLDEsIlxcbWF0aGJme0FifSJdLFswLDAsIlxcbWF0aHNjcntBfV57XFxtYXRoYmIgTl57XFxtYXRocm17b3B9fX0iXSxbMiwwLCJcXG1hdGhiZntBYn1ee1xcbWF0aGJiIE5ee1xcbWF0aHJte29wfX19Il0sWzIsMywiRjo9IChYLC0pIl0sWzIsMCwiRzo9XFx2YXJwcm9qbGltICIsMl0sWzAsMSwiRjo9IChYLC0pIiwyXSxbMywxLCJHOj1cXHZhcnByb2psaW0gIl1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;此处 $GF \xrightarrow ∼ FG$ 是自然同构 (极限的泛性质). 同时有正合列&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzEsMSwiRl4xRyJdLFsyLDEsIihGRyleMSJdLFsyLDAsIkdeMUYiXSxbMiwyLCJHRl4xIl0sWzMsMSwiRkdeMSJdLFs0LDEsIkZeMkciXSxbNSwxLCIoRkcpXjIiXSxbNiwxLCJGXjFHXjEiXSxbNSwwLCJHXjFGXjEiXSxbNSwyLCJHRl4yIl0sWzAsMSwiMCJdLFs3LDEsIlxcY2RvdHMgIl0sWzEwLDBdLFswLDFdLFsxLDRdLFs0LDVdLFs1LDZdLFs2LDddLFsyLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMywiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzgsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNiw5LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNywxMV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzEsMSwiRl4xRyJdLFsyLDEsIihGRyleMSJdLFsyLDAsIkdeMUYiXSxbMiwyLCJHRl4xIl0sWzMsMSwiRkdeMSJdLFs0LDEsIkZeMkciXSxbNSwxLCIoRkcpXjIiXSxbNiwxLCJGXjFHXjEiXSxbNSwwLCJHXjFGXjEiXSxbNSwyLCJHRl4yIl0sWzAsMSwiMCJdLFs3LDEsIlxcY2RvdHMgIl0sWzEwLDBdLFswLDFdLFsxLDRdLFs0LDVdLFs1LDZdLFs2LDddLFsyLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMywiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzgsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNiw5LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNywxMV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;250&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;($\mathrm{Hom}(X, -)$ 与导出极限). 假定 $Y$ 是逆向极限决定的, 谱序列给纵向 ses 与横向长正合列:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTAsWzAsMSwiXFxtYXRocm17RXh0fV4xKFgsIFxcdmFycHJvamxpbSBZX1xcYnVsbGV0ICkiXSxbMSwxLCIoRkcpXjEiXSxbMSwyLCJcXHZhcnByb2psaW1eMSAoWCwgWV9cXGJ1bGxldCkiXSxbMSwwLCJcXHZhcnByb2psaW1cXG1hdGhybXtFeHR9XjEoWCwgWV9cXGJ1bGxldCApIl0sWzIsMSwiKFgsIFxcdmFycHJvamxpbV4xWV9cXGJ1bGxldCkiXSxbMywxLCJcXG1hdGhybXtFeHR9XjIoWCwgXFx2YXJwcm9qbGltIFlfXFxidWxsZXQgKSJdLFs0LDEsIihGRyleMiJdLFs1LDEsIlxcbWF0aHJte0V4dH1eMShYLCBcXHZhcnByb2psaW1eMVlfXFxidWxsZXQgKSJdLFs0LDIsIlxcdmFycHJvamxpbV4xXFxtYXRocm17RXh0fV4xKFgsIFlfXFxidWxsZXQgKSJdLFs0LDAsIlxcdmFycHJvamxpbVxcbWF0aHJte0V4dH1eMihYLCBZX1xcYnVsbGV0ICkiXSxbMSw0XSxbNCw1XSxbNSw2XSxbNiw3XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDMsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs4LDYsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzYsOSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzAsMSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTAsWzAsMSwiXFxtYXRocm17RXh0fV4xKFgsIFxcdmFycHJvamxpbSBZX1xcYnVsbGV0ICkiXSxbMSwxLCIoRkcpXjEiXSxbMSwyLCJcXHZhcnByb2psaW1eMSAoWCwgWV9cXGJ1bGxldCkiXSxbMSwwLCJcXHZhcnByb2psaW1cXG1hdGhybXtFeHR9XjEoWCwgWV9cXGJ1bGxldCApIl0sWzIsMSwiKFgsIFxcdmFycHJvamxpbV4xWV9cXGJ1bGxldCkiXSxbMywxLCJcXG1hdGhybXtFeHR9XjIoWCwgXFx2YXJwcm9qbGltIFlfXFxidWxsZXQgKSJdLFs0LDEsIihGRyleMiJdLFs1LDEsIlxcbWF0aHJte0V4dH1eMShYLCBcXHZhcnByb2psaW1eMVlfXFxidWxsZXQgKSJdLFs0LDIsIlxcdmFycHJvamxpbV4xXFxtYXRocm17RXh0fV4xKFgsIFlfXFxidWxsZXQgKSJdLFs0LDAsIlxcdmFycHJvamxpbVxcbWF0aHJte0V4dH1eMihYLCBZX1xcYnVsbGV0ICkiXSxbMSw0XSxbNCw1XSxbNSw2XSxbNiw3XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDMsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs4LDYsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzYsOSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzAsMSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;180&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;例如,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;假定 $M$ 是投射模的逆向极限, 则有 $3$-周期长正合列 \begin{equation} 0 → \mathrm{Ext}^1(X,M) → \varprojlim{}^1 (X,P_∙) → (X, \varprojlim {}^1P_∙) → \cdots . \end{equation}&lt;/li&gt;
+    &lt;li&gt;若 $Y_∙$ 是模且满足 Mittag-Leffler 条件, 则有短正合列 \begin{equation} 0 → \varprojlim {}^1\mathrm{Ext}^p(X, Y_∙ ) → \mathrm{Ext}^p(X, \varprojlim {}^1 Y_∙ ) → \varprojlim \mathrm{Ext}^{p+1}(X, Y_∙) → 0. \end{equation}&lt;/li&gt;
+    &lt;li&gt;对遗传范畴而言, $\varprojlim{}^1\mathrm{Ext}^1(X, Y_∙ ) ≃ \mathrm{Ext}^1(X, \varprojlim{}^1Y_∙)$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(导出余极限). 记 $𝒜$ 是满足 AB4 (任意余积正合) 的局部小范畴, 则 $𝒜^{\mathrm{op}}$ 是满足 AB4* 的局部小范畴. 考虑函子&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNCxbMCwxLCJcXG1hdGhzY3IgQV57XFxtYXRocm17b3B9fSJdLFsyLDEsIlxcbWF0aGJme0FifSJdLFswLDAsIihcXG1hdGhzY3IgQV57XFxtYXRocm17b3B9fSlee3tcXG1hdGhiYiBOXntcXG1hdGhybXtvcH19fX0iXSxbMiwwLCJcXG1hdGhiZntBYn1ee1xcbWF0aGJiIE5ee1xcbWF0aHJte29wfX19Il0sWzAsMSwiRjo9KC0sWSkiLDJdLFsyLDMsIkY6PSgtLCBZKSJdLFszLDEsIkc6PVxcdmFycHJvamxpbSAiXSxbMiwwLCJHOj1cXHZhcnByb2psaW0gIiwyXV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNCxbMCwxLCJcXG1hdGhzY3IgQV57XFxtYXRocm17b3B9fSJdLFsyLDEsIlxcbWF0aGJme0FifSJdLFswLDAsIihcXG1hdGhzY3IgQV57XFxtYXRocm17b3B9fSlee3tcXG1hdGhiYiBOXntcXG1hdGhybXtvcH19fX0iXSxbMiwwLCJcXG1hdGhiZntBYn1ee1xcbWF0aGJiIE5ee1xcbWF0aHJte29wfX19Il0sWzAsMSwiRjo9KC0sWSkiLDJdLFsyLDMsIkY6PSgtLCBZKSJdLFszLDEsIkc6PVxcdmFycHJvamxpbSAiXSxbMiwwLCJHOj1cXHZhcnByb2psaW0gIiwyXV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;p&gt;正逆极限在一般的 Abel 范畴中是无趣的对偶. 不妨回归模范畴, 注&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;若塔 $A_∙ → A_0$ 满足 Mittag-Leffler 条件, 则有短正合列
+\begin{equation}
+    0 → \varprojlim A_∙ → ∏ A_∙ \xrightarrow{\mathrm{id}-A_{i, i+1}} ∏ A_∙ → 0.
+\end{equation}&lt;/p&gt;
+
+    &lt;p&gt;对偶地, 我们希望构造 $[0 → ∐ → ∐ → \varinjlim → 0]$ 类的短正合列.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;slogan&quot;&gt;
+  &lt;p&gt;模范畴中, Mittag-Leffler 条件的对偶是 AB5.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;AB5_Derived_Limit&quot;&gt;证明&lt;/a&gt;). 若 $𝒜$ 满足 AB5 (滤过余极限正合), 则对余塔 $A_0 → A_∙$ 总有短正合列 \begin{equation} 0 → ∐ A_∙ \xrightarrow{\mathrm{id}-A_{i+1, i}} ∐ A_∙ → \varinjlim A_∙ → 0. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Injlim_Ext_Seq&quot;&gt;证明&lt;/a&gt;). 若 $𝒜$ 有正合的滤过余极限, 则逆向塔的 $\varinjlim_{-1}$ 消失. 若进一步假定余积正合, 则有短正合列 ($p ≥ 0$): \begin{equation} 0 → \varprojlim {}^1\mathrm{Ext}^p(X_∙, Y) → \mathrm{Ext}^{p+1}(\varinjlim X_∙,Y) → \varprojlim \mathrm{Ext}^{p+1}(X_∙, Y) → 0. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;brenner-butler-理论&quot;&gt;Brenner-Butler 理论&lt;/h3&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
           <link>https://zhangchenchengsjtu.github.io/website/posts/Spectral_sequence_filtered</link>
@@ -1407,7 +1608,7 @@ $$&lt;/p&gt;
       
         <item>
           <title>完备化, 滤过复形</title>
-          <description>&lt;h2 id=&quot;mathjax_protectedjfxtyxrocm17r3j9x3akmathjax_protected-与完备化&quot;&gt;$\mathrm{Gr}_p$ 与完备化&lt;/h2&gt;
+          <description>&lt;h2 id=&quot;mathjax_protectedjfxtyxrocm17r3j9xkimsqmathjax_protected-与完备化&quot;&gt;$\mathrm{Gr}_∙$ 与完备化&lt;/h2&gt;
 
 &lt;p&gt;以下命题都是对模范畴 $𝐌𝐨𝐝_R$ 而言的.&lt;/p&gt;
 
@@ -1421,7 +1622,7 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;对满射系统 $\cdots ↠ \frac{M}{F^{p+1} M} ↠ \frac{M}{F^p M} ↠ \cdots$ 做三点定义:&lt;/p&gt;
+  &lt;p&gt;对满射系统 (一般理论见&lt;a href=&quot;Spectral_sequence_filtered#导出极限&quot;&gt;导出极限&lt;/a&gt;) $\cdots ↠ \frac{M}{F^{p+1} M} ↠ \frac{M}{F^p M} ↠ \cdots$ 做三点定义:&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;称之穷竭, 当且仅当 $\varinjlim \frac{M}{F^p M} = 0$, 即 $M=  ⋃ F^p M$;&lt;/li&gt;
     &lt;li&gt;称之 Hausdorff, 当且仅当 $\varprojlim F^p M = ⋂ F^p M = 0$.&lt;/li&gt;

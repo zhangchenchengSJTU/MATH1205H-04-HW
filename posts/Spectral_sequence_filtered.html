@@ -99,7 +99,12 @@
       <li><a href="#kunneth-公式" id="markdown-toc-kunneth-公式">Kunneth 公式</a></li>
     </ul>
   </li>
-  <li><a href="#导出函子相关" id="markdown-toc-导出函子相关">导出函子相关</a></li>
+  <li><a href="#导出函子相关" id="markdown-toc-导出函子相关">导出函子相关</a>    <ul>
+      <li><a href="#grothendieck-谱序列" id="markdown-toc-grothendieck-谱序列">Grothendieck 谱序列</a></li>
+      <li><a href="#导出极限" id="markdown-toc-导出极限">导出极限</a></li>
+      <li><a href="#brenner-butler-理论" id="markdown-toc-brenner-butler-理论">Brenner-Butler 理论</a></li>
+    </ul>
+  </li>
 </ul>
 
 <div class="abstract">
@@ -438,6 +443,8 @@ $$</p>
 
 <h2 id="导出函子相关">导出函子相关</h2>
 
+<h3 id="grothendieck-谱序列">Grothendieck 谱序列</h3>
+
 <div class="definition">
   <p>(Grothendieck 函子的基本资料). 给定 Abel 范畴间的右正合函子 \begin{equation} 𝒜\xrightarrow F ℬ \xrightarrow G 𝒞. \end{equation} 称 $(F, G)$ 是右正合 Grothendieck 谱序列的基本资料, 若</p>
   <ol>
@@ -461,20 +468,89 @@ $$</p>
 </div>
 
 <div class="corollary">
-  <p>(前五项).</p>
+  <p>(前五项, <a href="Grothendieck_Spectral_Sequence#前五项">证明</a>). 对左导出的复合, 有前五项正合列 \begin{equation} L_{-2}(GF) → (L_{-2}G)F → G(L_{-1}F) → L_{-1}(GF) → (L_{-1}G)F → 0. \end{equation} 对右导出的复合, 有前五项正合列 \begin{equation} 0 → (R^1G)F → R^1(GF) → (R^1F)G → (R^2 G)F → R^2(GF). \end{equation}</p>
 </div>
 
 <div class="corollary">
-  <p>(特殊情形: 短正合列).</p>
+  <p>(特殊情形: 短正合列, <a href="Grothendieck_Spectral_Sequence#特殊情形">证明</a>). 若复合函子的外侧二次导出消失, 则前五项正合列可延续.</p>
 </div>
 
 <div class="corollary">
-  <p>(特殊情形: 长正合列).</p>
+  <p>(特殊情形: 长正合列, <a href="Grothendieck_Spectral_Sequence#特殊情形">证明</a>). 若复合函子的内侧二次导出消失, 则谱序列断作若干 ses.</p>
 </div>
 
 <div class="example">
-  <p>(前五项态射描述).</p>
+  <p><a href="Grothendieck_Spectral_Sequence#前五项态射的描述">前五项态射描述</a>.</p>
 </div>
+
+<h3 id="导出极限">导出极限</h3>
+
+<p>假定 $𝒜$ 是满足 AB4* 的局部小范畴. $\varprojlim_ℕ$ 是二次导出消失的函子, 适用 <a href="Grothendieck_Spectral_Sequence#特殊情形">Gorthendieck 谱序列的特殊情形</a>.</p>
+
+<div class="definition">
+  <p>(塔与极限) 称函子 $Y: ℕ^{\mathrm{op}} → 𝒜$ 是塔, 若 $Y$ 映至 \begin{equation} \cdots → Y_2 → Y_1 → Y_0. \end{equation} 依照熟知结论, 自同态 $φ : (\mathrm{id} - ∑ Y_{(i+1) → i})$ 给出函子的短正合列</p>
+  <p>$$
+0 → \varprojlim Y → ∏_{ℕ} Y_∙ \xrightarrow φ  ∏_{ℕ} Y_∙ → \varprojlim{} ^1 Y → 0.
+$$</p>
+</div>
+
+<div class="theorem">
+  <p>假定范畴有正合的可数积 (AB4*), 则 $\varprojlim{}^1$ 就是经典导出函子, 且 $\varprojlim^{≥ 2} = 0$.</p>
+</div>
+
+<div class="proposition">
+  <p>($\varprojlim{}_ℕ^1$ 消失的充分条件, <a href="Projlim_1_Vanish">证明</a>). 假定 $𝒜$ 是满足 AB4* 的局部小范畴. 假定范畴存在投射生成元, 则 Mittag-Leffler 条件使得 $\varprojlim ^1 = 0$.</p>
+</div>
+
+<div class="example">
+  <p>(导出极限). 假定 $𝒜$ 是满足 AB4* 的局部小范畴. 取塔 $Y : ℕ^{\mathrm{op}}→ 𝒜$, 则极限的二次导出消失. 取函子</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsNCxbMCwxLCJcXG1hdGhzY3IgQSJdLFsyLDEsIlxcbWF0aGJme0FifSJdLFswLDAsIlxcbWF0aHNjcntBfV57XFxtYXRoYmIgTl57XFxtYXRocm17b3B9fX0iXSxbMiwwLCJcXG1hdGhiZntBYn1ee1xcbWF0aGJiIE5ee1xcbWF0aHJte29wfX19Il0sWzIsMywiRjo9IChYLC0pIl0sWzIsMCwiRzo9XFx2YXJwcm9qbGltICIsMl0sWzAsMSwiRjo9IChYLC0pIiwyXSxbMywxLCJHOj1cXHZhcnByb2psaW0gIl1d --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwxLCJcXG1hdGhzY3IgQSJdLFsyLDEsIlxcbWF0aGJme0FifSJdLFswLDAsIlxcbWF0aHNjcntBfV57XFxtYXRoYmIgTl57XFxtYXRocm17b3B9fX0iXSxbMiwwLCJcXG1hdGhiZntBYn1ee1xcbWF0aGJiIE5ee1xcbWF0aHJte29wfX19Il0sWzIsMywiRjo9IChYLC0pIl0sWzIsMCwiRzo9XFx2YXJwcm9qbGltICIsMl0sWzAsMSwiRjo9IChYLC0pIiwyXSxbMywxLCJHOj1cXHZhcnByb2psaW0gIl1d&amp;embed" width="600" height="200" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>此处 $GF \xrightarrow ∼ FG$ 是自然同构 (极限的泛性质). 同时有正合列</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTIsWzEsMSwiRl4xRyJdLFsyLDEsIihGRyleMSJdLFsyLDAsIkdeMUYiXSxbMiwyLCJHRl4xIl0sWzMsMSwiRkdeMSJdLFs0LDEsIkZeMkciXSxbNSwxLCIoRkcpXjIiXSxbNiwxLCJGXjFHXjEiXSxbNSwwLCJHXjFGXjEiXSxbNSwyLCJHRl4yIl0sWzAsMSwiMCJdLFs3LDEsIlxcY2RvdHMgIl0sWzEwLDBdLFswLDFdLFsxLDRdLFs0LDVdLFs1LDZdLFs2LDddLFsyLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMywiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzgsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNiw5LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNywxMV1d --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTIsWzEsMSwiRl4xRyJdLFsyLDEsIihGRyleMSJdLFsyLDAsIkdeMUYiXSxbMiwyLCJHRl4xIl0sWzMsMSwiRkdeMSJdLFs0LDEsIkZeMkciXSxbNSwxLCIoRkcpXjIiXSxbNiwxLCJGXjFHXjEiXSxbNSwwLCJHXjFGXjEiXSxbNSwyLCJHRl4yIl0sWzAsMSwiMCJdLFs3LDEsIlxcY2RvdHMgIl0sWzEwLDBdLFswLDFdLFsxLDRdLFs0LDVdLFs1LDZdLFs2LDddLFsyLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMywiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzgsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNiw5LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNywxMV1d&amp;embed" width="600" height="250" style="border-radius: 8px; border: dashed;"></iframe> </center>
+</div>
+
+<div class="example">
+  <p>($\mathrm{Hom}(X, -)$ 与导出极限). 假定 $Y$ 是逆向极限决定的, 谱序列给纵向 ses 与横向长正合列:</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTAsWzAsMSwiXFxtYXRocm17RXh0fV4xKFgsIFxcdmFycHJvamxpbSBZX1xcYnVsbGV0ICkiXSxbMSwxLCIoRkcpXjEiXSxbMSwyLCJcXHZhcnByb2psaW1eMSAoWCwgWV9cXGJ1bGxldCkiXSxbMSwwLCJcXHZhcnByb2psaW1cXG1hdGhybXtFeHR9XjEoWCwgWV9cXGJ1bGxldCApIl0sWzIsMSwiKFgsIFxcdmFycHJvamxpbV4xWV9cXGJ1bGxldCkiXSxbMywxLCJcXG1hdGhybXtFeHR9XjIoWCwgXFx2YXJwcm9qbGltIFlfXFxidWxsZXQgKSJdLFs0LDEsIihGRyleMiJdLFs1LDEsIlxcbWF0aHJte0V4dH1eMShYLCBcXHZhcnByb2psaW1eMVlfXFxidWxsZXQgKSJdLFs0LDIsIlxcdmFycHJvamxpbV4xXFxtYXRocm17RXh0fV4xKFgsIFlfXFxidWxsZXQgKSJdLFs0LDAsIlxcdmFycHJvamxpbVxcbWF0aHJte0V4dH1eMihYLCBZX1xcYnVsbGV0ICkiXSxbMSw0XSxbNCw1XSxbNSw2XSxbNiw3XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDMsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs4LDYsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzYsOSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzAsMSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTAsWzAsMSwiXFxtYXRocm17RXh0fV4xKFgsIFxcdmFycHJvamxpbSBZX1xcYnVsbGV0ICkiXSxbMSwxLCIoRkcpXjEiXSxbMSwyLCJcXHZhcnByb2psaW1eMSAoWCwgWV9cXGJ1bGxldCkiXSxbMSwwLCJcXHZhcnByb2psaW1cXG1hdGhybXtFeHR9XjEoWCwgWV9cXGJ1bGxldCApIl0sWzIsMSwiKFgsIFxcdmFycHJvamxpbV4xWV9cXGJ1bGxldCkiXSxbMywxLCJcXG1hdGhybXtFeHR9XjIoWCwgXFx2YXJwcm9qbGltIFlfXFxidWxsZXQgKSJdLFs0LDEsIihGRyleMiJdLFs1LDEsIlxcbWF0aHJte0V4dH1eMShYLCBcXHZhcnByb2psaW1eMVlfXFxidWxsZXQgKSJdLFs0LDIsIlxcdmFycHJvamxpbV4xXFxtYXRocm17RXh0fV4xKFgsIFlfXFxidWxsZXQgKSJdLFs0LDAsIlxcdmFycHJvamxpbVxcbWF0aHJte0V4dH1eMihYLCBZX1xcYnVsbGV0ICkiXSxbMSw0XSxbNCw1XSxbNSw2XSxbNiw3XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDMsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs4LDYsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzYsOSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzAsMSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0=&amp;embed" width="600" height="180" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>例如,</p>
+  <ol>
+    <li>假定 $M$ 是投射模的逆向极限, 则有 $3$-周期长正合列 \begin{equation} 0 → \mathrm{Ext}^1(X,M) → \varprojlim{}^1 (X,P_∙) → (X, \varprojlim {}^1P_∙) → \cdots . \end{equation}</li>
+    <li>若 $Y_∙$ 是模且满足 Mittag-Leffler 条件, 则有短正合列 \begin{equation} 0 → \varprojlim {}^1\mathrm{Ext}^p(X, Y_∙ ) → \mathrm{Ext}^p(X, \varprojlim {}^1 Y_∙ ) → \varprojlim \mathrm{Ext}^{p+1}(X, Y_∙) → 0. \end{equation}</li>
+    <li>对遗传范畴而言, $\varprojlim{}^1\mathrm{Ext}^1(X, Y_∙ ) ≃ \mathrm{Ext}^1(X, \varprojlim{}^1Y_∙)$.</li>
+  </ol>
+</div>
+
+<div class="example">
+  <p>(导出余极限). 记 $𝒜$ 是满足 AB4 (任意余积正合) 的局部小范畴, 则 $𝒜^{\mathrm{op}}$ 是满足 AB4* 的局部小范畴. 考虑函子</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsNCxbMCwxLCJcXG1hdGhzY3IgQV57XFxtYXRocm17b3B9fSJdLFsyLDEsIlxcbWF0aGJme0FifSJdLFswLDAsIihcXG1hdGhzY3IgQV57XFxtYXRocm17b3B9fSlee3tcXG1hdGhiYiBOXntcXG1hdGhybXtvcH19fX0iXSxbMiwwLCJcXG1hdGhiZntBYn1ee1xcbWF0aGJiIE5ee1xcbWF0aHJte29wfX19Il0sWzAsMSwiRjo9KC0sWSkiLDJdLFsyLDMsIkY6PSgtLCBZKSJdLFszLDEsIkc6PVxcdmFycHJvamxpbSAiXSxbMiwwLCJHOj1cXHZhcnByb2psaW0gIiwyXV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwxLCJcXG1hdGhzY3IgQV57XFxtYXRocm17b3B9fSJdLFsyLDEsIlxcbWF0aGJme0FifSJdLFswLDAsIihcXG1hdGhzY3IgQV57XFxtYXRocm17b3B9fSlee3tcXG1hdGhiYiBOXntcXG1hdGhybXtvcH19fX0iXSxbMiwwLCJcXG1hdGhiZntBYn1ee1xcbWF0aGJiIE5ee1xcbWF0aHJte29wfX19Il0sWzAsMSwiRjo9KC0sWSkiLDJdLFsyLDMsIkY6PSgtLCBZKSJdLFszLDEsIkc6PVxcdmFycHJvamxpbSAiXSxbMiwwLCJHOj1cXHZhcnByb2psaW0gIiwyXV0=&amp;embed" width="600" height="200" style="border-radius: 8px; border: dashed;"></iframe> </center>
+</div>
+
+<p>正逆极限在一般的 Abel 范畴中是无趣的对偶. 不妨回归模范畴, 注</p>
+
+<ul>
+  <li>
+    <p>若塔 $A_∙ → A_0$ 满足 Mittag-Leffler 条件, 则有短正合列
+\begin{equation}
+    0 → \varprojlim A_∙ → ∏ A_∙ \xrightarrow{\mathrm{id}-A_{i, i+1}} ∏ A_∙ → 0.
+\end{equation}</p>
+
+    <p>对偶地, 我们希望构造 $[0 → ∐ → ∐ → \varinjlim → 0]$ 类的短正合列.</p>
+  </li>
+</ul>
+
+<div class="slogan">
+  <p>模范畴中, Mittag-Leffler 条件的对偶是 AB5.</p>
+</div>
+
+<div class="proposition">
+  <p>(<a href="AB5_Derived_Limit">证明</a>). 若 $𝒜$ 满足 AB5 (滤过余极限正合), 则对余塔 $A_0 → A_∙$ 总有短正合列 \begin{equation} 0 → ∐ A_∙ \xrightarrow{\mathrm{id}-A_{i+1, i}} ∐ A_∙ → \varinjlim A_∙ → 0. \end{equation}</p>
+</div>
+
+<div class="proposition">
+  <p>(<a href="Injlim_Ext_Seq">证明</a>). 若 $𝒜$ 有正合的滤过余极限, 则逆向塔的 $\varinjlim_{-1}$ 消失. 若进一步假定余积正合, 则有短正合列 ($p ≥ 0$): \begin{equation} 0 → \varprojlim {}^1\mathrm{Ext}^p(X_∙, Y) → \mathrm{Ext}^{p+1}(\varinjlim X_∙,Y) → \varprojlim \mathrm{Ext}^{p+1}(X_∙, Y) → 0. \end{equation}</p>
+</div>
+
+<h3 id="brenner-butler-理论">Brenner-Butler 理论</h3>
 
 
   </article>
