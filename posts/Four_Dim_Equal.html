@@ -9,7 +9,7 @@
 
 
 
-  <title>$\varprojlim{}_{ℕ}^1$ 消失的充分条件
+  <title>Tilting 模维数无关左右
     ·
     Jekyll Latex</title>
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="https://zhangchenchengsjtu.github.io/website/assets/favicon.png">
 <link rel="apple-touch-icon" href="https://zhangchenchengsjtu.github.io/website/assets/touch-icon.png">
 <link rel="stylesheet" href="https://zhangchenchengsjtu.github.io/website/assets/core.css">
-<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/Projlim_1_Vanish">
+<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/Four_Dim_Equal">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -72,7 +72,7 @@
 	<main>
   <article>
     <div class="center">
-      <h1>$\varprojlim{}_{ℕ}^1$ 消失的充分条件</h1>
+      <h1>Tilting 模维数无关左右</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
@@ -85,16 +85,24 @@
 
     <h2 id="证明">证明</h2>
 
-<div class="proposition">
-  <p>($\varprojlim{}_ℕ^1$ 消失的充分条件). 假定 $𝒜$ 是满足 AB4* 的局部小范畴. 假定范畴存在投射生成元, 则 Mittag-Leffler 条件使得 $\varprojlim ^1 = 0$.</p>
+<div class="theorem">
+  <p>(四链等长). 以下四者相同: $T_A$ 的投射维数, $_BT$ 的投射维数, $A$ 相对 $𝐚𝐝𝐝 (T)$ 的内射维数, $B$ 相对 $𝐚𝐝𝐝 (T)$ 的内射维数.</p>
 </div>
 
-<div class="lemma">
-  <p>投射生成元保持并反射 Mittag-Leffler 条件.</p>
-</div>
-
-<div class="lemma">
-  <p>模范畴中, Mittag-Leffler 条件使得 $\varprojlim ^1 = 0$.</p>
+<div class="proof">
+  <p>假定 $p.\dim T_A = d$. 考虑 $A = Ω_0(A)$ 的 $𝐚𝐝𝐝 (T)$-相对内射分解. 若相对内射维数为 $l > d$, 则</p>
+  <p>$$
+\mathrm{Ext}_A^1(T,Ω_{l-1}(A)) ≠ 0.
+$$</p>
+  <p>由维数移动得 $\mathrm{Ext}^{l-1}(T,Ω_1(A))≠0$. 这和 $T$ 的投射维数矛盾. 因此,</p>
+  <p>$$
+p.\dim T_A ≥ i.𝐚𝐝𝐝 (T_A).\dim A_A;\quad p.\dim {}_BT ≥ i.𝐚𝐝𝐝 (_BT).\dim {}_BB.
+$$</p>
+  <p>另一方面, 所有投射分解与相对内射分解都是 $(-,T)$-正合的, 因此</p>
+  <p>$$
+p.\dim T_A ≥ i.𝐚𝐝𝐝 (_BT).\dim {}_BB;\quad p.\dim {}_BT ≥ i.𝐚𝐝𝐝 (T_A).\dim A_A.
+$$</p>
+  <p>从而上述不等号只能取等.</p>
 </div>
 
 
@@ -104,8 +112,8 @@
     
       <a
         class="next"
-        href="https://zhangchenchengsjtu.github.io/website/posts/BB_Spectral_Sequence"
-        title="NEXT: BB 谱序列">&lt;&lt;</a>
+        href="https://zhangchenchengsjtu.github.io/website/posts/Happel_Fully_Faithful"
+        title="NEXT: Happel 的导出等价定理 (第一部分证明)">&lt;&lt;</a>
       <span>
         &middot;
       </span>
@@ -120,8 +128,8 @@
       </span>
       <a
         class="prev"
-        href="https://zhangchenchengsjtu.github.io/website/posts/Injlim_Ext_Seq"
-        title="PREV: $\varprojlim$ 与 $\mathrm{Ext}$ 的正合列">&gt;&gt;</a>
+        href="https://zhangchenchengsjtu.github.io/website/posts/Dual_Tilting"
+        title="PREV: 对偶 tilting 模的相对分解">&gt;&gt;</a>
     
   </div>
 </main>

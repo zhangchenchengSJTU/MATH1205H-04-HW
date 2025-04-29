@@ -95,6 +95,7 @@
   </li>
   <li><a href="#谱序列直接应用" id="markdown-toc-谱序列直接应用">谱序列直接应用</a>    <ul>
       <li><a href="#同调代数的简单应用" id="markdown-toc-同调代数的简单应用">同调代数的简单应用</a></li>
+      <li><a href="#维数移动" id="markdown-toc-维数移动">维数移动</a></li>
       <li><a href="#ar-转置与谱序列" id="markdown-toc-ar-转置与谱序列">AR 转置与谱序列</a></li>
       <li><a href="#kunneth-公式" id="markdown-toc-kunneth-公式">Kunneth 公式</a></li>
     </ul>
@@ -368,6 +369,34 @@ $$</p>
   </ol>
 </div>
 
+<h3 id="维数移动">维数移动</h3>
+
+<p>以下考虑投射, 右正合版本的维度移动.</p>
+
+<!-- 假定 Abel 范畴 $𝒜$ 有足够投射, 或相对地, 存在对象类 $𝒳$ 使得对任意 $M ∈ 𝒜$ 总有满态射 $X ↠ M$ ($X ∈ 𝒳$). -->
+
+<div class="lemma">
+  <p>任取无环复形 $X$, 使得投射分解满足收敛性条件. 例如以下任意一者:</p>
+  <ol>
+    <li>所有 $\mathrm{im}(d)$ 的投射维度有一致上界;</li>
+    <li>$X$ 上有界.</li>
+  </ol>
+  <p>此时, 任取右正合函子 $F$, 记 $L_{-p}F$ 为 $F$ 的 $p$-次左导出. 此时,</p>
+  <ol>
+    <li>若所有 $(L_{≤ -1}F)(X)$ 是无环复形, 则 $F(X)$ 无环;</li>
+    <li>若仅有 $(L_{-k}F)(X)$ 与 $(L_{-k-r}F)(X)$ 非无环复形, 则 $(L_{-k}F)(X)$ 与 $Σ^{r+1}[(L_{-k-r}F)(X)]$ 有相同的上同调群 (未必由态射连接).</li>
+  </ol>
+</div>
+
+<div class="theorem">
+  <p>(一致的正合性). 以下是一些常见的结论:</p>
+  <ol>
+    <li>假定 $X^∙$ 是上有界无环复形, 或是 $\mathrm{im}(d)$ 投射维数一致有界的无环复形. 若所有 $\mathrm{Ext}^{≥ 1}(X^∙, M)$ 无环, 则 $(X^∙, M)$ 无环.</li>
+    <li>假定 $X^∙$ 是下有界无环复形, 或是 $\mathrm{im}(d)$ 内射维数一致有界的无环复形. 若所有 $\mathrm{Ext}^{≥ 1}(N, X^∙)$ 无环, 则 $(N, X^∙)$ 无环.</li>
+    <li>假定 $X^∙$ 是上有界无环复形, 或是 $\mathrm{im}(d)$ 平坦维数一致有界的无环复形. 若所有 $\mathrm{Tor}_{ ≥ 1}(X^∙, M)$ 无环, 则 $X^∙ ⊗ M$ 无环.</li>
+  </ol>
+</div>
+
 <h3 id="ar-转置与谱序列">AR 转置与谱序列</h3>
 
 <p>以下所有对象均是 Artin 代数中的有限表面模, 基本记号等见<a href="AR-notes#稳定范畴等价">此处</a>. 本小结证明<a href="AR-notes#ar-定理">此处</a>的同调定理.</p>
@@ -551,6 +580,8 @@ $$</p>
 </div>
 
 <h3 id="brenner-butler-理论">Brenner-Butler 理论</h3>
+
+<p>见<a href="Happel_Derived_Equivalence#谱序列方法">此章节</a>.</p>
 
 
   </article>

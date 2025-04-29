@@ -7,6 +7,171 @@
     
       
         <item>
+          <title>Happel 的导出等价定理 (第一部分证明)</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;p&gt;以下 $𝒜$ 是有足够投射的 Abel 范畴.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;若 $T ∈ 𝒜$ 满足 $\mathrm{Ext}^{≥ 1}(T) = 0$, 则局部化 $C^b(𝐚𝐝𝐝 T) ↣ C^b𝒜 → D^b𝒜$ 诱导的态射&lt;/p&gt;
+  &lt;p&gt;$$
+K^b(𝐚𝐝𝐝 (T)) → D^b 𝒜
+$$&lt;/p&gt;
+  &lt;p&gt;是全忠实的嵌入.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;以下使用数学归纳法证明. 记 $P(m,n)$ 是:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p&gt;对一切长度不超过 $m$ 与 $n$ 的复形 $P$ 与 $Q$, 以下是同构&lt;/p&gt;
+      &lt;p&gt;$$
+  (P,Q)_{K^b(𝐚𝐝𝐝 (T))} → (P,Q)_{K^b𝒜} → (P,Q)_{D^b 𝒜}.
+  $$&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;显然 $P(0,0)$ 成立, 因为对轴复形 $X,Y ∈ C^b (𝐚𝐝𝐝(T))$ 总有 $\mathrm{Ext}^{≥ 1}(X,Y) = 0$. &lt;br /&gt; 下进行归纳, 假定 $P(≤ m, ≤ n)$ 成立. 对任意长度为 $m+1$ 的 $X$, 考虑强制截断, 则有同伦范畴以及导出范畴的好三角 $LX → X → RX → LX[1]$. 对 $(-,Y)_{K^b(𝐚𝐝𝐝 (T))}$ 与 $(-,Y)_{D^b 𝒜}$ 使用同调代数基本定理, 得交换图&lt;/p&gt;
+  &lt;p&gt;$$
+\scriptsize\begin{bmatrix}
+( LX[ 1] ,Y)_{K^{b}(\mathbf{add}( T))} &amp; \rightarrow  &amp; ( RX,Y)_{K^{b}(\mathbf{add}( T))} &amp; \rightarrow  &amp; ( X,Y)_{K^{b}(\mathbf{add}( T))} &amp; \rightarrow  &amp; ( LX,Y)_{K^{b}(\mathbf{add}( T))} &amp; \rightarrow  &amp; ( RX[ -1] ,Y)_{K^{b}(\mathbf{add}( T))}\\
+\parallel  &amp;  &amp; \parallel  &amp;  &amp; \downarrow  &amp;  &amp; \parallel  &amp;  &amp; \parallel \\
+( LX[ 1] ,Y)_{D^{b} 𝒜 } &amp; \rightarrow  &amp; ( RX,Y)_{D^{b} 𝒜 } &amp; \rightarrow  &amp; ( X,Y)_{D^{b} 𝒜 } &amp; \rightarrow  &amp; ( LX,Y)_{D^{b} 𝒜 } &amp; \rightarrow  &amp; ( RX[ -1] ,Y)_{D^{b} 𝒜 }
+\end{bmatrix}
+$$&lt;/p&gt;
+  &lt;p&gt;此时, 中间箭头是同构. 这完成了归纳 $P(≤ m, ≤ n) ⇒ P(≤ m+1, ≤ n)$. 另一方向同理. 综上, 以上 $K^b(𝐚𝐝𝐝 (T)) → D^b 𝒜$ 是全忠实的.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-29T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Happel_Fully_Faithful</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Happel_Fully_Faithful</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Tilting 模维数无关左右</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(四链等长). 以下四者相同: $T_A$ 的投射维数, $_BT$ 的投射维数, $A$ 相对 $𝐚𝐝𝐝 (T)$ 的内射维数, $B$ 相对 $𝐚𝐝𝐝 (T)$ 的内射维数.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;假定 $p.\dim T_A = d$. 考虑 $A = Ω_0(A)$ 的 $𝐚𝐝𝐝 (T)$-相对内射分解. 若相对内射维数为 $l &gt; d$, 则&lt;/p&gt;
+  &lt;p&gt;$$
+\mathrm{Ext}_A^1(T,Ω_{l-1}(A)) ≠ 0.
+$$&lt;/p&gt;
+  &lt;p&gt;由维数移动得 $\mathrm{Ext}^{l-1}(T,Ω_1(A))≠0$. 这和 $T$ 的投射维数矛盾. 因此,&lt;/p&gt;
+  &lt;p&gt;$$
+p.\dim T_A ≥ i.𝐚𝐝𝐝 (T_A).\dim A_A;\quad p.\dim {}_BT ≥ i.𝐚𝐝𝐝 (_BT).\dim {}_BB.
+$$&lt;/p&gt;
+  &lt;p&gt;另一方面, 所有投射分解与相对内射分解都是 $(-,T)$-正合的, 因此&lt;/p&gt;
+  &lt;p&gt;$$
+p.\dim T_A ≥ i.𝐚𝐝𝐝 (_BT).\dim {}_BB;\quad p.\dim {}_BT ≥ i.𝐚𝐝𝐝 (T_A).\dim A_A.
+$$&lt;/p&gt;
+  &lt;p&gt;从而上述不等号只能取等.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-29T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Four_Dim_Equal</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Four_Dim_Equal</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>对偶 tilting 模的相对分解</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(对偶的投射分解). ${_B}T$ 是 tilting 模. 相应地,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$A^∙ → T$ 给出 $B$ 的 $𝐚𝐝𝐝 (T)$-相对内射分解 $B → (A^∙)^T$;&lt;/li&gt;
+    &lt;li&gt;$A → T^∙$ 给出 $T$ 的 $𝐚𝐝𝐝 (B)$-相对投射分解 $(T^∙ )^T → T$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;先证明以下左 $B$-模复形&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(A^∙ → T)^T = [B → (A^∙)^T]$ 与&lt;/li&gt;
+    &lt;li&gt;$(A → T^∙)^T = [(T^∙)^T → T]$&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;是正合复形, 从而构成 $B$ 的 $𝐚𝐝𝐝(T)$-内射分解, 以及 $T$ 的 $𝐚𝐝𝐝(B)$-投射分解.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;由维数有限, 以及 $\mathrm{Ext}_A^{≥ T}(T,T)=0$. 对如上两条形如 $(X^∙, T)_A$ 的复形使用&lt;a href=&quot;Spectral_sequence_filtered#维数移动&quot;&gt;一致的正合性条件&lt;/a&gt;即可. 因此, 以上两条 $(X^∙, T)_A$ 确实是正合列.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;证明第三条 $\mathrm{Ext}^{≥ 1}_{B^{\mathrm{op}}}(T,T) =0$ 前, 先证明 $A ≃ \mathrm{End}_{B^{\mathrm{op}}}(_BT)$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p&gt;考虑 $𝐦𝐨𝐝 _A$ 中相对内射分解 $A_A → T_A^∙$, 则 $_BB^∙ → {}_BT$ 是 $𝐦𝐨𝐝_A$ 中的相对投射分解. 考虑 $A$-代数 $A' := \mathrm{End}(_BT)$, 则有相对内射分解 $A'_A → T_A^∙$. 结合范畴等价&lt;/p&gt;
+      &lt;p&gt;$$
+  𝐚𝐝𝐝(A_A)\xrightarrow[∼]{_BT_A} 𝐚𝐝𝐝(_BB)\xrightarrow[∼]{_BT_A} 𝐚𝐝𝐝(A'_A),
+  $$&lt;/p&gt;
+      &lt;p&gt;因此, $A'_A$ 与 $A_A$ 是同构的 $A$-模, 从而 $A ≃ A'$.&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;这给出范畴等价&lt;/p&gt;
+  &lt;p&gt;\begin{equation} 𝐚𝐝𝐝 (A_A ⊕ T_A) \xrightarrow[∼]{T_A} 𝐚𝐝𝐝 ({}_B B ⊕ {}_BT). \end{equation}&lt;/p&gt;
+  &lt;p&gt;回归命题 $\mathrm{Ext}^{≥ 1}_{B^{\mathrm{op}}}(T,T) =0$, 对 $T$ 作 $A$-投射分解或 $B^{\mathrm{op}}$-投射分解. 考虑双模复形的同构 $(B^∙ , T)_{B^{\mathrm{op}}}≃ (A^∙ , T)_A$, 上述两类投射分解在 $(-)^T$ 下是相同的. 相应地, $\mathrm{Ext}^{≥ 1}_A(T,T) = \mathrm{Ext}^{≥ 1}_{B^{\mathrm{op}}}(T,T) = 0$.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-29T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Dual_Tilting</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Dual_Tilting</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>BB 谱序列</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Tilting 函子). 给定 tilting 模的要件 $(T_A,A^∙ → T,A → T^∙)$, 定义函子&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;(右正合, 左伴随, 左导出) $G(-) := - ⊗_B T : 𝐦𝐨𝐝 _B → 𝐦𝐨𝐝 _A$;&lt;/li&gt;
+    &lt;li&gt;(左正合, 右伴随, 右导出) $F(-) := (T, -)_A : 𝐦𝐨𝐝 _A → 𝐦𝐨𝐝 _B$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;由维数结论, $G_{&lt; -n} := L_{&lt; -n}G$ 与 $F^{&gt; n} := R^{&gt; n}F$ 消失.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(BB 谱序列). 存在函子的谱序列使得对任意 $M ∈ 𝐦𝐨𝐝 _A$,&lt;/p&gt;
+  &lt;p&gt;$$
+E_2 = (L_{-p}G ∘ R^q)F(M) ⇒ H^{-p+q}(M).
+$$&lt;/p&gt;
+  &lt;p&gt;此处 $H^{0}(M) = M$, 且 $H^{≠ 0}(M) = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;对 $M$ 取内射分解 $M → I^∙$, 取 $A$ 的极小 $𝐚𝐝𝐝 (T)$-内射分解 $A → T^∙$. 此时, 同构&lt;/p&gt;
+  &lt;p&gt;$$
+GFM = (_BT_A,M_A) ⊗ _BT_A ≃ (T, M) ⊗_B (A, T)
+$$&lt;/p&gt;
+  &lt;p&gt;给出了双复形 \begin{equation} (T, I^{∙ (q)}) ⊗ (T^{∙ (-p)} , T) ≃ (T^{-p}, I^{q})\quad (p ≤ 0, q ≥ 0). \end{equation}&lt;/p&gt;
+  &lt;p&gt;这一双复形有两种表达, 分别使用了两种正合函子: $- ⊗_B (T′ , T)$ 与 $(-, I)_A$. 以上预备工作给出了 $GF M$ 的双复形表达:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMjYsWzAsMCwiR0ZNIixbMzAsNjAsNjAsMV1dLFsxLDAsIkdGSV4wICIsWzE4MCw2MCw2MCwxXV0sWzIsMCwiR0ZJXjEiLFsxODAsNjAsNjAsMV1dLFszLDAsIkdGSV4yIixbMTgwLDYwLDYwLDFdXSxbMCwxLCJGTVxcb3RpbWVzIChUXjAsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwyLCJGTVxcb3RpbWVzIChUXjEsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwzLCJGTVxcb3RpbWVzIChUXjIsIFQpIixbMTgwLDYwLDYwLDFdXSxbMSwxLCJGSV4wXFxvdGltZXMgKFReMCwgVCkiXSxbMSwyLCJGSV4wXFxvdGltZXMgKFReMSwgVCkiXSxbMSwzLCJGSV4wXFxvdGltZXMgKFReMiwgVCkiXSxbMiwxLCJGSV4xXFxvdGltZXMgKFReMCwgVCkiXSxbMiwyLCJGSV4xXFxvdGltZXMgKFReMSwgVCkiXSxbMiwzLCJGSV4xXFxvdGltZXMgKFReMiwgVCkiXSxbMywxLCJGSV4yXFxvdGltZXMgKFReMCwgVCkiXSxbMywyLCJGSV4yXFxvdGltZXMgKFReMSwgVCkiXSxbMywzLCJGSV4yXFxvdGltZXMgKFReMiwgVCkiXSxbMSw0LCIoVF4wLEleMCkiXSxbMSw1LCIoVF4xLEleMCkiXSxbMiw0LCIoVF4wLEleMSkiXSxbMyw0LCIoVF4wLEleMikiXSxbMiw1LCIoVF4xLEleMSkiXSxbMyw1LCIoVF4xLEleMikiXSxbMSw2LCIoVF4yLEleMCkiXSxbMiw2LCIoVF4yLEleMSkiXSxbMyw2LCIoVF4yLEleMikiXSxbMCw1LCJcXGJveGVke1xcdGV4dHvlhah9fSJdLFswLDEsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMSwyLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzIsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFs1LDQsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCwwLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzcsMSwiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzgsN10sWzksOF0sWzEwLDIsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMSwxMF0sWzEyLDExXSxbMTMsMywiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE0LDEzXSxbMTUsMTRdLFs0LDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs3LDEwXSxbMTAsMTNdLFs1LDgsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs4LDExXSxbMTEsMTRdLFs2LDksIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs5LDEyXSxbMTIsMTVdLFsxNiwxOF0sWzE4LDE5XSxbMjEsMTldLFsyNCwyMV0sWzE3LDE2XSxbMjIsMTddLFsyMiwyM10sWzIzLDI0XSxbMTcsMjBdLFsyMCwyMV0sWzIwLDE4XSxbMjMsMjBdLFs2LDUsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMjYsWzAsMCwiR0ZNIixbMzAsNjAsNjAsMV1dLFsxLDAsIkdGSV4wICIsWzE4MCw2MCw2MCwxXV0sWzIsMCwiR0ZJXjEiLFsxODAsNjAsNjAsMV1dLFszLDAsIkdGSV4yIixbMTgwLDYwLDYwLDFdXSxbMCwxLCJGTVxcb3RpbWVzIChUXjAsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwyLCJGTVxcb3RpbWVzIChUXjEsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwzLCJGTVxcb3RpbWVzIChUXjIsIFQpIixbMTgwLDYwLDYwLDFdXSxbMSwxLCJGSV4wXFxvdGltZXMgKFReMCwgVCkiXSxbMSwyLCJGSV4wXFxvdGltZXMgKFReMSwgVCkiXSxbMSwzLCJGSV4wXFxvdGltZXMgKFReMiwgVCkiXSxbMiwxLCJGSV4xXFxvdGltZXMgKFReMCwgVCkiXSxbMiwyLCJGSV4xXFxvdGltZXMgKFReMSwgVCkiXSxbMiwzLCJGSV4xXFxvdGltZXMgKFReMiwgVCkiXSxbMywxLCJGSV4yXFxvdGltZXMgKFReMCwgVCkiXSxbMywyLCJGSV4yXFxvdGltZXMgKFReMSwgVCkiXSxbMywzLCJGSV4yXFxvdGltZXMgKFReMiwgVCkiXSxbMSw0LCIoVF4wLEleMCkiXSxbMSw1LCIoVF4xLEleMCkiXSxbMiw0LCIoVF4wLEleMSkiXSxbMyw0LCIoVF4wLEleMikiXSxbMiw1LCIoVF4xLEleMSkiXSxbMyw1LCIoVF4xLEleMikiXSxbMSw2LCIoVF4yLEleMCkiXSxbMiw2LCIoVF4yLEleMSkiXSxbMyw2LCIoVF4yLEleMikiXSxbMCw1LCJcXGJveGVke1xcdGV4dHvlhah9fSJdLFswLDEsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMSwyLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzIsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFs1LDQsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCwwLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzcsMSwiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzgsN10sWzksOF0sWzEwLDIsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMSwxMF0sWzEyLDExXSxbMTMsMywiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE0LDEzXSxbMTUsMTRdLFs0LDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs3LDEwXSxbMTAsMTNdLFs1LDgsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs4LDExXSxbMTEsMTRdLFs2LDksIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs5LDEyXSxbMTIsMTVdLFsxNiwxOF0sWzE4LDE5XSxbMjEsMTldLFsyNCwyMV0sWzE3LDE2XSxbMjIsMTddLFsyMiwyM10sWzIzLDI0XSxbMTcsMjBdLFsyMCwyMV0sWzIwLDE4XSxbMjMsMjBdLFs2LDUsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;550&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;($↑$ 向谱序列). 由 $(-, I^p)$ 是正合函子, 得 $E_{0,1,2}$ 如下:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMjksWzAsMCwiR0ZNIixbMzAsNjAsNjAsMV1dLFsxLDAsIkdGSV4wICIsWzE4MCw2MCw2MCwxXV0sWzIsMCwiR0ZJXjEiLFsxODAsNjAsNjAsMV1dLFszLDAsIkdGSV4yIixbMTgwLDYwLDYwLDFdXSxbMCwxLCJGTVxcb3RpbWVzIChUXjAsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwyLCJGTVxcb3RpbWVzIChUXjEsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwzLCJGTVxcb3RpbWVzIChUXjIsIFQpIixbMTgwLDYwLDYwLDFdXSxbMSwxLCIoVF4wLEleMCkiXSxbMSwyLCIoVF4xLEleMCkiXSxbMiwxLCIoVF4wLEleMSkiXSxbMywxLCIoVF4wLEleMikiXSxbMiwyLCIoVF4xLEleMSkiXSxbMywyLCIoVF4xLEleMikiXSxbMSwzLCIoVF4yLEleMCkiXSxbMiwzLCIoVF4yLEleMSkiXSxbMywzLCIoVF4yLEleMikiXSxbNCwzLCJcXGJveGVke0VfMH0iXSxbMSw0LCIoQSwgSV4wICkiXSxbMSw1LCIoSF4xKFQpLCBJXjApIixbMCwwLDc1LDFdXSxbMiw0LCIoQSwgSV4xKSJdLFszLDQsIihBLCBJXjIpIl0sWzIsNSwiKEheMShUKSwgSV4xKSIsWzAsMCw3NSwxXV0sWzMsNSwiKEheMShUKSwgSV4yKSIsWzAsMCw3NSwxXV0sWzQsNSwiXFxib3hlZHtFXzF9Il0sWzAsNSwiXFx0ZXh0e+a2iOWksSF9IixbMCwwLDc1LDFdXSxbMSw2LCIoQSxNKSJdLFsyLDYsIjAiLFswLDAsNzUsMV1dLFszLDYsIjAiLFswLDAsNzUsMV1dLFs0LDYsIlxcYm94ZWR7RV8yfSJdLFswLDEsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMSwyLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzIsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFs1LDQsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCwwLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEyLDEwXSxbMTUsMTJdLFs4LDddLFsxMyw4XSxbMTEsOV0sWzYsNSwiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsxNCwxMV0sWzE3LDE5XSxbMTksMjBdLFsxOCwyMSwiIiwyLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsyMSwyMiwiIiwyLHsiY29sb3VyIjpbMCwwLDc1XX1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMjksWzAsMCwiR0ZNIixbMzAsNjAsNjAsMV1dLFsxLDAsIkdGSV4wICIsWzE4MCw2MCw2MCwxXV0sWzIsMCwiR0ZJXjEiLFsxODAsNjAsNjAsMV1dLFszLDAsIkdGSV4yIixbMTgwLDYwLDYwLDFdXSxbMCwxLCJGTVxcb3RpbWVzIChUXjAsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwyLCJGTVxcb3RpbWVzIChUXjEsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwzLCJGTVxcb3RpbWVzIChUXjIsIFQpIixbMTgwLDYwLDYwLDFdXSxbMSwxLCIoVF4wLEleMCkiXSxbMSwyLCIoVF4xLEleMCkiXSxbMiwxLCIoVF4wLEleMSkiXSxbMywxLCIoVF4wLEleMikiXSxbMiwyLCIoVF4xLEleMSkiXSxbMywyLCIoVF4xLEleMikiXSxbMSwzLCIoVF4yLEleMCkiXSxbMiwzLCIoVF4yLEleMSkiXSxbMywzLCIoVF4yLEleMikiXSxbNCwzLCJcXGJveGVke0VfMH0iXSxbMSw0LCIoQSwgSV4wICkiXSxbMSw1LCIoSF4xKFQpLCBJXjApIixbMCwwLDc1LDFdXSxbMiw0LCIoQSwgSV4xKSJdLFszLDQsIihBLCBJXjIpIl0sWzIsNSwiKEheMShUKSwgSV4xKSIsWzAsMCw3NSwxXV0sWzMsNSwiKEheMShUKSwgSV4yKSIsWzAsMCw3NSwxXV0sWzQsNSwiXFxib3hlZHtFXzF9Il0sWzAsNSwiXFx0ZXh0e+a2iOWksSF9IixbMCwwLDc1LDFdXSxbMSw2LCIoQSxNKSJdLFsyLDYsIjAiLFswLDAsNzUsMV1dLFszLDYsIjAiLFswLDAsNzUsMV1dLFs0LDYsIlxcYm94ZWR7RV8yfSJdLFswLDEsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMSwyLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzIsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFs1LDQsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCwwLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEyLDEwXSxbMTUsMTJdLFs4LDddLFsxMyw4XSxbMTEsOV0sWzYsNSwiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsxNCwxMV0sWzE3LDE5XSxbMTksMjBdLFsxOCwyMSwiIiwyLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsyMSwyMiwiIiwyLHsiY29sb3VyIjpbMCwwLDc1XX1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;550&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;($↑$ 谱序列, $E_0$).&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTYsWzAsMCwiR0ZNIixbMzAsNjAsNjAsMV1dLFsxLDAsIkdGSV4wICIsWzE4MCw2MCw2MCwxXV0sWzIsMCwiR0ZJXjEiLFsxODAsNjAsNjAsMV1dLFszLDAsIkdGSV4yIixbMTgwLDYwLDYwLDFdXSxbMCwxLCJGTVxcb3RpbWVzIChUXjAsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwyLCJGTVxcb3RpbWVzIChUXjEsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwzLCJGTVxcb3RpbWVzIChUXjIsIFQpIixbMTgwLDYwLDYwLDFdXSxbMSwxLCJGSV4wXFxvdGltZXMgKFReMCwgVCkiXSxbMSwyLCJGSV4wXFxvdGltZXMgKFReMSwgVCkiXSxbMSwzLCJGSV4wXFxvdGltZXMgKFReMiwgVCkiXSxbMiwxLCJGSV4xXFxvdGltZXMgKFReMCwgVCkiXSxbMiwyLCJGSV4xXFxvdGltZXMgKFReMSwgVCkiXSxbMiwzLCJGSV4xXFxvdGltZXMgKFReMiwgVCkiXSxbMywxLCJGSV4yXFxvdGltZXMgKFReMCwgVCkiXSxbMywyLCJGSV4yXFxvdGltZXMgKFReMSwgVCkiXSxbMywzLCJGSV4yXFxvdGltZXMgKFReMiwgVCkiXSxbMCwxLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEsMiwiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsyLDMsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCw3LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNywxMF0sWzEwLDEzXSxbNSw4LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCwxMV0sWzExLDE0XSxbNiw5LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSwxMl0sWzEyLDE1XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTYsWzAsMCwiR0ZNIixbMzAsNjAsNjAsMV1dLFsxLDAsIkdGSV4wICIsWzE4MCw2MCw2MCwxXV0sWzIsMCwiR0ZJXjEiLFsxODAsNjAsNjAsMV1dLFszLDAsIkdGSV4yIixbMTgwLDYwLDYwLDFdXSxbMCwxLCJGTVxcb3RpbWVzIChUXjAsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwyLCJGTVxcb3RpbWVzIChUXjEsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwzLCJGTVxcb3RpbWVzIChUXjIsIFQpIixbMTgwLDYwLDYwLDFdXSxbMSwxLCJGSV4wXFxvdGltZXMgKFReMCwgVCkiXSxbMSwyLCJGSV4wXFxvdGltZXMgKFReMSwgVCkiXSxbMSwzLCJGSV4wXFxvdGltZXMgKFReMiwgVCkiXSxbMiwxLCJGSV4xXFxvdGltZXMgKFReMCwgVCkiXSxbMiwyLCJGSV4xXFxvdGltZXMgKFReMSwgVCkiXSxbMiwzLCJGSV4xXFxvdGltZXMgKFReMiwgVCkiXSxbMywxLCJGSV4yXFxvdGltZXMgKFReMCwgVCkiXSxbMywyLCJGSV4yXFxvdGltZXMgKFReMSwgVCkiXSxbMywzLCJGSV4yXFxvdGltZXMgKFReMiwgVCkiXSxbMCwxLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEsMiwiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsyLDMsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCw3LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNywxMF0sWzEwLDEzXSxbNSw4LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCwxMV0sWzExLDE0XSxbNiw5LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSwxMl0sWzEyLDE1XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;($↑$ 向谱序列, $E_1$).&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzIsMywiKEZeMk0pIFxcb3RpbWVzIChUXjIsIFQpIl0sWzEsMywiKEZeMU0pIFxcb3RpbWVzIChUXjIsIFQpIl0sWzAsMywiRk1cXG90aW1lcyAoVF4yLCBUKSJdLFsyLDIsIihGXjJNKSBcXG90aW1lcyAoVF4xLCBUKSJdLFsxLDIsIihGXjFNKSBcXG90aW1lcyAoVF4xLCBUKSJdLFswLDIsIkZNXFxvdGltZXMgKFReMSwgVCkiXSxbMiwxLCIoRl4yTSkgXFxvdGltZXMgKFReMCwgVCkiXSxbMSwxLCIoRl4xTSkgXFxvdGltZXMgKFReMCwgVCkiXSxbMCwxLCJGTVxcb3RpbWVzIChUXjAsIFQpIl0sWzIsMCwiRl4yTSBcXG90aW1lcyBUIixbMTgwLDYwLDYwLDFdXSxbMSwwLCJGXjJNIFxcb3RpbWVzIFQiLFsxODAsNjAsNjAsMV1dLFswLDAsIkZNIFxcb3RpbWVzIFQiLFsxODAsNjAsNjAsMV1dLFswLDNdLFsxLDRdLFsyLDVdLFszLDZdLFs0LDddLFs1LDhdXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzIsMywiKEZeMk0pIFxcb3RpbWVzIChUXjIsIFQpIl0sWzEsMywiKEZeMU0pIFxcb3RpbWVzIChUXjIsIFQpIl0sWzAsMywiRk1cXG90aW1lcyAoVF4yLCBUKSJdLFsyLDIsIihGXjJNKSBcXG90aW1lcyAoVF4xLCBUKSJdLFsxLDIsIihGXjFNKSBcXG90aW1lcyAoVF4xLCBUKSJdLFswLDIsIkZNXFxvdGltZXMgKFReMSwgVCkiXSxbMiwxLCIoRl4yTSkgXFxvdGltZXMgKFReMCwgVCkiXSxbMSwxLCIoRl4xTSkgXFxvdGltZXMgKFReMCwgVCkiXSxbMCwxLCJGTVxcb3RpbWVzIChUXjAsIFQpIl0sWzIsMCwiRl4yTSBcXG90aW1lcyBUIixbMTgwLDYwLDYwLDFdXSxbMSwwLCJGXjJNIFxcb3RpbWVzIFQiLFsxODAsNjAsNjAsMV1dLFswLDAsIkZNIFxcb3RpbWVzIFQiLFsxODAsNjAsNjAsMV1dLFswLDNdLFsxLDRdLFsyLDVdLFszLDZdLFs0LDddLFs1LDhdXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;($↑$ 向谱序列, $E_2$).&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsOSxbMiwyLCJHX3stMn1GXjJNIl0sWzEsMiwiR197LTJ9Rl4xTSJdLFswLDIsIkdfey0yfUZNIl0sWzAsMSwiR197LTF9Rk0iXSxbMSwxLCJHX3stMX1GXjFNIl0sWzIsMSwiR197LTF9Rl4yTSJdLFsyLDAsIkdGXjJNIl0sWzEsMCwiR0ZeMU0iXSxbMCwwLCJHRk0iXSxbMCw3XSxbMSw4XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsOSxbMiwyLCJHX3stMn1GXjJNIl0sWzEsMiwiR197LTJ9Rl4xTSJdLFswLDIsIkdfey0yfUZNIl0sWzAsMSwiR197LTF9Rk0iXSxbMSwxLCJHX3stMX1GXjFNIl0sWzIsMSwiR197LTF9Rl4yTSJdLFsyLDAsIkdGXjJNIl0sWzEsMCwiR0ZeMU0iXSxbMCwwLCJHRk0iXSxbMCw3XSxbMSw4XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;250&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;由上述谱序列有限, 这一结果收敛至全复形的滤过同调群, 也就是轴复形 $M$ 的同调群. 因此, 存在谱序列&lt;/p&gt;
+  &lt;p&gt;\begin{equation} \mathrm{Tor}^B_{-q}(T, \mathrm{Ext}^p_A(T, -)) ⇒ δ_{-p+q, 0}⋅ \mathrm{id} \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-04-29T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/BB_Spectral_Sequence</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/BB_Spectral_Sequence</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>$\varprojlim{}_{ℕ}^1$ 消失的充分条件</title>
           <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
 
@@ -841,7 +1006,11 @@ $$&lt;/p&gt;
           <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#abstract&quot; id=&quot;markdown-toc-abstract&quot;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#happel-导出等价定理&quot; id=&quot;markdown-toc-happel-导出等价定理&quot;&gt;Happel 导出等价定理&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#谱序列方法&quot; id=&quot;markdown-toc-谱序列方法&quot;&gt;谱序列方法&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#谱序列方法&quot; id=&quot;markdown-toc-谱序列方法&quot;&gt;谱序列方法&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#bb-谱序列&quot; id=&quot;markdown-toc-bb-谱序列&quot;&gt;BB 谱序列&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#导出等价的细化&quot; id=&quot;markdown-toc-导出等价的细化&quot;&gt;导出等价的细化&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#bb-定理的原始证明&quot; id=&quot;markdown-toc-bb-定理的原始证明&quot;&gt;BB 定理的原始证明&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -870,24 +1039,7 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;proof&quot;&gt;
-  &lt;p&gt;以下使用数学归纳法证明. 记 $P(m,n)$ 是:&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;
-      &lt;p&gt;对一切长度不超过 $m$ 与 $n$ 的复形 $P$ 与 $Q$, 以下是同构&lt;/p&gt;
-      &lt;p&gt;$$
-  (P,Q)_{K^b(𝐚𝐝𝐝 (T))} → (P,Q)_{K^b𝒜} → (P,Q)_{D^b 𝒜}.
-  $$&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;p&gt;显然 $P(0,0)$ 成立, 因为对轴复形 $X,Y ∈ C^b (𝐚𝐝𝐝(T))$ 总有 $\mathrm{Ext}^{≥ 1}(X,Y) = 0$. &lt;br /&gt; 下进行归纳, 假定 $P(≤ m, ≤ n)$ 成立. 对任意长度为 $m+1$ 的 $X$, 考虑强制截断, 则有同伦范畴以及导出范畴的好三角 $LX → X → RX → LX[1]$. 对 $(-,Y)_{K^b(𝐚𝐝𝐝 (T))}$ 与 $(-,Y)_{D^b 𝒜}$ 使用同调代数基本定理, 得交换图&lt;/p&gt;
-  &lt;p&gt;$$
-\scriptsize\begin{bmatrix}
-( LX[ 1] ,Y)_{K^{b}(\mathbf{add}( T))} &amp; \rightarrow  &amp; ( RX,Y)_{K^{b}(\mathbf{add}( T))} &amp; \rightarrow  &amp; ( X,Y)_{K^{b}(\mathbf{add}( T))} &amp; \rightarrow  &amp; ( LX,Y)_{K^{b}(\mathbf{add}( T))} &amp; \rightarrow  &amp; ( RX[ -1] ,Y)_{K^{b}(\mathbf{add}( T))}\\
-\parallel  &amp;  &amp; \parallel  &amp;  &amp; \downarrow  &amp;  &amp; \parallel  &amp;  &amp; \parallel \\
-( LX[ 1] ,Y)_{D^{b} 𝒜 } &amp; \rightarrow  &amp; ( RX,Y)_{D^{b} 𝒜 } &amp; \rightarrow  &amp; ( X,Y)_{D^{b} 𝒜 } &amp; \rightarrow  &amp; ( LX,Y)_{D^{b} 𝒜 } &amp; \rightarrow  &amp; ( RX[ -1] ,Y)_{D^{b} 𝒜 }
-\end{bmatrix}
-$$&lt;/p&gt;
-  &lt;p&gt;此时, 中间箭头是同构. 这完成了归纳 $P(≤ m, ≤ n) ⇒ P(≤ m+1, ≤ n)$. 另一方向同理. 综上, 以上 $K^b(𝐚𝐝𝐝 (T)) → D^b 𝒜$ 是全忠实的.&lt;/p&gt;
+  &lt;p&gt;见&lt;a href=&quot;Happel_Fully_Faithful&quot;&gt;此处&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;lemma&quot;&gt;
@@ -919,7 +1071,153 @@ $$&lt;/p&gt;
 
 &lt;h2 id=&quot;谱序列方法&quot;&gt;谱序列方法&lt;/h2&gt;
 
-&lt;p&gt;待补充.&lt;/p&gt;
+&lt;p&gt;经典的 BB 理论见&lt;a href=&quot;Notes_on_Tilting#brenner-butler-理论&quot;&gt;此章节&lt;/a&gt;. 以下谈论的 tilting 模是投射维度有限的, 见&lt;a href=&quot;https://ousar.lib.okayama-u.ac.jp/files/public/3/33144/20160528031413376310/fulltext.pdf&quot;&gt;宫下洋一&lt;/a&gt;开创性的工作.&lt;/p&gt;
+
+&lt;h3 id=&quot;bb-谱序列&quot;&gt;BB 谱序列&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(投射维数有限的 Tilting 对象). 给定有限维代数 $A$ 与 $T ∈ 𝐦𝐨𝐝_A$. 称 $T$ 是有限维度的 tilting 模, 若&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$p. \dim T &lt; ∞$;&lt;/li&gt;
+    &lt;li&gt;$T$ 的相对 $𝐚𝐝𝐝(T)$-内射维度有限;&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Ext}^{≥ 1}(T,T) = 0$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;简单地看, tilting 模描述作以下资料 $(T, A, A^∙ → T, A → T^∙)$. 其中&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;相对投射分解 $A^∙ → T$ 长度有限, $A^∙ ∈ C(𝐚𝐝𝐝 (A))$;&lt;/li&gt;
+  &lt;li&gt;相对内射分解 $A → T^∙$ 长度有限, $T^∙ ∈ C(𝐚𝐝𝐝(T))$.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;默认右模. 记 $B = \mathrm{End}(T)$, 则 $T ∈ 𝐦𝐨𝐝_{B^{\mathrm{op}}}$. 特别地, ${}_BT_A$ 是双模.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;($T$-对偶). 今定义反变函子 \begin{equation} (-, T) : 𝐦𝐨𝐝_A → 𝐦𝐨𝐝_{B^{\mathrm{op}}},\quad M ↦ (M,T). \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;以下是范畴等价 (记 $A' := \mathrm{End}(_BT)$, 显然这是 $A$-代数):&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(-, {}_BT_A)_A : 𝐚𝐝𝐝(A_A) ≃ 𝐚𝐝𝐝 (_BT),\quad 𝐚𝐝𝐝(_AA_A) ≃ 𝐚𝐝𝐝 (_BT_A)$;&lt;/li&gt;
+    &lt;li&gt;$(-, {}_BT_A)_A : 𝐚𝐝𝐝(T_A) ≃ 𝐚𝐝𝐝 (_BB),\quad 𝐚𝐝𝐝(_BT_A) ≃ 𝐚𝐝𝐝 (_BB_B)$;&lt;/li&gt;
+    &lt;li&gt;$(-, {}_BT_A)_{B^{\mathrm{op}}} : 𝐚𝐝𝐝(_BB) ≃ 𝐚𝐝𝐝 (T_A),\quad 𝐚𝐝𝐝(_BB_B) ≃ 𝐚𝐝𝐝 (_BT_A)$;&lt;/li&gt;
+    &lt;li&gt;$(-, {}_BT_A)_{B^{\mathrm{op}}} : 𝐚𝐝𝐝(_BT) ≃ 𝐚𝐝𝐝 (A'_A),\quad 𝐚𝐝𝐝(_BT_A) ≃ 𝐚𝐝𝐝 (_AA'_A)$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;将以上左右函子统一记作 $(-)^T$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;实际上, 上述 $A' ≃ A$, 见下一定理.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(对偶的投射分解, &lt;a href=&quot;Dual_Tilting&quot;&gt;证明&lt;/a&gt;). ${_B}T$ 是 tilting 模. 相应地,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$A^∙ → T$ 给出 $B$ 的 $𝐚𝐝𝐝 (T)$-相对内射分解 $B → (A^∙)^T$;&lt;/li&gt;
+    &lt;li&gt;$A → T^∙$ 给出 $T$ 的 $𝐚𝐝𝐝 (B)$-相对投射分解 $(T^∙ )^T → T$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(四链等长, &lt;a href=&quot;Four_Dim_Equal&quot;&gt;证明&lt;/a&gt;). 以下四者相同: $T_A$ 的投射维数, $_BT$ 的投射维数, $A$ 相对 $𝐚𝐝𝐝 (T)$ 的内射维数, $B$ 相对 $𝐚𝐝𝐝 (T)$ 的内射维数.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Tilting 函子). 给定 tilting 模的要件 $(T_A,A^∙ → T,A → T^∙)$, 定义函子&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;(右正合, 左伴随, 左导出) $G(-) := - ⊗_B T : 𝐦𝐨𝐝 _B → 𝐦𝐨𝐝 _A$;&lt;/li&gt;
+    &lt;li&gt;(左正合, 右伴随, 右导出) $F(-) := (T, -)_A : 𝐦𝐨𝐝 _A → 𝐦𝐨𝐝 _B$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;由维数结论, $G_{&lt; -n} := L_{&lt; -n}G$ 与 $F^{&gt; n} := R^{&gt; n}F$ 消失.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;关于谱序列, 见&lt;a href=&quot;Spectral_sequence_filtered&quot;&gt;此文&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(BB 谱序列, &lt;a href=&quot;BB_Spectral_Sequence&quot;&gt;证明&lt;/a&gt;). 存在函子的谱序列使得对任意 $M ∈ 𝐦𝐨𝐝 _A$,&lt;/p&gt;
+  &lt;p&gt;$$
+E_2 = (L_{-p}G ∘ R^q)F(M) ⇒ H^{-p+q}(M).
+$$&lt;/p&gt;
+  &lt;p&gt;此处 $H^{0}(M) = M$, 且 $H^{≠ 0}(M) = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;对偶地, 有&lt;/p&gt;
+  &lt;p&gt;$$
+\mathrm{Ext}^{q} (T, \mathrm{Tor}_{p}(N,T)) ⇒ H^{-p+q}(N).
+$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;以上谱序列是有界的第二(四)象限谱序列, 并非传统意义下的 Grothendieck 谱序列.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;(边界映射). 考虑 $n ≥ 3$, 则有&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsOSxbMCwxLCJHRl57bi0xfUZNIixbMzAsNjAsNjAsMV1dLFsyLDEsIkdGXm5GTSIsWzE4MCw2MCw2MCwxXV0sWzAsMiwiR197LTF9Rl57bi0xfUZNIixbMCw2MCw2MCwxXV0sWzIsMiwiR197LTF9Rl5uRk0iLFsxODAsNjAsNjAsMV1dLFswLDMsIkdfey0yfUZee24tMX1GTSJdLFsyLDMsIkdfey0yfUZebkZNIixbMzAsNjAsNjAsMV1dLFsyLDQsIkdfey0zfUZebkZNIixbMCw2MCw2MCwxXV0sWzAsMCwiMCJdLFswLDQsIm4gXFxnZXEgMyJdLFs1LDAsIlxcc2ltZXEiLDEseyJjb2xvdXIiOlszMCw2MCw2MF19LFszMCw2MCw2MCwxXV0sWzYsMiwiXFx2YXJlcHNpbG9uICIsMSx7ImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzAsMywiMCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsyLDUsIjAiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw3LCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzcsMSwiMCIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX0sWzE4MCw2MCw2MCwxXV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsOSxbMCwxLCJHRl57bi0xfUZNIixbMzAsNjAsNjAsMV1dLFsyLDEsIkdGXm5GTSIsWzE4MCw2MCw2MCwxXV0sWzAsMiwiR197LTF9Rl57bi0xfUZNIixbMCw2MCw2MCwxXV0sWzIsMiwiR197LTF9Rl5uRk0iLFsxODAsNjAsNjAsMV1dLFswLDMsIkdfey0yfUZee24tMX1GTSJdLFsyLDMsIkdfey0yfUZebkZNIixbMzAsNjAsNjAsMV1dLFsyLDQsIkdfey0zfUZebkZNIixbMCw2MCw2MCwxXV0sWzAsMCwiMCJdLFswLDQsIm4gXFxnZXEgMyJdLFs1LDAsIlxcc2ltZXEiLDEseyJjb2xvdXIiOlszMCw2MCw2MF19LFszMCw2MCw2MCwxXV0sWzYsMiwiXFx2YXJlcHNpbG9uICIsMSx7ImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzAsMywiMCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsyLDUsIjAiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw3LCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzcsMSwiMCIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX0sWzE4MCw2MCw2MCwxXV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;400&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;对 $\mathrm{Ext} ∘ \mathrm{Tor}$ 进行类似的讨论, 得八处 $0$ 与四处同构:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\mathrm{Tor}_{0, -1}^B(\mathrm{Ext}_A^n(T, M), T) = 0$,&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Tor}_{-n, -n+1}^B(\mathrm{Ext}_A^0(T, M), T) = 0$,&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Ext}^{0,1}_A(T, \mathrm{Tor}^B_{-n}(T, N)) = 0$,&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Ext}^{n}_A(T, \mathrm{Tor}^B_{0, -1}(T, N)) = 0$,&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Tor}_{-2}^B(\mathrm{Ext}_A^n(T, M), T) ≃ \mathrm{Tor}_{0}^B(\mathrm{Ext}_A^{n-1}(T, M), T)$,&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Tor}_{-n}^B(\mathrm{Ext}_A^{1}(T, M), T) ≃ \mathrm{Tor}_{-n +2}^B(\mathrm{Ext}_A^{0}(T, M), T)$,&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Ext}^{2}_A(T, \mathrm{Tor}^B_{-n}(N, T)) ≃ \mathrm{Ext}^{0}_A(T, \mathrm{Tor}^B_{-n+1}(N, T))$,&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Ext}^{n}_A(T, \mathrm{Tor}^B_{-1}(N, T)) ≃ \mathrm{Ext}^{n - 2}_A(T, \mathrm{Tor}^B_{0}(N, T))$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;(通常的 BB-定理). 取 $n = 1$, 即 $\mathrm{Tor}^B_2(-,T)$ 与 $\mathrm{Ext}_A^2(T,-)$ 消失. 此时有&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzAsMSwiKFQsIE4gXFxvdGltZXMgVCkiXSxbMSwxLCJcXG1hdGhybXtFeHR9XjEoVCwgTiBcXG90aW1lcyBUKSIsWzE4MCw2MCw2MCwxXV0sWzAsMiwiKFQgLCBcXG1hdGhybXtUb3J9X3stMX0oTixUKSkiLFsxODAsNjAsNjAsMV1dLFsxLDIsIlxcbWF0aHJte0V4dH1eMShUICwgXFxtYXRocm17VG9yfV97LTF9KE4sVCkpIl0sWzIsMSwiKFQsIE0pIFxcb3RpbWVzIFQiXSxbMywxLCJcXG1hdGhybXtFeHR9XjEoVCwgTSkgXFxvdGltZXMgVCIsWzE4MCw2MCw2MCwxXV0sWzIsMiwiXFxtYXRocm17VG9yfV97LTF9KChULE0pLCBUKSIsWzE4MCw2MCw2MCwxXV0sWzMsMiwiXFxtYXRocm17VG9yfV97LTF9KFxcbWF0aHJte0V4dH1eMShULE0pLCBUKSJdLFswLDAsIjAiXSxbMSwzLCIwIl0sWzIsMCwiMCJdLFszLDMsIjAiXSxbMywwLCJOIiwxXSxbNCw3LCJNIiwxXSxbMSw4LCIwIiwxXSxbOSwyLCIwIiwxXSxbMTAsNSwiMCIsMV0sWzYsMTEsIjAiLDFdXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzAsMSwiKFQsIE4gXFxvdGltZXMgVCkiXSxbMSwxLCJcXG1hdGhybXtFeHR9XjEoVCwgTiBcXG90aW1lcyBUKSIsWzE4MCw2MCw2MCwxXV0sWzAsMiwiKFQgLCBcXG1hdGhybXtUb3J9X3stMX0oTixUKSkiLFsxODAsNjAsNjAsMV1dLFsxLDIsIlxcbWF0aHJte0V4dH1eMShUICwgXFxtYXRocm17VG9yfV97LTF9KE4sVCkpIl0sWzIsMSwiKFQsIE0pIFxcb3RpbWVzIFQiXSxbMywxLCJcXG1hdGhybXtFeHR9XjEoVCwgTSkgXFxvdGltZXMgVCIsWzE4MCw2MCw2MCwxXV0sWzIsMiwiXFxtYXRocm17VG9yfV97LTF9KChULE0pLCBUKSIsWzE4MCw2MCw2MCwxXV0sWzMsMiwiXFxtYXRocm17VG9yfV97LTF9KFxcbWF0aHJte0V4dH1eMShULE0pLCBUKSJdLFswLDAsIjAiXSxbMSwzLCIwIl0sWzIsMCwiMCJdLFszLDMsIjAiXSxbMywwLCJOIiwxXSxbNCw3LCJNIiwxXSxbMSw4LCIwIiwxXSxbOSwyLCIwIiwxXSxbMTAsNSwiMCIsMV0sWzYsMTEsIjAiLDFdXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;280&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;导出等价的细化&quot;&gt;导出等价的细化&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(支撑). 回顾原始版本的 Brenner-Butler 定理, $\{ℱ,𝒯,𝒳,𝒴\}$ 作为导出范畴的全子范畴, 可通过函子的 $\ker$ 等价地定义. 对一般的 tilting 模, 定义推广&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$S^p := ⋂_{0 ≤ k ≤ n}^{k ≠ p}\ker \mathrm{Ext}_A^k(T, -)$;&lt;/li&gt;
+    &lt;li&gt;$S_{-p} := ⋂_{0 ≤ k ≤ n}^{k ≠ p}\ker \mathrm{Tor}^B_k(-, T)$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Brenner-Bulter 定理的导出等价部分). 存在全子范畴间的等价 \begin{equation} F^t : S^t ≃ S_{-t} : G_{-t}. \end{equation} 对经典的 tilting 理论 ($t ∈ \{0,1\}$), 上述即&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(T,-) : 𝒯 ≃ 𝒴 : - ⊗ T$;&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Ext}^1(T,-) :ℱ ≃ 𝒳 : \mathrm{Tor}_1(-, T)$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;对 $M ∈ S^t$, $E_2 = E_∞$ 仅剩下 $G_∙ F^{t}M$ 一列. 该列是 $M$ 同调群的滤过, 从而&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$G_{-t}F^t M = M$, 以及&lt;/li&gt;
+    &lt;li&gt;$G_{-(≠ t)}F^t M = 0$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;另一侧对称.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;https://en.wikipedia.org/wiki/Spectral_sequence#Wang_sequence&quot;&gt;王憲鍾序列&lt;/a&gt;). 若谱序列 $E_2$ 仅两列 (或仅两行) 非零, 则称之王序列. 对一切 $0 ≤ i &lt; j ≤ n$ 定义&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$S^{i,j} := ⋂_{0 ≤ k ≤ n}^{k ≠ i,j}\ker \mathrm{Ext}_A^k(T, -)$, 与&lt;/li&gt;
+    &lt;li&gt;$S_{-i,-j} := ⋂_{0 ≤ k ≤ n}^{k ≠ i,j}\ker \mathrm{Tor}^B_k(-, T)$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;今取 $M ∈ S^{i,j}$, 由谱序列的计算得&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;存在五项正合列 \begin{equation} G_{-j+1}F^jM ↪ G_{-i}F^iM → M → G_{-j}F^jM ↠ G_{-i-1}F^iM \end{equation}&lt;/li&gt;
+    &lt;li&gt;$G_{p-j+1}F^j M ≃ G_{p-i}F^i M$ 对 $p ≠ 0, -1$ 成立.&lt;/li&gt;
+    &lt;li&gt;$G_{-([0,n-(j-i)])}F^iM$ 与 $G_{-([(j-i),n])}F^jM$ 可能非零;&lt;/li&gt;
+    &lt;li&gt;其余 $G_{-p}F^q M$ 必为 $0$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;bb-定理的原始证明&quot;&gt;BB 定理的原始证明&lt;/h2&gt;
 
@@ -1142,6 +1440,7 @@ $$&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#谱序列直接应用&quot; id=&quot;markdown-toc-谱序列直接应用&quot;&gt;谱序列直接应用&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#同调代数的简单应用&quot; id=&quot;markdown-toc-同调代数的简单应用&quot;&gt;同调代数的简单应用&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#维数移动&quot; id=&quot;markdown-toc-维数移动&quot;&gt;维数移动&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#ar-转置与谱序列&quot; id=&quot;markdown-toc-ar-转置与谱序列&quot;&gt;AR 转置与谱序列&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#kunneth-公式&quot; id=&quot;markdown-toc-kunneth-公式&quot;&gt;Kunneth 公式&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -1415,6 +1714,34 @@ $$&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
+&lt;h3 id=&quot;维数移动&quot;&gt;维数移动&lt;/h3&gt;
+
+&lt;p&gt;以下考虑投射, 右正合版本的维度移动.&lt;/p&gt;
+
+&lt;!-- 假定 Abel 范畴 $𝒜$ 有足够投射, 或相对地, 存在对象类 $𝒳$ 使得对任意 $M ∈ 𝒜$ 总有满态射 $X ↠ M$ ($X ∈ 𝒳$). --&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;任取无环复形 $X$, 使得投射分解满足收敛性条件. 例如以下任意一者:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;所有 $\mathrm{im}(d)$ 的投射维度有一致上界;&lt;/li&gt;
+    &lt;li&gt;$X$ 上有界.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;此时, 任取右正合函子 $F$, 记 $L_{-p}F$ 为 $F$ 的 $p$-次左导出. 此时,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;若所有 $(L_{≤ -1}F)(X)$ 是无环复形, 则 $F(X)$ 无环;&lt;/li&gt;
+    &lt;li&gt;若仅有 $(L_{-k}F)(X)$ 与 $(L_{-k-r}F)(X)$ 非无环复形, 则 $(L_{-k}F)(X)$ 与 $Σ^{r+1}[(L_{-k-r}F)(X)]$ 有相同的上同调群 (未必由态射连接).&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(一致的正合性). 以下是一些常见的结论:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;假定 $X^∙$ 是上有界无环复形, 或是 $\mathrm{im}(d)$ 投射维数一致有界的无环复形. 若所有 $\mathrm{Ext}^{≥ 1}(X^∙, M)$ 无环, 则 $(X^∙, M)$ 无环.&lt;/li&gt;
+    &lt;li&gt;假定 $X^∙$ 是下有界无环复形, 或是 $\mathrm{im}(d)$ 内射维数一致有界的无环复形. 若所有 $\mathrm{Ext}^{≥ 1}(N, X^∙)$ 无环, 则 $(N, X^∙)$ 无环.&lt;/li&gt;
+    &lt;li&gt;假定 $X^∙$ 是上有界无环复形, 或是 $\mathrm{im}(d)$ 平坦维数一致有界的无环复形. 若所有 $\mathrm{Tor}_{ ≥ 1}(X^∙, M)$ 无环, 则 $X^∙ ⊗ M$ 无环.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
 &lt;h3 id=&quot;ar-转置与谱序列&quot;&gt;AR 转置与谱序列&lt;/h3&gt;
 
 &lt;p&gt;以下所有对象均是 Artin 代数中的有限表面模, 基本记号等见&lt;a href=&quot;AR-notes#稳定范畴等价&quot;&gt;此处&lt;/a&gt;. 本小结证明&lt;a href=&quot;AR-notes#ar-定理&quot;&gt;此处&lt;/a&gt;的同调定理.&lt;/p&gt;
@@ -1598,6 +1925,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;brenner-butler-理论&quot;&gt;Brenner-Butler 理论&lt;/h3&gt;
+
+&lt;p&gt;见&lt;a href=&quot;Happel_Derived_Equivalence#谱序列方法&quot;&gt;此章节&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
           <link>https://zhangchenchengsjtu.github.io/website/posts/Spectral_sequence_filtered</link>
@@ -4778,7 +5107,7 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;(整体维数, &lt;a href=&quot;Gl_Dim_A_B&quot;&gt;证明&lt;/a&gt;). $\|gl.\dim A - gl.\dim B\|≤ 1$.&lt;/p&gt;
+  &lt;p&gt;(整体维数, &lt;a href=&quot;Gl_Dim_A_B&quot;&gt;证明&lt;/a&gt;). $|gl.\dim A - gl.\dim B|≤ 1$.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;theorem&quot;&gt;
