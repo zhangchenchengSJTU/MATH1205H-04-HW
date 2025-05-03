@@ -7,6 +7,683 @@
     
       
         <item>
+          <title>有限表现模, 投射模, 内射模, 平坦模的结构</title>
+          <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#abstract&quot; id=&quot;markdown-toc-abstract&quot;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#有限表现模&quot; id=&quot;markdown-toc-有限表现模&quot;&gt;有限表现模&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#平坦模&quot; id=&quot;markdown-toc-平坦模&quot;&gt;平坦模&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#内射模&quot; id=&quot;markdown-toc-内射模&quot;&gt;内射模&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#特征模函子&quot; id=&quot;markdown-toc-特征模函子&quot;&gt;特征模函子&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#投射模&quot; id=&quot;markdown-toc-投射模&quot;&gt;投射模&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;abstract&quot;&gt;
+  &lt;h5 id=&quot;abstract&quot;&gt;Abstract&lt;/h5&gt;
+  &lt;div&gt;
+    &lt;p&gt;有限表现模的等价判定方法:&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;$M = \mathrm{cok}(R^m → R^n)$;&lt;/li&gt;
+      &lt;li&gt;$(M,-)$ 保持滤过余极限;&lt;/li&gt;
+      &lt;li&gt;$M ⊗ -$ 保持积.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;平坦模的等价判定方法:&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;$M ⊗ -$ 正合, 等价地,         &lt;ol&gt;
+          &lt;li&gt;$M ⊗ -$ 保持单态射;&lt;/li&gt;
+          &lt;li&gt;$M ⊗ -$ 保持 $𝐦𝐨𝐝$ 的单态射;&lt;/li&gt;
+          &lt;li&gt;$M ⊗ -$ 保持理想的嵌入;&lt;/li&gt;
+          &lt;li&gt;$M ⊗ -$ 保持有限生成理想的嵌入;&lt;/li&gt;
+          &lt;li&gt;$\mathrm{Tor}(M,-) = 0$;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;$M ⊗ -$ 自由对象的滤过余极限, 等价地,         &lt;ol&gt;
+          &lt;li&gt;$M ⊗ -$ 是有限表现滤过对象的滤过余极限;&lt;/li&gt;
+          &lt;li&gt;$M ⊗ -$ 是投射对象的滤过余极限;&lt;/li&gt;
+          &lt;li&gt;$M ⊗ -$ 是有限表现投射对象的滤过余极限;&lt;/li&gt;
+          &lt;li&gt;任意有限表现模出发的态射 $X → M$ 必然被某一有限生成自由对象分解;&lt;/li&gt;
+          &lt;li&gt;任意有限表现模出发的态射 $X → M$ 必然被某一有限生成投射对象分解.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;矩阵方程 $𝐑 ⋅ 𝐦 = \mathbf 0$ 蕴含 $[𝐑 ⋅ 𝐀 = 𝐎] ∧ [𝐦 = 𝐀 ⋅ 𝐧]$;&lt;/li&gt;
+      &lt;li&gt;左正合列 $0 → (A, M) → M^n → M^m$ 可补全作 $M^l → M^n → M^m$;&lt;/li&gt;
+      &lt;li&gt;特征模 $X^+$ 是内射模.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;关于特征模函子 $(-)^+ := (-, ℚ / ℤ)_ℤ : 𝐌𝐨𝐝 _R → 𝐌𝐨𝐝 _{R^{\mathrm{op}}}$ 的性质:&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;$M = 0$ 当且仅当 $M^+ =0$;&lt;/li&gt;
+      &lt;li&gt;$f$ 单射 (满射) 当且仅当 $f^+$ 满射 (单射);&lt;/li&gt;
+      &lt;li&gt;$θ$ 正合当且仅当 $θ^+$ 正合;&lt;/li&gt;
+      &lt;li&gt;$X$ 平坦当且仅当 $X^+$ 内射;&lt;/li&gt;
+      &lt;li&gt;$X$ 的平坦维数等于 $X^+$ 的内射维数.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;内射模的等价判定方法;&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;$(-, M)$ 正合, 等价地,         &lt;ol&gt;
+          &lt;li&gt;$(-, M)$ 将满射对应作单射;&lt;/li&gt;
+          &lt;li&gt;$\mathrm{Ext}^1(-, M) = 0$;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;$M$ 提升一切单射, 等价地,         &lt;ol&gt;
+          &lt;li&gt;$M$ 提升一切理想的包含;&lt;/li&gt;
+          &lt;li&gt;$M$ 的本性扩张必平凡;&lt;/li&gt;
+          &lt;li&gt;$M$ 出发的单射可列;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;$M$ 是 $({_R}R^{∐ I})^+ ≃ ∏({_R}R^+)$ 的直和项.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;投射模的等价判定方法&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;$(M, -)$ 正合, 等价地,         &lt;ol&gt;
+          &lt;li&gt;$(M, -)$ 保持满射;&lt;/li&gt;
+          &lt;li&gt;$\mathrm{Ext}^1(M, -) = 0$;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;$M$ 提升一切满射, 等价地,         &lt;ol&gt;
+          &lt;li&gt;$M$ 收尾的满射可列;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;$M$ 是自由模的直和项;&lt;/li&gt;
+      &lt;li&gt;存在投射基;&lt;/li&gt;
+      &lt;li&gt;$M$ 是可数生成投射模的余积.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;证明略.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;有限表现模&quot;&gt;有限表现模&lt;/h2&gt;
+
+&lt;h2 id=&quot;平坦模&quot;&gt;平坦模&lt;/h2&gt;
+
+&lt;h2 id=&quot;内射模&quot;&gt;内射模&lt;/h2&gt;
+
+&lt;h2 id=&quot;特征模函子&quot;&gt;特征模函子&lt;/h2&gt;
+
+&lt;h2 id=&quot;投射模&quot;&gt;投射模&lt;/h2&gt;
+</description>
+          <pubDate>2025-05-03T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/FP_P_I_F</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/FP_P_I_F</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>生成元的等价定义</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;p&gt;以下假定局部小的加法范畴, 必要时假定范畴存在的余积.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(生成元的等价定义). 称 $U$ 是生成元, 若以下等价命题成立.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(U,-)$ 是忠实的函子;&lt;/li&gt;
+    &lt;li&gt;对任意 $X \overset f {\underset g ⇉} Y$, 总存在 $φ : U → X$ 使得 $f ∘ φ ≠ g ∘ φ$.&lt;/li&gt;
+    &lt;li&gt;(若范畴有余积). 对任意对象 $X$, 均存在指标集 $I$ 使得 $U^{⊕ I} ↠ X$ 满.&lt;/li&gt;
+    &lt;li&gt;(若范畴有余积). $(U, -)$ 返回满射, 即, $(U, f)$ 满蕴含 $f$ 满.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;前两条的等价性来自定义. &lt;br /&gt; (1 ⇒ 3). 若 $(U, -)$ 忠实, 则考虑态射&lt;/p&gt;
+  &lt;p&gt;$$
+\operatorname{id}_{(U,X)} ∈ ((U,X), (U,X))_{𝐒𝐞𝐭𝐬} ≃ ∏_{(U,X)} (U,X) ≃ (∐_{(U,X)}U, X) ∋ θ_X.
+$$ 下证明 $θ_X$ 是满态射, 也就是 $a ≠ b$ 蕴含 $θ_X ∘ a ≠ θ_X ∘ b$. 由生成元的定义, 存在 $U \xrightarrow φ X$ 使得 $a ∘ φ ≠ b ∘ φ$. &lt;br /&gt; 从余极限泛性质的视角出发, 复合&lt;/p&gt;
+  &lt;p&gt;$$
+U \overset {e_f} ↪ ∐_{(U,X)}U \xrightarrow {θ_X} X
+$$&lt;/p&gt;
+  &lt;p&gt;就是 $f$. 由 $a ≠ b$, 则考虑 \begin{equation} U \xrightarrow {φ}∐_{(U,X)}U \xrightarrow {θ_X} X \overset a {\underset b ⇉} Y \end{equation}&lt;/p&gt;
+  &lt;p&gt;由 $a ∘ φ = a ∘ θ_X ∘ φ ≠ b ∘ θ _X ∘ φ = b ∘ φ$, 得证. &lt;br /&gt; (3 ⇒ 1). 若存在 $f ≠ g ∈ (X,Y)$, 则复合满态射 $π : ∐_I U ↠ X$ 后 $f ∘ π ≠ g ∘ π$. 依照余积的泛性质, 总存在 $U$ 与 $φ : U → X$ 使得 $f ∘ φ ≠ g ∘ φ$. 因此 $(U,f) ≠ (U,g)$. &lt;br /&gt; (1 ⇒ 4). 取 $f : X → Y$ 使得 $(U,f)$ 满, 则任意 $U → Y$ 通过 $f$ 分解. 下证明 $f$ 满, 也就是 $a ≠ b$ 蕴含 $a ∘ f ≠ b ∘ f$. 依照生成元的定义, 任取 $p : U → Y$ 使得 $a ∘ p ≠ b ∘ p$. 由 $p$ 通过 $f$ 分解, 则必有 $a ∘ f ≠ b ∘ f$. &lt;br /&gt; (4 ⇒ 1). 取特殊的 Hom-满射 $(U,θ_X)$, 因此 $θ_X$ 满, 从而得 3., 故得 1..&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-03T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Equi_Def_Generator</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Equi_Def_Generator</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>生成元的性质</title>
+          <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#生成元&quot; id=&quot;markdown-toc-生成元&quot;&gt;生成元&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#abel-范畴的生成元&quot; id=&quot;markdown-toc-abel-范畴的生成元&quot;&gt;Abel 范畴的生成元&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#投射生成元&quot; id=&quot;markdown-toc-投射生成元&quot;&gt;投射生成元&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#满态射的拉回满&quot; id=&quot;markdown-toc-满态射的拉回满&quot;&gt;满态射的拉回满&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#投射生成元与-ml-条件&quot; id=&quot;markdown-toc-投射生成元与-ml-条件&quot;&gt;投射生成元与 ML 条件&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;暂时零散地记录一些细节的命题, 有空时补充.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;生成元&quot;&gt;生成元&lt;/h2&gt;
+
+&lt;p&gt;以下假定局部小的加法范畴, 必要时假定范畴存在的余积.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(生成元, 等价性的&lt;a href=&quot;Equi_Def_Generator&quot;&gt;证明&lt;/a&gt;). 称 $U$ 是生成元, 若以下等价命题成立.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(U,-)$ 是全忠实的函子;&lt;/li&gt;
+    &lt;li&gt;对任意 $X \overset f {\underset g ⇉} Y$, 总存在 $φ : U → X$ 使得 $f ∘ φ ≠ g ∘ φ$.&lt;/li&gt;
+    &lt;li&gt;(若范畴有余积). 对任意对象 $X$, 均存在指标集 $I$ 使得 $U^{⊕ I} ↠ X$ 满.&lt;/li&gt;
+    &lt;li&gt;(若范畴有余积). $(U, -)$ 返回满射, 即, $(U, f)$ 满当且仅当 $f$ 满.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;abel-范畴的生成元&quot;&gt;Abel 范畴的生成元&lt;/h3&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;假定 $U$ 是 Abel 范畴的生成元, 则 $(U, -)$ 保持严格的单射.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;给定严格的单射 $i : K ↪ X$. 取 $φ : U→ X$ 使得&lt;/p&gt;
+  &lt;p&gt;$$
+U \xrightarrow φ X \overset 0 {\underset{π } ⇉ } X/K
+$$&lt;/p&gt;
+  &lt;p&gt;是不同的复合态射, 因此 $φ$ 不通过 $i$ 分解. 这说明 $(U,i)$ 不是满射.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Abel 范畴良幂的一个充分条件). 若 Abel 范畴局部小且有生成元, 则对任意对象 $X$, 子对象类 $𝐒𝐮𝐛(X)$ 是集合.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;考虑偏序集的函子 \begin{equation} 𝐒𝐮𝐛 (X) → 𝐬𝐮𝐛 (U, X),\quad [ι : S ↪ X] ↦ [(U, ι) : (U, S) ↪ (U, X)]. \end{equation}&lt;/p&gt;
+  &lt;p&gt;以上引理说明 $(U,-)$ 保持严格单射, 从而保持严格的子对象. 这说明 $𝐒𝐮𝐛 (X)$ 是集合.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;投射生成元&quot;&gt;投射生成元&lt;/h3&gt;
+
+&lt;div class=&quot;slogan&quot;&gt;
+  &lt;p&gt;投射生成元的好处: 将 $x ∈ X$ 描述作 $f ∈ (U, X)$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(投射对象). 投射对象 $P$ 具有与生成元类似的性质.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(P, -)$ 是正合的函子;&lt;/li&gt;
+    &lt;li&gt;$(P, -)$ 保持满射.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(投射生成元). 若生成元是投射对象, 则称之投射生成元.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;对投射生成元 $U$,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(U,-)$ 是忠实的正合函子;&lt;/li&gt;
+    &lt;li&gt;$(U,-)$ 保持并反射一切满射.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;对 Abel 范畴而言 (尤其是常见的模范畴), 足够大的投射对象似乎总是生成元. 以下是投射对象构成生成元的充要条件.&lt;/p&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;假定 $P$ 是 Abel 范畴的投射对象. $P$ 是投射生成元当且仅当 $(P,-)$ 反射非零对象, 即, $X = 0$ 当且仅当 $(P,X) = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;一方面, 生成元反射非零态射, 从而反射非零对象 (取 $\mathrm{id}$). 另一方面, 若 $(P,-)$ 反射非零对象, 则&lt;/p&gt;
+  &lt;p&gt;\begin{equation} [(P,f) = 0] ⟺ [\operatorname{im}(P,f) = 0] ⟺ [(P, \operatorname{im} f) = 0] ⟺ [\operatorname{im} f = 0]. \end{equation}&lt;/p&gt;
+  &lt;p&gt;从而 $(P,-)$ 反射非零态射.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;以上 $P$ 投射的前提条件不能省去; 考虑 $ℤ/4ℤ$-模范畴与反射非零对象的可表函子 $(ℤ/2ℤ, -)$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(构造投射生成元的常见方式). 给定自由遗忘伴随 $F : 𝒞 ⇆ 𝐒𝐞𝐭𝐬 : U$. 假定 $U$ 是忠实且正合的, 也就是&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$𝒞$ 中不同的态射是不同的集合间映射, 且&lt;/li&gt;
+    &lt;li&gt;$𝒞$ 中满态射必是集合满射.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;此时, $FX$ 均是投射生成元.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;由右伴随忠实, 得左伴随 $F$ 保持投射对象.&lt;/li&gt;
+    &lt;li&gt;$(FX, -) ≃ (X, U(-))$ 是忠实函子.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;具体范畴的投射生成元基本构造如上. 遗忘函子通常要求忠实, 具体见&lt;a href=&quot;Forget&quot;&gt;此文&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;满态射的拉回满&quot;&gt;满态射的拉回满&lt;/h3&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;若范畴具有投射生成元, 则满态射的拉回仍满.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;对以下拉回方块 ⬓, 下证明满态射的拉回 $a$ 是满态射. 任取 $f ≠ g$, 下证明 $f ∘ a ≠ g ∘ a$.&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNixbMiwxLCJNIl0sWzIsMiwiXFxidWxsZXQiXSxbMSwyLCJcXGJ1bGxldCJdLFsxLDEsIlxcYnVsbGV0Il0sWzAsMCwiVSJdLFszLDEsIlxcYnVsbGV0Il0sWzIsMSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzAsMV0sWzMsMCwiYSJdLFszLDJdLFswLDUsImYiLDAseyJvZmZzZXQiOi0yfV0sWzAsNSwiZyIsMix7Im9mZnNldCI6Mn1dLFszLDEsIuKskyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDAsIlxcdmFycGhpICIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo3MCwiY3VydmUiOi0yfV0sWzQsMiwiXFxwc2kgIiwyLHsiY3VydmUiOjJ9XSxbNCwzLCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNixbMiwxLCJNIl0sWzIsMiwiXFxidWxsZXQiXSxbMSwyLCJcXGJ1bGxldCJdLFsxLDEsIlxcYnVsbGV0Il0sWzAsMCwiVSJdLFszLDEsIlxcYnVsbGV0Il0sWzIsMSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzAsMV0sWzMsMCwiYSJdLFszLDJdLFswLDUsImYiLDAseyJvZmZzZXQiOi0yfV0sWzAsNSwiZyIsMix7Im9mZnNldCI6Mn1dLFszLDEsIuKskyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDAsIlxcdmFycGhpICIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo3MCwiY3VydmUiOi0yfV0sWzQsMiwiXFxwc2kgIiwyLHsiY3VydmUiOjJ9XSxbNCwzLCIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;依照生成元的定义, 取 $φ$ 使得 $f ∘ φ ≠ g ∘ φ$. 依照投射模的定义, 取 $ψ$. 依照拉回的泛性质得虚线处态射, 因此 $φ$ 通过 $a$ 分解. 相应地, $f ∘ a ≠ g ∘ a$. 这说明 $a$ 满.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;投射生成元与-ml-条件&quot;&gt;投射生成元与 ML 条件&lt;/h3&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;投射生成元保持并反射 Mittag-Leffler 条件.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;假定 Abel 范畴有投射生成元 $U$, 则 $M$ 是 Mittag-Leffler 系统当且仅当 $(U,M)$ 亦然.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;若 $M$ 是 Mittag-Leffler 系统, 则正合函子 $(U,-)$ 与 $\mathrm{im}$ 交换. 将涉及 $(U,\mathrm{im}(f))$ 的语句改作 $\mathrm{im}(U,f)$ 即可.&lt;/li&gt;
+    &lt;li&gt;考虑单态射 $i:\mathrm{im}(f\circ g)\hookrightarrow \mathrm{im}(f)$. 回忆熟知结论: 若 $(U,i)$ 是同构, 则 $i$ 同构. 后从略.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;由于 $(U,-)$ 反射 Mittag-Leffler 系统, 许多证明全然放在模范畴中考虑.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-03T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Projective_Generators</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Projective_Generators</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>分析学中的 Mittag-Leffler 定理</title>
+          <description>&lt;h2 id=&quot;分析学中的-mittag-leffler-定理&quot;&gt;分析学中的 Mittag-Leffler 定理&lt;/h2&gt;
+
+&lt;p&gt;对完备度量空间间的连续映射 $φ : (X, d_X) → (Y, d_Y)$, 记 $φ^∗ d_X$ 是度量的直像, 定义作
+\begin{equation}
+  (φ ^∗ d_Y) : X × X → ℝ ,\quad (a,b) ↦ d_Y(φ(a), φ (b)).
+\end{equation}&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(完备度量空间的 Mittag-Leffler 系统, 满态射情形). 给定 $\mathbb N$ 在 (非空) 完备度量空间上的预层 $((X,d),f)$, 使得一切 $f_∙$ 是满态射, 即塔 \begin{equation} ↠ \cdots \overset {f_1} ↠ X_1 \overset {f_0} ↠X_0, \end{equation} 则逆向极限对象仍是稠密的, 即, \begin{equation} X_0=\overline{\bigcap_{n\geq 1}\mathrm{im}(f_0\circ f_1\circ\cdots \circ f_n)}. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;不妨假定一切连续映射 $f_k$ 是可缩的, 依据是&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$f_0:(X_1,d_1)\to (X_0,d_0)$ 在新度量 $(X_1,d_1+(f_0^\ast d_0))\to (X_0,d_0)$ 下是可缩的映射;&lt;/li&gt;
+    &lt;li&gt;$\mathrm{id}_X:(X_1,d_1+(f_0^\ast d_0))\simeq (X_1,d_1)$ 是同胚.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;此时, 自任意 $x_0\in X_0$ 的开邻域 $U_0$ 归纳地构造开球链 $U_{k+1}\subset \overline {f_k^{-1}(U_k)}$. 依照 Baire 纲集定理知 $x_0$ 在题设的闭包内.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;可以将满态射条件放宽至 &lt;a href=&quot;Projlim_1_Vanish#mittag-leffler-条件&quot;&gt;Mittag-Leffler 条件&lt;/a&gt;, 即, 对任意 $k$, $(\overline{\mathrm{im}(f_{n,k})})_{k\geq n}$ 驻定.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Mittag-Leffler 定理). 任给定连通开区域 $\Omega\subset \mathbb C$, 离散集 $S=\{\alpha_i\}_{i\in \mathbb N}\subset \Omega$, 全纯函数 $\{g_i:\alpha_i\to 0\}_{i\in \mathbb N}$, 则存在 $f$ 使得&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$f$ 是开集 $\Omega$ 上的亚纯函数, 其在 $\Omega \setminus S$ 全纯, 且对任意 $i$, $f(z)-g_i(\frac 1{z-\alpha_i})$ 在 $\alpha_i$ 处全纯;&lt;/li&gt;
+    &lt;li&gt;存在多项式 $\{p_i\}$ 与整函数 $h$, 使得 $f=h(z)+\sum_{i\in \mathbb N}\left(g_i(1/(z-\alpha_i))-p_i(z)\right).$&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;这一定理表明: 任意亚纯函数可依照极点性质唯一地分解成有理函数与整函数.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;以下是一个证明梗概, 主要目的是说明其与 Mittag-Leffler 系统的联系.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;采用可数个紧集从内覆盖 $\Omega$, 不妨记作 $K_1\subset K_2\subset \cdots$.&lt;/li&gt;
+    &lt;li&gt;记 $d_n$ 是 $C^0(K_n, \mathbb C)$ 上度量 (如 $\mathscr L^2$-范数), 定义 $C^0(\Omega, \mathbb C)$ 上连续函数度量 $d:=\sum _{n\geq 1}\frac{1}{2^n}\cdot \frac{d_n}{1+d_n}$.&lt;/li&gt;
+    &lt;li&gt;观察柯西列, 以上 $(C^0(\Omega, \mathbb C),d)$ 是完备的. 依照 Morera 定理, $(\mathrm{Hol}(\Omega),d)$ 是 $C^0(\Omega, \mathbb C)$ 的闭子空间, 亦完备.&lt;/li&gt;
+    &lt;li&gt;将 $K_n$ 上的度量 $d_n$ 迁移至 $X_n=\left\{f+\sum_{\alpha_i\in K_n}g_i\left(\frac 1{z-\alpha_i}\right)\mid f\in \mathrm{Hol}(K_n)\right\}\subset M(K_n)$. $X_n$ 无非全纯函数的平移.&lt;/li&gt;
+    &lt;li&gt;限制函数 $f_{n-1}:X_n\to X_{n-1}$ 连续且有稠密像 (Runge 定理). 依照 Mittag-Leffler 条件即可断言 $f$ 存在.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-03T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/ML_analysis</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/ML_analysis</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>谈谈遗忘函子</title>
+          <description>&lt;h2 id=&quot;出发点-本质满-全-忠实&quot;&gt;出发点: 本质满, 全, 忠实&lt;/h2&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;群 $+$ 结构 $=$ 线性空间; 群 $+$ 性质 $=$​ Abel 群.&lt;/p&gt;
+  &lt;p&gt;区别之一: 结构不改变同构类. 例如 $U$ 与 $V$ 的类型是集合,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;p&gt;假定 $U$ 和 $V$ 也能作成 $k$-线性空间, 我们称 $k$-线性空间是一种结构. 注意到真包含关系&lt;/p&gt;
+      &lt;p&gt;$$
+   \{U\xrightarrow f V: \text{$f$ 是线性空间的同构}\}\subset \{U\xrightarrow f V: \text{$f$ 是集合的同构 (即双射)}\}.
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;假定 $U$ 和 $V$​ 是非空集合, 我们称非空是一种性质. 注意到恒等关系 $$
+   \{U\xrightarrow f V: \text{$f$ 是非空集合的同构}\}= \{U\xrightarrow f V: \text{$f$ 是集合的同构}\}.
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(本质满, 全, 忠实).&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;本质满: 任取对象 $Y\in \mathscr D$, 总存在 $FX\simeq \mathscr C$;&lt;/li&gt;
+    &lt;li&gt;全: 任取态射 $g \in \mathscr D$, 总存在 $Ff = g$.&lt;/li&gt;
+    &lt;li&gt;忠实: 任取 $2$-态射 $\beta\in \mathscr D$, 总存在 $\alpha\in \mathscr C$ 使得 $F\alpha =\beta$.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;(范畴视角的映射). 记 $f:X\to Y$ 是集合的映射. 若将 $X$ 与 $Y$ 看作离散范畴, 则 $f$ 是范畴的函子. 特别地,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;若 $f$ 是满射, 当且仅当 $f$ 是本质满的;&lt;/li&gt;
+    &lt;li&gt;若 $f$ 是单射, 当且仅当 $f$ 是全的;&lt;/li&gt;
+    &lt;li&gt;$f$ 必然是忠实的, 因为映射良定义.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(广群). 称范畴 $\mathscr C$ 是广群, 当且仅当 $\mathscr C$ 中态射可逆.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$\mathrm{Iso}(\mathscr C)$ 是广群, 同时 $\mathrm{Iso}(-)$ 有类似函子性的特点: 函子 $F:\mathscr C\to \mathscr D$ 诱导了 $\mathrm{Iso}(F)$.&lt;/li&gt;
+    &lt;li&gt;粗略地看, $\mathrm{Funct}_{\mathrm{Iso}}(\mathrm{Iso}(\mathscr C),\mathscr G)\simeq \mathrm{Funct}(\mathscr C,U(\mathscr G))$​​​​ 是伴随.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;遗忘&quot;&gt;遗忘&lt;/h2&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(广群函子带来的遗忘). 假定 $F:\mathscr C\to \mathscr D$ 是广群之间的函子, 我们关注 $F$ 可以遗忘多少信息.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;p&gt;称 $F$ 没有遗忘任何信息, 若 $F$ 是本质满, 全, 且忠实的.&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;例子: (Morita 等价) 记 $f:k\to k^{n\times n},\quad c\mapsto c\cdot I$ 是 $k$-代数的单同态. 则 $f^\ast$ 给出 $k^{n\times n}$-模范畴到 $k$-模范畴的函子. 特别地, $\mathrm{Iso}(f^\ast)$ 没有遗忘任何信息.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;称 $F$ 至多遗忘了性质, 当且仅当 $F$​ 是全, 且忠实的.&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;例子: ($H_0(-,\mathbb Z)$ 的右伴随: 交换群向群的遗忘) 记 $U:\mathrm{Mod}_{\mathbb Z}\to \mathrm{Grp}$ 是全忠实的遗忘函子, 则 $\mathrm{Iso}(U)$ 也是全忠实的; 但显然不是本质满的. 此时, $\mathrm{Iso}(U)$ 遗忘了交换性.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;称 $F$ 至多遗忘了结构, 当且仅当 $F$​ 是忠实的.&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;例子: 群向集合的遗忘函子 $U:\mathrm{Grp}\to \mathrm{Sets}$ 是忠实的, 从而 $\mathrm{Iso}(U)$ 忠实; 但 $\mathrm{Iso}(U)$ 不全 (集合双射不必由遗忘给出), 且并非本质满 (空集不是群的遗忘). 此时, $\mathrm{Iso}(U)$ 遗忘了群结构.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;其他情况 ($F$ 至多遗忘了物件).&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;p&gt;例子: 考虑记拓扑空间 (景) $\mathscr C$ 的开覆盖范畴 $J_{\mathscr C}$, 其对象是二元组 $\mathscr U:=(\{U_i\xrightarrow {u_i} U\}_{i\in I}, U)$, 态射是三元组&lt;/p&gt;
+          &lt;p&gt;$$
+     (\varphi, \phi , \alpha):\mathscr U\to \mathscr V,\quad \left[U_i\xrightarrow{\varphi_i} V_{\alpha(i)}\xrightarrow{v_{\alpha(i)}} V\right] = \left[ U_i\xrightarrow{u_{i}} U\xrightarrow \phi V\right].
+     $$&lt;/p&gt;
+          &lt;p&gt;此时 $J_{\mathscr C}$ 可以遗忘作 $\mathscr C$, 方式是仅保留被覆盖的对象. 此时 $\mathrm{Iso}(U)$ 遗忘了开覆盖这一物件 (而非结构).&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(遗忘). 考虑通常范畴间的函子 $F:\mathscr C\to \mathscr D$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p&gt;$F$ 遗忘性质, 但保留物件与结构, 当且仅当 $F$​​ 是全忠实的.&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;例如 $U:\mathrm{CommRing}\to \mathrm{Ring}$ 遗忘了交换性; 但保全了环结构等, 以及 underlying set 等物件.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;$F$ 遗忘结构, 但保留物件与性质, 当且仅当 $F$​ 是本质满且忠实的.&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;例如 $U:\mathrm{Banach}_{\mathbb R}\to \mathrm{Vect}_{\mathbb R}$​ 遗忘了赋范结构; 但保全了加法交换律, 结合律等性质, 以及 underlying set 等物件.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;$F$ 遗忘物件, 但保留性质与结构, 当且仅当 $F$ 是本质满且全的.&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;例如平凡函子 $\mathrm{Sets}\to \bullet$ 遗忘了 underlying set 这一物件; 但保全了结构和性质 (尽管是以平凡的形式).&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;像&quot;&gt;像&lt;/h2&gt;
+
+&lt;p&gt;将映射视作离散范畴的函子, 类似升维的操作. 对一般范畴间函子, 如何定义像?&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(像). 函子的像. 给定通常范畴的函子 $F:\mathscr C\to \mathscr D$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;与集合间的映射类似, 范畴间的函子可以进行满-单分解的类似操作.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;基于以上考量, 我们定义 $1$-像与 $2$-像. 拆解方式是&lt;/p&gt;
+  &lt;p&gt;$$
+\mathscr C\to \mathrm{im}^2(F)\to \underset{\text{常用的像}}{\underbrace{\mathrm{im}^1(F)}}\to \mathscr D.
+$$&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p&gt;$\mathrm{im}^2(F)$​​​ 的定义类似稳定范畴, 具体地, $\mathrm{im}^2(F)$ 是如下范畴: $\mathsf{Ob}(\mathrm{im}^2(F))=\mathsf{Ob}(\mathscr C)$,&lt;/p&gt;
+      &lt;p&gt;$$
+  (X,Y)_{\mathrm{im}^2(F)}:=(X,Y)_{\mathscr C}/\sim \quad (f\sim g\iff Ff=Fg).
+  $$&lt;/p&gt;
+      &lt;p&gt;在范畴等价的意义下, $\mathrm{im}^2(F)$ 就是通常的 $\mathrm{im}(F)$.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;$\mathrm{im}^1(F)$ 是如下范畴: $\mathsf{Ob}(\mathrm{im}^1(F))=\mathrm{Ob}(\mathscr C)$,&lt;/p&gt;
+      &lt;p&gt;$$
+    (X,Y)_{\mathrm{im}^1(F)}:=(FX,FY)_{\mathscr D}.
+    $$&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;(满-单分解的唯一性). 对函子 $F:\mathscr C\to \mathscr D$, 存在范畴等价意义下唯一的分解:&lt;/p&gt;
+  &lt;p&gt;$$
+\mathscr C\xrightarrow {\text{本质满, 全, 不忠实}}\mathrm{im}^2(F)\xrightarrow {\text{本质满, 不全, 忠实}}\mathrm{im}^1(F)\xrightarrow {\text{不本质满, 全, 忠实}}\mathscr D.
+$$&lt;/p&gt;
+  &lt;p&gt;将对象, 态射, $2$-态射的从属关系写作三元组, 则&lt;/p&gt;
+  &lt;p&gt;$$
+(\mathscr C,\mathscr C,\mathscr C)\xrightarrow{\text{仅遗忘物件}} (\mathscr C,\mathscr C,\mathscr D)\xrightarrow{\text{仅遗忘结构}}  (\mathscr C,\mathscr D,\mathscr D)\xrightarrow{\text{仅遗忘性质}}  (\mathscr D,\mathscr D,\mathscr D).
+$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;从子集与商集的角度出发, 可以在必要时定义 $\mathrm{coim}^{1,2}$.&lt;/p&gt;
+  &lt;p&gt;$$
+\begin{bmatrix}
+ &amp;  &amp; \mathrm{im}^{2} &amp; \rightarrow  &amp; \mathrm{im}^{1} &amp; \rightarrow  &amp; \mathscr{D}\\
+ &amp;  &amp; \sim \,\uparrow \quad  &amp;  &amp; \sim \,\uparrow \quad  &amp;  &amp; \\
+\mathscr{C} &amp; \rightarrow  &amp; \mathrm{coim}^{2} &amp; \rightarrow  &amp; \mathrm{coim}^{1} &amp;  &amp; .
+\end{bmatrix}
+$$&lt;/p&gt;
+  &lt;p&gt;此处 $\mathrm{coim}$ 一路取商关系, $\mathrm{im}$​​ 一路取子关系.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;凡函子皆遗忘&quot;&gt;凡函子皆遗忘&lt;/h2&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(Tame example). 记 $U:\mathrm{Grp}\to \mathrm{Sets}$ 是交换群的遗忘函子, 则分解如下:&lt;/p&gt;
+  &lt;p&gt;$$
+\mathrm{Grp}\to \mathrm{Grp}\to \mathrm{Sets}\setminus \emptyset \to \mathrm{Sets}.
+$$&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;这说明从群向集合的遗忘应当 (唯一地) 分解如下: 不遗忘任何物件, 遗忘群的结构 (保留非空集合), 最后遗忘集合非空的性质.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(Wild example). 既然单射可以视作满射, 获得结构也可以视作特殊的遗忘. 例如 $F:\mathrm{Set}\to \mathrm{Mod}_R$ 将 $S$ 映至自由模 $R^{\oplus |S|}$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;p&gt;$F$ 是忠实的, 因为更换指标的方式唯一决定了模同态. 因此, $F$ 不遗忘任何物件.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;$F$ 并非全的, 从而 $F$ 应当遗忘了某些结构. 此处遗忘的结构等价于以下短语:&lt;/p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;自由模的同态只有换指标这一种形式.&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;p&gt;换言之, $F$ 遗忘了单点不可分解这类性质.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;$F$​ 是本质满的, 从而不遗忘任何性质.&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;slogan&quot;&gt;
+  &lt;p&gt;任何函子都是遗忘函子, 遗忘的东西只有显然与不显然 (差一个范畴同构) 之别.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-03T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Forget</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Forget</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>$(1-m)$ 满的充分条件</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;若 Abel 范畴 (对必要的条件) 完备, 且有投射生成元 $U$. 若逆向塔 $M$ 中的一切 $m_i$ 满, 则 $(1-m)$ 满.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;由&lt;a href=&quot;Projective_Generators&quot;&gt;投射生成元的性质&lt;/a&gt;, $(1-m)$ 满当且仅当 $(U, 1-m)$ 满, 即 $φ:U→ ∏ M$ 总能被 $(1-m)$ 提升作 $ψ$. 从元素角度视之, 常数 $(φ_n)$ 与未知元 $(ψ_n)$ 满足方程 \begin{equation} \psi_k-m_k\psi_{k+1}=\varphi_k\quad (\forall k\in \mathbb N). \tag{⋆} \end{equation}&lt;/p&gt;
+  &lt;p&gt;以上方程组有解当且仅当 $(1-m)$ 满. &lt;br /&gt; &lt;br /&gt; 以下归纳地求解方程组即可. 无论 $ψ_0$ 取何值, 提升问题 $m_0 ∘ ψ_1=(φ _0-ψ_0)$ 总存在解 $ψ_1$, 这是因为 $m_0$ 满且 $U$ 是投射生成元. 归纳地, $\{ψ_k\}_{k≥ 0}$ 都能解出, 从而方程组 $⋆$ 有解.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-01T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/When_1_m_epi</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/When_1_m_epi</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>$\varprojlim{}_{ℕ}^1$ 是右导出极限</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Abel 群的投射塔). 即预层 $\mathrm{PSh}(\mathbb N)$, 其对象 (函子 $M$) 表现做映射链 \begin{equation} \cdots \xrightarrow{m_2} M_2\xrightarrow{m_1} M_1\xrightarrow{m_0} M_0. \end{equation} 记 $m:\prod_{\mathbb N} M_k\to \prod _{\mathbb N}M_k,\quad (x_k)_{k\in \mathbb N}\mapsto (x_k-m_k(x_{k+1}))$ 由泛性质 $\{p_{k}m=m_{k+1}p_{k+1}\}_{k\in \mathbb N}$ 确立. 记正合列&lt;/p&gt;
+  &lt;p&gt;\begin{equation} 0\to {\varprojlim}^0 M\to \prod_{\mathbb N} M\xrightarrow{1-m}\prod_{\mathbb N} M\to {\varprojlim}^1 M\to 0. \end{equation}&lt;/p&gt;
+  &lt;p&gt;其中, $1-m$ 自动对应如下泛性质确立的序列 ($\oplus$ 强调了双积)&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHByb2QgTSJdLFsyLDAsIlxccHJvZCBNIl0sWzAsMSwiTV9rXFxvcGx1cyBNX3trKzF9Il0sWzIsMSwiTV9rIl0sWzAsMSwiMS1tIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiKHBfayxwX3trKzF9KSIsMl0sWzEsMywicF9rIl0sWzIsMywiKFxcbWF0aHJte2lkfV97TV9rfSwgLW1fe2srMX0pIiwyXSxbMCwzXV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHByb2QgTSJdLFsyLDAsIlxccHJvZCBNIl0sWzAsMSwiTV9rXFxvcGx1cyBNX3trKzF9Il0sWzIsMSwiTV9rIl0sWzAsMSwiMS1tIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiKHBfayxwX3trKzF9KSIsMl0sWzEsMywicF9rIl0sWzIsMywiKFxcbWF0aHJte2lkfV97TV9rfSwgLW1fe2srMX0pIiwyXSxbMCwzXV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;180&quot; style=&quot;border-radius: 8px; border: dahsed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;${\varprojlim}^1$ 是 $\varprojlim$ 的右导出函子.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;证明的关键: 构造内射对象 $M\hookrightarrow I$, 使得 $I$ 的位移算子是满的.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p&gt;记 $X_{\geq n}: \left[X=X=\cdots = X\to 0\to \cdots 0\right]$ ($n$ 个 $0$ 对象), 则有伴随函子&lt;/p&gt;
+      &lt;p&gt;\begin{equation} (Y,X_{\geq n})_{\mathrm{PSh}(\mathbb N)}\simeq (Y_n, X). \end{equation}&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;特别地, 若 $I$ 是 Abel 群范畴的内射对象, 则 $I_{\geq n}$ 亦然 (右伴随保持内射对象).&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;$X_{\geq n}$ 的位移算子是可裂满的. 例如对 $X_{\geq n}$, 其左逆元可以通过以下无穷阵的等式验证 (仍需要回溯一边泛性质的定义):&lt;/p&gt;
+      &lt;p&gt;$$
+  \begin{pmatrix}
+    1 &amp;   &amp;   &amp;        \\
+    1 &amp; 1 &amp;   &amp;        \\
+      &amp; 1 &amp; 1 &amp;        \\
+      &amp;   &amp; 1 &amp; \ddots
+  \end{pmatrix} \cdot \begin{pmatrix}
+    1 &amp; -1 &amp;    &amp;        &amp;        \\
+      &amp; 1  &amp; -1 &amp;        &amp;        \\
+      &amp;    &amp; 1  &amp; -1     &amp;        \\
+      &amp;    &amp;    &amp; \ddots &amp; \ddots
+  \end{pmatrix} =\begin{pmatrix}
+    1 &amp;   &amp;   &amp;        \\
+      &amp; 1 &amp;   &amp;        \\
+      &amp;   &amp; 1 &amp;        \\
+      &amp;   &amp;   &amp; \ddots
+  \end{pmatrix}.
+  $$&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;记 $I(M_k)$ 是 $M_k$ 嵌入的内射对象, 则 $\prod (I(M_k))_{\geq k}$ 是 $M$ 嵌入的内射对象, 其 $(1-m)$-型算子也是可裂满 (直积正合).&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;构造内射分解 $0\to M\xrightarrow{\iota} I_\alpha\xrightarrow{\varphi_{\beta,\alpha}} I_\beta\xrightarrow{\varphi_{\gamma,\beta}}  I_\gamma\to \cdots$. 依照定义, $\varprojlim$ 的一次右导出是 \begin{equation} (R^1\varprojlim)(M)=\frac{\ker (\varprojlim \varphi_{\gamma,\beta})}{\mathrm{im}(\varprojlim \varphi_{\beta,\alpha})}=\frac{\varprojlim (\ker \varphi_{\gamma,\beta})}{\mathrm{im}(\varprojlim \varphi_{\beta,\alpha})}. \end{equation} 对 $0\to M\to I_\alpha\to \ker (\varphi_{\gamma,\beta})\to 0$ 使用正合的直积, 使用蛇引理得长正合列 \begin{equation} 0\to \varprojlim M\xrightarrow{\iota} \varprojlim I_\alpha\xrightarrow{\varphi_{\beta,\alpha}} \varprojlim \ker(\varphi_{\gamma,\beta})\to {\varprojlim}^1 M\to 0. \end{equation} 其余核项等于 $R^1\varprojlim$, 因此 ${\varprojlim}^1$ 确实是 ${\varprojlim}$ 的右导出.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-01T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Proj_is_1_Derivative</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Proj_is_1_Derivative</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>$\varprojlim{}_{ℕ}^0 = \varprojlim{}_{ℕ}$</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Abel 群的投射塔). 即预层 $\mathrm{PSh}(\mathbb N)$, 其对象 (函子 $M$) 表现做映射链 \begin{equation} \cdots \xrightarrow{m_2} M_2\xrightarrow{m_1} M_1\xrightarrow{m_0} M_0. \end{equation} 记 $m:\prod_{\mathbb N} M_k\to \prod _{\mathbb N}M_k,\quad (x_k)_{k\in \mathbb N}\mapsto (x_k-m_k(x_{k+1}))$ 由泛性质 $\{p_{k}m=m_{k+1}p_{k+1}\}_{k\in \mathbb N}$ 确立. 记正合列&lt;/p&gt;
+  &lt;p&gt;\begin{equation} 0\to {\varprojlim}^0 M\to \prod_{\mathbb N} M\xrightarrow{1-m}\prod_{\mathbb N} M\to {\varprojlim}^1 M\to 0. \end{equation}&lt;/p&gt;
+  &lt;p&gt;其中, $1-m$ 自动对应如下泛性质确立的序列 ($\oplus$ 强调了双积)&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHByb2QgTSJdLFsyLDAsIlxccHJvZCBNIl0sWzAsMSwiTV9rXFxvcGx1cyBNX3trKzF9Il0sWzIsMSwiTV9rIl0sWzAsMSwiMS1tIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiKHBfayxwX3trKzF9KSIsMl0sWzEsMywicF9rIl0sWzIsMywiKFxcbWF0aHJte2lkfV97TV9rfSwgLW1fe2srMX0pIiwyXSxbMCwzXV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHByb2QgTSJdLFsyLDAsIlxccHJvZCBNIl0sWzAsMSwiTV9rXFxvcGx1cyBNX3trKzF9Il0sWzIsMSwiTV9rIl0sWzAsMSwiMS1tIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiKHBfayxwX3trKzF9KSIsMl0sWzEsMywicF9rIl0sWzIsMywiKFxcbWF0aHJte2lkfV97TV9rfSwgLW1fe2srMX0pIiwyXSxbMCwzXV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dahsed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Proj_0_is_Lim&quot;&gt;证明&lt;/a&gt;). ${\varprojlim}^0 M:=\mathrm{ker}(m)=\varprojlim M$ 是通常的极限.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;对任意对象 $X$, 总有同构 \begin{equation} (X, \varprojlim m) ≃ \varprojlim (X, m) \overset ⋆≃ \ker (X, m) ≃ (X, \ker m) ≃ (X, \varprojlim {}^0M). \end{equation} 此处, $⋆$ 处将 $(X, m)$ 对应作交换方块. 换言之一个 $\ker (X, m)$ 中的态射对应一族交换图&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsOCxbMywwLCJYIl0sWzMsMSwiTV8wIl0sWzIsMCwiWCJdLFsyLDEsIk1fMSJdLFsxLDEsIk1fMiJdLFsxLDAsIlgiXSxbMCwwLCJcXGNkb3RzICJdLFswLDEsIlxcY2RvdHMgIl0sWzMsMSwibV8wIl0sWzQsMywibV8xIl0sWzcsNF0sWzYsNSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwyLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDAsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMV0sWzIsM10sWzUsNF1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsOCxbMywwLCJYIl0sWzMsMSwiTV8wIl0sWzIsMCwiWCJdLFsyLDEsIk1fMSJdLFsxLDEsIk1fMiJdLFsxLDAsIlgiXSxbMCwwLCJcXGNkb3RzICJdLFswLDEsIlxcY2RvdHMgIl0sWzMsMSwibV8wIl0sWzQsMywibV8xIl0sWzcsNF0sWzYsNSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwyLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDAsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMV0sWzIsM10sWzUsNF1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;剩余的同构态射是自明的. 解释从略.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-01T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Proj_0_is_Lim</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Proj_0_is_Lim</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>模范畴中 Mittag-Leffler 条件蕴含 $\varprojlim{}^1$ 消失</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;模范畴中, Mittag-Leffler 条件使得 $\varprojlim ^1 = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;只需证明对任意 $\mathrm{PSh}(\mathbb N)$ 的 ses&lt;/p&gt;
+  &lt;p&gt;$$
+0\to (X,f)\xrightarrow ι (Y,g)\xrightarrow π (Z,h)\to 0
+$$&lt;/p&gt;
+  &lt;p&gt;$\varprojlim$ 是正合函子. &lt;br /&gt; &lt;br /&gt; 所谓 $\varprojlim (π)$ 满, 即任意 $(z_k)∈ \varprojlim Z$ 存在 $(Y,g)$ 中的原像.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$\varprojlim (π)$ 并不显然. 尽管任意有限长度的 $(z_k)_{k ≤ N}$ 可以找到原像, 但无限序列未必 (需要某些一致性的条件). Mittag-Leffler 条件将这一一致性条件转化作分段有限的条件, 最后使用 (可数) 选择公理即可.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;下只需证明 $(π_k^{-1}(z_k))$ 是 Mittag-Leffler 系统, 使得&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;该系统是 $Y$ 的子对象, 因为 $g_k((\pi_{k+1}^{-1}(z_{k+1})))\hookrightarrow (\pi_k^{-1}(z_k))$ 是直接的.&lt;/li&gt;
+    &lt;li&gt;该系统包含 $\mathrm{im}(f)$, 即, 存在较大的 $n(k)$ 使得 $\mathrm{im}(f_{n(k)})\hookrightarrow \pi_{k}^{-1}(z_k)$. 实际上, 该系统就是陪集 \begin{equation} \mathrm{im}(f_n)+y_k\quad (\forall y_k\in \pi_k^{-1}(z_k)). \end{equation}&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;对限制在 $\pi^{-1}$ 上的态射 $g'$ ($Y$ 子系统的态射), $\{g'_{n,k}\}_{n\geq k}$ 在 $n\geq n_0$ 时驻定. 此处, 参数 $n_0$ 可直接取上述 $n(k)$.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-01T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/ML_Mod</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/ML_Mod</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Happel 的导出等价定理 (第一部分证明)</title>
           <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
 
@@ -173,18 +850,105 @@ $$&lt;/p&gt;
       
         <item>
           <title>$\varprojlim{}_{ℕ}^1$ 消失的充分条件</title>
-          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+          <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#abstract&quot; id=&quot;markdown-toc-abstract&quot;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#塔与-mathjax_protectedjfx2yxjwcm9qbglte31emsqmathjax_protected&quot; id=&quot;markdown-toc-塔与-mathjax_protectedjfx2yxjwcm9qbglte31emsqmathjax_protected&quot;&gt;塔与 $\varprojlim{}^1$&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#mittag-leffler-条件&quot; id=&quot;markdown-toc-mittag-leffler-条件&quot;&gt;Mittag-Leffler 条件&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#mathjax_protectedjfx2yxjwcm9qbglte31emsqmathjax_protected-消失的充分条件&quot; id=&quot;markdown-toc-mathjax_protectedjfx2yxjwcm9qbglte31emsqmathjax_protected-消失的充分条件&quot;&gt;$\varprojlim{}^1$ 消失的充分条件&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;abstract&quot;&gt;
+  &lt;h5 id=&quot;abstract&quot;&gt;Abstract&lt;/h5&gt;
+  &lt;div&gt;
+    &lt;p&gt;以下推演一列 Abel 范畴中 $\lim^1$ 函子的基本事实, 及其在一般 Abel 范畴上的推广 (需要一些必要之假定). 重点模型是 Mittag-Leffler 条件, 以及 Mittag-Leffler 定理等经典例子.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;塔与-mathjax_protectedjfx2yxjwcm9qbglte31emsqmathjax_protected&quot;&gt;塔与 $\varprojlim{}^1$&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Abel 群的投射塔). 即预层 $\mathrm{PSh}(\mathbb N)$, 其对象 (函子 $M$) 表现做映射链 \begin{equation} \cdots \xrightarrow{m_2} M_2\xrightarrow{m_1} M_1\xrightarrow{m_0} M_0. \end{equation} 记 $m:\prod_{\mathbb N} M_k\to \prod _{\mathbb N}M_k,\quad (x_k)_{k\in \mathbb N}\mapsto (x_k-m_k(x_{k+1}))$ 由泛性质 $\{p_{k}m=m_{k+1}p_{k+1}\}_{k\in \mathbb N}$ 确立. 记正合列&lt;/p&gt;
+  &lt;p&gt;\begin{equation} 0\to {\varprojlim}^0 M\to \prod_{\mathbb N} M\xrightarrow{1-m}\prod_{\mathbb N} M\to {\varprojlim}^1 M\to 0. \end{equation}&lt;/p&gt;
+  &lt;p&gt;其中, $1-m$ 自动对应如下泛性质确立的序列 ($\oplus$ 强调了双积)&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHByb2QgTSJdLFsyLDAsIlxccHJvZCBNIl0sWzAsMSwiTV9rXFxvcGx1cyBNX3trKzF9Il0sWzIsMSwiTV9rIl0sWzAsMSwiMS1tIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiKHBfayxwX3trKzF9KSIsMl0sWzEsMywicF9rIl0sWzIsMywiKFxcbWF0aHJte2lkfV97TV9rfSwgLW1fe2srMX0pIiwyXSxbMCwzXV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHByb2QgTSJdLFsyLDAsIlxccHJvZCBNIl0sWzAsMSwiTV9rXFxvcGx1cyBNX3trKzF9Il0sWzIsMSwiTV9rIl0sWzAsMSwiMS1tIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiKHBfayxwX3trKzF9KSIsMl0sWzEsMywicF9rIl0sWzIsMywiKFxcbWF0aHJte2lkfV97TV9rfSwgLW1fe2srMX0pIiwyXSxbMCwzXV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dahsed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Proj_0_is_Lim&quot;&gt;证明&lt;/a&gt;). ${\varprojlim}^0 M:=\mathrm{ker}(m)=\varprojlim M$ 是通常的极限.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;给定逆像塔的正合列 $0\to X\to Y\to Z\to 0$, 依直积的正合型与蛇引理得长正合列 \begin{equation} 0\to {\varprojlim}^0X\to {\varprojlim}^0Y\to {\varprojlim}^0Z\to {\varprojlim}^1X\to {\varprojlim}^1Y\to {\varprojlim}^1Z\to 0. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Proj_is_1_Derivative&quot;&gt;证明&lt;/a&gt;). ${\varprojlim}^1$ 是 $\varprojlim$ 的右导出函子.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;上文构造性地证明了 $X_{\geq n}$ 的位移算子可裂满. 同理地, 一切 $m_k$ 可裂满蕴含 $M$ 的位移算子可裂满.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;给定余预层 $A\in \mathrm{PSh}(\mathbb N^{\mathrm{op}})$ (正向塔), 得函子范畴的塔 \begin{equation} h^A:[\cdots \to (A_2,-)\to (A_1,-)\to (A_0,-)]. \end{equation} 记正向塔的位移运算为 $f$, 由 AB5 知 $(1-f)$ 是单态射. 短正合列 $0\to \coprod A\to \coprod A\to \varinjlim A\to 0$ 给出&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTMsWzEsMSwiKFxcdmFyaW5qbGltIEEsLSkiXSxbMCwxLCIwIl0sWzIsMSwiKFxcY29wcm9kIEEsLSkiXSxbMywxLCIoXFxjb3Byb2QgQSwtKSJdLFs0LDEsIlxcbWF0aHJte0V4dH1eMShcXHZhcmluamxpbSBBLC0pIl0sWzUsMSwiXFxtYXRocm17RXh0fV4xKFxcY29wcm9kIEEsLSkiXSxbNiwxLCJcXG1hdGhybXtFeHR9XjEoXFxjb3Byb2QgQSwtKSJdLFsxLDAsIlxcdmFycHJvamxpbSAoQSwtKSJdLFswLDAsIjAiXSxbMiwwLCJcXHByb2QgKEEsLSkiXSxbMywwLCJcXHByb2QgKEEsLSkiXSxbNCwwLCJ7XFx2YXJwcm9qbGltfV4xIChBLC0pIl0sWzUsMCwiMCJdLFsxLDBdLFs0LDVdLFswLDJdLFsyLDNdLFszLDRdLFs1LDZdLFs4LDddLFs3LDldLFs5LDEwXSxbMTAsMTFdLFsxMSwxMl0sWzcsMCwiXFxzaW0gIiwyXSxbOSwyLCJcXHNpbSAiLDJdLFsxMCwzLCJcXHNpbSAiLDJdXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTMsWzEsMSwiKFxcdmFyaW5qbGltIEEsLSkiXSxbMCwxLCIwIl0sWzIsMSwiKFxcY29wcm9kIEEsLSkiXSxbMywxLCIoXFxjb3Byb2QgQSwtKSJdLFs0LDEsIlxcbWF0aHJte0V4dH1eMShcXHZhcmluamxpbSBBLC0pIl0sWzUsMSwiXFxtYXRocm17RXh0fV4xKFxcY29wcm9kIEEsLSkiXSxbNiwxLCJcXG1hdGhybXtFeHR9XjEoXFxjb3Byb2QgQSwtKSJdLFsxLDAsIlxcdmFycHJvamxpbSAoQSwtKSJdLFswLDAsIjAiXSxbMiwwLCJcXHByb2QgKEEsLSkiXSxbMywwLCJcXHByb2QgKEEsLSkiXSxbNCwwLCJ7XFx2YXJwcm9qbGltfV4xIChBLC0pIl0sWzUsMCwiMCJdLFsxLDBdLFs0LDVdLFswLDJdLFsyLDNdLFszLDRdLFs1LDZdLFs4LDddLFs3LDldLFs5LDEwXSxbMTAsMTFdLFsxMSwxMl0sWzcsMCwiXFxzaW0gIiwyXSxbOSwyLCJcXHNpbSAiLDJdLFsxMCwzLCJcXHNpbSAiLDJdXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;150&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;依照 AB3, $\mathrm{Ext}^1$ 与 $\coprod$ 交换. 取 $\mathrm{Ext}^1(\varinjlim A,-)$ 处的合冲子得短正合列 \begin{equation} 0\to {\varprojlim}^1(A,-)\to \mathrm{Ext}^1(\varinjlim A,-)\to {\varprojlim}^0\mathrm{Ext}^1(A,-)\to 0. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;对上述系统 $\mathbb N$, $\varprojlim^{\geq 2}$ 消失.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;对 Abel 范畴而言, ${\varprojlim}^0=\varprojlim$ 是显而易见的, 附加足够多内射对象与 AB4* 可知 ${\varprojlim}^1=R^1\varprojlim$, 再附加 AB5 可得 \begin{equation} \mathrm{Ext}^1(\varinjlim A,-) / {\varprojlim}^1(A,-) ≃ \varprojlim \mathrm{Ext}^1(A,-). \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;When_1_m_epi&quot;&gt;证明&lt;/a&gt;). 若 Abel 范畴 (对必要的条件) 完备, 且有投射生成元 $U$. 若逆向塔 $M$ 中的一切 $m_i$ 满, 则 $(1-m)$ 满.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;mittag-leffler-条件&quot;&gt;Mittag-Leffler 条件&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Mittag-Leffler 条件). 假定范畴存在像. 函子 $(X,\varphi)\in \mathrm{PSh}(\mathbb N)$ 满足 Mittag-Leffler 条件, 若对任意 $n\in \mathbb N$, $\{\mathrm{im}(\varphi_{k,n} : X_k → X_n)\}_{k≥ n}$ 在有限步内驻定.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;简单地说, $X_∞ \cdots → X_{n+1} → X_n$ 的像由某一 $X_k$ 完全决定.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;假定特定的核与积存在, 则对具体范畴而言, Mittag-Leffler 条件给出极限 $\{(x_n)_{n\geq 0}\mid φ_{i,i + j}(x_i)=x_{i+j}\}$. 此时&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsOCxbMywwLCJNXzAiXSxbMiwwLCJNXzEiXSxbMSwwLCJNXzIiXSxbMCwwLCJcXGNkb3RzIl0sWzMsMSwiXFxtYXRocm17aW19KFxcdmFycGhpIF97XFxpbmZ0eSwwfSkiXSxbMiwxLCJcXG1hdGhybXtpbX0oXFx2YXJwaGkgX3tcXGluZnR5LDF9KSJdLFsxLDEsIlxcbWF0aHJte2ltfShcXHZhcnBoaSBfe1xcaW5mdHksMX0pIl0sWzAsMSwiXFxjZG90cyAiXSxbMSwwLCJcXHZhcnBoaSBfezEsMH0iXSxbMiwxLCJcXHZhcnBoaSBfezIsMH0iXSxbNSw0LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNiw1LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMywyXSxbNyw2XSxbNCwwLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs1LDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzYsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsOCxbMywwLCJNXzAiXSxbMiwwLCJNXzEiXSxbMSwwLCJNXzIiXSxbMCwwLCJcXGNkb3RzIl0sWzMsMSwiXFxtYXRocm17aW19KFxcdmFycGhpIF97XFxpbmZ0eSwwfSkiXSxbMiwxLCJcXG1hdGhybXtpbX0oXFx2YXJwaGkgX3tcXGluZnR5LDF9KSJdLFsxLDEsIlxcbWF0aHJte2ltfShcXHZhcnBoaSBfe1xcaW5mdHksMX0pIl0sWzAsMSwiXFxjZG90cyAiXSxbMSwwLCJcXHZhcnBoaSBfezEsMH0iXSxbMiwxLCJcXHZhcnBoaSBfezIsMH0iXSxbNSw0LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNiw1LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMywyXSxbNyw2XSxbNCwwLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs1LDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzYsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;是等价的逆像系统.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;slogan&quot;&gt;
+  &lt;p&gt;满足 Mittag-Leffler 的逆向塔等价某个子对象, 该子对象的中的态射都是满的.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;逆像塔极限与拉回存在诸多神似之处, 例如其保持可裂满. &lt;a href=&quot;Projective_Generators#满态射的拉回满&quot;&gt;特别地&lt;/a&gt;, 若范畴具有投射生成元, 则满态射的拉回仍满. &lt;br /&gt; 基于同样的研究方式, 不妨猜想具有投射生成元的范畴中, 满态射组成的逆向塔具有满的位移态射, 并可将 $m_i$ 均满弱化至 Mittag-Leffler 条件.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;分析学的 Mittag-Leffler 定理见&lt;a href=&quot;ML_analysis&quot;&gt;此处&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;mathjax_protectedjfx2yxjwcm9qbglte31emsqmathjax_protected-消失的充分条件&quot;&gt;$\varprojlim{}^1$ 消失的充分条件&lt;/h2&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Projective_Generators#投射生成元与-ml-条件&quot;&gt;证明&lt;/a&gt;). 投射生成元保持并反射 Mittag-Leffler 条件.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;ML_Mod&quot;&gt;证明&lt;/a&gt;)模范畴中, Mittag-Leffler 条件使得 $\varprojlim ^1 = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;结合以上两条引理, 得以下结论.&lt;/p&gt;
 
 &lt;div class=&quot;proposition&quot;&gt;
   &lt;p&gt;($\varprojlim{}_ℕ^1$ 消失的充分条件). 假定 $𝒜$ 是满足 AB4* 的局部小范畴. 假定范畴存在投射生成元, 则 Mittag-Leffler 条件使得 $\varprojlim ^1 = 0$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;投射生成元保持并反射 Mittag-Leffler 条件.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;模范畴中, Mittag-Leffler 条件使得 $\varprojlim ^1 = 0$.&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-29T00:00:00+08:00</pubDate>
@@ -240,7 +1004,7 @@ $$&lt;/p&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;考虑以下无界双复形:&lt;/p&gt;
-  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzMsMiwiXFxtYXRoYmIgWiJdLFs0LDIsIlxcbWF0aGJiIFoiXSxbMywxLCJcXG1hdGhiYiBaIl0sWzIsMSwiXFxtYXRoYmIgWiJdLFsyLDAsIlxcbWF0aGJiIFoiXSxbMiwyLCIwIl0sWzEsMSwiMCJdLFszLDAsIjAiXSxbNCwxLCIwIl0sWzUsMiwiMCJdLFsxLDAsIlxcbWF0aGJiIFoiXSxbMCwwLCIwIl0sWzAsMSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwyLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszLDIsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsNCwiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsNCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCw3XSxbNiwzXSxbNSwzXSxbMiw4XSxbMSw4XSxbMiw3XSxbMSw5XSxbNSwwXSxbMTEsMTBdLFs2LDEwXV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzMsMiwiXFxtYXRoYmIgWiJdLFs0LDIsIlxcbWF0aGJiIFoiXSxbMywxLCJcXG1hdGhiYiBaIl0sWzIsMSwiXFxtYXRoYmIgWiJdLFsyLDAsIlxcbWF0aGJiIFoiXSxbMiwyLCIwIl0sWzEsMSwiMCJdLFszLDAsIjAiXSxbNCwxLCIwIl0sWzUsMiwiMCJdLFsxLDAsIlxcbWF0aGJiIFoiXSxbMCwwLCIwIl0sWzAsMSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwyLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszLDIsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsNCwiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsNCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCw3XSxbNiwzXSxbNSwzXSxbMiw4XSxbMSw4XSxbMiw3XSxbMSw5XSxbNSwwXSxbMTEsMTBdLFs2LDEwXV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTgsWzMsMywiXFxtYXRoYmIgWiJdLFs0LDMsIlxcbWF0aGJiIFoiXSxbMywyLCJcXG1hdGhiYiBaIl0sWzIsMiwiXFxtYXRoYmIgWiJdLFsyLDEsIlxcbWF0aGJiIFoiXSxbMiwzLCIwIl0sWzEsMiwiMCJdLFszLDEsIjAiXSxbNCwyLCIwIl0sWzUsMywiMCJdLFsxLDEsIlxcbWF0aGJiIFoiXSxbMCwxLCIwIl0sWzAsMCwiXFxkZG90cyJdLFsxLDAsIlxcZGRvdHMiXSxbMiwwLCJcXGRkb3RzIl0sWzQsNCwiXFxkZG90cyJdLFs1LDQsIlxcZGRvdHMiXSxbMyw0LCJcXGRkb3RzIl0sWzAsMSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwyLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszLDIsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsNCwiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsNCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCw3XSxbNiwzXSxbNSwzXSxbMiw4XSxbMSw4XSxbMiw3XSxbMSw5XSxbNSwwXSxbMTEsMTBdLFs2LDEwXSxbMTAsMTNdLFs0LDE0XSxbMTcsMF0sWzE1LDFdXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTgsWzMsMywiXFxtYXRoYmIgWiJdLFs0LDMsIlxcbWF0aGJiIFoiXSxbMywyLCJcXG1hdGhiYiBaIl0sWzIsMiwiXFxtYXRoYmIgWiJdLFsyLDEsIlxcbWF0aGJiIFoiXSxbMiwzLCIwIl0sWzEsMiwiMCJdLFszLDEsIjAiXSxbNCwyLCIwIl0sWzUsMywiMCJdLFsxLDEsIlxcbWF0aGJiIFoiXSxbMCwxLCIwIl0sWzAsMCwiXFxkZG90cyJdLFsxLDAsIlxcZGRvdHMiXSxbMiwwLCJcXGRkb3RzIl0sWzQsNCwiXFxkZG90cyJdLFs1LDQsIlxcZGRvdHMiXSxbMyw0LCJcXGRkb3RzIl0sWzAsMSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwyLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszLDIsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsNCwiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsNCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCw3XSxbNiwzXSxbNSwzXSxbMiw4XSxbMSw4XSxbMiw3XSxbMSw5XSxbNSwwXSxbMTEsMTBdLFs2LDEwXSxbMTAsMTNdLFs0LDE0XSxbMTcsMF0sWzE1LDFdXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
   &lt;p&gt;以上双复形各行各列正合, 故 $E_∞ = 0$; 但是全复形并非正合.&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -474,6 +1238,10 @@ $$&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;例如对有余集和&lt;a href=&quot;Projective_Generators&quot;&gt;生成子&lt;/a&gt; $U$ 的范畴, 总有满态射 $∐_{(U,X)} U ↠ X$, 因此 $𝒳 := U^{∐ \mathrm{Sets}}$ 提供了足够满射. 余生成子类似.&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;div class=&quot;theorem&quot;&gt;
   &lt;p&gt;(相对版本的马蹄引理). 假定存在足够 $𝒳$ 出发的满态射, 任意 ses 存在可裂 $𝒳$-复形的相对投射分解.&lt;/p&gt;
 &lt;/div&gt;
@@ -610,7 +1378,7 @@ $$&lt;/p&gt;
     &lt;li&gt;态射 $G(R^1 F)X → (R^2 G)(FX)$ 由內射分解 $FI^∙ → J^∙$ 作用 $G$ 后给出. 特別地, 所谓的维数移动来自以下错位的投射分解交换图:       &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTEsWzQsMCwiRyhSXjEgRilYIl0sWzQsMywiKFJeMiBHKShGWCkiXSxbMCwyLCJHRlgiXSxbMiwyLCJHSl4xIl0sWzMsMiwiR0peMiJdLFsxLDIsIkdKXjAiXSxbMywzLCJIXjIgKEdKXlxcYnVsbGV0KSJdLFszLDAsIkdIXjEoRkleXFxidWxsZXQgKSJdLFszLDEsIkdGSV4xIl0sWzIsMSwiR0ZJXjAiXSxbMSwxLCJHRlgiXSxbMCwxLCJIXjEoXFxzaWdtYSApIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsM10sWzMsNF0sWzksOF0sWzIsNV0sWzEwLDldLFs4LDQsIlxcc2lnbWFeMSIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMCw1XSxbOSwzLCJcXHNpZ21hIF4wIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzcsMCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiwxLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTEsWzQsMCwiRyhSXjEgRilYIl0sWzQsMywiKFJeMiBHKShGWCkiXSxbMCwyLCJHRlgiXSxbMiwyLCJHSl4xIl0sWzMsMiwiR0peMiJdLFsxLDIsIkdKXjAiXSxbMywzLCJIXjIgKEdKXlxcYnVsbGV0KSJdLFszLDAsIkdIXjEoRkleXFxidWxsZXQgKSJdLFszLDEsIkdGSV4xIl0sWzIsMSwiR0ZJXjAiXSxbMSwxLCJHRlgiXSxbMCwxLCJIXjEoXFxzaWdtYSApIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsM10sWzMsNF0sWzksOF0sWzIsNV0sWzEwLDldLFs4LDQsIlxcc2lnbWFeMSIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMCw1XSxbOSwzLCJcXHNpZ21hIF4wIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzcsMCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiwxLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-  &lt;p&gt;谱序列将这些貌合神离的东西联系在一起. \end{example}&lt;/p&gt;
+  &lt;p&gt;谱序列将这些貌合神离的东西联系在一起.&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
@@ -809,7 +1577,7 @@ $$&lt;/p&gt;
           <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
 
 &lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;(&lt;a href=&quot;E_2_Trick&quot;&gt;证明&lt;/a&gt;). 假定 $E_3^{p,q} = E_∞^{p,q}$, 且同调群确定. 若 $E_2^{p,q}$ 形如以下&lt;/p&gt;
+  &lt;p&gt;假定 $E_3^{p,q} = E_∞^{p,q}$, 且同调群确定. 若 $E_2^{p,q}$ 形如以下&lt;/p&gt;
   &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxLCJcXGJveGVke0VfMl57XFxidWxsZXQsXFxidWxsZXR9fSJdLFswLDFdLFsyLDNdLFs0LDVdLFs2LDddLFs4LDldXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxLCJcXGJveGVke0VfMl57XFxidWxsZXQsXFxidWxsZXR9fSJdLFswLDFdLFsyLDNdLFs0LDVdLFs2LDddLFs4LDldXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
   &lt;p&gt;此时有长正合列&lt;/p&gt;
   &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxLCJcXGJveGVke0VfMl57XFxidWxsZXQsXFxidWxsZXR9fSJdLFswLDFdLFsyLDNdLFs0LDVdLFs2LDddLFs4LDldLFs5LDAsIkgiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSwyLCJIIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzMsNCwiSCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs1LDYsIkgiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFsyLDAsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzQsMCwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMCwxLCJcXGJveGVke0VfMl57XFxidWxsZXQsXFxidWxsZXR9fSJdLFswLDFdLFsyLDNdLFs0LDVdLFs2LDddLFs4LDldLFs5LDAsIkgiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSwyLCJIIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzMsNCwiSCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs1LDYsIkgiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
@@ -1391,7 +2159,7 @@ $$&lt;/p&gt;
 \begin{bmatrix}
 ψ_p :&amp;    0 &amp; \to &amp; \mathbf F^p \mathbf M &amp; \to &amp; \mathbf M &amp; \to &amp; \frac{M}{F^p M} &amp; \to &amp; 0\\
 ⇓ &amp;    &amp;  &amp; ⇓ &amp;  &amp; ⇓ &amp; &amp; ⇓ &amp;  &amp; \\
-\varprojlim _p(ψ_p) : &amp;  0 &amp; \to &amp; \mathbf F^p \mathbf M &amp; \to &amp; \mathbf M &amp; \to &amp; \frac{M}{F^p M} &amp; \to &amp; → &amp; \varprojlim_p ^1\mathbf F^p \mathbf M &amp; → &amp; \cdots
+\varprojlim _p(ψ_p) : &amp;  0 &amp; \to &amp; \mathbf F^p \mathbf M &amp; \to &amp; \mathbf M &amp; \to &amp; \frac{M}{F^p M} &amp; → &amp; \varprojlim_p ^1\mathbf F^p \mathbf M &amp; → &amp; \cdots
 \end{bmatrix}
 $$&lt;/p&gt;
   &lt;p&gt;中间 $\mathbf M ≃ \varprojlim_p \frac{M}{F^p M}$ 是同构, 故首尾两项消失.&lt;/p&gt;
@@ -1862,7 +2630,7 @@ $$&lt;/p&gt;
 &lt;p&gt;假定 $𝒜$ 是满足 AB4* 的局部小范畴. $\varprojlim_ℕ$ 是二次导出消失的函子, 适用 &lt;a href=&quot;Grothendieck_Spectral_Sequence#特殊情形&quot;&gt;Gorthendieck 谱序列的特殊情形&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;(塔与极限) 称函子 $Y: ℕ^{\mathrm{op}} → 𝒜$ 是塔, 若 $Y$ 映至 \begin{equation} \cdots → Y_2 → Y_1 → Y_0. \end{equation} 依照熟知结论, 自同态 $φ : (\mathrm{id} - ∑ Y_{(i+1) → i})$ 给出函子的短正合列&lt;/p&gt;
+  &lt;p&gt;(塔与极限) 称函子 $Y: ℕ^{\mathrm{op}} → 𝒜$ 是塔, 若 $Y$ 映至 \begin{equation} \cdots → Y_2 → Y_1 → Y_0. \end{equation} 依照&lt;a href=&quot;Projlim_1_Vanish&quot;&gt;熟知结论&lt;/a&gt;, 自同态 $φ : (\mathrm{id} - ∑ Y_{(i+1) → i})$ 给出函子的短正合列&lt;/p&gt;
   &lt;p&gt;$$
 0 → \varprojlim Y → ∏_{ℕ} Y_∙ \xrightarrow φ  ∏_{ℕ} Y_∙ → \varprojlim{} ^1 Y → 0.
 $$&lt;/p&gt;
@@ -2575,7 +3343,7 @@ $$&lt;/p&gt;
       
         <item>
           <title>有限型与仿射型 Dynkin 图</title>
-          <description>&lt;p&gt;##&lt;/p&gt;
+          <description>&lt;h2 id=&quot;图示&quot;&gt;图示&lt;/h2&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
   &lt;p&gt;($A_n$). 该图具有 $n$ 个顶点, 形如&lt;/p&gt;
@@ -2983,15 +3751,17 @@ $$&lt;/p&gt;
 
 &lt;p&gt;此处 $P(i)^{\dim M_i} ↠ Me_i$ 是投射盖, 将 $e_i ∈ P(i)$ 对应至 $e_iM$ 的生成元.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;关于 $e_iM$ 的生成元, 可先取半单对象 ($X ↠ \mathrm{Top}(X)$)&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;关于 $e_iM$ 的生成元, 可先取半单对象 ($X ↠ \mathrm{Top}(X)$)&lt;/p&gt;
 
-  &lt;p&gt;$$
-&gt; π : e_iM ↠ e_i M e_i.
-&gt; $$&lt;/p&gt;
+    &lt;p&gt;$$
+  π : e_iM ↠ e_i M e_i.
+  $$&lt;/p&gt;
 
-  &lt;p&gt;对 $(\dim M_i)$-维线性空间 $e_iMe_i$ 的基任取一组 $π$ 下的原像即可.&lt;/p&gt;
-&lt;/blockquote&gt;
+    &lt;p&gt;对 $(\dim M_i)$-维线性空间 $e_iMe_i$ 的基任取一组 $π$ 下的原像即可.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;由于 $X^𝒮$ 之类的式子并不能很好地反应生成元, 以下将极小投射分解改写作&lt;/p&gt;
 
@@ -3038,7 +3808,7 @@ $$&lt;/p&gt;
   &lt;p&gt;$$
 \mathrm{Ext}^1(S(i), S(j)) ≃ (P(i) ⋅ J, S(j)) ≃ k^{|Q_1 (i → j)|}.
 $$&lt;/p&gt;
-  &lt;p&gt;此处 $\|Q_1 (i → j)\|$ 是 $i → j$ 连边数量.&lt;/p&gt;
+  &lt;p&gt;此处 $|Q_1 (i → j)|$ 是 $i → j$ 连边数量.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;corollary&quot;&gt;
@@ -3888,10 +4658,10 @@ $$&lt;/p&gt;
   &lt;p&gt;记 $P \overset π ↠ F$ 是平坦对象的投射盖, 其中 $F = \varinjlim P_i$ 是有限生成投射对象的滤过余极限 (Lazard). 取定所有拉回&lt;/p&gt;
   &lt;p&gt;$$
 \begin{bmatrix}
-&amp;P_i ⊕ Q_i &amp; \xrightarrow{(1 \ 0)}&amp; P_i \\ 
-\substack{g_i}&amp;↓ &amp;  &amp; ↓ &amp;\substack {f_i}\\ 
-&amp;P &amp; \overset π ↠ &amp; F \\ 
-\end{bmatrix}. 
+&amp;P_i ⊕ Q_i &amp; \xrightarrow{(1 \ 0)}&amp; P_i \\
+\substack{g_i}&amp;↓ &amp;  &amp; ↓ &amp;\substack {f_i}\\
+&amp;P &amp; \overset π ↠ &amp; F \\
+\end{bmatrix}.
 $$&lt;/p&gt;
   &lt;p&gt;依照拉回的泛性质, $g_i$ 自动构成滤过系统. 依照 $∐ (P_i ⊕ Q_i) ↠ ∐ P_i$, 得推出拉回方块&lt;/p&gt;
   &lt;p&gt;$$
@@ -3899,9 +4669,9 @@ $$&lt;/p&gt;
  &amp;  &amp; ∐ (P_{i} ⊕ Q_{i}) &amp; ↠   &amp; ∐ P_{i}\\
  &amp;  &amp; ↓  &amp;  &amp; ↓ \\
 ∗   &amp; ↪   &amp; ∑ \operatorname{im} g_{i} &amp; ↠   &amp; Σ  \operatorname{im} f_{i}\\
-↓   &amp; \text{PBPO} &amp; ↓   &amp;  &amp; ∥  \\
+↓   &amp; ▦ &amp; ↓   &amp;  &amp; ∥  \\
 \ker π   &amp; ↪   &amp; P &amp; ↠   &amp; F
-\end{bmatrix}. 
+\end{bmatrix}.
 $$&lt;/p&gt;
   &lt;p&gt;依照投射盖的定义, $∑ \operatorname{im}g_i ↪ P$ 是同构, $∗ → \ker π$ 亦是同构. 因此滤过系统 $\{g_i\}$ 的滤过余极限即 $P$. &lt;br /&gt; &lt;br /&gt; 以上得到滤过系统的态射 $\{f_i\} ↪ \{g_i\} ↠ \{f_i\}$ 这甚至是链可裂的. 依照余极限的泛性质, 存在形变收缩 $F → P → F$, 因此 $F$ 是投射对象.&lt;/p&gt;
 &lt;/div&gt;

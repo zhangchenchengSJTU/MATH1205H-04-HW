@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>生成元的等价定义
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="https://zhangchenchengsjtu.github.io/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="https://zhangchenchengsjtu.github.io/website/assets/touch-icon.png">
+<link rel="stylesheet" href="https://zhangchenchengsjtu.github.io/website/assets/core.css">
+<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/Equi_Def_Generator">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="https://zhangchenchengsjtu.github.io/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+</head>
+
+<body class="latex-dark">
+
+	<aside class="logo">
+  
+
+  <a href="https://zhangchenchengsjtu.github.io/website/">
+    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
+  </a>
+  <span class="logo-prompt">Back to Home</span>
+
+</aside>
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>生成元的等价定义</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 3, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<p>以下假定局部小的加法范畴, 必要时假定范畴存在的余积.</p>
+
+<div class="definition">
+  <p>(生成元的等价定义). 称 $U$ 是生成元, 若以下等价命题成立.</p>
+  <ol>
+    <li>$(U,-)$ 是忠实的函子;</li>
+    <li>对任意 $X \overset f {\underset g ⇉} Y$, 总存在 $φ : U → X$ 使得 $f ∘ φ ≠ g ∘ φ$.</li>
+    <li>(若范畴有余积). 对任意对象 $X$, 均存在指标集 $I$ 使得 $U^{⊕ I} ↠ X$ 满.</li>
+    <li>(若范畴有余积). $(U, -)$ 返回满射, 即, $(U, f)$ 满蕴含 $f$ 满.</li>
+  </ol>
+</div>
+
+<div class="proof">
+  <p>前两条的等价性来自定义. <br /> (1 ⇒ 3). 若 $(U, -)$ 忠实, 则考虑态射</p>
+  <p>$$
+\operatorname{id}_{(U,X)} ∈ ((U,X), (U,X))_{𝐒𝐞𝐭𝐬} ≃ ∏_{(U,X)} (U,X) ≃ (∐_{(U,X)}U, X) ∋ θ_X.
+$$ 下证明 $θ_X$ 是满态射, 也就是 $a ≠ b$ 蕴含 $θ_X ∘ a ≠ θ_X ∘ b$. 由生成元的定义, 存在 $U \xrightarrow φ X$ 使得 $a ∘ φ ≠ b ∘ φ$. <br /> 从余极限泛性质的视角出发, 复合</p>
+  <p>$$
+U \overset {e_f} ↪ ∐_{(U,X)}U \xrightarrow {θ_X} X
+$$</p>
+  <p>就是 $f$. 由 $a ≠ b$, 则考虑 \begin{equation} U \xrightarrow {φ}∐_{(U,X)}U \xrightarrow {θ_X} X \overset a {\underset b ⇉} Y \end{equation}</p>
+  <p>由 $a ∘ φ = a ∘ θ_X ∘ φ ≠ b ∘ θ _X ∘ φ = b ∘ φ$, 得证. <br /> (3 ⇒ 1). 若存在 $f ≠ g ∈ (X,Y)$, 则复合满态射 $π : ∐_I U ↠ X$ 后 $f ∘ π ≠ g ∘ π$. 依照余积的泛性质, 总存在 $U$ 与 $φ : U → X$ 使得 $f ∘ φ ≠ g ∘ φ$. 因此 $(U,f) ≠ (U,g)$. <br /> (1 ⇒ 4). 取 $f : X → Y$ 使得 $(U,f)$ 满, 则任意 $U → Y$ 通过 $f$ 分解. 下证明 $f$ 满, 也就是 $a ≠ b$ 蕴含 $a ∘ f ≠ b ∘ f$. 依照生成元的定义, 任取 $p : U → Y$ 使得 $a ∘ p ≠ b ∘ p$. 由 $p$ 通过 $f$ 分解, 则必有 $a ∘ f ≠ b ∘ f$. <br /> (4 ⇒ 1). 取特殊的 Hom-满射 $(U,θ_X)$, 因此 $θ_X$ 满, 从而得 3., 故得 1..</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="https://zhangchenchengsjtu.github.io/website/posts/FP_P_I_F"
+        title="NEXT: 有限表现模, 投射模, 内射模, 平坦模的结构">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="https://zhangchenchengsjtu.github.io/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="https://zhangchenchengsjtu.github.io/website/posts/Projective_Generators"
+        title="PREV: 生成元的性质">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+</body>
+
+
+</html>
