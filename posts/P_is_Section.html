@@ -20,15 +20,15 @@
   <meta name="google-site-verification" content="abc123">
 
 
-<link rel="icon" href="https://zhangchenchengsjtu.github.io/website/assets/favicon.png">
-<link rel="apple-touch-icon" href="https://zhangchenchengsjtu.github.io/website/assets/touch-icon.png">
-<link rel="stylesheet" href="https://zhangchenchengsjtu.github.io/website/assets/core.css">
-<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/P_is_Section">
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/P_is_Section">
 <link
   rel="alternate"
   type="application/atom+xml"
   title="Jekyll Latex"
-  href="https://zhangchenchengsjtu.github.io/website/feed.xml" />
+  href="/website/feed.xml" />
 
 
 
@@ -59,15 +59,21 @@
 
 <body class="latex-dark">
 
-	<aside class="logo">
-  
-
-  <a href="https://zhangchenchengsjtu.github.io/website/">
+	<aside class="logo" id="logo-section">
+  <a href="/website/about" id="logo-link">
     <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
   </a>
-  <span class="logo-prompt">Back to Home</span>
-
+  <span class="logo-prompt" id="logo-prompt">About the Author</span>
 </aside>
+
+<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
 
 	<main>
   <article>
@@ -89,14 +95,13 @@
   <p>($𝔓$ 是 $ℤ 𝔓$ 的截面). 给定连通, 有限表示表示的遗传代数.</p>
   <ol>
     <li>$𝔓$ 是 $ℤ𝔓$ 的截面.</li>
-    <li>$Γ$ 是 $ℤ𝔓$ 的子图.</li>
-    <li>$ℤ 𝔓$ 视同 $ℤΓ$ 的全子范畴.</li>
+    <li>$Γ$ 是 $ℤ𝔓$ 的全子范畴.</li>
   </ol>
   <p>内射对象同理.</p>
 </div>
 
 <div class="proof">
-  <p>先明确 $𝔓$ 的结构.</p>
+  <p>先证明 $𝔓$ 是 $ℤ 𝔓$ 的截面, 今依次验证如下三点.</p>
   <ol>
     <li>(道路封闭) 由 $A$ 遗传, 投射模的子模是投射模, 从而指向投射模的不可约态射都是 $𝔓$ 中的态射. 这说明 $𝔓$ 对道路封闭.</li>
     <li>
@@ -108,7 +113,7 @@
     </li>
     <li>(截面). 直接由定义得到.</li>
   </ol>
-  <p>往后证明 $Γ ⊆ ℤ𝔓$ 是全子范畴. 依照几乎可裂短正合列的性质, 有线性同构</p>
+  <p>往后证明 $Γ ⊆ ℤ𝔓$ 是全子范畴. 依照几乎可裂短正合列的性质, 反射 $θ$ 诱导了有线性空间的同构</p>
   <p>$$
 \mathrm{Irr}(τ X, Y) ≃ \mathrm{Irr}(Y, X) ≃ \cdots .
 $$</p>
@@ -122,7 +127,7 @@ $$</p>
     
       <a
         class="next"
-        href="https://zhangchenchengsjtu.github.io/website/posts/APR_tilting_def"
+        href="/website/posts/APR_tilting_def"
         title="NEXT: APR tilting 模的定义">&lt;&lt;</a>
       <span>
         &middot;
@@ -130,7 +135,7 @@ $$</p>
     
     <a
       class="home"
-      href="https://zhangchenchengsjtu.github.io/website/"
+      href="/website/"
       title="Back to Homepage">Home</a>
     
       <span>
@@ -138,7 +143,7 @@ $$</p>
       </span>
       <a
         class="prev"
-        href="https://zhangchenchengsjtu.github.io/website/posts/Commutative_Diagram_Alg"
+        href="/website/posts/Commutative_Diagram_Alg"
         title="PREV: $D_4$ 与交换图方块代数.">&gt;&gt;</a>
     
   </div>

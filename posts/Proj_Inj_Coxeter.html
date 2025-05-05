@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>投射模, 内射模在 Coxeter 反射下的表现
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Proj_Inj_Coxeter">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+</head>
+
+<body class="latex-dark">
+
+	<aside class="logo" id="logo-section">
+  <a href="/website/about" id="logo-link">
+    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
+  </a>
+  <span class="logo-prompt" id="logo-prompt">About the Author</span>
+</aside>
+
+<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>投射模, 内射模在 Coxeter 反射下的表现</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 4, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="proposition">
+  <p>投射模与内射模在完全 Coxeter 分解下的表现如下.</p>
+  <ol>
+    <li>投射模经 $C^+$ 消失, 换言之, $C^+ P = 0$;</li>
+    <li>若 $C^+M = 0$, 则 $M$ 是投射模;</li>
+    <li>$C^+C^-M$ 是不含投射对象的极大直和项;</li>
+    <li>内射模经 $C^-$ 消失, 换言之, $C^- I = 0$;</li>
+    <li>若 $C^-M = 0$, 则 $M$ 是内射模;</li>
+    <li>$C^-C^+M$ 是不含内射对象的极大直和项.</li>
+  </ol>
+</div>
+
+<div class="proof">
+  <p>只看前三条. <br /> (1. 的证明). 不可分解投射对象 $P(i)$ 的支撑集是由 $i$ 向外的树, 从分支至主干地作用 $C^+_∙$ 即可 (并列的分支无关先后) 即可. 最后得内射单模 $S(i)$, 作用 $C^+_i$ 后归零. 由于 Coxeter 反射唯一, 故投射对象被 $C^+$ 零化. <br /> (2. 的证明). 假定 $M ≠ 0$, 但 $C^+ M= 0$. 不妨记 $C^+ = C_1^+\cdots C_n^+$. 下归纳地证明所有 $C_{k}^+\cdots C_n^+ M$ 都是对应 quiver 的不可分解投射对象 (或零对象).</p>
+  <ol>
+    <li>(初始). 存在极小的 $i$ 使得 $C_{i+1}^+\cdots C_n^+ M$ 是 $k(C_{i+1}^+\cdots C_n^+Q)$ 的投射单对象;</li>
+    <li>
+      <p>(归纳). 若 $C_{i+1}^+\cdots C_n^+Q$ 存在 $(i+1) → (i)$ 类型的箭头, 依照<a href="Coxeter_PM_Adjoint">伴随的余单位</a>知</p>
+      <p>$$
+   C_{i+1}^-C_{i+1}^+\cdots C_n^+ M ≃ C_{i+2}^+\cdots C_n^+ M
+   $$</p>
+      <p>是投射对象. 若无 $(i+1) → (i)$ 类型的箭头, 则 $i$ 与邻点的连边不受影响, 原投射对象是新 quiver 的投射对象.</p>
+    </li>
+  </ol>
+  <p><br /> (3. 的证明). 结合以上两点即可.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Kronecker_Rep"
+        title="NEXT: Kronecker quiver 的表示">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/L_Here_not_R_Here"
+        title="PREV: 左遗传但非右遗传环的例子">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+</body>
+
+
+</html>

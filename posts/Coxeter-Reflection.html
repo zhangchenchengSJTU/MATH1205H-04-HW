@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>Coxeter 反射入门
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Coxeter-Reflection">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+</head>
+
+<body class="latex-dark">
+
+	<aside class="logo" id="logo-section">
+  <a href="/website/about" id="logo-link">
+    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
+  </a>
+  <span class="logo-prompt" id="logo-prompt">About the Author</span>
+</aside>
+
+<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>Coxeter 反射入门</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 4, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <ul id="markdown-toc">
+  <li><a href="#coxeter-反射-ar-平移的另一表示方式" id="markdown-toc-coxeter-反射-ar-平移的另一表示方式">Coxeter 反射: AR 平移的另一表示方式</a>    <ul>
+      <li><a href="#反射函子初探" id="markdown-toc-反射函子初探">反射函子初探</a></li>
+      <li><a href="#mathjax_protectedjenfav7cssqmathjax_protected-几乎是等价" id="markdown-toc-mathjax_protectedjenfav7cssqmathjax_protected-几乎是等价">$C_i^±$ 几乎是等价</a></li>
+      <li><a href="#完全-coxeter-反射" id="markdown-toc-完全-coxeter-反射">完全 Coxeter 反射</a></li>
+      <li><a href="#ar-转置" id="markdown-toc-ar-转置">AR 转置</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="coxeter-反射-ar-平移的另一表示方式">Coxeter 反射: AR 平移的另一表示方式</h2>
+
+<p>约定所有 quiver 是有限无环的 (允许重边).</p>
+
+<div class="definition">
+  <p>(sink, source). 给定 $Q = (Q_0, Q_1, s, t)$, 称</p>
+  <ol>
+    <li>$i ∈ Q_0$ 是 sink, 当且仅当 $s^{-1}(i) = ∅$;</li>
+    <li>$i ∈ Q_0$ 是 source, 当且仅当 $t^{-1}(i) = ∅$.</li>
+  </ol>
+</div>
+
+<h3 id="反射函子初探">反射函子初探</h3>
+
+<div class="definition">
+  <p>(图的 Coxeter 反射). 给定 quiver $Q$, 对任意 sink $i ∈ Q_0$, 定义 Coxeter 反射为反转指向 $i$ 的箭头: ̧</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxidWxsZXQiXSxbMiwxLCJpIixbMjQwLDYwLDYwLDFdXSxbMywxLCJcXGJ1bGxldCJdLFswLDEsIlxcYnVsbGV0Il0sWzEsMCwiXFxidWxsZXQiXSxbNSwxLCJcXGJ1bGxldCJdLFs0LDEsIlxcYnVsbGV0Il0sWzUsMCwiXFxidWxsZXQiXSxbNiwxLCJpIixbMCw2MCw2MCwxXV0sWzcsMSwiXFxidWxsZXQiXSxbMiwyLCJRIl0sWzYsMiwiQ19pIFEiXSxbMiwxLCJcXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlxcYWxwaGEgIiwwLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzAsMSwiXFxiZXRhICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzUsNl0sWzcsNV0sWzgsNSwiXFxhbHBoYSAnICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbOCw1LCJcXGJldGEgJyIsMCx7Im9mZnNldCI6LTMsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzgsOSwiXFxnYW1tYSAnIiwwLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTAsMTEsIkNfaSAiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJsZXZlbCI6Mn1dXQ== --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxidWxsZXQiXSxbMiwxLCJpIixbMjQwLDYwLDYwLDFdXSxbMywxLCJcXGJ1bGxldCJdLFswLDEsIlxcYnVsbGV0Il0sWzEsMCwiXFxidWxsZXQiXSxbNSwxLCJcXGJ1bGxldCJdLFs0LDEsIlxcYnVsbGV0Il0sWzUsMCwiXFxidWxsZXQiXSxbNiwxLCJpIixbMCw2MCw2MCwxXV0sWzcsMSwiXFxidWxsZXQiXSxbMiwyLCJRIl0sWzYsMiwiQ19pIFEiXSxbMiwxLCJcXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlxcYWxwaGEgIiwwLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzAsMSwiXFxiZXRhICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzUsNl0sWzcsNV0sWzgsNSwiXFxhbHBoYSAnICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbOCw1LCJcXGJldGEgJyIsMCx7Im9mZnNldCI6LTMsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzgsOSwiXFxnYW1tYSAnIiwwLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTAsMTEsIkNfaSAiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJsZXZlbCI6Mn1dXQ==&amp;embed" width="600" height="300" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>此处, $C_i$ 仅对 sink 定义.</p>
+</div>
+
+<div class="definition">
+  <p>(模 Coxeter 反射). 表示的 Coxeter 反射定义作如下函子</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTIsWzIsMSwiWF9iIl0sWzMsMSwiWF9pIixbMjQwLDYwLDYwLDFdXSxbNCwxLCJYX2QiXSxbMSwxLCJYX2EiXSxbMiwwLCJYX2MiXSxbMiwzLCJYX2IiXSxbMSwzLCJYX2EiXSxbMiwyLCJYX2MiXSxbMywzLCJcXGtlciBcXGxlZnRbXFxiaWdvcGx1c197dChmKSA9IDF9WF97cyhmKX0gXFx4cmlnaHRhcnJvd3tcXHN1bSBYX2Z9IFhfaVxccmlnaHRdIixbMCw2MCw2MCwxXV0sWzQsMywiWF9kIl0sWzAsMSwiXFxtYXRoYmZ7cmVwfV9rKFEpIl0sWzAsMywiXFxtYXRoYmZ7cmVwfV9rKENfaVEpIl0sWzIsMSwiWF9cXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlhfXFxhbHBoYSAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsyNDAsNjAsNjBdfSxbMjQwLDYwLDYwLDFdXSxbMCwxLCJYX1xcYmV0YSAiLDIseyJvZmZzZXQiOjMsImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFs1LDZdLFs4LDUsInAgIiwyLHsib2Zmc2V0IjozLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDUsInAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDksInAiLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxMCwxMSwiQ19pICIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sImxldmVsIjoyfV0sWzcsNV1d --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTIsWzIsMSwiWF9iIl0sWzMsMSwiWF9pIixbMjQwLDYwLDYwLDFdXSxbNCwxLCJYX2QiXSxbMSwxLCJYX2EiXSxbMiwwLCJYX2MiXSxbMiwzLCJYX2IiXSxbMSwzLCJYX2EiXSxbMiwyLCJYX2MiXSxbMywzLCJcXGtlciBcXGxlZnRbXFxiaWdvcGx1c197dChmKSA9IDF9WF97cyhmKX0gXFx4cmlnaHRhcnJvd3tcXHN1bSBYX2Z9IFhfaVxccmlnaHRdIixbMCw2MCw2MCwxXV0sWzQsMywiWF9kIl0sWzAsMSwiXFxtYXRoYmZ7cmVwfV9rKFEpIl0sWzAsMywiXFxtYXRoYmZ7cmVwfV9rKENfaVEpIl0sWzIsMSwiWF9cXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlhfXFxhbHBoYSAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsyNDAsNjAsNjBdfSxbMjQwLDYwLDYwLDFdXSxbMCwxLCJYX1xcYmV0YSAiLDIseyJvZmZzZXQiOjMsImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFs1LDZdLFs4LDUsInAgIiwyLHsib2Zmc2V0IjozLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDUsInAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDksInAiLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxMCwxMSwiQ19pICIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sImxldmVsIjoyfV0sWzcsNV1d&amp;embed" width="600" height="350" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>对给定 $X ∈ 𝐫𝐞𝐩(Q)$, $C_i X ∈ 𝐫𝐞𝐩 (C_iQ)$ 定义如下</p>
+  <ol>
+    <li>$X$ 与 $C_iX$ 在 $X_{≠ i}$ 与 $φ_{≠ [∙ → i]}$ 处相同 (仅有的改变是上图的着色部分);</li>
+    <li>$(C_iX)_i$ 是 $⨁\limits_{t(f) = i}X_{s(f)}$ 的 ker-子模; 态射由投影 $⨁\limits_{t(f) = i}X_{s(f)} ↠ X_{a}$ 诱导.</li>
+  </ol>
+</div>
+
+<div class="definition">
+  <p>($C_i^±$). 记 $C_i^+$ 是 sink 处的反射 (以上定义的 $C_i$), $C_i^-$ 是 source 处的反射.</p>
+</div>
+
+<div class="note">
+  <p>若无歧义, 暂不区分图的 Coxeter 反射与模的 Coxeter 反射.</p>
+</div>
+
+<div class="example">
+  <p>(例子, Kronecker quiver). 给定 Kronecker quiver, 相应的 Coxeter 反射如下:</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMjAsWzEsMiwiWF8xIl0sWzIsMiwiWF8yIl0sWzIsMywiWF8yJyAiLFsyMzQsMTAwLDYwLDFdXSxbMSwzLCJYXzEiXSxbMCwyLCJcXG1hdGhiZntyZXB9KFxccmlnaHRyaWdodGFycm93cykiXSxbMCwzLCJcXG1hdGhiZntyZXB9KFxcbGVmdGxlZnRhcnJvd3MpIl0sWzMsMywiWF8xIl0sWzQsMiwiWF8xIl0sWzMsMiwiWF8yJyIsWzIzNCwxMDAsNjAsMV1dLFs0LDMsIlhfMiJdLFswLDEsIlxcbWF0aGJme3JlcH0oXFxyaWdodHJpZ2h0YXJyb3dzKSJdLFswLDAsIlxcbWF0aGJme3JlcH0oXFxsZWZ0bGVmdGFycm93cykiXSxbMSwxLCJYXzEiXSxbMSwwLCJYXzEnJyIsWzAsNjAsNjAsMV1dLFsyLDAsIlhfMiJdLFsyLDEsIlhfMiJdLFszLDAsIlhfMSJdLFs0LDEsIlhfMScnIixbMCw2MCw2MCwxXV0sWzMsMSwiWF8yIl0sWzQsMCwiWF8yIl0sWzAsMSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJnIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiZiciLDIseyJvZmZzZXQiOjIsImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzIsMywiZyciLDAseyJvZmZzZXQiOi0yLCJjb2xvdXIiOlsyMzQsMTAwLDYwXX0sWzIzNCwxMDAsNjAsMV1dLFs0LDUsIkNfMl4rIiwyLHsibGV2ZWwiOjJ9XSxbOCw3LCJmJyIsMCx7ImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzcsOSwiZiJdLFs4LDYsImcnIiwyLHsiY29sb3VyIjpbMjM0LDEwMCw2MF19LFsyMzQsMTAwLDYwLDFdXSxbNiw5LCJnIiwyXSxbOCw5LCJcXHRleHR75ouJ5ZuefSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMiwxNSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMTIsMTUsImciLDIseyJvZmZzZXQiOjJ9XSxbMTQsMTMsImYnJyIsMix7Im9mZnNldCI6MiwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTQsMTMsImcnJyIsMCx7Im9mZnNldCI6LTIsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzE2LDE3LCJcXHRleHR75o6o5Ye6fSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMSwiQ18xXi0iLDAseyJsZXZlbCI6Mn1dLFsxNiwxOSwiZiJdLFsxNiwxOCwiZyIsMl0sWzE5LDE3LCJnJyciLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxOCwxNywiZicnIiwyLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMjAsWzEsMiwiWF8xIl0sWzIsMiwiWF8yIl0sWzIsMywiWF8yJyAiLFsyMzQsMTAwLDYwLDFdXSxbMSwzLCJYXzEiXSxbMCwyLCJcXG1hdGhiZntyZXB9KFxccmlnaHRyaWdodGFycm93cykiXSxbMCwzLCJcXG1hdGhiZntyZXB9KFxcbGVmdGxlZnRhcnJvd3MpIl0sWzMsMywiWF8xIl0sWzQsMiwiWF8xIl0sWzMsMiwiWF8yJyIsWzIzNCwxMDAsNjAsMV1dLFs0LDMsIlhfMiJdLFswLDEsIlxcbWF0aGJme3JlcH0oXFxyaWdodHJpZ2h0YXJyb3dzKSJdLFswLDAsIlxcbWF0aGJme3JlcH0oXFxsZWZ0bGVmdGFycm93cykiXSxbMSwxLCJYXzEiXSxbMSwwLCJYXzEnJyIsWzAsNjAsNjAsMV1dLFsyLDAsIlhfMiJdLFsyLDEsIlhfMiJdLFszLDAsIlhfMSJdLFs0LDEsIlhfMScnIixbMCw2MCw2MCwxXV0sWzMsMSwiWF8yIl0sWzQsMCwiWF8yIl0sWzAsMSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJnIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiZiciLDIseyJvZmZzZXQiOjIsImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzIsMywiZyciLDAseyJvZmZzZXQiOi0yLCJjb2xvdXIiOlsyMzQsMTAwLDYwXX0sWzIzNCwxMDAsNjAsMV1dLFs0LDUsIkNfMl4rIiwyLHsibGV2ZWwiOjJ9XSxbOCw3LCJmJyIsMCx7ImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzcsOSwiZiJdLFs4LDYsImcnIiwyLHsiY29sb3VyIjpbMjM0LDEwMCw2MF19LFsyMzQsMTAwLDYwLDFdXSxbNiw5LCJnIiwyXSxbOCw5LCJcXHRleHR75ouJ5ZuefSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMiwxNSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMTIsMTUsImciLDIseyJvZmZzZXQiOjJ9XSxbMTQsMTMsImYnJyIsMix7Im9mZnNldCI6MiwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTQsMTMsImcnJyIsMCx7Im9mZnNldCI6LTIsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzE2LDE3LCJcXHRleHR75o6o5Ye6fSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMSwiQ18xXi0iLDAseyJsZXZlbCI6Mn1dLFsxNiwxOSwiZiJdLFsxNiwxOCwiZyIsMl0sWzE5LDE3LCJnJyciLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxOCwxNywiZicnIiwyLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXV0=&amp;embed" width="600" height="400" style="border-radius: 8px; border: dashed;"></iframe> </center>
+</div>
+
+<h3 id="mathjax_protectedjenfav7cssqmathjax_protected-几乎是等价">$C_i^±$ 几乎是等价</h3>
+
+<div class="proposition">
+  <p>(<a href="Coxeter_PM_Adjoint">证明</a>) 假定 $C_i^+ : Q_1 → Q_2$, 则以下是伴随函子: \begin{equation} C_i ^- : \mathbf{rep}_k(Q_2) ⇄ \mathbf{rep}_k(Q_1) : C_i ^+. \end{equation}</p>
+</div>
+
+<div class="example">
+  <p>容易计算,</p>
+  <ol>
+    <li>(单位). $M \simeq C_i^+ C_i^- M \oplus \ker[M_i → \bigoplus M_{\neq i}] \twoheadrightarrow C_i^+ C_i^- M$ 是投影;</li>
+    <li>(余单位) $C_i^- C_i^+ N \hookrightarrow C_i^- C_i^+ N \oplus \mathrm{coker}[\bigoplus_{\neq i} N_i → N] \simeq N$ 是嵌入.</li>
+  </ol>
+</div>
+
+<div class="note">
+  <p>反射函子 $C_i^±$ 极大地分离出半单 $S_i$-部分.</p>
+</div>
+
+<div class="lemma">
+  <p>(<a href="Coxeter_Ref_Idem">证明</a>). Coxeter 反射 $C_i^±$ 保持不可分解模; 除了映 $S_i$ 至 $0$.</p>
+</div>
+
+<p>基于以上引理, 不难得到:</p>
+
+<div class="theorem">
+  <p>假定 $C_i ^- : Q_1 ⇆  Q_2 : C_i^+$. 记 $𝐢(Q_i)$ 是 $𝐦𝐨𝐝_{kQ_i}$ 中的不可分解对象 (的同构类), 则以下是双射:</p>
+  <p>$$
+C_i^- : 𝐢 (Q_1) ⇆ 𝐢 (Q_2) : C_i^+.
+$$</p>
+</div>
+
+<div class="example">
+  <p>(反射的例子). 考虑 $D_4$ 型 quiver 的反射, 比较如下 AR quiver:</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMzIsWzEsMSwiNCJdLFsyLDAsIjEiXSxbMiwxLCIyIl0sWzIsMiwiMyJdLFszLDEsIlAoNCkiXSxbNCwwLCJQKDEpIl0sWzQsMiwiUCgzKSJdLFs0LDEsIlAoMikiXSxbNSwxLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDIgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwwLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAwXFxcXDEgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwxLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDEgXFwgXFwgMFxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwyLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDEgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMH0iXSxbNywxLCJJKDQpIl0sWzgsMCwiSSgxKSJdLFs4LDEsIkkoMikiXSxbOCwyLCJTKDMpIl0sWzIsMywiMSJdLFsyLDQsIjIiXSxbMSw0LCI0Il0sWzAsNSwiMyJdLFsyLDUsIlMoMykiXSxbMyw0LCJQKDQpIl0sWzQsMywiUCgxKSJdLFs0LDQsIlAoMikiXSxbNCw1LCJTKDQpIl0sWzUsNCwiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMVxcXFwyIFxcIFxcIDFcXFxcMSBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsMywiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMFxcXFwxIFxcIFxcIDFcXFxcMCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsNCwiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMVxcXFwxIFxcIFxcIDBcXFxcMCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsNSwiSSgzKSJdLFs3LDQsIkkoNCkiXSxbOCwzLCJJKDEpIl0sWzgsNCwiSSgyKSJdLFsxLDBdLFsyLDBdLFszLDBdLFs0LDVdLFs0LDddLFs0LDZdLFs1LDhdLFs3LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV0sWzksMTJdLFsxMiwxM10sWzEwLDEyXSxbMTIsMTRdLFsxMSwxMl0sWzEyLDE1XSxbMTYsMThdLFsxNywxOF0sWzE4LDE5XSxbMjAsMjFdLFsyMSwyMl0sWzIxLDIzXSxbMjEsMjRdLFsyMiwyNV0sWzIzLDI1XSxbMjQsMjVdLFsyNSwyNl0sWzI1LDI3XSxbMjUsMjhdLFsyNiwyOV0sWzI3LDI5XSxbMjgsMjldLFsyOSwzMF0sWzI5LDMxXV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMzIsWzEsMSwiNCJdLFsyLDAsIjEiXSxbMiwxLCIyIl0sWzIsMiwiMyJdLFszLDEsIlAoNCkiXSxbNCwwLCJQKDEpIl0sWzQsMiwiUCgzKSJdLFs0LDEsIlAoMikiXSxbNSwxLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDIgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwwLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAwXFxcXDEgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwxLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDEgXFwgXFwgMFxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwyLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDEgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMH0iXSxbNywxLCJJKDQpIl0sWzgsMCwiSSgxKSJdLFs4LDEsIkkoMikiXSxbOCwyLCJTKDMpIl0sWzIsMywiMSJdLFsyLDQsIjIiXSxbMSw0LCI0Il0sWzAsNSwiMyJdLFsyLDUsIlMoMykiXSxbMyw0LCJQKDQpIl0sWzQsMywiUCgxKSJdLFs0LDQsIlAoMikiXSxbNCw1LCJTKDQpIl0sWzUsNCwiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMVxcXFwyIFxcIFxcIDFcXFxcMSBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsMywiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMFxcXFwxIFxcIFxcIDFcXFxcMCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsNCwiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMVxcXFwxIFxcIFxcIDBcXFxcMCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsNSwiSSgzKSJdLFs3LDQsIkkoNCkiXSxbOCwzLCJJKDEpIl0sWzgsNCwiSSgyKSJdLFsxLDBdLFsyLDBdLFszLDBdLFs0LDVdLFs0LDddLFs0LDZdLFs1LDhdLFs3LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV0sWzksMTJdLFsxMiwxM10sWzEwLDEyXSxbMTIsMTRdLFsxMSwxMl0sWzEyLDE1XSxbMTYsMThdLFsxNywxOF0sWzE4LDE5XSxbMjAsMjFdLFsyMSwyMl0sWzIxLDIzXSxbMjEsMjRdLFsyMiwyNV0sWzIzLDI1XSxbMjQsMjVdLFsyNSwyNl0sWzI1LDI3XSxbMjUsMjhdLFsyNiwyOV0sWzI3LDI5XSxbMjgsMjldLFsyOSwzMF0sWzI5LDMxXV0=&amp;embed" width="600" height="400" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>可以发现, 在 $C_3^±$ 建立了不可分解对象的双射 ($S(3)$ 除外), 同时保持 $\mathrm{Irr}$-空间维度.</p>
+</div>
+
+<h3 id="完全-coxeter-反射">完全 Coxeter 反射</h3>
+
+<p>以下是一个自然的想法: 若存在一列遍历所有 $Q_0$ 的反射 $C_{i_k}^-$ 使得 $C^-_{i_n} \cdots C_{i_1}^-$ 可复合, 则得自函子 $𝐫𝐞𝐩_k(Q) → 𝐫𝐞𝐩_k(Q)$. 实际上, 这一自函子存在且唯一.</p>
+
+<div class="theorem">
+  <p>(完全 Coxeter 反射的存在性与唯一性, <a href="Complete_Coxeter_Reflection">证明</a>). 存在 $σ ∈ 𝔖_{Q_0}$, 使得有自函子</p>
+  <p>$$
+C^+ := C^+_{σ (n)} C^+_{σ (n-1)} \cdots C_{σ (1)}^+ : \mathbf{rep}_k (Q) → \mathbf{rep}_k (Q).
+$$</p>
+  <p>相应地记 $C^- = C^-_{σ (1)}C^-_{σ (2)}\cdots C^-_{σ (n)}$. 特别地, $C^±$ 的定义与置换顺序 $σ$ 无关.</p>
+</div>
+
+<div class="proposition">
+  <p>(<a href="Proj_Inj_Coxeter">证明</a>). 投射模与内射模在完全 Coxeter 分解下的表现如下.</p>
+  <ol>
+    <li>投射模经 $C^+$ 消失, 换言之, $C^+ P = 0$;</li>
+    <li>若 $C^+M = 0$, 则 $M$ 是投射模;</li>
+    <li>$C^+C^-M$ 是不含投射对象的极大直和项;</li>
+    <li>内射模经 $C^-$ 消失, 换言之, $C^- I = 0$;</li>
+    <li>若 $C^-M = 0$, 则 $M$ 是内射模;</li>
+    <li>$C^-C^+M$ 是不含内射对象的极大直和项.</li>
+  </ol>
+</div>
+
+<h3 id="ar-转置">AR 转置</h3>
+
+<div class="lemma">
+  <p>(<a href="C_is_tau_for_Proj">证明</a>). 若 $i$ 是 source, 对不可分解投射对象 $P_i ∈ 𝐦𝐨𝐝_{kQ}$, 则 $τ⁻¹ (P_i)$ 与 $C_i^-P_i$ 是 $𝐦𝐨𝐝_{kC_i^- Q}$ 中同构的模.</p>
+</div>
+
+<div class="theorem">
+  <p>(完全 Coxeter 反射就是 AR 平移, <a href="C_is_tau">证明</a>). $C^+ M ≃ τ M$.</p>
+</div>
+
+<p>对偶地, $C^- = τ ⁻¹$.</p>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Quiver-and-Hereditary-Algebra"
+        title="NEXT: 遗传代数与箭图">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/FP_P_I_F"
+        title="PREV: 有限表现模, 投射模, 内射模, 平坦模的结构">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+</body>
+
+
+</html>

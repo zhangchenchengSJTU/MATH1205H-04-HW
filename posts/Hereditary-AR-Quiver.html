@@ -14,21 +14,21 @@
     Jekyll Latex</title>
 
 
-<meta name="description" content="遗传代数的 AR quiver">
+<meta name="description" content="无界 AR quiver">
 
 
   <meta name="google-site-verification" content="abc123">
 
 
-<link rel="icon" href="https://zhangchenchengsjtu.github.io/website/assets/favicon.png">
-<link rel="apple-touch-icon" href="https://zhangchenchengsjtu.github.io/website/assets/touch-icon.png">
-<link rel="stylesheet" href="https://zhangchenchengsjtu.github.io/website/assets/core.css">
-<link rel="canonical" href="https://zhangchenchengsjtu.github.io/website/posts/Hereditary-AR-Quiver">
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Hereditary-AR-Quiver">
 <link
   rel="alternate"
   type="application/atom+xml"
   title="Jekyll Latex"
-  href="https://zhangchenchengsjtu.github.io/website/feed.xml" />
+  href="/website/feed.xml" />
 
 
 
@@ -59,15 +59,21 @@
 
 <body class="latex-dark">
 
-	<aside class="logo">
-  
-
-  <a href="https://zhangchenchengsjtu.github.io/website/">
+	<aside class="logo" id="logo-section">
+  <a href="/website/about" id="logo-link">
     <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
   </a>
-  <span class="logo-prompt">Back to Home</span>
-
+  <span class="logo-prompt" id="logo-prompt">About the Author</span>
 </aside>
+
+<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
 
 	<main>
   <article>
@@ -83,44 +89,58 @@
 
     <div class="divider"></div>
 
-    <h2 id="遗传代数的-ar-quiver">遗传代数的 AR quiver</h2>
+    <h2 id="无界-ar-quiver">无界 AR quiver</h2>
 
-<h3 id="ar-平移-截面等">AR 平移, 截面等</h3>
+<h3 id="遗传代数的-ar-quiver">遗传代数的 AR quiver</h3>
+
+<p>本节假定 $Q$ 有限维, 连通, 无环的 quiver; $A$ 是有限维, 连通, 基础的遗传代数. 实际上, 以下是对应.</p>
+
+<div class="theorem">
+  <p>在同构的意义下, 以下两者对应</p>
+  <ol>
+    <li>有限维, 连通, 基础的遗传代数;</li>
+    <li>路代数 $kQ$, 其中 $Q$ 是有限维, 连通, 无环的 quiver.</li>
+  </ol>
+</div>
+
+<p>从有限维, 连通, 基础的遗传代数得到 quiver 的方式是</p>
+
+<ol>
+  <li>任取幂等分解 $\{e_i\}_{i=1}^n$;</li>
+  <li>取矩阵代数 $A$, 使得 $a_{i,j} = e_i ⋅ A ⋅ e_j$;</li>
+  <li>由代数无环, 从 $\dim e_i ⋅ A ⋅ e_j$ 极小者开始构造连边 $\mathrm{Hom}_Q(i, j)$; 也可以通过 $\mathrm{Ext}^1(S(i), S(j))$ 的基表示.</li>
+</ol>
+
+<div class="theorem">
+  <p>(<a href="Quiver-and-Hereditary-Algebra#遗传代数的箭图表示">证明</a>). $kQ$ 的不可分解投射模具有如下以下性质:</p>
+  <ol>
+    <li>不可分解投射对象间的态射必然是单的, 投射对象是 brick;</li>
+    <li>$\mathrm{Irr}(P(i), P(j)) ≃ \mathrm{Ext}^1(P(i), P(j))$;</li>
+    <li>$Γ (kQ)$ 中不可分解投射对象所在的全子范畴同构于 $Q^{\mathrm{op}}$.</li>
+  </ol>
+</div>
+
+<p>内射部分对偶.</p>
+
+<div class="lemma">
+  <p>(有限性初探, <a href="AR_Finite_No_Multiple_Arrows">证明</a>). 对有限表示的 (未必遗传) 代数 $A$, $Γ(A)$ 无重边.</p>
+</div>
+
+<h3 id="无限-ar-平移-截面">无限 AR 平移, 截面</h3>
 
 <p>先从以下例子开始.</p>
 
 <div class="example">
   <p>给定 quiver $Q := [1 → 2 → 3]$. 记代数闭域上的路代数 $A= kQ$, 以及 AR quiver</p>
-  <p>$$
-Γ (A) :=
-\begin{bmatrix}
- &  &  &  & A &  &  &  & \\
- &  &  & \nearrow  &  & \searrow  &  &  & \\
- &  & P( 2) &  & \overset τ\dashleftarrow  &  & I( 2) &  & \\
- & \nearrow  &  & \searrow  &  & \nearrow  &  & \searrow  & \\
-P( 3) &  & \overset τ\dashleftarrow  &  & S( 2) &  & \overset τ\dashleftarrow   &  & I( 3)
-\end{bmatrix}
-$$</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTcsWzAsMywiMyJdLFsxLDIsIjIiXSxbMiwxLCIxIl0sWzAsMiwiUSJdLFsxLDMsIlAoMykiLFsyNDAsNjAsNjAsMV1dLFsyLDIsIlAoMikiLFsyNDAsNjAsNjAsMV1dLFszLDEsIkEiLFsyNzAsNjAsNjAsMV1dLFs0LDIsIkkoMikiLFszMDAsNjAsNjAsMV1dLFszLDMsIlMoMikiXSxbNSwzLCJJKDEpIixbMzAwLDYwLDYwLDFdXSxbMywwLCJcXEdhbW1hIChBKSJdLFsxLDQsIlxcbWF0aGJme3Byb2p9IixbMjQwLDYwLDYwLDFdXSxbNSw0LCJcXG1hdGhiZntpbmp9IixbMzAwLDYwLDYwLDFdXSxbNCwxLCIzIl0sWzUsMiwiMiJdLFs2LDMsIjEiXSxbNiwyLCJRIl0sWzEsMF0sWzIsMV0sWzQsNSwiIiwyLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFs1LDYsIiIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbNSw4XSxbOCw3XSxbNiw3LCIiLDEseyJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzcsOSwiIiwxLHsiY29sb3VyIjpbMzAwLDYwLDYwXX1dLFsxNSwxNF0sWzE0LDEzXSxbNyw1LCJcXHRhdSAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw4LCJcXHRhdSAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCw0LCJcXHRhdSAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTcsWzAsMywiMyJdLFsxLDIsIjIiXSxbMiwxLCIxIl0sWzAsMiwiUSJdLFsxLDMsIlAoMykiLFsyNDAsNjAsNjAsMV1dLFsyLDIsIlAoMikiLFsyNDAsNjAsNjAsMV1dLFszLDEsIkEiLFsyNzAsNjAsNjAsMV1dLFs0LDIsIkkoMikiLFszMDAsNjAsNjAsMV1dLFszLDMsIlMoMikiXSxbNSwzLCJJKDEpIixbMzAwLDYwLDYwLDFdXSxbMywwLCJcXEdhbW1hIChBKSJdLFsxLDQsIlxcbWF0aGJme3Byb2p9IixbMjQwLDYwLDYwLDFdXSxbNSw0LCJcXG1hdGhiZntpbmp9IixbMzAwLDYwLDYwLDFdXSxbNCwxLCIzIl0sWzUsMiwiMiJdLFs2LDMsIjEiXSxbNiwyLCJRIl0sWzEsMF0sWzIsMV0sWzQsNSwiIiwyLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFs1LDYsIiIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbNSw4XSxbOCw3XSxbNiw3LCIiLDEseyJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzcsOSwiIiwxLHsiY29sb3VyIjpbMzAwLDYwLDYwXX1dLFsxNSwxNF0sWzE0LDEzXSxbNyw1LCJcXHRhdSAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw4LCJcXHRhdSAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCw0LCJcXHRhdSAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=&amp;embed" width="600" height="350" style="border-radius: 8px; border: dashed;"></iframe> </center>
   <p>注意到如下事实.</p>
   <ol>
     <li>$𝐩𝐫𝐨𝐣 ∩ Γ (A) ≃ Q^{\mathrm{op}} ≃ 𝐢𝐧𝐣 ∩ Γ (A)$.</li>
     <li>所有箭头由 $Q^{\mathrm{op}}$ 关于顶点的反射得到.</li>
   </ol>
   <p>以上 AR quiver 可视作无限 quiver (点集是 $ℤ × Q^{\mathrm{op}}$) 的一部分, 如下图所示.</p>
-  <p>$$
-\begin{bmatrix}
- &  &  &  & \bullet  & \rightarrow  & \bullet \\
- &  &  & \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  & \uparrow  & \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  & \uparrow \\
- &  & \bullet  & \rightarrow  & \bullet  & \rightarrow  & \bullet \\
- & \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  & \uparrow  & \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  & \uparrow  & \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  & \\
-\textcolor[rgb]{0.29,0.56,0.89}{A} & \textcolor[rgb]{0.82,0.01,0.11}{\rightarrow } & \textcolor[rgb]{0.82,0.01,0.11}{I( 2)} & \textcolor[rgb]{0.82,0.01,0.11}{\rightarrow } & \textcolor[rgb]{0.82,0.01,0.11}{I( 1)} &  & \\
-\textcolor[rgb]{0.29,0.56,0.89}{\uparrow } & \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  & \textcolor[rgb]{0.82,0.01,0.11}{\uparrow } & \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  &  &  & \\
-\textcolor[rgb]{0.29,0.56,0.89}{P( 2)} & \textcolor[rgb]{0.82,0.01,0.11}{\rightarrow } & \textcolor[rgb]{0.82,0.01,0.11}{S( 2)} &  &  &  & \\
-\textcolor[rgb]{0.29,0.56,0.89}{\uparrow } & \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  &  &  &  &  & \\
-\textcolor[rgb]{0.29,0.56,0.89}{P( 3)} &  &  &  &  &  &
-\end{bmatrix}
-$$</p>
-  <p>对以上, $P(2) → A$ 通过反射得到 $A → I(2)$.</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTQsWzAsMiwiUCgzKSIsWzI0MCw2MCw2MCwxXV0sWzEsMSwiUCgyKSIsWzI0MCw2MCw2MCwxXV0sWzIsMCwiQSIsWzI3MCw2MCw2MCwxXV0sWzMsMSwiSSgyKSIsWzMwMCw2MCw2MCwxXV0sWzIsMiwiUygyKSJdLFs0LDIsIkkoMSkiLFszMDAsNjAsNjAsMV1dLFsyLDMsIlxcR2FtbWEgKEEpIl0sWzAsMywiXFxtYXRoYmZ7cHJvan0iLFsyNDAsNjAsNjAsMV1dLFs0LDMsIlxcbWF0aGJme2luan0iLFszMDAsNjAsNjAsMV1dLFs0LDAsIkFbLTFdIixbMCwwLDUwLDFdXSxbNSwxLCJJKDIpWy0xXSIsWzAsMCw1MCwxXV0sWzYsMiwiSSgxKVstMV0iLFswLDAsNTAsMV1dLFs2LDAsIkFbLTJdIixbMCwwLDUwLDFdXSxbMCwwLCJBWzFdIixbMCwwLDUwLDFdXSxbMCwxLCIiLDIseyJjb2xvdXIiOlsyNDAsNjAsNjBdfV0sWzEsMiwiIiwyLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxLDRdLFs0LDNdLFsyLDMsIiIsMSx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMyw1LCIiLDEseyJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzMsMSwiXFx0YXUgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzUsNCwiXFx0YXUgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsMCwiXFx0YXUgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzksMTAsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMCwxMSwiIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzMsOSwiIiwwLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzksMiwiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTAsMywiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTEsNSwiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTIsOSwiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTAsMTIsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDEwLCIiLDIseyJjb2xvdXIiOlswLDAsNTBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMiwxMywiIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEzLDEsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTQsWzAsMiwiUCgzKSIsWzI0MCw2MCw2MCwxXV0sWzEsMSwiUCgyKSIsWzI0MCw2MCw2MCwxXV0sWzIsMCwiQSIsWzI3MCw2MCw2MCwxXV0sWzMsMSwiSSgyKSIsWzMwMCw2MCw2MCwxXV0sWzIsMiwiUygyKSJdLFs0LDIsIkkoMSkiLFszMDAsNjAsNjAsMV1dLFsyLDMsIlxcR2FtbWEgKEEpIl0sWzAsMywiXFxtYXRoYmZ7cHJvan0iLFsyNDAsNjAsNjAsMV1dLFs0LDMsIlxcbWF0aGJme2luan0iLFszMDAsNjAsNjAsMV1dLFs0LDAsIkFbLTFdIixbMCwwLDUwLDFdXSxbNSwxLCJJKDIpWy0xXSIsWzAsMCw1MCwxXV0sWzYsMiwiSSgxKVstMV0iLFswLDAsNTAsMV1dLFs2LDAsIkFbLTJdIixbMCwwLDUwLDFdXSxbMCwwLCJBWzFdIixbMCwwLDUwLDFdXSxbMCwxLCIiLDIseyJjb2xvdXIiOlsyNDAsNjAsNjBdfV0sWzEsMiwiIiwyLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxLDRdLFs0LDNdLFsyLDMsIiIsMSx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMyw1LCIiLDEseyJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzMsMSwiXFx0YXUgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzUsNCwiXFx0YXUgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsMCwiXFx0YXUgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzksMTAsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMCwxMSwiIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzMsOSwiIiwwLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzksMiwiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTAsMywiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTEsNSwiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTIsOSwiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTAsMTIsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDEwLCIiLDIseyJjb2xvdXIiOlswLDAsNTBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMiwxMywiIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEzLDEsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&amp;embed" width="600" height="300" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>对以上, $P(2) → A$ 通过反射得到 $A → I(2)$, 继续反射 $A → I(2)$ 得 $I(2) → A[-1]$.</p>
   <div class="note">
     <p>对子图, 此处沿用子范畴与全子范畴的称呼.</p>
     <ol>
@@ -135,10 +155,10 @@ $$</p>
 <div class="definition">
   <p>(quiver 的无界化). 给定 $Q$, 定义 $ℤ Q$ 如下.</p>
   <ol>
-    <li>顶点集是 Catersian 积 $(ℤ × Q_0) := ℤ × Q_0$.</li>
+    <li>顶点集是 Catersian 积 $(ℤ × Q)_0 := ℤ × Q_0$.</li>
     <li>箭头集是 $S_1 ⊔ S_2$. 其中       <ol>
-        <li>$S_1 := ℤ × Q_1$, 形如 $(n, α) : (n, x) → (n, y)$.</li>
-        <li>$S_2$ 中箭头刻画如下: 若 $(n, α) : (n, x) → (n, y)$, 则作</li>
+        <li>($Γ$ 内的箭头). $S_1 := ℤ × Q_1$, 形如 $(n, α) : (n, x) → (n, y)$.</li>
+        <li>($Γ$ 外的箭头) $S_2$ 中箭头刻画如下: 若 $(n, α) : (n, x) → (n, y)$, 则作</li>
       </ol>
       <p>$$
    θ(n, α) : (n + 1, y) → (n , x).
@@ -155,11 +175,13 @@ $$</p>
 $$</p>
 </div>
 
+<p>约定 $ℤ Q$ 的横坐标向右减小.</p>
+
 <div class="definition">
   <p>定义 $ℤQ$ 上的两类运算.</p>
   <ol>
-    <li>$τ : ℤQ → ℤQ ,\quad (n, -) → (n-1, -)$ 是平移.</li>
-    <li>$θ : ℤQ_1 → ℤQ_1$ 是朝向 $τ$ 的反射.</li>
+    <li>$τ : ℤQ → ℤQ ,\quad (n, ∙) → (n-1, ∙)$ 是平移.</li>
+    <li>$θ : ℤQ_1 → ℤQ_1$ 是朝向 $τ$ 的反射 (往左偏移).</li>
   </ol>
 </div>
 
@@ -174,6 +196,16 @@ $$</p>
   </ol>
 </div>
 
+<p>道路封闭性可归结为如下引理.</p>
+
+<div class="lemma">
+  <p>(易证). 对 $Γ (A)$ 中箭头 $α : x → y$, 若 $(n, x) ∈ Σ$, 则有如下二择:</p>
+  <ol>
+    <li>$(n, y) ∈ Σ$,</li>
+    <li>$(n-1, y) ∈ Σ$.</li>
+  </ol>
+</div>
+
 <div class="example">
   <p>$ℤ Γ (k [∙ → ∙ → ∙])$ 的截面可以是 $𝐩𝐫𝐨𝐣 ∩ Γ$, 也可以是</p>
   <p>$$
@@ -182,39 +214,52 @@ $$</p>
 </div>
 
 <div class="theorem">
-  <p>以下是一些组合学的事实, 对后续证明无帮助. 证明从略.</p>
+  <p>以下是一些组合学的事实, 证明从略.</p>
   <ol>
-    <li>$ℤ Q$ 是无环图.</li>
-    <li>取 $ℤ Q$ 的截面 $Σ$, 则截面的嵌入诱导了同构 $ℤ Σ ≃ ℤ Q$.</li>
-    <li>记 $T_1$ 与 $T_2$ 是同一棵无向树的两种定向, 则 $ℤ T_1 ≃ ℤ T_2$.</li>
+    <li>($ℤ$ 保持无环图). 若 $Q$ 无环, 则 $ℤ Q$ 亦无环.</li>
+    <li>(截面的延拓性质). 取 $ℤ Q$ 的截面 $Σ$, 则截面的嵌入诱导了同构 $ℤ Σ ≃ ℤ Q$.       <ul>
+        <li>这说明, 可以从任意截面复原 $ℤQ$ 的信息.</li>
+      </ul>
+    </li>
+    <li>记 $T_1$ 与 $T_2$ 是同一棵无向树的两种定向, 则 $ℤ T_1 ≃ ℤ T_2$.       <ul>
+        <li>这也是 Coxeter 反射的性质.</li>
+      </ul>
+    </li>
     <li>给定环 $C$, 假定其定向是无环的. 此时 $ℤ Q$ 的结构唯一取决于 $C$ 中顺时针箭头个数与逆时针箭头个数, 与具体的排列无关.</li>
   </ol>
 </div>
 
-<div class="note">
-  <p>若除去遗传条件, 则上述定理不再成立. 见<a href="Commutative_Diagram_Alg#非-apr-tilting-模">此文中的 $B = \mathrm{End}(T_A)$</a>.</p>
-</div>
+<h3 id="遗传代数的无限-ar-平移">遗传代数的无限 AR 平移</h3>
 
 <p>选定 AR quiver $Γ$, 使用</p>
 
 <ol>
-  <li>$𝔓$ 表示投射对象所在的连通分支.</li>
-  <li>$ℑ$ 表示内射对象所在的连通分支.</li>
+  <li>$𝔓$ 表示投射对象所在的全子范畴.</li>
+  <li>$ℑ$ 表示内射对象所在的全子范畴.</li>
 </ol>
 
-<p>对有限表示的遗传代数 (不必选择代数闭域), 下将 $𝔓$ 是截面的事实归纳作如下引理.</p>
+<p>对有限表示的遗传代数 (不必选择代数闭域), 有如下引理.</p>
 
 <div class="lemma">
   <p>($𝔓$ 是 $ℤ 𝔓$ 的截面, <a href="P_is_Section">证明</a>). 给定连通, 有限表示表示的遗传代数.</p>
   <ol>
     <li>$𝔓$ 是 $ℤ𝔓$ 的截面.</li>
-    <li>$Γ$ 是 $ℤ𝔓$ 的子图.</li>
-    <li>$ℤ 𝔓$ 视同 $ℤΓ$ 的全子范畴.</li>
+    <li>$Γ$ 是 $ℤ𝔓$ 的全子范畴.</li>
   </ol>
-  <p>内射对象同理.</p>
+  <p>内射对象的命题对偶.</p>
 </div>
 
-<p>若去除有限表示条件, 则 $ℤ 𝔓$ 与 $ℤ ℑ$ 是连通分支的子图.</p>
+<div class="note">
+  <p>若除去遗传条件, 则 $𝔓$ 未必连通. 见<a href="Commutative_Diagram_Alg#非-apr-tilting-模">此文中的 $B = \mathrm{End}(T_A)$</a>.</p>
+</div>
+
+<h3 id="预投射-预内射">预投射, 预内射</h3>
+
+<p>在介绍预投射与预内射模前, 可先参阅 <a href="Kronecker_Rep">Kronecker quiver 的表示</a>.</p>
+
+<div class="definition">
+  <p>对 AR quiver</p>
+</div>
 
 
   </article>
@@ -223,7 +268,7 @@ $$</p>
     
       <a
         class="next"
-        href="https://zhangchenchengsjtu.github.io/website/posts/Commutative_Diagram_Alg"
+        href="/website/posts/Commutative_Diagram_Alg"
         title="NEXT: $D_4$ 与交换图方块代数.">&lt;&lt;</a>
       <span>
         &middot;
@@ -231,7 +276,7 @@ $$</p>
     
     <a
       class="home"
-      href="https://zhangchenchengsjtu.github.io/website/"
+      href="/website/"
       title="Back to Homepage">Home</a>
     
       <span>
@@ -239,7 +284,7 @@ $$</p>
       </span>
       <a
         class="prev"
-        href="https://zhangchenchengsjtu.github.io/website/posts/Gabriel_2"
+        href="/website/posts/Gabriel_2"
         title="PREV: Gabriel 主定理 (II)">&gt;&gt;</a>
     
   </div>

@@ -7,6 +7,1104 @@
     
       
         <item>
+          <title>Kronecker quiver 的 regular 模</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;若 $k$ 是代数闭域, 则 regular 模在同构的意义下形如 $\binom{I}{J_n (λ)}: k^n ⇉ k^n$. 其中 $J_n(λ)$ 是大小为 $n$ 的 Jordan 块. 约定 $\binom{I}{J_n (∞ )} := \binom{J_n (0)}{I}$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;下使用数学归纳法证明. 若 $n = 1$, 则结论显然成立. &lt;br /&gt; &lt;br /&gt; 对一般的 $n$, 若 $A$ 是可逆矩阵, 则表示 $\binom{A}{B}$ 同构于 $\binom{I}{A^{-1}B}$. 不妨设 $A = I$, 则模的自同态代数为 $\{X ∣ BX = XB\}$, 其理应是局部环. 依照 $B$ 的 Jordan 型, 得 $B$ 的 Jordan 块个数只能是 $1$. &lt;br /&gt; 若 $A$ 不可逆, 则任取 $Av = 0$. 得表示的 ses:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTAsWzEsMCwia3YiXSxbMSwxLCJrdiJdLFszLDAsImtebiJdLFszLDEsImtebiJdLFs1LDAsImtee24tMX0iXSxbNSwxLCJrXntuLTF9Il0sWzAsMCwiMCJdLFswLDEsIjAiXSxbNiwwLCIwIl0sWzYsMSwiMCJdLFs2LDBdLFswLDJdLFsyLDRdLFs0LDhdLFs3LDFdLFsxLDNdLFszLDVdLFs1LDldLFswLDEsIkJ8X3trdn0iLDAseyJvZmZzZXQiOi0yfV0sWzIsMywiQiIsMCx7Im9mZnNldCI6LTJ9XSxbNCw1LCIiLDAseyJvZmZzZXQiOi0yfV0sWzAsMSwiMCIsMix7Im9mZnNldCI6Mn1dLFsyLDMsIkEiLDIseyJvZmZzZXQiOjJ9XSxbNCw1LCIiLDAseyJvZmZzZXQiOjJ9XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTAsWzEsMCwia3YiXSxbMSwxLCJrdiJdLFszLDAsImtebiJdLFszLDEsImtebiJdLFs1LDAsImtee24tMX0iXSxbNSwxLCJrXntuLTF9Il0sWzAsMCwiMCJdLFswLDEsIjAiXSxbNiwwLCIwIl0sWzYsMSwiMCJdLFs2LDBdLFswLDJdLFsyLDRdLFs0LDhdLFs3LDFdLFsxLDNdLFszLDVdLFs1LDldLFswLDEsIkJ8X3trdn0iLDAseyJvZmZzZXQiOi0yfV0sWzIsMywiQiIsMCx7Im9mZnNldCI6LTJ9XSxbNCw1LCIiLDAseyJvZmZzZXQiOi0yfV0sWzAsMSwiMCIsMix7Im9mZnNldCI6Mn1dLFsyLDMsIkEiLDIseyJvZmZzZXQiOjJ9XSxbNCw1LCIiLDAseyJvZmZzZXQiOjJ9XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;比较 $\mathrm{Irr}$, 商对象的直和项不含预投射部分, (由维数) 亦不含预内射部分. 依照归纳假设, 商对象是若干 regular 模的直和, 每一直和项通过 $J_s(λ)$ 确定. 任取直和项 $J_s(λ)$, 对 $J_1(0)$ 作内射分解得 ses $J_1(0) → I(2) → I(1)$. 此时有四项长正合列&lt;/p&gt;
+  &lt;p&gt;$$
+0 → (J_s(λ), J_1(0)) → (J_s(λ), I(2)) → (J_s(λ), I(1)) → \mathrm{Ext}^1(J_s(λ), J_1(0)) → 0.
+$$&lt;/p&gt;
+  &lt;p&gt;由 $\dim (J_s(λ), I(2)) = s$ 于 $\dim (J_s(λ), I(1)) = s$, 得&lt;/p&gt;
+  &lt;p&gt;$$
+\dim (J_s(λ), J_1(0)) = \dim \mathrm{Ext}^1(J_s(λ), J_1(0)).
+$$&lt;/p&gt;
+  &lt;p&gt;今断言商对象的直和项 $J_s(λ)$ 必满足 $λ = 0$. 若不然, 则 $\dim (J_s(λ), J_1(0)) = \dim \mathrm{Ext}^1(J_s(λ), J_1(0)) = 0$. 此时有如下推出拉回:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsOCxbMCwwLCJKXzEoMCkiXSxbMCwxLCJKXzEoMCkiXSxbMSwwLCJFIl0sWzEsMSwiSl8xKDApIFxcb3BsdXMgSl9zKFxcbGFtYmRhKSJdLFsyLDEsIkpfcyhcXGxhbWJkYSkiXSxbMiwwLCJKX3MoXFxsYW1iZGEpIFxcb3BsdXMgVyJdLFszLDAsIkpfcyhcXGxhbWJkYSkiLFswLDAsNTAsMV1dLFsxLDIsIkpfcyhcXGxhbWJkYSkiLFswLDAsNTAsMV1dLFswLDEsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMiwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiw1LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSwzLCJcXGJpbm9tIDEwIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCIoMCBcXCAxKSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDUsIlxcYmlub20gMTAiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDIsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsNCwiXFxzcXVhcmUiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNywzLCIiLDIseyJjb2xvdXIiOlswLDAsNTBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs1LDYsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsOCxbMCwwLCJKXzEoMCkiXSxbMCwxLCJKXzEoMCkiXSxbMSwwLCJFIl0sWzEsMSwiSl8xKDApIFxcb3BsdXMgSl9zKFxcbGFtYmRhKSJdLFsyLDEsIkpfcyhcXGxhbWJkYSkiXSxbMiwwLCJKX3MoXFxsYW1iZGEpIFxcb3BsdXMgVyJdLFszLDAsIkpfcyhcXGxhbWJkYSkiLFswLDAsNTAsMV1dLFsxLDIsIkpfcyhcXGxhbWJkYSkiLFswLDAsNTAsMV1dLFswLDEsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMiwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiw1LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSwzLCJcXGJpbm9tIDEwIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw0LCIoMCBcXCAxKSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDUsIlxcYmlub20gMTAiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFszLDIsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsNCwiXFxzcXVhcmUiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNywzLCIiLDIseyJjb2xvdXIiOlswLDAsNTBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs1LDYsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;得 $J_s(λ)$ 是 $E$ 的直和项, 与 $E$ 不可分解矛盾. &lt;br /&gt; 由以上, 商对象形如若干 $J_s(0)$. 由子对象与商对象的右侧箭头是满秩矩阵, 必然有 $\ker B = 0$. 由 $B$ 可逆, 按照上文归纳即可.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;若 $k$ 不是代数闭域, 则 regular 模在同构意义下形如 $\binom{I}{J_n(λ)}$ ($λ ∈ k∪ \{∞\}$), 或是 $\binom{I}{J_s(C(f))} : k^n → k^n$. 此处, $C(f)$ 是 $k[x]$ 中不可约多项式对应的友矩阵, $J_s(C(f))$ 是有理标准型, 满足 $\deg f ⋅ J(s) = n$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;预投射与预内射部分无关域的选取. 对 regular 模的讨论也是从矩阵可逆与否开始. 依照初等因子组, $\mathrm{Hom}(J_m(C(f)), J_n(C(g))) = 0$ 当且仅当 $f = g$. 剩余的证明步骤同上.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-05T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Regular</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Regular</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Kronecker quiver 中预投射与预内射模的维数向量</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;以下是预投射模与预内射模的的维数向量.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;预投射模的维数向量是 $\binom{n}{n + 1}$;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;预投射模在同构的意义下形如&lt;/p&gt;
+      &lt;p&gt;$$
+   k^n \ \overset A {\underset B ⇉} \ k^{n+1},\quad A = \binom{I_n}{0}, \ B = \binom{0}{I_n} ∈ k^{n × (n+1)}.
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;预内射模的维数向量是 $\binom{n+1}{n}$.&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;预内射模在同构的意义下形如&lt;/p&gt;
+      &lt;p&gt;$$
+   k^{n+1} \ \overset A {\underset B ⇉} \ k^{n},\quad A = \binom{I_n}{0}^T, \ B = \binom{0}{I_n}^T ∈ k^{(n+1) × n}.
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;仅看前两点. 若 $M$ 预投射, 当且仅当 $M$ 在有限次 $C^+$ 后变作零. 记 $𝐝𝐢𝐦 M = mn$, 依照&lt;/p&gt;
+  &lt;p&gt;$$
+\begin{pmatrix}
+3 &amp; -2 \\ 2 &amp; -1
+\end{pmatrix} ^k = \begin{pmatrix}
+2k + 1 &amp; -2k \\ 2k &amp; -2k + 1
+\end{pmatrix}
+$$&lt;/p&gt;
+  &lt;p&gt;得 $𝐝𝐢𝐦 (C^+)^q M = \binom{m + 2q (m-n)}{n + 2q (m-n)}$. 依照预投射的定义, 存在 $q$ 使得 $𝐝𝐢𝐦 (C^+)^q M ∈ \{\binom 01, \binom 12\}$. 容易验证, $M$ 预投射当且仅当 $m + 1 = n$. &lt;br /&gt; 往后归纳地计算 $τ^{-k} P(1)$ 与 $τ^{-k} P(2)$ 即可.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-05T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Dim_Vec</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Dim_Vec</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>$C_i^- (P_i) ≃ τ ⁻¹ (P_i)$</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;若 $i$ 是 source, 对不可分解投射对象 $P_i ∈ 𝐦𝐨𝐝_{kQ}$, 则 $τ⁻¹ (P_i)$ 与 $C_i^-P_i$ 是 $𝐦𝐨𝐝_{kC_i^- Q}$ 中同构的模.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;若 $i$ 是 source, 对不可分解投射对象 $P_i ∈ 𝐦𝐨𝐝_{kQ}$, 有 $𝐦𝐨𝐝_{kC_i^-Q}$ 中几乎可裂 ses&lt;/p&gt;
+  &lt;p&gt;$$
+0 → P_i → ⨁_{j → i} P_j^{|\mathrm{Hom}_Q(i, j)|} → τ⁻¹ (P_i) → 0.
+$$&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;以上之所以是几乎可裂 ses, 是因为 $P_i → ⨁_{j → i} P_j^{|\mathrm{Hom}_Q(i, j)|}$ 是几乎可裂单. 依照 $𝐩𝐫𝐨𝐣 ∩ Γ (A) ≃ Q^{\mathrm{op}}$, 所有 $P_i$ 出发的不可约态射都可以写出.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;比较原 $P_i$ (记作 $p_i'$) 与新 $τ⁻¹ (P_i)$:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;两者限制在 $Q ∖ \{i\}$ 上是相同的模;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;在 $i$ 处有多个对象的推出方块, 描述作以下正合列&lt;/p&gt;
+      &lt;p&gt;$$
+   0 → (p_i)_i → ⨁ _{i →_Q j} (p_i)_j → (τ⁻¹ P_i)_i → 0.
+   $$&lt;/p&gt;
+      &lt;p&gt;特别地, 上述 $(p_i)_j$ 就是 $(τ⁻¹ P_i)_j$. 由 coker 的泛性质, $C_i^- P_i$ 与 $τ ⁻¹ P_i$ 中 $j → i$ 类型的态射相同 (相差一个同构).&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;计算维度向量, zh&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-05T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/C_is_tau_for_Proj</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/C_is_tau_for_Proj</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>$C^± ∼ τ ^±$</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(完全 Coxeter 反射就是 AR 平移). $M$, $C^+ M ≃ τ M$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;若 $M$ 是不可分解投射模, 则两侧均为 $0$. 今假定 $M$ 是不可分解非投射模. 考虑&lt;/p&gt;
+  &lt;p&gt;$$
+\begin{aligned}
+  C^+M &amp; ≃ (A , C_1^+\cdots C_n ^+M) \\  
+  &amp; ≃ (C_n^-\cdots C_1^- A, M)\\
+  &amp; \overset ⋆ ≃ (τ⁻¹ A, M) \\
+  &amp; ≃ (A, τ M)\\
+  &amp; ≃ τ M.
+\end{aligned}
+$$&lt;/p&gt;
+  &lt;p&gt;最后两行是依照遗传代数的 &lt;a href=&quot;AR_Formula&quot;&gt;AR 公式&lt;/a&gt;. 同构 $⋆$ 来自以下两部数学归纳.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;依照&lt;a href=&quot;C_is_tau_for_Proj&quot;&gt;引理&lt;/a&gt;, 每一 $C_i^-$ 将原图之 $P_i$ 变作新图之 $τ⁻¹ (P_i)$.&lt;/li&gt;
+    &lt;li&gt;对 $j &gt; i$, 由左伴随可交换知 $C_j^-$ 保持 $P_i → τ⁻¹(P_i)$, 也就是 $C_j^-(τ⁻¹ (P_i))≃ τ ⁻¹ (C_j^-(P_i))$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-05T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/C_is_tau</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/C_is_tau</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Kronecker quiver 的表示</title>
+          <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#kronecker-quiver-的表示&quot; id=&quot;markdown-toc-kronecker-quiver-的表示&quot;&gt;Kronecker quiver 的表示&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#预投射部分-预内射部分&quot; id=&quot;markdown-toc-预投射部分-预内射部分&quot;&gt;预投射部分, 预内射部分&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#正规部分&quot; id=&quot;markdown-toc-正规部分&quot;&gt;正规部分&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#mathjax_protectedjfxtyxrocm17y29ofsjihjlfa14xksqmathjax_protected-的等价解释&quot; id=&quot;markdown-toc-mathjax_protectedjfxtyxrocm17y29ofsjihjlfa14xksqmathjax_protected-的等价解释&quot;&gt;$\mathrm{coh}(ℙ_k^1)$ 的等价解释&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#导出等价-mathjax_protectedjereyiaoxg1hdghybxtjb2h9kokemv9rxjepksdiiymgrf5iicjwnzcr8j2qnvcdkkkoa1viijkg4oejiokimv0pksqmathjax_protected&quot; id=&quot;markdown-toc-导出等价-mathjax_protectedjereyiaoxg1hdghybxtjb2h9kokemv9rxjepksdiiymgrf5iicjwnzcr8j2qnvcdkkkoa1viijkg4oejiokimv0pksqmathjax_protected&quot;&gt;导出等价 $D^b (\mathrm{coh}(ℙ_k^1)) ≃ D^b (𝐫𝐞𝐩(k[∙ ⇉ ∙]))$&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;kronecker-quiver-的表示&quot;&gt;Kronecker quiver 的表示&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Kronecker). 称 $Q = [1 ⇉ 2]$ 为 Kronecker quiver. 记 $α$ 与 $β$ 是上下箭头, 则路代数 $kQ$ 是矩阵代数&lt;/p&gt;
+  &lt;p&gt;$$
+kQ ≃ \begin{pmatrix}
+    s &amp; 0\\ xα ⊕ yβ &amp; t
+\end{pmatrix}_{s,t,x,y ∈ k} ≃ \begin{pmatrix}
+    s &amp; 0 &amp; 0\\ x &amp; t &amp; 0 \\ y &amp; 0 &amp; t
+\end{pmatrix}_{s,t,x,y ∈ k}.
+$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;预投射部分-预内射部分&quot;&gt;预投射部分, 预内射部分&lt;/h3&gt;
+
+&lt;p&gt;以下取 $Q$ 为 Kronecker quier. 涉及 Coxeter 反射的内容见&lt;a href=&quot;Coxeter-Reflection&quot;&gt;此文&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Kronecker quiver 的 Coxeter 矩阵). 对不可分解对象 $M ∈ 𝐫𝐞𝐩 (kQ)$, 定义维数向量 $𝐝𝐢𝐦 M = \binom{\dim M_1}{\dim M_2} =: \binom mn$. 依照&lt;a href=&quot;Coxeter-Reflection#反射函子初探&quot;&gt;此处&lt;/a&gt;计算以及 $C^± = τ ^±$, 得&lt;/p&gt;
+  &lt;p&gt;$$
+\begin{aligned}
+𝐝𝐢𝐦 \  C^+M_{(∉ 𝐩𝐫𝐨𝐣)} &amp; = \begin{pmatrix}
+3 &amp; -2 \\ 2 &amp; -1
+\end{pmatrix} ⋅ \binom mn = \binom{3m-2n}{2m-n}; \\[6pt]
+𝐝𝐢𝐦 \ C^-M_{(∉ 𝐢𝐧𝐣)} &amp; = \begin{pmatrix}
+-1 &amp; 2 \\ -2 &amp; 3
+\end{pmatrix} ⋅ \binom mn = \binom{-m + 2n}{- 2m+ 2n}.
+\end{aligned}
+$$&lt;/p&gt;
+  &lt;p&gt;需要提及, $C^+$ 将投射模映至 $0$, $C^-$ 将内射模映至 $0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Kronecker_Dim_Vec&quot;&gt;证明&lt;/a&gt;). 以下是 Kronecker quiver 的所有预投射模与预内射模:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;预投射模的维数向量是 $\binom{n}{n + 1}$;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;预投射模在同构的意义下形如&lt;/p&gt;
+      &lt;p&gt;$$
+   k^n \ \overset A {\underset B ⇉} \ k^{n+1},\quad A = \binom{I_n}{0}, \ B = \binom{0}{I_n} ∈ k^{n × (n+1)}.
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;预内射模的维数向量是 $\binom{n+1}{n}$.&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;预内射模在同构的意义下形如&lt;/p&gt;
+      &lt;p&gt;$$
+   k^{n+1} \ \overset A {\underset B ⇉} \ k^{n},\quad A = \binom{I_n}{0}^T, \ B = \binom{0}{I_n}^T ∈ k^{(n+1) × n}.
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;对 Kronecker quiver $a ⇉ b$ 上的预投射与预内射模 $M$, 维数向量唯一决定了同构类. 下使用 $[m ∣ n]$ 表示 $M$ ($𝐝𝐢𝐦 M = \binom mn$) 的同构类.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;预投射模 $[n ∣ n+1]$, 包含投射模 $[1 ∣ 2]$ 与 $[0 ∣ 1]$;&lt;/li&gt;
+    &lt;li&gt;预内射模 $[n+1 ∣ n]$, 包含内射模 $[2 ∣ 1]$ 与 $[1 ∣ 0]$;&lt;/li&gt;
+    &lt;li&gt;正规模, 其结构暂不明确, 但是维数向量形如 $\binom nn$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;以是预投射与预内射部分的 AR quiver:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTUsWzAsMiwiWzAgXFxtaWQgMV0iLFsyMzIsMTAwLDYwLDFdXSxbMSwyLCJbMSBcXG1pZCAyXSIsWzIzMiwxMDAsNjAsMV1dLFsxLDMsIlsyIFxcbWlkIDNdIixbMjA2LDEwMCw2MCwxXV0sWzIsMywiWzNcXG1pZCA0XSIsWzIwNiwxMDAsNjAsMV1dLFsyLDQsIlxcY2RvdHMiLFsyMDYsMTAwLDYwLDFdXSxbNCwwLCJcXGNkb3RzIixbMTksMTAwLDYwLDFdXSxbNCwxLCJbNCBcXG1pZCAzXSIsWzE5LDEwMCw2MCwxXV0sWzUsMSwiWzNcXG1pZDJdIixbMTksMTAwLDYwLDFdXSxbNSwyLCJbMlxcbWlkMV0iLFszNTcsMTAwLDYwLDFdXSxbNiwyLCJbMVxcbWlkMF0iLFszNTcsMTAwLDYwLDFdXSxbMiwyLCJcXHRleHR7cHJvan0iLFsyMzIsMTAwLDYwLDFdXSxbMywzLCJcXHRleHR7cHJlLXByb2p9IixbMjA2LDEwMCw2MCwxXV0sWzMsMSwiXFx0ZXh0e3ByZS1pbmp9IixbMTksMTAwLDYwLDFdXSxbNCwyLCJcXHRleHR7aW5qfSIsWzM1NywxMDAsNjAsMV1dLFszLDIsIlxcYm94ZWR7XFx0ZXh0e3JlZ3VsYXIgbW9kfX0iLFsxMjAsNjAsNjAsMV1dLFswLDFdLFsxLDJdLFsyLDNdLFszLDRdLFswLDEsIiIsMSx7Im9mZnNldCI6LTN9XSxbMSwyLCIiLDEseyJvZmZzZXQiOi0zfV0sWzIsMywiIiwxLHsib2Zmc2V0IjotM31dLFszLDQsIiIsMSx7Im9mZnNldCI6LTN9XSxbNiw3XSxbNyw4XSxbNiw3LCIiLDEseyJvZmZzZXQiOi0zfV0sWzgsOSwiIiwxLHsib2Zmc2V0IjotM31dLFs1LDZdLFs1LDYsIiIsMSx7Im9mZnNldCI6LTN9XSxbMiwwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMywxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNCwyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNyw1LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw3LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTEsMTAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwxMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XSxbMTIsMTQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV0sWzEzLDEyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNyw4LCIiLDEseyJvZmZzZXQiOi0zfV0sWzgsOV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTUsWzAsMiwiWzAgXFxtaWQgMV0iLFsyMzIsMTAwLDYwLDFdXSxbMSwyLCJbMSBcXG1pZCAyXSIsWzIzMiwxMDAsNjAsMV1dLFsxLDMsIlsyIFxcbWlkIDNdIixbMjA2LDEwMCw2MCwxXV0sWzIsMywiWzNcXG1pZCA0XSIsWzIwNiwxMDAsNjAsMV1dLFsyLDQsIlxcY2RvdHMiLFsyMDYsMTAwLDYwLDFdXSxbNCwwLCJcXGNkb3RzIixbMTksMTAwLDYwLDFdXSxbNCwxLCJbNCBcXG1pZCAzXSIsWzE5LDEwMCw2MCwxXV0sWzUsMSwiWzNcXG1pZDJdIixbMTksMTAwLDYwLDFdXSxbNSwyLCJbMlxcbWlkMV0iLFszNTcsMTAwLDYwLDFdXSxbNiwyLCJbMVxcbWlkMF0iLFszNTcsMTAwLDYwLDFdXSxbMiwyLCJcXHRleHR7cHJvan0iLFsyMzIsMTAwLDYwLDFdXSxbMywzLCJcXHRleHR7cHJlLXByb2p9IixbMjA2LDEwMCw2MCwxXV0sWzMsMSwiXFx0ZXh0e3ByZS1pbmp9IixbMTksMTAwLDYwLDFdXSxbNCwyLCJcXHRleHR7aW5qfSIsWzM1NywxMDAsNjAsMV1dLFszLDIsIlxcYm94ZWR7XFx0ZXh0e3JlZ3VsYXIgbW9kfX0iLFsxMjAsNjAsNjAsMV1dLFswLDFdLFsxLDJdLFsyLDNdLFszLDRdLFswLDEsIiIsMSx7Im9mZnNldCI6LTN9XSxbMSwyLCIiLDEseyJvZmZzZXQiOi0zfV0sWzIsMywiIiwxLHsib2Zmc2V0IjotM31dLFszLDQsIiIsMSx7Im9mZnNldCI6LTN9XSxbNiw3XSxbNyw4XSxbNiw3LCIiLDEseyJvZmZzZXQiOi0zfV0sWzgsOSwiIiwxLHsib2Zmc2V0IjotM31dLFs1LDZdLFs1LDYsIiIsMSx7Im9mZnNldCI6LTN9XSxbMiwwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMywxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNCwyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNyw1LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw3LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTEsMTAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwxMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XSxbMTIsMTQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV0sWzEzLDEyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNyw4LCIiLDEseyJvZmZzZXQiOi0zfV0sWzgsOV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;正规部分&quot;&gt;正规部分&lt;/h3&gt;
+
+&lt;p&gt;依照 Coxeter 矩阵, 正规模 (既非预投射, 亦非预内射的模) 的维数向量必然是 $\binom{n}{n}$.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Kronecker_Regular&quot;&gt;证明&lt;/a&gt;). 若 $k$ 是代数闭域, 则正规模在同构的意义下形如 $\binom{I}{J_n (λ)}: k^n ⇉ k^n$. 其中 $J_n(λ)$ 是大小为 $n$ 的 Jordan 块. 约定 $\binom{I}{J_n (∞ )} := \binom{J_n (0)}{I}$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Kronecker_Regular&quot;&gt;证明&lt;/a&gt;). 若 $k$ 不是代数闭域, 则正规模在同构意义下形如 $\binom{I}{J_n(λ)}$ ($λ ∈ k∪ \{∞\}$), 或是 $\binom{I}{J_s(C(f))} : k^n → k^n$. 此处, $C(f)$ 是 $k[x]$ 中不可约多项式对应的友矩阵, $J_s(C(f))$ 是有理标准型, 满足 $\deg f ⋅ J(s) = n$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;slogan&quot;&gt;
+  &lt;p&gt;正规模对应 $ℕ_+ × ℙ_k^1$, 也就是带重数的素点.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;mathjax_protectedjfxtyxrocm17y29ofsjihjlfa14xksqmathjax_protected-的等价解释&quot;&gt;$\mathrm{coh}(ℙ_k^1)$ 的等价解释&lt;/h3&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(射影概型的非正式介绍). 正如将欧式平面粘成球面, 可以将仿射概型粘做射影概型. 例如 $ℙ_k^1$ 的由两份 $𝔸_k^1$ 粘合而成, 定义式作&lt;/p&gt;
+  &lt;p&gt;$$
+\begin{bmatrix}
+\mathbb{P}_{k}^{1} &amp; \supset  &amp; \mathbb{A}_{k}^{1} &amp;  &amp;  &amp;  &amp; k[ y]\\
+\cup  &amp;  &amp; \cup  &amp; ⇐ &amp;  &amp;  &amp; \downarrow \\
+\mathbb{A}_{k}^{1} &amp; \supset  &amp; \mathbb{A}_{k}^{1} \smallsetminus \{0\} &amp;  &amp; k[ x] &amp; \rightarrow  &amp; \frac{k[ x,y]}{( xy-1)}\\
+ &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\
+ &amp;  &amp; \mathrm{Sch}_{k} &amp; \substack{Γ\\ ⟶ \\ ⊥ \\ ⟵ \\ \mathrm{Spec}} &amp; \mathrm{CAlg}_{k}^{\mathrm{op}} &amp;  &amp;
+\end{bmatrix}
+$$&lt;/p&gt;
+  &lt;p&gt;以上,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;右侧代数同态是局部化, 例如 $k [x] → k[x]_x ≃ \frac{k[x,y]}{(xy-1)}$ 是局部化;&lt;/li&gt;
+    &lt;li&gt;从仿射概型层面看, 局部化 $k [x] → k[x]_x$ 对应仿射概型的包含 $(𝔸 _k ^1 ∖ \{[0]\}) ⊆ 𝔸_k^1$. 拉回所得的 $ℙ_k ^1$ 可粗略地理解做两条直线粘成的圆环.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(通过齐次素理想构造射影概型) $ℙ_k ^1$ 一般不是仿射概型. 例如对 $k = ℂ$, 由 Liouville 定理知 $Γ(ℙ_ℂ ^1) ≃ ℂ$, 而显然 $\mathrm{Spec}(ℂ) ≠ ℙ_ℂ^1$. &lt;br /&gt; &lt;br /&gt; 总之, 射影概型无法直接写作环的素谱. 一个常见的修复引入齐次素理想, 其本质上是选取子概型 $ℙ^1_k ⊂ 𝔸^2_k$. 例如, $[p] ∈ 𝔸^2_k$ 属于 $ℙ_k^1$, 当且仅当 $[p]$ 由齐次多项式生成. 该观点下, 记 \begin{equation} \mathrm{Proj}(k[x,y]) =: ℙ _k ^1. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;对代数闭域而言, 所有闭点形如 $(λ x - μ y) ≠ [0]$. 其对应射影坐标中的点 $[μ : λ]$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(拟凝聚层). 给定环空间 $(X, 𝒪_X)$ 与结构层上模 $ℱ$. 称 $ℱ$ 是拟凝聚的, 若对任意 $p ∈ X$, 总存在开邻域 $U = U_p$ 使得有表现&lt;/p&gt;
+  &lt;p&gt;$$
+𝒪|_{U_p}^{(κ)} → 𝒪|_{U_p}^{(λ)} → ℱ|_{U_p} → 0.
+$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;简单地说, 模层就是一族以开集为指标的相容模, 子拓扑空间对应子族. 单一环上的模总能通过某一基数表现; 若上述的一族模能被一致地表现, 则称之拟凝聚.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(凝聚层). 称拟凝聚层是凝聚的, 若以下同时满足&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;任意 $p ∈ X$, 存在开邻域 $U_p$ 使得 $𝒪|_{U_p}^n → ℱ|_{U_p}$ 是满态射.&lt;/li&gt;
+    &lt;li&gt;任意 $𝒪|_{V}^m → ℱ|_{V}$ 的 kernel 有限生成 (定义如上一条).&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Serre). 给定交换环 $R$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$R$ 上的拟凝聚层范畴等价于 $𝐌𝐨𝐝_R$;&lt;/li&gt;
+    &lt;li&gt;$R$ 上凝聚层范畴等价于 $𝐦𝐨𝐝 _R$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;特别地, 由模至层的函子由局部化诱导; 由层至模的函子是整体截面.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;Serre 定理对应了凝聚层语言与有限表现模语言. 以下是对 $ℙ_k^1$ 四种描述:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTYsWzEsMCwiXFxtYXRoYmIgQV9rIF4xIl0sWzAsMSwiXFxtYXRoYmIgQV9rIF4xIl0sWzEsMSwiXFxtYXRoYmIgQV9rIF4xIFxcc2V0bWludXMgXFx7MFxcfSJdLFswLDAsIlxcbWF0aGJiIFBfayBeMSJdLFszLDAsImtbeV0iXSxbMywxLCJcXGZyYWN7a1t4LHldfXsoeHktMSl9Il0sWzIsMSwia1t4XSJdLFswLDIsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgUF9rIF4xKSJdLFsxLDIsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rIF4xKSJdLFswLDMsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rIF4xKSJdLFsxLDMsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rIF4xIFxcc2V0bWludXMgXFx7MFxcfSkiXSxbMiwzLCJcXG1hdGhiZnttb2R9X3trW3leey0xfV19Il0sWzMsMiwiXFxtYXRoYmZ7bW9kfV97a1t5XX0iXSxbMywzLCJcXG1hdGhiZnttb2R9X3trW3kseV57LTF9XX0iXSxbMiwyLCJcXG1hdGhzY3IgQSJdLFsyLDAsIj8iXSxbMiwwLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcc3Vic2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMywiXFxzdWJzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwzLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDVdLFs2LDVdLFs4LDcsIlxcdGV4dHtSZXN9IiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsOCwiXFx0ZXh0e1Jlc30iLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs5LDcsIlxcdGV4dHtSZXN9IiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsOSwiXFx0ZXh0e1Jlc30iLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMSwxM10sWzEyLDEzXSxbMTQsMTIsIiIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwxMSwiIiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE1LDQsIiIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNSw2LCIiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTYsWzEsMCwiXFxtYXRoYmIgQV9rIF4xIl0sWzAsMSwiXFxtYXRoYmIgQV9rIF4xIl0sWzEsMSwiXFxtYXRoYmIgQV9rIF4xIFxcc2V0bWludXMgXFx7MFxcfSJdLFswLDAsIlxcbWF0aGJiIFBfayBeMSJdLFszLDAsImtbeV0iXSxbMywxLCJcXGZyYWN7a1t4LHldfXsoeHktMSl9Il0sWzIsMSwia1t4XSJdLFswLDIsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgUF9rIF4xKSJdLFsxLDIsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rIF4xKSJdLFswLDMsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rIF4xKSJdLFsxLDMsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rIF4xIFxcc2V0bWludXMgXFx7MFxcfSkiXSxbMiwzLCJcXG1hdGhiZnttb2R9X3trW3leey0xfV19Il0sWzMsMiwiXFxtYXRoYmZ7bW9kfV97a1t5XX0iXSxbMywzLCJcXG1hdGhiZnttb2R9X3trW3kseV57LTF9XX0iXSxbMiwyLCJcXG1hdGhzY3IgQSJdLFsyLDAsIj8iXSxbMiwwLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcc3Vic2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMywiXFxzdWJzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwzLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDVdLFs2LDVdLFs4LDcsIlxcdGV4dHtSZXN9IiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsOCwiXFx0ZXh0e1Jlc30iLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs5LDcsIlxcdGV4dHtSZXN9IiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsOSwiXFx0ZXh0e1Jlc30iLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMSwxM10sWzEyLDEzXSxbMTQsMTIsIiIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwxMSwiIiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE1LDQsIiIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNSw2LCIiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;400&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;由于 $ℙ_k^1$ 不是仿射概型, 右上角的 $k$-代数拉回不存在, 以下转而寻求右下角模范畴的拉回, 并说明 $𝒜$ 与 $\mathrm{coh}(ℙ_k^1)$ 范畴等价.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;将 $𝒜 ↣ 𝐦𝐨𝐝 _{k[y]} × 𝐦𝐨𝐝 _{k [y^{-1}]}$ 明确如下,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;对象是三元组 $(M,N,φ)$, 其中 $φ : M_y ≃ M_{y^{-1}}$ 是 $𝐦𝐨𝐝 _{k[y,y^{-1}]}$ 中的同构;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;态射是二元组 $(α , β)$, 使下图交换:&lt;/p&gt;
+      &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTAsWzEsMCwiTSAiXSxbMSwxLCJNJyJdLFs0LDAsIk4iXSxbNCwxLCJOJyJdLFsyLDAsIk1fe3l9Il0sWzIsMSwiTV97eX0nIl0sWzMsMCwiTl97eV57LTF9fSJdLFszLDEsIk5fe3leey0xfX0nIl0sWzAsMCwiXFxtYXRoc2Z7T2J9Il0sWzAsMSwiXFxtYXRoc2Z7T2J9Il0sWzAsMSwiXFxhbHBoYSAiLDJdLFsyLDMsIlxcYmV0YSAiXSxbNCw1LCJcXGFscGhhIF95ICIsMl0sWzYsNywiXFxiZXRhIF97eV57LTF9fSJdLFs0LDYsIlxcdmFycGhpICJdLFs1LDcsIlxcdmFycGhpICciLDJdLFs4LDksIlxcbWF0aHNme01vcn0iLDIseyJsZXZlbCI6Mn1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTAsWzEsMCwiTSAiXSxbMSwxLCJNJyJdLFs0LDAsIk4iXSxbNCwxLCJOJyJdLFsyLDAsIk1fe3l9Il0sWzIsMSwiTV97eX0nIl0sWzMsMCwiTl97eV57LTF9fSJdLFszLDEsIk5fe3leey0xfX0nIl0sWzAsMCwiXFxtYXRoc2Z7T2J9Il0sWzAsMSwiXFxtYXRoc2Z7T2J9Il0sWzAsMSwiXFxhbHBoYSAiLDJdLFsyLDMsIlxcYmV0YSAiXSxbNCw1LCJcXGFscGhhIF95ICIsMl0sWzYsNywiXFxiZXRhIF97eV57LTF9fSJdLFs0LDYsIlxcdmFycGhpICJdLFs1LDcsIlxcdmFycGhpICciLDJdLFs4LDksIlxcbWF0aHNme01vcn0iLDIseyJsZXZlbCI6Mn1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;为说明 $𝒜$ 确实是拉回, 只需构造范畴等价&lt;/p&gt;
+  &lt;p&gt;$$
+\mathrm{coh}(ℙ _k^1) → 𝒜 ,\quad ℱ ↦ (ℱ|_{[∞]^c}, ℱ|_{[0]^c}, \mathrm{id}_{ℱ|_{\{[0], [∞]\}^c}}).
+$$&lt;/p&gt;
+  &lt;p&gt;取 $𝒜$ 的骨架, 使 $φ$ 视同等号. 三元组对应截面的合法粘合.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(Serre 的观察). 若直接从环空间 $ℙ_k^1$ 构造 $\mathrm{coh}(ℙ_k^1)$, 先需考虑各分析有限生成的无限 $ℤ$-分次模 $𝐦𝐨𝐝^ℤ_{k[x,y]}$, 得交换图&lt;/p&gt;
+  &lt;p&gt;$$
+\begin{bmatrix}
+M &amp; \mathbf{grmod}_{k[ a,b]} &amp; \rightarrow  &amp; \mathbf{mod}_{k[ b/a]} &amp; ( M_{a})^{\deg =0}\\
+ &amp; \downarrow  &amp;  &amp; \downarrow  &amp; \\
+( M_{b})^{\deg =0} &amp; \mathbf{mod}_{k[ a/b]} &amp; \rightarrow  &amp; \mathbf{mod}_{k\left[ y.y^{-1}\right]} &amp; ( M_{a,b})^{\deg a+\deg b=0}
+\end{bmatrix}.
+$$&lt;/p&gt;
+  &lt;p&gt;此处, $(M_b)^{\deg 0}$ 中元素形如 $∑_{k ∈ ℕ} \frac{a^k}{b^k} m_i$. 右下角的模是 $M_{a,b}$ 中形如 $∑_{k ∈ ℤ}\frac{a^k}{b^k} ⋅ m_k$ 的元素. 因此交换. 转换映射是&lt;/p&gt;
+  &lt;p&gt;$$
+((M_b)^{\deg 0})_{a/b} ≃ ((M_a)^{\deg 0})_{b/a}. 
+$$&lt;/p&gt;
+  &lt;p&gt;以上正是泛性质给出的 $𝐠𝐫𝐦𝐨𝐝 _{k[x,y]} → \mathrm{coh}(ℙ_k^1)$.&lt;/p&gt;
+  &lt;p&gt;对一般交换代数上的多项式环 (或更一般的 toric variety 等), 上述模型建立了层语言与模语言的对应:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTMsWzIsMiwiXFxtYXRoYmZ7bW9kfV97a1t5XnstMX1dfSJdLFswLDEsIlxcbWF0aGJme21vZH1ee1xcbWF0aGJiIFp9X3trW3gseV19Il0sWzIsMSwiXFxtYXRocm17Y29ofShcXG1hdGhiYiBBX2teMSkiLFsxODAsNjAsNjAsMV1dLFsyLDMsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rXjEpIixbMTgwLDYwLDYwLDFdXSxbMywyLCJcXG1hdGhybXtjb2h9KFxcbWF0aGJiIEFfa14xIFxcc2V0bWludXMgXFx7MFxcfSkiLFsxODAsNjAsNjAsMV1dLFsxLDIsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgUF9rXjEpIixbMTgwLDYwLDYwLDFdXSxbMywxLCJcXG1hdGhiZnttb2R9X3trW3kseV57LTF9XX0iXSxbMiwwLCJcXG1hdGhiZnttb2R9X3trW3ldfSJdLFsxLDEsIlxcbWF0aHNjciBBIl0sWzAsMCwie14wfVxcbWF0aGJme21vZH1fe2tbeCx5XX1ee1xcbWF0aGJiIFp9Il0sWzAsMiwiXFxmcmFje1xcbWF0aGJme21vZH1ee1xcbWF0aGJiIFp9X3trW3gseV19fXt7XjB9XFxtYXRoYmZ7bW9kfV97a1t4LHldfV57XFxtYXRoYmIgWn19Il0sWzQsMSwiXFx0ZXh0e+aooeivreiogH0iXSxbNCwyLCJcXHRleHR75bGC6K+t6KiAfSIsWzE4MCw2MCw2MCwxXV0sWzUsMiwiIiwwLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsyLDQsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMyw0LCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzUsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFs3LDZdLFswLDZdLFs4LDBdLFs4LDddLFs5LDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMSwwLCIiLDIseyJjdXJ2ZSI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEsNywiIiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSw4LCJHIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsMTAsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxMCw1LCIoLSlee1xcI30iLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsxODAsNjAsNjBdfSxbMTgwLDYwLDYwLDFdXSxbNSwxMCwiXFxHYW1tYSAiLDAseyJvZmZzZXQiOi0zfV0sWzI3LDI2LCJcXHRvcCAiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTMsWzIsMiwiXFxtYXRoYmZ7bW9kfV97a1t5XnstMX1dfSJdLFswLDEsIlxcbWF0aGJme21vZH1ee1xcbWF0aGJiIFp9X3trW3gseV19Il0sWzIsMSwiXFxtYXRocm17Y29ofShcXG1hdGhiYiBBX2teMSkiLFsxODAsNjAsNjAsMV1dLFsyLDMsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rXjEpIixbMTgwLDYwLDYwLDFdXSxbMywyLCJcXG1hdGhybXtjb2h9KFxcbWF0aGJiIEFfa14xIFxcc2V0bWludXMgXFx7MFxcfSkiLFsxODAsNjAsNjAsMV1dLFsxLDIsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgUF9rXjEpIixbMTgwLDYwLDYwLDFdXSxbMywxLCJcXG1hdGhiZnttb2R9X3trW3kseV57LTF9XX0iXSxbMiwwLCJcXG1hdGhiZnttb2R9X3trW3ldfSJdLFsxLDEsIlxcbWF0aHNjciBBIl0sWzAsMCwie14wfVxcbWF0aGJme21vZH1fe2tbeCx5XX1ee1xcbWF0aGJiIFp9Il0sWzAsMiwiXFxmcmFje1xcbWF0aGJme21vZH1ee1xcbWF0aGJiIFp9X3trW3gseV19fXt7XjB9XFxtYXRoYmZ7bW9kfV97a1t4LHldfV57XFxtYXRoYmIgWn19Il0sWzQsMSwiXFx0ZXh0e+aooeivreiogH0iXSxbNCwyLCJcXHRleHR75bGC6K+t6KiAfSIsWzE4MCw2MCw2MCwxXV0sWzUsMiwiIiwwLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsyLDQsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMyw0LCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzUsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFs3LDZdLFswLDZdLFs4LDBdLFs4LDddLFs5LDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMSwwLCIiLDIseyJjdXJ2ZSI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEsNywiIiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSw4LCJHIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsMTAsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxMCw1LCIoLSlee1xcI30iLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsxODAsNjAsNjBdfSxbMTgwLDYwLDYwLDFdXSxbNSwxMCwiXFxHYW1tYSAiLDAseyJvZmZzZXQiOi0zfV0sWzI3LDI2LCJcXHRvcCAiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;左侧三项小 Abel 范畴的``短正合列’‘给出 Serre 商范畴. &lt;br /&gt; &lt;br /&gt; 我们暂时回归初始假定, 此时 $k[x,y]$ 是 Noether 环. 左下角的伴随实际上是范畴等价, 即, $G$ 诱导了&lt;/p&gt;
+  &lt;p&gt;$$
+\frac{𝐦𝐨𝐝_{k[x,y]}^ℤ}{^0𝐦𝐨𝐝_{k[x,y]}^ℤ} ≃ \mathrm{coh}(ℙ_k^1).
+$$&lt;/p&gt;
+  &lt;p&gt;凭借一些粗浅地构造, 可以看出&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\ker G$ 恰好是支撑有限的分次模. 由层的粘合原理知 $GX=0$ 当且仅当其限制在两处 $𝔸_k^1$ 上为 $0$. 相应地, 存在 $N$ 使得 $GX$ 被 $x^N$ 与 $y^N$ 同时零化.&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;$G$ 是本质满且全的, 因为可以按照&lt;/p&gt;
+      &lt;p&gt;$$
+   ((M_a)^{deg =0} ⟹ (M_{a,b})^{\deg a + \deg b =0} ⟸ (M_b)^{\deg =0 })
+   $$&lt;/p&gt;
+      &lt;p&gt;复原 $M$ (不必唯一). 这一基于自由余代数 $k(x)$-作用的构造也是函子性的 (该构造对非 Noether 环会出一些问题);&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;$G$ 也是正合的. 假定 $G$ 保持一切有限极限与余极限, 则拉回图交换. 依照泛性质, $G$ 唯一, 从而是正合函子.&lt;/li&gt;
+    &lt;li&gt;之所以 $\overline G : \frac{𝐦𝐨𝐝_{k[x,y]}^ℤ}{^0𝐦𝐨𝐝_{k[x,y]}^ℤ} → \mathrm{coh}(ℙ_k^1)$ 忠实, 是因为 $G$ 是以 torsion class 为核的正合函子.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;导出等价-mathjax_protectedjereyiaoxg1hdghybxtjb2h9kokemv9rxjepksdiiymgrf5iicjwnzcr8j2qnvcdkkkoa1viijkg4oejiokimv0pksqmathjax_protected&quot;&gt;导出等价 $D^b (\mathrm{coh}(ℙ_k^1)) ≃ D^b (𝐫𝐞𝐩(k[∙ ⇉ ∙]))$&lt;/h3&gt;
+</description>
+          <pubDate>2025-05-04T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Rep</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Rep</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>投射模, 内射模在 Coxeter 反射下的表现</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;投射模与内射模在完全 Coxeter 分解下的表现如下.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;投射模经 $C^+$ 消失, 换言之, $C^+ P = 0$;&lt;/li&gt;
+    &lt;li&gt;若 $C^+M = 0$, 则 $M$ 是投射模;&lt;/li&gt;
+    &lt;li&gt;$C^+C^-M$ 是不含投射对象的极大直和项;&lt;/li&gt;
+    &lt;li&gt;内射模经 $C^-$ 消失, 换言之, $C^- I = 0$;&lt;/li&gt;
+    &lt;li&gt;若 $C^-M = 0$, 则 $M$ 是内射模;&lt;/li&gt;
+    &lt;li&gt;$C^-C^+M$ 是不含内射对象的极大直和项.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;只看前三条. &lt;br /&gt; (1. 的证明). 不可分解投射对象 $P(i)$ 的支撑集是由 $i$ 向外的树, 从分支至主干地作用 $C^+_∙$ 即可 (并列的分支无关先后) 即可. 最后得内射单模 $S(i)$, 作用 $C^+_i$ 后归零. 由于 Coxeter 反射唯一, 故投射对象被 $C^+$ 零化. &lt;br /&gt; (2. 的证明). 假定 $M ≠ 0$, 但 $C^+ M= 0$. 不妨记 $C^+ = C_1^+\cdots C_n^+$. 下归纳地证明所有 $C_{k}^+\cdots C_n^+ M$ 都是对应 quiver 的不可分解投射对象 (或零对象).&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;(初始). 存在极小的 $i$ 使得 $C_{i+1}^+\cdots C_n^+ M$ 是 $k(C_{i+1}^+\cdots C_n^+Q)$ 的投射单对象;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;(归纳). 若 $C_{i+1}^+\cdots C_n^+Q$ 存在 $(i+1) → (i)$ 类型的箭头, 依照&lt;a href=&quot;Coxeter_PM_Adjoint&quot;&gt;伴随的余单位&lt;/a&gt;知&lt;/p&gt;
+      &lt;p&gt;$$
+   C_{i+1}^-C_{i+1}^+\cdots C_n^+ M ≃ C_{i+2}^+\cdots C_n^+ M
+   $$&lt;/p&gt;
+      &lt;p&gt;是投射对象. 若无 $(i+1) → (i)$ 类型的箭头, 则 $i$ 与邻点的连边不受影响, 原投射对象是新 quiver 的投射对象.&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;&lt;br /&gt; (3. 的证明). 结合以上两点即可.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-04T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Proj_Inj_Coxeter</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Proj_Inj_Coxeter</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>左遗传但非右遗传环的例子</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;矩阵环 $\binom{ℤ \ \ O}{ℚ \ \ ℚ}$ 左遗传, 但非右遗传.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;矩阵环 $R:= \binom{ℤ \ \ O}{ℚ \ \ ℚ}$ 非右遗传.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;下证明右理想 $I := \binom{O \ \ O}{ℚ \ \ O}$ 非投射. 考虑环同态&lt;/p&gt;
+  &lt;p&gt;$$
+φ : \binom{ℤ \ \ O}{ℚ \ \ ℚ} ↠ ℤ,\quad \binom{a \ \ 0}{b \ \ c} ↦ a.
+$$&lt;/p&gt;
+  &lt;p&gt;若 $I$ 投射, 也就是 $R^{(λ)}$ 的直和项, 作用加法函子 $(-) ⊗ _R\frac{R}{\ker φ }$, 得 $\frac{I}{I ⋅ (\ker φ )} ≃ ℚ$ 是 $\frac{R^{(λ)}}{R^{(λ)} ⋅ (\ker φ )} ≃ ℤ^{(λ)}$ 的直和项. 显然 $ℚ$ 不是投射 $ℤ$-模, 矛盾.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;矩阵环 $\binom{ℤ \ \ O}{ℚ \ \ ℚ}$ 左遗传, 但非右遗传.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;见&lt;a href=&quot;https://link.springer.com/book/10.1007/978-1-4419-8616-0&quot;&gt;此书&lt;/a&gt; Proposition 1.17.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;这也是左 Noether 但非右 Noether 的例子.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-04T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/L_Here_not_R_Here</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/L_Here_not_R_Here</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>遗传代数等价定义的证明</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(遗传代数的等价定义). 称 $A$ 是 $k$ 上的遗传代数, 若以下等价命题成立.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$A$ 整体维数 $≤ 1$;&lt;/li&gt;
+    &lt;li&gt;有限生成投射模的子模投射;&lt;/li&gt;
+    &lt;li&gt;投射模的子模投射;&lt;/li&gt;
+    &lt;li&gt;理想是投射模;&lt;/li&gt;
+    &lt;li&gt;内射模的商模内射;&lt;/li&gt;
+    &lt;li&gt;特征模 $(_AA)^+ ∈ 𝐌𝐨𝐝_A$ 的商模内射.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;先证明 1. 至 4. 等价.&lt;br /&gt; (1 ⟺ 3). 若 $A$ 的整体维数 $≤ 1$, 则 $\mathrm{Ext}^1$ 右正合. 对投射模的子模 $L ↪ P$, 总有 $\mathrm{Ext}^1(L, -) = 0$, 从而 $L$ 投射. 反之, 若投射模的子模投射, 则 任意对象的投射分解维数 $≤ 1$, 从而 $gl.\dim A ≤ 1$. &lt;br /&gt; (2 ⟺ 4). 有限生成投射模的子模必是 $A^n$ 的子模, 从而是理想的直和项. &lt;br /&gt; (3 ⇒ 2). 显然. &lt;br /&gt; (4 ⇒ 3). 只需证明自由模 $A^{(λ)}$ 的子模 $L$ 是理想的余积. 以下对序数 $λ$ 进行超限归纳.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;(初始). 由 $L ∩ A^{(0)}$ 是 $0$, 从而是理想的余积.&lt;/li&gt;
+    &lt;li&gt;(后继). 若 $L ∩ A^{(α)}$ 是理想的余积, 则 $L ∩ A^{(α + 1)} = (L ∩ A^{(α)}) ⊕ (L ∩ e_{α +1} (A))$ 是理想的余积.&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;(极限). 若 $γ$ 是极限序数, 则存在一列序数列 $(α_i)_{i ∈ ℕ} → γ$. 此时 $\{L ∩ A^{(α _i)}\}_{i ∈ ℕ}$ 是 $L ∩ A^{(γ)}$ 滤过. 依照假定, 一切 $L ∩ A^{(α _i)}$ 都是理想的余积; 依照构造, $L ∩ A^{(α _i)}$ 是 $L ∩ A^{(α _{i+ k})}$ 的直和项. 依照余极限的泛性质可验证子对象的恒等式&lt;/p&gt;
+      &lt;p&gt;$$
+   L ∩ A^{(γ)} = ⋃_{i ∈ ℕ} (L ∩ A^{(α_i)}) = (L ∩ A^{(α _0)}) ⊕ ∐ _{i ∈ ℕ} \frac{L ∩ A^{(α _{i+1})}}{L ∩ A^{(α _i)}}.
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;&lt;br /&gt; (1 ⟺ 5). 证明对偶, 此处从略. &lt;br /&gt; (5 ⇒ 6). 显然. &lt;br /&gt; (6 ⇒ 5). 内射模是 $∏(_AA)^+$ 的直和项, 简单证明如下.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;p&gt;对内射模 $I$, 取 $A$-左模范畴的满态射 $(_AA)^{(I^+)} ↠ I^+$, 此时有单态射的复合&lt;/p&gt;
+      &lt;p&gt;$$
+  I ↪ I^{++} ↪ ((_AA)^{(I^+)})^+ ≃ ∏_{I^+} (_AA)^+
+  $$&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;以下归纳地证明 $C^μ := ∏_{μ}(_AA)^+$ 是若干 $C$-商对象的积即可. 记商对象模格的共同推出为记号 $∧$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;(初始). $N ∧ C^0 = 0$ 是 $C$-商对象的积.&lt;/li&gt;
+    &lt;li&gt;(后继). 若 $N ∧ C^α$ 是 $C$-商对象的积, 则 $N ∧ C^{α + 1} = (N ∧ C^α) ⊕ (N ∧ e'_{α + 1}(C))$ 是 $C$-商对象的积.&lt;/li&gt;
+    &lt;li&gt;(极限). 类似地, 按照极限的泛性质验证商对象的等式即可.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-04T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Hereditary_Alg_Eq_Def</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Hereditary_Alg_Eq_Def</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Coxeter 反射几乎保持不可分解对象</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Coxeter_Ref_Idem&quot;&gt;证明&lt;/a&gt;). Coxeter 反射 $C_i^±$ 保持不可分解模; 除了映 $S_i$ 至 $0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;只看 $C_i^+$. 由上文, $(M)_i ↦ (C_i^+ M)_i$ 由多个对象的拉回决定, 也就是&lt;/p&gt;
+  &lt;p&gt;$$
+0 → (C_i^+ M)_i → M_{≠ i} → M_i.
+$$&lt;/p&gt;
+  &lt;p&gt;对任意自同态 $φ: M → M$, kernel 的泛性质诱导了 $(C_i^+ M)_i$ 的自同态, 即从而唯一地给出 $C_i^+M$ 的自同态. 类似的构造给出自同态环的单射:&lt;/p&gt;
+  &lt;p&gt;$$
+\mathrm{End}_{kQ}(M) ↪ \mathrm{End}_{k(C_i^+)}(C_i^+M) ↪ \mathrm{End}_{kQ}(C_i^-C_i^+M).  
+$$&lt;/p&gt;
+  &lt;p&gt;由于 $M_i$ 不可分解, 由 $C_i^- C_i^+ M \oplus \mathrm{coker}[\bigoplus_{\neq i} M_i → M] \simeq M$ 得 $M_i ≃ S_i$ 或 $M_i ≃ C_i^- C_i^+ M$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;若 $M = S_i$, 则 $C_i^+(M) = 0$;&lt;/li&gt;
+    &lt;li&gt;若 $M ≃ C_i^- C_i^+ M$, 则 $\mathrm{End}_{kQ}(M) ≃ \mathrm{End}_{k(C_i^+)}(C_i^+M)$ 是局部环, 从而 $C_i^+M$ 不可分解.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-04T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Coxeter_Ref_Idem</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Coxeter_Ref_Idem</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>$C^-_i ⊣ C^+_i$</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;假定 $C_i^+ : Q_1 → Q_2$, 则以下是伴随函子: \begin{equation} C_i ^- : \mathbf{rep}_k(Q_2) ⇄ \mathbf{rep}_k(Q_1) : C_i ^+. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;下证明 $(C_i^-(N), M)_{kQ_2} ≃ (N, C_i ^+ (M))_{kQ_1}$. 表示的同态即若干交换图, 记 $𝒮 ⊆ Q_0$ 是 $i$ 及其邻点, 则无需考虑 $(C_i^-(N), M)_{kQ_2}$ 与 $(N, C_i ^+ (M))_{kQ_1}$ 在 $Q_0 ∖ 𝒮$ 中的交换性. 下考虑不妨假定 $𝒮 = Q_0$. &lt;br /&gt; 考虑下图:&lt;/p&gt;
+  &lt;p&gt;$$
+\begin{bmatrix}
+K &amp; ↪  &amp; ⨁ N_{∙ → i} &amp; →  &amp; N_{i}\\
+⇣ &amp; ▨  &amp; ↓  &amp; ⬔  &amp; ⇣ \\
+M_{i} &amp; →  &amp; ⨁ M_{i→ ∙ } &amp; ↠  &amp; C
+\end{bmatrix}.
+$$&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;给定实竖箭头 $↓$, 则左虚箭头与右虚箭头唯一地决定彼此 (ker 与 coker 的泛性质);&lt;/li&gt;
+    &lt;li&gt;给定实竖箭头, 所有可行的交换方块 $▨$ 构成 $(C_i^-(N), M)_{kQ_2}$;&lt;/li&gt;
+    &lt;li&gt;给定实竖箭头, 所有可行的交换方块 $⬔$ 构成 $(N, C_i^+(M))_{kQ_1}$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;从而 $(C_i^-(N), M) ≃ (N, C_i^+(M))_{kQ_1}$, 这一同构是由 ker 与 coker 的泛性质诱导的.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;容易计算,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;(单位). $M \simeq C_i^+ C_i^- M \oplus \ker[M_i → \bigoplus M_{\neq i}] \twoheadrightarrow C_i^+ C_i^- M$ 是投影;&lt;/li&gt;
+    &lt;li&gt;(余单位) $C_i^- C_i^+ N \hookrightarrow C_i^- C_i^+ N \oplus \mathrm{coker}[\bigoplus_{\neq i} N_i → N] \simeq N$ 是嵌入.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-04T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Coxeter_PM_Adjoint</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Coxeter_PM_Adjoint</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>完全 Coxeter 反射存在且唯一</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(完全 Coxeter 反射的存在性与唯一性, &lt;a href=&quot;Complete_Coxeter_Reflection&quot;&gt;证明&lt;/a&gt;). 存在 $σ ∈ 𝔖_{Q_0}$, 使得有自函子&lt;/p&gt;
+  &lt;p&gt;$$
+C^+ := C^+_{σ (n)} C^+_{σ (n-1)} \cdots C_{σ (1)}^+ : \mathbf{rep}_k (Q) → \mathbf{rep}_k (Q).
+$$&lt;/p&gt;
+  &lt;p&gt;相应地记 $C^- = C^-_{σ (1)}C^-_{σ (2)}\cdots C^-_{σ (n)}$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;使用数学归纳法证明. 记命题 $P_n$ 如下:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;对 $|Q_0| ≤ n$, 完全 Coxeter 反射 $C^-$ 存在.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;显然 $P_1$ 成立, 下证明 $P_k → P_{k+1}$. 任取 $Q$ 使得 $|Q_0| = k + 1$, 由 $Q$ 有限无环, 不妨设 $(k+1) ∈ Q_0$ 仅有一个邻点. 对 $Q ∖ (k+1)$ 使用命题 $P_k$, 得删点子图的完全 Coxeter 反射 $C_{σ(∙)}^-$. &lt;br /&gt; &lt;br /&gt; 在可定义的情况下对 $Q$ 依次作用 $C_{σ(1)}^-$, $C_{σ(2)}^-$, 等等.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;p&gt;若首个不合法的作用是 $C_{σ(l)}^-$, 则 $Q$ 中存在 $σ(k) ⇇ (k+1)$ 类型的子图. 在作用 $C_{σ(l)}^-$ 前安插 $C_{(k+1)}^-$ 即可. 此时, $Q$ 的完全 Coxeter 反射是&lt;/p&gt;
+      &lt;p&gt;$$
+   C^-_{σ(k)} \cdots C^-_{(σ (l))} C^-_{(k+1)} C^-_{(σ (l-1))} \cdots C^-_{(σ (1))}.
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;若不存在不合法的作用, 则 $Q$ 经所有 $C_{σ(∙)}^-$ 作用后必然存在 $σ(k) ⇉ (k+1)$-类型的子图. 最终作用一次 $C^-_{(k+1)}$ 即可. 此时, $Q$ 的完全 Coxeter 反射是&lt;/p&gt;
+      &lt;p&gt;$$
+   C^-_{(k+1)} C^-_{σ(k)} \cdots C^-_{(σ (1))}.
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;特别地, $C^±$ 的定义与置换顺序 $σ$ 无关.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;以下将频繁使用一则事实:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;若 $C_i ^+ C_j ^+$ 与 $C_j ^+ C_i ^+$ 均良定义且相等, 则 $i$ 与 $j$ 是没有公共邻点的 sink.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;不妨假定 $C^+_{(n)} C^+_{ (n-1)} \cdots C_{ (1)}^+$ 与 $S^+_{\sigma (n)} S^+_{\sigma (n-1)} \cdots S_{\sigma (1)}^+$ 均为完全 Coxeter 反射. 此处 $S^+_p = C^+_p$, $S$ 与 $C$ 仅是记号上的区分. &lt;br /&gt; &lt;br /&gt; 由于 $S^+_{\sigma (\sigma^{-1}(1))}$ 可定义, 从而任意 $S^+_{\sigma (\leq \sigma^{-1}(1))}$ 与 $S^+_1$ 均无邻点, 故存在移位&lt;/p&gt;
+  &lt;p&gt;$$
+S^+_{\sigma (n)} S^+_{\sigma (n-1)} \cdots S_{\sigma (1)}^+ = S^+_{\sigma (n)} S^+_{\sigma (n-1)} \cdots {\color{blue}\widehat{S^+_1}}\cdots  S_{\sigma (1)}^+ {\color{red}C_1^+}.
+$$&lt;/p&gt;
+  &lt;p&gt;归纳即可.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-04T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Complete_Coxeter_Reflection</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Complete_Coxeter_Reflection</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>$Γ (A)$ 投射部分的态射</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;对遗传代数,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;不可分解投射模之间的态射要么为零, 要么是单的;&lt;/li&gt;
+    &lt;li&gt;不可分解内射模之间的态射要么为零, 要么是满的;&lt;/li&gt;
+    &lt;li&gt;不可分解投射模是 brick;&lt;/li&gt;
+    &lt;li&gt;不可分解内射模是 brick.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;假定 $A$ 是遗传代数, &lt;a href=&quot;Hereditary_Alg_Eq_Def&quot;&gt;等价定义&lt;/a&gt;表明投射模的子模投射, 内射模的商模内射. 依照对称性, 只看 1. 和 3.. &lt;br /&gt; (1. 的证明). 假定 $f : P → Q$ 是不可分解投射对象间的态射, 则 $\operatorname{im}(f)$ 是 $Q$ 的投射子模. 由 $P$ 不可分解, 得 $P ↠ \operatorname{im}(f)$ 或为同构或为 $0$. &lt;br /&gt; (3. 的证明). 假定 $f : P → P$ 是不可分解投射对象的自同态, 则 $f$ 或零或单. 假定 $f$ 单以及 $P$ 不可分解, 由 fitting 引理得 $P = \mathrm{im}f^∞ := ⋂_{n ≥ 1} f^n$, 从而 $f$ 必然是满的. 这说明 $\mathrm{End}(P)$ 是除环, 从而是 brick.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-04T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/AR_Proj</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/AR_Proj</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>有限表示代数的 AR quiver 无重边</title>
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;对有限表示代数 $A$, $Γ(A)$ 无重边.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;假定存在 $\mathrm{Irr}(M,N) ≥ 2$. 由于不可约态射是严格单或严格满的, 不妨假定 $\dim M &gt; \dim N$ (若 $\dim M &lt; \dim N$, 用 $\mathrm{Irr}(N, τ⁻¹M)$ 代替 $\mathrm{Irr}(M,N)$). 此时有几乎可裂 ses&lt;/p&gt;
+  &lt;p&gt;$$
+0 → τ N → M^2 ⊕ E → N → 0.
+$$&lt;/p&gt;
+  &lt;p&gt;计算维度得&lt;/p&gt;
+  &lt;p&gt;$$
+\dim N + \dim τ N ≥ 2 ⋅ \dim M,
+$$&lt;/p&gt;
+  &lt;p&gt;因此 $\dim τ N &gt; \dim M &gt; \dim N$. &lt;br /&gt; &lt;br /&gt; 下证明上述几乎可裂 ses 可以对 $\mathrm{Irr}(τ N, M)$ 归纳地构造. 实际上, $\dim \mathrm{Irr}(M,N) = \dim \mathrm{Irr}(τ N, M)$. 结合维数, 存在 $τN$ 向 $M$ 的不可约满态射, 因此有几乎可裂 ses&lt;/p&gt;
+  &lt;p&gt;$$
+0 → τ M → (τN)^2 ⊕ E' → M → 0.
+$$&lt;/p&gt;
+  &lt;p&gt;此时, $\{τ^kM\}_{k ≥ 1}$ 是一列维度逐渐上升的不可分解模, 从而与有限表示矛盾.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-04T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/AR_Finite_No_Multiple_Arrows</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/AR_Finite_No_Multiple_Arrows</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>遗传代数与箭图</title>
+          <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#箭图-不带关系&quot; id=&quot;markdown-toc-箭图-不带关系&quot;&gt;箭图 (不带关系)&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#箭图的基本要件&quot; id=&quot;markdown-toc-箭图的基本要件&quot;&gt;箭图的基本要件&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#直和分解&quot; id=&quot;markdown-toc-直和分解&quot;&gt;直和分解&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#泛性质&quot; id=&quot;markdown-toc-泛性质&quot;&gt;泛性质&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#投射分解&quot; id=&quot;markdown-toc-投射分解&quot;&gt;投射分解&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#模&quot; id=&quot;markdown-toc-模&quot;&gt;模&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#遗传代数&quot; id=&quot;markdown-toc-遗传代数&quot;&gt;遗传代数&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#遗传代数的定义&quot; id=&quot;markdown-toc-遗传代数的定义&quot;&gt;遗传代数的定义&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#遗传代数的箭图表示&quot; id=&quot;markdown-toc-遗传代数的箭图表示&quot;&gt;遗传代数的箭图表示&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;箭图-不带关系&quot;&gt;箭图 (不带关系)&lt;/h2&gt;
+
+&lt;h3 id=&quot;箭图的基本要件&quot;&gt;箭图的基本要件&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(箭图). 箭图定义作四要件 $Q = (Q_0, Q_1, s, t)$, 其中&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$Q_0$ 是点集;&lt;/li&gt;
+    &lt;li&gt;$Q_1$ 是边集;&lt;/li&gt;
+    &lt;li&gt;$s : Q_1 → Q_0$ 将边对应至来源;&lt;/li&gt;
+    &lt;li&gt;$t : Q_1 → Q_0$ 将边对应至去向.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;简单地说, 任意 $α ∈ Q_1$ 形如 $s(α)\xrightarrow{α} t(α )$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;从范畴的视角看, 可以将 $Q_0$ 视作平凡道路集, 从而 $Q$ 是如下小范畴:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;(对象集). $𝖮𝖻 (Q) = Q_0$;&lt;/li&gt;
+    &lt;li&gt;(恒等态射). 对任意 $x ∈ Q_0$, 引入恒等态射 $\mathrm{id}_x$;&lt;/li&gt;
+    &lt;li&gt;(态射集). $𝖬𝗈𝗋 (Q) = ⨆_{k ≥ 0} Q_1^k$, 其中 $Q_1^k$ 表示长度为 $k$ 的道路, 具体地       &lt;ol&gt;
+        &lt;li&gt;$Q_1^0$ 是全体恒等态射,&lt;/li&gt;
+        &lt;li&gt;$Q_1^1 := Q_1$,&lt;/li&gt;
+        &lt;li&gt;$Q_1^{k+1}$ 形如 $Q_1^k ∘ Q_1$;&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;(复合律). 依照惯用右模的习惯, 所有箭头是右朝向的, $α ∘ β$ 合法当且仅当 $t(α) = s(β)$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;记 $Q^ →$ 是通常意义下的态射范畴, 则有三伴随函子&lt;/p&gt;
+  &lt;p&gt;$$
+(t ⊣ \mathrm{id} ⊣ s) : Q^→ \ \substack{⟶\\⟵\\⟶} \ Q.
+$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(路代数). 令 $k$ 是域, 则 $k$-充实的范畴 $kQ$ 是路代数.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(有限性条件). 称 $Q$ 是有限的, 若 $Q_1 ∪ Q_0$ 是有限集; 称 $Q$ 是有限维的, 若 $kQ$ 是有限维代数.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;容易检验, $kQ$ 有限维当且仅当 $Q$ 有限无环.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(关于单位元). 若 $Q_0$ 有限, 则 $kQ$ 有单位元.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;直和分解&quot;&gt;直和分解&lt;/h3&gt;
+
+&lt;p&gt;假定 $Q_0$ 有限, 则 $A := kQ$ 是有单位元的 $k$ 代数.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(幂等分解, 证明略). $kQ$ 的一个幂等分解表示作有限和 $1_A = ∑_{1 ≤ i≤ m} e_i$, 满足&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$e_i ⋅ e_j = e_i ⋅ δ _{i,j}$;&lt;/li&gt;
+    &lt;li&gt;以上求和是极大的, 即, 不存在 $e_{i_0} = a +b$ 使得 $a^2= a$ 且 $b^2 = b$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;在相差一个代数自同构的意义下, 幂等分解是唯一的.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(正交幂等分解, 证明略). $kQ$ 的一个正交幂等分解表示作有限和 $1_A = ∑_{1 ≤ i≤ m} e_i$, 满足&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$e_i ⋅ A ⋅ e_j = (e_i ⋅ A ⋅ e_i) ⋅ δ _{i,j}$;&lt;/li&gt;
+    &lt;li&gt;以上求和是极大的, 即, 不存在 $e_{i_0} = a +b$ 使得 $a^2= a$ 且 $b^2 = b$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;在相差一个代数自同构的意义下, 幂等分解是唯一的.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;slogan&quot;&gt;
+  &lt;p&gt;幂等分解与正交幂等分解是不同意义下的极小直和分解:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;幂等分解对应 $Q_0$, 即, 将正则模 $kQ$ 写作不可分解投射模的直和;&lt;/li&gt;
+    &lt;li&gt;正交幂等分解对应 $π_0(Q)$, 即, 将环 $kQ$ 写作连通环的直和.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(中心, 证明略). 记 $Z(A) : = \{r ∈ A ∣ ∀ x∈ A (rx=xr)\}$ 是代数 $A$ 的中心, 则 $Z(A)$ 的幂等分解对应 $A$ 的正交幂等分解.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(矩阵表示). 记正交幂等分解 $1 = ∑_{i ∈ Q_0}e_i$, 则 $A$ 有矩阵形式&lt;/p&gt;
+  &lt;p&gt;$$
+A ≃ (a_{i,j})_{|Q_0| × |Q_0|},\quad a_{i,j} := e_i ⋅ kQ ⋅ e_j.
+$$&lt;/p&gt;
+  &lt;p&gt;项 $a_{i,j}$ 的基是 $i → \cdots → j$ 类型的道路. 在合适的置换下, 矩阵的每一对角分块对应代数 $A$ 的一个连通分支.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;泛性质&quot;&gt;泛性质&lt;/h3&gt;
+
+&lt;p&gt;以下假定 $Q_0$ 有限, $Q$ 连通. 此时 $A := kQ$ 是有单位元的连通 $k$ 代数.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;函子 $k (-): 𝐐𝐮𝐢𝐯𝐞𝐫 → k𝐀𝐥𝐠$ 是自由函子, 其右伴随是遗忘函子.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(表示). 记函子范畴 $𝐑𝐞𝐩_k(Q) := 𝐅𝐮𝐧𝐜𝐭(Q, 𝐌𝐨𝐝_k)$ 是 $Q$ 的 $k$-表示范畴.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;通常使用 $(M,φ)$ 表示一个 $𝐅𝐮𝐧𝐜𝐭(Q, 𝐌𝐨𝐝_k)$-类型的函子, 写作&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$M : Q_0 → 𝐌𝐨𝐝_k,\quad i ↦ M_i$;&lt;/li&gt;
+    &lt;li&gt;$φ : Q_1 → 𝐌𝐨𝐝_k^→,\quad α ↦ φ _α$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Curry). 存在范畴等价 $𝐑𝐞𝐩_k(Q) ≃ 𝐌𝐨𝐝_{kQ}$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;依照模的定义, 有范畴等价 $𝐌𝐨𝐝_k ≃ 𝐅𝐮𝐧𝐜𝐭_ℤ(k^{\mathrm{op}}, ℤ)$, 其中 $𝐅𝐮𝐧𝐜𝐭_ℤ$ 是加法函子范畴. 此时 $$
+\begin{aligned}
+  𝐅𝐮𝐧𝐜𝐭(Q, 𝐌𝐨𝐝_k) &amp;≃ 𝐅𝐮𝐧𝐜𝐭(Q, 𝐅𝐮𝐧𝐜𝐭_ℤ(k^{\mathrm{op}}, 𝐀𝐛))\\
+  &amp;≃ 𝐅𝐮𝐧𝐜𝐭_ℤ(ℤQ ⊗_ℤ k^{\mathrm{op}}, 𝐀𝐛)\\
+  &amp;≃ 𝐌𝐨𝐝_{kQ}.
+\end{aligned}
+$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;slogan&quot;&gt;
+  &lt;p&gt;表示范畴即路代数的模范畴!&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(张量代数视角). 对 $B ∈ k 𝐀𝐥𝐠$, 集合的映射 $φ: (Q_0 ∪ Q_1) → B$ 能提升作 $k$-代数同态 $A → B$, 当且仅当&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;对 $i,j ∈ Q_0$, $φ(i) ⋅ φ(j) = δ_{i,j} ⋅ φ (i)$;&lt;/li&gt;
+    &lt;li&gt;对 $α ∈ Q_1$, $φ(α) = φ (s(α)) ⋅ φ (α) ⋅ φ (t(α))$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;给定 $φ$. 视 $V:= kQ_1$ 为交换代数 $K:= kQ_0$-模, 此时得代数同态 $\widetilde{\varphi} : T_KV → B$. 由 $Q$ 的结合律得生成关系 $R$, 使得 $T_KV / R ≃ kQ$. 由于 $\widetilde{\varphi}(R) = 0$, 故 $\widetilde{\varphi}$ 通过 $kQ$ 唯一分解, 从而 $φ$ 可以唯一地提升作 $k$-代数同态.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;投射分解&quot;&gt;投射分解&lt;/h3&gt;
+
+&lt;p&gt;$kQ$ 投射维数 $≤ 1$ ($kQ$ 半单当且仅当 $Q_1 = ∅$), 极小投射分解见&lt;a href=&quot;Ringel_Resolution#mathjax_protectedjgtrjamathjax_protected-的标准分解&quot;&gt;标准分解&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;$i$ 向 $j$ 的连边正是 $\mathrm{Ext}^1(S(i), S(j))$ 的一组自由基, 见&lt;a href=&quot;Ringel_Resolution#单对象与-mathjax_protectedjfxtyxrocm17rxh0fsqmathjax_protected-群&quot;&gt;此处&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;模&quot;&gt;模&lt;/h3&gt;
+
+&lt;p&gt;以下假定 $kQ$ 是代数闭域中的有限维代数. Artin 代数的通用记号见&lt;a href=&quot;AR-notes#artin-代数的要件&quot;&gt;此处&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(证明略). 以下刻画 $kQ$ 的单对象, 不可分解投射对象, 以及不可分解内射对象. 这三种同构类恰好以 $Q_0$ 为指标, 对 $i ∈ Q_0$&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;不可分解单对象 $S(i) := e_i ⋅ A ⋅ e_i$;&lt;/li&gt;
+    &lt;li&gt;不可分解投射对象 $P(i) := e_i ⋅ A$;&lt;/li&gt;
+    &lt;li&gt;不可分解内射对象 $I(i) := A ⋅ e_i$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(证明略). 以下刻画 $kQ$ 中的 $\mathrm{Rad}$, $\mathrm{Top}$, $\mathrm{Soc}$, $\mathrm{Bot}$. 任取 $M = (M_∙, φ_∙)$&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\mathrm{Rad}(M)$ 是 $M$ 的子对象:       &lt;ol&gt;
+        &lt;li&gt;$i ∈ Q_0$ 处取值 $∑ \operatorname{im}(φ_{? → i})$,&lt;/li&gt;
+        &lt;li&gt;态射继承 $φ_∙$, 此处 $φ_{i → j} : (\mathrm{Rad}(M))_i → (\mathrm{Rad}(M))_j$ 在子对象上良定义;&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;$\mathrm{Top}(M)$ 是 $M$ 的半单商对象:       &lt;ol&gt;
+        &lt;li&gt;$i ∈ Q_0$ 处取值 $⋀ \operatorname{cok}(φ_{? → i})$,&lt;/li&gt;
+        &lt;li&gt;态射为 $0$;&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;$\mathrm{Soc}(M)$ 是 $M$ 的半单子对象:       &lt;ol&gt;
+        &lt;li&gt;$i ∈ Q_0$ 处取值 $⋂ \ker φ_{i → ?}$;&lt;/li&gt;
+        &lt;li&gt;态射为 $0$;&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;$\mathrm{Bot}(M)$ 是 $M$ 的商对象:       &lt;ol&gt;
+        &lt;li&gt;$i ∈ Q_0$ 处取值 $⋁ \mathrm{coim}(φ_{i → ?})$;&lt;/li&gt;
+        &lt;li&gt;态射继承 $φ_∙$, 此处 $φ_{i → j} : (\mathrm{Bot}(M))_i → (\mathrm{Bot}(M))_j$ 在商对象上良定义;&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;遗传代数&quot;&gt;遗传代数&lt;/h2&gt;
+
+&lt;h3 id=&quot;遗传代数的定义&quot;&gt;遗传代数的定义&lt;/h3&gt;
+
+&lt;p&gt;以下定义中, $k$ 是任意交换环, $A$ 是任意 $k$ 代数.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(遗传代数, &lt;a href=&quot;Hereditary_Alg_Eq_Def&quot;&gt;证明&lt;/a&gt;). 称 $A$ 是 $k$ 上的遗传代数, 若以下等价命题成立.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$A$ 整体维数 $≤ 1$;&lt;/li&gt;
+    &lt;li&gt;有限生成投射模的子模投射;&lt;/li&gt;
+    &lt;li&gt;投射模的子模投射;&lt;/li&gt;
+    &lt;li&gt;理想是投射模;&lt;/li&gt;
+    &lt;li&gt;内射模的商模内射;&lt;/li&gt;
+    &lt;li&gt;特征模 $(_AA)^+ ∈ 𝐌𝐨𝐝_A$ 的商模内射.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;对域上的有限维代数 $A$, 特征模函子可换用 $k$-对偶. 此时 $A$ 遗传, 当且仅当有限生成内射模的商模内射.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;由遗传等价定义的&lt;a href=&quot;Hereditary_Alg_Eq_Def&quot;&gt;证明过程&lt;/a&gt;, 遗传代数的投射模必是理想的余积.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;右遗传代数的左理想平坦.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proof&quot;&gt;
+  &lt;p&gt;左理想 ${_AI} ↪ {_AA}$ 对应商对象 $(_AA)^+ ↠ (_AI)^+$. 由遗传等价定义的&lt;a href=&quot;Hereditary_Alg_Eq_Def&quot;&gt;证明过程&lt;/a&gt;, 内射模 $(_AA)^+$ 的商对象 $(_AI)^+$ 仍是内射模, 从而 ${_AI}$ 是平坦模.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(左遗传但非右遗传的例子, &lt;a href=&quot;L_Here_not_R_Here&quot;&gt;证明&lt;/a&gt;). 考虑矩阵环 $\binom{ℤ \ \ O}{ℚ \ \ ℚ}$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;AR_Proj&quot;&gt;证明&lt;/a&gt;). 对遗传代数,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;不可分解投射模之间的态射要么为零, 要么是单的;&lt;/li&gt;
+    &lt;li&gt;不可分解内射模之间的态射要么为零, 要么是满的;&lt;/li&gt;
+    &lt;li&gt;不可分解投射模是 brick;&lt;/li&gt;
+    &lt;li&gt;不可分解内射模是 brick.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;遗传代数的箭图表示&quot;&gt;遗传代数的箭图表示&lt;/h2&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(遗传代数与路代数的相互转换, 证明略). 以下 $k$ 是域.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;给定有限维连通无环的箭图 $Q$, 记 $A := kQ$ 是路代数, 则遗传代数 $A$ 对应的箭图同构于 $Q$;&lt;/li&gt;
+    &lt;li&gt;给定有限维连通, 基础的遗传代数 $A$, 记 $Q$ 是 $A$ 对应的 quiver, 则有代数同构 $kQ ≃ A$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(AR quiver 的投射的结构部分, 证明略). 对有限维, 连通, 基础的遗传代数 $A ≃ kQ$, 不可分解投射对象的不可约态射空间 $\mathrm{Irr}(P(i), P(j))$ 线性同构于 $e_j \frac{\mathrm{Rad}(A)}{\mathrm{Rad}^2(A)} e_i$. 特别地,&lt;/p&gt;
+  &lt;p&gt;$$
+|\mathrm{Hom}_{Q}(i,j)| = \dim \mathrm{Ext}^1(S(i), S(j)) ≃ \dim e_j \frac{\mathrm{Rad}(A)}{\mathrm{Rad}^2(A)} e_i ≃ |\mathrm{Hom}_{Γ (kQ)}(P(i), P(j))|.
+$$&lt;/p&gt;
+  &lt;p&gt;因此, $Γ(A)$ 中投射对象所在的子图同构于 $Q^{\mathrm{op}}$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;内射对象的类似表述略.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-05-04T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Quiver-and-Hereditary-Algebra</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Quiver-and-Hereditary-Algebra</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Coxeter 反射入门</title>
+          <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#coxeter-反射-ar-平移的另一表示方式&quot; id=&quot;markdown-toc-coxeter-反射-ar-平移的另一表示方式&quot;&gt;Coxeter 反射: AR 平移的另一表示方式&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#反射函子初探&quot; id=&quot;markdown-toc-反射函子初探&quot;&gt;反射函子初探&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#mathjax_protectedjenfav7cssqmathjax_protected-几乎是等价&quot; id=&quot;markdown-toc-mathjax_protectedjenfav7cssqmathjax_protected-几乎是等价&quot;&gt;$C_i^±$ 几乎是等价&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#完全-coxeter-反射&quot; id=&quot;markdown-toc-完全-coxeter-反射&quot;&gt;完全 Coxeter 反射&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#ar-转置&quot; id=&quot;markdown-toc-ar-转置&quot;&gt;AR 转置&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;coxeter-反射-ar-平移的另一表示方式&quot;&gt;Coxeter 反射: AR 平移的另一表示方式&lt;/h2&gt;
+
+&lt;p&gt;约定所有 quiver 是有限无环的 (允许重边).&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(sink, source). 给定 $Q = (Q_0, Q_1, s, t)$, 称&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$i ∈ Q_0$ 是 sink, 当且仅当 $s^{-1}(i) = ∅$;&lt;/li&gt;
+    &lt;li&gt;$i ∈ Q_0$ 是 source, 当且仅当 $t^{-1}(i) = ∅$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;反射函子初探&quot;&gt;反射函子初探&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(图的 Coxeter 反射). 给定 quiver $Q$, 对任意 sink $i ∈ Q_0$, 定义 Coxeter 反射为反转指向 $i$ 的箭头: ̧&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxidWxsZXQiXSxbMiwxLCJpIixbMjQwLDYwLDYwLDFdXSxbMywxLCJcXGJ1bGxldCJdLFswLDEsIlxcYnVsbGV0Il0sWzEsMCwiXFxidWxsZXQiXSxbNSwxLCJcXGJ1bGxldCJdLFs0LDEsIlxcYnVsbGV0Il0sWzUsMCwiXFxidWxsZXQiXSxbNiwxLCJpIixbMCw2MCw2MCwxXV0sWzcsMSwiXFxidWxsZXQiXSxbMiwyLCJRIl0sWzYsMiwiQ19pIFEiXSxbMiwxLCJcXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlxcYWxwaGEgIiwwLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzAsMSwiXFxiZXRhICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzUsNl0sWzcsNV0sWzgsNSwiXFxhbHBoYSAnICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbOCw1LCJcXGJldGEgJyIsMCx7Im9mZnNldCI6LTMsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzgsOSwiXFxnYW1tYSAnIiwwLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTAsMTEsIkNfaSAiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJsZXZlbCI6Mn1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxidWxsZXQiXSxbMiwxLCJpIixbMjQwLDYwLDYwLDFdXSxbMywxLCJcXGJ1bGxldCJdLFswLDEsIlxcYnVsbGV0Il0sWzEsMCwiXFxidWxsZXQiXSxbNSwxLCJcXGJ1bGxldCJdLFs0LDEsIlxcYnVsbGV0Il0sWzUsMCwiXFxidWxsZXQiXSxbNiwxLCJpIixbMCw2MCw2MCwxXV0sWzcsMSwiXFxidWxsZXQiXSxbMiwyLCJRIl0sWzYsMiwiQ19pIFEiXSxbMiwxLCJcXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlxcYWxwaGEgIiwwLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzAsMSwiXFxiZXRhICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzUsNl0sWzcsNV0sWzgsNSwiXFxhbHBoYSAnICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbOCw1LCJcXGJldGEgJyIsMCx7Im9mZnNldCI6LTMsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzgsOSwiXFxnYW1tYSAnIiwwLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTAsMTEsIkNfaSAiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJsZXZlbCI6Mn1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;此处, $C_i$ 仅对 sink 定义.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(模 Coxeter 反射). 表示的 Coxeter 反射定义作如下函子&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzIsMSwiWF9iIl0sWzMsMSwiWF9pIixbMjQwLDYwLDYwLDFdXSxbNCwxLCJYX2QiXSxbMSwxLCJYX2EiXSxbMiwwLCJYX2MiXSxbMiwzLCJYX2IiXSxbMSwzLCJYX2EiXSxbMiwyLCJYX2MiXSxbMywzLCJcXGtlciBcXGxlZnRbXFxiaWdvcGx1c197dChmKSA9IDF9WF97cyhmKX0gXFx4cmlnaHRhcnJvd3tcXHN1bSBYX2Z9IFhfaVxccmlnaHRdIixbMCw2MCw2MCwxXV0sWzQsMywiWF9kIl0sWzAsMSwiXFxtYXRoYmZ7cmVwfV9rKFEpIl0sWzAsMywiXFxtYXRoYmZ7cmVwfV9rKENfaVEpIl0sWzIsMSwiWF9cXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlhfXFxhbHBoYSAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsyNDAsNjAsNjBdfSxbMjQwLDYwLDYwLDFdXSxbMCwxLCJYX1xcYmV0YSAiLDIseyJvZmZzZXQiOjMsImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFs1LDZdLFs4LDUsInAgIiwyLHsib2Zmc2V0IjozLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDUsInAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDksInAiLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxMCwxMSwiQ19pICIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sImxldmVsIjoyfV0sWzcsNV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzIsMSwiWF9iIl0sWzMsMSwiWF9pIixbMjQwLDYwLDYwLDFdXSxbNCwxLCJYX2QiXSxbMSwxLCJYX2EiXSxbMiwwLCJYX2MiXSxbMiwzLCJYX2IiXSxbMSwzLCJYX2EiXSxbMiwyLCJYX2MiXSxbMywzLCJcXGtlciBcXGxlZnRbXFxiaWdvcGx1c197dChmKSA9IDF9WF97cyhmKX0gXFx4cmlnaHRhcnJvd3tcXHN1bSBYX2Z9IFhfaVxccmlnaHRdIixbMCw2MCw2MCwxXV0sWzQsMywiWF9kIl0sWzAsMSwiXFxtYXRoYmZ7cmVwfV9rKFEpIl0sWzAsMywiXFxtYXRoYmZ7cmVwfV9rKENfaVEpIl0sWzIsMSwiWF9cXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlhfXFxhbHBoYSAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsyNDAsNjAsNjBdfSxbMjQwLDYwLDYwLDFdXSxbMCwxLCJYX1xcYmV0YSAiLDIseyJvZmZzZXQiOjMsImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFs1LDZdLFs4LDUsInAgIiwyLHsib2Zmc2V0IjozLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDUsInAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDksInAiLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxMCwxMSwiQ19pICIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sImxldmVsIjoyfV0sWzcsNV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;对给定 $X ∈ 𝐫𝐞𝐩(Q)$, $C_i X ∈ 𝐫𝐞𝐩 (C_iQ)$ 定义如下&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$X$ 与 $C_iX$ 在 $X_{≠ i}$ 与 $φ_{≠ [∙ → i]}$ 处相同 (仅有的改变是上图的着色部分);&lt;/li&gt;
+    &lt;li&gt;$(C_iX)_i$ 是 $⨁\limits_{t(f) = i}X_{s(f)}$ 的 ker-子模; 态射由投影 $⨁\limits_{t(f) = i}X_{s(f)} ↠ X_{a}$ 诱导.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;($C_i^±$). 记 $C_i^+$ 是 sink 处的反射 (以上定义的 $C_i$), $C_i^-$ 是 source 处的反射.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;若无歧义, 暂不区分图的 Coxeter 反射与模的 Coxeter 反射.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(例子, Kronecker quiver). 给定 Kronecker quiver, 相应的 Coxeter 反射如下:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMjAsWzEsMiwiWF8xIl0sWzIsMiwiWF8yIl0sWzIsMywiWF8yJyAiLFsyMzQsMTAwLDYwLDFdXSxbMSwzLCJYXzEiXSxbMCwyLCJcXG1hdGhiZntyZXB9KFxccmlnaHRyaWdodGFycm93cykiXSxbMCwzLCJcXG1hdGhiZntyZXB9KFxcbGVmdGxlZnRhcnJvd3MpIl0sWzMsMywiWF8xIl0sWzQsMiwiWF8xIl0sWzMsMiwiWF8yJyIsWzIzNCwxMDAsNjAsMV1dLFs0LDMsIlhfMiJdLFswLDEsIlxcbWF0aGJme3JlcH0oXFxyaWdodHJpZ2h0YXJyb3dzKSJdLFswLDAsIlxcbWF0aGJme3JlcH0oXFxsZWZ0bGVmdGFycm93cykiXSxbMSwxLCJYXzEiXSxbMSwwLCJYXzEnJyIsWzAsNjAsNjAsMV1dLFsyLDAsIlhfMiJdLFsyLDEsIlhfMiJdLFszLDAsIlhfMSJdLFs0LDEsIlhfMScnIixbMCw2MCw2MCwxXV0sWzMsMSwiWF8yIl0sWzQsMCwiWF8yIl0sWzAsMSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJnIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiZiciLDIseyJvZmZzZXQiOjIsImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzIsMywiZyciLDAseyJvZmZzZXQiOi0yLCJjb2xvdXIiOlsyMzQsMTAwLDYwXX0sWzIzNCwxMDAsNjAsMV1dLFs0LDUsIkNfMl4rIiwyLHsibGV2ZWwiOjJ9XSxbOCw3LCJmJyIsMCx7ImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzcsOSwiZiJdLFs4LDYsImcnIiwyLHsiY29sb3VyIjpbMjM0LDEwMCw2MF19LFsyMzQsMTAwLDYwLDFdXSxbNiw5LCJnIiwyXSxbOCw5LCJcXHRleHR75ouJ5ZuefSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMiwxNSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMTIsMTUsImciLDIseyJvZmZzZXQiOjJ9XSxbMTQsMTMsImYnJyIsMix7Im9mZnNldCI6MiwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTQsMTMsImcnJyIsMCx7Im9mZnNldCI6LTIsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzE2LDE3LCJcXHRleHR75o6o5Ye6fSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMSwiQ18xXi0iLDAseyJsZXZlbCI6Mn1dLFsxNiwxOSwiZiJdLFsxNiwxOCwiZyIsMl0sWzE5LDE3LCJnJyciLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxOCwxNywiZicnIiwyLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMjAsWzEsMiwiWF8xIl0sWzIsMiwiWF8yIl0sWzIsMywiWF8yJyAiLFsyMzQsMTAwLDYwLDFdXSxbMSwzLCJYXzEiXSxbMCwyLCJcXG1hdGhiZntyZXB9KFxccmlnaHRyaWdodGFycm93cykiXSxbMCwzLCJcXG1hdGhiZntyZXB9KFxcbGVmdGxlZnRhcnJvd3MpIl0sWzMsMywiWF8xIl0sWzQsMiwiWF8xIl0sWzMsMiwiWF8yJyIsWzIzNCwxMDAsNjAsMV1dLFs0LDMsIlhfMiJdLFswLDEsIlxcbWF0aGJme3JlcH0oXFxyaWdodHJpZ2h0YXJyb3dzKSJdLFswLDAsIlxcbWF0aGJme3JlcH0oXFxsZWZ0bGVmdGFycm93cykiXSxbMSwxLCJYXzEiXSxbMSwwLCJYXzEnJyIsWzAsNjAsNjAsMV1dLFsyLDAsIlhfMiJdLFsyLDEsIlhfMiJdLFszLDAsIlhfMSJdLFs0LDEsIlhfMScnIixbMCw2MCw2MCwxXV0sWzMsMSwiWF8yIl0sWzQsMCwiWF8yIl0sWzAsMSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJnIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiZiciLDIseyJvZmZzZXQiOjIsImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzIsMywiZyciLDAseyJvZmZzZXQiOi0yLCJjb2xvdXIiOlsyMzQsMTAwLDYwXX0sWzIzNCwxMDAsNjAsMV1dLFs0LDUsIkNfMl4rIiwyLHsibGV2ZWwiOjJ9XSxbOCw3LCJmJyIsMCx7ImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzcsOSwiZiJdLFs4LDYsImcnIiwyLHsiY29sb3VyIjpbMjM0LDEwMCw2MF19LFsyMzQsMTAwLDYwLDFdXSxbNiw5LCJnIiwyXSxbOCw5LCJcXHRleHR75ouJ5ZuefSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMiwxNSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMTIsMTUsImciLDIseyJvZmZzZXQiOjJ9XSxbMTQsMTMsImYnJyIsMix7Im9mZnNldCI6MiwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTQsMTMsImcnJyIsMCx7Im9mZnNldCI6LTIsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzE2LDE3LCJcXHRleHR75o6o5Ye6fSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMSwiQ18xXi0iLDAseyJsZXZlbCI6Mn1dLFsxNiwxOSwiZiJdLFsxNiwxOCwiZyIsMl0sWzE5LDE3LCJnJyciLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxOCwxNywiZicnIiwyLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;400&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;mathjax_protectedjenfav7cssqmathjax_protected-几乎是等价&quot;&gt;$C_i^±$ 几乎是等价&lt;/h3&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Coxeter_PM_Adjoint&quot;&gt;证明&lt;/a&gt;) 假定 $C_i^+ : Q_1 → Q_2$, 则以下是伴随函子: \begin{equation} C_i ^- : \mathbf{rep}_k(Q_2) ⇄ \mathbf{rep}_k(Q_1) : C_i ^+. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;容易计算,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;(单位). $M \simeq C_i^+ C_i^- M \oplus \ker[M_i → \bigoplus M_{\neq i}] \twoheadrightarrow C_i^+ C_i^- M$ 是投影;&lt;/li&gt;
+    &lt;li&gt;(余单位) $C_i^- C_i^+ N \hookrightarrow C_i^- C_i^+ N \oplus \mathrm{coker}[\bigoplus_{\neq i} N_i → N] \simeq N$ 是嵌入.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;反射函子 $C_i^±$ 极大地分离出半单 $S_i$-部分.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Coxeter_Ref_Idem&quot;&gt;证明&lt;/a&gt;). Coxeter 反射 $C_i^±$ 保持不可分解模; 除了映 $S_i$ 至 $0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;基于以上引理, 不难得到:&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;假定 $C_i ^- : Q_1 ⇆  Q_2 : C_i^+$. 记 $𝐢(Q_i)$ 是 $𝐦𝐨𝐝_{kQ_i}$ 中的不可分解对象 (的同构类), 则以下是双射:&lt;/p&gt;
+  &lt;p&gt;$$
+C_i^- : 𝐢 (Q_1) ⇆ 𝐢 (Q_2) : C_i^+.
+$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(反射的例子). 考虑 $D_4$ 型 quiver 的反射, 比较如下 AR quiver:&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMzIsWzEsMSwiNCJdLFsyLDAsIjEiXSxbMiwxLCIyIl0sWzIsMiwiMyJdLFszLDEsIlAoNCkiXSxbNCwwLCJQKDEpIl0sWzQsMiwiUCgzKSJdLFs0LDEsIlAoMikiXSxbNSwxLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDIgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwwLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAwXFxcXDEgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwxLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDEgXFwgXFwgMFxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwyLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDEgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMH0iXSxbNywxLCJJKDQpIl0sWzgsMCwiSSgxKSJdLFs4LDEsIkkoMikiXSxbOCwyLCJTKDMpIl0sWzIsMywiMSJdLFsyLDQsIjIiXSxbMSw0LCI0Il0sWzAsNSwiMyJdLFsyLDUsIlMoMykiXSxbMyw0LCJQKDQpIl0sWzQsMywiUCgxKSJdLFs0LDQsIlAoMikiXSxbNCw1LCJTKDQpIl0sWzUsNCwiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMVxcXFwyIFxcIFxcIDFcXFxcMSBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsMywiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMFxcXFwxIFxcIFxcIDFcXFxcMCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsNCwiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMVxcXFwxIFxcIFxcIDBcXFxcMCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsNSwiSSgzKSJdLFs3LDQsIkkoNCkiXSxbOCwzLCJJKDEpIl0sWzgsNCwiSSgyKSJdLFsxLDBdLFsyLDBdLFszLDBdLFs0LDVdLFs0LDddLFs0LDZdLFs1LDhdLFs3LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV0sWzksMTJdLFsxMiwxM10sWzEwLDEyXSxbMTIsMTRdLFsxMSwxMl0sWzEyLDE1XSxbMTYsMThdLFsxNywxOF0sWzE4LDE5XSxbMjAsMjFdLFsyMSwyMl0sWzIxLDIzXSxbMjEsMjRdLFsyMiwyNV0sWzIzLDI1XSxbMjQsMjVdLFsyNSwyNl0sWzI1LDI3XSxbMjUsMjhdLFsyNiwyOV0sWzI3LDI5XSxbMjgsMjldLFsyOSwzMF0sWzI5LDMxXV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMzIsWzEsMSwiNCJdLFsyLDAsIjEiXSxbMiwxLCIyIl0sWzIsMiwiMyJdLFszLDEsIlAoNCkiXSxbNCwwLCJQKDEpIl0sWzQsMiwiUCgzKSJdLFs0LDEsIlAoMikiXSxbNSwxLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDIgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwwLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAwXFxcXDEgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwxLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDEgXFwgXFwgMFxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwyLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDEgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMH0iXSxbNywxLCJJKDQpIl0sWzgsMCwiSSgxKSJdLFs4LDEsIkkoMikiXSxbOCwyLCJTKDMpIl0sWzIsMywiMSJdLFsyLDQsIjIiXSxbMSw0LCI0Il0sWzAsNSwiMyJdLFsyLDUsIlMoMykiXSxbMyw0LCJQKDQpIl0sWzQsMywiUCgxKSJdLFs0LDQsIlAoMikiXSxbNCw1LCJTKDQpIl0sWzUsNCwiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMVxcXFwyIFxcIFxcIDFcXFxcMSBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsMywiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMFxcXFwxIFxcIFxcIDFcXFxcMCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsNCwiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMVxcXFwxIFxcIFxcIDBcXFxcMCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsNSwiSSgzKSJdLFs3LDQsIkkoNCkiXSxbOCwzLCJJKDEpIl0sWzgsNCwiSSgyKSJdLFsxLDBdLFsyLDBdLFszLDBdLFs0LDVdLFs0LDddLFs0LDZdLFs1LDhdLFs3LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV0sWzksMTJdLFsxMiwxM10sWzEwLDEyXSxbMTIsMTRdLFsxMSwxMl0sWzEyLDE1XSxbMTYsMThdLFsxNywxOF0sWzE4LDE5XSxbMjAsMjFdLFsyMSwyMl0sWzIxLDIzXSxbMjEsMjRdLFsyMiwyNV0sWzIzLDI1XSxbMjQsMjVdLFsyNSwyNl0sWzI1LDI3XSxbMjUsMjhdLFsyNiwyOV0sWzI3LDI5XSxbMjgsMjldLFsyOSwzMF0sWzI5LDMxXV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;400&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;可以发现, 在 $C_3^±$ 建立了不可分解对象的双射 ($S(3)$ 除外), 同时保持 $\mathrm{Irr}$-空间维度.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;完全-coxeter-反射&quot;&gt;完全 Coxeter 反射&lt;/h3&gt;
+
+&lt;p&gt;以下是一个自然的想法: 若存在一列遍历所有 $Q_0$ 的反射 $C_{i_k}^-$ 使得 $C^-_{i_n} \cdots C_{i_1}^-$ 可复合, 则得自函子 $𝐫𝐞𝐩_k(Q) → 𝐫𝐞𝐩_k(Q)$. 实际上, 这一自函子存在且唯一.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(完全 Coxeter 反射的存在性与唯一性, &lt;a href=&quot;Complete_Coxeter_Reflection&quot;&gt;证明&lt;/a&gt;). 存在 $σ ∈ 𝔖_{Q_0}$, 使得有自函子&lt;/p&gt;
+  &lt;p&gt;$$
+C^+ := C^+_{σ (n)} C^+_{σ (n-1)} \cdots C_{σ (1)}^+ : \mathbf{rep}_k (Q) → \mathbf{rep}_k (Q).
+$$&lt;/p&gt;
+  &lt;p&gt;相应地记 $C^- = C^-_{σ (1)}C^-_{σ (2)}\cdots C^-_{σ (n)}$. 特别地, $C^±$ 的定义与置换顺序 $σ$ 无关.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Proj_Inj_Coxeter&quot;&gt;证明&lt;/a&gt;). 投射模与内射模在完全 Coxeter 分解下的表现如下.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;投射模经 $C^+$ 消失, 换言之, $C^+ P = 0$;&lt;/li&gt;
+    &lt;li&gt;若 $C^+M = 0$, 则 $M$ 是投射模;&lt;/li&gt;
+    &lt;li&gt;$C^+C^-M$ 是不含投射对象的极大直和项;&lt;/li&gt;
+    &lt;li&gt;内射模经 $C^-$ 消失, 换言之, $C^- I = 0$;&lt;/li&gt;
+    &lt;li&gt;若 $C^-M = 0$, 则 $M$ 是内射模;&lt;/li&gt;
+    &lt;li&gt;$C^-C^+M$ 是不含内射对象的极大直和项.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;ar-转置&quot;&gt;AR 转置&lt;/h3&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;C_is_tau_for_Proj&quot;&gt;证明&lt;/a&gt;). 若 $i$ 是 source, 对不可分解投射对象 $P_i ∈ 𝐦𝐨𝐝_{kQ}$, 则 $τ⁻¹ (P_i)$ 与 $C_i^-P_i$ 是 $𝐦𝐨𝐝_{kC_i^- Q}$ 中同构的模.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(完全 Coxeter 反射就是 AR 平移, &lt;a href=&quot;C_is_tau&quot;&gt;证明&lt;/a&gt;). $C^+ M ≃ τ M$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;对偶地, $C^- = τ ⁻¹$.&lt;/p&gt;
+</description>
+          <pubDate>2025-05-04T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Coxeter-Reflection</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Coxeter-Reflection</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>有限表现模, 投射模, 内射模, 平坦模的结构</title>
           <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#abstract&quot; id=&quot;markdown-toc-abstract&quot;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
@@ -2882,14 +3980,13 @@ $$&lt;/p&gt;
   &lt;p&gt;($𝔓$ 是 $ℤ 𝔓$ 的截面). 给定连通, 有限表示表示的遗传代数.&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$𝔓$ 是 $ℤ𝔓$ 的截面.&lt;/li&gt;
-    &lt;li&gt;$Γ$ 是 $ℤ𝔓$ 的子图.&lt;/li&gt;
-    &lt;li&gt;$ℤ 𝔓$ 视同 $ℤΓ$ 的全子范畴.&lt;/li&gt;
+    &lt;li&gt;$Γ$ 是 $ℤ𝔓$ 的全子范畴.&lt;/li&gt;
   &lt;/ol&gt;
   &lt;p&gt;内射对象同理.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;proof&quot;&gt;
-  &lt;p&gt;先明确 $𝔓$ 的结构.&lt;/p&gt;
+  &lt;p&gt;先证明 $𝔓$ 是 $ℤ 𝔓$ 的截面, 今依次验证如下三点.&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;(道路封闭) 由 $A$ 遗传, 投射模的子模是投射模, 从而指向投射模的不可约态射都是 $𝔓$ 中的态射. 这说明 $𝔓$ 对道路封闭.&lt;/li&gt;
     &lt;li&gt;
@@ -2901,7 +3998,7 @@ $$&lt;/p&gt;
     &lt;/li&gt;
     &lt;li&gt;(截面). 直接由定义得到.&lt;/li&gt;
   &lt;/ol&gt;
-  &lt;p&gt;往后证明 $Γ ⊆ ℤ𝔓$ 是全子范畴. 依照几乎可裂短正合列的性质, 有线性同构&lt;/p&gt;
+  &lt;p&gt;往后证明 $Γ ⊆ ℤ𝔓$ 是全子范畴. 依照几乎可裂短正合列的性质, 反射 $θ$ 诱导了有线性空间的同构&lt;/p&gt;
   &lt;p&gt;$$
 \mathrm{Irr}(τ X, Y) ≃ \mathrm{Irr}(Y, X) ≃ \cdots .
 $$&lt;/p&gt;
@@ -2943,8 +4040,7 @@ $$&lt;/p&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;计算 AR quiver:&lt;/p&gt;
-  &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzEsMiwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfSJdLFsxLDEsIlxcc3Vic3RhY2t7MFxcXFwxIFxcIDEgXFwgMH0iXSxbMSwwLCJcXHN1YnN0YWNrezBcXFxcMCBcXCAxIFxcIDF9Il0sWzIsMSwiXFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfSJdLFszLDAsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMywyLCJcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFswLDEsIlxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzUsMSwiXFxzdWJzdGFja3swXFxcXDEgXFwgMCBcXCAwfSJdLFs1LDIsIlxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzIsM10sWzEsM10sWzAsM10sWzMsNV0sWzMsNl0sWzcsMl0sWzcsMV0sWzcsMF0sWzQsOF0sWzUsOF0sWzYsOF0sWzgsOV0sWzgsMTBdLFs4LDExXSxbMyw0XSxbMTEsNCwiIiwxLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDIsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw2LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzYsMSwiIiwxLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMCw1LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzUsMCwiIiwxLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs4LDMsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw3LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d --&gt;
-  &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzEsMiwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfSJdLFsxLDEsIlxcc3Vic3RhY2t7MFxcXFwxIFxcIDEgXFwgMH0iXSxbMSwwLCJcXHN1YnN0YWNrezBcXFxcMCBcXCAxIFxcIDF9Il0sWzIsMSwiXFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfSJdLFszLDAsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMywyLCJcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFswLDEsIlxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzUsMSwiXFxzdWJzdGFja3swXFxcXDEgXFwgMCBcXCAwfSJdLFs1LDIsIlxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzIsM10sWzEsM10sWzAsM10sWzMsNV0sWzMsNl0sWzcsMl0sWzcsMV0sWzcsMF0sWzQsOF0sWzUsOF0sWzYsOF0sWzgsOV0sWzgsMTBdLFs4LDExXSxbMyw0XSxbMTEsNCwiIiwxLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDIsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw2LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzYsMSwiIiwxLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMCw1LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzUsMCwiIiwxLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs4LDMsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw3LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzEsMiwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfSJdLFsxLDEsIlxcc3Vic3RhY2t7MFxcXFwxIFxcIDEgXFwgMH0iXSxbMSwwLCJcXHN1YnN0YWNrezBcXFxcMCBcXCAxIFxcIDF9Il0sWzIsMSwiXFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfSJdLFszLDAsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMywyLCJcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFswLDEsIlxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzUsMSwiXFxzdWJzdGFja3swXFxcXDEgXFwgMCBcXCAwfSJdLFs1LDIsIlxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzIsM10sWzEsM10sWzAsM10sWzMsNV0sWzMsNl0sWzcsMl0sWzcsMV0sWzcsMF0sWzQsOF0sWzUsOF0sWzYsOF0sWzgsOV0sWzgsMTBdLFs4LDExXSxbMyw0XSxbMTEsNCwiIiwxLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDIsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw2LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzYsMSwiIiwxLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMCw1LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzUsMCwiIiwxLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs4LDMsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw3LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzEsMiwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfSJdLFsxLDEsIlxcc3Vic3RhY2t7MFxcXFwxIFxcIDEgXFwgMH0iXSxbMSwwLCJcXHN1YnN0YWNrezBcXFxcMCBcXCAxIFxcIDF9Il0sWzIsMSwiXFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfSJdLFszLDAsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMywyLCJcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFswLDEsIlxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzUsMSwiXFxzdWJzdGFja3swXFxcXDEgXFwgMCBcXCAwfSJdLFs1LDIsIlxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzIsM10sWzEsM10sWzAsM10sWzMsNV0sWzMsNl0sWzcsMl0sWzcsMV0sWzcsMF0sWzQsOF0sWzUsOF0sWzYsOF0sWzgsOV0sWzgsMTBdLFs4LDExXSxbMyw0XSxbMTEsNCwiIiwxLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDIsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw2LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzYsMSwiIiwxLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMCw1LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzUsMCwiIiwxLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs4LDMsIiIsMSx7ImN1cnZlIjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw3LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;mathjax_protectedjeekmathjax_protected-的-apr-tilting-模&quot;&gt;$A$ 的 APR tilting 模&lt;/h3&gt;
@@ -2954,14 +4050,12 @@ $$&lt;/p&gt;
   &lt;p&gt;$$
 τ⁻¹ S(4) ⊕ ⨁_{i ≠ 4} P(i).
 $$&lt;/p&gt;
-  &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxib3hlZHtcXHN1YnN0YWNrezFcXFxcMCBcXCAxIFxcIDB9fSJdLFsxLDIsIlxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbMSwwLCJcXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxib3hlZHtcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9fSJdLFszLDAsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMywyLCJcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFswLDEsIlxcY29sb3J7Z3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs0LDEsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMX0iXSxbNSwxLCJcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfSJdLFs1LDAsIlxcc3Vic3RhY2t7MFxcXFwwIFxcIDAgXFwgMX0iXSxbMiwzXSxbMSwzXSxbMCwzXSxbMyw0XSxbMyw1XSxbMyw2XSxbNywyXSxbNywxXSxbNywwXSxbNCw4XSxbNSw4XSxbNiw4XSxbOCw5XSxbOCwxMF0sWzgsMTFdXQ== --&gt;
-  &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxib3hlZHtcXHN1YnN0YWNrezFcXFxcMCBcXCAxIFxcIDB9fSJdLFsxLDIsIlxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbMSwwLCJcXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxib3hlZHtcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9fSJdLFszLDAsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMywyLCJcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFswLDEsIlxcY29sb3J7Z3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs0LDEsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMX0iXSxbNSwxLCJcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfSJdLFs1LDAsIlxcc3Vic3RhY2t7MFxcXFwwIFxcIDAgXFwgMX0iXSxbMiwzXSxbMSwzXSxbMCwzXSxbMyw0XSxbMyw1XSxbMyw2XSxbNywyXSxbNywxXSxbNywwXSxbNCw4XSxbNSw4XSxbNiw4XSxbOCw5XSxbOCwxMF0sWzgsMTFdXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxib3hlZHtcXHN1YnN0YWNrezFcXFxcMCBcXCAxIFxcIDB9fSJdLFsxLDIsIlxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbMSwwLCJcXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxib3hlZHtcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9fSJdLFszLDAsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMywyLCJcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFswLDEsIlxcY29sb3J7Z3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs0LDEsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMX0iXSxbNSwxLCJcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfSJdLFs1LDAsIlxcc3Vic3RhY2t7MFxcXFwwIFxcIDAgXFwgMX0iXSxbMiwzXSxbMSwzXSxbMCwzXSxbMyw0XSxbMyw1XSxbMyw2XSxbNywyXSxbNywxXSxbNywwXSxbNCw4XSxbNSw4XSxbNiw4XSxbOCw5XSxbOCwxMF0sWzgsMTFdXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxib3hlZHtcXHN1YnN0YWNrezFcXFxcMCBcXCAxIFxcIDB9fSJdLFsxLDIsIlxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbMSwwLCJcXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxib3hlZHtcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9fSJdLFszLDAsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMywyLCJcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFswLDEsIlxcY29sb3J7Z3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs0LDEsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMX0iXSxbNSwxLCJcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfSJdLFs1LDAsIlxcc3Vic3RhY2t7MFxcXFwwIFxcIDAgXFwgMX0iXSxbMiwzXSxbMSwzXSxbMCwzXSxbMyw0XSxbMyw1XSxbMyw2XSxbNywyXSxbNywxXSxbNywwXSxbNCw4XSxbNSw4XSxbNiw4XSxbOCw5XSxbOCwxMF0sWzgsMTFdXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;这一 tilting 模给出的 torsion pair $({\color{blue}𝒯}, {\color{green}ℱ})$是&lt;/p&gt;
-  &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfX0iXSxbMSwyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFsxLDAsIlxcY29sb3J7Ymx1ZX1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfX0iXSxbMywwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfSJdLFszLDIsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMX0iXSxbMCwxLCJcXGNvbG9ye2dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAxfSJdLFs1LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3swXFxcXDAgXFwgMCBcXCAxfSJdLFsyLDNdLFsxLDNdLFswLDNdLFszLDRdLFszLDVdLFszLDZdLFs3LDJdLFs3LDFdLFs3LDBdLFs0LDhdLFs1LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV1d --&gt;
-  &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfX0iXSxbMSwyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFsxLDAsIlxcY29sb3J7Ymx1ZX1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfX0iXSxbMywwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfSJdLFszLDIsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMX0iXSxbMCwxLCJcXGNvbG9ye2dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAxfSJdLFs1LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3swXFxcXDAgXFwgMCBcXCAxfSJdLFsyLDNdLFsxLDNdLFswLDNdLFszLDRdLFszLDVdLFszLDZdLFs3LDJdLFs3LDFdLFs3LDBdLFs0LDhdLFs1LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfX0iXSxbMSwyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFsxLDAsIlxcY29sb3J7Ymx1ZX1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfX0iXSxbMywwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfSJdLFszLDIsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMX0iXSxbMCwxLCJcXGNvbG9ye2dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAxfSJdLFs1LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3swXFxcXDAgXFwgMCBcXCAxfSJdLFsyLDNdLFsxLDNdLFswLDNdLFszLDRdLFszLDVdLFszLDZdLFs3LDJdLFs3LDFdLFs3LDBdLFs0LDhdLFs1LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfX0iXSxbMSwyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFsxLDAsIlxcY29sb3J7Ymx1ZX1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfX0iXSxbMywwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfSJdLFszLDIsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMX0iXSxbMCwxLCJcXGNvbG9ye2dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAxfSJdLFs1LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3swXFxcXDAgXFwgMCBcXCAxfSJdLFsyLDNdLFsxLDNdLFswLDNdLFszLDRdLFszLDVdLFszLDZdLFs3LDJdLFs3LDFdLFs3LDBdLFs0LDhdLFs1LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;example&quot;&gt;
@@ -2987,9 +4081,8 @@ $$&lt;/p&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;(BB 定理如何工作)?&lt;/p&gt;
-  &lt;!-- https://q.uiver.app/#q=WzAsMjQsWzEsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfX0iXSxbMSwyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFsxLDAsIlxcY29sb3J7Ymx1ZX1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfX0iXSxbMywwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfSJdLFszLDIsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMX0iXSxbMCwxLCJcXGNvbG9ye2dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAxfSJdLFs1LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3swXFxcXDAgXFwgMCBcXCAxfSJdLFsxLDMsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDAgXFwgMX19Il0sWzEsNCwiXFxjb2xvcntjeWFufVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfX0iXSxbMSw1LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9fSJdLFsyLDQsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMX19Il0sWzMsMywiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMyw0LCJcXGNvbG9ye2N5YW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFszLDUsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzQsNCwiXFxjb2xvcntjeWFufXtcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9fSJdLFs1LDMsIlxcY29sb3J7Y3lhbn17XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAxfX0iXSxbNSw0LCJcXGNvbG9ye2N5YW59e1xcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH19Il0sWzUsNSwiXFxjb2xvcntjeWFufXtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFs2LDQsIlxcY29sb3J7b2xpdmV9XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFsyLDNdLFsxLDNdLFswLDNdLFszLDRdLFszLDVdLFszLDZdLFs3LDJdLFs3LDFdLFs3LDBdLFs0LDhdLFs1LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV0sWzEyLDE1XSxbMTUsMTZdLFsxNiwxOV0sWzE5LDIwXSxbMTQsMTVdLFsxNSwxOF0sWzE4LDE5XSxbMTksMjJdLFsxMywxNV0sWzE1LDE3XSxbMTcsMTldLFsxOSwyMV0sWzIwLDIzXSxbMjEsMjNdLFsyMiwyM11d --&gt;
-  &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMjQsWzEsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfX0iXSxbMSwyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFsxLDAsIlxcY29sb3J7Ymx1ZX1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfX0iXSxbMywwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfSJdLFszLDIsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMX0iXSxbMCwxLCJcXGNvbG9ye2dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAxfSJdLFs1LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3swXFxcXDAgXFwgMCBcXCAxfSJdLFsxLDMsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDAgXFwgMX19Il0sWzEsNCwiXFxjb2xvcntjeWFufVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfX0iXSxbMSw1LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9fSJdLFsyLDQsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMX19Il0sWzMsMywiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMyw0LCJcXGNvbG9ye2N5YW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFszLDUsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzQsNCwiXFxjb2xvcntjeWFufXtcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9fSJdLFs1LDMsIlxcY29sb3J7Y3lhbn17XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAxfX0iXSxbNSw0LCJcXGNvbG9ye2N5YW59e1xcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH19Il0sWzUsNSwiXFxjb2xvcntjeWFufXtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFs2LDQsIlxcY29sb3J7b2xpdmV9XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFsyLDNdLFsxLDNdLFswLDNdLFszLDRdLFszLDVdLFszLDZdLFs3LDJdLFs3LDFdLFs3LDBdLFs0LDhdLFs1LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV0sWzEyLDE1XSxbMTUsMTZdLFsxNiwxOV0sWzE5LDIwXSxbMTQsMTVdLFsxNSwxOF0sWzE4LDE5XSxbMTksMjJdLFsxMywxNV0sWzE1LDE3XSxbMTcsMTldLFsxOSwyMV0sWzIwLDIzXSxbMjEsMjNdLFsyMiwyM11d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;500&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt;
-  &lt;p&gt;&lt;br /&gt; 以上,&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMjQsWzEsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfX0iXSxbMSwyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFsxLDAsIlxcY29sb3J7Ymx1ZX1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfX0iXSxbMywwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfSJdLFszLDIsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMX0iXSxbMCwxLCJcXGNvbG9ye2dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAxfSJdLFs1LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3swXFxcXDAgXFwgMCBcXCAxfSJdLFsxLDMsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDAgXFwgMX19Il0sWzEsNCwiXFxjb2xvcntjeWFufVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfX0iXSxbMSw1LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9fSJdLFsyLDQsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMX19Il0sWzMsMywiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMyw0LCJcXGNvbG9ye2N5YW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFszLDUsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzQsNCwiXFxjb2xvcntjeWFufXtcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9fSJdLFs1LDMsIlxcY29sb3J7Y3lhbn17XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAxfX0iXSxbNSw0LCJcXGNvbG9ye2N5YW59e1xcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH19Il0sWzUsNSwiXFxjb2xvcntjeWFufXtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFs2LDQsIlxcY29sb3J7b2xpdmV9XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFsyLDNdLFsxLDNdLFswLDNdLFszLDRdLFszLDVdLFszLDZdLFs3LDJdLFs3LDFdLFs3LDBdLFs0LDhdLFs1LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV0sWzEyLDE1XSxbMTUsMTZdLFsxNiwxOV0sWzE5LDIwXSxbMTQsMTVdLFsxNSwxOF0sWzE4LDE5XSxbMTksMjJdLFsxMywxNV0sWzE1LDE3XSxbMTcsMTldLFsxOSwyMV0sWzIwLDIzXSxbMjEsMjNdLFsyMiwyM11d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMjQsWzEsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfX0iXSxbMSwyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFsxLDAsIlxcY29sb3J7Ymx1ZX1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfX0iXSxbMywwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfSJdLFszLDIsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMX0iXSxbMCwxLCJcXGNvbG9ye2dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAxfSJdLFs1LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3swXFxcXDAgXFwgMCBcXCAxfSJdLFsxLDMsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDAgXFwgMX19Il0sWzEsNCwiXFxjb2xvcntjeWFufVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfX0iXSxbMSw1LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9fSJdLFsyLDQsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMX19Il0sWzMsMywiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMyw0LCJcXGNvbG9ye2N5YW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFszLDUsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzQsNCwiXFxjb2xvcntjeWFufXtcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9fSJdLFs1LDMsIlxcY29sb3J7Y3lhbn17XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAxfX0iXSxbNSw0LCJcXGNvbG9ye2N5YW59e1xcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH19Il0sWzUsNSwiXFxjb2xvcntjeWFufXtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFs2LDQsIlxcY29sb3J7b2xpdmV9XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFsyLDNdLFsxLDNdLFswLDNdLFszLDRdLFszLDVdLFszLDZdLFs3LDJdLFs3LDFdLFs3LDBdLFs0LDhdLFs1LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV0sWzEyLDE1XSxbMTUsMTZdLFsxNiwxOV0sWzE5LDIwXSxbMTQsMTVdLFsxNSwxOF0sWzE4LDE5XSxbMTksMjJdLFsxMywxNV0sWzE1LDE3XSxbMTcsMTldLFsxOSwyMV0sWzIwLDIzXSxbMjEsMjNdLFsyMiwyM11d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;500&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;以上,&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$(T, -) : {\color{blue}𝒯} → {\color{cyan}𝒴}$ 是范畴等价, 从 torsion 映至 torsion-free;&lt;/li&gt;
     &lt;li&gt;$\mathrm{Ext}^1(T, -) : {\color{green}ℱ} → {\color{olive}𝒳}$ 是范畴等价, 从 torsion-free 映至 torsion.&lt;/li&gt;
@@ -3005,8 +4098,7 @@ $$&lt;/p&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;以下 $T := ⨁ \boxed {\substack{a \\b \ c \ d}}$ 不是 APR tilting 模:&lt;/p&gt;
-  &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzEsMiwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbMSwxLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH0iXSxbMSwwLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX0iXSxbMiwxLCJcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9Il0sWzMsMCwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfX0iXSxbMywxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9fSJdLFszLDIsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFswLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs0LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMCBcXCAwfX0iXSxbNSwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfSJdLFs1LDAsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzIsM10sWzAsM10sWzMsNF0sWzMsNl0sWzcsMl0sWzcsMV0sWzcsMF0sWzQsOF0sWzUsOF0sWzYsOF0sWzgsOV0sWzgsMTBdLFs4LDExXSxbMSwzXSxbMyw1XV0= --&gt;
-  &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzEsMiwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbMSwxLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH0iXSxbMSwwLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX0iXSxbMiwxLCJcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9Il0sWzMsMCwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfX0iXSxbMywxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9fSJdLFszLDIsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFswLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs0LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMCBcXCAwfX0iXSxbNSwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfSJdLFs1LDAsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzIsM10sWzAsM10sWzMsNF0sWzMsNl0sWzcsMl0sWzcsMV0sWzcsMF0sWzQsOF0sWzUsOF0sWzYsOF0sWzgsOV0sWzgsMTBdLFs4LDExXSxbMSwzXSxbMyw1XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzEsMiwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbMSwxLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH0iXSxbMSwwLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX0iXSxbMiwxLCJcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9Il0sWzMsMCwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfX0iXSxbMywxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9fSJdLFszLDIsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFswLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs0LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMCBcXCAwfX0iXSxbNSwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfSJdLFs1LDAsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzIsM10sWzAsM10sWzMsNF0sWzMsNl0sWzcsMl0sWzcsMV0sWzcsMF0sWzQsOF0sWzUsOF0sWzYsOF0sWzgsOV0sWzgsMTBdLFs4LDExXSxbMSwzXSxbMyw1XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzEsMiwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbMSwxLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH0iXSxbMSwwLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX0iXSxbMiwxLCJcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9Il0sWzMsMCwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfX0iXSxbMywxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9fSJdLFszLDIsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFswLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs0LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMCBcXCAwfX0iXSxbNSwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfSJdLFs1LDAsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzIsM10sWzAsM10sWzMsNF0sWzMsNl0sWzcsMl0sWzcsMV0sWzcsMF0sWzQsOF0sWzUsOF0sWzYsOF0sWzgsOV0sWzgsMTBdLFs4LDExXSxbMSwzXSxbMyw1XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;example&quot;&gt;
@@ -3059,16 +4151,14 @@ $$&lt;/p&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;($B$ 的 AR quiver). $B$ 的 AR quiver 如下 $\boxed{\substack {b \\ a \quad c \\ d}}$:&lt;/p&gt;
-  &lt;!-- https://q.uiver.app/#q=WzAsMTEsWzMsMiwiXFxzdWJzdGFja3swIFxcXFwgMCBcXHF1YWQgMCBcXFxcIDF9Il0sWzMsMCwiXFxzdWJzdGFja3sxIFxcXFwgMCBcXHF1YWQgMCBcXFxcIDB9Il0sWzEsMiwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAwfSJdLFsyLDEsIlxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAxfSJdLFswLDEsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezAgXFxcXCAwIFxccXVhZCAxIFxcXFwgMH0iXSxbMSwwLCJcXGNvbG9ye2N5YW59XFxzdWJzdGFja3swIFxcXFwgMCBcXHF1YWQgMSBcXFxcIDF9Il0sWzMsMSwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDEgXFxxdWFkIDEgXFxcXCAxfSJdLFs0LDEsIlxcc3Vic3RhY2t7MSBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFs1LDIsIlxcc3Vic3RhY2t7MSBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs1LDAsIlxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFs2LDEsIlxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs0LDVdLFs1LDNdLFs0LDJdLFsyLDNdLFszLDBdLFszLDFdLFsxLDddLFswLDddLFs3LDldLFs3LDhdLFszLDZdLFs2LDddLFs5LDEwXSxbOCwxMF1d --&gt;
-  &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTEsWzMsMiwiXFxzdWJzdGFja3swIFxcXFwgMCBcXHF1YWQgMCBcXFxcIDF9Il0sWzMsMCwiXFxzdWJzdGFja3sxIFxcXFwgMCBcXHF1YWQgMCBcXFxcIDB9Il0sWzEsMiwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAwfSJdLFsyLDEsIlxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAxfSJdLFswLDEsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezAgXFxcXCAwIFxccXVhZCAxIFxcXFwgMH0iXSxbMSwwLCJcXGNvbG9ye2N5YW59XFxzdWJzdGFja3swIFxcXFwgMCBcXHF1YWQgMSBcXFxcIDF9Il0sWzMsMSwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDEgXFxxdWFkIDEgXFxcXCAxfSJdLFs0LDEsIlxcc3Vic3RhY2t7MSBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFs1LDIsIlxcc3Vic3RhY2t7MSBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs1LDAsIlxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFs2LDEsIlxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs0LDVdLFs1LDNdLFs0LDJdLFsyLDNdLFszLDBdLFszLDFdLFsxLDddLFswLDddLFs3LDldLFs3LDhdLFszLDZdLFs2LDddLFs5LDEwXSxbOCwxMF1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt;
-  &lt;p&gt;&lt;br /&gt; 以上 $\color{cyan} {_B(T,\{A,B,C,D\})}$ 是投射对象.&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTEsWzMsMiwiXFxzdWJzdGFja3swIFxcXFwgMCBcXHF1YWQgMCBcXFxcIDF9Il0sWzMsMCwiXFxzdWJzdGFja3sxIFxcXFwgMCBcXHF1YWQgMCBcXFxcIDB9Il0sWzEsMiwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAwfSJdLFsyLDEsIlxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAxfSJdLFswLDEsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezAgXFxcXCAwIFxccXVhZCAxIFxcXFwgMH0iXSxbMSwwLCJcXGNvbG9ye2N5YW59XFxzdWJzdGFja3swIFxcXFwgMCBcXHF1YWQgMSBcXFxcIDF9Il0sWzMsMSwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDEgXFxxdWFkIDEgXFxcXCAxfSJdLFs0LDEsIlxcc3Vic3RhY2t7MSBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFs1LDIsIlxcc3Vic3RhY2t7MSBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs1LDAsIlxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFs2LDEsIlxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs0LDVdLFs1LDNdLFs0LDJdLFsyLDNdLFszLDBdLFszLDFdLFsxLDddLFswLDddLFs3LDldLFs3LDhdLFszLDZdLFs2LDddLFs5LDEwXSxbOCwxMF1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTEsWzMsMiwiXFxzdWJzdGFja3swIFxcXFwgMCBcXHF1YWQgMCBcXFxcIDF9Il0sWzMsMCwiXFxzdWJzdGFja3sxIFxcXFwgMCBcXHF1YWQgMCBcXFxcIDB9Il0sWzEsMiwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAwfSJdLFsyLDEsIlxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAxfSJdLFswLDEsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezAgXFxcXCAwIFxccXVhZCAxIFxcXFwgMH0iXSxbMSwwLCJcXGNvbG9ye2N5YW59XFxzdWJzdGFja3swIFxcXFwgMCBcXHF1YWQgMSBcXFxcIDF9Il0sWzMsMSwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDEgXFxxdWFkIDEgXFxcXCAxfSJdLFs0LDEsIlxcc3Vic3RhY2t7MSBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFs1LDIsIlxcc3Vic3RhY2t7MSBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs1LDAsIlxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFs2LDEsIlxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs0LDVdLFs1LDNdLFs0LDJdLFsyLDNdLFszLDBdLFszLDFdLFsxLDddLFswLDddLFs3LDldLFs3LDhdLFszLDZdLFs2LDddLFs5LDEwXSxbOCwxMF1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;以上 $\color{cyan} {_B(T,\{A,B,C,D\})}$ 是投射对象.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;(BB 定理如何工作?). 此处解释 tilting 的含义&lt;/p&gt;
-  &lt;!-- https://q.uiver.app/#q=WzAsMzMsWzYsNCwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MCBcXFxcIDAgXFxxdWFkIDAgXFxcXCAxfSJdLFs2LDYsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezEgXFxcXCAwIFxccXVhZCAwIFxcXFwgMH0iXSxbNCw0LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezEgXFxcXCAwIFxccXVhZCAxIFxcXFwgMH19Il0sWzUsNSwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAxfSJdLFsyLDUsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MCBcXFxcIDAgXFxxdWFkIDEgXFxcXCAwfX0iXSxbNCw2LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezAgXFxcXCAwIFxccXVhZCAxIFxcXFwgMX19Il0sWzYsNSwiXFxjb2xvcntjeWFufVxcYm94ZWR7XFxzdWJzdGFja3sxIFxcXFwgMSBcXHF1YWQgMSBcXFxcIDF9fSJdLFs3LDUsIlxcY29sb3J7b2xpdmV9XFxzdWJzdGFja3sxIFxcXFwgMSBcXHF1YWQgMCBcXFxcIDF9Il0sWzgsNCwiXFxjb2xvcntvbGl2ZX1cXHN1YnN0YWNrezEgXFxcXCAxIFxccXVhZCAwIFxcXFwgMH0iXSxbOCw2LCJcXGNvbG9ye29saXZlfVxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFsxMCw1LCJcXGNvbG9ye29saXZlfVxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs1LDAsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9fSJdLFs0LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMCwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfX0iXSxbMywyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9fSJdLFszLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFsyLDEsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDIgXFwgMX0iXSxbMSwwLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX0iXSxbMSwyLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH0iXSxbMSwxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFswLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs2LDEsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs3LDIsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfSJdLFs3LDAsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAxfSJdLFs3LDEsIlxcY29sb3J7WWVsbG93fVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbOCwxLCJcXGNvbG9ye0dyYXl9XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfSJdLFs5LDEsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFs0LDUsIjAiXSxbMiw0LCIwIl0sWzIsNiwiMCJdLFsxLDUsIjAiXSxbNCw1XSxbNSwzXSxbNCwyXSxbMiwzXSxbMywwXSxbMywxXSxbMSw3XSxbMCw3XSxbNyw5XSxbNyw4XSxbMyw2XSxbNiw3XSxbOSwxMF0sWzgsMTBdLFsyMiwxOV0sWzE5LDE4XSxbMTgsMTddLFsxNywxNF0sWzE0LDExXSxbMjIsMjFdLFsyMSwxOF0sWzE4LDE1XSxbMTUsMTRdLFsyMiwyMF0sWzE4LDE2XSxbMTYsMTRdLFsxNCwxMl0sWzE0LDEzXSxbMTUsMiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE2LDUsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwzLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTIsMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIxLDQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMyw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjAsMThdLFsyMywyNSwiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzI1LDI3LCIiLDEseyJjb2xvdXIiOlswLDAsNzVdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMjMsMjQsIiIsMSx7ImNvbG91ciI6WzAsMCw3NV0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyNCwyNywiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIzLDI2LCIiLDEseyJjb2xvdXIiOlswLDAsNzVdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMjYsMjcsIiIsMSx7ImNvbG91ciI6WzAsMCw3NV0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyNywyOCwiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIzLDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsyNSw4LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjQsOSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE3LDI5LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjIsMzIsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxOSwzMCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIwLDMxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjgsMTAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMSwwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0= --&gt;
-  &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMzMsWzYsNCwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MCBcXFxcIDAgXFxxdWFkIDAgXFxcXCAxfSJdLFs2LDYsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezEgXFxcXCAwIFxccXVhZCAwIFxcXFwgMH0iXSxbNCw0LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezEgXFxcXCAwIFxccXVhZCAxIFxcXFwgMH19Il0sWzUsNSwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAxfSJdLFsyLDUsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MCBcXFxcIDAgXFxxdWFkIDEgXFxcXCAwfX0iXSxbNCw2LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezAgXFxcXCAwIFxccXVhZCAxIFxcXFwgMX19Il0sWzYsNSwiXFxjb2xvcntjeWFufVxcYm94ZWR7XFxzdWJzdGFja3sxIFxcXFwgMSBcXHF1YWQgMSBcXFxcIDF9fSJdLFs3LDUsIlxcY29sb3J7b2xpdmV9XFxzdWJzdGFja3sxIFxcXFwgMSBcXHF1YWQgMCBcXFxcIDF9Il0sWzgsNCwiXFxjb2xvcntvbGl2ZX1cXHN1YnN0YWNrezEgXFxcXCAxIFxccXVhZCAwIFxcXFwgMH0iXSxbOCw2LCJcXGNvbG9ye29saXZlfVxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFsxMCw1LCJcXGNvbG9ye29saXZlfVxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs1LDAsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9fSJdLFs0LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMCwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfX0iXSxbMywyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9fSJdLFszLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFsyLDEsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDIgXFwgMX0iXSxbMSwwLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX0iXSxbMSwyLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH0iXSxbMSwxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFswLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs2LDEsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs3LDIsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfSJdLFs3LDAsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAxfSJdLFs3LDEsIlxcY29sb3J7WWVsbG93fVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbOCwxLCJcXGNvbG9ye0dyYXl9XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfSJdLFs5LDEsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFs0LDUsIjAiXSxbMiw0LCIwIl0sWzIsNiwiMCJdLFsxLDUsIjAiXSxbNCw1XSxbNSwzXSxbNCwyXSxbMiwzXSxbMywwXSxbMywxXSxbMSw3XSxbMCw3XSxbNyw5XSxbNyw4XSxbMyw2XSxbNiw3XSxbOSwxMF0sWzgsMTBdLFsyMiwxOV0sWzE5LDE4XSxbMTgsMTddLFsxNywxNF0sWzE0LDExXSxbMjIsMjFdLFsyMSwxOF0sWzE4LDE1XSxbMTUsMTRdLFsyMiwyMF0sWzE4LDE2XSxbMTYsMTRdLFsxNCwxMl0sWzE0LDEzXSxbMTUsMiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE2LDUsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwzLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTIsMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIxLDQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMyw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjAsMThdLFsyMywyNSwiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzI1LDI3LCIiLDEseyJjb2xvdXIiOlswLDAsNzVdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMjMsMjQsIiIsMSx7ImNvbG91ciI6WzAsMCw3NV0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyNCwyNywiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIzLDI2LCIiLDEseyJjb2xvdXIiOlswLDAsNzVdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMjYsMjcsIiIsMSx7ImNvbG91ciI6WzAsMCw3NV0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyNywyOCwiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIzLDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsyNSw4LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjQsOSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE3LDI5LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjIsMzIsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxOSwzMCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIwLDMxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjgsMTAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMSwwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;400&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt;
-  &lt;p&gt;&lt;br /&gt; 以下是几点发现.&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMzMsWzYsNCwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MCBcXFxcIDAgXFxxdWFkIDAgXFxcXCAxfSJdLFs2LDYsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezEgXFxcXCAwIFxccXVhZCAwIFxcXFwgMH0iXSxbNCw0LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezEgXFxcXCAwIFxccXVhZCAxIFxcXFwgMH19Il0sWzUsNSwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAxfSJdLFsyLDUsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MCBcXFxcIDAgXFxxdWFkIDEgXFxcXCAwfX0iXSxbNCw2LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezAgXFxcXCAwIFxccXVhZCAxIFxcXFwgMX19Il0sWzYsNSwiXFxjb2xvcntjeWFufVxcYm94ZWR7XFxzdWJzdGFja3sxIFxcXFwgMSBcXHF1YWQgMSBcXFxcIDF9fSJdLFs3LDUsIlxcY29sb3J7b2xpdmV9XFxzdWJzdGFja3sxIFxcXFwgMSBcXHF1YWQgMCBcXFxcIDF9Il0sWzgsNCwiXFxjb2xvcntvbGl2ZX1cXHN1YnN0YWNrezEgXFxcXCAxIFxccXVhZCAwIFxcXFwgMH0iXSxbOCw2LCJcXGNvbG9ye29saXZlfVxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFsxMCw1LCJcXGNvbG9ye29saXZlfVxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs1LDAsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9fSJdLFs0LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMCwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfX0iXSxbMywyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9fSJdLFszLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFsyLDEsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDIgXFwgMX0iXSxbMSwwLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX0iXSxbMSwyLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH0iXSxbMSwxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFswLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs2LDEsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs3LDIsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfSJdLFs3LDAsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAxfSJdLFs3LDEsIlxcY29sb3J7WWVsbG93fVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbOCwxLCJcXGNvbG9ye0dyYXl9XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfSJdLFs5LDEsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFs0LDUsIjAiXSxbMiw0LCIwIl0sWzIsNiwiMCJdLFsxLDUsIjAiXSxbNCw1XSxbNSwzXSxbNCwyXSxbMiwzXSxbMywwXSxbMywxXSxbMSw3XSxbMCw3XSxbNyw5XSxbNyw4XSxbMyw2XSxbNiw3XSxbOSwxMF0sWzgsMTBdLFsyMiwxOV0sWzE5LDE4XSxbMTgsMTddLFsxNywxNF0sWzE0LDExXSxbMjIsMjFdLFsyMSwxOF0sWzE4LDE1XSxbMTUsMTRdLFsyMiwyMF0sWzE4LDE2XSxbMTYsMTRdLFsxNCwxMl0sWzE0LDEzXSxbMTUsMiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE2LDUsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwzLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTIsMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIxLDQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMyw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjAsMThdLFsyMywyNSwiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzI1LDI3LCIiLDEseyJjb2xvdXIiOlswLDAsNzVdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMjMsMjQsIiIsMSx7ImNvbG91ciI6WzAsMCw3NV0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyNCwyNywiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIzLDI2LCIiLDEseyJjb2xvdXIiOlswLDAsNzVdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMjYsMjcsIiIsMSx7ImNvbG91ciI6WzAsMCw3NV0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyNywyOCwiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIzLDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsyNSw4LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjQsOSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE3LDI5LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjIsMzIsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxOSwzMCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIwLDMxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjgsMTAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMSwwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMzMsWzYsNCwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MCBcXFxcIDAgXFxxdWFkIDAgXFxcXCAxfSJdLFs2LDYsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezEgXFxcXCAwIFxccXVhZCAwIFxcXFwgMH0iXSxbNCw0LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezEgXFxcXCAwIFxccXVhZCAxIFxcXFwgMH19Il0sWzUsNSwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAxfSJdLFsyLDUsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MCBcXFxcIDAgXFxxdWFkIDEgXFxcXCAwfX0iXSxbNCw2LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezAgXFxcXCAwIFxccXVhZCAxIFxcXFwgMX19Il0sWzYsNSwiXFxjb2xvcntjeWFufVxcYm94ZWR7XFxzdWJzdGFja3sxIFxcXFwgMSBcXHF1YWQgMSBcXFxcIDF9fSJdLFs3LDUsIlxcY29sb3J7b2xpdmV9XFxzdWJzdGFja3sxIFxcXFwgMSBcXHF1YWQgMCBcXFxcIDF9Il0sWzgsNCwiXFxjb2xvcntvbGl2ZX1cXHN1YnN0YWNrezEgXFxcXCAxIFxccXVhZCAwIFxcXFwgMH0iXSxbOCw2LCJcXGNvbG9ye29saXZlfVxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFsxMCw1LCJcXGNvbG9ye29saXZlfVxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs1LDAsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9fSJdLFs0LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMCwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfX0iXSxbMywyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9fSJdLFszLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFsyLDEsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDIgXFwgMX0iXSxbMSwwLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX0iXSxbMSwyLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH0iXSxbMSwxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFswLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs2LDEsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs3LDIsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfSJdLFs3LDAsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAxfSJdLFs3LDEsIlxcY29sb3J7WWVsbG93fVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbOCwxLCJcXGNvbG9ye0dyYXl9XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfSJdLFs5LDEsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFs0LDUsIjAiXSxbMiw0LCIwIl0sWzIsNiwiMCJdLFsxLDUsIjAiXSxbNCw1XSxbNSwzXSxbNCwyXSxbMiwzXSxbMywwXSxbMywxXSxbMSw3XSxbMCw3XSxbNyw5XSxbNyw4XSxbMyw2XSxbNiw3XSxbOSwxMF0sWzgsMTBdLFsyMiwxOV0sWzE5LDE4XSxbMTgsMTddLFsxNywxNF0sWzE0LDExXSxbMjIsMjFdLFsyMSwxOF0sWzE4LDE1XSxbMTUsMTRdLFsyMiwyMF0sWzE4LDE2XSxbMTYsMTRdLFsxNCwxMl0sWzE0LDEzXSxbMTUsMiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE2LDUsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwzLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTIsMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIxLDQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMyw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjAsMThdLFsyMywyNSwiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzI1LDI3LCIiLDEseyJjb2xvdXIiOlswLDAsNzVdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMjMsMjQsIiIsMSx7ImNvbG91ciI6WzAsMCw3NV0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyNCwyNywiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIzLDI2LCIiLDEseyJjb2xvdXIiOlswLDAsNzVdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMjYsMjcsIiIsMSx7ImNvbG91ciI6WzAsMCw3NV0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyNywyOCwiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIzLDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsyNSw4LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjQsOSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE3LDI5LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjIsMzIsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxOSwzMCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIwLDMxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjgsMTAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMSwwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;400&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;以下是几点发现.&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;Tilted 代数 $B = \mathrm{End}(T_A)$ 整体维数是 $2$. 满足 $|gl.\dim A - gl. \dim B| ≤ 1$ 的&lt;a href=&quot;Hom_D_Hereditary&quot;&gt;结论&lt;/a&gt;.&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;Hereditary_TP_Split&quot;&gt;由&lt;/a&gt; $A$ 遗传, ${_B}T ∈ 𝐦𝐨𝐝_B$ 诱导的 torsion pair 是可裂的.&lt;/li&gt;
@@ -3085,44 +4175,58 @@ $$&lt;/p&gt;
       
         <item>
           <title>Notes on AR Quivers over Hereditary Algebras.</title>
-          <description>&lt;h2 id=&quot;遗传代数的-ar-quiver&quot;&gt;遗传代数的 AR quiver&lt;/h2&gt;
+          <description>&lt;h2 id=&quot;无界-ar-quiver&quot;&gt;无界 AR quiver&lt;/h2&gt;
 
-&lt;h3 id=&quot;ar-平移-截面等&quot;&gt;AR 平移, 截面等&lt;/h3&gt;
+&lt;h3 id=&quot;遗传代数的-ar-quiver&quot;&gt;遗传代数的 AR quiver&lt;/h3&gt;
+
+&lt;p&gt;本节假定 $Q$ 有限维, 连通, 无环的 quiver; $A$ 是有限维, 连通, 基础的遗传代数. 实际上, 以下是对应.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;在同构的意义下, 以下两者对应&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;有限维, 连通, 基础的遗传代数;&lt;/li&gt;
+    &lt;li&gt;路代数 $kQ$, 其中 $Q$ 是有限维, 连通, 无环的 quiver.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;从有限维, 连通, 基础的遗传代数得到 quiver 的方式是&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;任取幂等分解 $\{e_i\}_{i=1}^n$;&lt;/li&gt;
+  &lt;li&gt;取矩阵代数 $A$, 使得 $a_{i,j} = e_i ⋅ A ⋅ e_j$;&lt;/li&gt;
+  &lt;li&gt;由代数无环, 从 $\dim e_i ⋅ A ⋅ e_j$ 极小者开始构造连边 $\mathrm{Hom}_Q(i, j)$; 也可以通过 $\mathrm{Ext}^1(S(i), S(j))$ 的基表示.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(&lt;a href=&quot;Quiver-and-Hereditary-Algebra#遗传代数的箭图表示&quot;&gt;证明&lt;/a&gt;). $kQ$ 的不可分解投射模具有如下以下性质:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;不可分解投射对象间的态射必然是单的, 投射对象是 brick;&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Irr}(P(i), P(j)) ≃ \mathrm{Ext}^1(P(i), P(j))$;&lt;/li&gt;
+    &lt;li&gt;$Γ (kQ)$ 中不可分解投射对象所在的全子范畴同构于 $Q^{\mathrm{op}}$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;内射部分对偶.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(有限性初探, &lt;a href=&quot;AR_Finite_No_Multiple_Arrows&quot;&gt;证明&lt;/a&gt;). 对有限表示的 (未必遗传) 代数 $A$, $Γ(A)$ 无重边.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;无限-ar-平移-截面&quot;&gt;无限 AR 平移, 截面&lt;/h3&gt;
 
 &lt;p&gt;先从以下例子开始.&lt;/p&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;给定 quiver $Q := [1 → 2 → 3]$. 记代数闭域上的路代数 $A= kQ$, 以及 AR quiver&lt;/p&gt;
-  &lt;p&gt;$$
-Γ (A) :=
-\begin{bmatrix}
- &amp;  &amp;  &amp;  &amp; A &amp;  &amp;  &amp;  &amp; \\
- &amp;  &amp;  &amp; \nearrow  &amp;  &amp; \searrow  &amp;  &amp;  &amp; \\
- &amp;  &amp; P( 2) &amp;  &amp; \overset τ\dashleftarrow  &amp;  &amp; I( 2) &amp;  &amp; \\
- &amp; \nearrow  &amp;  &amp; \searrow  &amp;  &amp; \nearrow  &amp;  &amp; \searrow  &amp; \\
-P( 3) &amp;  &amp; \overset τ\dashleftarrow  &amp;  &amp; S( 2) &amp;  &amp; \overset τ\dashleftarrow   &amp;  &amp; I( 3)
-\end{bmatrix}
-$$&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTcsWzAsMywiMyJdLFsxLDIsIjIiXSxbMiwxLCIxIl0sWzAsMiwiUSJdLFsxLDMsIlAoMykiLFsyNDAsNjAsNjAsMV1dLFsyLDIsIlAoMikiLFsyNDAsNjAsNjAsMV1dLFszLDEsIkEiLFsyNzAsNjAsNjAsMV1dLFs0LDIsIkkoMikiLFszMDAsNjAsNjAsMV1dLFszLDMsIlMoMikiXSxbNSwzLCJJKDEpIixbMzAwLDYwLDYwLDFdXSxbMywwLCJcXEdhbW1hIChBKSJdLFsxLDQsIlxcbWF0aGJme3Byb2p9IixbMjQwLDYwLDYwLDFdXSxbNSw0LCJcXG1hdGhiZntpbmp9IixbMzAwLDYwLDYwLDFdXSxbNCwxLCIzIl0sWzUsMiwiMiJdLFs2LDMsIjEiXSxbNiwyLCJRIl0sWzEsMF0sWzIsMV0sWzQsNSwiIiwyLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFs1LDYsIiIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbNSw4XSxbOCw3XSxbNiw3LCIiLDEseyJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzcsOSwiIiwxLHsiY29sb3VyIjpbMzAwLDYwLDYwXX1dLFsxNSwxNF0sWzE0LDEzXSxbNyw1LCJcXHRhdSAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw4LCJcXHRhdSAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCw0LCJcXHRhdSAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTcsWzAsMywiMyJdLFsxLDIsIjIiXSxbMiwxLCIxIl0sWzAsMiwiUSJdLFsxLDMsIlAoMykiLFsyNDAsNjAsNjAsMV1dLFsyLDIsIlAoMikiLFsyNDAsNjAsNjAsMV1dLFszLDEsIkEiLFsyNzAsNjAsNjAsMV1dLFs0LDIsIkkoMikiLFszMDAsNjAsNjAsMV1dLFszLDMsIlMoMikiXSxbNSwzLCJJKDEpIixbMzAwLDYwLDYwLDFdXSxbMywwLCJcXEdhbW1hIChBKSJdLFsxLDQsIlxcbWF0aGJme3Byb2p9IixbMjQwLDYwLDYwLDFdXSxbNSw0LCJcXG1hdGhiZntpbmp9IixbMzAwLDYwLDYwLDFdXSxbNCwxLCIzIl0sWzUsMiwiMiJdLFs2LDMsIjEiXSxbNiwyLCJRIl0sWzEsMF0sWzIsMV0sWzQsNSwiIiwyLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFs1LDYsIiIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19XSxbNSw4XSxbOCw3XSxbNiw3LCIiLDEseyJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzcsOSwiIiwxLHsiY29sb3VyIjpbMzAwLDYwLDYwXX1dLFsxNSwxNF0sWzE0LDEzXSxbNyw1LCJcXHRhdSAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw4LCJcXHRhdSAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCw0LCJcXHRhdSAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
   &lt;p&gt;注意到如下事实.&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$𝐩𝐫𝐨𝐣 ∩ Γ (A) ≃ Q^{\mathrm{op}} ≃ 𝐢𝐧𝐣 ∩ Γ (A)$.&lt;/li&gt;
     &lt;li&gt;所有箭头由 $Q^{\mathrm{op}}$ 关于顶点的反射得到.&lt;/li&gt;
   &lt;/ol&gt;
   &lt;p&gt;以上 AR quiver 可视作无限 quiver (点集是 $ℤ × Q^{\mathrm{op}}$) 的一部分, 如下图所示.&lt;/p&gt;
-  &lt;p&gt;$$
-\begin{bmatrix}
- &amp;  &amp;  &amp;  &amp; \bullet  &amp; \rightarrow  &amp; \bullet \\
- &amp;  &amp;  &amp; \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  &amp; \uparrow  &amp; \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  &amp; \uparrow \\
- &amp;  &amp; \bullet  &amp; \rightarrow  &amp; \bullet  &amp; \rightarrow  &amp; \bullet \\
- &amp; \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  &amp; \uparrow  &amp; \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  &amp; \uparrow  &amp; \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  &amp; \\
-\textcolor[rgb]{0.29,0.56,0.89}{A} &amp; \textcolor[rgb]{0.82,0.01,0.11}{\rightarrow } &amp; \textcolor[rgb]{0.82,0.01,0.11}{I( 2)} &amp; \textcolor[rgb]{0.82,0.01,0.11}{\rightarrow } &amp; \textcolor[rgb]{0.82,0.01,0.11}{I( 1)} &amp;  &amp; \\
-\textcolor[rgb]{0.29,0.56,0.89}{\uparrow } &amp; \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  &amp; \textcolor[rgb]{0.82,0.01,0.11}{\uparrow } &amp; \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  &amp;  &amp;  &amp; \\
-\textcolor[rgb]{0.29,0.56,0.89}{P( 2)} &amp; \textcolor[rgb]{0.82,0.01,0.11}{\rightarrow } &amp; \textcolor[rgb]{0.82,0.01,0.11}{S( 2)} &amp;  &amp;  &amp;  &amp; \\
-\textcolor[rgb]{0.29,0.56,0.89}{\uparrow } &amp; \textcolor[rgb]{0.96,0.65,0.14}{⤢ }  &amp;  &amp;  &amp;  &amp;  &amp; \\
-\textcolor[rgb]{0.29,0.56,0.89}{P( 3)} &amp;  &amp;  &amp;  &amp;  &amp;  &amp;
-\end{bmatrix}
-$$&lt;/p&gt;
-  &lt;p&gt;对以上, $P(2) → A$ 通过反射得到 $A → I(2)$.&lt;/p&gt;
+  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTQsWzAsMiwiUCgzKSIsWzI0MCw2MCw2MCwxXV0sWzEsMSwiUCgyKSIsWzI0MCw2MCw2MCwxXV0sWzIsMCwiQSIsWzI3MCw2MCw2MCwxXV0sWzMsMSwiSSgyKSIsWzMwMCw2MCw2MCwxXV0sWzIsMiwiUygyKSJdLFs0LDIsIkkoMSkiLFszMDAsNjAsNjAsMV1dLFsyLDMsIlxcR2FtbWEgKEEpIl0sWzAsMywiXFxtYXRoYmZ7cHJvan0iLFsyNDAsNjAsNjAsMV1dLFs0LDMsIlxcbWF0aGJme2luan0iLFszMDAsNjAsNjAsMV1dLFs0LDAsIkFbLTFdIixbMCwwLDUwLDFdXSxbNSwxLCJJKDIpWy0xXSIsWzAsMCw1MCwxXV0sWzYsMiwiSSgxKVstMV0iLFswLDAsNTAsMV1dLFs2LDAsIkFbLTJdIixbMCwwLDUwLDFdXSxbMCwwLCJBWzFdIixbMCwwLDUwLDFdXSxbMCwxLCIiLDIseyJjb2xvdXIiOlsyNDAsNjAsNjBdfV0sWzEsMiwiIiwyLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxLDRdLFs0LDNdLFsyLDMsIiIsMSx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMyw1LCIiLDEseyJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzMsMSwiXFx0YXUgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzUsNCwiXFx0YXUgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsMCwiXFx0YXUgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzksMTAsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMCwxMSwiIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzMsOSwiIiwwLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzksMiwiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTAsMywiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTEsNSwiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTIsOSwiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTAsMTIsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDEwLCIiLDIseyJjb2xvdXIiOlswLDAsNTBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMiwxMywiIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEzLDEsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTQsWzAsMiwiUCgzKSIsWzI0MCw2MCw2MCwxXV0sWzEsMSwiUCgyKSIsWzI0MCw2MCw2MCwxXV0sWzIsMCwiQSIsWzI3MCw2MCw2MCwxXV0sWzMsMSwiSSgyKSIsWzMwMCw2MCw2MCwxXV0sWzIsMiwiUygyKSJdLFs0LDIsIkkoMSkiLFszMDAsNjAsNjAsMV1dLFsyLDMsIlxcR2FtbWEgKEEpIl0sWzAsMywiXFxtYXRoYmZ7cHJvan0iLFsyNDAsNjAsNjAsMV1dLFs0LDMsIlxcbWF0aGJme2luan0iLFszMDAsNjAsNjAsMV1dLFs0LDAsIkFbLTFdIixbMCwwLDUwLDFdXSxbNSwxLCJJKDIpWy0xXSIsWzAsMCw1MCwxXV0sWzYsMiwiSSgxKVstMV0iLFswLDAsNTAsMV1dLFs2LDAsIkFbLTJdIixbMCwwLDUwLDFdXSxbMCwwLCJBWzFdIixbMCwwLDUwLDFdXSxbMCwxLCIiLDIseyJjb2xvdXIiOlsyNDAsNjAsNjBdfV0sWzEsMiwiIiwyLHsiY29sb3VyIjpbMjQwLDYwLDYwXX1dLFsxLDRdLFs0LDNdLFsyLDMsIiIsMSx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMyw1LCIiLDEseyJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzMsMSwiXFx0YXUgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzUsNCwiXFx0YXUgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsMCwiXFx0YXUgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzksMTAsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMCwxMSwiIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzMsOSwiIiwwLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzksMiwiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTAsMywiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTEsNSwiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTIsOSwiXFx0YXUgIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fSxbMCwwLDUwLDFdXSxbMTAsMTIsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDEwLCIiLDIseyJjb2xvdXIiOlswLDAsNTBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMiwxMywiIiwyLHsiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEzLDEsIiIsMix7ImNvbG91ciI6WzAsMCw1MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;p&gt;对以上, $P(2) → A$ 通过反射得到 $A → I(2)$, 继续反射 $A → I(2)$ 得 $I(2) → A[-1]$.&lt;/p&gt;
   &lt;div class=&quot;note&quot;&gt;
     &lt;p&gt;对子图, 此处沿用子范畴与全子范畴的称呼.&lt;/p&gt;
     &lt;ol&gt;
@@ -3137,10 +4241,10 @@ $$&lt;/p&gt;
 &lt;div class=&quot;definition&quot;&gt;
   &lt;p&gt;(quiver 的无界化). 给定 $Q$, 定义 $ℤ Q$ 如下.&lt;/p&gt;
   &lt;ol&gt;
-    &lt;li&gt;顶点集是 Catersian 积 $(ℤ × Q_0) := ℤ × Q_0$.&lt;/li&gt;
+    &lt;li&gt;顶点集是 Catersian 积 $(ℤ × Q)_0 := ℤ × Q_0$.&lt;/li&gt;
     &lt;li&gt;箭头集是 $S_1 ⊔ S_2$. 其中       &lt;ol&gt;
-        &lt;li&gt;$S_1 := ℤ × Q_1$, 形如 $(n, α) : (n, x) → (n, y)$.&lt;/li&gt;
-        &lt;li&gt;$S_2$ 中箭头刻画如下: 若 $(n, α) : (n, x) → (n, y)$, 则作&lt;/li&gt;
+        &lt;li&gt;($Γ$ 内的箭头). $S_1 := ℤ × Q_1$, 形如 $(n, α) : (n, x) → (n, y)$.&lt;/li&gt;
+        &lt;li&gt;($Γ$ 外的箭头) $S_2$ 中箭头刻画如下: 若 $(n, α) : (n, x) → (n, y)$, 则作&lt;/li&gt;
       &lt;/ol&gt;
       &lt;p&gt;$$
    θ(n, α) : (n + 1, y) → (n , x).
@@ -3157,11 +4261,13 @@ $$&lt;/p&gt;
 $$&lt;/p&gt;
 &lt;/div&gt;
 
+&lt;p&gt;约定 $ℤ Q$ 的横坐标向右减小.&lt;/p&gt;
+
 &lt;div class=&quot;definition&quot;&gt;
   &lt;p&gt;定义 $ℤQ$ 上的两类运算.&lt;/p&gt;
   &lt;ol&gt;
-    &lt;li&gt;$τ : ℤQ → ℤQ ,\quad (n, -) → (n-1, -)$ 是平移.&lt;/li&gt;
-    &lt;li&gt;$θ : ℤQ_1 → ℤQ_1$ 是朝向 $τ$ 的反射.&lt;/li&gt;
+    &lt;li&gt;$τ : ℤQ → ℤQ ,\quad (n, ∙) → (n-1, ∙)$ 是平移.&lt;/li&gt;
+    &lt;li&gt;$θ : ℤQ_1 → ℤQ_1$ 是朝向 $τ$ 的反射 (往左偏移).&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
@@ -3176,6 +4282,16 @@ $$&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
+&lt;p&gt;道路封闭性可归结为如下引理.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(易证). 对 $Γ (A)$ 中箭头 $α : x → y$, 若 $(n, x) ∈ Σ$, 则有如下二择:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(n, y) ∈ Σ$,&lt;/li&gt;
+    &lt;li&gt;$(n-1, y) ∈ Σ$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;$ℤ Γ (k [∙ → ∙ → ∙])$ 的截面可以是 $𝐩𝐫𝐨𝐣 ∩ Γ$, 也可以是&lt;/p&gt;
   &lt;p&gt;$$
@@ -3184,39 +4300,52 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;以下是一些组合学的事实, 对后续证明无帮助. 证明从略.&lt;/p&gt;
+  &lt;p&gt;以下是一些组合学的事实, 证明从略.&lt;/p&gt;
   &lt;ol&gt;
-    &lt;li&gt;$ℤ Q$ 是无环图.&lt;/li&gt;
-    &lt;li&gt;取 $ℤ Q$ 的截面 $Σ$, 则截面的嵌入诱导了同构 $ℤ Σ ≃ ℤ Q$.&lt;/li&gt;
-    &lt;li&gt;记 $T_1$ 与 $T_2$ 是同一棵无向树的两种定向, 则 $ℤ T_1 ≃ ℤ T_2$.&lt;/li&gt;
+    &lt;li&gt;($ℤ$ 保持无环图). 若 $Q$ 无环, 则 $ℤ Q$ 亦无环.&lt;/li&gt;
+    &lt;li&gt;(截面的延拓性质). 取 $ℤ Q$ 的截面 $Σ$, 则截面的嵌入诱导了同构 $ℤ Σ ≃ ℤ Q$.       &lt;ul&gt;
+        &lt;li&gt;这说明, 可以从任意截面复原 $ℤQ$ 的信息.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;记 $T_1$ 与 $T_2$ 是同一棵无向树的两种定向, 则 $ℤ T_1 ≃ ℤ T_2$.       &lt;ul&gt;
+        &lt;li&gt;这也是 Coxeter 反射的性质.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
     &lt;li&gt;给定环 $C$, 假定其定向是无环的. 此时 $ℤ Q$ 的结构唯一取决于 $C$ 中顺时针箭头个数与逆时针箭头个数, 与具体的排列无关.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;note&quot;&gt;
-  &lt;p&gt;若除去遗传条件, 则上述定理不再成立. 见&lt;a href=&quot;Commutative_Diagram_Alg#非-apr-tilting-模&quot;&gt;此文中的 $B = \mathrm{End}(T_A)$&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
+&lt;h3 id=&quot;遗传代数的无限-ar-平移&quot;&gt;遗传代数的无限 AR 平移&lt;/h3&gt;
 
 &lt;p&gt;选定 AR quiver $Γ$, 使用&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;$𝔓$ 表示投射对象所在的连通分支.&lt;/li&gt;
-  &lt;li&gt;$ℑ$ 表示内射对象所在的连通分支.&lt;/li&gt;
+  &lt;li&gt;$𝔓$ 表示投射对象所在的全子范畴.&lt;/li&gt;
+  &lt;li&gt;$ℑ$ 表示内射对象所在的全子范畴.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;对有限表示的遗传代数 (不必选择代数闭域), 下将 $𝔓$ 是截面的事实归纳作如下引理.&lt;/p&gt;
+&lt;p&gt;对有限表示的遗传代数 (不必选择代数闭域), 有如下引理.&lt;/p&gt;
 
 &lt;div class=&quot;lemma&quot;&gt;
   &lt;p&gt;($𝔓$ 是 $ℤ 𝔓$ 的截面, &lt;a href=&quot;P_is_Section&quot;&gt;证明&lt;/a&gt;). 给定连通, 有限表示表示的遗传代数.&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$𝔓$ 是 $ℤ𝔓$ 的截面.&lt;/li&gt;
-    &lt;li&gt;$Γ$ 是 $ℤ𝔓$ 的子图.&lt;/li&gt;
-    &lt;li&gt;$ℤ 𝔓$ 视同 $ℤΓ$ 的全子范畴.&lt;/li&gt;
+    &lt;li&gt;$Γ$ 是 $ℤ𝔓$ 的全子范畴.&lt;/li&gt;
   &lt;/ol&gt;
-  &lt;p&gt;内射对象同理.&lt;/p&gt;
+  &lt;p&gt;内射对象的命题对偶.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;若去除有限表示条件, 则 $ℤ 𝔓$ 与 $ℤ ℑ$ 是连通分支的子图.&lt;/p&gt;
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;若除去遗传条件, 则 $𝔓$ 未必连通. 见&lt;a href=&quot;Commutative_Diagram_Alg#非-apr-tilting-模&quot;&gt;此文中的 $B = \mathrm{End}(T_A)$&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;预投射-预内射&quot;&gt;预投射, 预内射&lt;/h3&gt;
+
+&lt;p&gt;在介绍预投射与预内射模前, 可先参阅 &lt;a href=&quot;Kronecker_Rep&quot;&gt;Kronecker quiver 的表示&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;对 AR quiver&lt;/p&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-04-26T00:00:00+08:00</pubDate>
           <link>https://zhangchenchengsjtu.github.io/website/posts/Hereditary-AR-Quiver</link>
@@ -3739,7 +4868,16 @@ $$&lt;/p&gt;
       
         <item>
           <title>Canonical Resolution of Quiver algebra</title>
-          <description>&lt;h2 id=&quot;有限维代数的极小投射分解&quot;&gt;有限维代数的极小投射分解&lt;/h2&gt;
+          <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#有限维代数的极小投射分解&quot; id=&quot;markdown-toc-有限维代数的极小投射分解&quot;&gt;有限维代数的极小投射分解&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#mathjax_protectedjgtrjamathjax_protected-的标准分解&quot; id=&quot;markdown-toc-mathjax_protectedjgtrjamathjax_protected-的标准分解&quot;&gt;$kQ$ 的标准分解&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#定义-quiver-with-relation&quot; id=&quot;markdown-toc-定义-quiver-with-relation&quot;&gt;定义: quiver with relation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#单对象与-mathjax_protectedjfxtyxrocm17rxh0fsqmathjax_protected-群&quot; id=&quot;markdown-toc-单对象与-mathjax_protectedjfxtyxrocm17rxh0fsqmathjax_protected-群&quot;&gt;单对象与 $\mathrm{Ext}$-群&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;有限维代数的极小投射分解&quot;&gt;有限维代数的极小投射分解&lt;/h2&gt;
 
 &lt;h3 id=&quot;mathjax_protectedjgtrjamathjax_protected-的标准分解&quot;&gt;$kQ$ 的标准分解&lt;/h3&gt;
 
@@ -4457,8 +5595,11 @@ $$&lt;/p&gt;
       
         <item>
           <title>AR 公式</title>
-          <description>&lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;(AR 公式). 以下是自然同构. $$
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(AR 公式). 以下是自然同构.&lt;/p&gt;
+  &lt;p&gt;$$
 D\underline{(τ⁻¹ N, M)} ≃ \mathrm{Ext}^1(M, N) ≃ D\overline{(N, τM)}.
 $$&lt;/p&gt;
   &lt;ol&gt;
@@ -4469,6 +5610,20 @@ $$&lt;/p&gt;
 
 &lt;div class=&quot;proof&quot;&gt;
   &lt;p&gt;待补充.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;通常情况下, $τ⁻¹$ 未必是 $τ$ 的左伴随函子. 对遗传代数而言, 总有伴随函子 $(τ⁻¹ N, M) ≃ (N, τ M)$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;以上 AR 公式给出 $p.\dim M = 1 = i.\dim N$ 的同构;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;若 $M$ 投射, 往证 $(τ⁻¹ N , M) = 0$ 即可. 假定 $N$ 不可分解且 $τ⁻¹N ≠ 0$, 则 $τ⁻¹ N$ 是不可分解非投射模. 对任意态射的满单分解&lt;/p&gt;
+      &lt;p&gt;$$
+   τ ⁻¹ N \xrightarrow p L \xrightarrow i M
+   $$&lt;/p&gt;
+      &lt;p&gt;由遗传代数的特性知 $L$ 投射, 由 $τ⁻¹ N$ 不可分解知 $τ⁻¹ N ≃ L$. 由于 $τ⁻¹ N$ 不是投射对象, 矛盾.&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
@@ -6562,7 +7717,9 @@ $$&lt;/p&gt;
       
         <item>
           <title>Torsionless 模的等价定义</title>
-          <description>&lt;div class=&quot;theorem&quot;&gt;
+          <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
   &lt;p&gt;(Torsionless 判别法). 给定 $η_M : M → M^{∗ ∗}$. 以下条件等价.&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$η_M$ 是单的.&lt;/li&gt;
@@ -6574,14 +7731,16 @@ $$&lt;/p&gt;
 &lt;div class=&quot;proof&quot;&gt;
   &lt;p&gt;考虑四项正合列 $$
 0 → \mathrm{Ext}^1(\mathrm{Tr}(M), N) → N ⊗ M → (M^∗, N) → \mathrm{Ext}^1(\mathrm{Tr}(M), N) → 0.
-$$ 将 $N$ 替换作 $A$, 得 3. 与 1. 等价. &lt;br /&gt; &lt;br /&gt; 若 $η_M$ 单, 则 $M ↪ M^{∗∗} ↪ \mathrm{Hom}_{𝐒𝐞𝐭𝐬}(M^∗, A)$, 因此 $η_M$ 是 $∏ A$ 子空间. 由 &lt;a href=&quot;https://arxiv.org/abs/2105.00701&quot;&gt; Chase 引理&lt;/a&gt;, 投射模对任意积封闭当且仅当环是 Artin 的, 从而 $∏_{M^∗} A$ 是投射模. 由 $M$ 有限生成, 其必然是有限生成投射模的子模. &lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
+$$ 将 $N$ 替换作 $A$, 得 3. 与 1. 等价. &lt;br /&gt; 若 $η_M$ 单, 则 $M ↪ M^{∗∗} ↪ \mathrm{Hom}_{𝐒𝐞𝐭𝐬}(M^∗, A)$, 因此 $η_M$ 是 $∏ A$ 子空间. 由 &lt;a href=&quot;https://arxiv.org/abs/2105.00701&quot;&gt;Chase 引理&lt;/a&gt;, 投射模对任意积封闭当且仅当环是 Artin 的, 从而 $∏_{M^∗} A$ 是投射模. 由 $M$ 有限生成, 其必然是有限生成投射模的子模. \&lt;/p&gt;
   &lt;p&gt;若 $M$ 是 $A^n$ 的子对象, 记嵌入映射 $ι$. 由 $ι^{∗ ∗ } ∘ η_M = η_{A^n} ∘ ι$ 单, 得 $η_M$ 单.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;note&quot;&gt;
-  &lt;p&gt;证明 1. 至 2. 可避免使用 Chase 引理. 取 $M^∗$ 的投射盖 $P$, 则 $$
+  &lt;p&gt;证明 1. 至 2. 可避免使用 Chase 引理. 取 $M^∗$ 的投射盖 $P$, 则&lt;/p&gt;
+  &lt;p&gt;$$
 (M^∗, A) ↪ (P,A) ↪ A^n
-$$ 即为所求之单射.&lt;/p&gt;
+$$&lt;/p&gt;
+  &lt;p&gt;即为所求之单射.&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-19T00:00:00+08:00</pubDate>
