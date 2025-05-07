@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>预投射部分左有界
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Post_Proj_Left_Finite">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+</head>
+
+<body class="latex-dark">
+
+	<aside class="logo" id="logo-section">
+  <a href="/website/about" id="logo-link">
+    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
+  </a>
+  <span class="logo-prompt" id="logo-prompt">About the Author</span>
+</aside>
+
+<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>预投射部分左有界</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 6, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="proposition">
+  <p>(预投射分支的等价定义). 假定 $Δ ⊆ Γ (A)$ 是无环的连通分支, 以下是 $Δ$ 预投射的等价定义</p>
+  <ol>
+    <li>任意 $M ∈ Δ$, 存在 $k$ 使得 $τ ^k M$ 投射;</li>
+    <li>任意 $M ∈ Δ$, $L_∞(M)$ 有界.</li>
+  </ol>
+</div>
+
+<div class="proof">
+  <p>先证明 (1 ⇒ 2), 也就是对任意预投射对象 $M$, $L_∞(M)$ 有限. 先证明一则引理.</p>
+  <ul>
+    <li>(引理一). 预投射分支是 Noether 空间. 换言之, 对任意预投射对象 $M$, 道路 $\cdots → M$ 无法无限延申.</li>
+    <li>
+      <p>(证明一). 若不然, 取无限长道路 $\cdots τ ^{- n_k} P_{i_k} → \cdots τ ^{-n_1} P_{i_1} → M$. 注意到</p>
+      <ul>
+        <li>投射对象有限;</li>
+        <li>对 $τ^{-a} P_l → \cdots τ^{-b} P_l$, 总有 $a < b$ (不然, 预投射分支存在环路).</li>
+      </ul>
+      <p>因此, 这一道路必在有限步内归零. 矛盾.</p>
+    </li>
+  </ul>
+  <p>依照 Noether 条件, 继而证明如下引理.</p>
+  <ul>
+    <li>(引理二). 对任意预投射模 $M$, 从投射单模至 $M$ 的所有道路的长度有一致上界.</li>
+    <li>(证明二). 对 $n ≥ 1$, 记 $X ∈ 𝒮_n$ 当且仅当存在投射单模至 $X$ 的长为 $n$ 的不可约道路. 特别地, $𝒮_1$ 是预投射分支内投射单模的集合. 记 $ℳ$ 是在无穷个 $𝒮_n$ 中出现的模.       <ul>
+        <li>若 $ℳ$ 为空, 则证明完毕;</li>
+        <li>若 $ℳ$ 非空, 则依照 Noether 条件, 存在某一极左的对象 $N$.           <ul>
+            <li>若 $N$ 是投射单模, 由于不存在指向投射单模的不可约态射 (讨论单与满), 矛盾.</li>
+            <li>若 $N$ 非投射单模, 由 $N$ 的左邻域有限, 左邻域中存在 $ℳ$ 中对象, 矛盾.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>记 $H(M)$ 是连接 $M$ 与投射单模的极长道路. 记命题 $𝔄_i$ 如是: 对 $H(M) = i$ 的预投射对象, $L_∞(M)$ 有限. 下归纳地证明 $𝔄_n$ 对一切 $n ≥ 0$ 成立.</p>
+  <ul>
+    <li>(初始). 若 $H(M) = 0$, 则 $M$ 是投射单对象, $L_∞ (M) = \{M\}$ 有限.</li>
+    <li>(归纳 $𝔄_k → 𝔄_{k+1}$). 若 $H(M) = k+1$, 则 $\max_{N ∈ L_1(M)} H(N) < n$. 此处 $L_1(M)$ 是有限集. 显然归纳假设成立.</li>
+  </ul>
+  <p><br /> (2 ⇒ 1). 任选定 $Γ(A)$ 的无环分支 $Δ$, 对任意 $M ∈ Δ$, $L_∞(M)$ 有限蕴含某一 $τ^k M =0$.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Preproj_Disconnected"
+        title="NEXT: 预投射分支可能不唯一">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Directed_Postpro"
+        title="PREV: 预投射分支的单向性">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+</body>
+
+
+</html>

@@ -14,7 +14,7 @@
     Jekyll Latex</title>
 
 
-<meta name="description" content="无界 AR quiver">
+<meta name="description" content="">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -89,17 +89,41 @@
 
     <div class="divider"></div>
 
-    <h2 id="无界-ar-quiver">无界 AR quiver</h2>
+    <ul id="markdown-toc">
+  <li><a href="#无界-ar-quiver" id="markdown-toc-无界-ar-quiver">无界 AR quiver</a>    <ul>
+      <li><a href="#遗传代数的-ar-quiver" id="markdown-toc-遗传代数的-ar-quiver">遗传代数的 AR quiver</a></li>
+      <li><a href="#无限-ar-平移-截面" id="markdown-toc-无限-ar-平移-截面">无限 AR 平移, 截面</a></li>
+      <li><a href="#遗传代数的无限-ar-平移" id="markdown-toc-遗传代数的无限-ar-平移">遗传代数的无限 AR 平移</a>        <ul>
+          <li><a href="#非遗传反例-bound-quiver" id="markdown-toc-非遗传反例-bound-quiver">非遗传反例: Bound Quiver</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#预投射分支" id="markdown-toc-预投射分支">预投射分支</a>    <ul>
+      <li><a href="#遗传代数的预投射与预内射分支" id="markdown-toc-遗传代数的预投射与预内射分支">遗传代数的预投射与预内射分支</a></li>
+      <li><a href="#非遗传代数的预投射分支-例子" id="markdown-toc-非遗传代数的预投射分支-例子">非遗传代数的预投射分支: 例子</a></li>
+      <li><a href="#单边有界性" id="markdown-toc-单边有界性">单边有界性</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="无界-ar-quiver">无界 AR quiver</h2>
 
 <h3 id="遗传代数的-ar-quiver">遗传代数的 AR quiver</h3>
 
-<p>本节假定 $Q$ 有限维, 连通, 无环的 quiver; $A$ 是有限维, 连通, 基础的遗传代数. 实际上, 以下是对应.</p>
+<p>本节假定 $Q$ 有限维, 连通 quiver; $A$ 是有限维, 连通, 基础的遗传代数.</p>
+
+<div class="note">
+  <p>特别地, $Q$ 有限, 既无自环亦无定向环; 但 $Q$ 可能包含重边.</p>
+</div>
+
+<p>实际上, 以下是对应.</p>
 
 <div class="theorem">
   <p>在同构的意义下, 以下两者对应</p>
   <ol>
     <li>有限维, 连通, 基础的遗传代数;</li>
-    <li>路代数 $kQ$, 其中 $Q$ 是有限维, 连通, 无环的 quiver.</li>
+    <li>路代数 $kQ$, 其中 $Q$ 是有限维, 连通 quiver.</li>
   </ol>
 </div>
 
@@ -150,7 +174,7 @@
   </div>
 </div>
 
-<p>假定以下 quiver $Q$ 都是有界连通无环的.</p>
+<p>假定以下 quiver $Q$ 都是有限维连通的.</p>
 
 <div class="definition">
   <p>(quiver 的无界化). 给定 $Q$, 定义 $ℤ Q$ 如下.</p>
@@ -241,24 +265,132 @@ $$</p>
 <p>对有限表示的遗传代数 (不必选择代数闭域), 有如下引理.</p>
 
 <div class="lemma">
-  <p>($𝔓$ 是 $ℤ 𝔓$ 的截面, <a href="P_is_Section">证明</a>). 给定连通, 有限表示表示的遗传代数.</p>
+  <p>($𝔓$ 是 $ℤ 𝔓$ 的截面, <a href="P_is_Section">证明</a>). 给定连通, 有限表示的遗传代数.</p>
   <ol>
-    <li>$𝔓$ 是 $ℤ𝔓$ 的截面.</li>
+    <li>$𝔓$ 是 $ℤ𝔓$ 的截面;</li>
+    <li>特别地, $𝔓 ≃ Q^{\mathrm{op}}$;</li>
     <li>$Γ$ 是 $ℤ𝔓$ 的全子范畴.</li>
   </ol>
   <p>内射对象的命题对偶.</p>
 </div>
 
-<div class="note">
-  <p>若除去遗传条件, 则 $𝔓$ 未必连通. 见<a href="Commutative_Diagram_Alg#非-apr-tilting-模">此文中的 $B = \mathrm{End}(T_A)$</a>.</p>
+<div class="corollary">
+  <p>由<a href="P_is_Section">命题的证明</a>, 对有限维连通基础 (但不必有限表示) 的遗传代数 $A = kQ$,</p>
+  <ol>
+    <li>$ℤ 𝔓$ 是 $Γ (A)$ 的无环连通分支;</li>
+    <li>$Q^{\mathrm{op}} ≃ 𝔓 ↪ ℤ 𝔓$ 是截面;</li>
+    <li>$M ∈ ℤ 𝔓$ 当且仅当存在 $k$ 使得 $τ^k M ∈ 𝔓$.</li>
+  </ol>
 </div>
 
-<h3 id="预投射-预内射">预投射, 预内射</h3>
+<h4 id="非遗传反例-bound-quiver">非遗传反例: Bound Quiver</h4>
 
-<p>在介绍预投射与预内射模前, 可先参阅 <a href="Kronecker_Rep">Kronecker quiver 的表示</a>.</p>
+<p>以下假定 $Q$ 是有限维连通 quiver, $I$ 是 $kQ$ 的容许理想. 此时 $kQ / I$ 是 bound 路代数.</p>
+
+<div class="example">
+  <p>对于 bound 路代数, $𝔓$ 是 $\mathrm{Q^{\mathrm{op}}}$ 的子图, 从而 $𝔓$ 各分支所在的连通分支仍是无环的; 但 $𝔓 ↪ Q^{\mathrm{op}}$ 未必是全子范畴, 甚至 $𝔓$ 未必连通, 例如<a href="Commutative_Diagram_Alg#非-apr-tilting-模">此文中的 $B = \mathrm{End}(T_A)$</a>.</p>
+</div>
+
+<div class="example">
+  <p>对无限表示的 bound 路代数, $𝔓$ 所在的连通分支可能包含内射对象: 可以轻易构造一批存在投射内射模的无限表示的 bound 路代数.</p>
+</div>
+
+<h2 id="预投射分支">预投射分支</h2>
+
+<h3 id="遗传代数的预投射与预内射分支">遗传代数的预投射与预内射分支</h3>
+
+<p>在介绍预投射与预内射模前, 可先参阅 <a href="Kronecker_Rep">Kronecker quiver 的 AR quiver</a>.</p>
 
 <div class="definition">
-  <p>对 AR quiver</p>
+  <p>(预投射 (postprojective), 预内射 (preinjective), 正规 (regular)). 对不可分解模 $M$.</p>
+  <ol>
+    <li>称 $M$ 预投射, 若存在 $k$ 使得 $τ^k M$ 是投射的;</li>
+    <li>称 $M$ 预内射, 若存在 $k$ 使得 $τ^{-k} M$ 是内射的;</li>
+    <li>称 $M$ 正规, 若 $M$ 既非预投射模亦非预内射模.</li>
+  </ol>
+</div>
+
+<p>对遗传代数, 其 AR quiver 拆分成以下三部分,</p>
+
+<ol>
+  <li>预投射部分的 AR quiver 同构于 $ℤ_{≤ 0}Q^{\mathrm{op}}$,</li>
+  <li>预内射部分的 AR quiver 同构于 $ℤ_{≥} Q^{\mathrm{op}}$,</li>
+  <li>正规部分的 AR quiver 未必无环, 未必连通, 未必有限.</li>
+</ol>
+
+<p>总体而言, 预投射部分与预内射部分是相对规整的, 正规部分是稍显混乱.</p>
+
+<h3 id="非遗传代数的预投射分支-例子">非遗传代数的预投射分支: 例子</h3>
+
+<p>对非遗传代数, 预投射 (预内射) 模的定义稍有不同. 该定义从预投射 (预内射) 分支出发.</p>
+
+<div class="definition">
+  <p>(预投射分支). 称连通分支 $Δ ⊆ Γ (A)$ 是预投射的, 若</p>
+  <ol>
+    <li>$Δ$ 无环,</li>
+    <li>任意 $M ∈ Δ$, 存在 $k$ 使得 $τ^k M$ 投射.</li>
+  </ol>
+  <p>称预投射分支中的模为预投射模. 预投射模必然在有限次 AR 平移后变作是投射模.</p>
+</div>
+
+<div class="example">
+  <p>不同于遗传代数的预投射分支 ($≃ ℤ_{≤ 0}(Γ (A) ∩ 𝐩𝐫𝐨𝐣)$, $(Γ (A) ∩ 𝐩𝐫𝐨𝐣) ≃ Q^{\mathrm{op}}$), 非遗传代数的预投射分支与投射模存在如下反常现象:</p>
+  <ol>
+    <li>预投射分支可能不存在, 见<a href="Non_Existence_of_Proproj">此文</a>;</li>
+    <li>即便代数连通, 预投射分支可能不唯一, 见<a href="Preproj_Disconnected">此例</a>;</li>
+    <li>预投射部分与预内射部分不对称, 甚至连通分支的数量不同, 见<a href="Preproj_Disconnected">此例</a>;</li>
+    <li>投射模所在的分支可能有环, 见<a href="Preproj_cyclic">此例</a>.</li>
+  </ol>
+  <p>特别地, 存在预内射但非预投射的投射模, 也存在既非预投射, 亦非预内射的投射模.</p>
+</div>
+
+<h3 id="单边有界性">单边有界性</h3>
+
+<p>以下仍选取 bound 路代数 $kQ / I$, 并假定预投射部分存在. 先证明一则重要的引理.</p>
+
+<div class="lemma">
+  <p>(不可约态射链的左起点). 若 $M$ 预投射, 则存在单的投射模 $P$ 使得 $P → \cdots → M$ 是一列不可约态射. 特别地, 极大的 $\cdots → M$ 必然以投射单模为起点.</p>
+</div>
+
+<div class="proof">
+  <p>取投射对象 $P(0) := τ^k M$, 进行以下归纳:</p>
+  <ol>
+    <li>若 $P(0)$ 单, 则证明完毕;</li>
+    <li>若 $P(0)$ 非单, 则任取 $\mathrm{Rad}(P(0))$ 的不可分解直和项 $M_1$. 存在 $k$ 使得 $P(1) := τ^k M_1$ 投射, 返回上一条.</li>
+  </ol>
+  <p>这一归纳必在有限步内结束, 因为不可分解投射模有限, 且预投射分支无环. 显然, 极长的链需要以投射对象 $P$ 收尾, 且 $\mathrm{Rad}(P) ≠ 0$.</p>
+</div>
+
+<div class="example">
+  <p>可对照<a href="Commutative_Diagram_Alg#非-apr-tilting-模">此文中的 $B = \mathrm{End}(T_A)$</a>, 例如对投射对象 ${\color{cyan}\substack{1 \\ 1 \quad 1 \\ 1}}$ 通过如下不可约态射与投射单模连接:</p>
+  <p>$$
+{\color{cyan}\substack{0 \\ 0 \quad 1 \\ 0}} → {\color{cyan}\substack{0 \\ 0 \quad 1 \\ 1}} → \substack{1 \\ 0 \quad 1 \\ 1} → {\color{cyan}\substack{1 \\ 1 \quad 1 \\ 1}}.
+$$</p>
+</div>
+
+<div class="definition">
+  <p>(左邻域). 称 $Γ (A)$ 中点 $x$ 属于 $y$ 的左邻域, 若存在 $x → y$ 类型的不可约态射. 依照距离, 定义</p>
+  <ol>
+    <li>$L_0(y) := \{y\}$;</li>
+    <li>$L_1(y) := \{x ∣ x → y\}$, 即通常意义的左邻域;</li>
+    <li>$L_{n+1}(y) := \{x ∣ x → y \ \ (x ∈ L_n(y))\}$;</li>
+    <li>$L_∞ (y) := ⋃_{n ≥ 0} L_n(y)$.</li>
+  </ol>
+</div>
+
+<div class="proposition">
+  <p>(预投射分支的等价定义, <a href="Post_Proj_Left_Finite">证明</a>). 假定 $Δ ⊆ Γ (A)$ 是无环的连通分支, 以下是 $Δ$ 预投射的等价定义</p>
+  <ol>
+    <li>任意 $M ∈ Δ$, 存在 $k$ 使得 $τ ^k M$ 投射;</li>
+    <li>任意 $M ∈ Δ$, $L_∞(M)$ 有界.</li>
+  </ol>
+</div>
+
+<div class="proposition">
+  <p>(预投射分支态射的单项性, 对非遗传代数亦适用, <a href="Directed_Postpro">证明</a>). 考虑 $[𝐩𝐨𝐬𝐭𝐩𝐫𝐨𝐣 ∣ 𝐫𝐞𝐠𝐮𝐥𝐚𝐫 ∣ 𝐩𝐫𝐞𝐢𝐧𝐣]$ 三类模.</p>
+  <ol>
+    <li>对预投射模</li>
+  </ol>
 </div>
 
 

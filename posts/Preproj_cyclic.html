@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>投射模所在的分支有环
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="  (图, bound 路代数). 定义 $Q := [1 \overset a→ 2 \overset b {\underset c⇉} 3]$, $I = (ba)$. 此时 $kQ / I$ 是 bound 路代数. 使用 $a [b ∣ c]$ 表示维数向量.">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Preproj_cyclic">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+</head>
+
+<body class="latex-dark">
+
+	<aside class="logo" id="logo-section">
+  <a href="/website/about" id="logo-link">
+    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
+  </a>
+  <span class="logo-prompt" id="logo-prompt">About the Author</span>
+</aside>
+
+<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>投射模所在的分支有环</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 6, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="definition">
+  <p>(图, bound 路代数). 定义 $Q := [1 \overset a→ 2 \overset b {\underset c⇉} 3]$, $I = (ba)$. 此时 $kQ / I$ 是 bound 路代数. 使用 $a [b ∣ c]$ 表示维数向量.</p>
+</div>
+
+<div class="example">
+  <p>以下单态射是不可约的:</p>
+  <p>$$
+\begin{bmatrix}
+k & →  & k & \overset{0}{\underset{1}{⇉ }} & k\\
+↑  &  & ↑  &  & ↑ \\
+0 & →  & k & \overset{0}{\underset{1}{⇉ }} & k
+\end{bmatrix}.
+$$</p>
+  <p>这一态射右极小几乎可裂态射 $\mathrm{Rad}(P_1) → P_1$ (的直和项), 从而不可约.</p>
+</div>
+
+<div class="example">
+  <p>计算非投射模 $0 → k \overset{0}{\underset{1}{⇉ }} k$ 的 AR 平移如下:</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMjQsWzEsMCwiayJdLFsyLDAsImsiXSxbMCwwLCIwIl0sWzEsMSwiayJdLFsyLDEsImteMiJdLFswLDEsIjAiXSxbMiwyLCJrIl0sWzEsMiwiMCJdLFswLDIsIjAiXSxbMywwLCJNIl0sWzMsMSwiUF8yIl0sWzMsMiwiUF8zIl0sWzQsMSwiSV8yIl0sWzQsMiwiSV8zIl0sWzUsMSwiayJdLFs2LDEsImsiXSxbNywxLCIwIl0sWzcsMiwiayJdLFs2LDIsImteMiJdLFs1LDIsImsiXSxbNywzLCJrIl0sWzYsMywiayJdLFs1LDMsImsiXSxbNCwzLCJcXHRhdSBNIl0sWzAsMSwiMSIsMix7Im9mZnNldCI6Mn1dLFswLDEsIjAiLDAseyJvZmZzZXQiOi0yfV0sWzIsMF0sWzUsM10sWzMsNCwiMSIsMix7Im9mZnNldCI6Mn1dLFszLDQsIjEiLDAseyJvZmZzZXQiOi0yfV0sWzUsMl0sWzQsMSwicF8yIiwyXSxbNiw0LCJlXzEiLDJdLFs3LDYsIiIsMix7Im9mZnNldCI6Mn1dLFs3LDYsIiIsMix7Im9mZnNldCI6LTJ9XSxbNywzXSxbOCw1XSxbOCw3XSxbMTEsMTBdLFsxMCw5XSxbMTMsMTJdLFsxMSwxMywiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEwLDEyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMTUsMTYsIiIsMSx7Im9mZnNldCI6Mn1dLFsxNSwxNiwiIiwxLHsib2Zmc2V0IjotMn1dLFsxNCwxNV0sWzMsMF0sWzE4LDE3LCIxIiwyLHsib2Zmc2V0IjoyfV0sWzE4LDE3LCIxIiwwLHsib2Zmc2V0IjotMn1dLFsxOSwxOCwiZV8yIiwyXSxbMTksMTQsIjAiXSxbMTgsMTUsInBfMSJdLFsxNywxNl0sWzIwLDE3XSxbMjEsMTgsImVfMiJdLFsyMiwxOV0sWzIyLDIxXSxbMjEsMjAsIjEiLDIseyJvZmZzZXQiOjJ9XSxbMjMsMTNdLFsyMSwyMCwiMCIsMCx7Im9mZnNldCI6LTJ9XV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMjQsWzEsMCwiayJdLFsyLDAsImsiXSxbMCwwLCIwIl0sWzEsMSwiayJdLFsyLDEsImteMiJdLFswLDEsIjAiXSxbMiwyLCJrIl0sWzEsMiwiMCJdLFswLDIsIjAiXSxbMywwLCJNIl0sWzMsMSwiUF8yIl0sWzMsMiwiUF8zIl0sWzQsMSwiSV8yIl0sWzQsMiwiSV8zIl0sWzUsMSwiayJdLFs2LDEsImsiXSxbNywxLCIwIl0sWzcsMiwiayJdLFs2LDIsImteMiJdLFs1LDIsImsiXSxbNywzLCJrIl0sWzYsMywiayJdLFs1LDMsImsiXSxbNCwzLCJcXHRhdSBNIl0sWzAsMSwiMSIsMix7Im9mZnNldCI6Mn1dLFswLDEsIjAiLDAseyJvZmZzZXQiOi0yfV0sWzIsMF0sWzUsM10sWzMsNCwiMSIsMix7Im9mZnNldCI6Mn1dLFszLDQsIjEiLDAseyJvZmZzZXQiOi0yfV0sWzUsMl0sWzQsMSwicF8yIiwyXSxbNiw0LCJlXzEiLDJdLFs3LDYsIiIsMix7Im9mZnNldCI6Mn1dLFs3LDYsIiIsMix7Im9mZnNldCI6LTJ9XSxbNywzXSxbOCw1XSxbOCw3XSxbMTEsMTBdLFsxMCw5XSxbMTMsMTJdLFsxMSwxMywiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEwLDEyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMTUsMTYsIiIsMSx7Im9mZnNldCI6Mn1dLFsxNSwxNiwiIiwxLHsib2Zmc2V0IjotMn1dLFsxNCwxNV0sWzMsMF0sWzE4LDE3LCIxIiwyLHsib2Zmc2V0IjoyfV0sWzE4LDE3LCIxIiwwLHsib2Zmc2V0IjotMn1dLFsxOSwxOCwiZV8yIiwyXSxbMTksMTQsIjAiXSxbMTgsMTUsInBfMSJdLFsxNywxNl0sWzIwLDE3XSxbMjEsMTgsImVfMiJdLFsyMiwxOV0sWzIyLDIxXSxbMjEsMjAsIjEiLDIseyJvZmZzZXQiOjJ9XSxbMjMsMTNdLFsyMSwyMCwiMCIsMCx7Im9mZnNldCI6LTJ9XV0=&amp;embed" width="600" height="400" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>从而 $Γ(A)$ 存在环路 $M → P_1 ⇉ I_3, S_3 ⇉ M$.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Non_Existence_of_Proproj"
+        title="NEXT: Bound quiver 的预投射分支未必存在">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Preproj_Disconnected"
+        title="PREV: 预投射分支可能不唯一">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+</body>
+
+
+</html>
