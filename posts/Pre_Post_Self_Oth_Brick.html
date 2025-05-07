@@ -9,12 +9,12 @@
 
 
 
-  <title>Bound quiver 的预投射分支未必存在
+  <title>预投射 (预内射) 模是自垂直的 brick
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="">
+<meta name="description" content="证明">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -23,7 +23,7 @@
 <link rel="icon" href="/website/assets/favicon.png">
 <link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
 <link rel="stylesheet" href="/website/assets/core.css">
-<link rel="canonical" href="/website/posts/Non_Existence_of_Proproj">
+<link rel="canonical" href="/website/posts/Pre_Post_Self_Oth_Brick">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -78,7 +78,7 @@
 	<main>
   <article>
     <div class="center">
-      <h1>Bound quiver 的预投射分支未必存在</h1>
+      <h1>预投射 (预内射) 模是自垂直的 brick</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
@@ -89,32 +89,24 @@
 
     <div class="divider"></div>
 
-    <ul id="markdown-toc">
-  <li><a href="#存在预投射分支的充要条件" id="markdown-toc-存在预投射分支的充要条件">存在预投射分支的充要条件</a>    <ul>
-      <li><a href="#例子" id="markdown-toc-例子">例子</a></li>
-    </ul>
-  </li>
-</ul>
+    <h2 id="证明">证明</h2>
 
-<h2 id="存在预投射分支的充要条件">存在预投射分支的充要条件</h2>
+<div class="corollary">
+  <p>预投射模和预内射模都是自垂直 ($\mathrm{Ext}^1(M,M) = 0$) 的 brick.</p>
+</div>
 
-<ul>
-  <li>本文例基于 directed modules, 日后补充.</li>
-</ul>
-
-<h3 id="例子">例子</h3>
-
-<div class="example">
-  <p>以下代数不存在预投射部分.</p>
-  <p>$$
-\begin{bmatrix}
- &  & 4 & ←  & 7 & ←  & 6\\
- &  & ↓  & ▩  & ↓  &  & ↑ \\
-2 & →  & 1 & ←  & 5 & ←  & 8\\
- &  & ↑  &  &  &  & \\
- &  & 3 &  &  &  &
-\end{bmatrix}
-$$</p>
+<div class="proof">
+  <p>只看预投射情形. 选定预投射模 $M$.</p>
+  <ol>
+    <li>(证明是 brick). 若存在非零非同构的 $φ : M → M$, 则任取 $\operatorname{im}φ$ 的不可分解直和项 $T$. 由<a href="Morphism_Directed">单向性</a>, 必然有 $\operatorname{im}φ$ 预投射. 此时, 该预投射分支存在环路, 矛盾.</li>
+    <li>
+      <p>(证明自垂直). 仅考虑 $M$ 非投射的情形. 依照 <a href="AR_Formula">AR 公式</a>, 得</p>
+      <p>$$
+   D\mathrm{Ext}^1(M, M) ≃ \overline{(M, τM)} ↞ (M, τ M).
+   $$</p>
+      <p>因此, 存在 $M$ 指向 $τM$ 的不可约态射路, 该预投射分支存在环路, 矛盾.</p>
+    </li>
+  </ol>
 </div>
 
 
@@ -124,8 +116,8 @@ $$</p>
     
       <a
         class="next"
-        href="/website/posts/Finite_Pre_Post"
-        title="NEXT: 对无限表示代数, $Γ(A)$ 各分支均无限">&lt;&lt;</a>
+        href="/website/posts/Preproj_Disconnected"
+        title="NEXT: 预投射分支可能不唯一">&lt;&lt;</a>
       <span>
         &middot;
       </span>
@@ -140,8 +132,8 @@ $$</p>
       </span>
       <a
         class="prev"
-        href="/website/posts/Preproj_cyclic"
-        title="PREV: 投射模所在的分支有环">&gt;&gt;</a>
+        href="/website/posts/Post_Proj_Left_Finite"
+        title="PREV: 预投射部分左有界">&gt;&gt;</a>
     
   </div>
 </main>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>对无限表示代数, $Γ(A)$ 各分支均无限
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Finite_Pre_Post">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+</head>
+
+<body class="latex-dark">
+
+	<aside class="logo" id="logo-section">
+  <a href="/website/about" id="logo-link">
+    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
+  </a>
+  <span class="logo-prompt" id="logo-prompt">About the Author</span>
+</aside>
+
+<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>对无限表示代数, $Γ(A)$ 各分支均无限</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 7, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="theorem">
+  <p>对连通的有限维代数 $A$, 以下等价:</p>
+  <ol>
+    <li>$A$ 有限表示;</li>
+    <li>$Γ(A)$ 存在某个连通分支 $Δ$, $Δ$ 是有限集;</li>
+    <li>$Γ(A)$ 存在某个连通分支 $Δ$, $Δ$ 中对象的合成列长度有一致上界.</li>
+  </ol>
+</div>
+
+<div class="proof">
+  <p>只看 (3 ⇒ 1). 依照 <a href="Harada_Sai">Harada-Sai 引理</a>, 存在 $n$ 使得 $Δ$ 中任意 $≥ n$ 个不可约态射之复合为 $0$. 下依次证明:</p>
+  <ol>
+    <li>($Δ$ 中存在单对象). 对任意 $M ∈ Δ$, 取单对象 $S = \mathrm{Soc}(M) ↪  M$. 若 $S ∉ Δ$, 则非零态射 $S ↪ M$ 通过右极小几乎可裂态射 $⨁E_i → M$ 分解. 此时存在非零的不可约态射链 $S → M_1 → M$. 同理, 由 $S → M_1$ 非同构, 则得存在 $S → M_2 → M_1 → M$ 类型的复合非零的不可约态射链. 这一归纳可以持续进行, 和 Harada-Sai 引理矛盾.</li>
+    <li>
+      <p>($Δ$ 中存在所有单对象). 任意 $α ∈ Q_1$ 给出模</p>
+      <p>$$
+   M_α = [\cdots 0 → k = k → 0 → \cdots ].
+   $$</p>
+      <p>其中, 态射 $S_{t(α)} ↪ M_α$ 与 $M_α ↠ S_{s(α)}$ 非零. 由上述归纳, $S_{t(α)} ∈ Δ$ 当且仅当 $S_{s(α)} ∈ Δ$. 由 quiver 连通, 所有单对象属于 $Δ$</p>
+    </li>
+    <li>($Δ$ 中存在所有对象). 考虑非零态射 $\mathrm{Soc}(N) ↪ N$, 细节略.</li>
+  </ol>
+</div>
+
+<p>一般地, 若 $(M, N) ≠ 0$, 则 $N$ 与 $M$ 未必属于同一连通分支.</p>
+
+<div class="example">
+  <p>对 <a href="Kronecker_Rep">Kronecker quiver</a>, 记不可分解对象 $M := k \underset 1 {\overset 0 ⇉} k$.</p>
+  <ul>
+    <li>$M$ 所在的连通分支恰包含一切 $M_n := k^n \underset I {\overset {J_n(0)} ⇉} k^n$ 类型的不可分解模. 特别地, 这一连通分支有环, 且对象的合成列长度没有一致上界.</li>
+    <li>对投射单模 $P_1 := 0 \underset 0 {\overset 0 ⇉} k$, 非零单态射 $P_1 → M$ 通过 $M_2$ 分解, 进而通过所有 $M_1 → \cdots → M_k$ 分解.</li>
+  </ul>
+  <p>以上, 我们构造了能通过任意长不可约态射链分解的非零态射, 这与 $Γ$ 不连通并不矛盾.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/From_Simp_Proj"
+        title="NEXT: 预投射对象的左起点是投射单对象">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Non_Existence_of_Proproj"
+        title="PREV: Bound quiver 的预投射分支未必存在">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+</body>
+
+
+</html>

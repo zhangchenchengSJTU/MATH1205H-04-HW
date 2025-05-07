@@ -99,22 +99,28 @@
       </li>
     </ul>
   </li>
-  <li><a href="#预投射分支" id="markdown-toc-预投射分支">预投射分支</a>    <ul>
+  <li><a href="#有限维代数的预投射分支" id="markdown-toc-有限维代数的预投射分支">有限维代数的预投射分支</a>    <ul>
       <li><a href="#遗传代数的预投射与预内射分支" id="markdown-toc-遗传代数的预投射与预内射分支">遗传代数的预投射与预内射分支</a></li>
       <li><a href="#非遗传代数的预投射分支-例子" id="markdown-toc-非遗传代数的预投射分支-例子">非遗传代数的预投射分支: 例子</a></li>
-      <li><a href="#单边有界性" id="markdown-toc-单边有界性">单边有界性</a></li>
+      <li><a href="#单向性" id="markdown-toc-单向性">单向性</a></li>
     </ul>
   </li>
+  <li><a href="#回归遗传代数" id="markdown-toc-回归遗传代数">回归遗传代数</a></li>
 </ul>
 
 <h2 id="无界-ar-quiver">无界 AR quiver</h2>
 
 <h3 id="遗传代数的-ar-quiver">遗传代数的 AR quiver</h3>
 
-<p>本节假定 $Q$ 有限维, 连通 quiver; $A$ 是有限维, 连通, 基础的遗传代数.</p>
+<p>本节假定 $k$ 是代数闭域, 此时, 有限维代数可以通过 quiver with relation 描述. 凡涉及遗传代数, 约定</p>
+
+<ol>
+  <li>$Q$ 总是有限维, 连通 quiver;</li>
+  <li>$A$ 是有限维, 连通, 基础的遗传代数.</li>
+</ol>
 
 <div class="note">
-  <p>特别地, $Q$ 有限, 既无自环亦无定向环; 但 $Q$ 可能包含重边.</p>
+  <p>若 $Q$ 有限维, 则 $Q$ 既无自环亦无定向环; 但 $Q$ 可能包含重边.</p>
 </div>
 
 <p>实际上, 以下是对应.</p>
@@ -295,14 +301,14 @@ $$</p>
   <p>对无限表示的 bound 路代数, $𝔓$ 所在的连通分支可能包含内射对象: 可以轻易构造一批存在投射内射模的无限表示的 bound 路代数.</p>
 </div>
 
-<h2 id="预投射分支">预投射分支</h2>
+<h2 id="有限维代数的预投射分支">有限维代数的预投射分支</h2>
 
 <h3 id="遗传代数的预投射与预内射分支">遗传代数的预投射与预内射分支</h3>
 
-<p>在介绍预投射与预内射模前, 可先参阅 <a href="Kronecker_Rep">Kronecker quiver 的 AR quiver</a>.</p>
+<p>在介绍预投射与预内射模前, 可先熟悉 <a href="Kronecker_Rep">Kronecker quiver 的 AR quiver</a>.</p>
 
 <div class="definition">
-  <p>(预投射 (postprojective), 预内射 (preinjective), 正规 (regular)). 对不可分解模 $M$.</p>
+  <p>(遗传代数的预投射 (postprojective) 部分, 预内射 (preinjective) 部分, 正规 (regular) 部分). 对不可分解模 $M$.</p>
   <ol>
     <li>称 $M$ 预投射, 若存在 $k$ 使得 $τ^k M$ 是投射的;</li>
     <li>称 $M$ 预内射, 若存在 $k$ 使得 $τ^{-k} M$ 是内射的;</li>
@@ -344,21 +350,29 @@ $$</p>
   <p>特别地, 存在预内射但非预投射的投射模, 也存在既非预投射, 亦非预内射的投射模.</p>
 </div>
 
-<h3 id="单边有界性">单边有界性</h3>
+<div class="note">
+  <p>部分构造参考 <a href="Kronecker_Rep">Kronecker quiver 的 AR quiver</a>.</p>
+</div>
+
+<p>对于有限表示的代数 (不必遗传), $Γ(A)$ 的每一连通分支都是有限的, 因此所有模都是预投射且预内射的. 以下引理给出有限维代数有限表示的充要条件.</p>
+
+<div class="theorem">
+  <p>(<a href="Finite_Pre_Post">证明</a>). 对连通的有限维代数 $A$, 以下等价:</p>
+  <ol>
+    <li>$A$ 有限表示;</li>
+    <li>$Γ(A)$ 存在某个连通分支 $Δ$, $Δ$ 是有限集;</li>
+    <li>$Γ(A)$ 存在某个连通分支 $Δ$, $Δ$ 中对象的合成列长度有一致上界.</li>
+  </ol>
+</div>
+
+<p>因此, 若连通代数的 AR quiver $Γ$ 存在某个无限的连通分支, 则所有连通分支均无限.</p>
+
+<h3 id="单向性">单向性</h3>
 
 <p>以下仍选取 bound 路代数 $kQ / I$, 并假定预投射部分存在. 先证明一则重要的引理.</p>
 
 <div class="lemma">
-  <p>(不可约态射链的左起点). 若 $M$ 预投射, 则存在单的投射模 $P$ 使得 $P → \cdots → M$ 是一列不可约态射. 特别地, 极大的 $\cdots → M$ 必然以投射单模为起点.</p>
-</div>
-
-<div class="proof">
-  <p>取投射对象 $P(0) := τ^k M$, 进行以下归纳:</p>
-  <ol>
-    <li>若 $P(0)$ 单, 则证明完毕;</li>
-    <li>若 $P(0)$ 非单, 则任取 $\mathrm{Rad}(P(0))$ 的不可分解直和项 $M_1$. 存在 $k$ 使得 $P(1) := τ^k M_1$ 投射, 返回上一条.</li>
-  </ol>
-  <p>这一归纳必在有限步内结束, 因为不可分解投射模有限, 且预投射分支无环. 显然, 极长的链需要以投射对象 $P$ 收尾, 且 $\mathrm{Rad}(P) ≠ 0$.</p>
+  <p>(不可约态射链的左起点, <a href="From_Simp_Proj">证明</a>). 若 $M$ 预投射, 则存在单的投射模 $P$ 使得 $P → \cdots → M$ 是一列不可约态射. 特别地, 极大的 $\cdots → M$ 必然以投射单模为起点.</p>
 </div>
 
 <div class="example">
@@ -386,10 +400,54 @@ $$</p>
   </ol>
 </div>
 
+<p>以上表明了每一预投射分支与预内射分支均是单边有界的. 利用这一单边有限性, 得如下态射空间的单向性.</p>
+
+<div class="theorem">
+  <p>(态射的单向性, <a href="Morphism_Directed">证明</a>). 对预投射模 $M$, 唯 $L ∈ L_∞(M)$ 使 $(L, M)$ 非零; 对预内射模 $N$, 唯 $R ∈ R_∞(N)$ 使 $(M, R)$ 非零.</p>
+</div>
+
+<div class="corollary">
+  <p>(<a href="Pre_Post_Self_Oth_Brick">证明</a>). 预投射模和预内射模都是自垂直 ($\mathrm{Ext}^1(M,M) = 0$) 的 brick.</p>
+</div>
+
+<div class="note">
+  <p>假若不可分解对象 $M$ 不是 brick, 或不是自垂直的, 则 $M$ 所在的连通分支既非预投射亦非预内射.</p>
+</div>
+
+<h2 id="回归遗传代数">回归遗传代数</h2>
+
+<p>给定有限维, 连通, 基础的遗传代数, 不妨记作 $kQ$ ($Q$ 是有限维 quiver).</p>
+
 <div class="proposition">
-  <p>(预投射分支态射的单项性, 对非遗传代数亦适用, <a href="Directed_Postpro">证明</a>). 考虑 $[𝐩𝐨𝐬𝐭𝐩𝐫𝐨𝐣 ∣ 𝐫𝐞𝐠𝐮𝐥𝐚𝐫 ∣ 𝐩𝐫𝐞𝐢𝐧𝐣]$ 三类模.</p>
+  <p>(有限表示遗传代数的等价定义). 以下是 $kQ$ 有限表示的等价条件.</p>
   <ol>
-    <li>对预投射模</li>
+    <li><a href="Gabriel_1">Gabriel 定理</a>的等价表述, 例如 $Q$ 的无向化图是 $A_n$, $D_n$, 以及 $E_{6,7,8}$ 型的.</li>
+    <li>不可分解模的长度有上界 (见<a href="Finite_Pre_Post">有限表示的充要条件</a>).</li>
+    <li>$Γ(A)$ 的某一预投射分支是预内射的.</li>
+    <li>所有不可约模都是自垂直的 brick (见<a href="Key_Lemma_Gabriel">关键公式</a>).</li>
+    <li>存在 regular 模 (既非预投射, 亦非预内射的模) (考虑根系).</li>
+  </ol>
+</div>
+
+<p>称 $R$ 是正规模, 当且仅当 $R$ 既非预投射亦非预内射.</p>
+
+<div class="example">
+  <p>(正规模的结构). 给定非有限表示的遗传代数 $kQ$.</p>
+  <ul>
+    <li>正规模存在. 比对根系与<a href="Key_Lemma_Gabriel">关键公式</a>, 某些不可分解模不是自垂直的 brick, 从而必然正规.</li>
+    <li>任意正规模总与足够大的正规模相连. 依照<a href="Finite_Pre_Post">有限表示的充要条件</a>, 预投射部分无界, 从而任意连通分支的模的合成列长度无上界.</li>
+  </ul>
+</div>
+
+<div class="example">
+  <p>(AR 平移). 以下是 AR 平移:</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTUsWzEsMiwiUV57XFxtYXRocm17b3B9fSIsWzI3MCw2MCw2MCwxXV0sWzIsMiwiUV57XFxtYXRocm17b3B9fSIsWzI3MCw2MCw2MCwxXV0sWzMsMiwiXFxjZG90cyAiLFsyNzAsNjAsNjAsMV1dLFs0LDEsIlxcdGV4dHtSZWd1bGFyfSIsWzEyMCw2MCw2MCwxXV0sWzYsMiwiUV57XFxtYXRocm17b3B9fSIsWzMwMCw2MCw2MCwxXV0sWzcsMiwiUV57XFxtYXRocm17b3B9fSIsWzMwMCw2MCw2MCwxXV0sWzIsMCwiUV57XFxtYXRocm17b3B9fSIsWzI3MCw2MCw2MCwxXV0sWzMsMCwiXFxjZG90cyAiLFsyNzAsNjAsNjAsMV1dLFs1LDAsIlxcY2RvdHMgIixbMzAwLDYwLDYwLDFdXSxbNiwwLCJRXntcXG1hdGhybXtvcH19IixbMzAwLDYwLDYwLDFdXSxbNSwyLCJcXGNkb3RzICIsWzMwMCw2MCw2MCwxXV0sWzAsMiwiUV57XFxtYXRocm17b3B9fSIsWzIzNCwxMDAsNjAsMV1dLFsxLDAsIlFee1xcbWF0aHJte29wfX0iLFsyNzAsNjAsNjAsMV1dLFs3LDAsIlFee1xcbWF0aHJte29wfX0iLFszMDAsNjAsNjAsMV1dLFs4LDAsIlFee1xcbWF0aHJte29wfX0iLFsxLDEwMCw2MCwxXV0sWzAsMSwiIiwwLHsiY29sb3VyIjpbMjcwLDYwLDYwXX1dLFswLDEsIiIsMyx7Im9mZnNldCI6LTMsImNvbG91ciI6WzI3MCw2MCw2MF19XSxbMCwxLCIiLDMseyJvZmZzZXQiOjMsImNvbG91ciI6WzI3MCw2MCw2MF19XSxbMSwyLCIiLDAseyJjb2xvdXIiOlsyNzAsNjAsNjBdfV0sWzEsMiwiIiwzLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMjcwLDYwLDYwXX1dLFsxLDIsIiIsMyx7Im9mZnNldCI6MywiY29sb3VyIjpbMjcwLDYwLDYwXX1dLFszLDMsIlxcdGF1IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzMsMywiIiwzLHsiYW5nbGUiOi00NSwiY29sb3VyIjpbMTIwLDYwLDYwXX1dLFszLDMsIlxcdGF1IiwzLHsiYW5nbGUiOi05MCwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzMsMywiIiwzLHsiYW5nbGUiOi0xMzUsImNvbG91ciI6WzEyMCw2MCw2MF19XSxbMywzLCJcXHRhdSIsMyx7ImFuZ2xlIjotMTgwLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMywzLCIiLDMseyJhbmdsZSI6MTM1LCJjb2xvdXIiOlsxMjAsNjAsNjBdfV0sWzMsMywiXFx0YXUiLDMseyJhbmdsZSI6OTAsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFszLDMsIiIsMyx7ImFuZ2xlIjo0NSwiY29sb3VyIjpbMTIwLDYwLDYwXX1dLFs0LDUsIiIsMCx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbNCw1LCIiLDMseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzQsNSwiIiwzLHsib2Zmc2V0IjozLCJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzEwLDQsIiIsMCx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTAsNCwiIiwzLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMzAwLDYwLDYwXX1dLFsxMCw0LCIiLDMseyJvZmZzZXQiOjMsImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTEsMCwiIiwwLHsiY29sb3VyIjpbMjcwLDYwLDYwXX1dLFsxMSwwLCIiLDMseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsyNzAsNjAsNjBdfV0sWzExLDAsIiIsMyx7Im9mZnNldCI6MywiY29sb3VyIjpbMjcwLDYwLDYwXX1dLFsxMiw2LCIiLDAseyJjb2xvdXIiOlsyNzAsNjAsNjBdfV0sWzEyLDYsIiIsMyx7Im9mZnNldCI6LTMsImNvbG91ciI6WzI3MCw2MCw2MF19XSxbNiw3LCIiLDAseyJjb2xvdXIiOlsyNzAsNjAsNjBdfV0sWzEyLDYsIiIsMyx7Im9mZnNldCI6MywiY29sb3VyIjpbMjcwLDYwLDYwXX1dLFs2LDcsIiIsMyx7Im9mZnNldCI6LTMsImNvbG91ciI6WzI3MCw2MCw2MF19XSxbNiw3LCIiLDMseyJvZmZzZXQiOjMsImNvbG91ciI6WzI3MCw2MCw2MF19XSxbOCw5LCIiLDAseyJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzksMTMsIiIsMCx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTMsMTQsIiIsMCx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbOCw5LCIiLDMseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzksMTMsIiIsMyx7Im9mZnNldCI6LTMsImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTMsMTQsIiIsMyx7Im9mZnNldCI6LTMsImNvbG91ciI6WzMwMCw2MCw2MF19XSxbOCw5LCIiLDMseyJvZmZzZXQiOjMsImNvbG91ciI6WzMwMCw2MCw2MF19XSxbOSwxMywiIiwzLHsib2Zmc2V0IjozLCJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzEzLDE0LCIiLDMseyJvZmZzZXQiOjMsImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTIsMTEsIlxcdGF1IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzYsMCwiXFx0YXUiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNywxLCJcXHRhdSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs5LDEwLCJcXHRhdSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMyw0LCJcXHRhdSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCw1LCJcXHRhdSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs4LDEwLCJcXHRhdSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs3LDIsIlxcdGF1IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTUsWzEsMiwiUV57XFxtYXRocm17b3B9fSIsWzI3MCw2MCw2MCwxXV0sWzIsMiwiUV57XFxtYXRocm17b3B9fSIsWzI3MCw2MCw2MCwxXV0sWzMsMiwiXFxjZG90cyAiLFsyNzAsNjAsNjAsMV1dLFs0LDEsIlxcdGV4dHtSZWd1bGFyfSIsWzEyMCw2MCw2MCwxXV0sWzYsMiwiUV57XFxtYXRocm17b3B9fSIsWzMwMCw2MCw2MCwxXV0sWzcsMiwiUV57XFxtYXRocm17b3B9fSIsWzMwMCw2MCw2MCwxXV0sWzIsMCwiUV57XFxtYXRocm17b3B9fSIsWzI3MCw2MCw2MCwxXV0sWzMsMCwiXFxjZG90cyAiLFsyNzAsNjAsNjAsMV1dLFs1LDAsIlxcY2RvdHMgIixbMzAwLDYwLDYwLDFdXSxbNiwwLCJRXntcXG1hdGhybXtvcH19IixbMzAwLDYwLDYwLDFdXSxbNSwyLCJcXGNkb3RzICIsWzMwMCw2MCw2MCwxXV0sWzAsMiwiUV57XFxtYXRocm17b3B9fSIsWzIzNCwxMDAsNjAsMV1dLFsxLDAsIlFee1xcbWF0aHJte29wfX0iLFsyNzAsNjAsNjAsMV1dLFs3LDAsIlFee1xcbWF0aHJte29wfX0iLFszMDAsNjAsNjAsMV1dLFs4LDAsIlFee1xcbWF0aHJte29wfX0iLFsxLDEwMCw2MCwxXV0sWzAsMSwiIiwwLHsiY29sb3VyIjpbMjcwLDYwLDYwXX1dLFswLDEsIiIsMyx7Im9mZnNldCI6LTMsImNvbG91ciI6WzI3MCw2MCw2MF19XSxbMCwxLCIiLDMseyJvZmZzZXQiOjMsImNvbG91ciI6WzI3MCw2MCw2MF19XSxbMSwyLCIiLDAseyJjb2xvdXIiOlsyNzAsNjAsNjBdfV0sWzEsMiwiIiwzLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMjcwLDYwLDYwXX1dLFsxLDIsIiIsMyx7Im9mZnNldCI6MywiY29sb3VyIjpbMjcwLDYwLDYwXX1dLFszLDMsIlxcdGF1IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzMsMywiIiwzLHsiYW5nbGUiOi00NSwiY29sb3VyIjpbMTIwLDYwLDYwXX1dLFszLDMsIlxcdGF1IiwzLHsiYW5nbGUiOi05MCwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzMsMywiIiwzLHsiYW5nbGUiOi0xMzUsImNvbG91ciI6WzEyMCw2MCw2MF19XSxbMywzLCJcXHRhdSIsMyx7ImFuZ2xlIjotMTgwLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMywzLCIiLDMseyJhbmdsZSI6MTM1LCJjb2xvdXIiOlsxMjAsNjAsNjBdfV0sWzMsMywiXFx0YXUiLDMseyJhbmdsZSI6OTAsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFszLDMsIiIsMyx7ImFuZ2xlIjo0NSwiY29sb3VyIjpbMTIwLDYwLDYwXX1dLFs0LDUsIiIsMCx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbNCw1LCIiLDMseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzQsNSwiIiwzLHsib2Zmc2V0IjozLCJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzEwLDQsIiIsMCx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTAsNCwiIiwzLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMzAwLDYwLDYwXX1dLFsxMCw0LCIiLDMseyJvZmZzZXQiOjMsImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTEsMCwiIiwwLHsiY29sb3VyIjpbMjcwLDYwLDYwXX1dLFsxMSwwLCIiLDMseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsyNzAsNjAsNjBdfV0sWzExLDAsIiIsMyx7Im9mZnNldCI6MywiY29sb3VyIjpbMjcwLDYwLDYwXX1dLFsxMiw2LCIiLDAseyJjb2xvdXIiOlsyNzAsNjAsNjBdfV0sWzEyLDYsIiIsMyx7Im9mZnNldCI6LTMsImNvbG91ciI6WzI3MCw2MCw2MF19XSxbNiw3LCIiLDAseyJjb2xvdXIiOlsyNzAsNjAsNjBdfV0sWzEyLDYsIiIsMyx7Im9mZnNldCI6MywiY29sb3VyIjpbMjcwLDYwLDYwXX1dLFs2LDcsIiIsMyx7Im9mZnNldCI6LTMsImNvbG91ciI6WzI3MCw2MCw2MF19XSxbNiw3LCIiLDMseyJvZmZzZXQiOjMsImNvbG91ciI6WzI3MCw2MCw2MF19XSxbOCw5LCIiLDAseyJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzksMTMsIiIsMCx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTMsMTQsIiIsMCx7ImNvbG91ciI6WzMwMCw2MCw2MF19XSxbOCw5LCIiLDMseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzksMTMsIiIsMyx7Im9mZnNldCI6LTMsImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTMsMTQsIiIsMyx7Im9mZnNldCI6LTMsImNvbG91ciI6WzMwMCw2MCw2MF19XSxbOCw5LCIiLDMseyJvZmZzZXQiOjMsImNvbG91ciI6WzMwMCw2MCw2MF19XSxbOSwxMywiIiwzLHsib2Zmc2V0IjozLCJjb2xvdXIiOlszMDAsNjAsNjBdfV0sWzEzLDE0LCIiLDMseyJvZmZzZXQiOjMsImNvbG91ciI6WzMwMCw2MCw2MF19XSxbMTIsMTEsIlxcdGF1IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzYsMCwiXFx0YXUiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNywxLCJcXHRhdSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs5LDEwLCJcXHRhdSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMyw0LCJcXHRhdSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCw1LCJcXHRhdSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs4LDEwLCJcXHRhdSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs3LDIsIlxcdGF1IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d&amp;embed" width="600" height="250" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <p>分别记 $𝐏𝐩𝐫𝐨𝐣$, $𝐩𝐩𝐫𝐨𝐣$, $𝐏𝐢𝐧𝐣$, $𝐩𝐢𝐧𝐣$, $𝐫𝐞𝐠$ 是预投射 (含投射), 预投射 (不含投射), 预内射 (含内射), 预内射 (不含内射), 正规模通过有限直和生成的全子范畴. 此时 AR 平移与与逆平移诱导了范畴等价</p>
+  <ol>
+    <li>初始的范畴等价 $τ : \underline{𝐦𝐨𝐝_A} ⇆ \overline {𝐦𝐨𝐝_A} : τ ⁻¹$;</li>
+    <li>(预投射部分). 由以上, 得 $τ : \underline{𝐩𝐩𝐫𝐨𝐣} ⇆ \overline {𝐏𝐩𝐫𝐨𝐣} : τ ⁻¹$. 由<a href="Morphism_Directed">单向性</a>, $𝐩𝐩𝐫𝐨𝐣$ 间的非零态射不通过投射对象分解, $𝐏𝐩𝐫𝐨𝐣$ 间的非零态射不通过内射对象分解. 因此, 稳定范畴即原全子范畴.</li>
+    <li>(正规). $τ : 𝐫𝐞𝐠 ⇆ 𝐫𝐞𝐠 : τ ⁻¹$ 证明类似.</li>
+    <li>(预内射). $τ : 𝐏𝐢𝐧𝐣 ⇆ 𝐩𝐢𝐧𝐣 : τ ⁻¹$ 证明类似.</li>
   </ol>
 </div>
 
