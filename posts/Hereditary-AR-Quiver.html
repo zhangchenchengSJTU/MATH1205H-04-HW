@@ -93,15 +93,12 @@
   <li><a href="#遗传代数与无界-ar-quiver" id="markdown-toc-遗传代数与无界-ar-quiver">遗传代数与无界 AR quiver</a>    <ul>
       <li><a href="#遗传代数的-ar-quiver" id="markdown-toc-遗传代数的-ar-quiver">遗传代数的 AR quiver</a></li>
       <li><a href="#无限-ar-平移-截面" id="markdown-toc-无限-ar-平移-截面">无限 AR 平移, 截面</a></li>
-      <li><a href="#遗传代数的无限-ar-平移" id="markdown-toc-遗传代数的无限-ar-平移">遗传代数的无限 AR 平移</a>        <ul>
-          <li><a href="#非遗传反例-bound-quiver" id="markdown-toc-非遗传反例-bound-quiver">非遗传反例: Bound Quiver</a></li>
-        </ul>
-      </li>
+      <li><a href="#遗传代数的无限-ar-平移" id="markdown-toc-遗传代数的无限-ar-平移">遗传代数的无限 AR 平移</a></li>
     </ul>
   </li>
   <li><a href="#有限维代数的预投射分支" id="markdown-toc-有限维代数的预投射分支">有限维代数的预投射分支</a>    <ul>
       <li><a href="#遗传代数的预投射与预内射分支" id="markdown-toc-遗传代数的预投射与预内射分支">遗传代数的预投射与预内射分支</a></li>
-      <li><a href="#非遗传代数的预投射分支-例子" id="markdown-toc-非遗传代数的预投射分支-例子">非遗传代数的预投射分支: 例子</a></li>
+      <li><a href="#非遗传代数的预投射分支-怪例子" id="markdown-toc-非遗传代数的预投射分支-怪例子">非遗传代数的预投射分支: 怪例子</a></li>
       <li><a href="#单向性" id="markdown-toc-单向性">单向性</a></li>
     </ul>
   </li>
@@ -112,12 +109,14 @@
 
 <h3 id="遗传代数的-ar-quiver">遗传代数的 AR quiver</h3>
 
-<p>本节假定 $k$ 是代数闭域, 此时, 有限维代数可以通过 quiver with relation 描述. 凡涉及遗传代数, 约定</p>
+<p>本节假定 $k$ 是代数闭域. 此时, 有限维代数可以通过 quiver with relation 描述. 凡涉及遗传代数 (<a href="hereditary_Alg_Eq_def">等价定义</a>), 约定</p>
 
 <ol>
   <li>$Q$ 总是有限维, 连通 quiver;</li>
   <li>$A$ 是有限维, 连通, 基础的遗传代数.</li>
 </ol>
+
+<p>对有限维代数, [遗传性不区分左右].</p>
 
 <div class="note">
   <p>若 $Q$ 有限维, 则 $Q$ 既无自环亦无定向环; 但 $Q$ 可能包含重边.</p>
@@ -126,14 +125,14 @@
 <p>实际上, 以下是对应.</p>
 
 <div class="theorem">
-  <p>在同构的意义下, 以下两者对应</p>
+  <p>在同构的意义下, 以下两者是对应</p>
   <ol>
     <li>有限维, 连通, 基础的遗传代数;</li>
     <li>路代数 $kQ$, 其中 $Q$ 是有限维, 连通 quiver.</li>
   </ol>
 </div>
 
-<p>从有限维, 连通, 基础的遗传代数得到 quiver 的方式是</p>
+<p>特别地, 从有限维, 连通, 基础的遗传代数得到 quiver 的方式是</p>
 
 <ol>
   <li>任取幂等分解 $\{e_i\}_{i=1}^n$;</li>
@@ -142,10 +141,10 @@
 </ol>
 
 <div class="theorem">
-  <p>(<a href="Quiver-and-Hereditary-Algebra#遗传代数的箭图表示">证明</a>). $kQ$ 的不可分解投射模具有如下以下性质:</p>
+  <p>(证明略). $kQ$ 的不可分解投射模具有如下以下性质:</p>
   <ol>
     <li>不可分解投射对象间的态射必然是单的, 投射对象是 brick;</li>
-    <li>$\mathrm{Irr}(P(i), P(j)) ≃ \mathrm{Ext}^1(P(i), P(j))$;</li>
+    <li>$\mathrm{Irr}(P(j), P(i)) ≃ \mathrm{Ext}^1(S(i), S(j))$ 都以 $\mathrm{Hom}_{Q}(i,j)$ 为基;</li>
     <li>$Γ (kQ)$ 中不可分解投射对象所在的全子范畴同构于 $Q^{\mathrm{op}}$.</li>
   </ol>
 </div>
@@ -185,7 +184,7 @@
 <div class="definition">
   <p>(quiver 的无界化). 给定 $Q$, 定义 $ℤ Q$ 如下.</p>
   <ol>
-    <li>顶点集是 Catersian 积 $(ℤ × Q)_0 := ℤ × Q_0$.</li>
+    <li>顶点集是 Catersian 积 $(ℤQ)_0 := ℤ × Q_0$.</li>
     <li>箭头集是 $S_1 ⊔ S_2$. 其中       <ol>
         <li>($Γ$ 内的箭头). $S_1 := ℤ × Q_1$, 形如 $(n, α) : (n, x) → (n, y)$.</li>
         <li>($Γ$ 外的箭头) $S_2$ 中箭头刻画如下: 若 $(n, α) : (n, x) → (n, y)$, 则作</li>
@@ -198,8 +197,8 @@
   <p>简而言之, $(n + 1, y) \xrightarrow[\text{反射}]{θ (n , α)} (n, x) \xrightarrow{(n,α)} (n, y)$. 朝向与 AR quiver 一致:</p>
   <p>$$
 \begin{bmatrix}
- &  & ( n,x) &  & \\
- & \nearrow  &  & \searrow  & \\
+&  & ( n,x) &  & \\
+& \nearrow  &  & \searrow  & \\
 ( n+1,y) &  & \overset{\tau }{\dashleftarrow } &  & ( n,y)
 \end{bmatrix}
 $$</p>
@@ -210,7 +209,7 @@ $$</p>
 <div class="definition">
   <p>定义 $ℤQ$ 上的两类运算.</p>
   <ol>
-    <li>$τ : ℤQ → ℤQ ,\quad (n, ∙) → (n-1, ∙)$ 是平移.</li>
+    <li>$τ : ℤQ → ℤQ ,\quad (n, ∙) → (n+1, ∙)$ 是向左平移.</li>
     <li>$θ : ℤQ_1 → ℤQ_1$ 是朝向 $τ$ 的反射 (往左偏移).</li>
   </ol>
 </div>
@@ -264,8 +263,8 @@ $$</p>
 <p>选定 AR quiver $Γ$, 使用</p>
 
 <ol>
-  <li>$𝔓$ 表示投射对象所在的全子范畴.</li>
-  <li>$ℑ$ 表示内射对象所在的全子范畴.</li>
+  <li>$𝔓 = 𝐩𝐫𝐨𝐣 ∩ Γ$ 表示投射对象所在的全子范畴.</li>
+  <li>$ℑ = 𝐢𝐧𝐣 ∩ Γ$ 表示内射对象所在的全子范畴.</li>
 </ol>
 
 <p>对有限表示的遗传代数 (不必选择代数闭域), 有如下引理.</p>
@@ -289,16 +288,9 @@ $$</p>
   </ol>
 </div>
 
-<h4 id="非遗传反例-bound-quiver">非遗传反例: Bound Quiver</h4>
-
-<p>以下假定 $Q$ 是有限维连通 quiver, $I$ 是 $kQ$ 的容许理想. 此时 $kQ / I$ 是 bound 路代数.</p>
-
 <div class="example">
-  <p>对于 bound 路代数, $𝔓$ 是 $\mathrm{Q^{\mathrm{op}}}$ 的子图, 从而 $𝔓$ 各分支所在的连通分支仍是无环的; 但 $𝔓 ↪ Q^{\mathrm{op}}$ 未必是全子范畴, 甚至 $𝔓$ 未必连通, 例如<a href="Commutative_Diagram_Alg#非-apr-tilting-模">此文中的 $B = \mathrm{End}(T_A)$</a>.</p>
-</div>
-
-<div class="example">
-  <p>对无限表示的 bound 路代数, $𝔓$ 所在的连通分支可能包含内射对象: 可以轻易构造一批存在投射内射模的无限表示的 bound 路代数.</p>
+  <p>(Kronecker quiver).</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsMTUsWzAsMiwiWzAgXFxtaWQgMV0iLFsyMzIsMTAwLDYwLDFdXSxbMSwyLCJbMSBcXG1pZCAyXSIsWzIzMiwxMDAsNjAsMV1dLFsxLDMsIlsyIFxcbWlkIDNdIixbMjA2LDEwMCw2MCwxXV0sWzIsMywiWzNcXG1pZCA0XSIsWzIwNiwxMDAsNjAsMV1dLFsyLDQsIlxcY2RvdHMiLFsyMDYsMTAwLDYwLDFdXSxbNCwwLCJcXGNkb3RzIixbMTksMTAwLDYwLDFdXSxbNCwxLCJbNCBcXG1pZCAzXSIsWzE5LDEwMCw2MCwxXV0sWzUsMSwiWzNcXG1pZDJdIixbMTksMTAwLDYwLDFdXSxbNSwyLCJbMlxcbWlkMV0iLFszNTcsMTAwLDYwLDFdXSxbNiwyLCJbMVxcbWlkMF0iLFszNTcsMTAwLDYwLDFdXSxbMiwyLCJcXHRleHR7cHJvan0iLFsyMzIsMTAwLDYwLDFdXSxbMywzLCJcXHRleHR7cG9zdC1wcm9qfSIsWzIwNiwxMDAsNjAsMV1dLFszLDEsIlxcdGV4dHtwcmUtaW5qfSIsWzE5LDEwMCw2MCwxXV0sWzQsMiwiXFx0ZXh0e2luan0iLFszNTcsMTAwLDYwLDFdXSxbMywyLCJcXGJveGVke1xcdGV4dHtyZWd1bGFyIG1vZH19IixbMTIwLDYwLDYwLDFdXSxbMCwxXSxbMSwyXSxbMiwzXSxbMyw0XSxbMCwxLCIiLDEseyJvZmZzZXQiOi0zfV0sWzEsMiwiIiwxLHsib2Zmc2V0IjotM31dLFsyLDMsIiIsMSx7Im9mZnNldCI6LTN9XSxbMyw0LCIiLDEseyJvZmZzZXQiOi0zfV0sWzYsN10sWzcsOF0sWzYsNywiIiwxLHsib2Zmc2V0IjotM31dLFs4LDksIiIsMSx7Im9mZnNldCI6LTN9XSxbNSw2XSxbNSw2LCIiLDEseyJvZmZzZXQiOi0zfV0sWzIsMCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzMsMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsMiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzcsNSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzgsNiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzksNywiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzExLDEwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTQsMTEsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV0sWzEyLDE0LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9fX1dLFsxMywxMiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzcsOCwiIiwxLHsib2Zmc2V0IjotM31dLFs4LDldXQ== --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTUsWzAsMiwiWzAgXFxtaWQgMV0iLFsyMzIsMTAwLDYwLDFdXSxbMSwyLCJbMSBcXG1pZCAyXSIsWzIzMiwxMDAsNjAsMV1dLFsxLDMsIlsyIFxcbWlkIDNdIixbMjA2LDEwMCw2MCwxXV0sWzIsMywiWzNcXG1pZCA0XSIsWzIwNiwxMDAsNjAsMV1dLFsyLDQsIlxcY2RvdHMiLFsyMDYsMTAwLDYwLDFdXSxbNCwwLCJcXGNkb3RzIixbMTksMTAwLDYwLDFdXSxbNCwxLCJbNCBcXG1pZCAzXSIsWzE5LDEwMCw2MCwxXV0sWzUsMSwiWzNcXG1pZDJdIixbMTksMTAwLDYwLDFdXSxbNSwyLCJbMlxcbWlkMV0iLFszNTcsMTAwLDYwLDFdXSxbNiwyLCJbMVxcbWlkMF0iLFszNTcsMTAwLDYwLDFdXSxbMiwyLCJcXHRleHR7cHJvan0iLFsyMzIsMTAwLDYwLDFdXSxbMywzLCJcXHRleHR7cG9zdC1wcm9qfSIsWzIwNiwxMDAsNjAsMV1dLFszLDEsIlxcdGV4dHtwcmUtaW5qfSIsWzE5LDEwMCw2MCwxXV0sWzQsMiwiXFx0ZXh0e2luan0iLFszNTcsMTAwLDYwLDFdXSxbMywyLCJcXGJveGVke1xcdGV4dHtyZWd1bGFyIG1vZH19IixbMTIwLDYwLDYwLDFdXSxbMCwxXSxbMSwyXSxbMiwzXSxbMyw0XSxbMCwxLCIiLDEseyJvZmZzZXQiOi0zfV0sWzEsMiwiIiwxLHsib2Zmc2V0IjotM31dLFsyLDMsIiIsMSx7Im9mZnNldCI6LTN9XSxbMyw0LCIiLDEseyJvZmZzZXQiOi0zfV0sWzYsN10sWzcsOF0sWzYsNywiIiwxLHsib2Zmc2V0IjotM31dLFs4LDksIiIsMSx7Im9mZnNldCI6LTN9XSxbNSw2XSxbNSw2LCIiLDEseyJvZmZzZXQiOi0zfV0sWzIsMCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzMsMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsMiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzcsNSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzgsNiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzksNywiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzExLDEwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTQsMTEsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV0sWzEyLDE0LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJzcXVpZ2dseSJ9fX1dLFsxMywxMiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzcsOCwiIiwxLHsib2Zmc2V0IjotM31dLFs4LDldXQ==&amp;embed" width="600" height="300" style="border-radius: 8px; border: dashed;"></iframe> </center>
 </div>
 
 <h2 id="有限维代数的预投射分支">有限维代数的预投射分支</h2>
@@ -319,14 +311,14 @@ $$</p>
 <p>对遗传代数, 其 AR quiver 拆分成以下三部分,</p>
 
 <ol>
-  <li>预投射部分的 AR quiver 同构于 $ℤ_{≤ 0}Q^{\mathrm{op}}$,</li>
-  <li>预内射部分的 AR quiver 同构于 $ℤ_{≥} Q^{\mathrm{op}}$,</li>
+  <li>预投射部分的 AR quiver 同构于 $ℤ_{≤ 0}Q^{\mathrm{op}}$ (向右延申),</li>
+  <li>预内射部分的 AR quiver 同构于 $ℤ_{≥0} Q^{\mathrm{op}}$ (向左延申),</li>
   <li>正规部分的 AR quiver 未必无环, 未必连通, 未必有限.</li>
 </ol>
 
 <p>总体而言, 预投射部分与预内射部分是相对规整的, 正规部分是稍显混乱.</p>
 
-<h3 id="非遗传代数的预投射分支-例子">非遗传代数的预投射分支: 例子</h3>
+<h3 id="非遗传代数的预投射分支-怪例子">非遗传代数的预投射分支: 怪例子</h3>
 
 <p>对非遗传代数, 预投射 (预内射) 模的定义稍有不同. 该定义从预投射 (预内射) 分支出发.</p>
 
@@ -340,7 +332,7 @@ $$</p>
 </div>
 
 <div class="example">
-  <p>不同于遗传代数的预投射分支 ($≃ ℤ_{≤ 0}(Γ (A) ∩ 𝐩𝐫𝐨𝐣)$, $(Γ (A) ∩ 𝐩𝐫𝐨𝐣) ≃ Q^{\mathrm{op}}$), 非遗传代数的预投射分支与投射模存在如下反常现象:</p>
+  <p>不同于遗传代数整齐的预投射分支, 非遗传代数的预投射分支与投射模存在如下反常现象:</p>
   <ol>
     <li>预投射分支可能不存在, 见<a href="Non_Existence_of_Proproj">此文</a>;</li>
     <li>即便代数连通, 预投射分支可能不唯一, 见<a href="Preproj_Disconnected">此例</a>;</li>
@@ -350,11 +342,7 @@ $$</p>
   <p>特别地, 存在预内射但非预投射的投射模, 也存在既非预投射, 亦非预内射的投射模.</p>
 </div>
 
-<div class="note">
-  <p>部分构造参考 <a href="Kronecker_Rep">Kronecker quiver 的 AR quiver</a>.</p>
-</div>
-
-<p>对于有限表示的代数 (不必遗传), $Γ(A)$ 的每一连通分支都是有限的, 因此所有模都是预投射且预内射的. 以下引理给出有限维代数有限表示的充要条件.</p>
+<p>除了怪例子, 也有一些极好的例子: 以下引理给出有限维代数有限表示的充要条件.</p>
 
 <div class="theorem">
   <p>(<a href="Finite_Pre_Post">证明</a>). 对连通的有限维代数 $A$, 以下等价:</p>
