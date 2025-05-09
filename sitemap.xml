@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://zhangchenchengsjtu.github.io/website/posts/20250321Talk</loc>
+<lastmod>2025-03-21T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>https://zhangchenchengsjtu.github.io/website/posts/20250328Talk</loc>
+<lastmod>2025-03-28T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>https://zhangchenchengsjtu.github.io/website/posts/20250418Talk</loc>
+<lastmod>2025-04-18T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>https://zhangchenchengsjtu.github.io/website/posts/AR-notes</loc>
 <lastmod>2025-04-19T00:00:00+08:00</lastmod>
 </url>
@@ -431,6 +443,14 @@
 <url>
 <loc>https://zhangchenchengsjtu.github.io/website/posts/Morphism_Directed</loc>
 <lastmod>2025-05-07T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>https://zhangchenchengsjtu.github.io/website/posts/NBGC</loc>
+<lastmod>2025-05-09T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>https://zhangchenchengsjtu.github.io/website/posts/Additive_Localisation</loc>
+<lastmod>2025-05-09T00:00:00+08:00</lastmod>
 </url>
 <url>
 <loc>https://zhangchenchengsjtu.github.io/website/posts/20250925Talk</loc>
