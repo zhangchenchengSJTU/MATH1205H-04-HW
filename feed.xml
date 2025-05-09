@@ -7,6 +7,86 @@
     
       
         <item>
+          <title>2025-05-09-讨论班</title>
+          <description>&lt;h2 id=&quot;上期勘误&quot;&gt;上期勘误&lt;/h2&gt;
+
+&lt;p&gt;位置: &lt;a href=&quot;Gabriel_1&quot;&gt;Gabriel 定理的证明 (1-2.)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;证明&lt;/p&gt;
+
+&lt;p&gt;$$\begin{equation}
+  𝐝𝐢𝐦 : 𝐈𝐧𝐝𝐞𝐜𝐨𝐦𝐩 (kQ) → Δ _+
+\end{equation}$$&lt;/p&gt;
+
+&lt;p&gt;良定义时, 原证明先就 $M$ 为 brick 与否进行讨论. 假定 $M$ 非 brick, 取维数极小的非零 $B ∈ 𝐬𝐮𝐛(M) ∩ 𝐪𝐮𝐨𝐭(M)$…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(错误步骤). 将 $B ↪ M ↠ B$ 补全作推出拉回方块.&lt;/li&gt;
+  &lt;li&gt;(勘误修复). 证明 $𝐪𝐮𝐨𝐭(M)$ 中存在非自垂直的 brick, 导出矛盾.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;本周内容&quot;&gt;本周内容&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;Hereditary-ar-quiver&quot;&gt;正文&lt;/a&gt;, 与大纲:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;遗传代数
+    &lt;ul&gt;
+      &lt;li&gt;遗传代数的等价定义, 例子.&lt;/li&gt;
+      &lt;li&gt;(不证明). 代数闭域上遗传代数的 quvier 表示.&lt;/li&gt;
+      &lt;li&gt;(重要例子) 计算 kronecker quiver 的 AR quiver.
+        &lt;ul&gt;
+          &lt;li&gt;Coxeter reflection v.s. AR translation.&lt;/li&gt;
+          &lt;li&gt;A glimpse of postproj, preinj, regular components.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;预投射分支的结构
+    &lt;ul&gt;
+      &lt;li&gt;遗传代数 (I)
+        &lt;ul&gt;
+          &lt;li&gt;无限 AR quiver, 截面.&lt;/li&gt;
+          &lt;li&gt;整齐的预投射分支.&lt;/li&gt;
+          &lt;li&gt;…&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;有限维代数
+        &lt;ul&gt;
+          &lt;li&gt;好例子: 有限表示的充要条件.
+            &lt;ul&gt;
+              &lt;li&gt;重要定理: 原田-斎长度估计.&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;怪例子: 预投射/预内射分支可以有多乱.&lt;/li&gt;
+          &lt;li&gt;预投射分支的 Noether 性, 单向性.&lt;/li&gt;
+          &lt;li&gt;预投射模是自垂直的 brick.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;遗传代数 (II)
+        &lt;ul&gt;
+          &lt;li&gt;有限表示的充要条件.&lt;/li&gt;
+          &lt;li&gt;$τ^±$-等价.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;次回預告&quot;&gt;次回預告&lt;/h2&gt;
+
+&lt;p&gt;Tilted 代数的预投射分支: 将&lt;a href=&quot;commutative_Diagram_Alg&quot;&gt;此例&lt;/a&gt;的倾斜现象推广至无限表示遗传代数, 原遗传代数 $kQ$ 与 tilted 代数 $\mathrm{End}(T)$ 的预投射分支, 预内射分支, 以及正规部分有何联系?&lt;/p&gt;
+
+&lt;p&gt;关于预投射部分存在性之判准, 留至 Directing 模.&lt;/p&gt;
+</description>
+          <pubDate>2025-05-09T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/20250925Talk</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/20250925Talk</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>预投射分支的态射单向性</title>
           <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
 
@@ -4231,9 +4311,13 @@ $$&lt;/p&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;给定考虑以下带关系的 quiver&lt;/p&gt;
-  &lt;p&gt;\begin{equation} 0 \underset{b_1}{\overset {a_1} ⇄} 1 \underset{b_2}{\overset {a_2} ⇄} \cdots \underset{b_n}{\overset {a_n} ⇄} n. \end{equation}&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+    0  \ \underset{b_1}{\overset {a_1} ⇄} \  1  \ \underset{b_2}{\overset {a_2} ⇄}  \ \cdots \ \underset{b_n}{\overset {a_n} ⇄} \ n.
+\end{equation}$$&lt;/p&gt;
   &lt;p&gt;取 $S := \{a_i b_i, b_ia_i\}_{1 ≤ i ≤ n} ∪ \{a_{i+1}a_{i}, b_i b_{i+1}\}_{i=1}^{n-1}$, 也就是 $a^2 = b^2 = ab = ba = 0$. 记代数 $A= kQ / (S)$. &lt;br /&gt; &lt;br /&gt; 考虑每点处维度为 $1$ 的连通模, 也就是形如 $0 → 1 ← \cdots → n$ 的模 (共计 $2^n$ 个). 对这些模进行字典序排列, 则存在一列互相连接的非同构的同态, 且限制在 $Me_0$ 上是同构. 取满-单分解项, 得 $2^{n+1} - 2$ 个态射, 其合成非零. 此处 $ℓ = (n+1)$.&lt;/p&gt;
-  &lt;p&gt;\begin{equation} [0 → 1 ← 2 → 3 → 4 ← 5] ↠ [0 → 1 ← 2 → 3] ↪ [0 → 1 ← 2 → 3 ← 4 → 5]. \end{equation}&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+    [0 → 1 ← 2 → 3 → 4 ← 5] ↠ [0 → 1 ← 2 → 3] ↪ [0 → 1 ← 2 → 3 ← 4 → 5].
+\end{equation}$$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
@@ -4491,9 +4575,9 @@ $$&lt;/p&gt;
     
       
         <item>
-          <title>Notes on AR Quivers over Hereditary Algebras.</title>
+          <title>有限维代数的预投射部分</title>
           <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#无界-ar-quiver&quot; id=&quot;markdown-toc-无界-ar-quiver&quot;&gt;无界 AR quiver&lt;/a&gt;    &lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#遗传代数与无界-ar-quiver&quot; id=&quot;markdown-toc-遗传代数与无界-ar-quiver&quot;&gt;遗传代数与无界 AR quiver&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#遗传代数的-ar-quiver&quot; id=&quot;markdown-toc-遗传代数的-ar-quiver&quot;&gt;遗传代数的 AR quiver&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#无限-ar-平移-截面&quot; id=&quot;markdown-toc-无限-ar-平移-截面&quot;&gt;无限 AR 平移, 截面&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#遗传代数的无限-ar-平移&quot; id=&quot;markdown-toc-遗传代数的无限-ar-平移&quot;&gt;遗传代数的无限 AR 平移&lt;/a&gt;        &lt;ul&gt;
@@ -4511,7 +4595,7 @@ $$&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;#回归遗传代数&quot; id=&quot;markdown-toc-回归遗传代数&quot;&gt;回归遗传代数&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;无界-ar-quiver&quot;&gt;无界 AR quiver&lt;/h2&gt;
+&lt;h2 id=&quot;遗传代数与无界-ar-quiver&quot;&gt;遗传代数与无界 AR quiver&lt;/h2&gt;
 
 &lt;h3 id=&quot;遗传代数的-ar-quiver&quot;&gt;遗传代数的 AR quiver&lt;/h3&gt;
 
@@ -4862,6 +4946,69 @@ $$&lt;/p&gt;
     
       
         <item>
+          <title>2025-04-25-讨论班</title>
+          <description>&lt;h2 id=&quot;torsion-pair-的遗留问题&quot;&gt;Torsion pair 的遗留问题&lt;/h2&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;($\mathrm{Ext}^1$-垂直条件, &lt;a href=&quot;Torsion_Pair_Ext_Orth&quot;&gt;证明&lt;/a&gt;). 以下刻画 torsion pair $(𝒯, ℱ)$ 中满足 $\mathrm{Ext}^1$-垂直的对象. 记 $t$ 与 $f$ 是相应的子函子与商函子.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$𝒯 ∩ (^⟂ 𝒯) = 𝒯 ∩ τ ⁻¹ ℱ$.&lt;/li&gt;
+    &lt;li&gt;$𝒯 ∩ (𝒯^⟂) = 𝒯 ∩ t(𝐢𝐧𝐣)$.&lt;/li&gt;
+    &lt;li&gt;$ℱ ∩ (ℱ^⟂) = ℱ ∩ τ 𝒯$.&lt;/li&gt;
+    &lt;li&gt;$ℱ ∩ (^⟂ ℱ) = ℱ ∩ f(𝐩𝐫𝐨𝐣)$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;见&lt;a href=&quot;Notes_on_Tilting#torsion-pair-确定的对象类&quot;&gt;此节&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;tilting-与-torsion-pair-mathjax_protectedjche4pc8j2srykg4oipipcdkq8gpsdwnzca8j2qnfcdkj0ovckkmathjax_protected-的证明&quot;&gt;Tilting 与 torsion pair: $(^⟂𝒯) ∩ 𝒯 = 𝐚𝐝𝐝(T)$ 的证明&lt;/h2&gt;
+
+&lt;p&gt;逼近问题见&lt;a href=&quot;Notes_on_Tilting#tilting-模诱导的-torsion-pair&quot;&gt;此节&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;(Tilting 对象与 torsion pair, &lt;a href=&quot;Tilting_Obj_Torsion_Pair&quot;&gt;证明&lt;/a&gt;). 对 tilting 对象诱导的 torsion pair $(𝒯, ℱ)$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;p&gt;对任意 $M ∈ 𝒯$, 存在满的右 $𝐚𝐝𝐝 (T)$-逼近 $T^n ↠ M$ 使得&lt;/p&gt;
+      &lt;p&gt;$$
+   0 → K → T^n → M → 0 \quad ∈ 𝒯.
+   $$&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;$(^⟂𝒯) ∩ 𝒯 = 𝐚𝐝𝐝(T)$, 即 $𝒯 ∩ τ ^{-1} ℱ = 𝐚𝐝𝐝(T)$.       &lt;blockquote&gt;
+        &lt;p&gt;一般来说, 只有 $(^⟂𝒯) ∩ 𝒯 = 𝒯 ∩ τ ^{-1} ℱ$.&lt;/p&gt;
+      &lt;/blockquote&gt;
+    &lt;/li&gt;
+    &lt;li&gt;$M ∈ 𝒯$ 当且仅当配对 $(T, M) ⊗ T → M$ 是同构.       &lt;blockquote&gt;
+        &lt;p&gt;&lt;a href=&quot;gen_and_cog&quot;&gt;一般来说&lt;/a&gt;, $M ∈ 𝒯$ 当且仅当配对 $(T, M) ⊗ T → M$ 是满的.&lt;/p&gt;
+      &lt;/blockquote&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;特别地, 存在一列逼近的 ses&lt;/p&gt;
+  &lt;p&gt;$$
+0 → K_{k + 1} → T^{N_n} → K_n → 0\quad (n ≥ 0,\quad K_0 = M).
+$$&lt;/p&gt;
+  &lt;p&gt;使得有长正合列&lt;/p&gt;
+  &lt;p&gt;$$
+θ : \dots → T^{N_2} → T^{N_1} → T^{N_0} → M → 0.
+$$&lt;/p&gt;
+  &lt;p&gt;使得 $(T, θ)$ 是 $(T, M)$ 的 $\mathrm{End}(T)$-模投射分解.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;关于反射&quot;&gt;关于反射&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;Proof-Gabriel&quot;&gt;Gabriel 定理的证明&lt;/a&gt;.&lt;/p&gt;
+</description>
+          <pubDate>2025-04-25T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/20250425Talk</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/20250425Talk</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Gabriel 主定理 (II)</title>
           <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
 
@@ -5069,69 +5216,6 @@ $$&lt;/p&gt;
           <pubDate>2025-04-25T00:00:00+08:00</pubDate>
           <link>https://zhangchenchengsjtu.github.io/website/posts/Finite_and_Affine_Root_System</link>
           <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Finite_and_Affine_Root_System</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>2025-04-25-讨论班</title>
-          <description>&lt;h2 id=&quot;torsion-pair-的遗留问题&quot;&gt;Torsion pair 的遗留问题&lt;/h2&gt;
-
-&lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;($\mathrm{Ext}^1$-垂直条件, &lt;a href=&quot;Torsion_Pair_Ext_Orth&quot;&gt;证明&lt;/a&gt;). 以下刻画 torsion pair $(𝒯, ℱ)$ 中满足 $\mathrm{Ext}^1$-垂直的对象. 记 $t$ 与 $f$ 是相应的子函子与商函子.&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;$𝒯 ∩ (^⟂ 𝒯) = 𝒯 ∩ τ ⁻¹ ℱ$.&lt;/li&gt;
-    &lt;li&gt;$𝒯 ∩ (𝒯^⟂) = 𝒯 ∩ t(𝐢𝐧𝐣)$.&lt;/li&gt;
-    &lt;li&gt;$ℱ ∩ (ℱ^⟂) = ℱ ∩ τ 𝒯$.&lt;/li&gt;
-    &lt;li&gt;$ℱ ∩ (^⟂ ℱ) = ℱ ∩ f(𝐩𝐫𝐨𝐣)$.&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-&lt;p&gt;见&lt;a href=&quot;Notes_on_Tilting#torsion-pair-确定的对象类&quot;&gt;此节&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;tilting-与-torsion-pair-mathjax_protectedjche4pc8j2srykg4oipipcdkq8gpsdwnzca8j2qnfcdkj0ovckkmathjax_protected-的证明&quot;&gt;Tilting 与 torsion pair: $(^⟂𝒯) ∩ 𝒯 = 𝐚𝐝𝐝(T)$ 的证明&lt;/h2&gt;
-
-&lt;p&gt;逼近问题见&lt;a href=&quot;Notes_on_Tilting#tilting-模诱导的-torsion-pair&quot;&gt;此节&lt;/a&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;proposition&quot;&gt;
-  &lt;p&gt;(Tilting 对象与 torsion pair, &lt;a href=&quot;Tilting_Obj_Torsion_Pair&quot;&gt;证明&lt;/a&gt;). 对 tilting 对象诱导的 torsion pair $(𝒯, ℱ)$.&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;
-      &lt;p&gt;对任意 $M ∈ 𝒯$, 存在满的右 $𝐚𝐝𝐝 (T)$-逼近 $T^n ↠ M$ 使得&lt;/p&gt;
-      &lt;p&gt;$$
-   0 → K → T^n → M → 0 \quad ∈ 𝒯.
-   $$&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li&gt;$(^⟂𝒯) ∩ 𝒯 = 𝐚𝐝𝐝(T)$, 即 $𝒯 ∩ τ ^{-1} ℱ = 𝐚𝐝𝐝(T)$.       &lt;blockquote&gt;
-        &lt;p&gt;一般来说, 只有 $(^⟂𝒯) ∩ 𝒯 = 𝒯 ∩ τ ^{-1} ℱ$.&lt;/p&gt;
-      &lt;/blockquote&gt;
-    &lt;/li&gt;
-    &lt;li&gt;$M ∈ 𝒯$ 当且仅当配对 $(T, M) ⊗ T → M$ 是同构.       &lt;blockquote&gt;
-        &lt;p&gt;&lt;a href=&quot;gen_and_cog&quot;&gt;一般来说&lt;/a&gt;, $M ∈ 𝒯$ 当且仅当配对 $(T, M) ⊗ T → M$ 是满的.&lt;/p&gt;
-      &lt;/blockquote&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;特别地, 存在一列逼近的 ses&lt;/p&gt;
-  &lt;p&gt;$$
-0 → K_{k + 1} → T^{N_n} → K_n → 0\quad (n ≥ 0,\quad K_0 = M).
-$$&lt;/p&gt;
-  &lt;p&gt;使得有长正合列&lt;/p&gt;
-  &lt;p&gt;$$
-θ : \dots → T^{N_2} → T^{N_1} → T^{N_0} → M → 0.
-$$&lt;/p&gt;
-  &lt;p&gt;使得 $(T, θ)$ 是 $(T, M)$ 的 $\mathrm{End}(T)$-模投射分解.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;关于反射&quot;&gt;关于反射&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;Proof-Gabriel&quot;&gt;Gabriel 定理的证明&lt;/a&gt;.&lt;/p&gt;
-</description>
-          <pubDate>2025-04-25T00:00:00+08:00</pubDate>
-          <link>https://zhangchenchengsjtu.github.io/website/posts/Talk</link>
-          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Talk</guid>
         </item>
       
     
