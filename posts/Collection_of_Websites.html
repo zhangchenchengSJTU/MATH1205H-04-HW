@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>Useful Tools
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="网站搜集">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Collection_of_Websites">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+</head>
+
+<body class="latex-dark">
+
+	<aside class="logo" id="logo-section">
+  <a href="/website/about" id="logo-link">
+    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
+  </a>
+  <span class="logo-prompt" id="logo-prompt">About the Author</span>
+</aside>
+
+<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>Useful Tools</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 10, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="网站搜集">网站搜集</h2>
+
+<h3 id="mathjax_protectedjfxmyvrlwcqmathjax_protected-相关">$\LaTeX$ 相关</h3>
+
+<h4 id="识别">识别</h4>
+
+<p><a href="https://detexify.kirelabs.org/classify.html">de$\TeX$ify</a>: 手写识别符号, package 等.</p>
+
+<p><a href="https://simpletex.cn/">Simple $\TeX$</a>: 免费, 高效的 OCR.</p>
+
+<h4 id="绘图">绘图</h4>
+
+<p><a href="https://q.uiver.app/">quiver</a>: 实现基本的 <code class="language-plaintext highlighter-rouge">tikz-cd</code> 功能, 但需要<a href="https://raw.githubusercontent.com/varkor/quiver/master/package/quiver.sty">额外的宏包 <code class="language-plaintext highlighter-rouge">quiver.sty</code></a>. 支持 <code class="language-plaintext highlighter-rouge">html</code> 嵌入.</p>
+
+<p><a href="https://tikzcd.yichuanshen.de/">tikzcd.yichuanshen</a>: 实现基本的 <code class="language-plaintext highlighter-rouge">tikz-cd</code> 功能, 无需额外宏包, 但是操作低效.</p>
+
+<p><a href="https://www.mathcha.io/editor">mathcha</a>: 强大的 <code class="language-plaintext highlighter-rouge">tikzpicture</code> 制作网站.</p>
+
+<h4 id="unicode-mathjax_protectedjfxmyvrlwcqmathjax_protected">Unicode $\LaTeX$</h4>
+
+<p>字典: <a href="https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode">Wiki</a>, <a href="https://ctan.math.illinois.edu/fonts/erewhon-math/unimath-erewhon.pdf">ctan</a>, <a href="Unicode_math_Table">输入快捷键</a>.</p>
+
+<p>输入法: 使用 vscode 插件 <a href="https://marketplace.visualstudio.com/items?itemName=GuidoTapia2.unicode-math-vscode">Fast Unicode Math Characters</a>, <a href="https://marketplace.visualstudio.com/items?itemName=oijaz.unicode-latex">Unicode Latex</a>; <a href="https://live.lean-lang.org/">L∃∀N 在线</a>.</p>
+
+<h4 id="bibmathjax_protectedjfxuzvgkmathjax_protected-转换">Bib$\TeX$ 转换</h4>
+
+<p><a href="https://bibtex.online/">Converter A</a>, <a href="https://asouqi.github.io/bibtex-converter/">Converter B</a>.</p>
+
+<h2 id="multilanguage">Multilanguage</h2>
+
+<h3 id="special-latin-orthography">Special Latin Orthography</h3>
+
+<p>For Drançais, Deutsch, Español, Dansk, etc.</p>
+
+<ul>
+  <li>Ä À Â Å Æ Ç É È Ê Ë Î Ï Ñ Ö Ô Ø Œ ẞ Ù Û Ü Ÿ</li>
+  <li>ä à â å æ ç é è ê ë î ï ñ ö ô ø œ ß ù û ü ÿ</li>
+</ul>
+
+<p>For Čeština</p>
+
+<ul>
+  <li>Á Č Ď É Ě Í Ň Ó Ř Š Ť Ú Ů Ý Ž</li>
+  <li>á č ď é ě í ň ó ř š ť ú ů ý ž</li>
+</ul>
+
+<p>For Polski</p>
+
+<ul>
+  <li>Ą Ć Ę Ł Ń Ó Ś Ź Ż</li>
+  <li>ą ć ę ł ń ó ś ź ż</li>
+</ul>
+
+<p>Special brackets: ⟨ ⟩ « »</p>
+
+<h3 id="hellas">Hellas</h3>
+
+<p><a href="https://www.foundalis.com/lan/hw/grkhandw.htm">Handwriting</a> and <a href="https://www.foundalis.com/lan/grkalpha.htm">pronounciation</a>.</p>
+
+<h3 id="cyrillic-eg-rus">Cyrillic (e.g. RUS)</h3>
+
+<p><a href="https://www.lexilogos.com/keyboard/russian.htm">Cyrillic-Latin Converter</a>.</p>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Unicode_math_Table"
+        title="NEXT: Unicode Math Table">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/20250925Talk"
+        title="PREV: 2025-05-09-讨论班">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+</body>
+
+
+</html>

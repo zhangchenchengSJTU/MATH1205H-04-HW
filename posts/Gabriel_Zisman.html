@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>Gabriel-Zisman 局部化
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="  Abstract      本小节介绍 Gabriel-Zisman 通过路范畴构造局部化的实现方式.  ">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Gabriel_Zisman">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+</head>
+
+<body class="latex-dark">
+
+	<aside class="logo" id="logo-section">
+  <a href="/website/about" id="logo-link">
+    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
+  </a>
+  <span class="logo-prompt" id="logo-prompt">About the Author</span>
+</aside>
+
+<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>Gabriel-Zisman 局部化</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 9, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="abstract">
+  <h5 id="abstract">Abstract</h5>
+  <div>
+    <p>本小节介绍 Gabriel-Zisman 通过路范畴构造局部化的实现方式.</p>
+  </div>
+</div>
+
+<h2 id="构造">构造</h2>
+
+<div class="definition">
+  <p>(范畴的局部化). 范畴 $𝒞$ 关于态射类 $S⊂ 𝖬𝗈𝗋(𝒞)$ 的局部化范畴 $S^{-1}𝒞$ 由以下泛性质决定: 对任意 $𝒟$, 函子 $F:𝒞 → 𝒟$ 映 $S$ 为 $𝒟$ 的同构类, 当且仅当 $F$ 经 $S^{-1}𝒞$ 分解. $$\begin{equation}
+\begin{bmatrix}
+𝒞\left[ S^{-1}\right] & \dashrightarrow  & 𝒟\\
+\uparrow  &  & ∥ \\
+𝒞 & \xrightarrow{F} & 𝒟\\
+S & \rightarrow  & \mathrm{Iso}( 𝒟)
+\end{bmatrix}
+\end{equation}$$</p>
+</div>
+
+<div class="proposition">
+  <p>(局部化的存在性: Gabriel-Zisman 的路范畴构造). 给定范畴 $𝒞$ 与态射类 $S$. 以下是将 $S^{-1}$ 形式地加入 $𝖬𝗈𝗋(𝒞)$ 的方式.</p>
+  <ol>
+    <li>由 $𝒞$ 与 $S$ 构造箭图范畴 $𝒬=𝒬(𝒞,S)$, 其对象类与 $𝒞$ 相同, 态射为无交并 $(X,Y)_{𝒬}=\sqcup_{n\geq 0}(X,Y)_n$. 此处       <ol>
+        <li>$(X,Y)_0$ 包含 $Y\leftarrow X$ 朝向的长为 $0$ 的路, 非空当且仅当 $X=Y$. 其元素为 $(X,X)_0=\{\mathrm{id}_X\}$.</li>
+        <li>
+          <p>$(X,Y)_1$ 包含 $Y\leftarrow X$ 朝向的长为 $1$ 的路, 定义作无交并</p>
+          <p>$$\begin{equation}
+        (X,Y)_1=(X,Y)_{𝒞}\sqcup \{a:Y\to X\mid a\in S\}=:(X,Y)_{1,1}\sqcup (X,Y)_{1,2}.
+      \end{equation}$$</p>
+        </li>
+        <li>$(X,Y)_{n+1}$ 包含 $Y\leftarrow X$ 朝向的长为 $n+1$ 的路. $s\in (X,Y)_{n+1}$ 当且仅当存在 $Z$ 使得 $s\in ((Z,Y)_1\circ (X,Z)_n)$. 此处态射的复合是自由的.</li>
+      </ol>
+      <ul>
+        <li>注意: 范畴 $𝒬$ 中的态射是 $𝒞$ 中非恒等态射在忘却复合结构下生成的自由字. 因此, 对象间的 $\mathrm{Hom}$-类未必是小的.</li>
+      </ul>
+    </li>
+    <li>继而考虑 $𝒬$ 上的等价关系. 默认正向箭头的嵌入 $$\begin{equation}
+     𝖬𝗈𝗋(𝒞)\to 𝖬𝗈𝗋(𝒬),\quad [f:X\to Y]\mapsto [f\in (X,Y)_1],\quad \mathrm{id}_X\mapsto \mathrm{id}_X\in (X,X)_0.
+   \end{equation}$$ 引入逆向箭头的嵌入为 (方便起见, 假定态射类 $S$ 不包含任一 $\mathrm{id}_X$) $$\begin{equation}
+     \overline{(-)}:S\to 𝖬𝗈𝗋(𝒬)_1,\quad [f:X\to Y]\mapsto \overline f\quad (f\in (Y,X)_{1,2}).
+   \end{equation}$$ 定义范畴 $𝒬$ 中的等价关系 (容易检验):       <ol>
+        <li>自反性, 表述略;</li>
+        <li>对 $𝒞$ 中的态射复合 $f\circ g=f\circ_{𝒞} g$, 在 $𝒬$ 中有 $(f\circ_{𝒬} g)\sim (f\circ g)$;</li>
+        <li>更一般地, 若 $𝖬𝗈𝗋$ 中有限长的字 $a_1a_2\cdots a_n$ 满足 $a_k=b\circ_{𝒞} c$, 则 $a_1a_2\cdots a_n\sim a_1a_2\cdots a_{k-1}bca_{k+1}\cdots a_n$;</li>
+        <li>对 $(f:X\to Y)\in S$, 定义 $(f\circ_{𝒬}\overline f)\sim \mathrm{id}_Y$ 与 $(\overline f\circ_{𝒬}f)\sim \mathrm{id}_X$;</li>
+        <li>更一般地, 对任一 $𝖬𝗈𝗋$ 中有限长的字 $a_1a_2\cdots a_n$ 与 $f\in S$, 在可复合的意义下有 $a_1a_2\cdots a_n\sim a_1\cdots a_{i}f\overline fa_{i+1}\cdots a_n$, 以及 $a_1a_2\cdots a_n\sim  a_1\cdots a_{j}\overline f ja_{j+1}\cdots a_n$.</li>
+      </ol>
+      <p>需要验证以上是范畴的等价关系. 需要对同一律加以说明: 若 $f\sim g$, 则 $f$ 与 $g$ 有相同的来源与去向.</p>
+    </li>
+    <li>$S^{-1}𝒞$ 定义作 $𝒬$ 关于以上范畴等价关系的商范畴. 注: 此处的商由 (未必小的) 滤过余极限, 因此局部化范畴未必是局部小的. 类似 3.2.7 的检验表明 $𝒬/∼ $ 满足局部化范畴 $S^{-1}𝒞$ 应具有的泛性质.</li>
+  </ol>
+</div>
+
+<h2 id="注记">注记</h2>
+
+<div class="example">
+  <p>依照 Gabriel-Zisman 的构造, 局部化范畴的态射 (等价类的代表元) 形如 $$\begin{equation}
+\begin{bmatrix}
+X &  &  &  & ⋅  &   & ⋅  &  &  &  & Y\\
+ & ↘  &  & ⇙  &  & \cdots &  & ↘  &  & ⇙  & \\
+ &  & ⋅  &  &  &  &  &  & ⋅  &  &
+\end{bmatrix}
+\end{equation}$$</p>
+  <p>其中的双向箭头属于 $S$. 如锯齿状图所示, 商范畴中态射的等价关系往往难以操作; 引入乘法系重要目的是拉直锯齿图.</p>
+</div>
+
+<div class="example">
+  <p>局部小范畴经 Gabriel-Zisman 局部化后未必是局部小范畴. 考虑范畴 $𝒞$ 如下:</p>
+  <ol>
+    <li>对象是 $X$, $Y$, 以及 $𝖮𝖻 (𝐒𝐞𝐭𝐬)$ (集合范畴的所有对象).</li>
+    <li>态射规定如下:       <ol>
+        <li>对任意 $P ∈ 𝒞$, $\mathrm{End}(P) = \{\mathrm{id}_P\}$;</li>
+        <li>对任意 $P ∈ 𝐒𝐞𝐭𝐬$, 总有 $$\begin{equation}
+     |\mathrm{Hom}(X,P)| = |\mathrm{Hom}(Y, P)| = 1.
+   \end{equation}$$</li>
+        <li>其他 $\mathrm{Hom}$-集为空.</li>
+      </ol>
+      <p>总之, 上述范畴非恒等态射形如下图:</p>
+      <p>$$\begin{equation}
+   \begin{bmatrix}
+    &  &  & X &  &  & \\
+   \nearrow  & \cdots  & \nearrow  & \uparrow  & \nwarrow  & \cdots  & \nwarrow \\
+   \cdots  & S_{i} &  & S_{j} &  & S_{k} & \cdots \\
+   \searrow  & \cdots  & \searrow  & \downarrow  & \swarrow  & \cdots  & \swarrow \\
+    &  &  & Y &  &  &
+   \end{bmatrix}
+   \end{equation}$$</p>
+    </li>
+  </ol>
+  <p>记 $S$ 是所有 $S_∙ → X$ 类型的态射. 此时 $\mathrm{Hom}_{𝒞[S^{-1}]}(X, Y)$ 是真类. 尽管 $𝒞[S^{-1}]$ 中仅有两个对象同构类, 该范畴不是局部小的.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Stable_Add_Cat"
+        title="NEXT: 稳定加法范畴">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Additive_Localisation"
+        title="PREV: 加法范畴的局部化">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+</body>
+
+
+</html>

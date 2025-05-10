@@ -9,7 +9,7 @@
 
 
 
-  <title>预投射 (预内射) 模是自垂直的 brick
+  <title>若 $S$ 对直和封闭, 则局部化是加法函子
     ·
     Jekyll Latex</title>
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="/website/assets/favicon.png">
 <link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
 <link rel="stylesheet" href="/website/assets/core.css">
-<link rel="canonical" href="/website/posts/Pre_Post_Self_Oth_Brick">
+<link rel="canonical" href="/website/posts/Additive_Oplus_Closed_Implies">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -78,11 +78,11 @@
 	<main>
   <article>
     <div class="center">
-      <h1>预投射 (预内射) 模是自垂直的 brick</h1>
+      <h1>若 $S$ 对直和封闭, 则局部化是加法函子</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
-        May 6, 2025
+        May 10, 2025
       </p>
 
     </div>
@@ -91,26 +91,20 @@
 
     <h2 id="证明">证明</h2>
 
-<div class="corollary">
-  <p>预投射模和预内射模都是自垂直 ($\mathrm{Ext}^1(M,M) = 0$) 的 brick.</p>
+<div class="theorem">
+  <p>给定加法范畴 $ℬ$ 与态射类 $S$. 假定 $S$ 对直和封闭, 即, $$\begin{equation}
+[f,g ∈ S] ⇒ [f ⊕ g := \begin{pmatrix}f&0 \\ 0&g\end{pmatrix} ∈ S].
+\end{equation}$$</p>
+  <p>此时, 局部化函子是加法函子.</p>
 </div>
 
 <div class="proof">
-  <p>只看预投射情形. 选定预投射模 $M$.</p>
-  <ol>
-    <li>(证明是 brick). 若存在非零非同构的 $φ : M → M$, 则任取 $\operatorname{im}φ$ 的不可分解直和项 $T$. 由<a href="Morphism_Directed">单向性</a>, 必然有 $\operatorname{im}φ$ 预投射. 此时, 该预投射分支存在环路, 矛盾.</li>
-    <li>
-      <p>(证明自垂直). 仅考虑 $M$ 非投射的情形. 依照 <a href="AR_Formula">AR 公式</a>, 得</p>
-      <p>$$
-   D\mathrm{Ext}^1(M, M) ≃ \overline{(M, τM)} ↞ (M, τ M).
-   $$</p>
-      <p>因此, 存在 $M$ 指向 $τM$ 的不可约态射路, 该预投射分支存在环路, 矛盾.</p>
-    </li>
-  </ol>
-</div>
-
-<div class="note">
-  <p>Say a brick $B$ is <a href="https://arxiv.org/pdf/2501.13476">exceptional</a>, provided $\mathrm{Ext}^1(M,M) = 0$.</p>
+  <p>记 $Δ : ℬ → ℬ × ℬ$ 是对角函子, 其左伴随 (以及右伴随) 是双积函子 $⊕ : ℬ × ℬ → ℬ$. 考虑局部化</p>
+  <ul>
+    <li>$Q : ℬ → ℬ [S^{-1}]$;</li>
+    <li>$P : ℬ × ℬ → (ℬ × ℬ) [(S × S)^{-1}] ≃ (ℬ[S^{-1}]) × (ℬ[S^{-1}])$ (后一处同构见<a href="Prod_Localisation">此结论</a>).</li>
+  </ul>
+  <p>由 $S$ 对直和封闭, 故 $Δ$ 与 $⊕$ 通过伴随函子分解. 特别地局部化保持 $⊕$, 因此是加法函子,</p>
 </div>
 
 
@@ -120,8 +114,8 @@
     
       <a
         class="next"
-        href="/website/posts/Preproj_Disconnected"
-        title="NEXT: 预投射分支可能不唯一">&lt;&lt;</a>
+        href="/website/posts/Currying_Functor_Cat"
+        title="NEXT: 函子范畴的 Curry 化">&lt;&lt;</a>
       <span>
         &middot;
       </span>
@@ -136,8 +130,8 @@
       </span>
       <a
         class="prev"
-        href="/website/posts/Post_Proj_Left_Finite"
-        title="PREV: 预投射部分左有界">&gt;&gt;</a>
+        href="/website/posts/Extriangulated_Category"
+        title="PREV: 外三角范畴 (基本定义?)">&gt;&gt;</a>
     
   </div>
 </main>
