@@ -92,7 +92,10 @@
     <ul id="markdown-toc">
   <li><a href="#abstract" id="markdown-toc-abstract">Abstract</a></li>
   <li><a href="#对原模板的若干修改" id="markdown-toc-对原模板的若干修改">对原模板的若干修改</a></li>
-  <li><a href="#why-this-template" id="markdown-toc-why-this-template">Why this template?</a></li>
+  <li><a href="#why-this-template" id="markdown-toc-why-this-template">Why this template?</a>    <ul>
+      <li><a href="#graphs" id="markdown-toc-graphs">Graphs</a></li>
+    </ul>
+  </li>
   <li><a href="#个性化" id="markdown-toc-个性化">个性化</a></li>
 </ul>
 
@@ -267,6 +270,8 @@ _posts/Gabriel/proof/2025-04-24-Ringel_Resolution.md                            
   <p>(在 block 外使用 markdown 与 $\LaTeX$ 写作). 在 {% — %} — {% end— %} 外可直接使用 markdown 语言与 $\LaTeX$.</p>
 </div>
 
+<h3 id="graphs">Graphs</h3>
+
 <div class="example">
   <p>(<code class="language-plaintext highlighter-rouge">Tikz</code> 功能). 使用插件 <code class="language-plaintext highlighter-rouge">quiver</code> 画图.</p>
   <center> <!-- https://q.uiver.app/#q=WzAsMjksWzAsMCwiR0ZNIixbMzAsNjAsNjAsMV1dLFsxLDAsIkdGSV4wICIsWzE4MCw2MCw2MCwxXV0sWzIsMCwiR0ZJXjEiLFsxODAsNjAsNjAsMV1dLFszLDAsIkdGSV4yIixbMTgwLDYwLDYwLDFdXSxbMCwxLCJGTVxcb3RpbWVzIChUXjAsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwyLCJGTVxcb3RpbWVzIChUXjEsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwzLCJGTVxcb3RpbWVzIChUXjIsIFQpIixbMTgwLDYwLDYwLDFdXSxbMSwxLCIoVF4wLEleMCkiXSxbMSwyLCIoVF4xLEleMCkiXSxbMiwxLCIoVF4wLEleMSkiXSxbMywxLCIoVF4wLEleMikiXSxbMiwyLCIoVF4xLEleMSkiXSxbMywyLCIoVF4xLEleMikiXSxbMSwzLCIoVF4yLEleMCkiXSxbMiwzLCIoVF4yLEleMSkiXSxbMywzLCIoVF4yLEleMikiXSxbNCwzLCJcXGJveGVke0VfMH0iXSxbMSw0LCIoQSwgSV4wICkiXSxbMSw1LCIoSF4xKFQpLCBJXjApIixbMCwwLDc1LDFdXSxbMiw0LCIoQSwgSV4xKSJdLFszLDQsIihBLCBJXjIpIl0sWzIsNSwiKEheMShUKSwgSV4xKSIsWzAsMCw3NSwxXV0sWzMsNSwiKEheMShUKSwgSV4yKSIsWzAsMCw3NSwxXV0sWzQsNSwiXFxib3hlZHtFXzF9Il0sWzAsNSwiXFx0ZXh0e+a2iOWksSF9IixbMCwwLDc1LDFdXSxbMSw2LCIoQSxNKSJdLFsyLDYsIjAiLFswLDAsNzUsMV1dLFszLDYsIjAiLFswLDAsNzUsMV1dLFs0LDYsIlxcYm94ZWR7RV8yfSJdLFswLDEsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMSwyLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzIsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFs1LDQsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCwwLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEyLDEwXSxbMTUsMTJdLFs4LDddLFsxMyw4XSxbMTEsOV0sWzYsNSwiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsxNCwxMV0sWzE3LDE5XSxbMTksMjBdLFsxOCwyMSwiIiwyLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsyMSwyMiwiIiwyLHsiY29sb3VyIjpbMCwwLDc1XX1dXQ== --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMjksWzAsMCwiR0ZNIixbMzAsNjAsNjAsMV1dLFsxLDAsIkdGSV4wICIsWzE4MCw2MCw2MCwxXV0sWzIsMCwiR0ZJXjEiLFsxODAsNjAsNjAsMV1dLFszLDAsIkdGSV4yIixbMTgwLDYwLDYwLDFdXSxbMCwxLCJGTVxcb3RpbWVzIChUXjAsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwyLCJGTVxcb3RpbWVzIChUXjEsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwzLCJGTVxcb3RpbWVzIChUXjIsIFQpIixbMTgwLDYwLDYwLDFdXSxbMSwxLCIoVF4wLEleMCkiXSxbMSwyLCIoVF4xLEleMCkiXSxbMiwxLCIoVF4wLEleMSkiXSxbMywxLCIoVF4wLEleMikiXSxbMiwyLCIoVF4xLEleMSkiXSxbMywyLCIoVF4xLEleMikiXSxbMSwzLCIoVF4yLEleMCkiXSxbMiwzLCIoVF4yLEleMSkiXSxbMywzLCIoVF4yLEleMikiXSxbNCwzLCJcXGJveGVke0VfMH0iXSxbMSw0LCIoQSwgSV4wICkiXSxbMSw1LCIoSF4xKFQpLCBJXjApIixbMCwwLDc1LDFdXSxbMiw0LCIoQSwgSV4xKSJdLFszLDQsIihBLCBJXjIpIl0sWzIsNSwiKEheMShUKSwgSV4xKSIsWzAsMCw3NSwxXV0sWzMsNSwiKEheMShUKSwgSV4yKSIsWzAsMCw3NSwxXV0sWzQsNSwiXFxib3hlZHtFXzF9Il0sWzAsNSwiXFx0ZXh0e+a2iOWksSF9IixbMCwwLDc1LDFdXSxbMSw2LCIoQSxNKSJdLFsyLDYsIjAiLFswLDAsNzUsMV1dLFszLDYsIjAiLFswLDAsNzUsMV1dLFs0LDYsIlxcYm94ZWR7RV8yfSJdLFswLDEsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMSwyLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzIsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFs1LDQsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCwwLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEyLDEwXSxbMTUsMTJdLFs4LDddLFsxMyw4XSxbMTEsOV0sWzYsNSwiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsxNCwxMV0sWzE3LDE5XSxbMTksMjBdLFsxOCwyMSwiIiwyLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsyMSwyMiwiIiwyLHsiY29sb3VyIjpbMCwwLDc1XX1dXQ==&amp;embed" width="600" height="500" style="border-radius: 8px; border: dashed;"></iframe> </center>
@@ -284,6 +289,21 @@ $$</p>
 <div class="example">
   <p>(Use <code class="language-plaintext highlighter-rouge">mathcha</code> to draw picture).</p>
   <p><img src="https:/raw.githubusercontent.com/czhang271828/imgs/New_img/n_imgdiagram-20250420%20(2).png" alt="image-20250423194403416" /></p>
+</div>
+
+<div class="example">
+  <p>在特殊情况下, 可直接使用 <code class="language-plaintext highlighter-rouge">tikz</code> 环境插入 <a href="https://q.uiver.app/"><code class="language-plaintext highlighter-rouge">quiver</code></a> 代码 (小 bug, 需要将 <code class="language-plaintext highlighter-rouge">textcolor</code> 替换作 <code class="language-plaintext highlighter-rouge">color</code>). 可以使用行内公式 <span class="tikzinline-diagram">       <embed src="/website/svg/template/diagram_05a3a81d6ad38.svg" type="image/svg+xml" style="display: inline-block; width: 10%; height: 10%; white-space: nowrap" />
+ </span>, 或是行间公式</p>
+  <center> <div class="tikz-diagram">
+      <embed src="/website/svg/template/diagram_2df4711a5dfb6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> </center>
+  <div class="note">
+    <p>原理: 本地插件 <code class="language-plaintext highlighter-rouge">jekyll-tikz</code> 将 <code class="language-plaintext highlighter-rouge">q.uiver</code> 语法下的箭图编译为 <code class="language-plaintext highlighter-rouge">PDF</code> 文件 (存放在 <code class="language-plaintext highlighter-rouge">./_tikz_tmp</code>), 并通过上古神器 <code class="language-plaintext highlighter-rouge">pdf2svg</code> 自动生成 <code class="language-plaintext highlighter-rouge">svg</code> 矢量图 (存放在 <code class="language-plaintext highlighter-rouge">./svg</code>).</p>
+  </div>
+</div>
+
+<div class="slogan">
+  <p>一个重要的问题: 网页无法正常打印 <a href="https://q.uiver.app/">q.uiver.app</a> 的 <code class="language-plaintext highlighter-rouge">iframe</code> 标签!</p>
 </div>
 
 <h2 id="个性化">个性化</h2>
@@ -355,6 +375,7 @@ $$</p>
     2025
     Chencheng Zhang</span>
 </div>
+
 
 </body>
 
