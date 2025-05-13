@@ -55,18 +55,13 @@
 
 
 
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
 </head>
 
 <body class="latex-dark">
 
-	<aside class="logo" id="logo-section">
-  <a href="/website/about" id="logo-link">
-    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
-  </a>
-  <span class="logo-prompt" id="logo-prompt">About the Author</span>
-</aside>
-
-<script>
+	<script>
   // 根据当前页URL动态修改
   if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
     document.getElementById('logo-link').href = "/website";
@@ -104,7 +99,7 @@
 <div class="abstract">
   <h5 id="abstract">Abstract</h5>
   <div>
-    <p>外三角范畴兼有正合范畴与<a href="Tri_Cat_Def">三角范畴</a>的特性, 但绝非简单的混合:</p>
+    <p>外三角范畴兼有<a href="Exact_Cat">正合范畴</a>与<a href="Tri_Cat_Def">三角范畴</a>的特性, 但绝非简单的混合:</p>
     <ul>
       <li>三角范畴与正合范畴可视作特殊的外三角范畴;</li>
       <li>也存在既非三角范畴亦非正合范畴的外三角范畴.</li>

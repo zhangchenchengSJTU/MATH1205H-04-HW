@@ -55,18 +55,13 @@
 
 
 
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
 </head>
 
 <body class="latex-dark">
 
-	<aside class="logo" id="logo-section">
-  <a href="/website/about" id="logo-link">
-    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
-  </a>
-  <span class="logo-prompt" id="logo-prompt">About the Author</span>
-</aside>
-
-<script>
+	<script>
   // 根据当前页URL动态修改
   if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
     document.getElementById('logo-link').href = "/website";
@@ -96,11 +91,11 @@
 <div class="proof">
   <p>若 $ℬ$ 余反射, 记嵌入的右伴随 $t$, 即</p>
   <p>$$
-(X, t(A))_{ℬ} ≃ (i(X), A)_{𝒯}. 
+(X, t(A))_{ℬ} ≃ (i(X), A)_{𝒯}.
 $$</p>
   <p>任意 $X ∈ 𝒯$ 都有预盖 $ε_X: t(X) → X$, 因为</p>
   <p>$$
-(i(A), ε_X)_{𝒜} ≃ \mathrm{id}_{(A, t(X))}. 
+(i(A), ε_X)_{𝒜} ≃ \mathrm{id}_{(A, t(X))}.
 $$</p>
   <p>反之, 若 $ℬ$ 反变有限, 以下求解 $A ∈ 𝒯$ 在 $ℬ$ 中的右伴随像. 记</p>
   <p>$$
@@ -120,7 +115,7 @@ $$</p>
 <div class="proof">
   <p>若 $ℬ$ 余反射, 则反变有限 (见前一命题).</p>
   <p>若 $ℬ$ 反变有限, 对任意 $A ∈ 𝒯$ 构造 $$
-X_K \xrightarrow c K \xrightarrow b X_A \xrightarrow a A. 
+X_K \xrightarrow c K \xrightarrow b X_A \xrightarrow a A.
 $$ 其中 $X_M → M$ 是预盖, $b$ 是 $a$ 的弱核. 此时有正合列 $$
 (-, X_K)_ℬ → (-,X_A)_ℬ → (i(-),A)_𝒯 → 0.
 $$ 由于 $(i(-),A)_𝒯$ 是有限表现的平坦对象, 从而投射 (<a href="Plat_et_Proj_Cover_Proj">证明</a>). 再由 Karoubi 性, 该函子可表, 因此 $i$ 存在右伴随.</p>

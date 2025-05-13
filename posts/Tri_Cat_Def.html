@@ -14,7 +14,7 @@
     Jekyll Latex</title>
 
 
-<meta name="description" content="预三角范畴">
+<meta name="description" content="">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -55,18 +55,13 @@
 
 
 
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
 </head>
 
 <body class="latex-dark">
 
-	<aside class="logo" id="logo-section">
-  <a href="/website/about" id="logo-link">
-    <img class="gravatar" src="https://www.gravatar.com/avatar/0f20ebcc66f10f16c36a6013e485771f.png?s=80">
-  </a>
-  <span class="logo-prompt" id="logo-prompt">About the Author</span>
-</aside>
-
-<script>
+	<script>
   // 根据当前页URL动态修改
   if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
     document.getElementById('logo-link').href = "/website";
@@ -89,7 +84,18 @@
 
     <div class="divider"></div>
 
-    <h2 id="预三角范畴">预三角范畴</h2>
+    <ul id="markdown-toc">
+  <li><a href="#预三角范畴-三角范畴" id="markdown-toc-预三角范畴-三角范畴">预三角范畴, 三角范畴</a></li>
+  <li><a href="#八面体公理是同伦的推出拉回" id="markdown-toc-八面体公理是同伦的推出拉回">八面体公理是同伦的推出拉回</a>    <ul>
+      <li><a href="#拓扑学背景" id="markdown-toc-拓扑学背景">拓扑学背景</a></li>
+      <li><a href="#八面体公理的解释" id="markdown-toc-八面体公理的解释">八面体公理的解释</a></li>
+      <li><a href="#同伦的推出拉回" id="markdown-toc-同伦的推出拉回">同伦的推出拉回</a></li>
+      <li><a href="#应用-mv-序列" id="markdown-toc-应用-mv-序列">应用: MV 序列?</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="预三角范畴-三角范畴">预三角范畴, 三角范畴</h2>
 
 <div class="definition">
   <p>(预三角范畴). 给定以下资料</p>
@@ -100,29 +106,26 @@
   </ul>
   <p>称 $(𝒞 , T, ℰ)$ 是预三角范畴, 若三角类满足以下关系.</p>
   <ul>
-    <li>(TR 1-1, $ℰ$ 对同构封闭). 任给定态射的交换图:       <center> <div class="tikz-diagram">
+    <li>(TR 1-1, $ℰ$ 对同构封闭). 任给定态射的交换图:       <center> <br /> <div class="tikz-diagram">
           <embed src="/website/svg/Tri_Cat_Def/diagram_f3500e602729b.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-        </div> </center>
+        </div> <br /> </center>
       <p>其纵向是同构. 若某横行属于 $ℰ$, 则另一横行亦属于 $ℰ$</p>
     </li>
     <li>(TR 1-2, 态射可嵌入三角). 任意态射 $f ∈ 𝖬𝗈𝗋 (𝒞)$ 可以嵌入好三角 $[∙ \xrightarrow f ∙ → ∙ → ∙]$.</li>
     <li>(TR 1-3, 平凡三角). 对任意 $X$, $[X = X → 0 → TX] ∈ ℰ$, 称作平凡三角.</li>
     <li>(TR 2, 顺时针旋转). 若 $[X \xrightarrow u Y\xrightarrow vZ\xrightarrow w TX] ∈ ℰ$, 则 $[Y\xrightarrow vZ\xrightarrow w TX \xrightarrow {-Tu} TY] ∈ ℰ$.</li>
-    <li>(TR 3, 二推三原则). 态射范畴的态射 ($2 × 2$ 交换方块) 可以嵌入三角射 (TR 1-2 的态射表述).       <center> <div class="tikz-diagram">
+    <li>(TR 3, 二推三原则). 态射范畴的态射 ($2 × 2$ 交换方块) 可以嵌入三角射 (TR 1-2 的态射表述).       <center> <br /> <div class="tikz-diagram">
           <embed src="/website/svg/Tri_Cat_Def/diagram_0358420be95ea.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-        </div> </center>
+        </div> <br /> </center>
     </li>
   </ul>
   <p>规范一些名词:</p>
   <ul>
     <li>(好三角). 指 $ℰ$ 中元素, 由六元组 $(X,Y,Z,u,v,w)$ 表示;</li>
-    <li>(三角射). 好三角的作成的交换图, 形如 ($TX → TX'$ 必须是 $Tf$) $$\begin{equation}
-  \begin{bmatrix}
-  X & \rightarrow  & Y & \rightarrow  & Z & \rightarrow  & TX\\
-  f\downarrow  \ \ \ \ &  & \downarrow  &  & \downarrow  &  & \ \ \ \ \downarrow Tf  \\
-  X & \rightarrow  & Y & \rightarrow  & X & \rightarrow  & TX'
-  \end{bmatrix};
-  \end{equation}$$</li>
+    <li>(三角射). 好三角的作成的交换图, 形如 ($TX → TX'$ 必须是 $Tf$)       <center> <br /> <div class="tikz-diagram">
+          <embed src="/website/svg/Tri_Cat_Def/diagram_81127c1e93fd9.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        </div> <br /> </center>
+    </li>
     <li>(平移函子, 悬挂函子). 经常使用 $Σ$ 与 $[1]$ 表示平移.</li>
   </ul>
 </div>
@@ -139,7 +142,11 @@
 <div class="proposition">
   <p>由定义, 以下是预三角范畴的性质.</p>
   <ol>
-    <li>(三角关于逆时针旋转封闭). 若 $[X \xrightarrow u Y\xrightarrow vZ\xrightarrow w TX] ∈ ℰ$, 则 $[T^{-1} Z \xrightarrow {T^{-1}(w)}X \xrightarrow u Y\xrightarrow vZ] ∈ ℰ$.</li>
+    <li>(逆平移函子). 平移函子是范畴 $𝒞$ 的自同构, 依照 <a href="NBGC">NBGC</a> 公理选定骨架, 从而构造逆函子 $T^{-1}$. 一般地, 只能找到 $G$ 使得有自然同构 $GF ≃ \mathrm{id}$ 与 $FG ≃ \mathrm{id}$.</li>
+    <li>(三角关于逆时针旋转封闭). 使用类的选则公理.       <center> <br /> <div class="tikz-diagram">
+          <embed src="/website/svg/Tri_Cat_Def/diagram_0e3dc6bb4172c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        </div> <br /> </center>
+    </li>
     <li>(嵌入唯一). TR 1-2 中态射嵌入的三角 (在同构的意义下) 是唯一的.</li>
     <li>(嵌入无向). TR 1-2 中的态射可以嵌入三角的任意位置.</li>
     <li>(<a href="Yoneda_Homological">上同调函子</a>). 米田嵌入是上同调函子, 换言之, 任意可表函子导出长正合列.</li>
@@ -151,9 +158,9 @@
 
 <div class="definition">
   <p>(八面体公理). 若下图中 $r_1$, $r_2$ 与 $c_3$ 均为好三角, 则 $c_2$ 是好三角且所有方块交换:</p>
-  <center> <div class="tikz-diagram">
-      <embed src="/website/svg/Tri_Cat_Def/diagram_2dc02638f927e.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-    </div> </center>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_c244f93c0f3e9.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
   <p>红色箭头是题设中的, 强调了 $u[1]$ 与 $v[1]$ 的符号.</p>
 </div>
 
@@ -176,31 +183,181 @@
 <p>每一项命题均有完整版本 (三个好三角推一个好三角) 与精简版本 (两个态射延拓成全图)</p>
 
 <div class="proposition">
-  <p>(基变换, 余积变换). 以下是八面体公理的等价形式 (请注意符号).</p>
+  <p>(基变换, 余积变换). 以下是八面体公理的等价形式 (请注意符号). 以下默认初始三角 $[X → Y → W]$ 的坐标是 $(r;c) = (1;[1,2,3])$.</p>
   <ol>
-    <li>(基变换, 完整版本). 若下图中 $r_1$, $r_2$ 与 $c_3$ 均为好三角, 则 $c_2$ 是好三角且所有方块交换:</li>
-  </ol>
-  <center> <div class="tikz-diagram">
-      <embed src="/website/svg/Tri_Cat_Def/diagram_2df4711a5dfb6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-    </div> </center>
-  <center> <div class="tikz-diagram">
-      <embed src="/website/svg/Tri_Cat_Def/diagram_70676a59c7062.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-    </div> </center>
-  <ol>
+    <li>
+      <p>(基变换, 完整版本). 若下图中 $r_1$, $r_2$ 与 $c_3$ 均为好三角, 则 $c_2$ 是好三角且所有方块交换:</p>
+      <center> <br /> <div class="tikz-diagram">
+          <embed src="/website/svg/Tri_Cat_Def/diagram_d0d1f8d515813.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        </div> <br /> </center>
+    </li>
     <li>(基变换, 精简版本). 基变换中, 绿色部分 (横三角 + 纵箭头) 补成全图.</li>
+    <li>(基变换, 完整版本). 余基变换中, 若下图中 $r_2$, $r_3$ 与 $c_1$ 均为好三角, 则 $c_2$ 是好三角且所有方块交换:       <center> <br /> <div class="tikz-diagram">
+          <embed src="/website/svg/Tri_Cat_Def/diagram_8cfe7cd75451d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        </div> <br /> </center>
+    </li>
+    <li>(基变换, 精简版本). 余基变换中, 绿色部分 (横三角 + 纵箭头) 补成全图.</li>
   </ol>
 </div>
 
 <h2 id="八面体公理是同伦的推出拉回">八面体公理是同伦的推出拉回</h2>
 
-<center> <div class="tikz-diagram">
-    <embed src="/website/svg/Tri_Cat_Def/diagram_cee0ed34749c1.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-  </div> </center>
+<h3 id="拓扑学背景">拓扑学背景</h3>
+
+<div class="example">
+  <p>(映射锥). 拓扑地看, 态射 $f:X → Y$ 对应的映射锥如下:</p>
+  <center> <br /> <div class="tikzmathcha-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_828368fb720ab.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="example">
+  <p>(映射筒). 拓扑地看, 态射 $f:X → Y$ 对应的映射筒如下:</p>
+  <center> <br /> <div class="tikzmathcha-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_da394a07eb8d0.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="example">
+  <p>(悬挂). 依照 Puppe 的长纤维序列, $\mathrm{Cone}(i(f):Y\to \mathrm{Cone}(f))$ 对应 $X$ 的悬挂:</p>
+  <center> <br /> <div class="tikzmathcha-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_8efe8370a2609.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>同理, $\mathrm{Cone}(p(f):\mathrm{Cone}(f)\to X[1])$ 对应 $Y$ 的悬挂:</p>
+  <center> <br /> <div class="tikzmathcha-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_f8d7f008440a1.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="example">
+  <p>(符号法则: 为什么顺时针/逆时针旋转需要加上负号?). 给定好三角 $X\xrightarrow f Y\xrightarrow{\binom 01} \mathrm{Cone}(f)\xrightarrow{(1\,\,0)} X[1]$. 以下给出 $\mathrm{Cyl}(f)$:</p>
+  <center> <br /> <div class="tikzmathcha-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_e6489b190bda2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<h3 id="八面体公理的解释">八面体公理的解释</h3>
+
+<div class="example">
+  <p>取标准三角 $X\xrightarrow f Y\xrightarrow{i(f)} \mathrm{Cone}(f)\xrightarrow {p(f)} X[1]$ 为标准三角, 则下图交换:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_84c0c09d3225a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>此处 $f$ 与 $g$ 是任意选取的, 从而八面体公理等价于</p>
+  <ul>
+    <li>对任意 $g$, 总有同伦范畴中的同构 $\mathrm{Cone}(g) ≃ \mathrm{Cone}(g_∗)$</li>
+  </ul>
+  <p>虚线处类似 Noether 同构 $A/B ≃ (A/C)/(B/C)$, 图示如下:</p>
+  <center> <br /> <div class="tikzmathcha-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_4ec9380fc9324.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>将上图沿虚线压缩至一点 (这是同伦关系), 得下图. 对大多数拓扑情形而言, 八面体公理是可以直接证出的.</p>
+</div>
+
+<div class="example">
+  <p>($⋆$ 处的同构). 八面体公理中有如下交换方块:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_f55c9d795ea26.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>拓扑地解释如下:</p>
+  <center> <br /> <div class="tikzmathcha-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_c535b0c73f133.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<h3 id="同伦的推出拉回">同伦的推出拉回</h3>
+
+<div class="example">
+  <p>(Abel 范畴的推出-拉回方块). 称交换图 <span class="tikzinline-diagram">       <embed src="/website/svg/Tri_Cat_Def/diagram_958c8d8eca773.svg" type="image/svg+xml" style="display: inline-block; width: 10%; height: 10%; white-space: nowrap" />
+ </span> 是推出拉回方块, 当且仅当以下是四条 ses 的交换图</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_f5ce26b48e667.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>也当且仅当存在短正合列 $$\begin{equation}
+0\to X\xrightarrow{\binom{a_1}{b_1}} Y_2\oplus Y_1\xrightarrow{(b_2,-a_2)} Z\to 0.
+\end{equation}$$</p>
+</div>
 
 <div class="definition">
-  <p>(三角扩张). 给定三角范畴的两个对象类 $O_1$ 与 $O_2$, 定义 $$\begin{equation}
-O_1\star O_2=\{Y\mid \exists X\in O_1\,\text{与}\, Z\in O_2\,\text{ 使得存在好三角 }\, X\to Y\to Z\to X[1]\}.
+  <p>(同伦推出拉回). 若 $⋆$ 处 $2 × 2$ 规格的交换方块是同伦推出拉回的, 若存在好三角</p>
+  <p>$$\begin{equation}
+X\xrightarrow{\binom{a_1}{b_1}} Y_2⊕ Y_1\xrightarrow{(b_2,-a_2)} Z\xrightarrow h X[1].
 \end{equation}$$</p>
+  <p>考虑其同伦背景, 有时将第二项记作 $Y_2∨ Y_1$. 将满足以上条件的方块 $⋆$ 称作同伦的推出拉回.</p>
+</div>
+
+<div class="example">
+  <p>(三角范畴中同伦推出拉回的特例, <a href="Homotopic_PBPO">证明</a>). 若以上 $⋆$ 能补全作两行两列的好三角</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_281e65eddf85c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>则 $⋆$ 是同伦推出拉回.</p>
+</div>
+
+<div class="theorem">
+  <p>(八面体公理的等价定义, <a href="Homotopic_PBPO_Oct">证明</a>). 预预三角范畴是三角范畴, 当且仅当</p>
+  <ol>
+    <li>预三角范畴满足八面体公理;</li>
+    <li>任意两个红色态射给出如下三角射与交换图:       <center> <br /> <div class="tikz-diagram">
+          <embed src="/website/svg/Tri_Cat_Def/diagram_2ed4ffc418ca6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        </div> <br /> </center>
+    </li>
+    <li>给定红色处三角与同伦推出拉回方块, 则可补全下图三角与三角射       <center> <br /> <div class="tikz-diagram">
+          <embed src="/website/svg/Tri_Cat_Def/diagram_276effd110343.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        </div> <br /> </center>
+    </li>
+  </ol>
+</div>
+
+<div class="note">
+  <p>注意: 对条件 2. 与 3. 的同伦推出拉回方块, 需要反号的态射是 $⇒$:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_a2484d7dfcde4.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="theorem">
+  <p>(<a href="https://www.sciencedirect.com/science/article/pii/002186939190292G">Neeman 公理</a>). 预三角范畴是三角范畴, 若对任意交换图 <span class="tikzinline-diagram">       <embed src="/website/svg/Tri_Cat_Def/diagram_e015c8674b31a.svg" type="image/svg+xml" style="display: inline-block; width: 10%; height: 10%; white-space: nowrap" />
+ </span>, 存在态射 $h$ 使得有三角射</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_0376f20e45fde.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>以及好三角 $$\begin{equation}
+Y \oplus X' \xrightarrow{\begin{pmatrix}-v&0\\g&u'\end{pmatrix}} Z \oplus Y' \xrightarrow{\begin{pmatrix}-w&0\\h&v'\end{pmatrix}} X[1] \oplus W\xrightarrow{\begin{pmatrix}-u[1]&0\\f[1]&w'\end{pmatrix}} Y[1]\oplus X'[1]
+\end{equation}$$</p>
+</div>
+
+<div class="slogan">
+  <p>TR3 中二推三态射可以选的好一些.</p>
+</div>
+
+<h3 id="应用-mv-序列">应用: MV 序列?</h3>
+
+<div class="example">
+  <p>(MV-序列). 考虑以下同伦的推出拉回:</p>
+  <center> <br /> <div class="tikzmathcha-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_9a1c49ac48632.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>此时有函子的长正合列 $$
+\begin{align}
+\cdots\to [M,Y]&\xrightarrow{\begin{pmatrix}{[M,g_\ast]} \ \ {[M,i(f)]}\end{pmatrix}} [M,Z]\oplus [M,\mathrm{Cone}(f)]\\[6pt]
+&\xrightarrow{\begin{pmatrix}[M,i(f\circ g)]& -[M,g_\ast]\end{pmatrix}} [M,\mathrm{Cone}(g\circ f)]\xrightarrow{[M,\delta]}[M,Y[1]]\to \cdots. 
+\end{align}
+$$</p>
+  <p>作为特例, 传统的 MV 序列 $$\begin{aligned}
+\cdots &\to H_n(X\cap Y)\to H_n(X)\oplus H_n (Y) \to\\
+&\to H_n(X\cup Y)\to H_{n-1}(X\cap Y)\to\cdots 
+\end{aligned}$$ 连接态射 $\delta$ 定义作以下两种相同的复合 (八面体公理). 一者是 $$\begin{equation}
+\mathrm{Cone}(g\circ f)\to \mathrm{Cone}[Z\to \mathrm{Cone}(g\circ f)]\to Y[1]. 
+\end{equation}$$</p>
+  <p>对应示意图</p>
+  <center> <br /> <div class="tikzmathcha-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_66e70587b8c58.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>另一者是 $\mathrm{Cone}(g\circ f)\to X[1]\to Y[1]$, 对应示意图</p>
+  <center> <br /> <div class="tikzmathcha-diagram">
+      <embed src="/website/svg/Tri_Cat_Def/diagram_598762190ee29.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
 </div>
 
 
