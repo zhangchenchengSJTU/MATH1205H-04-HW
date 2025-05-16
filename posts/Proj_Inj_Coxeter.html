@@ -99,18 +99,26 @@
 </div>
 
 <div class="proof">
-  <p>只看前三条. <br /> (1. 的证明). 不可分解投射对象 $P(i)$ 的支撑集是由 $i$ 向外的树, 从分支至主干地作用 $C^+_∙$ 即可 (并列的分支无关先后) 即可. 最后得内射单模 $S(i)$, 作用 $C^+_i$ 后归零. 由于 Coxeter 反射唯一, 故投射对象被 $C^+$ 零化. <br /> (2. 的证明). 假定 $M ≠ 0$, 但 $C^+ M= 0$. 不妨记 $C^+ = C_1^+\cdots C_n^+$. 下归纳地证明所有 $C_{k}^+\cdots C_n^+ M$ 都是对应 quiver 的不可分解投射对象 (或零对象).</p>
+  <p>只看前三条. <br /> (1. 的证明). 不可分解投射对象 $P(i)$ 的支撑集是由 $i$ 向外的树, 从分支至主干地作用 $C^+_∙$ 即可 (并列的分支无关先后) 即可. 最后得内射单模 $S(i)$, 作用 $C^+_i$ 后归零. 由于 Coxeter 反射唯一, 故任意不可分解投射对象被 $C^+$ 零化. <br /> (2. 的证明). 假定 $M ≠ 0$ 是不可分解模, 但 $C^+ M= 0$. 不妨记 $C^+ = C_1^+\cdots C_n^+$. 下归纳地证明所有 $C_{k}^+\cdots C_n^+ M$ 都是 $𝐫𝐞𝐩(C_{k}^+\cdots C_n^+ Q)$ 中的不可分解投射对象 (或零对象).</p>
   <ol>
-    <li>(初始). 存在极小的 $i$ 使得 $C_{i+1}^+\cdots C_n^+ M$ 是 $k(C_{i+1}^+\cdots C_n^+Q)$ 的投射单对象;</li>
-    <li>
-      <p>(归纳). 若 $C_{i+1}^+\cdots C_n^+Q$ 存在 $(i+1) → (i)$ 类型的箭头, 依照<a href="Coxeter_PM_Adjoint">伴随的余单位</a>知</p>
-      <p>$$
-   C_{i+1}^-C_{i+1}^+\cdots C_n^+ M ≃ C_{i+2}^+\cdots C_n^+ M
-   $$</p>
-      <p>是投射对象. 若无 $(i+1) → (i)$ 类型的箭头, 则 $i$ 与邻点的连边不受影响, 原投射对象是新 quiver 的投射对象.</p>
+    <li>(初始). 模在消失前的状态必然是下一反射作用位置的投射单对象. 存在极小的 $i$ 使得 $C_{i+1}^+\cdots C_n^+ M$ 是 $𝐫𝐞𝐩 (C_{i+1}^+\cdots C_n^+Q)$ 中的投射单对象;</li>
+    <li>(归纳). 假定得到了 $C_{i+1}^+\cdots C_n^+Q$ 中的投射对象 $C_{i+1}^+\cdots C_n^+M$. 该图中, $i$ 是 sink, $(i+1)$ 是 source. 由等式 $$
+   C_{i+1}^-C_{i+1}^+\cdots C_n^+ M ≃ C_{i+2}^+\cdots C_n^+ M,
+   $$ 下证明 $M' := C_{i+1}^+\cdots C_n^+M$ 是投射对象即可.       <ol>
+        <li>若 $M' = P(i+1)$. 由于 $M'  = C_{i+1}^+ N$ 是不可分解模, 则 $i+1$ 有且仅有一条出边. 此时</li>
+      </ol>
+      <center> <br /> <div class="tikz-diagram">
+          <embed src="/website/svg/Proj_Inj_Coxeter/diagram_5d2f0a8048ccf.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        </div> <br /> </center>
+      <ol>
+        <li>若不然, 则 $(M')_{i+1} = 0$, 因为 $(i+1)$ 是 source. 此时至多存在一个 $(i+1)$ 的邻点 $j$, 使得 $M_j ≠ 0$:</li>
+      </ol>
+      <center> <br /> <div class="tikz-diagram">
+          <embed src="/website/svg/Proj_Inj_Coxeter/diagram_72f0c151df8fd.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        </div> <br /> </center>
+      <p>$C_{i+1}^-M$ 仍是投射对象.</p>
     </li>
   </ol>
-  <p><br /> (3. 的证明). 结合以上两点即可.</p>
 </div>
 
 
@@ -121,7 +129,7 @@
       <a
         class="next"
         href="/website/posts/Kronecker_Rep"
-        title="NEXT: Kronecker quiver 的表示">&lt;&lt;</a>
+        title="NEXT: Kronecker quiver 的不可分解表示">&lt;&lt;</a>
       <span>
         &middot;
       </span>

@@ -7,6 +7,19 @@
     
       
         <item>
+          <title>2025-05-16-讨论班</title>
+          <description>&lt;h2 id=&quot;coxeter-反射与-mathjax_protectedjmejamathjax_protected&quot;&gt;Coxeter 反射与 $τ$&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;Coxeter-Reflection&quot;&gt;Coxeter 反射简介&lt;/a&gt;, 以及 &lt;a href=&quot;Kronecker_Rep&quot;&gt;Kronecker_quiver&lt;/a&gt; AR quiver 的计算.&lt;/p&gt;
+</description>
+          <pubDate>2025-05-16T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/20250516Talk</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/20250516Talk</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>外三角范畴 (2025-05-15 讲稿)</title>
           <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#目标&quot; id=&quot;markdown-toc-目标&quot;&gt;目标&lt;/a&gt;&lt;/li&gt;
@@ -14275,7 +14288,6 @@ $$&lt;/p&gt;
       &lt;p&gt;特别地, 上述 $(p_i)_j$ 就是 $(τ⁻¹ P_i)_j$. 由 coker 的泛性质, $C_i^- P_i$ 与 $τ ⁻¹ P_i$ 中 $j → i$ 类型的态射相同 (相差一个同构).&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-  &lt;p&gt;计算维度向量, zh&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-05T00:00:00+08:00</pubDate>
@@ -14319,13 +14331,11 @@ $$&lt;/p&gt;
     
       
         <item>
-          <title>Kronecker quiver 的表示</title>
+          <title>Kronecker quiver 的不可分解表示</title>
           <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#kronecker-quiver-的表示&quot; id=&quot;markdown-toc-kronecker-quiver-的表示&quot;&gt;Kronecker quiver 的表示&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#预投射部分-预内射部分&quot; id=&quot;markdown-toc-预投射部分-预内射部分&quot;&gt;预投射部分, 预内射部分&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#正规部分&quot; id=&quot;markdown-toc-正规部分&quot;&gt;正规部分&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#mathjax_protectedjfxtyxrocm17y29ofsjihjlfa14xksqmathjax_protected-的等价解释&quot; id=&quot;markdown-toc-mathjax_protectedjfxtyxrocm17y29ofsjihjlfa14xksqmathjax_protected-的等价解释&quot;&gt;$\mathrm{coh}(ℙ_k^1)$ 的等价解释&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#导出等价-mathjax_protectedjereyiaoxg1hdghybxtjb2h9kokemv9rxjepksdiiymgrf5iicjwnzcr8j2qnvcdkkkoa1viijkg4oejiokimv0pksqmathjax_protected&quot; id=&quot;markdown-toc-导出等价-mathjax_protectedjereyiaoxg1hdghybxtjb2h9kokemv9rxjepksdiiymgrf5iicjwnzcr8j2qnvcdkkkoa1viijkg4oejiokimv0pksqmathjax_protected&quot;&gt;导出等价 $D^b (\mathrm{coh}(ℙ_k^1)) ≃ D^b (𝐫𝐞𝐩(k[∙ ⇉ ∙]))$&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -14390,7 +14400,9 @@ $$&lt;/p&gt;
     &lt;li&gt;正规模, 其结构暂不明确, 但是维数向量形如 $\binom nn$.&lt;/li&gt;
   &lt;/ol&gt;
   &lt;p&gt;以是预投射与预内射部分的 AR quiver:&lt;/p&gt;
-  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTUsWzAsMiwiWzAgXFxtaWQgMV0iLFsyMzIsMTAwLDYwLDFdXSxbMSwyLCJbMSBcXG1pZCAyXSIsWzIzMiwxMDAsNjAsMV1dLFsxLDMsIlsyIFxcbWlkIDNdIixbMjA2LDEwMCw2MCwxXV0sWzIsMywiWzNcXG1pZCA0XSIsWzIwNiwxMDAsNjAsMV1dLFsyLDQsIlxcY2RvdHMiLFsyMDYsMTAwLDYwLDFdXSxbNCwwLCJcXGNkb3RzIixbMTksMTAwLDYwLDFdXSxbNCwxLCJbNCBcXG1pZCAzXSIsWzE5LDEwMCw2MCwxXV0sWzUsMSwiWzNcXG1pZDJdIixbMTksMTAwLDYwLDFdXSxbNSwyLCJbMlxcbWlkMV0iLFszNTcsMTAwLDYwLDFdXSxbNiwyLCJbMVxcbWlkMF0iLFszNTcsMTAwLDYwLDFdXSxbMiwyLCJcXHRleHR7cHJvan0iLFsyMzIsMTAwLDYwLDFdXSxbMywzLCJcXHRleHR7cHJlLXByb2p9IixbMjA2LDEwMCw2MCwxXV0sWzMsMSwiXFx0ZXh0e3ByZS1pbmp9IixbMTksMTAwLDYwLDFdXSxbNCwyLCJcXHRleHR7aW5qfSIsWzM1NywxMDAsNjAsMV1dLFszLDIsIlxcYm94ZWR7XFx0ZXh0e3JlZ3VsYXIgbW9kfX0iLFsxMjAsNjAsNjAsMV1dLFswLDFdLFsxLDJdLFsyLDNdLFszLDRdLFswLDEsIiIsMSx7Im9mZnNldCI6LTN9XSxbMSwyLCIiLDEseyJvZmZzZXQiOi0zfV0sWzIsMywiIiwxLHsib2Zmc2V0IjotM31dLFszLDQsIiIsMSx7Im9mZnNldCI6LTN9XSxbNiw3XSxbNyw4XSxbNiw3LCIiLDEseyJvZmZzZXQiOi0zfV0sWzgsOSwiIiwxLHsib2Zmc2V0IjotM31dLFs1LDZdLFs1LDYsIiIsMSx7Im9mZnNldCI6LTN9XSxbMiwwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMywxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNCwyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNyw1LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw3LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTEsMTAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwxMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XSxbMTIsMTQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV0sWzEzLDEyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNyw4LCIiLDEseyJvZmZzZXQiOi0zfV0sWzgsOV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTUsWzAsMiwiWzAgXFxtaWQgMV0iLFsyMzIsMTAwLDYwLDFdXSxbMSwyLCJbMSBcXG1pZCAyXSIsWzIzMiwxMDAsNjAsMV1dLFsxLDMsIlsyIFxcbWlkIDNdIixbMjA2LDEwMCw2MCwxXV0sWzIsMywiWzNcXG1pZCA0XSIsWzIwNiwxMDAsNjAsMV1dLFsyLDQsIlxcY2RvdHMiLFsyMDYsMTAwLDYwLDFdXSxbNCwwLCJcXGNkb3RzIixbMTksMTAwLDYwLDFdXSxbNCwxLCJbNCBcXG1pZCAzXSIsWzE5LDEwMCw2MCwxXV0sWzUsMSwiWzNcXG1pZDJdIixbMTksMTAwLDYwLDFdXSxbNSwyLCJbMlxcbWlkMV0iLFszNTcsMTAwLDYwLDFdXSxbNiwyLCJbMVxcbWlkMF0iLFszNTcsMTAwLDYwLDFdXSxbMiwyLCJcXHRleHR7cHJvan0iLFsyMzIsMTAwLDYwLDFdXSxbMywzLCJcXHRleHR7cHJlLXByb2p9IixbMjA2LDEwMCw2MCwxXV0sWzMsMSwiXFx0ZXh0e3ByZS1pbmp9IixbMTksMTAwLDYwLDFdXSxbNCwyLCJcXHRleHR7aW5qfSIsWzM1NywxMDAsNjAsMV1dLFszLDIsIlxcYm94ZWR7XFx0ZXh0e3JlZ3VsYXIgbW9kfX0iLFsxMjAsNjAsNjAsMV1dLFswLDFdLFsxLDJdLFsyLDNdLFszLDRdLFswLDEsIiIsMSx7Im9mZnNldCI6LTN9XSxbMSwyLCIiLDEseyJvZmZzZXQiOi0zfV0sWzIsMywiIiwxLHsib2Zmc2V0IjotM31dLFszLDQsIiIsMSx7Im9mZnNldCI6LTN9XSxbNiw3XSxbNyw4XSxbNiw3LCIiLDEseyJvZmZzZXQiOi0zfV0sWzgsOSwiIiwxLHsib2Zmc2V0IjotM31dLFs1LDZdLFs1LDYsIiIsMSx7Im9mZnNldCI6LTN9XSxbMiwwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMywxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNCwyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNyw1LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw3LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTEsMTAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwxMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XSxbMTIsMTQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV0sWzEzLDEyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNyw4LCIiLDEseyJvZmZzZXQiOi0zfV0sWzgsOV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/Kronecker_Rep/diagram_2a696182deef8.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;正规部分&quot;&gt;正规部分&lt;/h3&gt;
@@ -14411,129 +14423,18 @@ $$&lt;/p&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;需要提及, 正规部分的 AR quiver 存在环路. 例如以下均为不可约态射:&lt;/p&gt;
-  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTAsWzUsMCwia15uIl0sWzUsMSwia15uIl0sWzMsMCwia157Mm59Il0sWzMsMSwia157Mm59Il0sWzEsMCwia15uIl0sWzEsMSwia15uIl0sWzAsMCwiMCJdLFswLDEsIjAiXSxbNiwwLCIwIl0sWzYsMSwiMCJdLFswLDEsIkpfe259KFxcbGFtYmRhKSIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJJIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiSl97Mm59KFxcbGFtYmRhKSIsMCx7Im9mZnNldCI6LTJ9XSxbMiwzLCJJX3sybn0iLDIseyJvZmZzZXQiOjJ9XSxbMiwwLCIoTyBcXCBJKSJdLFszLDEsIihPIFxcIEkpIiwyXSxbNCw1LCJJIiwyLHsib2Zmc2V0IjoyfV0sWzUsMywiXFxiaW5vbSB7SX17T30iLDJdLFs0LDIsIlxcYmlub20ge0l9e099Il0sWzQsNSwiSl97bn0oXFxsYW1iZGEpIiwwLHsib2Zmc2V0IjotMn1dLFs2LDRdLFs3LDVdLFswLDhdLFsxLDldXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTAsWzUsMCwia15uIl0sWzUsMSwia15uIl0sWzMsMCwia157Mm59Il0sWzMsMSwia157Mm59Il0sWzEsMCwia15uIl0sWzEsMSwia15uIl0sWzAsMCwiMCJdLFswLDEsIjAiXSxbNiwwLCIwIl0sWzYsMSwiMCJdLFswLDEsIkpfe259KFxcbGFtYmRhKSIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJJIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiSl97Mm59KFxcbGFtYmRhKSIsMCx7Im9mZnNldCI6LTJ9XSxbMiwzLCJJX3sybn0iLDIseyJvZmZzZXQiOjJ9XSxbMiwwLCIoTyBcXCBJKSJdLFszLDEsIihPIFxcIEkpIiwyXSxbNCw1LCJJIiwyLHsib2Zmc2V0IjoyfV0sWzUsMywiXFxiaW5vbSB7SX17T30iLDJdLFs0LDIsIlxcYmlub20ge0l9e099Il0sWzQsNSwiSl97bn0oXFxsYW1iZGEpIiwwLHsib2Zmc2V0IjotMn1dLFs2LDRdLFs3LDVdLFswLDhdLFsxLDldXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/Kronecker_Rep/diagram_bb54338304c9e.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
   &lt;p&gt;实际上, 正规模的 AR 平移是自身, 计算如下:&lt;/p&gt;
-  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTgsWzYsMCwia15uIl0sWzYsMSwia15uIl0sWzQsMCwia15uIl0sWzQsMSwia157Mm59Il0sWzIsMCwiMCJdLFsyLDEsImtebiJdLFs2LDIsIk0iXSxbNCwyLCJQXzFebiJdLFsyLDIsIlBfMl5uIl0sWzQsMywiSV8xXm4iXSxbMiwzLCJJXzJebiJdLFswLDMsIlxcdGF1IE0iXSxbMiw1LCJrXm4iXSxbMiw0LCJrXnsybn0iXSxbNCw0LCJrXm4iXSxbNCw1LCIwIl0sWzAsNCwia15uIl0sWzAsNSwia15uIl0sWzAsMSwiSl9uKFxcbGFtYmRhKSIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJJIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiXFxiaW5vbXtPfXtJfSIsMCx7Im9mZnNldCI6LTJ9XSxbMiwzLCJcXGJpbm9te0l9e099IiwyLHsib2Zmc2V0IjoyfV0sWzIsMCwiSSJdLFszLDEsIihJIFxcIEpfbihcXGxhbWJkYSkpIiwyXSxbNCw1LCIiLDEseyJvZmZzZXQiOjJ9XSxbNCw1LCIiLDEseyJvZmZzZXQiOi0yfV0sWzUsMywiXFxiaW5vbXstSl9uKFxcbGFtYmRhKX17SX0iLDJdLFs0LDJdLFs4LDddLFs3LDZdLFsxMCw5XSxbMTEsMTBdLFsxMywxMiwiKEkgXFwgTykiLDIseyJvZmZzZXQiOjJ9XSxbMTMsMTIsIihPIFxcIEkpIiwwLHsib2Zmc2V0IjotMn1dLFsxMywxNCwiKC0gSl9uIChcXGxhbWJkYSkgXFwgTykiXSxbMTIsMTVdLFsxNCwxNSwiIiwxLHsib2Zmc2V0IjoyfV0sWzE0LDE1LCIiLDEseyJvZmZzZXQiOi0yfV0sWzE2LDE3LCJJIiwyLHsib2Zmc2V0IjoyfV0sWzE2LDE3LCJKX24oXFxsYW1iZGEpIiwwLHsib2Zmc2V0IjotMn1dLFsxNiwxMywiXFxiaW5vbXtJfXtKX24oXFxsYW1iZGEpfSJdLFsxNywxMl0sWzYsMTEsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTgsWzYsMCwia15uIl0sWzYsMSwia15uIl0sWzQsMCwia15uIl0sWzQsMSwia157Mm59Il0sWzIsMCwiMCJdLFsyLDEsImtebiJdLFs2LDIsIk0iXSxbNCwyLCJQXzFebiJdLFsyLDIsIlBfMl5uIl0sWzQsMywiSV8xXm4iXSxbMiwzLCJJXzJebiJdLFswLDMsIlxcdGF1IE0iXSxbMiw1LCJrXm4iXSxbMiw0LCJrXnsybn0iXSxbNCw0LCJrXm4iXSxbNCw1LCIwIl0sWzAsNCwia15uIl0sWzAsNSwia15uIl0sWzAsMSwiSl9uKFxcbGFtYmRhKSIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJJIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiXFxiaW5vbXtPfXtJfSIsMCx7Im9mZnNldCI6LTJ9XSxbMiwzLCJcXGJpbm9te0l9e099IiwyLHsib2Zmc2V0IjoyfV0sWzIsMCwiSSJdLFszLDEsIihJIFxcIEpfbihcXGxhbWJkYSkpIiwyXSxbNCw1LCIiLDEseyJvZmZzZXQiOjJ9XSxbNCw1LCIiLDEseyJvZmZzZXQiOi0yfV0sWzUsMywiXFxiaW5vbXstSl9uKFxcbGFtYmRhKX17SX0iLDJdLFs0LDJdLFs4LDddLFs3LDZdLFsxMCw5XSxbMTEsMTBdLFsxMywxMiwiKEkgXFwgTykiLDIseyJvZmZzZXQiOjJ9XSxbMTMsMTIsIihPIFxcIEkpIiwwLHsib2Zmc2V0IjotMn1dLFsxMywxNCwiKC0gSl9uIChcXGxhbWJkYSkgXFwgTykiXSxbMTIsMTVdLFsxNCwxNSwiIiwxLHsib2Zmc2V0IjoyfV0sWzE0LDE1LCIiLDEseyJvZmZzZXQiOi0yfV0sWzE2LDE3LCJJIiwyLHsib2Zmc2V0IjoyfV0sWzE2LDE3LCJKX24oXFxsYW1iZGEpIiwwLHsib2Zmc2V0IjotMn1dLFsxNiwxMywiXFxiaW5vbXtJfXtKX24oXFxsYW1iZGEpfSJdLFsxNywxMl0sWzYsMTEsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;500&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/Kronecker_Rep/diagram_5f9ac18d33590.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;正规部分的 AR quiver 不连通, 且每一连通分支无限.&lt;/p&gt;
 &lt;/div&gt;
-
-&lt;h3 id=&quot;mathjax_protectedjfxtyxrocm17y29ofsjihjlfa14xksqmathjax_protected-的等价解释&quot;&gt;$\mathrm{coh}(ℙ_k^1)$ 的等价解释&lt;/h3&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;(射影概型的非正式介绍). 正如将欧式平面粘成球面, 可以将仿射概型粘做射影概型. 例如 $ℙ_k^1$ 的由两份 $𝔸_k^1$ 粘合而成, 定义式作&lt;/p&gt;
-  &lt;p&gt;$$
-\begin{bmatrix}
-\mathbb{P}_{k}^{1} &amp; \supset  &amp; \mathbb{A}_{k}^{1} &amp;  &amp;  &amp;  &amp; k[ y]\\
-\cup  &amp;  &amp; \cup  &amp; ⇐ &amp;  &amp;  &amp; \downarrow \\
-\mathbb{A}_{k}^{1} &amp; \supset  &amp; \mathbb{A}_{k}^{1} \smallsetminus \{0\} &amp;  &amp; k[ x] &amp; \rightarrow  &amp; \frac{k[ x,y]}{( xy-1)}\\
- &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\
- &amp;  &amp; \mathrm{Sch}_{k} &amp; \substack{Γ\\ ⟶ \\ ⊥ \\ ⟵ \\ \mathrm{Spec}} &amp; \mathrm{CAlg}_{k}^{\mathrm{op}} &amp;  &amp;
-\end{bmatrix}
-$$&lt;/p&gt;
-  &lt;p&gt;以上,&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;右侧代数同态是局部化, 例如 $k [x] → k[x]_x ≃ \frac{k[x,y]}{(xy-1)}$ 是局部化;&lt;/li&gt;
-    &lt;li&gt;从仿射概型层面看, 局部化 $k [x] → k[x]_x$ 对应仿射概型的包含 $(𝔸 _k ^1 ∖ \{[0]\}) ⊆ 𝔸_k^1$. 拉回所得的 $ℙ_k ^1$ 可粗略地理解做两条直线粘成的圆环.&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;(通过齐次素理想构造射影概型) $ℙ_k ^1$ 一般不是仿射概型. 例如对 $k = ℂ$, 由 Liouville 定理知 $Γ(ℙ_ℂ ^1) ≃ ℂ$, 而显然 $\mathrm{Spec}(ℂ) ≠ ℙ_ℂ^1$. &lt;br /&gt; &lt;br /&gt; 总之, 射影概型无法直接写作环的素谱. 一个常见的修复引入齐次素理想, 其本质上是选取子概型 $ℙ^1_k ⊂ 𝔸^2_k$. 例如, $[p] ∈ 𝔸^2_k$ 属于 $ℙ_k^1$, 当且仅当 $[p]$ 由齐次多项式生成. 该观点下, 记 \begin{equation} \mathrm{Proj}(k[x,y]) =: ℙ _k ^1. \end{equation}&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;note&quot;&gt;
-  &lt;p&gt;对代数闭域而言, 所有闭点形如 $(λ x - μ y) ≠ [0]$. 其对应射影坐标中的点 $[μ : λ]$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;(拟凝聚层). 给定环空间 $(X, 𝒪_X)$ 与结构层上模 $ℱ$. 称 $ℱ$ 是拟凝聚的, 若对任意 $p ∈ X$, 总存在开邻域 $U = U_p$ 使得有表现&lt;/p&gt;
-  &lt;p&gt;$$
-𝒪|_{U_p}^{(κ)} → 𝒪|_{U_p}^{(λ)} → ℱ|_{U_p} → 0.
-$$&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;note&quot;&gt;
-  &lt;p&gt;简单地说, 模层就是一族以开集为指标的相容模, 子拓扑空间对应子族. 单一环上的模总能通过某一基数表现; 若上述的一族模能被一致地表现, 则称之拟凝聚.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;(凝聚层). 称拟凝聚层是凝聚的, 若以下同时满足&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;任意 $p ∈ X$, 存在开邻域 $U_p$ 使得 $𝒪|_{U_p}^n → ℱ|_{U_p}$ 是满态射.&lt;/li&gt;
-    &lt;li&gt;任意 $𝒪|_{V}^m → ℱ|_{V}$ 的 kernel 有限生成 (定义如上一条).&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;(Serre). 给定交换环 $R$.&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;$R$ 上的拟凝聚层范畴等价于 $𝐌𝐨𝐝_R$;&lt;/li&gt;
-    &lt;li&gt;$R$ 上凝聚层范畴等价于 $𝐦𝐨𝐝 _R$.&lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;p&gt;特别地, 由模至层的函子由局部化诱导; 由层至模的函子是整体截面.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;Serre 定理对应了凝聚层语言与有限表现模语言. 以下是对 $ℙ_k^1$ 四种描述:&lt;/p&gt;
-  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTYsWzEsMCwiXFxtYXRoYmIgQV9rIF4xIl0sWzAsMSwiXFxtYXRoYmIgQV9rIF4xIl0sWzEsMSwiXFxtYXRoYmIgQV9rIF4xIFxcc2V0bWludXMgXFx7MFxcfSJdLFswLDAsIlxcbWF0aGJiIFBfayBeMSJdLFszLDAsImtbeV0iXSxbMywxLCJcXGZyYWN7a1t4LHldfXsoeHktMSl9Il0sWzIsMSwia1t4XSJdLFswLDIsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgUF9rIF4xKSJdLFsxLDIsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rIF4xKSJdLFswLDMsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rIF4xKSJdLFsxLDMsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rIF4xIFxcc2V0bWludXMgXFx7MFxcfSkiXSxbMiwzLCJcXG1hdGhiZnttb2R9X3trW3leey0xfV19Il0sWzMsMiwiXFxtYXRoYmZ7bW9kfV97a1t5XX0iXSxbMywzLCJcXG1hdGhiZnttb2R9X3trW3kseV57LTF9XX0iXSxbMiwyLCJcXG1hdGhzY3IgQSJdLFsyLDAsIj8iXSxbMiwwLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcc3Vic2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMywiXFxzdWJzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwzLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDVdLFs2LDVdLFs4LDcsIlxcdGV4dHtSZXN9IiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsOCwiXFx0ZXh0e1Jlc30iLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs5LDcsIlxcdGV4dHtSZXN9IiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsOSwiXFx0ZXh0e1Jlc30iLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMSwxM10sWzEyLDEzXSxbMTQsMTIsIiIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwxMSwiIiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE1LDQsIiIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNSw2LCIiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTYsWzEsMCwiXFxtYXRoYmIgQV9rIF4xIl0sWzAsMSwiXFxtYXRoYmIgQV9rIF4xIl0sWzEsMSwiXFxtYXRoYmIgQV9rIF4xIFxcc2V0bWludXMgXFx7MFxcfSJdLFswLDAsIlxcbWF0aGJiIFBfayBeMSJdLFszLDAsImtbeV0iXSxbMywxLCJcXGZyYWN7a1t4LHldfXsoeHktMSl9Il0sWzIsMSwia1t4XSJdLFswLDIsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgUF9rIF4xKSJdLFsxLDIsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rIF4xKSJdLFswLDMsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rIF4xKSJdLFsxLDMsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rIF4xIFxcc2V0bWludXMgXFx7MFxcfSkiXSxbMiwzLCJcXG1hdGhiZnttb2R9X3trW3leey0xfV19Il0sWzMsMiwiXFxtYXRoYmZ7bW9kfV97a1t5XX0iXSxbMywzLCJcXG1hdGhiZnttb2R9X3trW3kseV57LTF9XX0iXSxbMiwyLCJcXG1hdGhzY3IgQSJdLFsyLDAsIj8iXSxbMiwwLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIlxcc3Vic2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMywiXFxzdWJzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwzLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDVdLFs2LDVdLFs4LDcsIlxcdGV4dHtSZXN9IiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsOCwiXFx0ZXh0e1Jlc30iLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs5LDcsIlxcdGV4dHtSZXN9IiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTAsOSwiXFx0ZXh0e1Jlc30iLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMSwxM10sWzEyLDEzXSxbMTQsMTIsIiIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwxMSwiIiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE1LDQsIiIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNSw2LCIiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;400&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
-  &lt;p&gt;由于 $ℙ_k^1$ 不是仿射概型, 右上角的 $k$-代数拉回不存在, 以下转而寻求右下角模范畴的拉回, 并说明 $𝒜$ 与 $\mathrm{coh}(ℙ_k^1)$ 范畴等价.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;将 $𝒜 ↣ 𝐦𝐨𝐝 _{k[y]} × 𝐦𝐨𝐝 _{k [y^{-1}]}$ 明确如下,&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;对象是三元组 $(M,N,φ)$, 其中 $φ : M_y ≃ M_{y^{-1}}$ 是 $𝐦𝐨𝐝 _{k[y,y^{-1}]}$ 中的同构;&lt;/li&gt;
-    &lt;li&gt;
-      &lt;p&gt;态射是二元组 $(α , β)$, 使下图交换:&lt;/p&gt;
-      &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTAsWzEsMCwiTSAiXSxbMSwxLCJNJyJdLFs0LDAsIk4iXSxbNCwxLCJOJyJdLFsyLDAsIk1fe3l9Il0sWzIsMSwiTV97eX0nIl0sWzMsMCwiTl97eV57LTF9fSJdLFszLDEsIk5fe3leey0xfX0nIl0sWzAsMCwiXFxtYXRoc2Z7T2J9Il0sWzAsMSwiXFxtYXRoc2Z7T2J9Il0sWzAsMSwiXFxhbHBoYSAiLDJdLFsyLDMsIlxcYmV0YSAiXSxbNCw1LCJcXGFscGhhIF95ICIsMl0sWzYsNywiXFxiZXRhIF97eV57LTF9fSJdLFs0LDYsIlxcdmFycGhpICJdLFs1LDcsIlxcdmFycGhpICciLDJdLFs4LDksIlxcbWF0aHNme01vcn0iLDIseyJsZXZlbCI6Mn1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTAsWzEsMCwiTSAiXSxbMSwxLCJNJyJdLFs0LDAsIk4iXSxbNCwxLCJOJyJdLFsyLDAsIk1fe3l9Il0sWzIsMSwiTV97eX0nIl0sWzMsMCwiTl97eV57LTF9fSJdLFszLDEsIk5fe3leey0xfX0nIl0sWzAsMCwiXFxtYXRoc2Z7T2J9Il0sWzAsMSwiXFxtYXRoc2Z7T2J9Il0sWzAsMSwiXFxhbHBoYSAiLDJdLFsyLDMsIlxcYmV0YSAiXSxbNCw1LCJcXGFscGhhIF95ICIsMl0sWzYsNywiXFxiZXRhIF97eV57LTF9fSJdLFs0LDYsIlxcdmFycGhpICJdLFs1LDcsIlxcdmFycGhpICciLDJdLFs4LDksIlxcbWF0aHNme01vcn0iLDIseyJsZXZlbCI6Mn1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;200&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;p&gt;为说明 $𝒜$ 确实是拉回, 只需构造范畴等价&lt;/p&gt;
-  &lt;p&gt;$$
-\mathrm{coh}(ℙ _k^1) → 𝒜 ,\quad ℱ ↦ (ℱ|_{[∞]^c}, ℱ|_{[0]^c}, \mathrm{id}_{ℱ|_{\{[0], [∞]\}^c}}).
-$$&lt;/p&gt;
-  &lt;p&gt;取 $𝒜$ 的骨架, 使 $φ$ 视同等号. 三元组对应截面的合法粘合.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;(Serre 的观察). 若直接从环空间 $ℙ_k^1$ 构造 $\mathrm{coh}(ℙ_k^1)$, 先需考虑各分析有限生成的无限 $ℤ$-分次模 $𝐦𝐨𝐝^ℤ_{k[x,y]}$, 得交换图&lt;/p&gt;
-  &lt;p&gt;$$
-\begin{bmatrix}
-M &amp; \mathbf{grmod}_{k[ a,b]} &amp; \rightarrow  &amp; \mathbf{mod}_{k[ b/a]} &amp; ( M_{a})^{\deg =0}\\
- &amp; \downarrow  &amp;  &amp; \downarrow  &amp; \\
-( M_{b})^{\deg =0} &amp; \mathbf{mod}_{k[ a/b]} &amp; \rightarrow  &amp; \mathbf{mod}_{k\left[ y.y^{-1}\right]} &amp; ( M_{a,b})^{\deg a+\deg b=0}
-\end{bmatrix}.
-$$&lt;/p&gt;
-  &lt;p&gt;此处, $(M_b)^{\deg 0}$ 中元素形如 $∑_{k ∈ ℕ} \frac{a^k}{b^k} m_i$. 右下角的模是 $M_{a,b}$ 中形如 $∑_{k ∈ ℤ}\frac{a^k}{b^k} ⋅ m_k$ 的元素. 因此交换. 转换映射是&lt;/p&gt;
-  &lt;p&gt;$$
-((M_b)^{\deg 0})_{a/b} ≃ ((M_a)^{\deg 0})_{b/a}. 
-$$&lt;/p&gt;
-  &lt;p&gt;以上正是泛性质给出的 $𝐠𝐫𝐦𝐨𝐝 _{k[x,y]} → \mathrm{coh}(ℙ_k^1)$.&lt;/p&gt;
-  &lt;p&gt;对一般交换代数上的多项式环 (或更一般的 toric variety 等), 上述模型建立了层语言与模语言的对应:&lt;/p&gt;
-  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTMsWzIsMiwiXFxtYXRoYmZ7bW9kfV97a1t5XnstMX1dfSJdLFswLDEsIlxcbWF0aGJme21vZH1ee1xcbWF0aGJiIFp9X3trW3gseV19Il0sWzIsMSwiXFxtYXRocm17Y29ofShcXG1hdGhiYiBBX2teMSkiLFsxODAsNjAsNjAsMV1dLFsyLDMsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rXjEpIixbMTgwLDYwLDYwLDFdXSxbMywyLCJcXG1hdGhybXtjb2h9KFxcbWF0aGJiIEFfa14xIFxcc2V0bWludXMgXFx7MFxcfSkiLFsxODAsNjAsNjAsMV1dLFsxLDIsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgUF9rXjEpIixbMTgwLDYwLDYwLDFdXSxbMywxLCJcXG1hdGhiZnttb2R9X3trW3kseV57LTF9XX0iXSxbMiwwLCJcXG1hdGhiZnttb2R9X3trW3ldfSJdLFsxLDEsIlxcbWF0aHNjciBBIl0sWzAsMCwie14wfVxcbWF0aGJme21vZH1fe2tbeCx5XX1ee1xcbWF0aGJiIFp9Il0sWzAsMiwiXFxmcmFje1xcbWF0aGJme21vZH1ee1xcbWF0aGJiIFp9X3trW3gseV19fXt7XjB9XFxtYXRoYmZ7bW9kfV97a1t4LHldfV57XFxtYXRoYmIgWn19Il0sWzQsMSwiXFx0ZXh0e+aooeivreiogH0iXSxbNCwyLCJcXHRleHR75bGC6K+t6KiAfSIsWzE4MCw2MCw2MCwxXV0sWzUsMiwiIiwwLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsyLDQsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMyw0LCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzUsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFs3LDZdLFswLDZdLFs4LDBdLFs4LDddLFs5LDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMSwwLCIiLDIseyJjdXJ2ZSI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEsNywiIiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSw4LCJHIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsMTAsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxMCw1LCIoLSlee1xcI30iLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsxODAsNjAsNjBdfSxbMTgwLDYwLDYwLDFdXSxbNSwxMCwiXFxHYW1tYSAiLDAseyJvZmZzZXQiOi0zfV0sWzI3LDI2LCJcXHRvcCAiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTMsWzIsMiwiXFxtYXRoYmZ7bW9kfV97a1t5XnstMX1dfSJdLFswLDEsIlxcbWF0aGJme21vZH1ee1xcbWF0aGJiIFp9X3trW3gseV19Il0sWzIsMSwiXFxtYXRocm17Y29ofShcXG1hdGhiYiBBX2teMSkiLFsxODAsNjAsNjAsMV1dLFsyLDMsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgQV9rXjEpIixbMTgwLDYwLDYwLDFdXSxbMywyLCJcXG1hdGhybXtjb2h9KFxcbWF0aGJiIEFfa14xIFxcc2V0bWludXMgXFx7MFxcfSkiLFsxODAsNjAsNjAsMV1dLFsxLDIsIlxcbWF0aHJte2NvaH0oXFxtYXRoYmIgUF9rXjEpIixbMTgwLDYwLDYwLDFdXSxbMywxLCJcXG1hdGhiZnttb2R9X3trW3kseV57LTF9XX0iXSxbMiwwLCJcXG1hdGhiZnttb2R9X3trW3ldfSJdLFsxLDEsIlxcbWF0aHNjciBBIl0sWzAsMCwie14wfVxcbWF0aGJme21vZH1fe2tbeCx5XX1ee1xcbWF0aGJiIFp9Il0sWzAsMiwiXFxmcmFje1xcbWF0aGJme21vZH1ee1xcbWF0aGJiIFp9X3trW3gseV19fXt7XjB9XFxtYXRoYmZ7bW9kfV97a1t4LHldfV57XFxtYXRoYmIgWn19Il0sWzQsMSwiXFx0ZXh0e+aooeivreiogH0iXSxbNCwyLCJcXHRleHR75bGC6K+t6KiAfSIsWzE4MCw2MCw2MCwxXV0sWzUsMiwiIiwwLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsyLDQsIiIsMCx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMyw0LCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzUsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFs3LDZdLFswLDZdLFs4LDBdLFs4LDddLFs5LDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMSwwLCIiLDIseyJjdXJ2ZSI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEsNywiIiwwLHsiY3VydmUiOi0yLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSw4LCJHIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsMTAsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxMCw1LCIoLSlee1xcI30iLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsxODAsNjAsNjBdfSxbMTgwLDYwLDYwLDFdXSxbNSwxMCwiXFxHYW1tYSAiLDAseyJvZmZzZXQiOi0zfV0sWzI3LDI2LCJcXHRvcCAiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
-  &lt;p&gt;左侧三项小 Abel 范畴的``短正合列’‘给出 Serre 商范畴. &lt;br /&gt; &lt;br /&gt; 我们暂时回归初始假定, 此时 $k[x,y]$ 是 Noether 环. 左下角的伴随实际上是范畴等价, 即, $G$ 诱导了&lt;/p&gt;
-  &lt;p&gt;$$
-\frac{𝐦𝐨𝐝_{k[x,y]}^ℤ}{^0𝐦𝐨𝐝_{k[x,y]}^ℤ} ≃ \mathrm{coh}(ℙ_k^1).
-$$&lt;/p&gt;
-  &lt;p&gt;凭借一些粗浅地构造, 可以看出&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;$\ker G$ 恰好是支撑有限的分次模. 由层的粘合原理知 $GX=0$ 当且仅当其限制在两处 $𝔸_k^1$ 上为 $0$. 相应地, 存在 $N$ 使得 $GX$ 被 $x^N$ 与 $y^N$ 同时零化.&lt;/li&gt;
-    &lt;li&gt;
-      &lt;p&gt;$G$ 是本质满且全的, 因为可以按照&lt;/p&gt;
-      &lt;p&gt;$$
-   ((M_a)^{deg =0} ⟹ (M_{a,b})^{\deg a + \deg b =0} ⟸ (M_b)^{\deg =0 })
-   $$&lt;/p&gt;
-      &lt;p&gt;复原 $M$ (不必唯一). 这一基于自由余代数 $k(x)$-作用的构造也是函子性的 (该构造对非 Noether 环会出一些问题);&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li&gt;$G$ 也是正合的. 假定 $G$ 保持一切有限极限与余极限, 则拉回图交换. 依照泛性质, $G$ 唯一, 从而是正合函子.&lt;/li&gt;
-    &lt;li&gt;之所以 $\overline G : \frac{𝐦𝐨𝐝_{k[x,y]}^ℤ}{^0𝐦𝐨𝐝_{k[x,y]}^ℤ} → \mathrm{coh}(ℙ_k^1)$ 忠实, 是因为 $G$ 是以 torsion class 为核的正合函子.&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;导出等价-mathjax_protectedjereyiaoxg1hdghybxtjb2h9kokemv9rxjepksdiiymgrf5iicjwnzcr8j2qnvcdkkkoa1viijkg4oejiokimv0pksqmathjax_protected&quot;&gt;导出等价 $D^b (\mathrm{coh}(ℙ_k^1)) ≃ D^b (𝐫𝐞𝐩(k[∙ ⇉ ∙]))$&lt;/h3&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
           <link>https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Rep</link>
@@ -14559,18 +14460,26 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;proof&quot;&gt;
-  &lt;p&gt;只看前三条. &lt;br /&gt; (1. 的证明). 不可分解投射对象 $P(i)$ 的支撑集是由 $i$ 向外的树, 从分支至主干地作用 $C^+_∙$ 即可 (并列的分支无关先后) 即可. 最后得内射单模 $S(i)$, 作用 $C^+_i$ 后归零. 由于 Coxeter 反射唯一, 故投射对象被 $C^+$ 零化. &lt;br /&gt; (2. 的证明). 假定 $M ≠ 0$, 但 $C^+ M= 0$. 不妨记 $C^+ = C_1^+\cdots C_n^+$. 下归纳地证明所有 $C_{k}^+\cdots C_n^+ M$ 都是对应 quiver 的不可分解投射对象 (或零对象).&lt;/p&gt;
+  &lt;p&gt;只看前三条. &lt;br /&gt; (1. 的证明). 不可分解投射对象 $P(i)$ 的支撑集是由 $i$ 向外的树, 从分支至主干地作用 $C^+_∙$ 即可 (并列的分支无关先后) 即可. 最后得内射单模 $S(i)$, 作用 $C^+_i$ 后归零. 由于 Coxeter 反射唯一, 故任意不可分解投射对象被 $C^+$ 零化. &lt;br /&gt; (2. 的证明). 假定 $M ≠ 0$ 是不可分解模, 但 $C^+ M= 0$. 不妨记 $C^+ = C_1^+\cdots C_n^+$. 下归纳地证明所有 $C_{k}^+\cdots C_n^+ M$ 都是 $𝐫𝐞𝐩(C_{k}^+\cdots C_n^+ Q)$ 中的不可分解投射对象 (或零对象).&lt;/p&gt;
   &lt;ol&gt;
-    &lt;li&gt;(初始). 存在极小的 $i$ 使得 $C_{i+1}^+\cdots C_n^+ M$ 是 $k(C_{i+1}^+\cdots C_n^+Q)$ 的投射单对象;&lt;/li&gt;
-    &lt;li&gt;
-      &lt;p&gt;(归纳). 若 $C_{i+1}^+\cdots C_n^+Q$ 存在 $(i+1) → (i)$ 类型的箭头, 依照&lt;a href=&quot;Coxeter_PM_Adjoint&quot;&gt;伴随的余单位&lt;/a&gt;知&lt;/p&gt;
-      &lt;p&gt;$$
-   C_{i+1}^-C_{i+1}^+\cdots C_n^+ M ≃ C_{i+2}^+\cdots C_n^+ M
-   $$&lt;/p&gt;
-      &lt;p&gt;是投射对象. 若无 $(i+1) → (i)$ 类型的箭头, 则 $i$ 与邻点的连边不受影响, 原投射对象是新 quiver 的投射对象.&lt;/p&gt;
+    &lt;li&gt;(初始). 模在消失前的状态必然是下一反射作用位置的投射单对象. 存在极小的 $i$ 使得 $C_{i+1}^+\cdots C_n^+ M$ 是 $𝐫𝐞𝐩 (C_{i+1}^+\cdots C_n^+Q)$ 中的投射单对象;&lt;/li&gt;
+    &lt;li&gt;(归纳). 假定得到了 $C_{i+1}^+\cdots C_n^+Q$ 中的投射对象 $C_{i+1}^+\cdots C_n^+M$. 该图中, $i$ 是 sink, $(i+1)$ 是 source. 由等式 $$
+   C_{i+1}^-C_{i+1}^+\cdots C_n^+ M ≃ C_{i+2}^+\cdots C_n^+ M,
+   $$ 下证明 $M' := C_{i+1}^+\cdots C_n^+M$ 是投射对象即可.       &lt;ol&gt;
+        &lt;li&gt;若 $M' = P(i+1)$. 由于 $M'  = C_{i+1}^+ N$ 是不可分解模, 则 $i+1$ 有且仅有一条出边. 此时&lt;/li&gt;
+      &lt;/ol&gt;
+      &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+          &lt;embed src=&quot;/website/svg/Proj_Inj_Coxeter/diagram_5d2f0a8048ccf.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+        &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+      &lt;ol&gt;
+        &lt;li&gt;若不然, 则 $(M')_{i+1} = 0$, 因为 $(i+1)$ 是 source. 此时至多存在一个 $(i+1)$ 的邻点 $j$, 使得 $M_j ≠ 0$:&lt;/li&gt;
+      &lt;/ol&gt;
+      &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+          &lt;embed src=&quot;/website/svg/Proj_Inj_Coxeter/diagram_72f0c151df8fd.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+        &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+      &lt;p&gt;$C_{i+1}^-M$ 仍是投射对象.&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-  &lt;p&gt;&lt;br /&gt; (3. 的证明). 结合以上两点即可.&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
@@ -14709,19 +14618,26 @@ $$&lt;/p&gt;
   &lt;p&gt;(&lt;a href=&quot;Coxeter_Ref_Idem&quot;&gt;证明&lt;/a&gt;). Coxeter 反射 $C_i^±$ 保持不可分解模; 除了映 $S_i$ 至 $0$.&lt;/p&gt;
 &lt;/div&gt;
 
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;回顾一则引理: $B$ 不可分解当且仅当 $\mathrm{End}(B)$ 是局部环.&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;div class=&quot;proof&quot;&gt;
-  &lt;p&gt;只看 $C_i^+$. 由上文, $(M)_i ↦ (C_i^+ M)_i$ 由多个对象的拉回决定, 也就是&lt;/p&gt;
+  &lt;p&gt;只看 $C_i^+$. 由上文, $(C_i^+ M)_i$ 由多个对象的拉回决定, 也就是&lt;/p&gt;
   &lt;p&gt;$$
-0 → (C_i^+ M)_i → M_{≠ i} → M_i.
+0 → (C_i^+ M)_i → ⨁_{i → j} M_j → M_i.
 $$&lt;/p&gt;
-  &lt;p&gt;对任意自同态 $φ: M → M$, kernel 的泛性质诱导了 $(C_i^+ M)_i$ 的自同态, 即从而唯一地给出 $C_i^+M$ 的自同态. 类似的构造给出自同态环的单射:&lt;/p&gt;
+  &lt;p&gt;对任意自同态 $φ: M → M$, kernel 的泛性质诱导了 $(C_i^+ M)_i$ 的自同态, 即从而唯一地给出 $C_i^+M$ 的自同态. 此时有自同态环的单射:&lt;/p&gt;
   &lt;p&gt;$$
-\mathrm{End}_{kQ}(M) ↪ \mathrm{End}_{k(C_i^+)}(C_i^+M) ↪ \mathrm{End}_{kQ}(C_i^-C_i^+M).  
+\mathrm{End}_{kQ}(M) ↪ \mathrm{End}_{k(C_i^+)}(C_i^+M) \overset ⋆ ≃ \mathrm{End}_{kQ}(C_i^-C_i^+M).  
 $$&lt;/p&gt;
-  &lt;p&gt;由于 $M_i$ 不可分解, 由 $C_i^- C_i^+ M \oplus \mathrm{coker}[\bigoplus_{\neq i} M_i → M] \simeq M$ 得 $M_i ≃ S_i$ 或 $M_i ≃ C_i^- C_i^+ M$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$⋆$ 处同构: 对伴随函子 $C_i^- ⊣ C_i^+$ 使用三角恒等式.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;由于 $M$ 不可分解, 以及 $C_i^- C_i^+ M \oplus \mathrm{coker}[\bigoplus_{\neq i} M_i → M] \simeq M$ 得 $M_i ≃ S_i$ 或 $M_i ≃ C_i^- C_i^+ M$.&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;若 $M = S_i$, 则 $C_i^+(M) = 0$;&lt;/li&gt;
-    &lt;li&gt;若 $M ≃ C_i^- C_i^+ M$, 则 $\mathrm{End}_{kQ}(M) ≃ \mathrm{End}_{k(C_i^+)}(C_i^+M)$ 是局部环, 从而 $C_i^+M$ 不可分解.&lt;/li&gt;
+    &lt;li&gt;若 $M ≃ C_i^- C_i^+ M$, 则上述环同态取等, 因此 $\mathrm{End}_{kQ}(M) ≃ \mathrm{End}_{k(C_i^+)}(C_i^+M)$ 是局部环, 从而 $C_i^+M$ 不可分解.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
@@ -14737,7 +14653,7 @@ $$&lt;/p&gt;
           <description>&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
 
 &lt;div class=&quot;proposition&quot;&gt;
-  &lt;p&gt;假定 $C_i^+ : Q_1 → Q_2$, 则以下是伴随函子: \begin{equation} C_i ^- : \mathbf{rep}_k(Q_2) ⇄ \mathbf{rep}_k(Q_1) : C_i ^+. \end{equation}&lt;/p&gt;
+  &lt;p&gt;若 $i$ 是 $Q_1$ 的 sink, 则 $C_i^+ : Q_1 ⇄ Q_2 : C_i ^-$ 是互逆的图运算. 此时存在伴随函子: \begin{equation} C_i ^- : \mathbf{rep}_k(Q_2) ⇄ \mathbf{rep}_k(Q_1) : C_i ^+. \end{equation}&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;proof&quot;&gt;
@@ -14755,14 +14671,6 @@ $$&lt;/p&gt;
     &lt;li&gt;给定实竖箭头, 所有可行的交换方块 $⬔$ 构成 $(N, C_i^+(M))_{kQ_1}$.&lt;/li&gt;
   &lt;/ol&gt;
   &lt;p&gt;从而 $(C_i^-(N), M) ≃ (N, C_i^+(M))_{kQ_1}$, 这一同构是由 ker 与 coker 的泛性质诱导的.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;容易计算,&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;(单位). $M \simeq C_i^+ C_i^- M \oplus \ker[M_i → \bigoplus M_{\neq i}] \twoheadrightarrow C_i^+ C_i^- M$ 是投影;&lt;/li&gt;
-    &lt;li&gt;(余单位) $C_i^- C_i^+ N \hookrightarrow C_i^- C_i^+ N \oplus \mathrm{coker}[\bigoplus_{\neq i} N_i → N] \simeq N$ 是嵌入.&lt;/li&gt;
-  &lt;/ol&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
@@ -14813,11 +14721,10 @@ $$&lt;/p&gt;
 &lt;div class=&quot;proof&quot;&gt;
   &lt;p&gt;以下将频繁使用一则事实:&lt;/p&gt;
   &lt;ul&gt;
-    &lt;li&gt;若 $C_i ^+ C_j ^+$ 与 $C_j ^+ C_i ^+$ 均良定义且相等, 则 $i$ 与 $j$ 是没有公共邻点的 sink.&lt;/li&gt;
+    &lt;li&gt;当且仅当 $C_i ^+ C_j ^+$ 与 $C_j ^+ C_i ^+$ 均良定义且相等, $i$ 与 $j$ 是没有公共邻点的 sink.&lt;/li&gt;
   &lt;/ul&gt;
-  &lt;p&gt;不妨假定 $C^+_{(n)} C^+_{ (n-1)} \cdots C_{ (1)}^+$ 与 $S^+_{\sigma (n)} S^+_{\sigma (n-1)} \cdots S_{\sigma (1)}^+$ 均为完全 Coxeter 反射. 此处 $S^+_p = C^+_p$, $S$ 与 $C$ 仅是记号上的区分. &lt;br /&gt; &lt;br /&gt; 由于 $S^+_{\sigma (\sigma^{-1}(1))}$ 可定义, 从而任意 $S^+_{\sigma (\leq \sigma^{-1}(1))}$ 与 $S^+_1$ 均无邻点, 故存在移位&lt;/p&gt;
-  &lt;p&gt;$$
-S^+_{\sigma (n)} S^+_{\sigma (n-1)} \cdots S_{\sigma (1)}^+ = S^+_{\sigma (n)} S^+_{\sigma (n-1)} \cdots {\color{blue}\widehat{S^+_1}}\cdots  S_{\sigma (1)}^+ {\color{red}C_1^+}.
+  &lt;p&gt;不妨假定 $C^+_{n} C^+_{ n-1} \cdots C_{ 1}^+$ 与 $C^+_{\sigma (n)} C^+_{\sigma (n-1)} \cdots C_{\sigma (1)}^+$ 均为完全 Coxeter 反射. 下考虑 $C_1^+$ 在右式中出现的位置, 由式 $\cdots C_1 C_{\sigma (σ^{-1}(1) - 1)}^+\cdots C_{\sigma (1)}^+$ 良定义, 且 $1$ 是原图的 sink, 则不存在 $σ ( ≤ σ^{-1}(1))$ 指向 $1$ 的边. 这给出移动: $$
+C^+_{\sigma (n)} C^+_{\sigma (n-1)} \cdots C^+_{\sigma (1)} = C^+_{\sigma (n)} C^+_{\sigma (n-1)} \cdots {\color{blue}\widehat{C^+_1}}\cdots  C^+_{\sigma (1)} {\color{red}C_1^+}.
 $$&lt;/p&gt;
   &lt;p&gt;归纳即可.&lt;/p&gt;
 &lt;/div&gt;
@@ -15175,13 +15082,12 @@ $$&lt;/p&gt;
     
       
         <item>
-          <title>Coxeter 反射入门</title>
+          <title>Coxeter 反射简介</title>
           <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#coxeter-反射-ar-平移的另一表示方式&quot; id=&quot;markdown-toc-coxeter-反射-ar-平移的另一表示方式&quot;&gt;Coxeter 反射: AR 平移的另一表示方式&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#反射函子初探&quot; id=&quot;markdown-toc-反射函子初探&quot;&gt;反射函子初探&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#mathjax_protectedjenfav7cssqmathjax_protected-几乎是等价&quot; id=&quot;markdown-toc-mathjax_protectedjenfav7cssqmathjax_protected-几乎是等价&quot;&gt;$C_i^±$ 几乎是等价&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#完全-coxeter-反射&quot; id=&quot;markdown-toc-完全-coxeter-反射&quot;&gt;完全 Coxeter 反射&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ar-转置&quot; id=&quot;markdown-toc-ar-转置&quot;&gt;AR 转置&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#完全-coxeter-反射与-ar-转置&quot; id=&quot;markdown-toc-完全-coxeter-反射与-ar-转置&quot;&gt;完全 Coxeter 反射与 AR 转置&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -15202,13 +15108,17 @@ $$&lt;/p&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
   &lt;p&gt;(图的 Coxeter 反射). 给定 quiver $Q$, 对任意 sink $i ∈ Q_0$, 定义 Coxeter 反射为反转指向 $i$ 的箭头: ̧&lt;/p&gt;
-  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxidWxsZXQiXSxbMiwxLCJpIixbMjQwLDYwLDYwLDFdXSxbMywxLCJcXGJ1bGxldCJdLFswLDEsIlxcYnVsbGV0Il0sWzEsMCwiXFxidWxsZXQiXSxbNSwxLCJcXGJ1bGxldCJdLFs0LDEsIlxcYnVsbGV0Il0sWzUsMCwiXFxidWxsZXQiXSxbNiwxLCJpIixbMCw2MCw2MCwxXV0sWzcsMSwiXFxidWxsZXQiXSxbMiwyLCJRIl0sWzYsMiwiQ19pIFEiXSxbMiwxLCJcXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlxcYWxwaGEgIiwwLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzAsMSwiXFxiZXRhICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzUsNl0sWzcsNV0sWzgsNSwiXFxhbHBoYSAnICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbOCw1LCJcXGJldGEgJyIsMCx7Im9mZnNldCI6LTMsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzgsOSwiXFxnYW1tYSAnIiwwLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTAsMTEsIkNfaSAiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJsZXZlbCI6Mn1dXQ== --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxidWxsZXQiXSxbMiwxLCJpIixbMjQwLDYwLDYwLDFdXSxbMywxLCJcXGJ1bGxldCJdLFswLDEsIlxcYnVsbGV0Il0sWzEsMCwiXFxidWxsZXQiXSxbNSwxLCJcXGJ1bGxldCJdLFs0LDEsIlxcYnVsbGV0Il0sWzUsMCwiXFxidWxsZXQiXSxbNiwxLCJpIixbMCw2MCw2MCwxXV0sWzcsMSwiXFxidWxsZXQiXSxbMiwyLCJRIl0sWzYsMiwiQ19pIFEiXSxbMiwxLCJcXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlxcYWxwaGEgIiwwLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzAsMSwiXFxiZXRhICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzUsNl0sWzcsNV0sWzgsNSwiXFxhbHBoYSAnICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbOCw1LCJcXGJldGEgJyIsMCx7Im9mZnNldCI6LTMsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzgsOSwiXFxnYW1tYSAnIiwwLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTAsMTEsIkNfaSAiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJsZXZlbCI6Mn1dXQ==&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;300&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/Coxeter-Reflection/diagram_e186caf078590.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
   &lt;p&gt;此处, $C_i$ 仅对 sink 定义.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
   &lt;p&gt;(模 Coxeter 反射). 表示的 Coxeter 反射定义作如下函子&lt;/p&gt;
-  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMTIsWzIsMSwiWF9iIl0sWzMsMSwiWF9pIixbMjQwLDYwLDYwLDFdXSxbNCwxLCJYX2QiXSxbMSwxLCJYX2EiXSxbMiwwLCJYX2MiXSxbMiwzLCJYX2IiXSxbMSwzLCJYX2EiXSxbMiwyLCJYX2MiXSxbMywzLCJcXGtlciBcXGxlZnRbXFxiaWdvcGx1c197dChmKSA9IDF9WF97cyhmKX0gXFx4cmlnaHRhcnJvd3tcXHN1bSBYX2Z9IFhfaVxccmlnaHRdIixbMCw2MCw2MCwxXV0sWzQsMywiWF9kIl0sWzAsMSwiXFxtYXRoYmZ7cmVwfV9rKFEpIl0sWzAsMywiXFxtYXRoYmZ7cmVwfV9rKENfaVEpIl0sWzIsMSwiWF9cXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlhfXFxhbHBoYSAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsyNDAsNjAsNjBdfSxbMjQwLDYwLDYwLDFdXSxbMCwxLCJYX1xcYmV0YSAiLDIseyJvZmZzZXQiOjMsImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFs1LDZdLFs4LDUsInAgIiwyLHsib2Zmc2V0IjozLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDUsInAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDksInAiLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxMCwxMSwiQ19pICIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sImxldmVsIjoyfV0sWzcsNV1d --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMTIsWzIsMSwiWF9iIl0sWzMsMSwiWF9pIixbMjQwLDYwLDYwLDFdXSxbNCwxLCJYX2QiXSxbMSwxLCJYX2EiXSxbMiwwLCJYX2MiXSxbMiwzLCJYX2IiXSxbMSwzLCJYX2EiXSxbMiwyLCJYX2MiXSxbMywzLCJcXGtlciBcXGxlZnRbXFxiaWdvcGx1c197dChmKSA9IDF9WF97cyhmKX0gXFx4cmlnaHRhcnJvd3tcXHN1bSBYX2Z9IFhfaVxccmlnaHRdIixbMCw2MCw2MCwxXV0sWzQsMywiWF9kIl0sWzAsMSwiXFxtYXRoYmZ7cmVwfV9rKFEpIl0sWzAsMywiXFxtYXRoYmZ7cmVwfV9rKENfaVEpIl0sWzIsMSwiWF9cXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlhfXFxhbHBoYSAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsyNDAsNjAsNjBdfSxbMjQwLDYwLDYwLDFdXSxbMCwxLCJYX1xcYmV0YSAiLDIseyJvZmZzZXQiOjMsImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFs1LDZdLFs4LDUsInAgIiwyLHsib2Zmc2V0IjozLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDUsInAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDksInAiLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxMCwxMSwiQ19pICIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sImxldmVsIjoyfV0sWzcsNV1d&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;350&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/Coxeter-Reflection/diagram_ec527d9471c7b.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
   &lt;p&gt;对给定 $X ∈ 𝐫𝐞𝐩(Q)$, $C_i X ∈ 𝐫𝐞𝐩 (C_iQ)$ 定义如下&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$X$ 与 $C_iX$ 在 $X_{≠ i}$ 与 $φ_{≠ [∙ → i]}$ 处相同 (仅有的改变是上图的着色部分);&lt;/li&gt;
@@ -15216,30 +15126,54 @@ $$&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;($C_i^±$). 记 $C_i^+$ 是 sink 处的反射 (以上定义的 $C_i$), $C_i^-$ 是 source 处的反射.&lt;/p&gt;
+&lt;div class=&quot;note&quot;&gt;
+  &lt;p&gt;从 $Q → Q'$ 到 $𝐫𝐞𝐩 (Q) → 𝐫𝐞𝐩 (Q')$ 保持方向.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;note&quot;&gt;
-  &lt;p&gt;若无歧义, 暂不区分图的 Coxeter 反射与模的 Coxeter 反射.&lt;/p&gt;
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;($C_i^±$). 记 $C_i^+$ 是 sink 处的反射 (以上定义的 $C_i$), $C_i^-$ 是 source 处的反射. 若无歧义, 统一使用 $C_i^±$ 表示图的 Coxeter 反射与模的 Coxeter 反射.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;(例子, Kronecker quiver). 给定 Kronecker quiver, 相应的 Coxeter 反射如下:&lt;/p&gt;
-  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMjAsWzEsMiwiWF8xIl0sWzIsMiwiWF8yIl0sWzIsMywiWF8yJyAiLFsyMzQsMTAwLDYwLDFdXSxbMSwzLCJYXzEiXSxbMCwyLCJcXG1hdGhiZntyZXB9KFxccmlnaHRyaWdodGFycm93cykiXSxbMCwzLCJcXG1hdGhiZntyZXB9KFxcbGVmdGxlZnRhcnJvd3MpIl0sWzMsMywiWF8xIl0sWzQsMiwiWF8xIl0sWzMsMiwiWF8yJyIsWzIzNCwxMDAsNjAsMV1dLFs0LDMsIlhfMiJdLFswLDEsIlxcbWF0aGJme3JlcH0oXFxyaWdodHJpZ2h0YXJyb3dzKSJdLFswLDAsIlxcbWF0aGJme3JlcH0oXFxsZWZ0bGVmdGFycm93cykiXSxbMSwxLCJYXzEiXSxbMSwwLCJYXzEnJyIsWzAsNjAsNjAsMV1dLFsyLDAsIlhfMiJdLFsyLDEsIlhfMiJdLFszLDAsIlhfMSJdLFs0LDEsIlhfMScnIixbMCw2MCw2MCwxXV0sWzMsMSwiWF8yIl0sWzQsMCwiWF8yIl0sWzAsMSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJnIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiZiciLDIseyJvZmZzZXQiOjIsImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzIsMywiZyciLDAseyJvZmZzZXQiOi0yLCJjb2xvdXIiOlsyMzQsMTAwLDYwXX0sWzIzNCwxMDAsNjAsMV1dLFs0LDUsIkNfMl4rIiwyLHsibGV2ZWwiOjJ9XSxbOCw3LCJmJyIsMCx7ImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzcsOSwiZiJdLFs4LDYsImcnIiwyLHsiY29sb3VyIjpbMjM0LDEwMCw2MF19LFsyMzQsMTAwLDYwLDFdXSxbNiw5LCJnIiwyXSxbOCw5LCJcXHRleHR75ouJ5ZuefSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMiwxNSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMTIsMTUsImciLDIseyJvZmZzZXQiOjJ9XSxbMTQsMTMsImYnJyIsMix7Im9mZnNldCI6MiwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTQsMTMsImcnJyIsMCx7Im9mZnNldCI6LTIsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzE2LDE3LCJcXHRleHR75o6o5Ye6fSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMSwiQ18xXi0iLDAseyJsZXZlbCI6Mn1dLFsxNiwxOSwiZiJdLFsxNiwxOCwiZyIsMl0sWzE5LDE3LCJnJyciLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxOCwxNywiZicnIiwyLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMjAsWzEsMiwiWF8xIl0sWzIsMiwiWF8yIl0sWzIsMywiWF8yJyAiLFsyMzQsMTAwLDYwLDFdXSxbMSwzLCJYXzEiXSxbMCwyLCJcXG1hdGhiZntyZXB9KFxccmlnaHRyaWdodGFycm93cykiXSxbMCwzLCJcXG1hdGhiZntyZXB9KFxcbGVmdGxlZnRhcnJvd3MpIl0sWzMsMywiWF8xIl0sWzQsMiwiWF8xIl0sWzMsMiwiWF8yJyIsWzIzNCwxMDAsNjAsMV1dLFs0LDMsIlhfMiJdLFswLDEsIlxcbWF0aGJme3JlcH0oXFxyaWdodHJpZ2h0YXJyb3dzKSJdLFswLDAsIlxcbWF0aGJme3JlcH0oXFxsZWZ0bGVmdGFycm93cykiXSxbMSwxLCJYXzEiXSxbMSwwLCJYXzEnJyIsWzAsNjAsNjAsMV1dLFsyLDAsIlhfMiJdLFsyLDEsIlhfMiJdLFszLDAsIlhfMSJdLFs0LDEsIlhfMScnIixbMCw2MCw2MCwxXV0sWzMsMSwiWF8yIl0sWzQsMCwiWF8yIl0sWzAsMSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJnIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiZiciLDIseyJvZmZzZXQiOjIsImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzIsMywiZyciLDAseyJvZmZzZXQiOi0yLCJjb2xvdXIiOlsyMzQsMTAwLDYwXX0sWzIzNCwxMDAsNjAsMV1dLFs0LDUsIkNfMl4rIiwyLHsibGV2ZWwiOjJ9XSxbOCw3LCJmJyIsMCx7ImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzcsOSwiZiJdLFs4LDYsImcnIiwyLHsiY29sb3VyIjpbMjM0LDEwMCw2MF19LFsyMzQsMTAwLDYwLDFdXSxbNiw5LCJnIiwyXSxbOCw5LCJcXHRleHR75ouJ5ZuefSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMiwxNSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMTIsMTUsImciLDIseyJvZmZzZXQiOjJ9XSxbMTQsMTMsImYnJyIsMix7Im9mZnNldCI6MiwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTQsMTMsImcnJyIsMCx7Im9mZnNldCI6LTIsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzE2LDE3LCJcXHRleHR75o6o5Ye6fSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMSwiQ18xXi0iLDAseyJsZXZlbCI6Mn1dLFsxNiwxOSwiZiJdLFsxNiwxOCwiZyIsMl0sWzE5LDE3LCJnJyciLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxOCwxNywiZicnIiwyLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;400&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/Coxeter-Reflection/diagram_e6148adb8f703.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;$C_i^±$ 是表示范畴间的加法函子. 其中, $C_i^± (φ)$ 由 kernel 或 cokernel 的泛性质诱导. $C_i^±$ 保持模的直和关系.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;mathjax_protectedjenfav7cssqmathjax_protected-几乎是等价&quot;&gt;$C_i^±$ 几乎是等价&lt;/h3&gt;
 
 &lt;div class=&quot;proposition&quot;&gt;
-  &lt;p&gt;(&lt;a href=&quot;Coxeter_PM_Adjoint&quot;&gt;证明&lt;/a&gt;) 假定 $C_i^+ : Q_1 → Q_2$, 则以下是伴随函子: \begin{equation} C_i ^- : \mathbf{rep}_k(Q_2) ⇄ \mathbf{rep}_k(Q_1) : C_i ^+. \end{equation}&lt;/p&gt;
+  &lt;p&gt;(&lt;a href=&quot;Coxeter_PM_Adjoint&quot;&gt;证明&lt;/a&gt;) 若 $i$ 是 $Q_1$ 的 sink, 则 $C_i^+ : Q_1 ⇄ Q_2 : C_i ^-$ 是互逆的图运算. 此时存在伴随函子: \begin{equation} C_i ^- : \mathbf{rep}_k(Q_2) ⇄ \mathbf{rep}_k(Q_1) : C_i ^+. \end{equation}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;$Q = →$. 对 $(f : A → B) ∈ 𝐫𝐞𝐩 (→)$, 有以下短正合列&lt;/p&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/Coxeter-Reflection/diagram_8b4810b3f9f31.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+  &lt;p&gt;最右项是 $𝐫𝐞𝐩$ 中的投射单对象, 从而正合列可列. 确实也有线性空间的直和 $\mathrm{im}(f) ⊕ \mathrm{cok}(f) ≃ B$.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;容易计算,&lt;/p&gt;
   &lt;ol&gt;
-    &lt;li&gt;(单位). $M \simeq C_i^+ C_i^- M \oplus \ker[M_i → \bigoplus M_{\neq i}] \twoheadrightarrow C_i^+ C_i^- M$ 是投影;&lt;/li&gt;
-    &lt;li&gt;(余单位) $C_i^- C_i^+ N \hookrightarrow C_i^- C_i^+ N \oplus \mathrm{coker}[\bigoplus_{\neq i} N_i → N] \simeq N$ 是嵌入.&lt;/li&gt;
+    &lt;li&gt;(单位, $i$ 是 source). $M ↠ C_i^+ C_i^- M$ 是投影.       &lt;ol&gt;
+        &lt;li&gt;合并 $i$ 处指出的箭头, 得态射 $φ : M_i → ⨁ M_{≠ i}$. 商对象 $C_i^+ C_i^- M$ 在 $i$ 处的分量是 $\mathrm{coim}(φ)$.&lt;/li&gt;
+        &lt;li&gt;若 $φ$ 是单的, 则 $M ≃ C_i^+ C_i^- M$.&lt;/li&gt;
+        &lt;li&gt;$M ≃ C_i^+ C_i^- M ⊕ S_i^{\dim \ker (φ )}$.&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;(余单位, $i$ 是 sink) $C_i^- C_i^+ N ↪ N$ 是嵌入.       &lt;ol&gt;
+        &lt;li&gt;合并 $i$ 处指入的箭头, 得态射 $ψ : ⨁ _{ ≠ i} → N_i$. 子对象 $C_i^- C_i ^+$ 在 $i$ 处的分量是 $\mathrm{im}(ψ)$.&lt;/li&gt;
+        &lt;li&gt;若 $ψ$ 是满的, 则 $C_i^- C_i^+ N ≃ N$.&lt;/li&gt;
+        &lt;li&gt;$N ≃ C_i^- C_i^+ N ⊕ S_i^{\dim \mathrm{cok}(ψ )}$&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
@@ -15256,19 +15190,21 @@ $$&lt;/p&gt;
 &lt;div class=&quot;theorem&quot;&gt;
   &lt;p&gt;假定 $C_i ^- : Q_1 ⇆  Q_2 : C_i^+$. 记 $𝐢(Q_i)$ 是 $𝐦𝐨𝐝_{kQ_i}$ 中的不可分解对象 (的同构类), 则以下是双射:&lt;/p&gt;
   &lt;p&gt;$$
-C_i^- : 𝐢 (Q_1) ⇆ 𝐢 (Q_2) : C_i^+.
+C_i^- : 𝐢 (Q_1 ∖ \{S_i\}) ⇆ 𝐢 (Q_2 ∖ \{S_i\}) : C_i^+.
 $$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;(反射的例子). 考虑 $D_4$ 型 quiver 的反射, 比较如下 AR quiver:&lt;/p&gt;
-  &lt;center&gt; &lt;!-- https://q.uiver.app/#q=WzAsMzIsWzEsMSwiNCJdLFsyLDAsIjEiXSxbMiwxLCIyIl0sWzIsMiwiMyJdLFszLDEsIlAoNCkiXSxbNCwwLCJQKDEpIl0sWzQsMiwiUCgzKSJdLFs0LDEsIlAoMikiXSxbNSwxLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDIgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwwLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAwXFxcXDEgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwxLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDEgXFwgXFwgMFxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwyLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDEgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMH0iXSxbNywxLCJJKDQpIl0sWzgsMCwiSSgxKSJdLFs4LDEsIkkoMikiXSxbOCwyLCJTKDMpIl0sWzIsMywiMSJdLFsyLDQsIjIiXSxbMSw0LCI0Il0sWzAsNSwiMyJdLFsyLDUsIlMoMykiXSxbMyw0LCJQKDQpIl0sWzQsMywiUCgxKSJdLFs0LDQsIlAoMikiXSxbNCw1LCJTKDQpIl0sWzUsNCwiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMVxcXFwyIFxcIFxcIDFcXFxcMSBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsMywiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMFxcXFwxIFxcIFxcIDFcXFxcMCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsNCwiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMVxcXFwxIFxcIFxcIDBcXFxcMCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsNSwiSSgzKSJdLFs3LDQsIkkoNCkiXSxbOCwzLCJJKDEpIl0sWzgsNCwiSSgyKSJdLFsxLDBdLFsyLDBdLFszLDBdLFs0LDVdLFs0LDddLFs0LDZdLFs1LDhdLFs3LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV0sWzksMTJdLFsxMiwxM10sWzEwLDEyXSxbMTIsMTRdLFsxMSwxMl0sWzEyLDE1XSxbMTYsMThdLFsxNywxOF0sWzE4LDE5XSxbMjAsMjFdLFsyMSwyMl0sWzIxLDIzXSxbMjEsMjRdLFsyMiwyNV0sWzIzLDI1XSxbMjQsMjVdLFsyNSwyNl0sWzI1LDI3XSxbMjUsMjhdLFsyNiwyOV0sWzI3LDI5XSxbMjgsMjldLFsyOSwzMF0sWzI5LDMxXV0= --&gt; &lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsMzIsWzEsMSwiNCJdLFsyLDAsIjEiXSxbMiwxLCIyIl0sWzIsMiwiMyJdLFszLDEsIlAoNCkiXSxbNCwwLCJQKDEpIl0sWzQsMiwiUCgzKSJdLFs0LDEsIlAoMikiXSxbNSwxLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDIgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwwLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAwXFxcXDEgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwxLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDEgXFwgXFwgMFxcXFwgXFwgXFwgXFwgXFwgMX0iXSxbNiwyLCJcXHN1YnN0YWNreyBcXCBcXCBcXCBcXCAxXFxcXDEgXFwgXFwgMVxcXFwgXFwgXFwgXFwgXFwgMH0iXSxbNywxLCJJKDQpIl0sWzgsMCwiSSgxKSJdLFs4LDEsIkkoMikiXSxbOCwyLCJTKDMpIl0sWzIsMywiMSJdLFsyLDQsIjIiXSxbMSw0LCI0Il0sWzAsNSwiMyJdLFsyLDUsIlMoMykiXSxbMyw0LCJQKDQpIl0sWzQsMywiUCgxKSJdLFs0LDQsIlAoMikiXSxbNCw1LCJTKDQpIl0sWzUsNCwiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMVxcXFwyIFxcIFxcIDFcXFxcMSBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsMywiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMFxcXFwxIFxcIFxcIDFcXFxcMCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsNCwiXFxzdWJzdGFja3sgXFwgXFwgXFwgXFwgMVxcXFwxIFxcIFxcIDBcXFxcMCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCBcXCB9Il0sWzYsNSwiSSgzKSJdLFs3LDQsIkkoNCkiXSxbOCwzLCJJKDEpIl0sWzgsNCwiSSgyKSJdLFsxLDBdLFsyLDBdLFszLDBdLFs0LDVdLFs0LDddLFs0LDZdLFs1LDhdLFs3LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV0sWzksMTJdLFsxMiwxM10sWzEwLDEyXSxbMTIsMTRdLFsxMSwxMl0sWzEyLDE1XSxbMTYsMThdLFsxNywxOF0sWzE4LDE5XSxbMjAsMjFdLFsyMSwyMl0sWzIxLDIzXSxbMjEsMjRdLFsyMiwyNV0sWzIzLDI1XSxbMjQsMjVdLFsyNSwyNl0sWzI1LDI3XSxbMjUsMjhdLFsyNiwyOV0sWzI3LDI5XSxbMjgsMjldLFsyOSwzMF0sWzI5LDMxXV0=&amp;amp;embed&quot; width=&quot;600&quot; height=&quot;400&quot; style=&quot;border-radius: 8px; border: dashed;&quot;&gt;&lt;/iframe&gt; &lt;/center&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/Coxeter-Reflection/diagram_937b9d4e1ac61.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
   &lt;p&gt;可以发现, 在 $C_3^±$ 建立了不可分解对象的双射 ($S(3)$ 除外), 同时保持 $\mathrm{Irr}$-空间维度.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;完全-coxeter-反射&quot;&gt;完全 Coxeter 反射&lt;/h3&gt;
+&lt;h3 id=&quot;完全-coxeter-反射与-ar-转置&quot;&gt;完全 Coxeter 反射与 AR 转置&lt;/h3&gt;
 
-&lt;p&gt;以下是一个自然的想法: 若存在一列遍历所有 $Q_0$ 的反射 $C_{i_k}^-$ 使得 $C^-_{i_n} \cdots C_{i_1}^-$ 可复合, 则得自函子 $𝐫𝐞𝐩_k(Q) → 𝐫𝐞𝐩_k(Q)$. 实际上, 这一自函子存在且唯一.&lt;/p&gt;
+&lt;p&gt;以下是一个自然的想法: 若存在一列遍历所有 $Q_0$ 的反射 $C_{i_k}^+$ 使得 $C^+_{i_n} \cdots C_{i_1}^+$ 可复合, 则得自函子 $𝐫𝐞𝐩_k(Q) → 𝐫𝐞𝐩_k(Q)$. 实际上, 这一自函子存在且唯一.&lt;/p&gt;
 
 &lt;div class=&quot;theorem&quot;&gt;
   &lt;p&gt;(完全 Coxeter 反射的存在性与唯一性, &lt;a href=&quot;Complete_Coxeter_Reflection&quot;&gt;证明&lt;/a&gt;). 存在 $σ ∈ 𝔖_{Q_0}$, 使得有自函子&lt;/p&gt;
@@ -15289,8 +15225,6 @@ $$&lt;/p&gt;
     &lt;li&gt;$C^-C^+M$ 是不含内射对象的极大直和项.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
-
-&lt;h3 id=&quot;ar-转置&quot;&gt;AR 转置&lt;/h3&gt;
 
 &lt;div class=&quot;lemma&quot;&gt;
   &lt;p&gt;(&lt;a href=&quot;C_is_tau_for_Proj&quot;&gt;证明&lt;/a&gt;). 若 $i$ 是 source, 对不可分解投射对象 $P_i ∈ 𝐦𝐨𝐝_{kQ}$, 则 $τ⁻¹ (P_i)$ 与 $C_i^-P_i$ 是 $𝐦𝐨𝐝_{kC_i^- Q}$ 中同构的模.&lt;/p&gt;
