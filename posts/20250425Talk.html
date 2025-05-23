@@ -9,12 +9,12 @@
 
 
 
-  <title>2025-04-25-讨论班
+  <title>2025-05-09-讨论班
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="网盘地址: 2025Apr25.mp4.">
+<meta name="description" content="网盘地址: 2025May09.mp4.">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -73,72 +73,91 @@
 	<main>
   <article>
     <div class="center">
-      <h1>2025-04-25-讨论班</h1>
+      <h1>2025-05-09-讨论班</h1>
       <p class="author">
         ZCC
         <br/>
-        April 25, 2025
+        May 9, 2025
       </p>
 
     </div>
 
     <div class="divider"></div>
 
-    <p>网盘地址: <a href="https://pan.sjtu.edu.cn/web/share/d920f94fef2a4342d0736b8ded40bdd7"><code class="language-plaintext highlighter-rouge">2025Apr25.mp4</code></a>.</p>
+    <p>网盘地址: <a href="https://pan.sjtu.edu.cn/web/share/d69f76859a7a5e09e39f5fa0336dfe27"><code class="language-plaintext highlighter-rouge">2025May09.mp4</code></a>.</p>
 
-<h2 id="torsion-pair-的遗留问题">Torsion pair 的遗留问题</h2>
+<h2 id="上期勘误">上期勘误</h2>
 
-<div class="lemma">
-  <p>($\mathrm{Ext}^1$-垂直条件, <a href="Torsion_Pair_Ext_Orth">证明</a>). 以下刻画 torsion pair $(𝒯, ℱ)$ 中满足 $\mathrm{Ext}^1$-垂直的对象. 记 $t$ 与 $f$ 是相应的子函子与商函子.</p>
-  <ol>
-    <li>$𝒯 ∩ (^⟂ 𝒯) = 𝒯 ∩ τ ⁻¹ ℱ$.</li>
-    <li>$𝒯 ∩ (𝒯^⟂) = 𝒯 ∩ t(𝐢𝐧𝐣)$.</li>
-    <li>$ℱ ∩ (ℱ^⟂) = ℱ ∩ τ 𝒯$.</li>
-    <li>$ℱ ∩ (^⟂ ℱ) = ℱ ∩ f(𝐩𝐫𝐨𝐣)$.</li>
-  </ol>
-</div>
+<p>位置: <a href="Gabriel_1">Gabriel 定理的证明 (1-2.)</a></p>
 
-<p>见<a href="Notes_on_Tilting#torsion-pair-确定的对象类">此节</a>.</p>
+<p>证明</p>
 
-<h2 id="tilting-与-torsion-pair-mathjax_protectedjche4pc8j2srykg4oipipcdkq8gpsdwnzca8j2qnfcdkj0ovckkmathjax_protected-的证明">Tilting 与 torsion pair: $(^⟂𝒯) ∩ 𝒯 = 𝐚𝐝𝐝(T)$ 的证明</h2>
+<p>$$\begin{equation}
+  𝐝𝐢𝐦 : 𝐈𝐧𝐝𝐞𝐜𝐨𝐦𝐩 (kQ) → Δ _+
+\end{equation}$$</p>
 
-<p>逼近问题见<a href="Notes_on_Tilting#tilting-模诱导的-torsion-pair">此节</a>.</p>
+<p>良定义时, 原证明先就 $M$ 为 brick 与否进行讨论. 假定 $M$ 非 brick, 取维数极小的非零 $B ∈ 𝐬𝐮𝐛(M) ∩ 𝐪𝐮𝐨𝐭(M)$…</p>
 
-<div class="proposition">
-  <p>(Tilting 对象与 torsion pair, <a href="Tilting_Obj_Torsion_Pair">证明</a>). 对 tilting 对象诱导的 torsion pair $(𝒯, ℱ)$.</p>
-  <ol>
-    <li>
-      <p>对任意 $M ∈ 𝒯$, 存在满的右 $𝐚𝐝𝐝 (T)$-逼近 $T^n ↠ M$ 使得</p>
-      <p>$$
-   0 → K → T^n → M → 0 \quad ∈ 𝒯.
-   $$</p>
-    </li>
-    <li>$(^⟂𝒯) ∩ 𝒯 = 𝐚𝐝𝐝(T)$, 即 $𝒯 ∩ τ ^{-1} ℱ = 𝐚𝐝𝐝(T)$.       <blockquote>
-        <p>一般来说, 只有 $(^⟂𝒯) ∩ 𝒯 = 𝒯 ∩ τ ^{-1} ℱ$.</p>
-      </blockquote>
-    </li>
-    <li>$M ∈ 𝒯$ 当且仅当配对 $(T, M) ⊗ T → M$ 是同构.       <blockquote>
-        <p><a href="gen_and_cog">一般来说</a>, $M ∈ 𝒯$ 当且仅当配对 $(T, M) ⊗ T → M$ 是满的.</p>
-      </blockquote>
-    </li>
-  </ol>
-</div>
+<ul>
+  <li>(错误步骤). 将 $B ↪ M ↠ B$ 补全作推出拉回方块.</li>
+  <li>(勘误修复). 证明 $𝐪𝐮𝐨𝐭(M)$ 中存在非自垂直的 brick, 导出矛盾.</li>
+</ul>
 
-<div class="example">
-  <p>特别地, 存在一列逼近的 ses</p>
-  <p>$$
-0 → K_{k + 1} → T^{N_n} → K_n → 0\quad (n ≥ 0,\quad K_0 = M).
-$$</p>
-  <p>使得有长正合列</p>
-  <p>$$
-θ : \dots → T^{N_2} → T^{N_1} → T^{N_0} → M → 0.
-$$</p>
-  <p>使得 $(T, θ)$ 是 $(T, M)$ 的 $\mathrm{End}(T)$-模投射分解.</p>
-</div>
+<h2 id="本周内容">本周内容</h2>
 
-<h2 id="关于反射">关于反射</h2>
+<p><a href="Hereditary-AR-Quiver">正文</a>, 与大纲:</p>
 
-<p><a href="Proof-Gabriel">Gabriel 定理的证明</a>.</p>
+<ul>
+  <li>遗传代数
+    <ul>
+      <li>遗传代数的等价定义, 例子.</li>
+      <li>(不证明). 代数闭域上遗传代数的 quvier 表示.</li>
+      <li>(重要例子) 计算 kronecker quiver 的 AR quiver.
+        <ul>
+          <li>Coxeter reflection v.s. AR translation.</li>
+          <li>A glimpse of postproj, preinj, regular components.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>预投射分支的结构
+    <ul>
+      <li>遗传代数 (I)
+        <ul>
+          <li>无限 AR quiver, 截面.</li>
+          <li>整齐的预投射分支.</li>
+          <li>…</li>
+        </ul>
+      </li>
+      <li>有限维代数
+        <ul>
+          <li>好例子: 有限表示的充要条件.
+            <ul>
+              <li>重要定理: 原田-斎长度估计.</li>
+            </ul>
+          </li>
+          <li>怪例子: 预投射/预内射分支可以有多乱.</li>
+          <li>预投射分支的 Noether 性, 单向性.</li>
+          <li>预投射模是自垂直的 brick.</li>
+        </ul>
+      </li>
+      <li>遗传代数 (II)
+        <ul>
+          <li>有限表示的充要条件.</li>
+          <li>$τ^±$-等价.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="次回預告">次回預告</h2>
+
+<p><a href="Coxeter-Reflection">Coxeter 反射</a>, 以及 <a href="Kronecker_Rep">Kronecker quiver</a> 的 AR quiver.</p>
+
+<p>Tilted 代数的预投射分支: 将<a href="Commutative_Diagram_Alg">此例</a>的倾斜现象推广至无限表示遗传代数, 原遗传代数 $kQ$ 与 tilted 代数 $\mathrm{End}(T)$ 的预投射分支, 预内射分支, 以及正规部分有何联系?</p>
+
+<p>关于预投射部分存在性之判准, 留至 Directing 模.</p>
 
 
   </article>
@@ -147,8 +166,8 @@ $$</p>
     
       <a
         class="next"
-        href="/website/posts/Hereditary-AR-Quiver"
-        title="NEXT: 有限维代数的预投射部分">&lt;&lt;</a>
+        href="/website/posts/Collection_of_Websites"
+        title="NEXT: Useful Tools">&lt;&lt;</a>
       <span>
         &middot;
       </span>
@@ -163,8 +182,8 @@ $$</p>
       </span>
       <a
         class="prev"
-        href="/website/posts/Gabriel_2"
-        title="PREV: Gabriel 主定理 (II)">&gt;&gt;</a>
+        href="/website/posts/Stable_Add_Cat"
+        title="PREV: 稳定加法范畴">&gt;&gt;</a>
     
   </div>
 </main>

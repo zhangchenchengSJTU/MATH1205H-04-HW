@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>外三角范畴 Hovey cotorsion pair 的弱化条件
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Equi_Def_Hovey_CP">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>外三角范畴 Hovey cotorsion pair 的弱化条件</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 21, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="definition">
+  <p>(Twin cotorsion pairs). 给定两个 cotorsion pair $(𝒮 , 𝒮 ^⟂ )$ 与 $(^⟂ 𝒱 , 𝒱)$. 考虑以下三个性质:</p>
+  <ol>
+    <li>$𝔼 (𝒮 , 𝒱 ) = 0$;</li>
+    <li>$𝒮 ∩ 𝒮 ^⟂ = {}^⟂ 𝒱 ∩ 𝒱$;</li>
+    <li>$\mathrm{Cone}(𝒱 , 𝒮) = \mathrm{coCone}(𝒱 , 𝒮)$.</li>
+  </ol>
+  <p>称之</p>
+  <ul>
+    <li>twin cotorsion pairs, 若满足 1.;</li>
+    <li>concentric cotorsion pairs, 若满足 1. 与 2.;</li>
+    <li>Hovey cotorsion pairs, 若满足 1., 2., 与 3..</li>
+  </ul>
+</div>
+
+<div class="theorem">
+  <p>实际上, Hovey cotorsion pairs 的条件只需要 1. 与 3., 即 2. 是多余的.</p>
+  <div class="proof">
+    <p>给定 twin cotorsion pairs $(𝒮 , 𝒮 ^⟂ )$ 与 $(^⟂ 𝒱 , 𝒱 )$ 验证 $$\begin{equation}
+^⟂ 𝒱  ∩ 𝒱 = ^⟂ 𝒱 ∩ (\mathrm{coCone}(𝒱 , 𝒮) ∩ 𝒮 ^⟂ ) = (^⟂ 𝒱 ∩ \mathrm{Cone}(𝒱 , 𝒮)) ∩ 𝒮 ^⟂  = 𝒮 ∩ 𝒮^⟂
+\end{equation}$$ 即可. <br /> <br /> 下证明 $𝒱 = (\mathrm{coCone}(𝒱 , 𝒮) ∩ 𝒮 ^⟂ )$.</p>
+    <ol>
+      <li>(包含方向 $⊆$). 直接的, 依照 $𝒱 = \mathrm{coCone}(𝒱 , 𝒮)$ 与 $𝒱 = 𝒮 ^⟂$ 即得包含关系.</li>
+      <li>(包含方向 $⊇$). 任取 $T ∈ 𝒮^⟂$ 使得有 $T → V → S$ (此处 $V ∈ 𝒱$, $S ∈ 𝒮$), 由 $𝔼 (S , T) = 0$, 得 $T$ 是 $V$ 的直和项, 因此 $T ∈ 𝒱$.</li>
+    </ol>
+  </div>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Stable_Adjoint"
+        title="NEXT: Cotorsion Pair 的特殊逼近是稳定伴随">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/cp_complete_oth"
+        title="PREV: 外三角范畴的 cotorsion pair 的性质">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

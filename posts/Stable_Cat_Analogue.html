@@ -136,7 +136,7 @@
 <div class="note">
   <p>记 $𝔼(Y, X)$ 中的一个元素为 $(X, δ, Y)$, 或简单地, $δ$. 给定 $f : Y → Y'$ 与 $g: X → X'$, 记群同态</p>
   <ul>
-    <li>给定 $𝔼 (f,X) =: f^∗$, 称作拉回;</li>
+    <li>$𝔼 (f,X) =: f^∗$, 称作拉回;</li>
     <li>$𝔼 (Y,g) =: g_∗$, 称作推出.</li>
   </ul>
   <p>由 $𝔼$ 是双函子, 推出与拉回交换.</p>
@@ -268,6 +268,10 @@
   <p>另一种理解方式是正合范畴中的 Noether 同构.</p>
 </div>
 
+<div class="note">
+  <p>对预三角范畴, 八面体公理的等价形式间<a href="Homotopic_PBPO_Oct">同伦的推出拉回</a>一节. ET4 蕴含同伦推出拉回<a href="Homotopic_PBPO_Extri">此文</a>, 但反之未必 (Gap: 态射未必能嵌入外三角!).</p>
+</div>
+
 <div class="example">
   <p>若正合范畴 $(𝒜 ,ℰ)$ 本质小, 或是有足够投射, 则 $\mathrm{Ext}^1$ 总是集合. 此时, $(𝒜, \mathrm{Ext}^1, 𝔰)$ 是外三角范畴, $𝔰$ 由 $\mathrm{Ext}^1$ 的米田群定义给出.</p>
 </div>
@@ -297,66 +301,19 @@
 </div>
 
 <div class="theorem">
-  <p>(函子的同调长正合序列). 给定 $𝔼$-三角 $𝔰 (δ ) = [A\xrightarrow f B \xrightarrow g C]$, 则有六项反变函子的长正合列</p>
+  <p>(函子的同调长正合序列, <a href="Long_Exact_Seq_Extriangulated">证明</a>). 给定 $𝔼$-三角 $𝔰 (δ ) = [A\xrightarrow f B \xrightarrow g C]$, 则有六项反变函子的长正合列</p>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Stable_Cat_Analogue/diagram_ffa3112489174.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
   <p>需要提及, $𝔼(-, B)$ 处的正合性需要 ET4, 前五项长正合列仅通过 ET1, ET2, 与 ET3 推得.</p>
-  <div class="proof">
-    <p>先看看 $(-,B)$ 处正合性.</p>
-    <ol>
-      <li>由函子性, $\ker (g ∘ - ) ⊇ \mathrm{im}(f ∘ -)$.</li>
-      <li>若 $h ∈ \ker (g ∘ - )$, 则有 $𝔼$ 三角间的交换图         <center> <br /> <div class="tikz-diagram">
-            <embed src="/website/svg/Stable_Cat_Analogue/diagram_d2d12493a2930.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-          </div> <br /> </center>
-        <p>因此 $h ∈ \mathrm{im}(f ∘ -)$.</p>
-      </li>
-    </ol>
-    <p>再看 $(-,C)$ 处正合性.</p>
-    <ol>
-      <li>对任意 $h ∈ \mathrm{im}(g ∘ - )$, 不妨记作 $g ∘ l$. 下证明 $δ_!(g ∘ l) = 0$. 由定义, 只需证明 $l^∗g^∗δ = 0$. 下图表明 $g^∗ δ =0_∗ (0)$:         <center> <br /> <div class="tikz-diagram">
-            <embed src="/website/svg/Stable_Cat_Analogue/diagram_a1e89ed1c6c83.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-          </div> <br /> </center>
-      </li>
-      <li>若 $δ_!(h) = 0$, 下证明 $h$ 通过 $g$ 分解. 由 $𝔰(δ_!(h))$ 是可裂短正合列, 对于中项加上适当的同构, 得交换图         <center> <br /> <div class="tikz-diagram">
-            <embed src="/website/svg/Stable_Cat_Analogue/diagram_f927834bfa2c3.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-          </div> <br /> </center>
-        <p>此处 $s$ 即为所求.</p>
-      </li>
-    </ol>
-    <p>下证明 $𝔼 (- ,A)$ 处的正合性.</p>
-    <ol>
-      <li>对任意 $δ_!$ 的像, 即形如 $h^∗ δ$ 的正合列, 下证明 $f_∗(h^∗ δ) = 0$. 直接地, $f_∗ δ = 0$.</li>
-      <li>若 $η ∈ 𝔼 (-, A)$ 满足 $f_∗ η = 0$, 下证明 $η$ 形如 $δ$ 的拉回. 仍不妨设 $f_∗ η$ 是直和形式, 则下图给出分解 $f = sa$:         <center> <br /> <div class="tikz-diagram">
-            <embed src="/website/svg/Stable_Cat_Analogue/diagram_cf047fcd80223.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-          </div> <br /> </center>
-        <p>由 $f$ 通过 $s$ 分解, ET3 给出的虚线处态射即为所求:</p>
-        <center> <br /> <div class="tikz-diagram">
-            <embed src="/website/svg/Stable_Cat_Analogue/diagram_182feb6db6a9f.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-          </div> <br /> </center>
-      </li>
-    </ol>
-    <p>最后考虑 $𝔼(-, B)$ 处的正合性.</p>
-    <ol>
-      <li>一方面, 函子性表明 $\mathrm{ker} (g_∗ )⊇ \mathrm{im}(f_∗)$.</li>
-      <li>另一方面, 若 $g_∗ (η) = 0$, 则有交换图         <center> <br /> <div class="tikz-diagram">
-            <embed src="/website/svg/Stable_Cat_Analogue/diagram_c91b8251b71f3.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-          </div> <br /> </center>
-        <p>此时, 依照 ET4 补全四个 $𝔼$-三角的交换图</p>
-        <center> <br /> <div class="tikz-diagram">
-            <embed src="/website/svg/Stable_Cat_Analogue/diagram_b8fcc297b4272.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-          </div> <br /> </center>
-        <p>此处 $f_∗ κ = η$.</p>
-      </li>
-    </ol>
-  </div>
 </div>
 
 <div class="proposition">
   <p>一般地, $𝔼$-三角之间的态射不再是连接; 但对某些特殊情形, $𝔼$-三角间的交换图是连接. 假定以下是 $𝔼$-三角的交换图</p>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Stable_Cat_Analogue/diagram_851ede2b91b3a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/Stable_Cat_Analogue/diagram_e7167cbdf8508.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
+  <p>若 $(f', X)$ 满或是 $(Z' ,g)$ 满, 则以上是连接.</p>
   <div class="proof">
     <p>只看 $(f', X)$ 满的情形. 使用 ET3 建立 $a' : X → X'$ 使得以下两点成立.</p>
     <ol>
@@ -410,29 +367,11 @@
 </div>
 
 <div class="proposition">
-  <p>(双 deflation 拉回 ≈ Verdier 的 $4 × 4$ 公理). 给定外三角范畴中 $δ_{i} ∈ 𝔼 (C, A_i)$ 的实现, 则可补全以下四条 $𝔼$-三角的交换图:</p>
+  <p>(双 deflation 拉回 ≈ Verdier 的 $4 × 4$ 公理, <a href="4_times_4_extri">证明</a>). 给定外三角范畴中 $δ_{i} ∈ 𝔼 (C, A_i)$ 的实现, 则可补全以下四条 $𝔼$-三角的交换图:</p>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Stable_Cat_Analogue/diagram_91ec854cf2a91.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
   <p>中间行列恰是 $(y_i)_∗ δ_j$ 的实现.</p>
-  <div class="proof">
-    <p>选用辅助的 $𝔼$-三角 $\binom 11 ^∗ (δ _1 ⊕ δ _2)$, 定义作下图的上行:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Stable_Cat_Analogue/diagram_bceb613330240.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>使用 ET4, 重新构造 $𝔼 (C, A_2)$ 中某个扩张的实现, 见四个 $𝔼$-三角的交换图:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Stable_Cat_Analogue/diagram_7f86ffbe271b2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>左侧是 $(p_2)_\ast\binom11^\ast(\delta_1\oplus\delta_2) = (1,1)_\ast\binom11^∗ (0 ⊕ δ _2) = δ _2$. 因此第一横行与题设的 $𝔰 (δ_2)$ 相差一个同构, 不妨设两者相等 (给 $M → B_2'$ 复合一个同构). 对称地, 构造</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Stable_Cat_Analogue/diagram_273e15ea8b326.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>删去平凡的投影, 拼接下图即可:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Stable_Cat_Analogue/diagram_4246bf6c49f62.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-  </div>
 </div>
 
 <div class="corollary">
@@ -463,25 +402,10 @@
 </div>
 
 <div class="proposition">
-  <p>(外三角范畴的 EX3 类似物). 假定 $gf$ 是 inflation, 且 $g$ 是 deflation. 此时, $f$ 是 inflation, 同时可补全四条 conflation 的交换图.</p>
+  <p>(外三角范畴的 EX3 类似物, <a href="Exact_Cat_Short_Note">证明</a>). 假定 $gf$ 是 inflation, 且 $g$ 是 deflation. 此时, $f$ 是 inflation, 同时可补全四条 conflation 的交换图.</p>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Stable_Cat_Analogue/diagram_eaa55573c4a51.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <div class="proof">
-    <p>将 $gf$ 补全作 $𝔼$-三角:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Stable_Cat_Analogue/diagram_829f506a76123.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>由长正合列, $δ ∈ \ker ((gf)^∗) = \mathrm{im}(d^∗)$. 此时, 下图底行与两纵列是 $𝔼$-三角, 但虚线处未必是 $𝔼$-三角.</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Stable_Cat_Analogue/diagram_b366a6d3cd26b.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>暂时忽略态射 $E' → T$. 使用两个 deflation 的所谓拉回, 构造核心方块 $\binom{E'T}{YZ}$ 以及四个 $𝔼$-三角的交换图. 由最右行对应的扩张关于 $d$ 的拉回唯一, 故存在同构 $φ$ 使得下图交换</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Stable_Cat_Analogue/diagram_9b74c308da331.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>由于 $[X → E' → T]$ 是 $𝔼$-三角, 与之等价的 $[X → E → T]$ 是 $𝔼$-三角.</p>
-  </div>
 </div>
 
 <div class="corollary">
@@ -491,54 +415,9 @@
 <div class="proposition">
   <p>(特殊的 inflation, 添加直和项). 若 $x : A → B$ 是 inflation, 则对任意 $A$ 出发的态射 $f$, $\binom x f$ 也是 inflation. 这在正合范畴中成立, 也在外三角范畴中成立.</p>
   <div class="proof">
-    <p>记 $f : A → D$. 令 conflation $A \overset x→ B \overset y→ C$ 是 $δ$ 的实现. 考虑推出</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Stable_Cat_Analogue/diagram_fe7d390d1f69a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>构造四个 $𝔼$-三角的交换图:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Stable_Cat_Analogue/diagram_b691f5049ae1e.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>由 $y^∗ δ = 0$, 故第二横行的 $𝔼$-三角可裂. 不妨选作 $D ⊕ B$, 相应的 $\{e_1,e_2,p_1,p_2\}$ 自明. 依照 $4 × 4$-类似物, 得 $$\begin{equation}
-(e_1)_∗ f_∗ δ + m_∗ δ = 0.
-\end{equation}$$</p>
-    <p>由长正合列, $$\begin{aligned}
-(e_1f+m) &∈ \ker[(A, D ⊕ B) \xrightarrow{δ _!} 𝔼 (C, D ⊕ B)]\\
-& = \mathrm{im} [(B, D ⊕ B) \xrightarrow{- ∘ x} (A, D ⊕ B)].
-\end{aligned}$$</p>
-    <p>记 $(e_1f+m) = s ∘ x$, 矩阵形式: $\binom f 0 + \binom {g}{x} = \binom{s_1x}{s_2x}$.</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Stable_Cat_Analogue/diagram_ffb83304c36ce.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>我们希望 $m = \binom g x : A → D ⊕ B$ 就是 $\binom f x$. 若要实现之, 现需要给 $D ⊕ B$ 添加合适的自同构 $φ$. 若要使 $p_1φm =f$, 计算得 $$\begin{equation}
-p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
-\end{equation}$$</p>
-    <ul>
-      <li>我们希望 $φ_{1,1} = -1_D$;</li>
-      <li>我们希望右项消去, 因此 $φ$ 的第一横行不平凡;</li>
-      <li>我们希望 $φ$ 是形式简单的可逆矩阵, 例如三角矩阵.</li>
-    </ul>
-    <p>从而假定 $φ = \binom{-1 \ \ \ \ u}{0\quad 1}$, 其中 $u:B → D$.</p>
-    <ol>
-      <li>
-        <p>一方面, $$\begin{aligned}
-   f = p_1e_1f = p_1(sx - m) = p_1sp_2m - p_1m.
-   \end{aligned}$$</p>
-      </li>
-      <li>
-        <p>另一方面, $$\begin{aligned}
-   p_1φ m & = p_1((-1)⊕ 1 +e_1up_2)m \\
-   &= - p_1 m + up_2m
-   \end{aligned}$$</p>
-      </li>
-    </ol>
-    <p>取 $u = p_1s = s_1$ 即可. 这就给出了构造.</p>
+    <p>(<a href="Inflation_add_Inflation">原证明</a>, 现已无用). 这是 <span class="tikzinline-diagram">         <embed src="/website/svg/Stable_Cat_Analogue/diagram_bdcc0d89e4efe.svg" type="image/svg+xml" style="display: inline-block; width: 10%; height: 10%; white-space: nowrap" />
+ </span> 的直接使用. 由 $f$ 是 inflation 且 $(1,0)$ 是 deflation, 则 $\binom fx$ 必然是 inflation. 同时存在四条 $𝔼$-三角的交换图.</p>
   </div>
-</div>
-
-<div class="note">
-  <p>事后发现, 这是 <span class="tikzinline-diagram">       <embed src="/website/svg/Stable_Cat_Analogue/diagram_bdcc0d89e4efe.svg" type="image/svg+xml" style="display: inline-block; width: 10%; height: 10%; white-space: nowrap" />
- </span> 的直接使用. $\binom fx$ 必然是 inflation, 同时存在四条 $𝔼$-三角的交换图.</p>
 </div>
 
 <h3 id="投射对象-内射对象">投射对象, 内射对象</h3>
@@ -557,49 +436,7 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
 </div>
 
 <div class="theorem">
-  <p>给定外三角范畴 $(𝒞 , 𝔼 , 𝔰 )$. 若加法子范畴 $𝒳 ⊂ 𝐏𝐫𝐨𝐣 ∩ 𝐈𝐧𝐣$, 则 $𝒞 / 𝒳$ 也是外三角范畴, 且继承了外三角结构.</p>
-  <div class="proof">
-    <p>依次验证 ET1 至 ET4. 统一用上划线表示商 Hom 与商群中的的态射.</p>
-    <ol>
-      <li>(ET1). 对象层面, $\overline 𝔼 (Z,X) := 𝔼 (Z,X)$. 态射层面, $\overline{f_∗} := \overline f _∗$, 以及 $\overline {g^∗} := \overline g^∗$.         <ul>
-          <li>由 $𝔼 (𝐏𝐫𝐨𝐣 , -)$ 与 $𝔼 (-, 𝐈𝐧𝐣 )$ 消失, 故 $𝔼$ 将 $\ker [\mathrm{Hom} → \underline{\mathrm{Hom}}]$ 映至 $0$, 进而可定义在 $(𝒞 / 𝒳)^{\mathrm{op}} × (𝒞 / 𝒳)$ 上. 由加法商, 以上定义的 $\overline 𝔼$ 确实是加法双函子.</li>
-        </ul>
-      </li>
-      <li>(ET2). 定义对应 $\overline 𝔰 : \overline 𝔼 (Y,X) = 𝔼 (Y,X) → [Y,X] / ∼$. 其中, $[Y,X] / ∼$ 中对象形如 $[X \xrightarrow{\overline f} Y \xrightarrow{\overline g} Z]$. 这一对应仅是对象间的 (自始至终未要求 $𝔰$ 函子). 下验证 $\overline 𝔰$ 是 $(𝒞 / 𝒳 , \overline 𝔼 )$ 的加法实现.         <ul>
-          <li>对应 $[Y, X] → [Y, X] / ∼$ 保持直和结构, 从而 $\overline 𝔰$ 保持零 (可裂短正合列) 以及映射链的直和.</li>
-          <li>继而证明 $\overline 𝔰$ 是 $𝒞 / 𝒳$ 是加法实现, 关键是局部二推三. 给定商范畴的交换图             <center> <br /> <div class="tikz-diagram">
-                <embed src="/website/svg/Stable_Cat_Analogue/diagram_4df9dc41e0771.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-              </div> <br /> </center>
-            <p>其上下横行是 $𝔼$ 中对象所在的等价类, 也就是某两个 $𝔼$-三角的像, 选定这两个 $𝔼$-三角. 由长正合列, 上下复合为 $0$, 因此任取 $a$ 与 $c$ 均能得到 $𝒞$ 中交换图. 由 $𝔰$ 是实现, 添加合适的 $Y → Y'$ 使得以上是 $𝒞$ 中交换图, 再放至 $𝒞 / 𝒳$ 中看即可.</p>
-          </li>
-        </ul>
-      </li>
-      <li>(ET3). ET3’ 的证明是对偶的 (使用投射对象的性质). 对 ET3, 任取商范畴的交换图         <center> <br /> <div class="tikz-diagram">
-            <embed src="/website/svg/Stable_Cat_Analogue/diagram_71d71cace9dc2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-          </div> <br /> </center>
-        <p>原范畴中, 态射 $(x'a - bx)$ 通过内射对象 $I$ 分解. 原范畴中有 $𝔼$-三角的交换图</p>
-        <center> <br /> <div class="tikz-diagram">
-            <embed src="/website/svg/Stable_Cat_Analogue/diagram_2d90fe7372f05.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-          </div> <br /> </center>
-        <p>我们仅知道 $\binom xi$ 是 inflation, 我们需要将问好处的对象以及 deflation 取得好一些. 依照 EX3 类似物, 构造四个 $𝔼$-三角的交换图:</p>
-        <center> <br /> <div class="tikz-diagram">
-            <embed src="/website/svg/Stable_Cat_Analogue/diagram_be6b3d3ac4fe6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-          </div> <br /> </center>
-        <p>由 $I$ 是内射对象, 右侧正合列可裂, 不妨取作直和项 (仅需调整 $B ⊕ I → C ⊕ I$ 处态射). 简单计算得</p>
-        <center> <br /> <div class="tikz-diagram">
-            <embed src="/website/svg/Stable_Cat_Analogue/diagram_171d7d50f8d7c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-          </div> <br /> </center>
-        <p>其中, $r$ 是待定的系数. 回归原态射图:</p>
-        <center> <br /> <div class="tikz-diagram">
-            <embed src="/website/svg/Stable_Cat_Analogue/diagram_906a3fa3626e6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-          </div> <br /> </center>
-        <p>左侧交换, 右侧方块与相差一个态射 $$\begin{equation}
-	(y'b-cy, cyj-y'j): B ⊕ I → C.
-	\end{equation}$$ 这一态射左侧经 $I$ 分解, 右侧亦然.</p>
-      </li>
-      <li>(ET4). 这是直接的. 取 $⊤$-型的两个 $\overline 𝔼$-三角, 找对应的 $𝔼$-三角. 在原范畴中使用 ET4, 得商范畴的 ET4.</li>
-    </ol>
-  </div>
+  <p>(<a href="Ideal_Quotient">证明</a>). 给定外三角范畴 $(𝒞 , 𝔼 , 𝔰 )$. 若加法子范畴 $𝒳 ⊂ 𝐏𝐫𝐨𝐣 ∩ 𝐈𝐧𝐣$, 则 $𝒞 / 𝒳$ 也是外三角范畴, 且继承了外三角结构.</p>
 </div>
 
 <h3 id="三角范畴视作外三角范畴">三角范畴视作外三角范畴</h3>
@@ -665,7 +502,7 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
           <embed src="/website/svg/Stable_Cat_Analogue/diagram_86d997aa4f394.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
         </div> <br /> </center>
       <p>反交换关系表明 $w' = -w$. 因此, $𝔰 (u_∗ (1_{X[1]})) =  [Y\xrightarrow v Z \xrightarrow {-w}X[1]]$. 依照米田引理计算得, $$\begin{equation}
-	u_∗ 1_{X[1]} = (1_{X[1]})^!(u) ∼ \begin{bmatrix}(X,-) & → & (X[1] , - [1]) & = & (X[1] , - [1])\\ u & ↦ u[1] & = & u[1] ∘ 1_{X[1]} \end{bmatrix}.
+	u_∗ 1_{X[1]} = (1_{X[1]})^!(u) ∼ \begin{bmatrix}(X,-) & → & (X[1] , - [1]) & = & (X[1] , - [1])\\ u & ↦ & u[1] & = & u[1] ∘ 1_{X[1]} \end{bmatrix}.
 	\end{equation}$$ 因此, $𝔰 (u[1]) = [Y \xrightarrow v Z \xrightarrow {-w} X[1]]$. 依照 TR1-1, 得好三角的顺时针旋转.</p>
     </li>
     <li>(TR3). 二推三. 几乎是 ET2, ET3, ET3’ 的定义.</li>
@@ -680,8 +517,8 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
     
       <a
         class="next"
-        href="/website/posts/20250516Talk"
-        title="NEXT: 2025-05-16-讨论班">&lt;&lt;</a>
+        href="/website/posts/Model"
+        title="NEXT: 模型范畴速记">&lt;&lt;</a>
       <span>
         &middot;
       </span>

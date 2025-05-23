@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>完备 cotorsion pair 的单边定义
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Enough_Proj_Cotorsion">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          [
+            '$', '$'
+          ],
+          [
+            '\\(', '\\)'
+          ]
+        ]
+      }
+    };
+  </script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>完备 cotorsion pair 的单边定义</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 21, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="definition">
+  <p>(Cotorison pair). 称对象类 $(𝒰 , 𝒱)$ 是外三角范畴的 cotorsion pair, 若</p>
+  <ol>
+    <li>$𝒰$ 与 $𝒱$ 是同构闭且直和项闭的加法全子范畴;</li>
+    <li>$𝔼 (𝒰 , 𝒱 ) = 0$;</li>
+    <li>任意对象 $X$ 可以嵌入 $𝔼$-三角 $X → V_C → U_C$;</li>
+    <li>任意对象 $Y$ 可以嵌入 $𝔼$-三角 $V^C → U^C → Y$.</li>
+  </ol>
+  <p>此处定义的 cotorsion pair 自动是完备的, 对应正合范畴的特殊右 $𝒱$ 逼近与特殊左 $𝒰$ 逼近.</p>
+</div>
+
+<div class="lemma">
+  <p>若范畴有足够投射对象, 则以上定义的 3. 蕴含 4.; 若范畴有足够内射对象, 则以上定义的 4. 蕴含 3..</p>
+  <div class="proof">
+    <p>假定任意对象 $C$ 嵌入 $𝔼$-三角 $C → V_C → U_C$, 同时范畴有足够投射对象. 今任取 $X$, 考虑如下双 inflation 的所谓推出</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Enough_Proj_Cotorsion/diagram_b8be272f3b525.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>由 $P, U_k ∈ 𝒰$, 得 $E ∈ 𝒰$. 这给出了</p>
+    <p>V_k → E → X. <br /> <br /> 对偶命题证明略.</p>
+  </div>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Homotopic_PBPO_Extri"
+        title="NEXT: 外三角范畴的同伦的推出拉回">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/EX3_Analogue_Extri"
+        title="PREV: 外三角范畴 ET3 类似物">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>
