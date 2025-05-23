@@ -12,8 +12,6 @@
 
 &lt;p&gt;网盘地址: &lt;a href=&quot;https://pan.sjtu.edu.cn/web/share/6d922b959c4291bfea74a705639c3c14&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2025May23.mp4&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;左逼近的函子语言&quot;&gt;左逼近的函子语言&lt;/h3&gt;
-
 &lt;div class=&quot;abstract&quot;&gt;
   &lt;h5 id=&quot;abstract&quot;&gt;Abstract&lt;/h5&gt;
   &lt;div&gt;
@@ -25,6 +23,8 @@
     &lt;p&gt;这两组看似毫不相关的概念在函子范畴中是近乎对偶的, 且都指向投射盖.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;h3 id=&quot;左逼近的函子语言&quot;&gt;左逼近的函子语言&lt;/h3&gt;
 
 &lt;p&gt;以下, $𝒞$ 是局部小的加法范畴, 子对象类 $𝒳 ⊆ 𝒞$ 同构闭且幂等完备.&lt;/p&gt;
 
