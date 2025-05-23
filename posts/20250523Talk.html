@@ -14,7 +14,7 @@
     Jekyll Latex</title>
 
 
-<meta name="description" content="23-May-2025-笔记: 左逼近拾遗">
+<meta name="description" content="23-May-2025: 左逼近拾遗">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -84,7 +84,9 @@
 
     <div class="divider"></div>
 
-    <h2 id="23-may-2025-笔记-左逼近拾遗">23-May-2025-笔记: 左逼近拾遗</h2>
+    <h2 id="23-may-2025-左逼近拾遗">23-May-2025: 左逼近拾遗</h2>
+
+<p>网盘地址: <a href="https://pan.sjtu.edu.cn/web/share/6d922b959c4291bfea74a705639c3c14"><code class="language-plaintext highlighter-rouge">2025May23.mp4</code></a>.</p>
 
 <h3 id="左逼近的函子语言">左逼近的函子语言</h3>
 
@@ -100,7 +102,11 @@
   </div>
 </div>
 
-<p>以下, $𝒞$ 是局部小的加法范畴, $𝒳 ⊆ 𝒞$ 是同构闭的全子加法范畴.</p>
+<p>以下, $𝒞$ 是局部小的加法范畴, 子对象类 $𝒳 ⊆ 𝒞$ 同构闭且幂等完备.</p>
+
+<ul>
+  <li>幂等完备: 若存在 $X ∈ 𝒳$ 的幂等自同态 $e$ ($e^2 = e$), 则 $\mathrm{im}(e) ∈ 𝒳$.</li>
+</ul>
 
 <div class="definition">
   <p>(左 $𝒳$-逼近). 对 $C ∈ 𝒞$ 与 $X ∈ 𝒳$, 称态射 $f : C → X$ 是左 $𝒳$-逼近, 若对任意 $X ' ∈ 𝒳$ 与 $φ : C → X'$, 总有 $s$ 使得有交换图 <span class="tikzinline-diagram">       <embed src="/website/svg/20250523Talk/diagram_45adf183911b7.svg" type="image/svg+xml" style="display: inline-block; width: 10%; height: 10%; white-space: nowrap" />
@@ -110,11 +116,11 @@
 <div class="definition">
   <p>(极小左 $𝒳$-逼近). 称左 $f : C → X$ 逼近是极小的, 若对任意自同态 $α : X → X$, 总有 $$\begin{equation}
 [α ∘ f = f] ⇒ [α ∈ \mathrm{Aut}(X)].
-\end{equation}$$ 换言之, 这是左极小态射.</p>
+\end{equation}$$ 换言之, 极小左逼近既是左逼近, 也是左极小态射.</p>
 </div>
 
 <div class="example">
-  <p>(左逼近的暴力构造). 假定 $𝒳$ 是对积封闭的集合, 则任意 $C ∈ 𝒳$ 的左 $𝒳$-逼近可以通过典范投影构造:</p>
+  <p>(左逼近的暴力构造). 假定 $𝒳$ 是对积封闭的集合, $𝒳$ 小, 则任意 $C ∈ 𝒳$ 的左 $𝒳$-逼近可以通过典范投影构造:</p>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/20250523Talk/diagram_5693ba7150f2a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
@@ -188,12 +194,16 @@ f^∗ : (X, - )_𝒳 ↠ (C, i(-))_𝒞 \quad ∈ 𝐅𝐮𝐧𝐜𝐭 (𝒳 , �
 </div>
 
 <div class="definition">
-  <p>(<strong>(24.16) Theorem</strong> <a href="https://link.springer.com/content/pdf/10.1007/978-1-4419-8616-0_8.pdf">Semiperfect 环</a>). 以下关于 semiperfect ring 的等价定义由林節玄给出. 对环 $R$, 以下等价:</p>
+  <p>(Semiperfect 环的等价定义. 见 <a href="https://link.springer.com/content/pdf/10.1007/978-1-4419-8616-0_8.pdf"><strong>(24.16) Theorem</strong></a>, 以及 <a href="https://www.math.uni-bielefeld.de/~hkrause/krs.pdf"><strong>Proposition 4.1</strong></a>). 对环 $R$, 以下等价:</p>
   <ol>
     <li>$R / \mathrm{Rad}(R)$ 半单, 且 $R / \mathrm{Rad}(R)$ 的幂等元可以提升作 $R$ 中幂等元;</li>
+    <li>$𝐚𝐝𝐝 (R)$ (有限生成投射模范畴) 是 Krull-Schmidt 范畴;</li>
+    <li>存在有限直和分解 $R = ⨁ P_i$, 使得 $\mathrm{End}(P_i)$ 是局部环;</li>
     <li>有限生成 $R$-模都有投射盖;</li>
-    <li>循环 $R$-模都有投射盖.</li>
+    <li>循环 $R$-模都有投射盖;</li>
+    <li>单 $R$-模都有投射盖.</li>
   </ol>
+  <p>前三条幂使用幂等分解描述, 后三条使用投射盖描述.</p>
 </div>
 
 <div class="example">
@@ -204,15 +214,15 @@ f^∗ : (X, - )_𝒳 ↠ (C, i(-))_𝒞 \quad ∈ 𝐅𝐮𝐧𝐜𝐭 (𝒳 , �
   <p>假定 $C$ 存在左 $𝒳$-逼近 $C → C_X$, 且 $\mathrm{End}(C_X)$ 是 semiperfect 环. 此时, $C$ 存在极小左 $𝒳$ 逼近 $C → C_X'$, 且可以要求 $C_X'$ 就是 $C_X$ 的直和项.</p>
 </div>
 
+<div class="definition">
+  <p>(Krull-Schmidt 范畴). 加法范畴是 Krull-Schmidt 的, 当且仅当其所有对象都可以分解为不可分解对象的<strong>有限</strong>直和, 且所有对象的自同态环是局部环. 这类范畴自动是幂等完备的.</p>
+</div>
+
 <div class="example">
   <p>对于有足够内射对象的 Krull-Schmidt 范畴, 存在极小左内射逼近 (内射包); 对于有足够投射对象的 Krull-Schmidt 范畴, 存在极小右投射逼近 (投射盖).</p>
 </div>
 
 <h3 id="ar-理论的关系">AR 理论的关系</h3>
-
-<div class="definition">
-  <p>(Krull-Schmidt 范畴). 加法范畴是 Krull-Schmidt 的, 当且仅当其所有对象都可以分解为不可分解对象的<strong>有限</strong>直和, 且所有对象的自同态环是局部环.</p>
-</div>
 
 <div class="definition">
   <p>选定 $𝒜$ 为 Abel 长度的 Krull-Schmidt 范畴, 同时也是 Abel $k$-范畴. 例如有限维代数的有限生成模范畴.</p>
@@ -228,7 +238,7 @@ f^∗ : (X, - )_𝒳 ↠ (C, i(-))_𝒞 \quad ∈ 𝐅𝐮𝐧𝐜𝐭 (𝒳 , �
   <p>$𝒜$ 的不可分解投射对象就是不可分解对象对应的可表函子 $(-, M)$.</p>
   <div class="proof">
     <p>由定义, 投射对象 $P(-)$ 被某可表函子满地映上 $(- , X) \overset π ↠ P(-)$. 由可裂满, 构造复合的幂等自然变换 $$\begin{equation}
-(-, X) \overset π ↠ P(-) \overset ι  ↠ (-, X).
+(-, X) \overset π ↠ P(-) \overset ι  ↪ (-, X).
 \end{equation}$$ 由米田引理, 存在唯一的 $α ∈ \mathrm{End}(X)$ 使得 $ι ∘ π = (-, α)$. 显然 $α^2 = α$, 因此取可裂的满单分解 $X ≃ M ⊕ N$. 这说明 $$\begin{equation}
 F(-) ≃ \mathrm{im}(ι ∘ π) = \mathrm{im}((-,α)) ≃  (-, M)
 \end{equation}$$ 是可表函子.</p>
@@ -285,17 +295,18 @@ F(-) ≃ \mathrm{im}(ι ∘ π) = \mathrm{im}((-,α)) ≃  (-, M)
     <li>$g$ 不是可裂满;</li>
     <li>$g$ 任意非可裂满态射 $g' : E' → N$ 通过 $g$ 分解.</li>
   </ol>
-  <p>若 Abel 范畴中的投射对象存在 radical, 则右几乎可裂态射 $g:E → N$ 必为以下两种之一</p>
+  <p>对一般的 Abel 范畴, 右几乎可裂态射 $g:E → N$ 必为以下两类之一.</p>
   <ol>
     <li>$g$ 是满的, 等价地, $N$ 不是投射对象.</li>
-    <li>$g$ 不是满的, 等价地, $N$ 是投射对象. 此时 $N$ 不可分解, 且右几乎可裂态射就是 radical 的包含.</li>
+    <li>$g$ 不是满的, 等价地, $N$ 是投射对象.</li>
   </ol>
+  <p>假定范畴的投射对象有极大单子对象 (radical), 则情形 2. 中的 $N$ 不可分解, 且右几乎可裂态射就是 radical 的包含.</p>
   <div class="proof">
     <p>若 $g$ 满, 由 $g$ 不可裂知 $N$ 非投射. 若 $g$ 非满, 下证明 $N$ 投射. 若不然, 则存在 $N$ 无法提升的满态射 $A ↠ B$, 故拉回 $A × _BN → B$ 不是可裂满, 从而被 $g$ 分解:</p>
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/20250523Talk/diagram_57681d53d8963.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>考虑复合的满态射 $p ∘ φ = p ∘ g ∘ ψ = 0$, 因此 $\mathrm{cok}(g) = 0$. 这与 $g$ 非满矛盾. 继而证明 $N$ 不可分解, 若有 $\binom{g_1}{g_2} : E → N_1 ⊕ N_2$, 则考虑 $N_i ↪ N_1 ⊕ N_2$ 经由 $g$ 的分解, 得 $g_1$ 与 $g_2$ 均满: 这与 $g$ 非可裂满矛盾. 若 $N$ 是不可分解投射对象, 则所有非可裂满的态射, 即所有非满的态射, 必然通过 radical 分解.</p>
+    <p>考虑复合的满态射 $p ∘ φ = p ∘ g ∘ ψ = 0$, 因此 $\mathrm{cok}(g) = 0$. 这与 $g$ 非满矛盾. <br /> <br /> 假定范畴的投射对象有极大单子对象 (radical). 下证明 $N$ 不可分解, 若有 $\binom{g_1}{g_2} : E → N_1 ⊕ N_2$, 则考虑 $N_i ↪ N_1 ⊕ N_2$ 经由 $g$ 的分解, 得 $g_1$ 与 $g_2$ 均满: 这与 $g$ 非可裂满矛盾. 若 $N$ 是不可分解投射对象, 则所有非可裂满的态射, 即所有非满的态射, 必然通过 radical 分解.</p>
   </div>
 </div>
 
@@ -345,10 +356,11 @@ F(-) ≃ \mathrm{im}(ι ∘ π) = \mathrm{im}((-,α)) ≃  (-, M)
 <div class="corollary">
   <p>(函子的几乎可裂短正合列). 几乎可裂 ses $0 → L → M → N → 0$, 诱导了函子范畴的极小投射表现 $$\begin{equation}
 0 → (-, L) → (-, M) → (-, N) → S^N(-) → 0.
-\end{equation}$$ 特别地, 有如下投射维数:</p>
+\end{equation}$$ 特别地, 以下汇总了函子范畴 $𝐟𝐩 (𝒜 ^{\mathrm{op}}, 𝐌𝐨𝐝_k)$ 中单对象的投射维数:</p>
   <ol>
-    <li>若 $N$ 是投射对象, 则单对象 $S^N$ 的投射维数是 $1$;</li>
-    <li>若 $N$ 没有投射直和项, 则单对象 $S^N$ 的投射维数是 $2$.</li>
+    <li>若 $N$ 是投射单对象, 则单对象 $S^N$ 的投射维数是 $0$;</li>
+    <li>若 $N$ 是不可分解且非单的投射对象, 则单对象 $S^N$ 的投射维数是 $1$;</li>
+    <li>若 $N$ 是不可分解非投射对象, 则单对象 $S^N$ 的投射维数是 $2$.</li>
   </ol>
 </div>
 
