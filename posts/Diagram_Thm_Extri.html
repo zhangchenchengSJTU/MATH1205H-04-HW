@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>On Diagrams Lemmas of Ex-$\triangle$ Cats
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Diagram_Thm_Extri">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    chtml: {
+      scale: 0.95  // Adjust scale (0.85 = 85% of default size)
+    },
+    svg: {
+      scale: 0.95  // For SVG output
+    }
+  };
+</script>
+  <script
+    async
+    id="MathJax-script"
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>On Diagrams Lemmas of Ex-$\triangle$ Cats</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 23, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <ul id="markdown-toc">
+  <li><a href="#on-diagrams-lemmas-of-ex-mathjax_protectedjfx0cmlhbmdszsqmathjax_protected-cats" id="markdown-toc-on-diagrams-lemmas-of-ex-mathjax_protectedjfx0cmlhbmdszsqmathjax_protected-cats">On Diagrams Lemmas of Ex-$\triangle$ Cats</a>    <ul>
+      <li><a href="#abstract" id="markdown-toc-abstract">Abstract</a></li>
+      <li><a href="#the-definition-of-an-extriangulated-category" id="markdown-toc-the-definition-of-an-extriangulated-category">The Definition of an Extriangulated Category</a>        <ul>
+          <li><a href="#et1" id="markdown-toc-et1">ET1</a></li>
+          <li><a href="#et2" id="markdown-toc-et2">ET2</a></li>
+          <li><a href="#et3" id="markdown-toc-et3">ET3</a></li>
+          <li><a href="#et4" id="markdown-toc-et4">ET4</a></li>
+        </ul>
+      </li>
+      <li><a href="#cohomological-long-exact-sequence" id="markdown-toc-cohomological-long-exact-sequence">(Co)homological Long Exact Sequence</a>        <ul>
+          <li><a href="#the-proof" id="markdown-toc-the-proof">The Proof</a></li>
+          <li><a href="#corollaries-on-trivial-conflations" id="markdown-toc-corollaries-on-trivial-conflations">Corollaries on Trivial Conflations</a></li>
+          <li><a href="#the-hom-complex" id="markdown-toc-the-hom-complex">The Hom Complex</a></li>
+        </ul>
+      </li>
+      <li><a href="#on-isomorphisms" id="markdown-toc-on-isomorphisms">On Isomorphisms</a>        <ul>
+          <li><a href="#conflations-are-closed-under-isomorphisms" id="markdown-toc-conflations-are-closed-under-isomorphisms">Conflations are Closed under Isomorphisms</a></li>
+          <li><a href="#remarks-on-two-out-of-three-principle" id="markdown-toc-remarks-on-two-out-of-three-principle">Remarks on Two out of Three Principle</a></li>
+          <li><a href="#uniqueness-of-morphism-embedding" id="markdown-toc-uniqueness-of-morphism-embedding">Uniqueness of Morphism Embedding</a></li>
+        </ul>
+      </li>
+      <li><a href="#remarks-on-et4-axiom" id="markdown-toc-remarks-on-et4-axiom">Remarks on ET4 Axiom</a>        <ul>
+          <li><a href="#on-exact-categories-and-triangulated-categories" id="markdown-toc-on-exact-categories-and-triangulated-categories">On Exact Categories and Triangulated Categories</a></li>
+          <li><a href="#strict-et4" id="markdown-toc-strict-et4">Strict ET4</a></li>
+        </ul>
+      </li>
+      <li><a href="#lemmas-on-verdier-diagram-and-noether-diagram" id="markdown-toc-lemmas-on-verdier-diagram-and-noether-diagram">Lemmas on Verdier Diagram and Noether Diagram</a>        <ul>
+          <li><a href="#the-squares" id="markdown-toc-the-squares">The Squares</a></li>
+          <li><a href="#noether-square-and-et4" id="markdown-toc-noether-square-and-et4">Noether Square and ET4</a></li>
+          <li><a href="#verdier-square-and-44-lemma" id="markdown-toc-verdier-square-and-44-lemma">Verdier Square and 4×4 Lemma</a></li>
+          <li><a href="#the-strict-44-lemma" id="markdown-toc-the-strict-44-lemma">The Strict 4×4 Lemma</a></li>
+          <li><a href="#the-weak-pbpo-squares" id="markdown-toc-the-weak-pbpo-squares">The Weak PBPO Squares</a></li>
+          <li><a href="#the-homotopic-square" id="markdown-toc-the-homotopic-square">The Homotopic Square</a></li>
+        </ul>
+      </li>
+      <li><a href="#weakly-idempotent-completeness" id="markdown-toc-weakly-idempotent-completeness">Weakly Idempotent Completeness</a>        <ul>
+          <li><a href="#composition-of-inflations" id="markdown-toc-composition-of-inflations">Composition of Inflations</a></li>
+          <li><a href="#weakly-idempotent-completeness-1" id="markdown-toc-weakly-idempotent-completeness-1">Weakly Idempotent Completeness</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="on-diagrams-lemmas-of-ex-mathjax_protectedjfx0cmlhbmdszsqmathjax_protected-cats">On Diagrams Lemmas of Ex-$\triangle$ Cats</h2>
+
+<div class="abstract">
+  <h5 id="abstract">Abstract</h5>
+  <div>
+    <p>We summarise the diagram lemmas for extriangulated categories.</p>
+  </div>
+</div>
+
+<h3 id="the-definition-of-an-extriangulated-category">The Definition of an Extriangulated Category</h3>
+
+<p>In brief, an extriangulated category is a triple $(𝒞, 𝔼, 𝔰)$, where</p>
+
+<ul>
+  <li>$𝒞$ is a locally small additive category;</li>
+  <li>$𝔼 : 𝒞^{\mathrm{op}} × 𝒞 → 𝐀𝐛$ is an additive bifunctor;</li>
+  <li>$𝔰$ is termed an additive realisation, assigning to each $δ ∈ 𝔼(Z, X)$ an isomorphism class in the comma category $X \backslash 𝒞 / Z$.</li>
+</ul>
+
+<p>Furthermore, the triple satisfies certain axioms labelled ET-$k$.</p>
+
+<p>We commence with the ET1 axiom and the associated terminologies.</p>
+
+<h4 id="et1">ET1</h4>
+
+<div class="definition">
+  <p>(Terminology for ET1). The pair $(𝒞, 𝔼)$ is said to satisfy ET1 if</p>
+  <ul>
+    <li>$𝒞$ is a locally small additive category; and</li>
+    <li>$𝔼 : 𝒞^{\mathrm{op}} × 𝒞 → 𝐀𝐛$ is an additive bifunctor.</li>
+  </ul>
+  <p>We employ the following terminologies:</p>
+  <ul>
+    <li>An <strong>element of extension</strong> is an element $δ ∈ 𝔼(Z, X)$ in the $𝔼$-group. It may also be denoted by the triple $(X, δ, Z)$, or simply $δ$ when unambiguous.</li>
+    <li>A <strong>pre-composition</strong> is a group homomorphism $𝔼(f, X) : 𝔼(Z', X) → 𝔼(Z, X)$, given $f : Z → Z'$. We denote this by $f^∗$ when unambiguous.</li>
+    <li>A <strong>post-composition</strong> is a group homomorphism $𝔼(Z, g) : 𝔼(Z, X) → 𝔼(Z, X')$, given $g : X → X'$. We denote this by $g_∗$ when unambiguous.</li>
+    <li>Since $𝔼(-,-)$ is a bifunctor, one has $f^∗ g_∗ = g_∗ f^∗ : 𝔼(Z', X) → 𝔼(Z, X')$.</li>
+    <li>A <strong>communication of two extensions</strong> is described as the pair of maps $(α , β ) : (X , δ , Z) → (X' , δ' , Z')$, such that $α_∗ δ = β ^∗ δ '$.</li>
+  </ul>
+</div>
+
+<div class="example">
+  <p>(The group structure of $𝔼(- , -)$). The additive structure of $𝔼(-,-)$ is induced by the standard Baer sum. For objects $X$ and $Z$, one may firstly define $$\begin{equation}
+(δ_1 + δ_2) := \binom{1}{1}^∗ (1,1)_∗ (δ_1 ⊕ δ_2),
+\end{equation}$$ where the group homomorphism is given by $$\begin{equation}
+\binom{1}{1}^∗ (1,1)_∗ : 𝔼(Z ⊕ Z, X ⊕ X) → 𝔼(Z, X),\quad δ_1 ⊕ δ_2 ↦ δ_1 + δ_2.
+\end{equation}$$</p>
+  <p>It is straightforward to verify that</p>
+  <ul>
+    <li>both $f_∗$ and $g^∗$ preserve the additive structure;</li>
+    <li>$𝔼(Z, X)$ possesses a zero element, and satisfies the laws of associativity and commutativity.</li>
+  </ul>
+</div>
+
+<h4 id="et2">ET2</h4>
+
+<p>Before we proceed to the ET2 axiom, we need to introduce the notion of an <strong>additive realisation</strong>. Firstly, we define the equivalence relation for the class of objects of the functor category $𝐅𝐮𝐧𝐜𝐭(1 → 2 → 3, 𝒞) / ∼$, where
+$$\begin{equation}
+[X \xrightarrow{f} Z \xrightarrow{g} Y] = [X' \xrightarrow{f'} Z' \xrightarrow{g'} Y']
+\end{equation}$$
+if and only if $X = X'$, $Z = Z'$, and there exists an isomorphism $φ : Y → Y'$ making the following diagram commutative</p>
+<center> <br /> <div class="tikz-diagram">
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_1f6218005f2b2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+  </div> <br /> </center>
+
+<p>The equivalency class preserve the standard $⊕$ of the functor category.</p>
+
+<div class="definition">
+  <p>(ET2). The map between classes $𝔰$ is called an <strong>additive realisation</strong> of the pair $(𝒞, 𝔼)$, provided the following (denoted by ET2):</p>
+  <ul>
+    <li>$𝔰$ sends $(X, δ, Z)$ to some equivalency class of the form $[X \xrightarrow f  E \xrightarrow g  Z]$;</li>
+    <li>$𝔰$ sends $(X, 0, Z)$ to the class of split short exact sequences $[X \xrightarrow {e_1} X ⊕ Z \xrightarrow {p_2} Z]$;</li>
+    <li>$𝔰(δ _1 ⊕ δ _2) = 𝔰(δ _1) ⊕ 𝔰(δ _2)$ (recall that $⊕$ is compatible with the equivalent class);</li>
+    <li>If there is a communication of extensions $(α , β): (X, δ , Z) → (X', δ', Z')$, then for any representatives of $𝔼 (δ )$ and $𝔼 (δ ')$, there exists a morphism $β$ making the following diagram commutative:</li>
+  </ul>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_14b5070219dc2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<p>One should be aware that, the morphism of triangles are not necessasy a communication of triangles.</p>
+
+<div class="definition">
+  <p>(Terminologies for ET2). We define the following terminologies:</p>
+  <ul>
+    <li>The equivalency class $𝔰(δ)$ is called <strong>the realisation</strong> of $δ$;</li>
+    <li>A element of $𝔰 (δ)$ is called <strong>a realisation</strong> of $δ$;</li>
+    <li>A realisation is also known as an ($𝔼$-)<strong>triangle</strong>, denoted by $X \xrightarrow f Y \xrightarrow g Z \xrightarrow δ (\text{blank}).$</li>
+    <li>A realisation is also known as an ($𝔼$-)<strong>conflation</strong>, denoted by a pair of morphisms $(f,g)$.</li>
+  </ul>
+</div>
+
+<p>The expression of realisation may cause problems, <strong>we use triangles or conflations instead for most of the time</strong>. For instance, consider the following sentences</p>
+
+<ul>
+  <li>The beneficiaries of this policy were students.</li>
+  <li>The victims of this rollover accident were students.</li>
+  <li>He/She is a student.</li>
+</ul>
+
+<p>The use of <em>$x$ be students</em> means either $x = {\text{students}}$, $x ⊆ {\text{students}}$ or $x ∈ {\text{students}}$.</p>
+
+<h4 id="et3">ET3</h4>
+
+<div class="definition">
+  <p>(ET3, and ET3’). For the triple $(𝒞, 𝔼, 𝔰)$ satisfying ET1 and ET2, we say that it satisfies ET3 if the following holds: for any commutative diagram ($f'α = β f$) between triangles, there exists a dashed morphism ($γ$) rendering it simultaneously a communication of extensions and a commutative diagram.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_e6fb848b2abde.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>The statement of ET3’ is dual: given the commutative diagram $γ g = g' β$, the morphism $α$ is to be determined. The completed diagram is required to satisfy the same properties as above.</p>
+</div>
+
+<h4 id="et4">ET4</h4>
+
+<div class="definition">
+  <p>(ET4, and ET4’). For the ⊤-shaped diagram of triangles, there exists a way to complete the diagram to a commutative diagram of four triangles:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_69fc2c4cc7c4a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>and, satisfying $r^∗ δ_{r2} = δ _{r1}$, $g_∗ δ _{c1} = δ _{c2}$, and $f_∗ δ _{r2} = s^∗ δ _{c1}$. The final one reveals a very special the communciation of extensions:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_7b78cab132440.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>The statement of ET4’ is dual, where the dashed morphisms are given, and the solid morphisms are to be determined. The completed diagram is required to satisfy the same properties as above.</p>
+</div>
+
+<p>In short, ET4 means that one ⊤-shaped diagram of triangles implies another ⊣-shaped diagram of triangles, and vice versa.</p>
+
+<h3 id="cohomological-long-exact-sequence">(Co)homological Long Exact Sequence</h3>
+
+<p>The following notation is based on Yoneda lemma. Recall that the category $𝒞$ is locally small, and the bifunctor $𝔼(-,-)$ takes values in Abelian groups. Now there is an isomorphism between Abelian groups</p>
+
+<p>$$\begin{equation}
+𝖭𝖺𝗍 [(X,-), 𝔼 (Z,-)] ↔ 𝔼(Z,X),\quad Φ ↦ Φ_X(1_X).
+\end{equation}$$</p>
+
+<div class="definition">
+  <p>($δ ^!$ and $δ _!$). Conversely, and element $δ ∈ 𝔼(Z, X)$ induces the following two natural transformations</p>
+  <ol>
+    <li>$δ^! : (X,-) → 𝔼(Z,-)$, given by $δ^! (f) = f_∗ δ$.</li>
+    <li>$δ_! : (-,Z) → 𝔼(-,X)$, given by $δ_! (g) = g^∗ δ$.</li>
+  </ol>
+  <p>We employ $(⋅)_∗$ to denote post-composition, and $(⋅)^!$ to denote post-composer, the same for $(⋅)_!$ and $(⋅)^!$.</p>
+</div>
+
+<h4 id="the-proof">The Proof</h4>
+
+<p>Now we shall prove the homological long exact sequence. For any triangle $X \xrightarrow f Y \xrightarrow g Z \xrightarrow δ$, we have the following long exact sequence of natural transformations:</p>
+
+<p>$$\begin{equation}
+(Z,-) \xrightarrow{g^∗} (Y,-) \xrightarrow{f^∗} (X,-) \xrightarrow{δ^!} 𝔼(Z,-) \xrightarrow{g^∗} 𝔼(Y,-) \xrightarrow{f^∗} 𝔼(X,-).
+\end{equation}$$</p>
+
+<p>There are no $0$ terms in this long exact sequence. Moreover, the exactness of the first 5-terms can be proved without ET4 (ET4’).</p>
+
+<div class="lemma">
+  <p>We show the exactness at $(Z,-) \xrightarrow{g^∗} (Y,-) \xrightarrow{f^∗} (X,-)$.</p>
+  <div class="proof">
+    <p>We take the solid map $\{f,g,β,1_M\}$ in the following diagram</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_75833d5ba7d1c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>By ET3 and ET3’, if there exists a dashed morphism $α$ makes the left rectangle commutative (equiv., $β ∈ \ker f^∗$), then there exists a dashed morphism $γ$ making the right rectangle commutative (equiv., $β ∈ \operatorname{im} g^∗$), and vise versa.</p>
+  </div>
+</div>
+
+<div class="lemma">
+  <p>We show the exactness at $(Y,-) \xrightarrow{f^∗} (X,-) \xrightarrow{δ^!} 𝔼(Z,-)$.</p>
+  <div class="proof">
+    <p>One one hand, we shall show that $0 = δ^! ∘ f^∗$. For any $g : Y → W$, one has $$\begin{equation}
+δ^! ∘ f^∗ (g) = (f^∗ g)_∗ δ = g_∗ f^∗ δ = (f^∗ δ)^! g.
+\end{equation}$$ It suffices to show that $f^∗ δ = 0$. We take the following commutative diagram of triangles:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_65eefe9d750ca.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>By ET3, there exists a dashed morphism $γ$ making the right rectangle commutative, and $f_∗ δ = γ ^∗ 0 = 0$. <br /> <br /> On the other hand, we show that any $h : Z → M$ with $h_∗ δ = 0$ factors through $g$. We take the canonical split short exact sequence as the realisation of $h_∗δ$, and obtain a commutative diagram</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_aa1a8dc94cc83.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Now $h = a ∘ f ∈ \operatorname{im}f^∗$.</p>
+  </div>
+</div>
+
+<div class="lemma">
+  <p>We show the exactness at $(X,-) \xrightarrow{δ^!} 𝔼(Z,-) \xrightarrow{g^∗} 𝔼(Y,-)$.</p>
+  <div class="proof">
+    <p>One one hand, we show that $0 = g^∗ ∘ δ^!$. For any $h : X → M$, one has $$\begin{equation}
+g^∗ ∘ δ^! (h) = g^∗ (h_∗ δ) = h_∗ (g^∗ δ).
+\end{equation}$$ It suffices to show that $g^∗ δ = 0$. We omit the proof since it is dual to the proof of $f_∗ δ =0$. <br /> <br /> One the other hand, we show that any $η ∈ 𝔼 (Z,M)$ with $g^∗ η = 0$ must takes the form $α _∗ δ$. We take the canonical split short exact sequence as the realisation of $g^∗η$, and obtain a commutative diagram of triangles:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_7c4eff32b5e28.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Here row-III is due induced by $t$ and ET3. Now there exists $α$ such that $α_∗ δ = η$.</p>
+  </div>
+</div>
+
+<div class="lemma">
+  <p>We show the exactness at $𝔼(Z,-) \xrightarrow{g^∗} 𝔼(Y,-) \xrightarrow{f^∗} 𝔼(X,-)$.</p>
+  <div class="proof">
+    <p>One one hand, one has shows that $0 = f^∗ ∘ g^∗ = (gf)^∗$. <br /> <br /> One the other hand, once $f^∗ η = 0$ for some $η ∈ 𝔼 (Y, M)$, we use ET4’ and obtain the following commutative diagram:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_ca6956dcb956d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>By ET4, $a_∗ η = g^∗ δ '$. Since $f^∗ η = 0$, $a$ is split monomorphism whose left inverse is denoted by $x$. One has $η = g^∗ x_∗ δ '$. Hence, $η = g^∗ (x_∗ δ ')$.</p>
+  </div>
+</div>
+
+<h4 id="corollaries-on-trivial-conflations">Corollaries on Trivial Conflations</h4>
+
+<p>There is an analogous result, in comparison with pre-triangulated categories, concerning split morphisms.</p>
+
+<div class="proposition">
+  <p>Let $X \xrightarrow f Y \xrightarrow g Z \xrightarrow δ$ be the triangle. We only concern the first five terms of the long exact sequence (there is no ET4).</p>
+  <ol>
+    <li>$g$ is a monomorphism, iff $f = 0$, iff $g$ is a split monomorphism, iff $δ^!$ is a monomorphism.</li>
+    <li>$f$ is an epimorphism, iff $g = 0$, iff $f$ is a split epimorphism, iff $δ_!$ is an epimorphism.</li>
+  </ol>
+</div>
+
+<p>There are no trivial results in the case that $f$ is monomorphism or $g$ is an epimorphism, since exact categories are extriangulated.</p>
+
+<h4 id="the-hom-complex">The Hom Complex</h4>
+
+<ul>
+  <li>May there be interesting theorems on adjoint functors.</li>
+</ul>
+
+<p>We use the exact Hom complex to explore some useful lemmas. The following lemma is useful in the proof of lifting property.</p>
+
+<div class="lemma">
+  <p>(Extension lifting lemma). Consider the following morphism between triangles:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_651354566e957.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Suppose that $𝔼(C, K) = 0$. Then there exists some dashed arrows making the entire diagram commutative.</p>
+  <div class="proof">
+    <p>We take the following complex and make homological truncations (we denoted the syzygies by $∙$). By homological algebra, a bounded bicomplex with all exact rows is exact as a total complex. This is proved by induction on length or simply the spectral sequence. We use $↙_k$ to denote the degree $k$ part in the bicomplex.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_5e0d7957ee8aa.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Since the non-existence of so-called $𝔼^2$, the exactness of $\mathbb E(C,X) → \mathbb E(C,Y) → M$ is given by the following construction:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_8203398a77f66.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We take $(f,g)$ the element of degree $0$. Now we show that $d(f,g) = 0$.</p>
+    <ul>
+      <li>By commutative diagram, the entry at $(A,Z)$ is zero.</li>
+      <li>Since $ε_!(j^∗ g) = ε (p^∗ f) = 0$ and $\mathbb E(B,K) ↪ \mathbb E(A,K)$, we see that $ε_!(g) = 0$. That is, the entry at $𝔼 (B,K)$ is zero.</li>
+      <li>Similarly, the entry at $𝔼 (C,X)$ is zero.</li>
+    </ul>
+    <p>By exactness of the totoal complex, there is an triple $$\begin{equation}
+(a,b,c) ∈ (A,K) ⊕ (B,X) ⊕ (C,Y)
+\end{equation}$$</p>
+    <p>whose differential is $(f,g)$. We want this preimage to be of the form $(0, ? , 0)$. Thanks to the surjectivity of $p_∗$ and $j^∗$, there exists some element $(s,t) ∈ (B, K) ⊕ (C,X)$ such that $d(s,t) = (a,?,b)$. Hence, $(a,b,c) - d(s,t)$ is the element of the form $(0,?,0)$ whose differential is $(f,g)$.</p>
+  </div>
+</div>
+
+<h3 id="on-isomorphisms">On Isomorphisms</h3>
+
+<h4 id="conflations-are-closed-under-isomorphisms">Conflations are Closed under Isomorphisms</h4>
+
+<p>Here are some results of being closed under isomorphisms.</p>
+
+<div class="proposition">
+  <p>All conflations are closed under isomorphisms. To be explicit, for any conflation $X \xrightarrow{f} Y \xrightarrow{g} Z\xrightarrow{δ}$ isomorphisms $α : X → X'$, $β : Y → Y'$ and $γ : Z → Z'$, the following is also a conflation: $$\begin{equation}
+X' \xrightarrow{β ∘ f ∘ α ⁻¹} Y' \xrightarrow{γ ∘ g ∘ β ⁻¹ } Z' \xrightarrow {α _∗ γ ⁻¹ δ}.
+\end{equation}$$</p>
+  <div class="proof">
+    <p>We first demonstrate that there exists a realisation of $ε ∈ 𝔼 (Z', X)$ such that $𝔰 (δ)$ and $𝔰 (ε )$ are isomorphic as objects in $𝐅𝐮𝐧𝐜𝐭(1 → 2 → 3, 𝒞)$. We now exhibit the invertible communication of extensions: $$\begin{equation}
+(X, δ , Z) \xrightarrow{(1_X, γ)} (X, ε , Z') \xrightarrow{(α , 1_{Z})} (X', δ ', Z').
+\end{equation}$$ At this point, we deduce the isomorphism between the conflations in $\text{row 2}$ and $\text{row 3}$. $\text{row 1}$ is isomorphic to $\text{row 2}$, yet it remains unknown whether $\text{row 1}$ is a conflation.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_df09b7a4b13de.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We apply ET2 to $\text{row 1}$ and $\text{row 3}$, and thereby obtain that they belong to the same realisation.</p>
+  </div>
+</div>
+
+<h4 id="remarks-on-two-out-of-three-principle">Remarks on Two out of Three Principle</h4>
+
+<p>The two out of three principles roughly means that, if we have two morphisms between triangles, then there exists the third. For extriangulated categories, it means that for any two morphism $\{α , β , γ \}$ making the small square diagram commutative, then there exists a morphism on the remaining side making the other two squares commutative.</p>
+<center> <br /> <div class="tikz-diagram">
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_2ef345f3649c7.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+  </div> <br /> </center>
+
+<p>The commutativity of the right most square means that $(α, γ) : δ → δ '$ is a communication. This is exactly what ET3, ET3’ and (part of the) ET2 means.</p>
+
+<p>The following lemma is an analogous result for pre-triangulated categories.</p>
+
+<div class="lemma">
+  <p>In the diagram, suppose that $β$ is an isomorphism, then $α$ is isomorphism whenever $γ$ is.</p>
+  <div class="proof">
+    <p>We apply $(Z', -)$ to the diagram, and obtain the isomorphism $(Z', Z) \xrightarrow {(- ∘ γ)} (Z', Z')$ by five lemma. Now $γ$ has a left inverse. The right inverse of $γ$ is shown dually. Hence $γ$ is an isomorphism.</p>
+  </div>
+</div>
+
+<h4 id="uniqueness-of-morphism-embedding">Uniqueness of Morphism Embedding</h4>
+
+<p>The above lemma shows the uniqueness (regardless of the existence) of morphism embedding</p>
+
+<ul>
+  <li>when $f$ is an inflation, then the conflation is unique up to isomorphism of $Z$;</li>
+  <li>when $g$ is a deflation, then the conflation is unique up to isomorphism of $X$;</li>
+  <li>when $δ$ is an extension element, then the conflation is unique up to isomorphism of $Y$.</li>
+</ul>
+
+<h3 id="remarks-on-et4-axiom">Remarks on ET4 Axiom</h3>
+
+<h4 id="on-exact-categories-and-triangulated-categories">On Exact Categories and Triangulated Categories</h4>
+
+<p>We recommend the readers to convince themselves that</p>
+
+<ul>
+  <li>An $\mathrm{Ext}^1$-small (e.g., $𝒜$ has enough injectives) exact category $(𝒜, ℰ)$ is extriangulated, where $𝔼 = \mathrm{Ext}^1$ and the realisation is derived from the definition of the $\mathrm{Ext}^1$-group;</li>
+  <li>A triangulated category $(𝒯, Σ, \triangle)$ is extriangulated, where $𝔼(?,-) := \mathrm{Hom}(?, -[1])$ and the realisation is defined by embedding a morphism into a unique triangle.</li>
+</ul>
+
+<div class="example">
+  <p>(ET4 in for exact categories). As $\mathrm{Ext}^1$-small exact categories are extriangulated ET4 states the following axioms or propositions of exact categories.</p>
+  <ul>
+    <li>Before the completion of conflations, the composition of two inflations should be an inflation;</li>
+    <li>The rest is the usual Noether isomorphism, i.e., $W / Y ≃ (W/X) / (Y/X)$.</li>
+  </ul>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_527e83c5d8484.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="example">
+  <p>(ET4 in for triangulated categories). As triangulated categories are extriangulated, ET4 is nothing but the TR4 axiom:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_f405d3db6d5b7.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>The commutative squares $\boxed k$ are precisely the identities in ET4.</p>
+  <ol>
+    <li>For $\boxed 1$, $δ _{c3} = y_∗ ∘ δ _{c2}$ is just $δ _{c3} = y_∗δ _{c2}$;</li>
+    <li>For $\boxed 2$, $δ _{r1} = δ _{r2} ∘ r$ is just $r^∗ δ _{r2} = δ _{r1}$;</li>
+    <li>For $\boxed 3$, $δ _{c2} ∘ s = x_∗ ∘ δ _{c3}$ is just $s^∗ δ _{c2} = x_∗δ _{r2}$.</li>
+  </ol>
+</div>
+
+<h4 id="strict-et4">Strict ET4</h4>
+
+<p>In certain circumstances we use the strict form of ET4, which differs from the original (lax) version.</p>
+
+<ul>
+  <li>(ET4). This formulation asserts that, given any ⊤-shaped diagram of triangles, it is possible to simultaneously construct the ⊣-component of these triangles in such a way that the resulting diagram commutes, and the identities of extensions hold.</li>
+  <li>(SET4). In contrast, the strict formulation imposes a stronger condition: for any ⊤-shaped diagram of triangles, there must exist a triangle that completes the associated ∓-shaped diagram. Furthermore, for any such ∓-shaped configuration, one must be able to derive the remaining morphisms and verify the commutativity of the entire diagram.</li>
+</ul>
+
+<div class="lemma">
+  <p>We show that ET4 implies SET4.</p>
+  <div class="proof">
+    <p>For any diagram on the left, we firstly complete it to a full ET4 diagram on the right:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_9f8b585b835a0.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>By two out of three principle of isomorphism, $y'$ factors through $y$ by an isomorphism $φ : B' → B$. Now we complete the remaining triangle in the left diagram, that is, $$\begin{equation}
+Z \xrightarrow {φ ∘ λ '} B \xrightarrow {μ ' ∘ λ} C.
+\end{equation}$$</p>
+  </div>
+</div>
+
+<h3 id="lemmas-on-verdier-diagram-and-noether-diagram">Lemmas on Verdier Diagram and Noether Diagram</h3>
+
+<h4 id="the-squares">The Squares</h4>
+
+<p>We mainly discuss the following two kinds of diagrams:</p>
+
+<center> <br /> <div class="tikz-diagram">
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_f63b9a79d5bb1.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+  </div> <br /> </center>
+
+<p>The first impression should be</p>
+
+<ul>
+  <li>The left diagram ≈ Verdier ≈ 4×4 axiom;</li>
+  <li>The right diagram ≈ Noether ≈ octagon axiom.</li>
+</ul>
+
+<p>The main feature of this section is are weak PBPO squares.</p>
+
+<h4 id="noether-square-and-et4">Noether Square and ET4</h4>
+
+<p>We refer to the square arising in ET4 (or ET4’), comprising two inflations and two deflations, as a <strong>Noether square</strong>. For exact categories, it is a PBPO square.</p>
+
+<div class="proposition">
+  <p>(A restatement of ET4 and ET4’). Let $i$ be an inflation and $p$ a deflation.</p>
+  <ul>
+    <li>Suppose that $i$ and $p$ share the same domain; then there exists a unique (up to composition with isomorphisms) completion to a diagram comprising four conflations.</li>
+    <li>Suppose that $i$ and $p$ share the same codomain; then there exists a unique (up to composition with isomorphisms) completion to a diagram comprising four conflations.</li>
+  </ul>
+  <p>One may verify this assertion by tracing the extension elements.</p>
+</div>
+
+<h4 id="verdier-square-and-44-lemma">Verdier Square and 4×4 Lemma</h4>
+
+<p>Analogously, a Verdier square arises in a diagram consisting of four deflations or four inflations. For exact categories, it is a PBPO square. We shall first examine the behaviour of pullbacks along two deflations in extriangulated categories.</p>
+
+<div class="theorem">
+  <p>Any two realisations of $δ_{i} ∈ 𝔼 (C, A_i)$ complets into a diagram consisting of four conflations:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_37230da02e987.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>The middle row (column) is the realisations of $(y_i)_∗ δ_j$.</p>
+  <div class="proof">
+    <p>We introduce an intermediate conflation $\binom 11 ^∗ (δ _1 ⊕ δ _2)$.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_b498f338d2e98.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Here $(p_i)_∗ \binom 11^∗(δ_1 ⊕ δ_2) = δ_i$. By ET4, we have the following diagrams:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_2904f468ced3a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We make subtle adjustments to obtain the following diagrams:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_3aa58ac7e8513.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Gluing them together, we complete the proof.</p>
+  </div>
+</div>
+
+<div class="proposition">
+  <p>In the above diagram, $(m_1)_∗ δ _1 + (m_2)_∗ δ _2 = 0$.</p>
+  <div class="proof">
+    <p>Recall that $(p_i)_∗ \binom 11^∗(δ_1 ⊕ δ_2) = δ_i$. Now $$\begin{aligned}
+(m_1)_∗ δ _1 + (m_2)_∗ δ _2 &= (m_1p_1 + m_2p_2)_∗ \binom 11^∗(δ_1 ⊕ δ_2)\\
+&= \binom 11^∗ m_∗ (δ_1 ⊕ δ_2) \quad = 0.
+\end{aligned}$$</p>
+  </div>
+</div>
+
+<div class="example">
+  <p>We omit the dual statement for the sake of brevity.</p>
+</div>
+
+<div class="proposition">
+  <p>It is evident that the completion of the Verdier diagram, arising from either two inflations or two deflations, is unique up to composition with isomorphisms. One may verify this assertion by tracing the extension elements.</p>
+</div>
+
+<h4 id="the-strict-44-lemma">The Strict 4×4 Lemma</h4>
+
+<p>We know that the completion of the Verdier diagram (from either two inflations or two deflations) is unique up to composition with isomorphisms. The strict form says that any ±-shaped diagram completes to Verdier diagram.</p>
+
+<div class="proposition">
+  <p>(Strict 4×4 Lemma). Consider the ±-shaped diagram of triangles realised by $η$, $δ_1$ and $ε$:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_e5b18c49e7987.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Then there exsists $δ _2$ whose realisation makes the entire diagram commutative, while $ε = (y_2)^∗ δ _1$, $η = (y_1)^∗ δ _2$, and $(m_1)_∗ δ _1 + (m_2)_∗ δ _2 = 0$.</p>
+  <div class="proof">
+    <p>We apply ET4’ to the composition of deflations $y_1$ and $λ _1$, and obtain</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_ad4ed79ecd676.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We realise $(x_1)^∗ η$ with standard split triangle, since $(x_1)^∗ η = (m_1)^∗ (λ _1)^∗ η = 0$. Even though $s ≠ m_1$ in general, we see that $(s-m_1) ∈ \ker (λ _1)_∗ = \operatorname{im} (m_2)_∗$. We write $l$ such that $$\begin{equation}
+A_1 \xrightarrow {l} A_2 \xrightarrow {m_2} M \quad = \quad A_1 \xrightarrow {s-m_1} M.
+\end{equation}$$</p>
+    <p>Now we wish $δ_2$ could be obtained by</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_fb12179f964d2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Once we take $x_2 = λ _2 m_2$, the best choice of $f_2$ is $1$. Due to the anticommutative square,</p>
+    <p>$$\begin{equation}
+0 = (m_1)_∗ δ _1 + (m_2)_∗ δ _2 = (m_1p_1 + m_2f)_∗ κ.
+\end{equation}$$</p>
+    <p>Hence, $(m_1 + m_2f_1, m_2f_2)$ factors through $(s,m_2)$. We take $f_1 = l$ to complete our construction. We apply SET4’ to the diagram $(f_1,f_2)_∗ κ = δ _2$, and obtain:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_fff4241e98bb3.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>It remains to show the commutativity of the diagram.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_e4d0e675be05d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>The square 1., 2., 3. and 6. are commutative due to our construction. To show that 4. is commutative, we see that ($†$ for communications in ET4). $$\begin{equation}
+(y_2)^∗ δ _1 = (y_2)^∗ (p_1)_∗ κ = (p_1)_∗ (y_2)^∗ κ \overset †= (p_1)_∗ \binom {1}{-l}_∗ ε = ε.
+\end{equation}$$</p>
+    <p>To show that 5. is commutative, we see that $$\begin{equation}
+(y_1)^∗ δ_2 = (y_1)^∗ (l,1)_∗ κ = (l,1)_∗ (y_1)^∗ κ \overset †= (l,1)_∗ (e_2)_∗ η  = η.
+\end{equation}$$</p>
+  </div>
+</div>
+
+<h4 id="the-weak-pbpo-squares">The Weak PBPO Squares</h4>
+
+<div class="definition">
+  <p>(Weak PO Square). A <strong>weak PO square</strong> (or <strong>weak coCatersian square</strong>) is an 2×2 diagram ($wf = hg$), such that for any $α f = β g$, there exists some $φ$ making the triangles commutative.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_a154fd8c8c64f.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Equivalently, the following sequence of functors is exact at $(B ⊕ C, -)$: $$\begin{equation}
+(D, -) \xrightarrow{(-w,h)^∗} (B ⊕ C, -) \xrightarrow {\binom f g^∗ } (A, -).
+\end{equation}$$</p>
+</div>
+
+<div class="definition">
+  <p>We define <strong>weak PB squares</strong> dually, which is also called a weak Catersian square. If a square is both weak PB and weak PO, then we call it a <strong>weak PBPO square</strong>.</p>
+</div>
+
+<div class="theorem">
+  <p>Noether squares are weakly PBPO.</p>
+  <div class="proof">
+    <p>Since the opposite category of an extriangulated category is still extriangulated, we only prove the weak PO part. <br /> <br /> We introduce arbitrary $T$, $n$ and $m$ in ET4 diagram such that $ng = mα$. It remains to show the existence of $M ⇢ T$ making the entire diagram commutative.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_131341908a562.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We beigns with</p>
+    <p>$$\begin{equation}
+0 = (mα )_∗ δ _{c1} = (ng)_∗ δ _{c1} = δ _{c2}^! (n).
+\end{equation}$$</p>
+    <p>By long exact sequence, $n$ factors through $r$. Hence, we take $l : M → T$ such that $lr = m$. Even though it is not necessary that $m = l q$, we see that</p>
+    <p>$$\begin{equation}
+(m - lq) ∈ \ker α ^∗  = \operatorname{im} β ^∗.
+\end{equation}$$</p>
+    <p>This introduce some $λ : K → T$ such that $(m - lq) = λ β$. We claim that $l + λ s$ is the desired morphism:</p>
+    <ul>
+      <li>$(l + λ s)r = lr + λ(sr) = lr = n$;</li>
+      <li>$(l + λ s)q = lq + λ sq = (m - λ β ) + λ sq = m + λ (β - sq) = m$.</li>
+    </ul>
+    <p>The following diagram shows where $λ$ and $l$ appears:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_75ec7aabab93b.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>Verdier squares obtained from two deflations is weak PB.</p>
+  <div class="proof">
+    <p>We take arbitrary $W$, $α$ and $β$ such that the $y_2 β = y_2 α$, it remains to show the existence of $W ⇢ M$ making the entire diagram commutative.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_5dd9291c13c06.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We begin with</p>
+    <p>$$\begin{equation}
+0 = (y_2α )^∗ δ _2 = β ^∗ (y_1)^∗  δ _2 = ((y_1)^∗  δ _2)_! (β).
+\end{equation}$$</p>
+    <p>Since $β ∈ \ker ((y_1)^∗  δ _2)_! = \operatorname{im} (λ _1)_∗$, we take $l : W → M$ such that $λ _1 l = β$. Even though $α ≠ λ _2 l$ in general, we consider $$\begin{equation}
+(α - λ _2 l) = \ker (y_2)_∗ = \operatorname{im} (x_2)_∗ .
+\end{equation}$$ This introduce $s: W → A_2$ such that $x_2 s = (α - λ _2 l)$. Finally, we verify that $l + m_2s$ is our desired morphism:</p>
+    <ul>
+      <li>$λ _2 (l + m_2s) = λ _2 l + λ _2 m_2 s = α - x_2 s + λ _2 m_2 s = α - (λ _2 m_2 -x_2)s = α$.</li>
+      <li>$λ _1 (l + m_2s) = λ _1l + (λ _1 m_2) s = λ _1l = β$.</li>
+    </ul>
+    <p>The following diagram shows where $λ _1$, $λ _2$ and $l$ appears:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_ee9d1227cdf69.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+  </div>
+</div>
+
+<h4 id="the-homotopic-square">The Homotopic Square</h4>
+
+<p>Recall that in ET2, we made no more assumption on the middle dashed arrow between conflations. However, there is a way to take a good morphism, enlightened by Neeman’s octagon axiom.</p>
+
+<div class="theorem">
+  <p>(The homotopic square theorem). For any realisations of the communication of extensions $(λ, 1): δ → λ_∗ δ$, there exists a suitable morphism $w$ rendering both diagrams commutative, and $y^∗ δ$ admits a realisation as depicted in the diagram below:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_9f2bb73e1adf2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <div class="proof">
+    <p>We construct the Verdier diagram from $b$ and $y$:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_d8d27155daf7d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Since $b^∗ δ =0$, we write $b^∗ λ _∗ δ$ in the standard split form which does not affect the solid arrows. By the anti commutative square in 4×4 diagram, we have $$\begin{equation}
+0 = \binom {λ '}{a} _∗ δ + \binom {1}{0} _∗  λ _∗ δ = \binom {λ ' + λ} a_∗ δ.
+\end{equation}$$</p>
+    <p>Hence, $(λ ' + λ) ∈ \ker δ^!$. By long exact sequence, there exists $l$ such that $(λ + λ ' ) = l ∘ a$. To be explicit, $$\begin{equation}
+X \xrightarrow a Y \xrightarrow l A\quad  = \quad  X \xrightarrow {λ + λ '} A.
+\end{equation}$$</p>
+    <p>It remains to show the existence of $w$ such that the following diagram commutes:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_fc2b7f74d1e86.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>The left square commutes due to the choice of $l$. Taking $w = xl - w'$, we see that</p>
+    <ul>
+      <li>$wa - x λ = xla - w'a - xλ = xla - x λ ' - xλ = x(la - λ - λ ' ) = 0$;</li>
+      <li>$yw - b = yxl - yw' - b = 0 l + b - b = 0$.</li>
+    </ul>
+    <p>Hence, the right square also commutes.</p>
+  </div>
+</div>
+
+<div class="corollary">
+  <p>The homotopic square is also a weak PBPO square.</p>
+</div>
+
+<div class="example">
+  <p>(The square of ET4). Consider the Noether diagram given by ET4:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_16121f7f8f9ca.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>We focus on the square $\square$.</p>
+  <ul>
+    <li>$\square$ is a weak PBPO square, but not a homotopic square in general.</li>
+    <li>There is a way to replace $α$ by some $α'$ which makes the square a homotopic square, and the entire diagram is still commutative. The only sacrifice is that $α$ may not be a deflation.</li>
+    <li>There is a way to replace $q$ by some $q'$ which makes the square a homotopic square, and the entire diagram is still commutative. The only sacrifice is that $q$ may not be a deflation.</li>
+  </ul>
+</div>
+
+<p>The following proposition is useful for length category or something more general.</p>
+
+<div class="proposition">
+  <p>If there are no retractions in $\mathrm{End}(Y)$, or there are no retractions in $\mathrm{End}(M)$, then the ET4 diagram is automatically a homotopic square.</p>
+  <div class="proof">
+    <p>Suppose that there are no retractions in $\mathrm{End}(Y)$. We take $α': Y → W$ and obtain the homotopic square. By factorisation between two squares, one has $m$ and $n$ such that the following diagram commutes:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_e26ebbd185a69.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>$n ∘ m$ is an isomorphism by two out of three principle. By nonexistence of retractions, $m$ and $n$ must be isomorphisms.</p>
+  </div>
+</div>
+
+<h3 id="weakly-idempotent-completeness">Weakly Idempotent Completeness</h3>
+
+<h4 id="composition-of-inflations">Composition of Inflations</h4>
+
+<p>By virtue of ET4, it follows that the composition of two inflations is itself an inflation. Our primary concern is as follows: suppose that the composition $q∘p$ is an inflation; under what conditions can we conclude that $p$ is also an inflation?</p>
+
+<div class="lemma">
+  <p>If $q∘p$ is an inflation, $q$ is a deflation, then $p$ is also an inflation.</p>
+  <div class="proof">
+    <p>We apply ET4 to $q ∘ p$ and $q$. By weak PBPO, there exists $s$ making the entire diagram commutative:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_72ced3c2004ae.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Since $p$ is a composition of a split monomorphism $s$ and an inflation $p'$, $p$ is an inflation.</p>
+  </div>
+</div>
+
+<div class="corollary">
+  <p>$i$ is an inflation ⇒ $\binom i f$ is an inflation.</p>
+  <div class="proof">
+    <p>If $i$ is an inflation, then the composition of $\binom i f$ with a deflation $(1,0)$ is an inflation. Hence, $\binom i f$ must be an inflation. In this case, the diagram completes into Verdier diagram by strict 4×4 lemma.</p>
+  </div>
+</div>
+
+<h4 id="weakly-idempotent-completeness-1">Weakly Idempotent Completeness</h4>
+
+<p>When $q ∘ p$ is an inflation, under what conditions can we conclude that $p$ is an inflation? The following lemma comes from obscure lemma in exact categories.</p>
+
+<div class="lemma">
+  <p>$q ∘ p$ is an inflation ⇒ $\binom p 0$ is an inflation.</p>
+  <div class="proof">
+    <p>Let $X_1 \xrightarrow p X_2 \xrightarrow q X_3$ be usual morphisms. Suppose that $q ∘ p$ is an inflation, then $\binom p 0 : X_1 → X_2 ⊕ X_3$ is also an inflation. This is due to $\binom p {q ∘ p}$ is an inflation, any inflation are closed under Gaussian elimination.</p>
+  </div>
+</div>
+
+<p>To dispense with the cumbersome $0$, we introduce the following definition of weakly idempotent completeness. The initial intuition is drawn from the completion of the category of free modules.</p>
+
+<ul>
+  <li>The weakly idempotent completion of the category of free modules is the category of stable projective modules.</li>
+  <li>The idempotent completion of the category of free modules is the category of projective modules.</li>
+</ul>
+
+<p>We shall not pursue the notion of idempotent completeness in detail; our attention is restricted to the weakly idempotent completion.</p>
+
+<div class="definition">
+  <p>(Weakly idempotent complete) The following are equivalent for an additive category.</p>
+  <ol>
+    <li>When $i$ has a left inverse $p$, then $i = \binom 1 0 : X → X ⊕ Y$;</li>
+    <li>When $p$ has a right inverse $i$, then $p = (1,0) : X ⊕ Y → X$.</li>
+  </ol>
+  <div class="proof">
+    <p>We only prove 1. ⇒ 2., the converse is dual. If $i$ has a left inverse $p$, $p$ takes the from $(1,0)$. Hence, $i$ takes the form $\binom 1 t$ so that $p ∘ i$ is an isomorphism. By the composition with an isomorphism, $i$ takes the form $\binom 1 0$.</p>
+  </div>
+</div>
+
+<div class="definition">
+  <p>For extriangulated categories, the following are equivalent conditions for being weakly idempotent complete.</p>
+  <ol>
+    <li>When $i$ has a left inverse $p$, then $i = \binom 1 0 : X → X ⊕ Y$;</li>
+    <li>When $\binom i 0$ is an inflation, then so is $i$;</li>
+    <li>$\binom {i \ 0}{0 \ j}$ is an inflation, iff $i$ and $j$ are inflations;</li>
+    <li>When $f i$ is an inflation, then so is $i$;</li>
+    <li>When $p$ has a right inverse $i$, then $p = (1,0) : X ⊕ Y → X$;</li>
+    <li>When $(p,0)$ is a deflation, then so is $p$;</li>
+    <li>$\binom {p \ 0}{0 \ q}$ is a deflation, iff $p$ and $q$ are deflations;</li>
+    <li>When $p g$ is a deflation, then so is $p$.</li>
+  </ol>
+  <div class="proof">
+    <p>We only proof the first four statements, the rest are dual. The equivalence 2. ⇔ 4. is already shown above.</p>
+    <ol>
+      <li>When 4. holds true, and $\binom 1 0 ∘ i$ is an inflation, then so is $i$;</li>
+      <li>When 2. holds true, and $f i$ is an inflation, the lemma shows that $\binom i 0$ is an inflation, hence $i$ is an inflation;</li>
+    </ol>
+    <p>Now we show 1. ⇔ 4.. Since 1. is a special case of 4. (isomorphisms are inflations), we only need to show 1. ⇒ 2. and thus 1. ⇒ 4.. Suppose that $\binom i 0$ is an inflation, then we take conflation $$\begin{equation}
+X \xrightarrow {\binom i 0} Y ⊕ Z \xrightarrow {(s,t)} W.
+\end{equation}$$ Since $(s,t) ∘ \binom {i \ 0}{0 \ 1} = 0$, by long exact sequence, there is $(a,b)$ such that $\binom {i \ 0}{0 \ 1} = (a,b) ∘ \binom i 0$. Hence, $t$ is split monomorphism, and the conflation writes as $$\begin{equation}
+X \xrightarrow {\binom i 0} Y ⊕ Z \xrightarrow {\binom {s_1 \ 0}{s_2 \ 1_Z}} Q ⊕ Z.
+\end{equation}$$ Now by strict 4×4 lemma, we have the following commutative diagram consisting four conflations:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_bcde30856c1ee.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>The only choice of the dashed arrow $X ⇢ Z$ is $i$, thus is an inflation. <br /> <br /> Now we show that 3. ⇔ 2.. We firstly omit the ← part of the statement in 3., since realisation always commutes with direct product. On one hand. 3. is a corollary of 2. by composition with $\binom 1 0$ and $\binom 0 1$. On the other hand, if $\binom i 0$ is an inflation, then so is $ \binom {i \ 0_0}{0 \ 0_0}$. Hence, $i$ is an inflation by 3..</p>
+  </div>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/20250523Talk"
+        title="NEXT: 2025-05-23-讨论班">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Stable_Adjoint"
+        title="PREV: Cotorsion Pair 的特殊逼近是稳定伴随">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

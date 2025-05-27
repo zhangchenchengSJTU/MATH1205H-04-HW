@@ -33,20 +33,20 @@
 
 
 
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [
-          [
-            '$', '$'
-          ],
-          [
-            '\\(', '\\)'
-          ]
-        ]
-      }
-    };
-  </script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    chtml: {
+      scale: 0.95  // Adjust scale (0.85 = 85% of default size)
+    },
+    svg: {
+      scale: 0.95  // For SVG output
+    }
+  };
+</script>
   <script
     async
     id="MathJax-script"
@@ -384,7 +384,7 @@ F(-) ≃ \mathrm{im}(ι ∘ π) = \mathrm{im}((-,α)) ≃  (-, M)
       <a
         class="prev"
         href="/website/posts/Diagram_Thm_Extri"
-        title="PREV: 外三角范畴中的图形定理">&gt;&gt;</a>
+        title="PREV: On diagram lemmas of extriangulated categories">&gt;&gt;</a>
     
   </div>
 </main>
