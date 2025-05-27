@@ -125,6 +125,13 @@
           <li><a href="#weakly-idempotent-completeness-1" id="markdown-toc-weakly-idempotent-completeness-1">Weakly Idempotent Completeness</a></li>
         </ul>
       </li>
+      <li><a href="#examples-and-counterexamples" id="markdown-toc-examples-and-counterexamples">Examples, and Counterexamples</a>        <ul>
+          <li><a href="#exact-categories-as-extriangulated-categories" id="markdown-toc-exact-categories-as-extriangulated-categories">Exact Categories as Extriangulated Categories</a></li>
+          <li><a href="#triangulated-categories-as-extriangulated-categories" id="markdown-toc-triangulated-categories-as-extriangulated-categories">Triangulated Categories as Extriangulated Categories</a></li>
+          <li><a href="#quotient-from-happles-theorem" id="markdown-toc-quotient-from-happles-theorem">Quotient from Happle’s Theorem</a></li>
+          <li><a href="#some-counterexamples-for-exact-categories" id="markdown-toc-some-counterexamples-for-exact-categories">Some Counterexamples (for Exact Categories)</a></li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
@@ -379,7 +386,7 @@ g^∗ ∘ δ^! (h) = g^∗ (h_∗ δ) = h_∗ (g^∗ δ).
       <li>Since $ε_!(j^∗ g) = ε (p^∗ f) = 0$ and $\mathbb E(B,K) ↪ \mathbb E(A,K)$, we see that $ε_!(g) = 0$. That is, the entry at $𝔼 (B,K)$ is zero.</li>
       <li>Similarly, the entry at $𝔼 (C,X)$ is zero.</li>
     </ul>
-    <p>By exactness of the totoal complex, there is an triple $$\begin{equation}
+    <p>By exactness of the total complex, there is an triple $$\begin{equation}
 (a,b,c) ∈ (A,K) ⊕ (B,X) ⊕ (C,Y)
 \end{equation}$$</p>
     <p>whose differential is $(f,g)$. We want this preimage to be of the form $(0, ? , 0)$. Thanks to the surjectivity of $p_∗$ and $j^∗$, there exists some element $(s,t) ∈ (B, K) ⊕ (C,X)$ such that $d(s,t) = (a,?,b)$. Hence, $(a,b,c) - d(s,t)$ is the element of the form $(0,?,0)$ whose differential is $(f,g)$.</p>
@@ -827,6 +834,111 @@ X \xrightarrow {\binom i 0} Y ⊕ Z \xrightarrow {\binom {s_1 \ 0}{s_2 \ 1_Z}} Q
     <p>The only choice of the dashed arrow $X ⇢ Z$ is $i$, thus is an inflation. <br /> <br /> Now we show that 3. ⇔ 2.. We firstly omit the ← part of the statement in 3., since realisation always commutes with direct product. On one hand. 3. is a corollary of 2. by composition with $\binom 1 0$ and $\binom 0 1$. On the other hand, if $\binom i 0$ is an inflation, then so is $ \binom {i \ 0_0}{0 \ 0_0}$. Hence, $i$ is an inflation by 3..</p>
   </div>
 </div>
+
+<h3 id="examples-and-counterexamples">Examples, and Counterexamples</h3>
+
+<h4 id="exact-categories-as-extriangulated-categories">Exact Categories as Extriangulated Categories</h4>
+
+<p>We say an exaxt category is extension-small, provided $\mathrm{Ext}^1(Z,X)$ is always an set. here are two kinds of common examples:</p>
+
+<ul>
+  <li>The exact category is small;</li>
+  <li>The exact category has enough projectives, or enough injectives, so that $\mathrm{Ext}^1$ is defined by dimension shift.</li>
+</ul>
+
+<p>Suppose that $(𝒜 , ℰ)$ is an exact category which is extension-small. Then there it is automatically an extriangulated category, where</p>
+
+<ul>
+  <li>the bifunctor is $\mathrm{Ext}^1 : 𝒜^{\mathrm{op}} × 𝒜 → 𝐀𝐛$;</li>
+  <li>the realisation of $δ ∈ \mathrm{Ext}^1(Z,X)$ derives from the definition of $\mathrm{Ext}^1$ group.</li>
+</ul>
+
+<div class="lemma">
+  <p>(Verification of ET2). Let $(a,c) : δ → δ '$ be communication between exact sequences. We wonder whether there is an lifting morphism $Y ⇢ Y'$ making the following diagram commutative:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_5622268d184b9.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Consider part of the exact total complex ($↙k$ denote the degree $k$ part):</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_682656de5117c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>We claim that $x := (0,f'a, cg, 0)$ the element of degree $3$ is a cycle (hence a boundary).</p>
+  <ol>
+    <li>The entry of $dx$ at $(X,Z')$ is zero, by commutative square;</li>
+    <li>The entry of $dx$ at $\mathrm{Ext}^1(Y,X')$ is also zero, since $(δ')_!(cg)= g^∗ (c^∗ δ ') = g^∗ (a_∗ δ ) = a_∗ (g^∗ δ ) = 0$.</li>
+    <li>The entry of $dx$ at $\mathrm{Ext}^1(Z,Y')$ is also zero, by a similar analysis.</li>
+  </ol>
+  <p>Now there exists $(p,q,r) ∈ (X,X') ⊕ (Y,Y') ⊕ (Z,Z')$ whose differential is $x$. Since $p ∈ \ker [(X,X') → \mathrm{Ext}^1(Z,X')]$, there exists some $s ∈ (Y,X')$ such that $d(s,0)=(p,m,0)$. By similar analysis, there is $d(0,t) = (0,n,r)$. Now $x = d(0,q-m-n,0)$, hence $q-m-n$ is the desired lifting map.</p>
+</div>
+
+<div class="lemma">
+  <p>(Verification of ET3 and ET3’). This is due to the universal property of kernel and coker. We omit the proof.</p>
+</div>
+
+<div class="lemma">
+  <p>(Verification of ET4 and ET4’). We only proof SET4. The completion is due to universal property of cokernel</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_74d121539bdb2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Since $\square$ is an pushout diagram, $α$ is an inflation and $\operatorname{cok}α = \operatorname{cok} i$. This complete the construction of Noether diagram. For identities in ET4, we remind the reader that both $j^∗ε$ and $β _∗ δ$ equals the conflation realised as $\mathrm{Total}(\square)$ (or maybe its negative).</p>
+</div>
+
+<h4 id="triangulated-categories-as-extriangulated-categories">Triangulated Categories as Extriangulated Categories</h4>
+
+<p>To see that triangluated categories are extriangulated, we define the functor $𝔼(-,?) := (-,?[1])$.</p>
+
+<div class="example">
+  <p>(Yoneda lemma). For $δ ∈ 𝔼 (C,A) = (C,A[1])$, we explain $δ_!$ and $δ^!$ as follows.</p>
+  <ol>
+    <li>$δ_! ∈ 𝖭𝖺𝗍 [(-, C), (-, A[1])]$ corresponds to $(-, δ)$. Hence, $δ_!(f) = δ ∘ f$.</li>
+    <li>$δ^! ∈ 𝖭𝖺𝗍 [(A, -), (C, -[1])]$ corresponds to $(δ, -) ∘ [1]$, where $[1] : (-,-) ≃ (-[1],-[1])$ is a natural isomorphism. Hence, $δ^!(g) = g[1] ∘ δ$.</li>
+  </ol>
+</div>
+
+<div class="example">
+  <p>(The realisation of $1$, once the triangulated category is extriangulated). This definition allows use to investigate the realisation of $$\begin{equation}
+1_{X[1]} ∈ (X[1], X[1]) = 𝔼 (X[1], X) ∋ δ.
+\end{equation}$$</p>
+  <p>We take any of the realisation $X → E → X[1] \xrightarrow {δ}$ and the long exact sequence $$\begin{equation}
+(-, X) → (-, E) → (-, X[1]) \xrightarrow {δ_!} 𝔼(-, X) = (-, X[1]).
+\end{equation}$$</p>
+  <p>As $δ_! = δ ∘ - = 1_{X[1]} ∘ -$ by above analysis, the realisation of one is the trivial triangle</p>
+  <p>$$\begin{equation}
+X → 0 → X[1] \xrightarrow {1_{X[1]}} X[1].
+\end{equation}$$</p>
+</div>
+
+<div class="lemma">
+  <p>(Triangulated category as extriangulated category). A triangulated category is an extriangulated category with the bifunctor $𝔼(-,?) := (-,?[1])$ and the realisation of $δ ∈ 𝔼(Z,X)$ is given by the unique embedding of a morphism to a triangle, i.e.,</p>
+  <p>$$\begin{equation}
+X → Y → Z \xrightarrow δ X[1].
+\end{equation}$$</p>
+  <p>This shows the ET1 and ET2 axioms. Moreover, such construction satisfies the ET3 and ET4 axioms, thus making the triangulated category into an extriangulated category.</p>
+  <div class="proof">
+    <p>The equality concers with pre-composition (post-composition) with an extension element, becomes a usual composition. Hence, the verification of ET3 is straightforward. The verification of ET4 is given in remarks on ET4 axiom.</p>
+  </div>
+</div>
+
+<p>We mention the converse statement, that is, an extriangulated category with a compatible equivalence $[1] : 𝒞 → 𝒞$ is triangulated.</p>
+
+<div class="lemma">
+  <p>If an extriangulated category $(𝒞 , 𝔼 , 𝔰 )$ admits an equivalence $[1] : 𝒞 → 𝒞$, such that $𝔼 (-,?) := (-,?[1])$, then $(𝒞 , [1], \text{conflations})$ is automatically an triangulated category.</p>
+  <div class="proof">
+    <p>The verify TR1-TR4. The most difficult part is TR2. <br /> <br /> For TR1, we have analysis that split conflations are realisations of $0$, conflations are isomorphism closed. Any morphism appears in $𝔼 (-,?) = (-,?[1])$ as $[1]$ is an equivalence. Once we show TR2, we complete the verification of TR1. <br /> <br /> For TR2, we take arbitrary conflation $X \xrightarrow f Y \xrightarrow g Z \xrightarrow δ X[1]$. By strict 4×4 lemma, we have the following commutative diagram of four conflations:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_a23f09ac98b83.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We notice that $f_∗ 1_{X[1]} = (1_{X[1]})^!(f) = f[1]$. By anticommutative diagram,</p>
+    <p>$$\begin{equation}
+0 = λ^∗ (1_{X[1]}) + (1_Z)^∗ δ = λ + δ.
+\end{equation}$$</p>
+    <p>Hence, $λ = -δ$, and this shows that $Y \xrightarrow g Z \xrightarrow {-δ} X[1]\xrightarrow {f[1]} Y[1]$ is an triangle. By isomorphism closedness (sign rule), we deduce TR2. <br /> <br /> The proof of TR3 and TR4 are easy.</p>
+  </div>
+</div>
+
+<h4 id="quotient-from-happles-theorem">Quotient from Happle’s Theorem</h4>
+
+<h4 id="some-counterexamples-for-exact-categories">Some Counterexamples (for Exact Categories)</h4>
 
 
   </article>
