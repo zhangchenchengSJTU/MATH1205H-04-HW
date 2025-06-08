@@ -106,7 +106,7 @@
   </li>
   <li><a href="#on-isomorphisms" id="markdown-toc-on-isomorphisms">On Isomorphisms</a>    <ul>
       <li><a href="#conflations-are-closed-under-isomorphisms" id="markdown-toc-conflations-are-closed-under-isomorphisms">Conflations are Closed under Isomorphisms</a></li>
-      <li><a href="#remarks-on-two-out-of-three-principle" id="markdown-toc-remarks-on-two-out-of-three-principle">Remarks on Two out of Three Principle</a></li>
+      <li><a href="#remarks-on-2--3-principle-for-iso" id="markdown-toc-remarks-on-2--3-principle-for-iso">Remarks on 2 ⇒ 3 Principle for Iso</a></li>
       <li><a href="#uniqueness-of-morphism-embedding" id="markdown-toc-uniqueness-of-morphism-embedding">Uniqueness of Morphism Embedding</a></li>
     </ul>
   </li>
@@ -139,12 +139,21 @@
       <li><a href="#extri-cats-neither-tri-nor-ex" id="markdown-toc-extri-cats-neither-tri-nor-ex">Extri Cats Neither Tri Nor Ex</a></li>
     </ul>
   </li>
+  <li><a href="#the-functors" id="markdown-toc-the-functors">The Functors</a>    <ul>
+      <li><a href="#extriangulated-functors" id="markdown-toc-extriangulated-functors">Extriangulated Functors</a></li>
+    </ul>
+  </li>
   <li><a href="#the-model-structures" id="markdown-toc-the-model-structures">The Model Structures</a>    <ul>
       <li><a href="#hovey-twin-cotorsion-pair" id="markdown-toc-hovey-twin-cotorsion-pair">Hovey Twin Cotorsion Pair</a></li>
       <li><a href="#adm-model--hovey" id="markdown-toc-adm-model--hovey">Adm Model ⇒ Hovey</a></li>
       <li><a href="#hovey--adm-model" id="markdown-toc-hovey--adm-model">Hovey ⇒ Adm Model</a></li>
       <li><a href="#remarks-on-mathjax_protectedjpcdkrikmathjax_protected-and-mathjax_protectedjpcdlrbwnza8j2xiiqmathjax_protected" id="markdown-toc-remarks-on-mathjax_protectedjpcdkrikmathjax_protected-and-mathjax_protectedjpcdlrbwnza8j2xiiqmathjax_protected">Remarks on $𝒲$ and $𝖶𝖾𝗊$</a></li>
-      <li><a href="#stable-cat-is-mathjax_protectedjfx0cmlhbmdszsqmathjax_protected" id="markdown-toc-stable-cat-is-mathjax_protectedjfx0cmlhbmdszsqmathjax_protected">Stable Cat is $\triangle$</a></li>
+      <li><a href="#equivalent-defs-of-mathjax_protectedjpcdlqfwnzeiipcdkpwkmathjax_protected" id="markdown-toc-equivalent-defs-of-mathjax_protectedjpcdlqfwnzeiipcdkpwkmathjax_protected">Equivalent Defs of $𝖧𝗈 𝒜$</a></li>
+    </ul>
+  </li>
+  <li><a href="#mathjax_protectedjpcdlqfwnzeiipcdkpwkmathjax_protected-is-triangluated" id="markdown-toc-mathjax_protectedjpcdlqfwnzeiipcdkpwkmathjax_protected-is-triangluated">$𝖧𝗈 𝒜$ is Triangluated</a>    <ul>
+      <li><a href="#the-suspension" id="markdown-toc-the-suspension">The Suspension</a></li>
+      <li><a href="#make-mathjax_protectedjm63jamathjax_protected-a-morphism" id="markdown-toc-make-mathjax_protectedjm63jamathjax_protected-a-morphism">Make $η$ a Morphism</a></li>
     </ul>
   </li>
 </ul>
@@ -154,7 +163,25 @@
 <div class="abstract">
   <h5 id="abstract">Abstract</h5>
   <div>
-    <p>We summarise the diagram lemmas for extriangulated categories.</p>
+    <p>We provide a summary of the diagram lemmas pertaining to extriangulated categories. The outline of the initial sections consists solely of the fundamental theorems of extriangulated categories. The fundamental theorems include:</p>
+    <ul>
+      <li>the six-term long exact sequence,</li>
+      <li>the two-out-of-three principle for isomorphisms.</li>
+    </ul>
+    <p>Subsequently, we deduce several frequently utilised theorems, including:</p>
+    <ul>
+      <li>ET4 (Noether) and $4 \times 4$ (Verdier) type diagrams, together with their strict forms,</li>
+      <li>the homotopic squares and weakly PBPO squares arising from the diagram theorems,</li>
+      <li>EX3-analogue rules for extriangulated categories.</li>
+    </ul>
+    <p>We then proceed to analyse various equivalent definitions of weakly idempotent completeness, with particular emphasis on the $3 \times 3$ lemma. Thereafter, we establish certain fundamental facts regarding admissible model structures, thereby unifying the admissible model structures for both exact and extriangulated categories. We discuss:</p>
+    <ul>
+      <li>the conception of cotorsion theory,</li>
+      <li>Hovey’s twin cotorsion pairs $⇒$ admissible model structure,</li>
+      <li>admissible model structure $⇒$ Hovey twin cotorsion pairs,</li>
+      <li>the triangulated nature of the homotopy category,</li>
+      <li>mutation of twin cotorsion pairs.</li>
+    </ul>
   </div>
 </div>
 
@@ -170,7 +197,7 @@
   <li>$𝔰$ is termed an additive realisation, assigning to each $δ ∈ 𝔼(Z, X)$ an isomorphism class in the comma category $X \backslash 𝒞 / Z$.</li>
 </ul>
 
-<p>Furthermore, the triple satisfies certain axioms labelled ET-$k$.</p>
+<p>Furthermore, the triple satisfies certain axioms labelled ET.</p>
 
 <p>We commence with the ET1 axiom and the associated terminologies.</p>
 
@@ -184,7 +211,7 @@
   </ul>
   <p>We employ the following terminologies:</p>
   <ul>
-    <li>An <strong>element of extension</strong> is an element $δ ∈ 𝔼(Z, X)$ in the $𝔼$-group. It may also be denoted by the triple $(X, δ, Z)$, or simply $δ$ when unambiguous.</li>
+    <li>An <strong>element of extension</strong> is an element in the $𝔼$-group, $δ ∈ 𝔼(Z, X)$. It may also be denoted by the triple $(X, δ, Z)$, or simply $δ$ when unambiguous.</li>
     <li>A <strong>pre-composition</strong> is a group homomorphism $𝔼(f, X) : 𝔼(Z', X) → 𝔼(Z, X)$, given $f : Z → Z'$. We denote this by $f^∗$ when unambiguous.</li>
     <li>A <strong>post-composition</strong> is a group homomorphism $𝔼(Z, g) : 𝔼(Z, X) → 𝔼(Z, X')$, given $g : X → X'$. We denote this by $g_∗$ when unambiguous.</li>
     <li>Since $𝔼(-,-)$ is a bifunctor, one has $f^∗ g_∗ = g_∗ f^∗ : 𝔼(Z', X) → 𝔼(Z, X')$.</li>
@@ -213,25 +240,25 @@ $$\begin{equation}
 \end{equation}$$
 if and only if $X = X'$, $Z = Z'$, and there exists an isomorphism $φ : Y → Y'$ making the following diagram commutative</p>
 <center> <br /> <div class="tikz-diagram">
-    <embed src="/website/svg/Diagram_Thm_Extri/diagram_1f6218005f2b2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_8ab43cb5b9685.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
   </div> <br /> </center>
 
-<p>The equivalency class preserve the standard $⊕$ of the functor category.</p>
+<p>The equivalency class preserve the standard biproduct $⊕$ of the functor category.</p>
 
 <div class="definition">
-  <p>(ET2). The map between classes $𝔰$ is called an <strong>additive realisation</strong> of the pair $(𝒞, 𝔼)$, provided the following (denoted by ET2):</p>
+  <p>(ET2). $𝔰$ is a collection of correspondeces from sets to classes. $𝔰$ is called an <strong>additive realisation</strong> with respect to the pair $(𝒞, 𝔼)$, provided the following (denoted by ET2):</p>
   <ul>
     <li>$𝔰$ sends $(X, δ, Z)$ to some equivalency class of the form $[X \xrightarrow f  E \xrightarrow g  Z]$;</li>
     <li>$𝔰$ sends $(X, 0, Z)$ to the class of split short exact sequences $[X \xrightarrow {e_1} X ⊕ Z \xrightarrow {p_2} Z]$;</li>
-    <li>$𝔰(δ _1 ⊕ δ _2) = 𝔰(δ _1) ⊕ 𝔰(δ _2)$ (recall that $⊕$ is compatible with the equivalent class);</li>
-    <li>If there is a communication of extensions $(α , β): (X, δ , Z) → (X', δ', Z')$, then for any representatives of $𝔼 (δ )$ and $𝔼 (δ ')$, there exists a morphism $β$ making the following diagram commutative:</li>
+    <li>$𝔰(δ _1 ⊕ δ _2) = 𝔰(δ _1) ⊕ 𝔰(δ _2)$ (recall that $⊕$ is compatible with the equivalency class);</li>
+    <li>If there is a communication of extensions $(α , β): (X, δ , Z) → (X', δ', Z')$, then for any representatives of $𝔰(δ)$ and $𝔰(δ')$, there exists a morphism $β$ making the following diagram commutative:</li>
   </ul>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Diagram_Thm_Extri/diagram_14b5070219dc2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
 </div>
 
-<p>One should be aware that, the morphism of triangles are not necessasy a communication of triangles.</p>
+<p><strong>One should be aware that, the morphism of triangles are not necessasy a communication of triangles.</strong></p>
 
 <div class="definition">
   <p>(Terminologies for ET2). We define the following terminologies:</p>
@@ -243,20 +270,12 @@ if and only if $X = X'$, $Z = Z'$, and there exists an isomorphism $φ : Y → Y
   </ul>
 </div>
 
-<p>The expression of realisation may cause problems, <strong>we use triangles or conflations instead for most of the time</strong>. For instance, consider the following sentences</p>
-
-<ul>
-  <li>The beneficiaries of this policy were students.</li>
-  <li>The victims of this rollover accident were students.</li>
-  <li>He/She is a student.</li>
-</ul>
-
-<p>The use of <em>$x$ be students</em> means either $x = {\text{students}}$, $x ⊆ {\text{students}}$ or $x ∈ {\text{students}}$.</p>
+<p>The expression of realisation may cause problems, <strong>we use the terms conflations or triangles for most of the time</strong>.</p>
 
 <h3 id="et3">ET3</h3>
 
 <div class="definition">
-  <p>(ET3, and ET3’). For the triple $(𝒞, 𝔼, 𝔰)$ satisfying ET1 and ET2, we say that it satisfies ET3 if the following holds: for any commutative diagram ($f'α = β f$) between triangles, there exists a dashed morphism ($γ$) rendering it simultaneously a communication of extensions and a commutative diagram.</p>
+  <p>(ET3, and ET3’). For the triple $(𝒞, 𝔼, 𝔰)$ satisfying ET1 and ET2, we say that it satisfies ET3 if the following holds: for any commutative diagram ($f'α = β f$) between triangles, there exists (not unique in general) a dashed arrow ($γ$) rendering it <strong>simultaneously</strong> a communication of extensions and a commutative diagram.</p>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Diagram_Thm_Extri/diagram_e6fb848b2abde.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
@@ -270,11 +289,14 @@ if and only if $X = X'$, $Z = Z'$, and there exists an isomorphism $φ : Y → Y
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Diagram_Thm_Extri/diagram_69fc2c4cc7c4a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>and, satisfying $r^∗ δ_{r2} = δ _{r1}$, $g_∗ δ _{c1} = δ _{c2}$, and $f_∗ δ _{r2} = s^∗ δ _{c1}$. The final one reveals a very special the communciation of extensions:</p>
+  <p>and, satisfying the following identities $$\begin{equation}
+r^∗ δ_{r2} = δ _{r1},\quad g_∗ δ _{c1} = δ _{c2},\quad f_∗ δ _{r2} = s^∗ δ _{c1}
+\end{equation}$$</p>
+  <p>The final one reveals a very special communication of extensions:</p>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Diagram_Thm_Extri/diagram_7b78cab132440.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>The statement of ET4’ is dual, where the dashed morphisms are given, and the solid morphisms are to be determined. The completed diagram is required to satisfy the same properties as above.</p>
+  <p>The statement of ET4’ is dual, where the dashed arrows are given, and the solid arrows are to be determined. The completed diagram is required to satisfy the same properties as above.</p>
 </div>
 
 <p>In short, ET4 means that one ⊤-shaped diagram of triangles implies another ⊣-shaped diagram of triangles, and vice versa.</p>
@@ -283,7 +305,7 @@ if and only if $X = X'$, $Z = Z'$, and there exists an isomorphism $φ : Y → Y
 
 <h3 id="yoneda-construction">Yoneda Construction</h3>
 
-<p>The following notation is based on Yoneda lemma. Recall that the category $𝒞$ is locally small, and the bifunctor $𝔼(-,-)$ takes values in Abelian groups. Now there is an isomorphism between Abelian groups</p>
+<p>The following analysis is based on Yoneda lemma. Recall that the category $𝒞$ is locally small, and the bifunctor $𝔼(-,-)$ takes values in Abelian groups. Now there is an isomorphism between Abelian groups</p>
 
 <p>$$\begin{equation}
 𝖭𝖺𝗍 [(X,-), 𝔼 (Z,-)] ↔ 𝔼(Z,X),\quad Φ ↦ Φ_X(1_X).
@@ -306,16 +328,16 @@ if and only if $X = X'$, $Z = Z'$, and there exists an isomorphism $φ : Y → Y
 (Z,-) \xrightarrow{g^∗} (Y,-) \xrightarrow{f^∗} (X,-) \xrightarrow{δ^!} 𝔼(Z,-) \xrightarrow{g^∗} 𝔼(Y,-) \xrightarrow{f^∗} 𝔼(X,-).
 \end{equation}$$</p>
 
-<p>There are no $0$ terms in this long exact sequence. Moreover, the exactness of the first 5-terms can be proved without ET4 (ET4’).</p>
+<p>There are no $0$ terms at the ends of the long exact sequence. Moreover, the exactness of the first 5-terms can be proved within ET≤3.</p>
 
 <div class="lemma">
   <p>We show the exactness at $(Z,-) \xrightarrow{g^∗} (Y,-) \xrightarrow{f^∗} (X,-)$.</p>
   <div class="proof">
-    <p>We take the solid map $\{f,g,β,1_M\}$ in the following diagram</p>
+    <p>We take the morphisms $\{f,g,β,1_M\}$ (labbelled by solid arrows) in the following diagram</p>
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/Diagram_Thm_Extri/diagram_75833d5ba7d1c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>By ET3 and ET3’, if there exists a dashed morphism $α$ makes the left rectangle commutative (equiv., $β ∈ \ker f^∗$), then there exists a dashed morphism $γ$ making the right rectangle commutative (equiv., $β ∈ \operatorname{im} g^∗$), and vise versa.</p>
+    <p>By ET3 and ET3’, if there exists a dashed arrow $α$ makes the left rectangle commutative (equiv., $β ∈ \ker f^∗$), then there exists a dashed arrow $γ$ making the right rectangle commutative (equiv., $β ∈ \operatorname{im} g^∗$), and vise versa.</p>
   </div>
 </div>
 
@@ -328,7 +350,7 @@ if and only if $X = X'$, $Z = Z'$, and there exists an isomorphism $φ : Y → Y
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/Diagram_Thm_Extri/diagram_65eefe9d750ca.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>By ET3, there exists a dashed morphism $γ$ making the right rectangle commutative, and $f_∗ δ = γ ^∗ 0 = 0$. <br /> <br /> On the other hand, we show that any $h : Z → M$ with $h_∗ δ = 0$ factors through $g$. We take the canonical split short exact sequence as the realisation of $h_∗δ$, and obtain a commutative diagram</p>
+    <p>By ET3, there exists a dashed arrow $γ$ making the right rectangle commutative, and $f_∗ δ = γ ^∗ 0 = 0$. <br /> <br /> On the other hand, we show that any $h : Z → M$ with $h_∗ δ = 0$ factors through $g$. We take the canonical split short exact sequence as the realisation of $h_∗δ$, and obtain a commutative diagram</p>
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/Diagram_Thm_Extri/diagram_aa1a8dc94cc83.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
@@ -343,20 +365,20 @@ if and only if $X = X'$, $Z = Z'$, and there exists an isomorphism $φ : Y → Y
 g^∗ ∘ δ^! (h) = g^∗ (h_∗ δ) = h_∗ (g^∗ δ).
 \end{equation}$$ It suffices to show that $g^∗ δ = 0$. We omit the proof since it is dual to the proof of $f_∗ δ =0$. <br /> <br /> One the other hand, we show that any $η ∈ 𝔼 (Z,M)$ with $g^∗ η = 0$ must takes the form $α _∗ δ$. We take the canonical split short exact sequence as the realisation of $g^∗η$, and obtain a commutative diagram of triangles:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_7c4eff32b5e28.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_f24d763a59027.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>Here row-III is due induced by $t$ and ET3. Now there exists $α$ such that $α_∗ δ = η$.</p>
+    <p>Here row-III is due induced by $(t, 1_Z)$ with ET3. Now there exists $α$ such that $α_∗ δ = η$.</p>
   </div>
 </div>
 
 <div class="lemma">
   <p>We show the exactness at $𝔼(Z,-) \xrightarrow{g^∗} 𝔼(Y,-) \xrightarrow{f^∗} 𝔼(X,-)$.</p>
   <div class="proof">
-    <p>One one hand, one has shows that $0 = f^∗ ∘ g^∗ = (gf)^∗$. <br /> <br /> One the other hand, once $f^∗ η = 0$ for some $η ∈ 𝔼 (Y, M)$, we use ET4’ and obtain the following commutative diagram:</p>
+    <p>One one hand, one shows that $0 = f^∗ ∘ g^∗ = (gf)^∗$ by functoriality. <br /> <br /> One the other hand, once $f^∗ η = 0$ for some $η ∈ 𝔼 (Y, M)$, we use ET4’ and obtain the following commutative diagram:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_ca6956dcb956d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_8661b49658bba.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>By ET4, $a_∗ η = g^∗ δ '$. Since $f^∗ η = 0$, $a$ is split monomorphism whose left inverse is denoted by $x$. One has $η = g^∗ x_∗ δ '$. Hence, $η = g^∗ (x_∗ δ ')$.</p>
+    <p>By ET4, $a_∗ η = g^∗ δ '$. Since $f^∗ η = 0$, $a$ is split monomorphism whose left inverse is denoted by $x$. One has $η = x_∗ α _∗ η = x_∗ δ ^∗ η$. Hence, $η = g^∗ (x_∗ δ ')$.</p>
   </div>
 </div>
 
@@ -382,7 +404,7 @@ g^∗ ∘ δ^! (h) = g^∗ (h_∗ δ) = h_∗ (g^∗ δ).
   <li>May there be interesting theorems on adjoint functors.</li>
 </ul>
 
-<p>We use the exact Hom complex to explore some useful lemmas. The following lemma is useful in the proof of lifting property.</p>
+<p>We use the exact Hom complex to explore some useful lemmas. The following extension lifting lemma is usually proved by diagram-chasing techniques; we present an alternative proof by picking element in an exact bicomplex.</p>
 
 <div class="lemma">
   <p>(Extension lifting lemma). Consider the following morphism between triangles:</p>
@@ -391,9 +413,9 @@ g^∗ ∘ δ^! (h) = g^∗ (h_∗ δ) = h_∗ (g^∗ δ).
     </div> <br /> </center>
   <p>Suppose that $𝔼(C, K) = 0$. Then there exists some dashed arrows making the entire diagram commutative.</p>
   <div class="proof">
-    <p>We take the following complex and make homological truncations (we denoted the syzygies by $∙$). By homological algebra, a bounded bicomplex with all exact rows is exact as a total complex. This is proved by induction on length or simply the spectral sequence. We use $↙_k$ to denote the degree $k$ part in the bicomplex.</p>
+    <p>We take the following bicomplex (with all anticommutative squares) and make homological truncations (we denoted the syzygies by $∙$). By homological algebra, a bounded bicomplex with all exact rows is exact as a total complex. This well-known result is proved by induction on length or simply the spectral sequence. We use $↙_k$ to denote the degree $k$ part in the bicomplex.</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_5e0d7957ee8aa.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_682ecc6351232.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
     <p>Since the non-existence of so-called $𝔼^2$, the exactness of $\mathbb E(C,X) → \mathbb E(C,Y) → M$ is given by the following construction:</p>
     <center> <br /> <div class="tikz-diagram">
@@ -406,9 +428,9 @@ g^∗ ∘ δ^! (h) = g^∗ (h_∗ δ) = h_∗ (g^∗ δ).
       <li>Similarly, the entry at $𝔼 (C,X)$ is zero.</li>
     </ul>
     <p>By exactness of the total complex, there is an triple $$\begin{equation}
-(a,b,c) ∈ (A,K) ⊕ (B,X) ⊕ (C,Y)
+(a,b,c) ∈ (A,K) ⊕ (B,X) ⊕ (C,Y) \quad (\deg = -1).
 \end{equation}$$</p>
-    <p>whose differential is $(f,g)$. We want this preimage to be of the form $(0, ? , 0)$. Thanks to the surjectivity of $p_∗$ and $j^∗$, there exists some element $(s,t) ∈ (B, K) ⊕ (C,X)$ such that $d(s,t) = (a,?,b)$. Hence, $(a,b,c) - d(s,t)$ is the element of the form $(0,?,0)$ whose differential is $(f,g)$.</p>
+    <p>whose differential is $(f,g)$. We want this preimage to be of the form $(0, ? , 0)$. Thanks to the surjectivity of $p_∗$ and $j^∗$, there exists some element $(s,t) ∈ (B, K) ⊕ (C,X)$ such that $d(s,t) = (a,?,c)$. Hence, $(a,b,c) - d(s,t)$ is the element of the form $(0,?,0)$ whose differential is $(f,g)$.</p>
   </div>
 </div>
 
@@ -420,10 +442,10 @@ g^∗ ∘ δ^! (h) = g^∗ (h_∗ δ) = h_∗ (g^∗ δ).
 
 <div class="proposition">
   <p>All conflations are closed under isomorphisms. To be explicit, for any conflation $X \xrightarrow{f} Y \xrightarrow{g} Z\xrightarrow{δ}$ isomorphisms $α : X → X'$, $β : Y → Y'$ and $γ : Z → Z'$, the following is also a conflation: $$\begin{equation}
-X' \xrightarrow{β ∘ f ∘ α ⁻¹} Y' \xrightarrow{γ ∘ g ∘ β ⁻¹ } Z' \xrightarrow {α _∗ γ ⁻¹ δ}.
+X' \xrightarrow{β ∘ f ∘ α^{-1}} Y' \xrightarrow{γ ∘ g ∘ β^{-1}} Z' \xrightarrow {α _∗ γ^{-1} δ}.
 \end{equation}$$</p>
   <div class="proof">
-    <p>We first demonstrate that there exists a realisation of $ε ∈ 𝔼 (Z', X)$ such that $𝔰 (δ)$ and $𝔰 (ε )$ are isomorphic as objects in $𝐅𝐮𝐧𝐜𝐭(1 → 2 → 3, 𝒞)$. We now exhibit the invertible communication of extensions: $$\begin{equation}
+    <p>We first demonstrate that there exists a realisation of $ε ∈ 𝔼 (Z', X)$ such that any two realisations in $𝔰 (δ)$ and $𝔰 (ε )$ are isomorphic as objects in $𝐅𝐮𝐧𝐜𝐭 (1 → 2 → 3, 𝒞)$. We now exhibit the invertible communication of extensions: $$\begin{equation}
 (X, δ , Z) \xrightarrow{(1_X, γ)} (X, ε , Z') \xrightarrow{(α , 1_{Z})} (X', δ ', Z').
 \end{equation}$$ At this point, we deduce the isomorphism between the conflations in $\text{row 2}$ and $\text{row 3}$. $\text{row 1}$ is isomorphic to $\text{row 2}$, yet it remains unknown whether $\text{row 1}$ is a conflation.</p>
     <center> <br /> <div class="tikz-diagram">
@@ -433,11 +455,12 @@ X' \xrightarrow{β ∘ f ∘ α ⁻¹} Y' \xrightarrow{γ ∘ g ∘ β ⁻¹ } Z
   </div>
 </div>
 
-<h3 id="remarks-on-two-out-of-three-principle">Remarks on Two out of Three Principle</h3>
+<h3 id="remarks-on-2--3-principle-for-iso">Remarks on 2 ⇒ 3 Principle for Iso</h3>
 
 <p>The two out of three principles roughly means that, if we have two morphisms between triangles, then there exists the third. For extriangulated categories, it means that for any two morphism $\{α , β , γ \}$ making the small square diagram commutative, then there exists a morphism on the remaining side making the other two squares commutative.</p>
+
 <center> <br /> <div class="tikz-diagram">
-    <embed src="/website/svg/Diagram_Thm_Extri/diagram_2ef345f3649c7.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_d0aa87fbba7d1.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
   </div> <br /> </center>
 
 <p>The commutativity of the right most square means that $(α, γ) : δ → δ '$ is a communication. This is exactly what ET3, ET3’ and (part of the) ET2 means.</p>
@@ -445,9 +468,9 @@ X' \xrightarrow{β ∘ f ∘ α ⁻¹} Y' \xrightarrow{γ ∘ g ∘ β ⁻¹ } Z
 <p>The following lemma is an analogous result for pre-triangulated categories.</p>
 
 <div class="lemma">
-  <p>In the diagram, suppose that $β$ is an isomorphism, then $α$ is isomorphism whenever $γ$ is.</p>
+  <p>In the diagram, if both $β$ and $α$ are isomorphisms, then so is $α$.</p>
   <div class="proof">
-    <p>We apply $(Z', -)$ to the diagram, and obtain the isomorphism $(Z', Z) \xrightarrow {(- ∘ γ)} (Z', Z')$ by five lemma. Now $γ$ has a left inverse. The right inverse of $γ$ is shown dually. Hence $γ$ is an isomorphism.</p>
+    <p>We have functorial isomorphism $(-, Z) \xrightarrow [∼] {(-, γ)} (-, Z')$ by five lemma. Hence $γ : Z → Z'$ is an isomorphism by Yoneda lemma.</p>
   </div>
 </div>
 
@@ -458,7 +481,7 @@ X' \xrightarrow{β ∘ f ∘ α ⁻¹} Y' \xrightarrow{γ ∘ g ∘ β ⁻¹ } Z
 <ul>
   <li>when $f$ is an inflation, then the conflation is unique up to isomorphism of $Z$;</li>
   <li>when $g$ is a deflation, then the conflation is unique up to isomorphism of $X$;</li>
-  <li>when $δ$ is an extension element, then the conflation is unique up to isomorphism of $Y$.</li>
+  <li>when $δ$ is an extension element, then the conflation is unique up to isomorphism of $Y$. This is exactly what ET2 states.</li>
 </ul>
 
 <h2 id="remarks-on-et4-axiom">Remarks on ET4 Axiom</h2>
@@ -501,8 +524,8 @@ X' \xrightarrow{β ∘ f ∘ α ⁻¹} Y' \xrightarrow{γ ∘ g ∘ β ⁻¹ } Z
 <p>In certain circumstances we use the strict form of ET4, which differs from the original (lax) version.</p>
 
 <ul>
-  <li>(ET4). This formulation asserts that, given any ⊤-shaped diagram of triangles, it is possible to simultaneously construct the ⊣-component of these triangles in such a way that the resulting diagram commutes, and the identities of extensions hold.</li>
-  <li>(SET4). In contrast, the strict formulation imposes a stronger condition: for any ⊤-shaped diagram of triangles, there must exist a triangle that completes the associated ∓-shaped diagram. Furthermore, for any such ∓-shaped configuration, one must be able to derive the remaining morphisms and verify the commutativity of the entire diagram.</li>
+  <li>(ET4). This formulation asserts that, given any ⊤-shaped diagram of two triangles, it is possible to simultaneously construct the ⊣-component of these triangles in such a way that the resulting diagram commutes, and the identities of extensions hold.</li>
+  <li>(SET4). This formulation asserts that, for any ⊤-shaped diagram of triangles, there must exist a triangle that completes the associated ∓-shaped diagram. Furthermore, for any such ∓-shaped configuration, one must be able to derive the remaining morphisms and verify the commutativity of the entire diagram.</li>
 </ul>
 
 <div class="lemma">
@@ -531,11 +554,11 @@ Z \xrightarrow {φ ∘ λ '} B \xrightarrow {μ ' ∘ λ} C.
 <p>The first impression should be</p>
 
 <ul>
-  <li>The left diagram ≈ Verdier ≈ 4×4 axiom;</li>
-  <li>The right diagram ≈ Noether ≈ octagon axiom.</li>
+  <li>The left diagram ≈ Verdier axiom ≈ 4×4 axiom;</li>
+  <li>The right diagram ≈ Noether isomorphism ≈ octagon axiom.</li>
 </ul>
 
-<p>The main feature of this section is are weak PBPO squares.</p>
+<p>The main feature of this section are weak PBPO squares.</p>
 
 <h3 id="noether-square-and-et4">Noether Square and ET4</h3>
 
@@ -547,8 +570,9 @@ Z \xrightarrow {φ ∘ λ '} B \xrightarrow {μ ' ∘ λ} C.
     <li>Suppose that $i$ and $p$ share the same domain; then there exists a unique (up to composition with isomorphisms) completion to a diagram comprising four conflations.</li>
     <li>Suppose that $i$ and $p$ share the same codomain; then there exists a unique (up to composition with isomorphisms) completion to a diagram comprising four conflations.</li>
   </ul>
-  <p>One may verify this assertion by tracing the extension elements.</p>
 </div>
+
+<p>Note that such completion is unique up to composition of several isomorphisms.</p>
 
 <h3 id="verdier-square-and-44-lemma">Verdier Square and 4×4 Lemma</h3>
 
@@ -565,17 +589,19 @@ Z \xrightarrow {φ ∘ λ '} B \xrightarrow {μ ' ∘ λ} C.
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/Diagram_Thm_Extri/diagram_b498f338d2e98.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>Here $(p_i)_∗ \binom 11^∗(δ_1 ⊕ δ_2) = δ_i$. By ET4, we have the following diagrams:</p>
+    <p>Here $(p_i)_∗ \binom 11^∗(δ_1 ⊕ δ_2) = δ_i$. For $i ∈ \{1,2\}$, we apply ET4 for pulling back the first row with $(e_i)^∗$, which yields the following diagrams:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_2904f468ced3a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_459a3a10a03d2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>We make subtle adjustments to obtain the following diagrams:</p>
+    <p>We make subtle adjustments to the split morphisms, and obtain the following diagrams:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_3aa58ac7e8513.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_3f90e90939983.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
     <p>Gluing them together, we complete the proof.</p>
   </div>
 </div>
+
+<p><strong>Note that this completion is unique up to composition of several isomorphisms.</strong></p>
 
 <div class="proposition">
   <p>In the above diagram, $(m_1)_∗ δ _1 + (m_2)_∗ δ _2 = 0$.</p>
@@ -595,6 +621,14 @@ Z \xrightarrow {φ ∘ λ '} B \xrightarrow {μ ' ∘ λ} C.
   <p>It is evident that the completion of the Verdier diagram, arising from either two inflations or two deflations, is unique up to composition with isomorphisms. One may verify this assertion by tracing the extension elements.</p>
 </div>
 
+<p>Here is a diagram for remembering anticummutative squares in 4×4:</p>
+
+<center> <br /> <div class="tikz-diagram">
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_38f8a6e07c863.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+  </div> <br /> </center>
+
+<p>Here $∑ _{i=1,2}(l_i)^∗ δ _i = 0$, and $∑ _{i=1,2}(r_i)_∗ ε _i = 0$</p>
+
 <h3 id="the-s44-lemma">The s4×4 Lemma</h3>
 
 <p>We know that the completion of the Verdier diagram (from either two inflations or two deflations) is unique up to composition with isomorphisms. The strict form says that any ±-shaped diagram completes to a Verdier diagram (unique up to composing isomorphisms).</p>
@@ -610,10 +644,10 @@ Z \xrightarrow {φ ∘ λ '} B \xrightarrow {μ ' ∘ λ} C.
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/Diagram_Thm_Extri/diagram_ad4ed79ecd676.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>We realise $(x_1)^∗ η$ with standard split triangle, since $(x_1)^∗ η = (m_1)^∗ (λ _1)^∗ η = 0$. Even though $s ≠ m_1$ in general, we see that $(s-m_1) ∈ \ker (λ _1)_∗ = \operatorname{im} (m_2)_∗$. We write $l$ such that $$\begin{equation}
+    <p>We realise $(x_1)^∗ η$ with standard split triangle, since $(x_1)^∗ η = (m_1)^∗ (λ _1)^∗ η = 0$. Even though $s ≠ m_1$ in general, we see that $(s-m_1) ∈ \ker ((λ _1)_∗) = \operatorname{im} ((m_2)_∗)$. We write $l$ such that $$\begin{equation}
 A_1 \xrightarrow {l} A_2 \xrightarrow {m_2} M \quad = \quad A_1 \xrightarrow {s-m_1} M.
 \end{equation}$$</p>
-    <p>Now we wish $δ_2$ could be obtained by</p>
+    <p>Now we wish $δ_2$ could be obtained by the communication $((f_1, f_2), 1_C) : κ → δ _2$:</p>
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/Diagram_Thm_Extri/diagram_fb12179f964d2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
@@ -649,7 +683,7 @@ A_1 \xrightarrow {l} A_2 \xrightarrow {m_2} M \quad = \quad A_1 \xrightarrow {s-
     <li>$ε'$, $δ$ and $δ'$ are given, and the deflation of $ε '$ gives the communication of $δ$ and $δ'$;</li>
     <li>$ε$, $δ$, and $δ'$ are given;</li>
   </ol>
-  <p>Then there is a way to complete the diagram into a Verdier diagram, such that three identities of extensions holds. <br /> <br /> Similarly, consider the Noether diagram</p>
+  <p>Then there is a way <strong>(unique up to composition of several isomorphisms)</strong> to complete the diagram into a Verdier diagram, such that three identities of extensions holds. <br /> <br /> Similarly, consider the Noether diagram</p>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Diagram_Thm_Extri/diagram_97787ce944d68.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
@@ -659,13 +693,13 @@ A_1 \xrightarrow {l} A_2 \xrightarrow {m_2} M \quad = \quad A_1 \xrightarrow {s-
     <li>$ε'$, $δ$ and $δ'$ are given, and the deflation of $ε '$ gives the communication of $δ$ and $δ'$;</li>
     <li>$ε$, $ε'$, and $δ'$ are given;</li>
   </ol>
-  <p>Then there is a way to complete the diagram into a Noether diagram, such that three identities of extensions holds.</p>
+  <p>Then there is a way <strong>(unique up to composition of several isomorphisms)</strong> to complete the diagram into a Noether diagram, such that three identities of extensions holds.</p>
 </div>
 
 <h3 id="the-weak-pbpo-squares">The Weak PBPO Squares</h3>
 
 <div class="definition">
-  <p>(Weak PO Square). A <strong>weak PO square</strong> (or <strong>weak coCatersian square</strong>) is an 2×2 diagram ($wf = hg$), such that for any $α f = β g$, there exists some $φ$ making the triangles commutative.</p>
+  <p>(Weak PO Square). A <strong>weak PO square</strong> (or <strong>weak coCatersian square</strong>) is an 2×2 diagram ($wf = hg$), such that for any $α f = β g$, there exists some $φ$ making the entire diagram commutative.</p>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Diagram_Thm_Extri/diagram_a154fd8c8c64f.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
@@ -681,13 +715,13 @@ A_1 \xrightarrow {l} A_2 \xrightarrow {m_2} M \quad = \quad A_1 \xrightarrow {s-
 <div class="theorem">
   <p>Noether squares are weakly PBPO.</p>
   <div class="proof">
-    <p>Since the opposite category of an extriangulated category is still extriangulated, we only prove the weak PO part. <br /> <br /> We introduce arbitrary $T$, $n$ and $m$ in ET4 diagram such that $ng = mα$. It remains to show the existence of $M ⇢ T$ making the entire diagram commutative.</p>
+    <p>Since the opposite category of an extriangulated category is still extriangulated, we only prove the weak PO part. <br /> <br /> We introduce arbitrary $T$, $n$ and $m$ such that $ng = mα$. It remains to show the existence of $M ⇢ T$ making the entire diagram commutative.</p>
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/Diagram_Thm_Extri/diagram_131341908a562.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>We beigns with</p>
+    <p>We beign with</p>
     <p>$$\begin{equation}
-0 = (mα )_∗ δ _{c1} = (ng)_∗ δ _{c1} = δ _{c2}^! (n).
+0 = (mα )_∗ δ _{c1} = (ng)_∗ δ _{c1} = (δ _{c2})^! (n).
 \end{equation}$$</p>
     <p>By long exact sequence, $n$ factors through $r$. Hence, we take $l : M → T$ such that $lr = m$. Even though it is not necessary that $m = l q$, we see that</p>
     <p>$$\begin{equation}
@@ -732,19 +766,21 @@ A_1 \xrightarrow {l} A_2 \xrightarrow {m_2} M \quad = \quad A_1 \xrightarrow {s-
 
 <h3 id="the-homotopic-square">The Homotopic Square</h3>
 
-<p>Recall that in ET2, we made no more assumption on the middle dashed arrow between conflations. However, there is a way to take a good morphism, enlightened by Neeman’s octagon axiom.</p>
+<p>Recall that in ET2, we made no more assumption on the middle dashed arrow between conflations. However, there is a way to take a good morphism.</p>
 
 <div class="theorem">
   <p>(The homotopic square theorem). For any realisations of the communication of extensions $(λ, 1): δ → λ_∗ δ$, there exists a suitable morphism $w$ rendering both diagrams commutative, and $y^∗ δ$ admits a realisation as depicted in the diagram below:</p>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_9fac983aa125c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_95c0561423857.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
+  <p>Remind the sign here.</p>
   <div class="proof">
     <p>We construct the Verdier diagram from $b$ and $y$:</p>
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/Diagram_Thm_Extri/diagram_d8d27155daf7d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>Since $b^∗ δ =0$, we write $b^∗ λ _∗ δ$ in the standard split form which does not affect the solid arrows. By the anti commutative square in 4×4 diagram, we have $$\begin{equation}
+    <p>Since $b^∗ δ =0$, we write $b^∗ λ _∗ δ$ in the standard split form which does not affect the solid arrows. By the anticommutative square in 4×4 diagram, we have</p>
+    <p>$$\begin{equation}
 0 = \binom {λ '}{a} {}_∗ δ + \binom {1}{0} {}_∗  λ _∗ δ = \binom {λ ' + λ} a {}_∗ δ.
 \end{equation}$$</p>
     <p>Hence, $(λ ' + λ) ∈ \ker δ^!$. By long exact sequence, there exists $l$ such that $(λ + λ ' ) = l ∘ a$. To be explicit, $$\begin{equation}
@@ -752,7 +788,7 @@ X \xrightarrow a Y \xrightarrow l A\quad  = \quad  X \xrightarrow {λ + λ '} A.
 \end{equation}$$</p>
     <p>It remains to show the existence of $w$ such that the following diagram commutes:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_fc2b7f74d1e86.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_fcdff033456ce.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
     <p>The left square commutes due to the choice of $l$. Taking $w = xl - w'$, we see that</p>
     <ul>
@@ -767,29 +803,23 @@ X \xrightarrow a Y \xrightarrow l A\quad  = \quad  X \xrightarrow {λ + λ '} A.
   <p>The homotopic square is also a weak PBPO square.</p>
 </div>
 
-<div class="example">
-  <p>(The square of ET4). Consider the Noether diagram given by ET4:</p>
+<p>The following proposition shows that the square in Noether diagram is automatically a homotopic square.</p>
+
+<div class="proposition">
+  <p>In the following ET4 diagram, $\square$ is a homotopic square.</p>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Diagram_Thm_Extri/diagram_16121f7f8f9ca.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>We focus on the square $\square$.</p>
-  <ul>
-    <li>$\square$ is a weak PBPO square, but not a homotopic square in general.</li>
-    <li>There is a way to replace $α$ by some $α'$ which makes the square a homotopic square, and the entire diagram is still commutative. The only sacrifice is that $α$ may not be a deflation.</li>
-    <li>There is a way to replace $q$ by some $q'$ which makes the square a homotopic square, and the entire diagram is still commutative. The only sacrifice is that $q$ may not be a deflation.</li>
-  </ul>
-</div>
-
-<p>The following proposition is useful for length category or something more general.</p>
-
-<div class="proposition">
-  <p>If there are no retractions in $\mathrm{End}(Y)$, or there are no retractions in $\mathrm{End}(M)$, then the ET4 diagram is automatically a homotopic square.</p>
   <div class="proof">
-    <p>Suppose that there are no retractions in $\mathrm{End}(Y)$. We take $α': Y → W$ and obtain the homotopic square. By factorisation between two squares, one has $m$ and $n$ such that the following diagram commutes:</p>
+    <p>We take $α': Y → W$ and obtain the homotopic square. By factorisation between two squares, one has $m$ and $n$ such that $gn=g=gm$, $α = α m$ and $α ' = α ' n$ in the following diagram</p>
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/Diagram_Thm_Extri/diagram_e26ebbd185a69.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>$n ∘ m$ is an isomorphism by two out of three principle. By nonexistence of retractions, $m$ and $n$ must be isomorphisms.</p>
+    <p>Recall the two out of three principle for isomorphisms. We see that</p>
+    <ul>
+      <li>$n ∘ m$ is an isomorphism by considering $δ _{c1}$;</li>
+      <li>$m ∘ n$ is an isomorphism by considering the conflation obtained by the homotopic square $\square$.</li>
+    </ul>
   </div>
 </div>
 
@@ -798,7 +828,7 @@ X \xrightarrow a Y \xrightarrow l A\quad  = \quad  X \xrightarrow {λ + λ '} A.
 <p>The weak snake lemma in Abelian category is a six-term exact sequence deriving from composition of two morphisms. In diagram,</p>
 
 <center> <br /> <div class="tikz-diagram">
-    <embed src="/website/svg/Diagram_Thm_Extri/diagram_ebb17e82acca4.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_532312ee9fd4c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
   </div> <br /> </center>
 
 <p>gives the following six-term exact sequence:</p>
@@ -815,17 +845,19 @@ Since we do not define the long conflation sequence in extriangulated categories
 <div class="proposition">
   <p>(Weak snake lemma I). For composition of two inflations, we have the induced sequence given by SET4:</p>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_216902fc44aae.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_60fd870738eae.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>We omit the three equalities of extensions.</p>
+  <p>We omit the equalities of extensions.</p>
 </div>
 
 <div class="proposition">
   <p>(Weak snake lemma II). We show a priori that if $g∘f$ is an inflation, and $g$ is a deflation, then $f$ is also an inflation. Moreover, we have the induced sequence given by S4×4 (from two deflations):</p>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_d742fd97075e7.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_58e5a7c8e51b9.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
 </div>
+
+<p>We omit the duals statements.</p>
 
 <h2 id="weakly-idempotent-completeness">Weakly Idempotent Completeness</h2>
 
@@ -835,12 +867,15 @@ Since we do not define the long conflation sequence in extriangulated categories
 
 <div class="lemma">
   <p>If $q∘p$ is an inflation, $q$ is a deflation, then $p$ is also an inflation.</p>
+  <ul>
+    <li>This lemma <strong>does not requires</strong> the condition of weakly idempotent completeness.</li>
+  </ul>
   <div class="proof">
     <p>We apply ET4 to $q ∘ p$ and $q$. By weak PBPO, there exists $s$ making the entire diagram commutative:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_efd949a8e6b9c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_9c409082b8577.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>Since $λ$ is a deflation with right inverse $s$, it follows that $s$ is a split monomorphism. Hence, $p = p' ∘ s$ is an inflation.</p>
+    <p>Since $κ = (1_X)_∗ κ = s^∗ (λ ^∗ κ ) = 0$, we see that $F ≃ A ⊕ X$ via the morphism in the split conflation. It follows that $s$ is a split monomorphism. Hence, $p = p' ∘ s$ is an inflation.</p>
   </div>
 </div>
 
@@ -862,17 +897,20 @@ Since we do not define the long conflation sequence in extriangulated categories
   </div>
 </div>
 
-<p>To dispense with the cumbersome $0$, we introduce the following definition of weakly idempotent completeness. The initial intuition is drawn from the completion of the category of free modules.</p>
+<p>To dispense with the cumbersome $0$, we introduce the following definition of weakly idempotent completeness.</p>
 
-<ul>
-  <li>The weakly idempotent completion of the category of free modules is the category of stable projective modules.</li>
-  <li>The idempotent completion of the category of free modules is the category of projective modules.</li>
-</ul>
+<div class="example">
+  <p>The initial intuition is drawn from the completion of the category of free modules.</p>
+  <ul>
+    <li>The weakly idempotent completion of the category of free modules is the category of stable projective modules.</li>
+    <li>The idempotent completion of the category of free modules is the category of projective modules.</li>
+  </ul>
+</div>
 
 <p>We shall not pursue the notion of idempotent completeness in detail; our attention is restricted to the weakly idempotent completion.</p>
 
 <div class="definition">
-  <p>(Weakly idempotent complete) The following are equivalent for an additive category.</p>
+  <p>(<strong>Weakly idempotent completeness</strong>) The following are equivalent for an additive category.</p>
   <ol>
     <li>When $i$ has a left inverse $p$, then $i = \binom 1 0 : X → X ⊕ Y$;</li>
     <li>When $p$ has a right inverse $i$, then $p = (1,0) : X ⊕ Y → X$.</li>
@@ -885,17 +923,19 @@ Since we do not define the long conflation sequence in extriangulated categories
 <div class="definition">
   <p>For extriangulated categories, the following are equivalent conditions for being weakly idempotent complete.</p>
   <ol>
-    <li>When $i$ has a left inverse $p$, then $i = \binom 1 0 : X → X ⊕ Y$;</li>
+    <li>When $i$ has a left inverse $p$, then $i$ takes the split form $\binom 1 0 : X → X ⊕ Y$;</li>
     <li>When $\binom i 0$ is an inflation, then so is $i$;</li>
     <li>$\binom {i \ 0}{0 \ j}$ is an inflation, iff $i$ and $j$ are inflations;</li>
     <li>When $f i$ is an inflation, then so is $i$;</li>
-    <li>When $p$ has a right inverse $i$, then $p = (1,0) : X ⊕ Y → X$;</li>
+    <li>Inflations are closed under retraction;</li>
+    <li>When $p$ has a right inverse $i$, then $p$ takes the split form $(1,0) : X ⊕ Y → X$;</li>
     <li>When $(p,0)$ is a deflation, then so is $p$;</li>
     <li>$\binom {p \ 0}{0 \ q}$ is a deflation, iff $p$ and $q$ are deflations;</li>
-    <li>When $p g$ is a deflation, then so is $p$.</li>
+    <li>When $p g$ is a deflation, then so is $p$;</li>
+    <li>Deflations are closed under retraction.</li>
   </ol>
   <div class="proof">
-    <p>We only proof the first four statements, the rest are dual. The equivalence 2. ⇔ 4. is already shown above.</p>
+    <p>We only proof the first five statements, the rest are dual. The equivalence 2. ⇔ 4. is already shown above.</p>
     <ol>
       <li>When 4. holds true, and $\binom 1 0 ∘ i$ is an inflation, then so is $i$;</li>
       <li>When 2. holds true, and $f i$ is an inflation, the lemma shows that $\binom i 0$ is an inflation, hence $i$ is an inflation;</li>
@@ -908,7 +948,11 @@ X \xrightarrow {\binom i 0} Y ⊕ Z \xrightarrow {\binom {s_1 \ 0}{s_2 \ 1_Z}} Q
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/Diagram_Thm_Extri/diagram_bcde30856c1ee.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>The only choice of the dashed arrow $X ⇢ Z$ is $i$, thus is an inflation. <br /> <br /> Now we show that 3. ⇔ 2.. We firstly omit the ← part of the statement in 3., since realisation always commutes with direct product. On one hand. 3. is a corollary of 2. by composition with $\binom 1 0$ and $\binom 0 1$. On the other hand, if $\binom i 0$ is an inflation, then so is $ \binom {i \ 0_0}{0 \ 0_0}$. Hence, $i$ is an inflation by 3..</p>
+    <p>The only choice of the dashed arrow $X ⇢ Z$ is $i$, thus is an inflation. <br /> <br /> Now we show that 3. ⇔ 2.. We firstly omit the ← part of the statement in 3., since realisation always commutes with direct product. On one hand. 3. is a corollary of 2. by composition with $\binom 1 0$ and $\binom 0 1$. On the other hand, if $\binom i 0$ is an inflation, then so is $ \binom {i \ 0_0}{0 \ 0_0}$. Hence, $i$ is an inflation by 3.. <br /> <br /> We finally show 5. is equivalent to 3..</p>
+    <ol>
+      <li>When 5. holds true, then so is 3.</li>
+      <li>When 3. holds true, then so are 1. and 4.. Suppose that $f'$ is a retract of inflation $f$, i.e., $fi = jf'$. By 1., the composition is an inflation, by 4., $f'$ is also an inflation.</li>
+    </ol>
   </div>
 </div>
 
@@ -920,19 +964,19 @@ X \xrightarrow {\binom i 0} Y ⊕ Z \xrightarrow {\binom {s_1 \ 0}{s_2 \ 1_Z}} Q
 The 3×3 diagram is constructed by completing a commutative square, wherein the parallel edges consist of a pair of inflations and a pair of deflations.</p>
 
 <div class="theorem">
-  <p>Given a commutative diagram of four conlfations:</p>
+  <p>Given a commutative diagram of four conflations:</p>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_75a98d8847b07.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_c16b5bbf99dd3.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>There exists a method to complete the diagram to a $3 × 3$ diagram, such that the communications between parallel conflations are given by the morphisms present in the diagram.</p>
+  <p>There exists a method to complete the diagram to a 3×3 diagram, such that the communications between parallel conflations are given by the morphisms present in the diagram.</p>
   <div class="proof">
     <p>We begin with the ET4 for the composition of inflations $i_2 ∘ f_A$:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_77edfa472d68f.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_2ec44efee0ab7.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
     <p>Since the right top square in ET4 is weakly PBPO, then there is a factorisation</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_932458e099cd7.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_9a17e58f53773.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
     <p>The induced $φ$ is a deflation since $φ ∘ x = g_B$ is a deflation and the category is weakly idempotent complete. Now we complete $\square$ into a Verdier diagram (by S4×4), and $\square$ into a Noether diagram (by SET4). This process creates $ε_1$ and $δ_C$ respectively:</p>
     <center> <br /> <div class="tikz-diagram">
@@ -948,11 +992,35 @@ The 3×3 diagram is constructed by completing a commutative square, wherein the 
   </div>
 </div>
 
-<p>Now a pending question (???)</p>
+<p>We remark that this lemma is contingent upon the condition of weakly idempotent completeness. It is straightforward to construct counterexamples in $\{X ∈ 𝐯𝐞𝐜_k ∣ \dim X ≠ 1\}$, the additive full subcategory of finite-dimensional $k$-vector spaces.
+<br />
+<br />
+However, the following lemma provides a six-out-of-five criterion for conflations, which resembles the conventional 3×3 lemma and does not require the assumption of weak idempotent completeness.</p>
 
-<ul>
-  <li>Is there any kinds of strict 3×3 lemma?</li>
-</ul>
+<div class="proposition">
+  <p>(Strict 3×3 lemma). Consider the following diagram consisting of five conflations, wherein $(p_1, p_3) : ε _2 → ε _3$ is a communication.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_35c8d84def258.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Then there exists a method to complete the diagram to a 3×3 diagram, such that the communications between parallel conflations are given by the morphisms present in the diagram.</p>
+  <div class="proof">
+    <p>Let $φ : B_2 → C_3$ be a composition of deflations. We apply SET4 to the compositions of $φ$ in two distinct ways, and thereby obtain the following two Noether diagrams:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_a50048bafe73c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>The conflation $A_1 → A_2 → A_3$ is constructed by S4×4 lemma:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_624130ca8253a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We verify in turn that</p>
+    <ol>
+      <li>$(i_1)_∗ ε_A = (i_3)^∗ ε _B$ follows from the construction;</li>
+      <li>$(f_C)^∗ δ _2 = (f_A)_∗ δ _1$ follows from the construction;</li>
+      <li>$(g_A)_∗ δ _2 = μ _∗ λ _∗ δ _2 = (g_C)^∗ μ _∗ η = μ _∗ (g_C)^∗ η = (g_C)^∗ δ _3$.</li>
+    </ol>
+    <p>This completes the proof.</p>
+  </div>
+</div>
 
 <h2 id="example-of-extri-cats">Example of Extri Cats</h2>
 
@@ -1000,11 +1068,14 @@ The 3×3 diagram is constructed by completing a commutative square, wherein the 
       <embed src="/website/svg/Diagram_Thm_Extri/diagram_74d121539bdb2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
   <p>Since $\square$ is an pushout diagram, $α$ is an inflation and $\operatorname{cok}α = \operatorname{cok} i$. This complete the construction of Noether diagram. For identities in ET4, we remind the reader that both $j^∗ε$ and $β _∗ δ$ equals the conflation realised as $\mathrm{Total}(\square)$ (or maybe its negative).</p>
+  <ul>
+    <li>Recall that $\square$ is always homotopic for general extriangulated categories.</li>
+  </ul>
 </div>
 
 <h3 id="tri-cats-are-extri-cats">Tri Cats are Extri Cats</h3>
 
-<p>To see that triangluated categories are extriangulated, we define the functor $𝔼(-,?) := (-,?[1])$.</p>
+<p>To see that triangluated categories are extriangulated, we define the bifunctor $𝔼(-,?) := (-,?[1])$.</p>
 
 <div class="example">
   <p>(Yoneda lemma). For $δ ∈ 𝔼 (C,A) = (C,A[1])$, we explain $δ_!$ and $δ^!$ as follows.</p>
@@ -1015,7 +1086,8 @@ The 3×3 diagram is constructed by completing a commutative square, wherein the 
 </div>
 
 <div class="example">
-  <p>(The realisation of $1$, once the triangulated category is extriangulated). This definition allows use to investigate the realisation of $$\begin{equation}
+  <p>(The realisation of $1$). Suppose that the triple $(𝒞, 𝔼 , 𝔰)$ satisfies ET1 and ET2, where $𝔼(-,?) = (-,?[1])$. This definition introduces us to the realisation of a distinguished extension</p>
+  <p>$$\begin{equation}
 1_{X[1]} ∈ (X[1], X[1]) = 𝔼 (X[1], X) ∋ δ.
 \end{equation}$$</p>
   <p>We take any of the realisation $X → E → X[1] \xrightarrow {δ}$ and the long exact sequence $$\begin{equation}
@@ -1028,7 +1100,7 @@ X → 0 → X[1] \xrightarrow {1_{X[1]}} X[1].
 </div>
 
 <div class="lemma">
-  <p>(Triangulated category as extriangulated category). A triangulated category is an extriangulated category with the bifunctor $𝔼(-,?) := (-,?[1])$ and the realisation of $δ ∈ 𝔼(Z,X)$ is given by the unique embedding of a morphism to a triangle, i.e.,</p>
+  <p>(Triangulated categories are extriangulated). A triangulated category is an extriangulated category with the bifunctor $𝔼(-,?) := (-,?[1])$ and the realisation of $δ ∈ 𝔼(Z,X)$ is given by the unique embedding of a morphism to a triangle, i.e.,</p>
   <p>$$\begin{equation}
 X → Y → Z \xrightarrow δ X[1].
 \end{equation}$$</p>
@@ -1041,11 +1113,11 @@ X → Y → Z \xrightarrow δ X[1].
 <p>We mention the converse statement, that is, an extriangulated category with a compatible equivalence $[1] : 𝒞 → 𝒞$ is triangulated.</p>
 
 <div class="lemma">
-  <p>If an extriangulated category $(𝒞 , 𝔼 , 𝔰 )$ admits an equivalence $[1] : 𝒞 → 𝒞$, such that $𝔼 (-,?) := (-,?[1])$, then $(𝒞 , [1], \text{conflations})$ is automatically an triangulated category.</p>
+  <p>If an extriangulated category $(𝒞 , 𝔼 , 𝔰 )$ admits an equivalence $[1] : 𝒞 → 𝒞$, such that $𝔼 (-,?) := (-,?[1])$, then $(𝒞 , [1], \text{conflations})$ automatically forms an triangulated category.</p>
   <div class="proof">
     <p>The verify TR1-TR4. The most difficult part is TR2. <br /> <br /> For TR1, we have analysis that split conflations are realisations of $0$, conflations are isomorphism closed. Any morphism appears in $𝔼 (-,?) = (-,?[1])$ as $[1]$ is an equivalence. Once we show TR2, we complete the verification of TR1. <br /> <br /> For TR2, we take arbitrary conflation $X \xrightarrow f Y \xrightarrow g Z \xrightarrow δ X[1]$. By s4×4 lemma, we have the following commutative diagram of four conflations:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_a23f09ac98b83.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_2c74d7fee7995.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
     <p>We notice that $f_∗ 1_{X[1]} = (1_{X[1]})^!(f) = f[1]$. By anticommutative diagram,</p>
     <p>$$\begin{equation}
@@ -1060,11 +1132,13 @@ X → Y → Z \xrightarrow δ X[1].
 <p>We have not introduced the terminology of a sub-extriangulated category, as the notion of extriangulated functors has yet to be defined. The only purpuse of this subsection is to show that thick subcategories of extriangulated categories are themselves extriangulated categories, with the bifunctor and realisation inherited from the ambient category.</p>
 
 <div class="definition">
-  <p>(Thick). Let $(𝒞 , 𝔼 , 𝔰)$ be an extriangulated category, and $𝒟$ and full subcategory of $𝒞$ closed under isomorphism. Say $𝒟$ is thick, if it satisfies the following property:</p>
+  <p>(<strong>Thick</strong>). Let $(𝒞 , 𝔼 , 𝔰)$ be an extriangulated category, and $𝒟$ is a full subcategory of $𝒞$. Say $𝒟$ is thick, if it satisfies the following property:</p>
   <ul>
     <li>For any conflation $X \xrightarrow fY \xrightarrow gZ \xrightarrow δ$ in $𝒞$, if two of $(X,Y,Z)$ lies in $𝒟$, then so is the third.</li>
   </ul>
 </div>
+
+<p>We observe that $𝒟$ is automatically closed under isomorphisms; however, $𝒟$ may not necessarily be closed under direct summands. The standard definition of a thick subcategory typically requires closure under direct summands.</p>
 
 <div class="lemma">
   <p>Thick subcategories of extriangulated categories are themselves extriangulated, with $(𝔼 , 𝔰)$ inherited from the ambient category $(𝒞 , 𝔼 , 𝔰)$.</p>
@@ -1072,37 +1146,6 @@ X → Y → Z \xrightarrow δ X[1].
     <p>There is nothing to prove for ET1. ET2 follows from the fact that $𝒟$ is closed under extensions. ET3 and ET4 are consequences of the uniqueness of embedding an inflation or a deflation into a conflation, together with the thickness property. Thus, every object introduced at each stage of the verification lies within $𝒟$.</p>
   </div>
 </div>
-
-<p>Now we aim to construct new thick subcategories from the existing ones.</p>
-
-<div class="definition">
-  <p>($\mathrm{Cone}$, $\mathrm{coCone}$, and $∗$). Let $𝒳$, and $𝒴$ be arbitrary subclasses of 𝒞. We define</p>
-  <ul>
-    <li>$\mathrm{Cone}(𝒳 , 𝒴) = \{Z ∣ ∃ X _{∈ 𝒳}, Y _{∈ 𝒴}, f, g \ (X \xrightarrow f Y \xrightarrow g Z \ \text{is a conflation})\}$;</li>
-    <li>$\mathrm{coCone}(𝒳 , 𝒴) = \{W ∣ ∃ X _{∈ 𝒳}, Y _{∈ 𝒴}, f, g \ (W \xrightarrow f X \xrightarrow g Y \ \text{is a conflation})\}$;</li>
-    <li>$𝒳 ∗ 𝒴 = \{E ∣ ∃ X _{∈ 𝒳}, Y _{∈ 𝒴}, f, g \ (X \xrightarrow f E \xrightarrow g Y \ \text{is a conflation})\}$.</li>
-  </ul>
-</div>
-
-<div class="lemma">
-  <p>Let $𝒳$, $𝒴$ and $𝒵$ be arbitrary subclasses of 𝒞. The followings are due to SET4.</p>
-  <ol>
-    <li>$\mathrm{Cone}(𝒳 , \mathrm{Cone}(𝒴 , 𝒵 )) = \mathrm{Cone}(𝒴 ∗ 𝒳 , 𝒵 )$;</li>
-    <li>$\mathrm{coCone}(\mathrm{coCone}(𝒳 ,𝒴 ), 𝒵 ) = \mathrm{coCone}(𝒳 , 𝒵 ∗ 𝒴 )$;</li>
-    <li>$\mathrm{Cone}(𝒳 , \mathrm{coCone}(𝒴, 𝒵 )) = \mathrm{coCone}(\mathrm{Cone}(𝒳 , 𝒴 ), 𝒵 )$;</li>
-    <li>$𝒳 ∗ (𝒴 ∗ 𝒵 ) = (𝒳 ∗ 𝒴 )∗ 𝒵$.</li>
-  </ol>
-</div>
-
-<div class="lemma">
-  <p>Let $𝒳$, $𝒴$ and $𝒵$ be arbitrary subclasses of 𝒞. The followings are due to S4×4.</p>
-  <ol>
-    <li>$\mathrm{coCone}(𝒳 ,𝒵 )∗ 𝒴 ⊆ \mathrm{coCone}(𝒳 ∗ 𝒴 , 𝒵 )⊇ \mathrm{coCone}(𝒴 ,\mathrm{Cone}(𝒳 ,𝒵 ))$;</li>
-    <li>$𝒴 ∗ \mathrm{Cone}(𝒳 , 𝒵 ) ⊆ \mathrm{Cone}(𝒳 , 𝒴 ∗ 𝒵 ) ⊇ \mathrm{Cone}(\mathrm{coCone}(𝒳 ,𝒵 ),𝒴 )$.</li>
-  </ol>
-</div>
-
-<p>We mention that, if $𝔼(𝒴 , 𝒳) = 0$, then $𝒳 ∗ 𝒴 = 𝒳 ⊕ 𝒴$. This is a useful dequantisation for (ex-)cotorsion pairs.</p>
 
 <h3 id="happels-thm-creates-quot-cat">Happel’s Thm Creates Quot-Cat</h3>
 
@@ -1116,7 +1159,7 @@ X → Y → Z \xrightarrow δ X[1].
 \end{equation}$$</p>
     <p>Remind that the localised category exhibits the same objects as the ambient category. Only the morphisms are changed. Hence, $\underline {𝔼(-,?)} =  {𝔼(-,?)}$. <br /> <br /> We define $\underline 𝔰$ as follows. The realisation $\underline{𝔰}(δ)$ is defined in terms of $𝔰(δ)$. For any $X \xrightarrow{f} Y \xrightarrow{g} Z \in 𝔰(δ)$, an element of $\underline{𝔰}(δ)$ (in the second row) is of the form</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_dcdf828d8dc2a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_851f35890ff66.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
     <p>By localisation of the additive quotient, such a realisation $𝔰$ preserves zero objects and biproducts. For any communication of extensions $(\underline a, \underline c) : δ \to δ'$, there exist morphisms $a'$ and $c'$ in the ambient category such that $\underline a = \underline{a'}$ and $\underline c = \underline{c'}$, with $(a', c') : δ \to δ'$.</p>
     <ul>
@@ -1150,14 +1193,77 @@ X → Y → Z \xrightarrow δ X[1].
 
 <p>It should be noted that there exist extriangulated categories which are neither triangulated nor exact. For example, consider the bounded derived category of an algebra of infinite global dimension, denoted $D^b(A)$. This category is triangulated, and the subcategory $𝐦𝐨𝐝_A * 𝐦𝐨𝐝_A[-1] * \cdots$ forms a thick subcategory which, in general, is neither triangulated nor exact.</p>
 
+<h2 id="the-functors">The Functors</h2>
+
+<h3 id="extriangulated-functors">Extriangulated Functors</h3>
+
+<p>An extriangulated category resembles a triangulated category, yet one of the morphisms in the triangle is replaced by an extension element $δ$. The functor category admits a similar definition.</p>
+
+<div class="definition">
+  <p>(Extriangulated Functor). An extriangulated functor from $(𝒞 , 𝔼 , 𝔰 )$ to $(𝒟 , 𝔽 , 𝔱)$ is described as a pair $(F, φ)$, wherein</p>
+  <ol>
+    <li>(F0). $F : 𝒞 → 𝒟$ is an additive functor, and $φ_{-,?} : 𝔼(-,?) → 𝔽(F(-), F(?))$ is a natural transformation;</li>
+    <li>(F1). $φ_{Z,X} : 𝔼 (Z,X) → 𝔽 (FZ, FX)$ is compatible with composition, i.e., for any $f : Z' → Z$, $g : X → X'$ and $δ ∈ 𝔼 (X,Y)$, we have $φ_{Z', X'} (f^∗ g_∗ δ ) = (Ff)^∗ (Fg)_∗ φ _{Z,X}(δ)$.</li>
+    <li>(F2). Let $X \xrightarrow f Y \xrightarrow g Z$ be a realisation of $δ$. Then $FX \xrightarrow {Ff} FY \xrightarrow {Fg} FZ$ is a realisation of $φ (δ )$.</li>
+  </ol>
+  <p>The definition F1 means that the tacit natural transformation $(A, B) → (FA, FB)$ is composable with $φ$ on both sides, which is a natural requirement.</p>
+</div>
+
+<p>We remark that F1 is obtained by F0 and F2. Say $(\triangle , δ)$ is compatible, provided $\triangle$ is the realisation of $δ$. Now ther following are compatible pairs</p>
+
+<center> <br /> <div class="tikz-diagram">
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_7a33ce1fa0e56.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+  </div> <br /> </center>
+
+<p>Since an conflation realises a unique conflation, $\varphi (f^\ast g_\ast \delta) = (Ff)^\ast (Fg)_\ast\varphi (\delta )$.</p>
+
+<div class="definition">
+  <p>(Natural transformation). Say $α : (F, φ ) → (G, ψ)$ is a natural triansformation of triangulated functors from $(𝒞 , 𝔼 , 𝔰 )$ to $(𝒟 , 𝔽 , 𝔱)$, provided</p>
+  <ol>
+    <li>$α : F → G$ is a natural transformation of additive functors;</li>
+    <li>$(α_?, α _-) : 𝔽 (F-, F?) → 𝔽 (G-, G?)$ is gives functorial communication of extension elements.</li>
+  </ol>
+</div>
+
 <h2 id="the-model-structures">The Model Structures</h2>
 
 <h3 id="hovey-twin-cotorsion-pair">Hovey Twin Cotorsion Pair</h3>
 
+<p>We first introduce several notational conventions.</p>
+
+<div class="definition">
+  <p>($\mathrm{Cone}$, $\mathrm{coCone}$, and $∗$). Let $𝒳$, and $𝒴$ be arbitrary subclasses of 𝒞. We define</p>
+  <ul>
+    <li>$\mathrm{Cone}(𝒳 , 𝒴) = \{Z ∣ ∃ X _{∈ 𝒳}, Y _{∈ 𝒴}, f, g \ (X \xrightarrow f Y \xrightarrow g Z \ \text{is a conflation})\}$;</li>
+    <li>$\mathrm{coCone}(𝒳 , 𝒴) = \{W ∣ ∃ X _{∈ 𝒳}, Y _{∈ 𝒴}, f, g \ (W \xrightarrow f X \xrightarrow g Y \ \text{is a conflation})\}$;</li>
+    <li>$𝒳 ∗ 𝒴 = \{E ∣ ∃ X _{∈ 𝒳}, Y _{∈ 𝒴}, f, g \ (X \xrightarrow f E \xrightarrow g Y \ \text{is a conflation})\}$.</li>
+  </ul>
+</div>
+
+<div class="lemma">
+  <p>Let $𝒳$, $𝒴$ and $𝒵$ be arbitrary subclasses of 𝒞. The followings are due to SET4.</p>
+  <ol>
+    <li>$\mathrm{Cone}(𝒳 , \mathrm{Cone}(𝒴 , 𝒵 )) = \mathrm{Cone}(𝒴 ∗ 𝒳 , 𝒵 )$;</li>
+    <li>$\mathrm{coCone}(\mathrm{coCone}(𝒳 ,𝒴 ), 𝒵 ) = \mathrm{coCone}(𝒳 , 𝒵 ∗ 𝒴 )$;</li>
+    <li>$\mathrm{Cone}(𝒳 , \mathrm{coCone}(𝒴, 𝒵 )) = \mathrm{coCone}(\mathrm{Cone}(𝒳 , 𝒴 ), 𝒵 )$;</li>
+    <li>$𝒳 ∗ (𝒴 ∗ 𝒵 ) = (𝒳 ∗ 𝒴 )∗ 𝒵$.</li>
+  </ol>
+</div>
+
+<div class="lemma">
+  <p>Let $𝒳$, $𝒴$ and $𝒵$ be arbitrary subclasses of 𝒞. The followings are due to S4×4.</p>
+  <ol>
+    <li>$\mathrm{coCone}(𝒳 ,𝒵 )∗ 𝒴 ⊆ \mathrm{coCone}(𝒳 ∗ 𝒴 , 𝒵 )⊇ \mathrm{coCone}(𝒴 ,\mathrm{Cone}(𝒳 ,𝒵 ))$;</li>
+    <li>$𝒴 ∗ \mathrm{Cone}(𝒳 , 𝒵 ) ⊆ \mathrm{Cone}(𝒳 , 𝒴 ∗ 𝒵 ) ⊇ \mathrm{Cone}(\mathrm{coCone}(𝒳 ,𝒵 ),𝒴 )$.</li>
+  </ol>
+</div>
+
+<p>We mention that, if $𝔼(𝒴 , 𝒳) = 0$, then $𝒳 ∗ 𝒴 = 𝒳 ⊕ 𝒴$. This is a useful dequantisation for (ex-)cotorsion pairs.</p>
+
 <p>We now proceed to introduce cotorsion pairs. The cotorsion pairs employed herein are, by construction, automatically complete when specialised to the case of an exact category. We also assume the categories to be weakly idempotent complete, which is the standard assumption in the majority of the literature.</p>
 
 <div class="definition">
-  <p>(The orthogonality determined by $𝔼$). Let $𝒳$ and $𝒴$ be classes of objects (not necessarily additive). We employ the following notations:</p>
+  <p>(The <strong>orthogonality</strong> determined by $𝔼$). Let $𝒳$ and $𝒴$ be classes of objects (not necessarily additive). We employ the following notations:</p>
   <ul>
     <li>$𝒳 ⟂ 𝒴$ signifies that $𝔼 (X, Y) = 0$ for all $X ∈ 𝒳$ and $Y ∈ 𝒴$;</li>
     <li>$𝒳^⟂$ denotes the class of objects $\{Y ∣ 𝔼 (X, Y) = 0\ (∀ X ∈ 𝒳)\}$;</li>
@@ -1166,7 +1272,7 @@ X → Y → Z \xrightarrow δ X[1].
 </div>
 
 <div class="definition">
-  <p>(The complete cotorsion pair). Let $(𝒞 , 𝔼, 𝔰 )$ be extriangulated, and let $𝒰$ and $𝒱$ be additive subcategories closed under isomorphisms and direct summands. A pair of such additive categories $(𝒰 , 𝒱)$ is termed a cotorsion pair if the following conditions are satisfied:</p>
+  <p>(The <strong>complete cotorsion pair</strong>). Let $(𝒞 , 𝔼, 𝔰 )$ be extriangulated, and let $𝒰$ and $𝒱$ be additive subcategories closed under isomorphisms and direct summands. A pair of such additive categories $(𝒰 , 𝒱)$ is termed a cotorsion pair if the following conditions are satisfied:</p>
   <ul>
     <li>$𝒰 ⟂ 𝒱$;</li>
     <li>for any $X$, there exists a conflation $X → X_V → X_U$ with $X_V ∈ 𝒱$ and $X_U ∈ 𝒰$;</li>
@@ -1174,14 +1280,17 @@ X → Y → Z \xrightarrow δ X[1].
   </ul>
 </div>
 
-<p>We recover some of the elementary properties of cotorsion pairs by definition.</p>
+<p>Throughtout, every cotorsion pair are considered to be complete. We use the notion of cotorsion pair to refer to complete cotorsion pairs, unless otherwise specified.
+<br />
+<br />
+We recover some of the elementary properties of cotorsion pairs by definition.</p>
 
 <div class="lemma">
   <p>Let $(𝒰, 𝒱)$ be a cotorsion pair.</p>
   <ol>
+    <li>$𝒰^⟂ = 𝒱$ and $^⟂ 𝒱 = 𝒰$;</li>
     <li>$𝒰$ and $𝒱$ are closed under extensions;</li>
-    <li>$𝒰$ and $𝒱$ are closed under retracts;</li>
-    <li>$𝒰^⟂ = 𝒱$ and $^⟂ 𝒱 = 𝒰$.</li>
+    <li>$𝒰$ and $𝒱$ are closed under retracts.</li>
   </ol>
   <div class="proof">
     <p>We demonstrate that any $X ∈ 𝒰^⟂$ is contained in $𝒱$. Consider any conflation $X → X_V → X_U$; this sequence splits, since $𝔼 (X_U, X) = 0$. Consequently, $X$ is a direct summand of $X_V$, and thus $X$ belongs to $𝒱$. <br /> <br /> Suppose that $X ↪ U ↠ X$ is a retract of $U ∈ 𝒰$. Since $𝔼$ is bi-additive, $𝔼 (X, -)|_𝒱$ is a subfunctor of $𝔼 (U, -)|_𝒱$, thus it is a zero functor. By previous analysis, $X ∈ {}^⟂ 𝒱 = 𝒰$. <br /> <br /> For conflation $U_1 → E → U_2$ ($U_i ∈ 𝒰$), there is an functorial exact sequence $$\begin{equation}
@@ -1191,18 +1300,18 @@ X → Y → Z \xrightarrow δ X[1].
   </div>
 </div>
 
-<p>We remark the property of retraction closedness is not trivial, since $𝒞$ may not be weakly idempotent complete.
+<p>We remark that the property of retraction-closedness is not trivial, even though $𝒰$ and $𝒱$ are closed under direct summands. The principal consideration is that $𝒞$ may not be weakly idempotent complete.
 <br />
 <br />
 We now proceed to define Hovey twin cotorsion pairs. This definition is deliberately created for defining the class of trivial objects $𝒲$ in model structures.</p>
 
 <div class="definition">
-  <p>(Hovey twin cotorsion pair). We say that two cotorsion pairs $(𝒰, 𝒱)$ and $(𝒮, 𝒯)$ constitute a Hovey twin cotorsion pair if the following conditions are satisfied:</p>
+  <p>(<strong>Hovey twin cotorsion pair</strong>). We say that two cotorsion pairs $(𝒰, 𝒱)$ and $(𝒮, 𝒯)$ constitute a Hovey twin cotorsion pair if the following conditions are satisfied:</p>
   <ol>
     <li>$𝒮 ⟂ 𝒱$, and hence $𝒰 ⊇ 𝒮$ and $𝒱 ⊆ 𝒯$;</li>
     <li>$\mathrm{Cone}(𝒱 , 𝒮 ) = \mathrm{coCone}(𝒱 , 𝒮)$.</li>
   </ol>
-  <p>To avoid an overabundance of symbols, we denote the Hovey twin cotorsion pair by $(𝒮, 𝒮 ^⟂; {}^⟂ 𝒱 , 𝒱)$. Both $𝒱$ and $𝒮$ are regarded as the smaller categories, whilst $^⟂ 𝒱$ and $𝒮^⟂$ are the larger categories.</p>
+  <p>To avoid an overabundance of symbols, we denote the Hovey twin cotorsion pair by $(𝒮, 𝒮 ^⟂; {}^⟂ 𝒱 , 𝒱)$. Both $𝒱$ and $𝒮$ are smaller categories, whilst $^⟂ 𝒱$ and $𝒮^⟂$ are the larger categories.</p>
 </div>
 
 <p>The following property is customary, or forms part of the definition of a Hovey twin cotorsion pair for exact categories.</p>
@@ -1224,7 +1333,7 @@ We now proceed to define Hovey twin cotorsion pairs. This definition is delibera
 <p>We remark that $\mathrm{Cone}(𝒱 , 𝒮) = \mathrm{coCone}(𝒱 , 𝒮)$ is precisely the class of trivial objects to be discussed subsequently. We first demonstrate that $\mathrm{Cone}(𝒱)$ is a thick subcategory and hence is an extriangulated subcategory.</p>
 
 <div class="theorem">
-  <p>$\mathrm{Cone}(𝒱 , 𝒮)$ is thick.</p>
+  <p>$\mathrm{Cone}(𝒱 , 𝒮)$ is thick, thus it is extriangulated.</p>
   <div class="proof">
     <p>We denote $𝒩 := \mathrm{Cone}(𝒱 , 𝒮)$. The following proof involves no alteration of the diagram, but relies solely upon the identities obtained from the SET4 or S4×4 lemmas. For extensions,</p>
     <p>$$\begin{aligned}
@@ -1243,21 +1352,28 @@ We now proceed to define Hovey twin cotorsion pairs. This definition is delibera
   </div>
 </div>
 
-<p>We remark the dicisive step $𝒱 ∗ 𝒮 = 𝒱 ∗ 𝒮 ⊆ 𝒩$.</p>
+<p>We remark the dicisive step $𝒱 ∗ 𝒮 = 𝒱 ⊕ 𝒮 ⊆ 𝒩$, since $𝔼 (𝒮 , 𝒱)$.</p>
 
 <h3 id="adm-model--hovey">Adm Model ⇒ Hovey</h3>
 
 <p>We omit the recapitulation of the definition of admissible model structures for either Abelian or exact categories, as these are special cases of the extriangulated case.</p>
 
 <div class="definition">
-  <p>(Admissible model structure). Say the model structure over an extriangulated cateogry $(𝒞 , 𝔼 , 𝔰)$ admissible, when there exists four classes of obejcts $(𝒮 , 𝒯 ; 𝒰, 𝒱)$ such that</p>
+  <p>(<strong>Admissible model structure</strong>). Say the model structure over an extriangulated cateogry $(𝒞 , 𝔼 , 𝔰)$ admissible, when there exists four classes of obejcts $(𝒮 , 𝒯 ; 𝒰, 𝒱)$ such that</p>
   <ul>
     <li>$f ∈ 𝖢𝗈𝖿𝗂𝖻$, iff $f$ is an inflation $⋅ \xrightarrow f ⋅ → U$ for some $U ∈ 𝒰$;</li>
     <li>$f ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$, iff $f$ is an inflation $⋅ \xrightarrow f ⋅ → S$ for some $S ∈ 𝒮$;</li>
     <li>$g ∈ 𝖥𝗂𝖻$, iff $g$ is an deflation $T → ⋅ \xrightarrow g ⋅$ for some $T ∈ 𝒯$;</li>
     <li>$g ∈ 𝖳𝖥𝗂𝖻$, iff $g$ is an deflation $𝒱 → ⋅ \xrightarrow g ⋅$ for some $V ∈ 𝒱$.</li>
   </ul>
-  <p>We define $𝖶𝖾𝗊 = 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$.</p>
+</div>
+
+<div class="example">
+  <p>Once we have an admissible model structure descirbed by $(𝒮 , 𝒯 ; 𝒰, 𝒱)$, we see that</p>
+  <p>$$\begin{equation}
+(𝒮 , 𝒯 ; 𝒰, 𝒱) = (𝖳𝒞, ℱ , 𝒞 , 𝖳ℱ).
+\end{equation}$$</p>
+  <p>We shall later show that $𝒲 = \mathrm{Cone}(𝒱 , 𝒮) = \mathrm{coCone}(𝒱 , 𝒮)$.</p>
 </div>
 
 <p>We next show that $(𝒮 , 𝒯 , 𝒰, 𝒱)$ is a Hovey cotorsion pair.</p>
@@ -1265,13 +1381,13 @@ We now proceed to define Hovey twin cotorsion pairs. This definition is delibera
 <div class="lemma">
   <p>$(𝒮 , 𝒯 , 𝒰, 𝒱)$ determined by model structure is indeed a twin cotorsion pair.</p>
   <div class="proof">
-    <p>It is clear that $𝒮 ⊆ 𝒰$ and $𝒱 ⊆ 𝒯$. We firstly show that $𝔼 (𝒮 , 𝒯) = 0$, and $𝔼(𝒰 , 𝒱) = 0$ is proved dually. We take abitrary $S ∈ 𝒮$ and $T ∈ 𝒯$. Any conflation from $T$ to $S$ completes to the diagram</p>
+    <p>It is clear that $𝒮 ⊆ 𝒰$ and $𝒱 ⊆ 𝒯$. We firstly show that $𝔼 (𝒮 , 𝒯) = 0$, and $𝔼(𝒰 , 𝒱) = 0$ is proved dually. We take abitrary $S ∈ 𝒮$ and $T ∈ 𝒯$. Any realisation of $δ ∈ 𝔼(T,S)$ completes to the following diagram</p>
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/Diagram_Thm_Extri/diagram_44585947a110f.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
     <p>By lifting property, the deflation $E → S$ splits. Hence $δ = (1_S)^∗ δ = 0$. <br /> <br /> We finally show that any $X ∈ 𝒞$ embeds into some conflation $X → X_T → X_S$ for $X_T ∈ 𝒯$ and $X_S ∈ 𝒮$. We factorise $X → 0$ into $𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_8d49d56290e95.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_ad4339141ef2f.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
     <p>Since $T ≃ E$, we obtain $X ∈ \mathrm{Cone}(𝒯 , 𝒮)$. The proof of other three identities are similar.</p>
   </div>
@@ -1291,7 +1407,7 @@ We now proceed to define Hovey twin cotorsion pairs. This definition is delibera
 
 <h3 id="hovey--adm-model">Hovey ⇒ Adm Model</h3>
 
-<p>We write $(𝒮 , 𝒮 ^⟂ ; {}^⟂ 𝒱 , 𝒱 )$ or $(𝒮 , 𝒯 ; 𝒰, 𝒱)$ for the Hovey twin cotorsion pair. Now we shall show that, if the category is weakly idempotent complete (for $𝖶𝖾𝗊 ∘ 𝖶𝖾𝗊 ⊆ 𝖶𝖾𝗊$), this Hovey twin cotorison pair determines a model structure wherein</p>
+<p>We write $(𝒮 , 𝒮 ^⟂ ; {}^⟂ 𝒱 , 𝒱 )$ or $(𝒮 , 𝒯 ; 𝒰, 𝒱)$ for a Hovey twin cotorsion pair. We now demonstrate that, provided the category is weakly idempotent complete (a decisive assumption for proving $𝖶𝖾𝗊 ∘ 𝖶𝖾𝗊 ⊆ 𝖶𝖾𝗊$), this Hovey twin cotorsion pair determines a model structure in which</p>
 
 <ul>
   <li>$f ∈ 𝖢𝗈𝖿𝗂𝖻$, iff $f$ is an inflation $⋅ \xrightarrow f ⋅ → U$ for some $U ∈ {}^⟂ 𝒱$;</li>
@@ -1300,18 +1416,18 @@ We now proceed to define Hovey twin cotorsion pairs. This definition is delibera
   <li>$g ∈ 𝖳𝖥𝗂𝖻$, iff $g$ is an deflation $𝒱 → ⋅ \xrightarrow g ⋅$ for some $V ∈ 𝒱$.</li>
 </ul>
 
-<p>It follows that $(𝒮 , 𝒯 ; 𝒰, 𝒱) = (𝖳𝒞, ℱ,  𝒞 , 𝖳ℱ)$.</p>
+<p>It follows that $(𝒮 , 𝒯 ; 𝒰, 𝒱) = (𝖳𝒞, ℱ,  𝒞 , 𝖳ℱ)$. We also take the thick subcategory $𝒩 = \mathrm{Cone}(𝒱 , 𝒮 ) = \mathrm{coCone}(𝒱 , 𝒮 )$. Since admissible model structure creates such a Hovey cotorsion twin cotorsion pairs, $𝒩$ coincides the class of trivial objects $𝒲$.</p>
 
 <div class="lemma">
-  <p>(The verification of lifting property). This follows from extension lifting lemma.</p>
+  <p>(The verification of lifting property). This follows from the extension lifting lemma.</p>
 </div>
 
 <div class="lemma">
-  <p>(The verification of factorisation property). We shall show that any morphism factorises into $𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$. The proof of the dual statement is similar.</p>
+  <p>(The verification of factorisation property). We shall show that any morphism factorises into $𝖳𝖥𝗂𝖻 ∘ 𝖢𝗈𝖿𝗂𝖻$. The proof of the dual statement is similar.</p>
   <div class="proof">
     <p>For any $f : X → Y$, we take the conflation $X → X_V → X_U$ for $X_V ∈ 𝒱$ and $X_U ∈ 𝒰$. By previous theorems, $\binom if : X → X_V ⊕ Y$ is also an inflation. We complete the following Verdier diagram and take the composition of dashed arrows</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_07174d9e11112.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_9f6923d514e8d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
     <p>Now $(X → E) ∈ 𝖢𝗈𝖿𝗂𝖻$, and both $E → (X_V ⊕ Y)$ and $(X_V ⊕ Y) → Y$ belong to $𝖳𝖥𝗂𝖻$. This complete out proof.</p>
   </div>
@@ -1322,61 +1438,113 @@ We now proceed to define Hovey twin cotorsion pairs. This definition is delibera
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Diagram_Thm_Extri/diagram_2e658f1d0f1d0.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>By virtue of extension-closedness, $C_2 ∈ 𝒞$. One may similarly demonstrate that $𝖳𝖢𝗈𝖿𝗂𝖻$, $𝖳𝖥𝗂𝖻$, and $𝖥𝗂𝖻$ are closed under composition. <br /> <br /> The proof for $𝖶𝖾𝗊$ is considerably more intricate. It suffices to establish that $𝖳𝖢𝗈𝖿𝗂𝖻 ∘ 𝖳𝖥𝗂𝖻 ⊆ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$. We first factorise such a composition, $f$, as $𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$. By weak idempotent completeness, we may apply the $3 × 3$ lemma and thereby obtain</p>
+  <p>By virtue of extension-closedness, $C_2 ∈ 𝒞$. One may similarly demonstrate that $𝖳𝖢𝗈𝖿𝗂𝖻$, $𝖳𝖥𝗂𝖻$, and $𝖥𝗂𝖻$ are closed under composition. <br /> <br /> The proof of $𝖶𝖾𝗊 ∘ 𝖶𝖾𝗊 ⊆ 𝖶𝖾𝗊$ is considerably more intricate. It suffices to proceed by induction, showing that $𝖳𝖢𝗈𝖿𝗂𝖻 ∘ 𝖳𝖥𝗂𝖻 ⊆ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$. We first factorise such a composition, $f ∈ 𝖳𝖢𝗈𝖿𝗂𝖻 ∘ 𝖳𝖥𝗂𝖻$, as $𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$. By weakly idempotent completeness, we may apply the $3 × 3$ lemma and thereby obtain the desired result.</p>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Diagram_Thm_Extri/diagram_bdb73c39a64b4.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>Since $𝒲$ is thick, $? = \mathrm{coCone}(𝒮 , 𝒮) ∈ 𝒲$. Therefore, $T ∈ 𝒮 ∗ 𝒲 ⊆ 𝒲$, and thus $T ∈ 𝒱$. It follows that $f ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$.</p>
+  <p>Since $𝒩$ is thick, $? ∈ \mathrm{coCone}(𝒮 , 𝒮) ∈ 𝒩$. Therefore, $T ∈ 𝒮 ∗ 𝒩 ⊆ 𝒩$, and thus $T ∈ 𝒱$. It follows that $f ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$.</p>
 </div>
 
 <div class="lemma">
-  <p>(The verification of 2-out-of-3 property of $𝖶𝖾𝗊$). We have already established that $𝖶𝖾𝗊 ∘ 𝖶𝖾𝗊 ⊆ 𝖶𝖾𝗊$. It remains to show that if both $gf$ and $f$ belong to $𝖶𝖾𝗊$, then so does $g$. By virtue of the S4×4 and SET4 lemmas, the two-out-of-three property for $𝖶𝖾𝗊$ holds for $𝖢𝗈𝖿𝗂𝖻 ∪ 𝖥𝗂𝖻$. We proceed as follows:</p>
+  <p>(The verification of 2-out-of-3 property of $𝖶𝖾𝗊$). We have already established that $𝖶𝖾𝗊 ∘ 𝖶𝖾𝗊 ⊆ 𝖶𝖾𝗊$. It remains to show that if both $gf$ and $f$ belong to $𝖶𝖾𝗊$, then so does $g$.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_2fca439743a56.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>We proceed as follows:</p>
   <ol>
-    <li>The dashed arrows are constructed by the very definition of $𝖶𝖾𝗊$;</li>
-    <li>The squiggly arrows are obtained via the lifting property of the pair $(𝖢𝗈𝖿𝗂𝖻, 𝖳𝖥𝗂𝖻)$;</li>
-    <li>The double arrow $A ⇒ G$ is given by the composition $A \to D \to G$, which is a cofibration. Thus, $A ⇒ G$ is both a cofibration and a weak equivalence, and hence belongs to $𝖳𝖢𝗈𝖿𝗂𝖻$.</li>
+    <li>By composition of $𝖶𝖾𝗊$, we write $X → B → Y → C$ as $(X → M → C) ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$. This is the boundary of the pentagon.</li>
+    <li>By the lifting property, we have $(X → E → H) ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖢𝗈𝖿𝗂𝖻$. We take the composition $(A → E) ∈ 𝖢𝗈𝖿𝗂𝖻$ by the way. These creates the blue arrows.</li>
+    <li>Again, by the lifting property, we have $(E → F → M) ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖢𝗈𝖿𝗂𝖻$. We also take the composition $(X → F) ∈ 𝖢𝗈𝖿𝗂𝖻$ by the way.</li>
   </ol>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_65566c1beaefc.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_23504108cd04e.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>By 2-out-of-3 property of $𝖶𝖾𝗊$ for $𝖢𝗈𝖿𝗂𝖻$, we have $(A → D) ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$.</p>
+  <p>We next show in steps that $1$, $2$, $3$, $4$ and $5$ are weak equivalences.</p>
+  <ol>
+    <li>For $1$, that is to show, $(f,g,gf) ∈ (𝖢𝗈𝖿𝗂𝖻, 𝖳𝖥𝗂𝖻, 𝖳𝖢𝗈𝖿𝗂𝖻) ⟹ f ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$.</li>
+    <li>For $2$, that is to show, $(f,g,gf) ∈ (𝖢𝗈𝖿𝗂𝖻, 𝖳𝖥𝗂𝖻, 𝖳𝖥𝗂𝖻) ⟹ f ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$.</li>
+    <li>For $3$, that is to show, $(f,g,gf) ∈ (𝖢𝗈𝖿𝗂𝖻, 𝖳𝖥𝗂𝖻, 𝖳𝖢𝗈𝖿𝗂𝖻) ⟹ f ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$.</li>
+    <li>For $4$, that is to show, $(f,g,gf) ∈ (𝖢𝗈𝖿𝗂𝖻, 𝖳𝖢𝗈𝖿𝗂𝖻, 𝖳𝖢𝗈𝖿𝗂𝖻) ⟹ f ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$.</li>
+    <li>For $5$, that is to show, $(f,g,gf) ∈ (𝖢𝗈𝖿𝗂𝖻, 𝖳𝖢𝗈𝖿𝗂𝖻, 𝖳𝖢𝗈𝖿𝗂𝖻) ⟹ f ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$.</li>
+  </ol>
+  <p>The proof of $1$ and $3$ are done with extension lifting lemma. There exists a dashed $s$ making the entire diagram commutative:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_35da11affbaaf.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Hence, $g$ is an split epimorphism, and thus $s$ is an split monomorphism with cokernel $V ∈ 𝒩$. It remains to show that $s ∈ 𝖶𝖾𝗊$. By 4×4 lemma, we see that $s ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_bd580a8df7b19.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>We next show $2$. This follows from S4×4 lemma:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_60eba4dd88b0d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Since $𝒩$ is thick, $? ∈ 𝒩$. By $? ∈ 𝒩 ∩ 𝒰 = 𝒮$, $f ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$. <br /> <br /> The proof of $4$ and $5$ are similar to $2$, just replace S4×4 lemma with SET4.</p>
 </div>
 
 <div class="lemma">
-  <p>(The verification of retraction closedness). For $𝖢𝗈𝖿𝗂𝖻$, $𝖥𝗂𝖻$, $𝖳𝖥𝗂𝖻$, and $𝖳𝖢𝗈𝖿𝗂𝖻$, we verify the property by means of the lifting property. We take $𝖥𝗂𝖻$ as an illustrative example. Suppose that $b$ is a retract of $f ∈ 𝖥𝗂𝖻$. We verify the lifting property of $b$ with respect to an arbitrarily chosen $c ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$ and an arbitrarily chosen commutative square $c ⇒ b$.</p>
+  <p>(The verification of retraction closedness). For $𝖢𝗈𝖿𝗂𝖻$, $𝖥𝗂𝖻$, $𝖳𝖥𝗂𝖻$, and $𝖳𝖢𝗈𝖿𝗂𝖻$, we verify the property by means of the lifting property. We select $𝖥𝗂𝖻$ as a representative example. Suppose that $b$ is a retract of $f ∈ 𝖥𝗂𝖻$. We verify the lifting property of $b$ with respect to an arbitrarily chosen $c ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$ and an arbitrarily chosen commutative square $c ⇒ b$.</p>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Diagram_Thm_Extri/diagram_453a2e2bf180b.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>We show that $p ∘ s$ is our desired lifting morphism.</p>
+  <p>We show that $p ∘ s$ is our desired lifting morphism of the most left square:</p>
   <ul>
     <li>$bps = qfs = qjd = d$;</li>
     <li>$psc = pia = a$.</li>
   </ul>
-  <p>Now we show that the retraction of $g ∈ 𝖶𝖾𝗊$, denoted by $g'$, is also an weak equivalence. We first factorise $g$ into $𝖳𝖥𝗂𝖻 ∘ 𝖢𝗈𝖿𝗂𝖻$</p>
+  <p>Now we show that the retraction of $g ∈ 𝖶𝖾𝗊$, denoted by $g'$, is also an weak equivalence. We first factorise $g'$ into $𝖳𝖥𝗂𝖻 ∘ 𝖢𝗈𝖿𝗂𝖻$</p>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_1907eb099d390.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_01dab893b84de.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>The object $Y$ along with the weak pullback square is constructed by 4×4 lemma, we re-draw the diagram as follows</p>
+  <p>The object $Y$ along with the weak pullback square is constructed by 4×4 lemma, we re-draw the diagram as follows ($g' = b'∘ a'$):</p>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_5cef5c045992e.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_08cff0371e222.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
   <p>Here the weak quivalence $a$ and the retraction $i_Y$ are taken from weak PB diagram:</p>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_8fc2c69480e93.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_3b3d39f36cbea.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>We focus on the upper portion of the diagram; that is, we demonstrate that if for $a ∈ 𝖶𝖾𝗊$ and $a'$ is a retraction of $a$ with $a' ∈ 𝖢𝗈𝖿𝗂𝖻$, then $a'$ is also a weak equivalence. We factor $a$ into $a_{tf} ∘ a_{tc} ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$, and consider the following diagram:</p>
+  <p>We focus on the upper portion of the diagram; that is, we demonstrate that if $a ∈ 𝖶𝖾𝗊$ and $a'$ is a retraction of $a$ with $a' ∈ 𝖢𝗈𝖿𝗂𝖻$, then $a'$ is likewise a weak equivalence.</p>
+  <ul>
+    <li>The original problem was $x ∈ 𝖱𝖾𝗍𝗋𝖺𝖼(𝖶𝖾𝗊) ⟹ x ∈ 𝖶𝖾𝗊$;</li>
+    <li>We deduce this to $x ∈ 𝖱𝖾𝗍𝗋𝖺𝖼(𝖶𝖾𝗊) ∩ 𝖢𝗈𝖿𝗂𝖻 ⟹ x ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$.</li>
+  </ul>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_423dd0fe45c7f.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_645fb55ffe0bd.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>The morphism $s$ is constructed via the lifting property. The square $\square$ arises from ET4, and is therefore weakly PBPO. We observe that $a'$ is a retraction of $a_{tc}$, hence $a' ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$. We finally demonstrate that $g' = b' ∘ a' ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$ is a weak equivalence.</p>
+  <p>The diagram is established with the proceduce:</p>
+  <ol>
+    <li>We factorise $a$ as $a_{tf} ∘ a_{tc} ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$, and obtain all solid arrows.</li>
+    <li>The homotopic $\square$ comes from ET4. We obtain the red part.</li>
+    <li>By lifting property, we obtain all dashed blue arrows.</li>
+  </ol>
+  <p>We observe that $a'$ is a retraction of $a_{tc}$, hence $a' ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$. We finally demonstrate that $g' = b' ∘ a' ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$ is a weak equivalence.</p>
 </div>
 
 <h3 id="remarks-on-mathjax_protectedjpcdkrikmathjax_protected-and-mathjax_protectedjpcdlrbwnza8j2xiiqmathjax_protected">Remarks on $𝒲$ and $𝖶𝖾𝗊$</h3>
 
-<p>For admissible model structure over extriangulated category, we remark the following features of trivial objects $𝒲$ and the class the weak equivalences.</p>
+<p>For admissible model structure over extriangulated category, we remark the following features of trivial objects $𝒲 (= 𝒩 = \mathrm{Cone}(𝒱 , 𝒮 ))$ and the class the weak equivalences $𝖶𝖾𝗊$.</p>
 
 <div class="theorem">
   <p>$𝒲$ is a thick subcategory, and thus is an extriangulated subcategory. The proof is given apriori.</p>
+</div>
+
+<p>The next lemma provides a criterion for determining whether an inflation or deflation is a weak equivalence.</p>
+
+<div class="lemma">
+  <p>For conflation $X \xrightarrow i Y \xrightarrow p Z$,</p>
+  <ul>
+    <li>$i$ is an weak equivalence, if and only if $Z ∈ 𝒲$;</li>
+    <li>$p$ is an weak equivalence, if and only if $X ∈ 𝒲$.</li>
+  </ul>
+  <p>Remind that $𝖳𝖢𝗈𝖿𝗂𝖻 ⊊ 𝖨𝗇𝖿𝗅𝖺𝗍𝗂𝗈𝗇 ∩ 𝖶𝖾𝗊$ and $𝖳𝖥𝗂𝖻 ⊊ 𝖣𝖾𝖿𝗅𝖺𝗍𝗂𝗈𝗇 ∩ 𝖶𝖾𝗊$ in general.</p>
+  <div class="proof">
+    <p>We shall prove only the first assertion. Suppose that $i$ is a weak equivalence. We factorise $i = i_f ∘ i_c ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$. By the S4×4 lemma, we complete $δ_{c3}$ from $\{δ _{r2}, δ _{r3}, δ _{c2}\}$. Now $Z ∈ \mathrm{Cone}(𝒱 ,𝒮 ) = 𝒲$.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_50afab664df9e.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Conversely, suppose that $Z ∈ \mathrm{Cone}(𝒱 , 𝒮)$. We complete $\{δ_{r2}, δ _{c2}\}$ from $\{δ _{c3}, δ _{r3}\}$. This shows that $i∈ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$.</p>
+  </div>
 </div>
 
 <div class="proposition">
@@ -1399,7 +1567,305 @@ We now proceed to define Hovey twin cotorsion pairs. This definition is delibera
   </div>
 </div>
 
-<h3 id="stable-cat-is-mathjax_protectedjfx0cmlhbmdszsqmathjax_protected">Stable Cat is $\triangle$</h3>
+<h3 id="equivalent-defs-of-mathjax_protectedjpcdlqfwnzeiipcdkpwkmathjax_protected">Equivalent Defs of $𝖧𝗈 𝒜$</h3>
+
+<p>We shall identify the homotopy category of $𝒜$ via by stable category $\frac{𝒞 ∩ ℱ}{𝒞 ∩ 𝒲 ∩ ℱ}$. We denote $[f]$ by the coset of $f$ in stable Hom groups.</p>
+
+<div class="lemma">
+  <p>(In $𝒞 ∩ ℱ$, $f ∈ 𝖶𝖾𝗊 ⟺ [f]=0$). For objects $X, Y ∈ 𝒞 ∩ ℱ$, a morphism $f : X → Y$ is an weak equivalence, if and only if $[f]$ is an isomorphism in the quotient category $\frac{𝒞 ∩ ℱ}{𝒞 ∩ 𝒲 ∩ ℱ}$.</p>
+  <div class="proof">
+    <p>Suppose that $f ∈ 𝖶𝖾𝗊$. Now we have a decomposition $$\begin{equation}
+f = p ∘ i ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻.
+\end{equation}$$ By $𝔼$-orthogonality, we complete the two conflations into two split exact sequences</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_77defc6e6f7ce.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Here $([j],[p])$ and $([i],[q])$ are pairs of inverses morphisms. Hence $[f]$ has inverse $[q ∘ j]$ in the stable category. <br /> <br /> Conversely, we assume that $[f]$ is an isomorphism in the stable category. We firstly factorise $f$ into $f = p ∘ i ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖢𝗈𝖿𝗂𝖻$. This also yields two split conflations.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_4863b2f4904f9.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>By extension-closedness, we have $E ∈ 𝒞 ∩ ℱ$. Since $p$ is a weak equivalence between objects in $𝒞 ∩ ℱ$, $[p]$ is an isomorphism. Since $[p ∘ i]$ is also an isomorphism, it follows that $[i]$ is likewise an isomorphism. Furthermore, as both $[1_A]$ and $[i]$ are isomorphisms, it follows that $[q]$ is also an isomorphism. Finally,</p>
+    <p>$$\begin{equation}
+[j ∘ p] = [1_E] - [i ∘ q] = [1_E] - [1_E] = 0.
+\end{equation}$$</p>
+    <p>Hence, $[1_Y] = [p] ∘ [j ∘ p] ∘ [j] = 0$. It follows that $Y ∈ 𝖳𝒞$, thus $i$ is a trivial fibration.</p>
+  </div>
+</div>
+
+<p>We have already deduced that $(𝒞 ∩ ℱ) [𝖶𝖾𝗊^{-1}] ≃ \frac{𝒞 ∩ ℱ}{𝒞 ∩ 𝒲 ∩ ℱ}$ is an isomorphism of categories. In order to establish its equivalence with $𝖧𝗈 𝒜$, we invoke Quillen’s theorem and reduce the problem to $???$,
+$$\begin{equation}
+π(𝒞 ∩ ℱ) \xleftarrow[≅]{???} (𝒞 ∩ ℱ) [𝖶𝖾𝗊^{-1}] \xrightarrow[≅]{\text{proved}} \frac{𝒞 ∩ ℱ }{𝒞 ∩ 𝒲 ∩ ℱ}.
+\end{equation}$$</p>
+
+<div class="example">
+  <p>By Quillen’s theorem, any admissible model structure on an extriangulated category $(𝒜, 𝔼, 𝔰)$ satisfies $π(𝒞 ∩ ℱ) ≃ 𝖧𝗈 𝒜$. We proceed to verify the prerequisites.</p>
+  <ol>
+    <li>$𝒜$ is additive, and thus possesses zero objects and finite biproducts.</li>
+    <li>There exists a model structure on $𝒜$.</li>
+    <li>Given a trivial cofibration $i : X → Y$ and an arbitrary morphism $φ : X → X'$, there exists a weakly pushout square such that $X' → Y'$ is also a trivial cofibration. Indeed, we demonstrate that such a square may, moreover, be taken to be homotopic.</li>
+    <li>The dual requirements for trivial fibration.</li>
+  </ol>
+  <p>Hence, there is a diagram of functors relates the path homotopy to the localisation.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_127973a362552.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="theorem">
+  <p>There is an isomorphism of categories $\frac{𝒞 ∩ ℱ}{𝒞 ∩ 𝒲 ∩ ℱ} → π (𝒞 ∩ ℱ)$, induce by $π : 𝒞 ∩ ℱ ↣ π (𝒞 ∩ ℱ)$.</p>
+  <div class="proof">
+    <p>It suffices to show that $\frac{𝒞 ∩ ℱ}{𝒞 ∩ 𝒲 ∩ ℱ} → π (𝒞 ∩ ℱ)$ is an isomorphism induced by the dashed arrow</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_55604094931eb.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>To prove that $\frac{𝒞 ∩ ℱ}{𝒞 ∩ 𝒲 ∩ ℱ} → π (𝒞 ∩ ℱ)$ is well-defined, we shall show that $π$ maps $𝖶𝖾𝗊$ to isomorphisms in $π(𝒞 ∩ ℱ)$. It suffices to establish that $π$ sends $𝖳𝖥𝗂𝖻$ to isomorphisms; the case for $𝖳𝖢𝗈𝖿𝗂𝖻$ is dual. <br /> Let $p : X → Y$ be such a trivial fibration. We show that $π(-,X) \xrightarrow{p_∗} π(-,Y)$ is an functorial isomorphism. We take $A ∈ 𝒞 ∩ ℱ$. We claim that such $p_∗ = π (A, p)$ is surjective: By lifting property of the pair $(0_{0A}, p)$, any morphism $A → Y$ factors through $p$. We also claim that such $p_∗ = π (A, p)$ is injective. We take any $f,g : A → X$ such that $pf ∼ pg$, i.e., the commutative diagram with solid arrows:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_8971c3b83f2c3.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>By lifting property, there is a dashed arrow making the entire diagram commutative, which indicates $f ∼ g$. Therefore, $p_∗$ is an functoral isomorphism.</p>
+    <ul>
+      <li>Consider $p_∗ : π (Y,X) ≃ π (Y, Y)$, we obtain $l$ such that $pl ∼ 1_Y$;</li>
+      <li>To show that $lp ∼ 1_X$, it suffices to show that $plp ∼ p$, which is trivial.</li>
+    </ul>
+    <p>Conversely, we take any path homotopic morphisms (and clyder homotopic for the dual case) $f_1 ∼ f_2 : A → B$. Now there is a commutative diagram</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_624382ba0e3ee.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Here $σ$ is a weak equivalence, thus $[σ]$ is an isomorphism. Since $0 = [σ] ∘ [(∂_0 - ∂_1)]$, it follows that $[∂_0 - ∂_1] = 0$, and hence $[f_1 - f_2] = 0$. This demonstrates that $π (𝒞 ∩ ℱ)$ and $\frac{𝒞 ∩ ℱ}{𝒞 ∩ 𝒲 ∩ ℱ}$ possess identical quotient Hom groups.</p>
+  </div>
+  <p>There are no differences between this proof and that of the Abelian case, as neither pushouts nor pullbacks are employed.</p>
+</div>
+
+<p>To conclude, $𝖧𝗈𝒜 ≃ 𝖧𝗈𝒞 ≃ 𝖧𝗈ℱ ≃ π (𝒞 ∩ ℱ)$ are equivalences of categories, while $π(𝒞 ∩ ℱ) ≃ (𝒞 ∩ ℱ) [𝖶𝖾𝗊^{-1}] ≃ \frac{𝒞 ∩ ℱ }{𝒞 ∩ 𝒲 ∩ ℱ}$ are isomorphisms of categories.</p>
+
+<h2 id="mathjax_protectedjpcdlqfwnzeiipcdkpwkmathjax_protected-is-triangluated">$𝖧𝗈 𝒜$ is Triangluated</h2>
+
+<h3 id="the-suspension">The Suspension</h3>
+
+<p>Recall the basic setting. The classes of objects we works on are</p>
+
+<ul>
+  <li>$(𝖳𝒞, ℱ ; 𝒞 , 𝖳ℱ) = (𝒮 , 𝒯 ; 𝒰 , 𝒱 ) = (𝒮, 𝒮 ^⟂ , {}^⟂ 𝒱 , 𝒱)$;</li>
+  <li>$𝒲 = \mathrm{Cone}(𝒱 , 𝒮) = \mathrm{coCone}(𝒱 , 𝒮 )$ is thick.</li>
+</ul>
+
+<p>The classes of morphisms we works on are</p>
+
+<ul>
+  <li>$𝖢𝗈𝖿𝗂𝖻$: inflations with extri-cokernel in $𝒞$;</li>
+  <li>$𝖳𝖢𝗈𝖿𝗂𝖻$: inflations with extri-cokernel in $𝖳𝒞$;</li>
+  <li>$𝖥𝗂𝖻$: deflations with extri-kernel in $ℱ$;</li>
+  <li>$𝖳𝖥𝗂𝖻$: deflations with extri-kernel in $𝖳ℱ$;</li>
+  <li>$𝖶𝖾𝗊$: $𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$.</li>
+</ul>
+
+<p>The localised category is $𝒜 [𝖶𝖾𝗊^{-1}] = 𝖧𝗈 𝒜$.</p>
+
+<ul>
+  <li>By Quillen’s theorem, $𝖧𝗈𝒜 ≃ 𝖧𝗈𝒞 ≃ 𝖧𝗈ℱ ≃ π (𝒞 ∩ ℱ)$ are equivalences of categories;</li>
+  <li>By bi-fibrant argument, $π(𝒞 ∩ ℱ) ≃ (𝒞 ∩ ℱ) [𝖶𝖾𝗊^{-1}] ≃ \frac{𝒞 ∩ ℱ }{𝒞 ∩ 𝒲 ∩ ℱ}$ are isomorphisms of categories.</li>
+</ul>
+
+<p>We show that $𝖧𝗈𝒜$ is triangulated. The first step is to define the suspension $[1]$ functor.</p>
+
+<center> <br /> <div class="tikz-diagram">
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_69810b21f687c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+  </div> <br /> </center>
+
+<p>We shall firstly show that the composition of the assignments $X ↦ U_X ↦ (U_X)_{∈ 𝖧𝗈 𝒜}$ is indeed a functor. Then we show that such a functor factors through $𝖧𝗈 𝒜 → 𝖧𝗈 𝒜$.</p>
+
+<div class="lemma">
+  <p>Once all suspension sequences $X → V_X → U_X \xrightarrow{δ_X}$ are fixed, the compostion of the assignments $X ↦ U_X ↦ (U_X)_{∈ 𝖧𝗈 𝒜}$ is uniquely defined on morphisms.</p>
+  <div class="proof">
+    <p>We take arbitrary $f : X → Y$ and obtain the following communication of extensions:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_151f24a0107fe.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <ul>
+      <li>($V_f$). By the exact sequence $(V_X, V_Y) \xrightarrow{(v_X)^∗} (X, V_Y) → 𝔼 (U_X, V_Y) = 0$, there exists a morphism $V_f$ rendering the left square commutative.</li>
+      <li>($U_f$). By ET3, there exists a morphism $U_f$ rendering both the right square commutative and satisfying $(U_f)^∗ δ _Y = f_∗ δ _X$.</li>
+    </ul>
+    <p>Then we show that $U_f$ is unique in $𝖧𝗈 𝒜$. We take arbitrary $U_f'$ such that $(U_f')^∗ δ_Y = f_∗ δ_X$, then $(U_f - U'_f) ∈ \ker ((δ_Y)_!) = \operatorname{im}((u_Y)_∗)$. It show that $U_f$ is unique in $𝒜 / 𝖳ℱ$. The localisation functor $Q$ factors through $𝒜 → 𝒜 / 𝖳𝒞$, since $Q$ sends $𝖳ℱ ⊆ 𝖶𝖾𝗊$ to zero objects. Hence, $Q(U_f)$ is uniquely defined.</p>
+  </div>
+</div>
+
+<div class="lemma">
+  <p>The assignment $Q(U_∙)$ is a functor (not necessary additive).</p>
+  <div class="proof">
+    <p>By construction, for any $f : X → Y$, we have $Q(U_f) : Q(U_X) → Q(U_Y)$. We proceed to show that $Q(U_{1_X}) = 1_{Q(U_X)}$. Since $1_{U_X}$ is a candidate in defining the communication $(1_X, 1_{U_X}) : δ_X = δ_X$, it follows that $Q(U_{1_X}) = Q(1_{U_X})$. As $Q$ is a functor, $Q(U_{1_X}) = 1_{Q(U_X)}$. Finally, we demonstrate that $Q(U_g ∘ U_f) = Q(U_{g ∘ f})$ for $A \xrightarrow f B \xrightarrow g C$. We may simply take $U_{g ∘ f} = U_g ∘ U_f$, since $(g ∘ f, U_g ∘ U_f) : δ_A → δ_C$ constitutes a well-defined communication.</p>
+  </div>
+</div>
+
+<p>Then we show that the functor $Q(U_∙)$ is compatible with the change of suspension sequences. An explicit statement is the following lemma.</p>
+
+<div class="lemma">
+  <p>($Q(U_∙)$ is unique under natural isomorphisms). Suppose that both $X ↦ Q(U_X)$ and $X ↦ Q(U'_X)$ are functors defined by different choices of suspension sequences. By previous discussion, there exists collections of morphisms $\{l_X : U_X → U_X'\}$ and $\{r_X : U'_X → U_X\}$ such that $(l_X)^∗ δ _X' = δ _X$ and $(r_X)^∗ δ _X = δ _X'$, in diagram,</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_0bc3a72e4acc6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Moreover, such $Q(l_X)$ and $Q(l_Y)$ are natural isomorphisms, in diagram,</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_dda34e92fde30.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <div class="proof">
+    <p>We see that $r_X ∘ l_X$ and $1_{U_X}$ are the same morphism in $𝖧𝗈 𝒜$. Hence $Q(r_X) ∘ Q(r_L) = 1_{Q(U_X)}$. We combine the dual statement and see that $l : Q(U_∙) ⇆ Q(U_∙ ') : r$ are mutually inversal natural isomorphisms.</p>
+  </div>
+</div>
+
+<p>We define the unique functor $Q(U_∙)$, up to natural isomorphism. We now demonstrate that both $𝖳𝖢𝗈𝖿𝗂𝖻$ and $𝖳𝖥𝗂𝖻$ are isomorphisms under this functor. Consequently, $Q(U_∙)$ factors through $Q$, which defines $[1]$ such that $[1] ∘ Q = Q(U_∙)$.</p>
+
+<center> <br /> <div class="tikz-diagram">
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_2d376e0269ab4.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+  </div> <br /> </center>
+
+<div class="proposition">
+  <p>For any $i ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$, $Q(U_i)$ is an isomorphism.</p>
+  <div class="proof">
+    <p>We take the composition of $𝖢𝗈𝖿𝗂𝖻$, $X \xrightarrow i Y \xrightarrow {v_Y} V_Y$, and employ ET4.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_133e927b189b7.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>By extension closedness, $E ∈ 𝒰$. Hence, $δ_X$ is a suspension sequence. By ET4 equalities, $(i, λ) : δ _A → δ _B$ is a communication. Hence, $Q(λ) =Q(i) [1]$. Since $S ∈ 𝒲$, we have $λ ∈ 𝖶𝖾𝗊$. Therefore, $Q(U_i)$ is an isomorphism.</p>
+  </div>
+</div>
+
+<div class="proposition">
+  <p>For any $p ∈ 𝖳𝖥𝗂𝖻$, $Q(U_p)$ is an isomorphism.</p>
+  <div class="proof">
+    <p>In fact, we can directly show that any candidate $U_p$ is a weak equivalence. We take arbtirary $δ_X$ and $δ_Y$ with $p : X → Y$. By S3×3 lemma, we obtain</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_70a0146a681b6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We see that $? ∈ \mathrm{Cone} (𝒱 , 𝒱) ⊆ 𝒲$ by thickness. It yields that $(U_p,u_Y) ∈ 𝖶𝖾𝗊$. Since $e_1 : U_X → U_X ⊕ V_Y$ has cokernel $V_Y$, we have $e_1 ∈ 𝖶𝖾𝗊$. Hence, $$\begin{equation}
+U_p = (U_p, u_Y) ⋅ e_1 ∈ 𝖶𝖾𝗊.
+\end{equation}$$</p>
+  </div>
+</div>
+
+<div class="example">
+  <p>$[-1]$ is constructed by $Q(T^∙)$. Here $T^X → S^X → X \xrightarrow {ε _X}$ is the desuspension sequence.</p>
+</div>
+
+<p>We shall not discuss the fact that $[1] ∘ [-1]$ is a natural isomorphism, as this ought properly to be addressed in terms of $𝔼$.</p>
+
+<h3 id="make-mathjax_protectedjm63jamathjax_protected-a-morphism">Make $η$ a Morphism</h3>
+
+<p>We observe that a conflation $X \xrightarrow{f} Y \xrightarrow{g} Z \xrightarrow{η}$ corresponds to a triangle
+$$\begin{equation}
+QX \xrightarrow{Q(f)} QY \xrightarrow{Q(g)} QZ \xrightarrow{ℓ (η)} U_X = (QX) [1]
+\end{equation}$$
+in the homotopy category $𝖧𝗈 𝒜$. A crucial step is the definition of the natural bitransformation $ℓ : 𝔼 (Z, X) \xrightarrow{\,} (Z, X[1])_{𝖧𝗈 𝒜}$. There is, in general, no straightforward means of defining $𝔼 (Z, X) \to (Z, X[1])$, since the morphism $Z \to U_X$ is, in general, a zigzag.</p>
+
+<center> <br /> <div class="tikz-diagram">
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_030552d53fd9d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+  </div> <br /> </center>
+
+<p>The zigzag morphism,
+$$\begin{equation}
+Z = N_0 \xleftarrow{s_1} M_1 \xrightarrow{a_1} N_1 \xleftarrow{s_2} M_2 \xrightarrow{a_2} N_2 \cdots \rightarrow U_X = N_d,
+\end{equation}$$
+is required to satisfy the following conditions:</p>
+
+<ul>
+  <li>Each $Q(s_i)$ is an isomorphism in $𝖧𝗈 𝒜$.</li>
+  <li>There exists a sequence of extensions $δ_k ∈ 𝔼 (N_k, X)$ such that $(s_k)^∗ δ_{k-1} = (a_k)^∗ δ_k$.</li>
+</ul>
+
+<p>The subsequent construction demonstrates that $Z \xleftarrow[𝖳𝖥𝗂𝖻]{s} M \xrightarrow{a} U_X$ suffices.</p>
+
+<div class="definition">
+  <p>(The assignment $ℓ$). For any $η$, there we take the zigzag morphism $Z \xleftarrow[𝖳𝖥𝗂𝖻]{s} M \xrightarrow{a} U_X$ given by the following 4×4 diagram:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_73d71a20fb714.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>By 4×4 identities, we have $a^∗ δ = s^∗ η$. We define the assignment</p>
+  <p>$$\begin{equation}
+ℓ : 𝔼 (Z, X) → (Z, X[1])_{𝖧𝗈 𝒜},\quad η ↦ Q(a)Q(s)^{-1}.
+\end{equation}$$</p>
+</div>
+
+<p>We shall show that $ℓ$ is indeed an additive natural bitransformation.</p>
+
+<div class="lemma">
+  <p>($ℓ$ is independent of the choice of fractions). The assigment $ℓ$ is independent of the choice of the $(s,a)$ pair in $(𝖬𝗈𝗋 × 𝖳𝖥𝗂𝖻)$. To be explicit, suppose that we have another pair $(t,b)$,</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_ac733c10d7768.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>such that $s^∗ η = a^∗ δ _X$ and $t^∗ η = b^∗ δ _X$. Then $Q(a) ∘ Q(s)^{-1} = Q(b) ∘ Q(t)^{-1}$.</p>
+  <div class="proof">
+    <p>We attempt to reverse $N \xrightarrow[𝖳𝖥𝗂𝖻]{t} F \xleftarrow[𝖳𝖥𝗂𝖻]{s} M$ to $$\begin{equation}
+N \xleftarrow[𝖳𝖥𝗂𝖻]{s'} F \xrightarrow[𝖳𝖥𝗂𝖻]{t'} M.
+\end{equation}$$</p>
+    <p>The construction is given by 4×4 lemma.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_6bf3cb356825c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>The Verdier square consists of four trivial fibrations. This step serves as a reduction of fractions to a common denominator, i.e.,</p>
+    <p>$$\begin{equation}
+(s,a) ∼ (st', at') \overset ? ∼ (ts', bs') ∼ (tb).
+\end{equation}$$</p>
+    <p>In diagram, $Z \xleftarrow[𝖳𝖥𝗂𝖻]{ts'} F \xrightarrow[𝖳𝖥𝗂𝖻]{bs'} U_X$ and $Z \xleftarrow[𝖳𝖥𝗂𝖻]{st'} F \xrightarrow[𝖳𝖥𝗂𝖻]{at'} U_X$:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_9eabf03ac6537.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Now it suffices to show that $Q(at') = Q(bs')$. In fact, $$\begin{equation}
+(at' - bs')^∗ δ _X = (st' - ts')^∗ η = 0.
+\end{equation}$$ Hence, $(at' - bs')$ vanishes in $𝒜 / 𝒱$, thus $Q(at') = Q(bs')$ in $𝖧𝗈 𝒜$.</p>
+  </div>
+</div>
+
+<div class="lemma">
+  <p>($ℓ$ is additive). To see that $ℓ (η + η ') = ℓ (η ) + ℓ (η ')$, we use 4×4 lemma to reduce the fractions associated with $η$ and $η'$ to a common denominator. Such procedure does not affect results in $Q(𝖬𝗈𝗋)$, by the previous lemma. Hence, we assume $ℓ (η) = Q(a)Q(s)$ and $ℓ (n) = Q(b) Q(s)$. Now $$\begin{equation}
+ℓ (η + η ') = Q(a + b)Q(s)^{-1} = Q(a)Q(s)^{-1} + Q(b)Q(s)^{-1}  = ℓ (η ) + ℓ (η ').
+\end{equation}$$</p>
+</div>
+
+<div class="lemma">
+  <p>($ℓ$ is natural). Suppose that we have the communication $f_∗ η  = g^∗ η '$ in the left diagram. Then the right diagram commutes in $𝖧𝗈 𝒜$:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_ca7a9b949c8a2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <div class="proof">
+    <p>We unfold the right diagram in $𝒜$, and then use 4×4 and ET4 squares to translate the the trivial fibration $t$ to $t'$ along the parallel edges. The left top square consisting of four $𝖳𝖥𝗂𝖻$ is given by 4×4 lemma.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_bb1d3f6d900bc.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Now it suffices to show that the $???$ square commutes in $𝖧𝗈 𝒜$. It suffices to show that $(\overline {s}aU_f)^∗ δ _{X'}$ equals $(b't')^∗ δ _{X'}$. Since $(\overline {s}aU_f - b't')$ factors through $𝒱$, it vanishes in $𝖧𝗈 𝒜$. We chase the diagram and obtain</p>
+    <p>$$\begin{aligned}
+(b'\overline {t'})^∗ δ _{X'} &= (\overline {t'})^∗ (b')^∗ δ _{X'}\ \ \ \qquad =(\overline {t'})^∗ [(b')^∗] δ _{X'}\\
+&= (\overline {t'})^∗ [q^∗ p^∗ b^∗ ] δ _{X'}\ \ \quad = (\overline {t'})^∗ q^∗ p^∗ [b^∗  δ _{X'}]\\
+&= (\overline {t'})^∗ q^∗ p^∗ [t^∗  η ']\ \qquad = (\overline {t'})^∗ [q^∗ p^∗ t^∗]  η '\\
+&= (\overline {t'})^∗ [(t')^∗ g^∗ ] η '\qquad = [(\overline {t'})^∗ (t')^∗] [g^∗   η ']\\
+&= [(\overline {s})^∗ s^∗] [f_∗   η]\  \ \ \qquad = (\overline {s})^∗ f_∗ [s^∗ η]\\
+&= (\overline {s})^∗ f_∗ [a^∗ δ _X]\ \ \ \qquad = (\overline {s})^∗ a^∗ [f_∗δ _X]\\
+&= (\overline {s})^∗ a^∗ [(U_f)^∗ δ _{X'}]\quad = [(\overline {s})^∗ a^∗ (U_f)^∗] δ _{X'}\\
+&= (\overline {s}aU_f)^∗ δ _{X'}.
+\end{aligned}$$</p>
+  </div>
+</div>
+
+<div class="definition">
+  <p>(Desuspension). We define the functor $[-1] : 𝖧𝗈 𝒜 → 𝖧𝗈 𝒜$ dually by taking the desuspension sequence $S^X → T^X → X$. Now $(∙) [-1] := Q(S^∙)$.</p>
+</div>
+
+<div class="proposition">
+  <p>Both $[1]$ and $[-1]$ are autoequivalences. Moreover, there is an natural equivalence from $1_∙ → ((∙) [-1]) [1]$.</p>
+  <div class="proof">
+    <p>We chose $μ_{X}$ to be the conflation, and $δ _{T^X}$ is the suspension sequence of $T^X$:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_bec4576948f6d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>By definition of $ℓ$, we obtain a fraction</p>
+    <p>$$\begin{equation}
+X \xleftarrow[𝖳𝖥𝗂𝖻]{s_X} F \xrightarrow{t_X}\quad ℓ (μ_X) = Q(t_X)Q(s_X)^{-1}.
+\end{equation}$$</p>
+    <p>Since $s_X$ and $t_X$ are $𝖶𝖾𝗊$, $ℓ(μ_X)$ is an isomorphism. It remains to show that $1_∙ → ℓ (μ _∙ )$ is a natural isomorphism. By definition, $t^f$ and $T_{T^f}$ are unique in $𝖧𝗈 𝒜$. By naturality of $ℓ$, the communication $(T^f, f) : μ _X→ μ _Y$ gives $$\begin{equation}
+ℓ(μ _Y) ∘ Q(f) = Q(T^f) [1] ∘ ℓ (μ _X) = (Q(f) [-1])[1] ∘ ℓ (μ _X).
+\end{equation}$$</p>
+    <p>Hence we prove the naturality.</p>
+  </div>
+</div>
+
 
 
   </article>
