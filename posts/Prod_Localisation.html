@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>局部化与积范畴交换
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Prod_Localisation">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>局部化与积范畴交换</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 10, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="proposition">
+  <p>(局部化与乘积交换). 给定有限个范畴 $𝒞_i$ 以及包含同构的态射类 $S_i ⊆ 𝖬𝗈𝗋(𝒞_i)$, 以下由局部化诱导的态射是同构: $$\begin{equation}
+(\times_{i=1}^n 𝒞_i) [(\times_{i=1}^n S_i)^{-1}]→ (×_{i=1}^n 𝒞_i [S_i^{-1}]).
+\end{equation}$$</p>
+</div>
+
+<div class="note">
+  <p>先明确上述态取法: 取复合态射 $𝒞_i → 𝒞_i[S_i^{-1}] → (×_{i=1}^n 𝒞_i [S_i^{-1}])$, 再由积的泛性质给出 $(\times_{i=1}^n 𝒞_i)→ (×_{i=1}^n 𝒞_i[S_i^{-1}])$. 最后由局部化的泛性质给出上述态射.</p>
+</div>
+
+<div class="proof">
+  <p>由归纳, 只需证明 $n=2$ 的情形. 以下证明 $(𝒞_1× 𝒞_2) [(S_1× S_2)^{-1}] ≃ (𝒞_1 [S_1^{-1}])× (𝒞_2 [S_2^{-1}])$ 有相同的泛性质.</p>
+  <ol>
+    <li>对任意范畴 $𝒟$, 考虑函子范畴 $𝐅𝐮𝐧𝐜𝐭((𝒞_1× 𝒞_2) [(S_1× S_2)^{-1}],𝒟)$;</li>
+    <li>由于复合局部化函子是全忠实的, 以上即函子范畴 $𝐅𝐮𝐧𝐜𝐭(𝒞_1 × 𝒞_2,𝒟)$ 的全子范畴, 其中的函子将 $S_1× S_2$ 映至 $\mathrm{Iso}(𝒟)$;</li>
+    <li>(依照 <a href="Currying_Functor_Cat">Curry 化同构</a>) 以上即 $𝐅𝐮𝐧𝐜𝐭(𝒞_1, 𝐅𝐮𝐧𝐜𝐭(𝒞_2,𝒟))$ 的全子范畴, 其对象为子类 $$\begin{equation}
+   \{F ∈ 𝐅𝐮𝐧𝐜𝐭(𝒞_1,𝐅𝐮𝐧𝐜𝐭(𝒞_2,𝒟)) ∣  A ∧ B\},
+   \end{equation}$$ 其中 $A$ 与 $B$ 是<a href="NBGC">分离公理模式</a>中的条件:       <ol>
+        <li>条件 $A$: $∀X∈ 𝒞_1 [(F(X))(S_2)⊂\mathrm{Iso}(𝒟)]$,</li>
+        <li>条件 $B$: $F:S_1→  𝐅𝐮𝐧𝐜𝐭(𝒞_2,𝒟) \ \text{中的自然同构}$;</li>
+      </ol>
+    </li>
+    <li>以上同构于 $𝐅𝐮𝐧𝐜𝐭(𝒞_1,𝐅𝐮𝐧𝐜𝐭(𝒞_2 [S_2^{-1}],𝒟))$ 的全子范畴, 其中的函子满足 $B$;</li>
+    <li>以上即函子范畴 $𝐅𝐮𝐧𝐜𝐭(𝒞_1 [S^{-1}],𝐅𝐮𝐧𝐜𝐭(𝒞_2 [S_2^{-1}],𝒟))$;</li>
+    <li>(依照 <a href="Currying_Functor_Cat">Curry 化同构</a>) 以上即 $𝐅𝐮𝐧𝐜𝐭(𝒞_1 [S^{-1}]× 𝒞_2 [S_2^{-1}],𝒟)$.</li>
+  </ol>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/C_Similar_matrix"
+        title="NEXT: (线性代数) C-特征空间">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/PB_Localisation_Fullyfaithful"
+        title="PREV: 局部化函子的拉回是全忠实的">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>外三角范畴的同伦的推出拉回
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="外三角范畴的推论">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Homotopic_PBPO_Extri">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>外三角范畴的同伦的推出拉回</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 21, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="外三角范畴的推论">外三角范畴的推论</h2>
+
+<p>暂时称预外三角范畴是满足 ET1, ET2, ET3 与 ET3’ 的三元组 $(𝒞 , 𝔼 , 𝔰 )$, 见<a href="Stable_Cat_Analogue#外三角范畴的定义">此文</a>. 若预外三角范畴满足 ET4 与 ET4’, 则称之外三角范畴.</p>
+
+<div class="proposition">
+  <p>对外三角范畴, 若下图是 $δ$ 与 $λ _∗ δ$ 的实现, 则存在一个较好的 $w$ 使得方块交换, 同时下方是 $y^∗ δ$ 的实现.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Homotopic_PBPO_Extri/diagram_2f46a4cf1fc45.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <div class="proof">
+    <p>依照两个 <a href="4_times_4_extri">deflation 的拉回</a>补全交换图:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Homotopic_PBPO_Extri/diagram_ac39d72958e1d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>由 $b^\ast \delta = 0$, 不妨将 $b^\ast \lambda _\ast \delta$ 写作标准直和形式, $A⊕ Y$ 处相差的自同构不影响原有箭头. 依照反交换等式, 得 $$\begin{equation}
+0 = \binom {λ '}{a} _∗ δ + \binom {1}{0} _∗  λ _∗ δ = \binom {λ ' + λ} a_∗ δ.
+\end{equation}$$ 等式第二分量本就恒等. 对于第一分量, 长正合列表明存在 $l$ 使得 $$\begin{equation}
+[X \xrightarrow a Y \xrightarrow l A] = X \xrightarrow {λ + λ '} A.
+\end{equation}$$ 分解, 记 $(λ + λ ' ) = l ∘ a$. <br /> <br /> 下只需证明, 存在较好的 $w$ 使得以下态射图交换:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Homotopic_PBPO_Extri/diagram_822541e0191c6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>以上 $l$ 的选取使得左侧交换. 右侧交换等价于 $w+ w' = xl$, 直接取 $w = xl - w'$.</p>
+    <ul>
+      <li>$wa - x λ = xla - w'a - xλ = xla - x λ ' - xλ = x(la - λ - λ ' ) = 0$;</li>
+      <li>$yw - b = yxl - yw' - b = 0 l + b - b = 0$.</li>
+    </ul>
+    <p>因此, 以上对 $w$ 的选取合法.</p>
+  </div>
+</div>
+
+<div class="proposition">
+  <p>(对偶命题). 对于以上 $δ$ 与 $s^∗ δ$ 的实现, 存在较好的 $t$ 使得上图交换, 且下图是 $a_∗ δ$ 的实现.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Homotopic_PBPO_Extri/diagram_d4d7b5d16f78f.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Ideal_Quotient"
+        title="NEXT: 外三角范畴的商">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Enough_Proj_Cotorsion"
+        title="PREV: 完备 cotorsion pair 的单边定义">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

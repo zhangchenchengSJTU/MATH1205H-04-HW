@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>$\mathrm{Gr}(f)$ 是同构当且仅当 $𝐟$ 是同构
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Gr_Iso_is_Complete_Iso">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>$\mathrm{Gr}(f)$ 是同构当且仅当 $𝐟$ 是同构</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        April 27, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="theorem">
+  <p>(同构的完备化等价于同构的分次态射.) $\mathrm{Gr}(f)$ 是同构当且仅当完备化态射 $𝐟$ 是同构.</p>
+</div>
+
+<div class="proof">
+  <p>今取 $f : F^p M → F^p N$.</p>
+  <ol>
+    <li>若 $𝐟$ 是同构, 显然 $\mathrm{Gr}_∙(f) = \mathrm{Gr}_∙(𝐟)$ 也是同构.</li>
+    <li>若 $\mathrm{Gr}_∙(f)$ 是同构, 取 $\varprojlim_l \frac{F^p}{F^{p + l}} = 𝐅^p$. 函子 $\varprojlim$ 保持同构, 故 $𝐟$ 也是同构.</li>
+  </ol>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Hereditary_TP_Split"
+        title="NEXT: 遗传范畴与可裂 torsion pair">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/FFX_vs_FX"
+        title="PREV: 滤过完备化的性质">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

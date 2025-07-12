@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>局部化函子的拉回是全忠实的
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/PB_Localisation_Fullyfaithful">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>局部化函子的拉回是全忠实的</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 10, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="lemma">
+  <p>(局部化的拉回全忠实). 给定局部化函子 $Q : 𝒜 → 𝒜[S^{-1}]$, 对任意范畴 $ℬ$, 以下是全忠实的函子 $$\begin{equation}
+Q^∗:𝐅𝐮𝐧𝐜𝐭(𝒜[S^{-1}] , ℬ) ↣ 𝐅𝐮𝐧𝐜𝐭(𝒜,ℬ),\quad F ↦ F ∘ Q.
+\end{equation}$$</p>
+</div>
+
+<div class="proof">
+  <p>考虑自然变换 $(F,G) ⇒ (FQ,GQ)$ 的对应.</p>
+  <ol>
+    <li>($Q^∗$ 忠实) 任给定自然变换 $η ∈ (F,G)$, 也就是类 $\{\eta_{QX}:FQX → GQX\}_{X ∈ 𝒞}$. 由于 $Q$ 保持对象, 自然变换 $\{η_Y\}_{Y∈ S^{-1}𝒞}=\{\eta_{QX}\}_{QX∈ S^{-1}𝒞}$ 是 $η$ 唯一的原像.</li>
+    <li>($Q^∗$ 全). 任意自然变换 $θ ∈ (FQ,GQ)$ 由全体态射类 $\{a\cdots s^{-1}:X→ Y\}=\mathsf{Mor}(𝒞 [S^{-1}])$ 刻画:       <center> <!-- https://q.uiver.app/#q=WzAsMTAsWzAsMCwiRlFYIl0sWzYsMCwiRlFZIl0sWzAsMSwiR1FYIl0sWzYsMSwiR1FZIl0sWzIsMCwiRlFaIl0sWzIsMSwiR1FaIl0sWzMsMCwiXFxjZG90cyJdLFszLDEsIlxcY2RvdHMiXSxbNCwwLCJGUVciXSxbNCwxLCJHUVciXSxbMCwyLCJcXHRoZXRhX1giXSxbMSwzLCJcXHRoZXRhX1kiXSxbMCw0LCJGKGEpIl0sWzIsNSwiRyhhKSJdLFs0LDUsIlxcdGhldGFfWiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs5LDMsIkcocyleey0xfSJdLFs4LDEsIkYocyleey0xfSJdLFs0LDZdLFs2LDhdLFs1LDddLFs3LDldLFs4LDksIlxcdGhldGFfVyIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTAsWzAsMCwiRlFYIl0sWzYsMCwiRlFZIl0sWzAsMSwiR1FYIl0sWzYsMSwiR1FZIl0sWzIsMCwiRlFaIl0sWzIsMSwiR1FaIl0sWzMsMCwiXFxjZG90cyJdLFszLDEsIlxcY2RvdHMiXSxbNCwwLCJGUVciXSxbNCwxLCJHUVciXSxbMCwyLCJcXHRoZXRhX1giXSxbMSwzLCJcXHRoZXRhX1kiXSxbMCw0LCJGKGEpIl0sWzIsNSwiRyhhKSJdLFs0LDUsIlxcdGhldGFfWiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs5LDMsIkcocyleey0xfSJdLFs4LDEsIkYocyleey0xfSJdLFs0LDZdLFs2LDhdLFs1LDddLFs3LDldLFs4LDksIlxcdGhldGFfVyIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&amp;embed" width="600" height="200" style="border-radius: 8px; border: dashed;"></iframe> </center>
+      <p>将以上 $θ_X$ 改写作 $η _{QX}$, 得 $θ$ 的原像 $η$. 记类 $𝒮$ 是自然变换给出的 $G(f) ∘ ψ_{s(f)} = ψ_{t(f)} ∘ F(f)$-类型的交换图. 检验 $η$ 是自然变换所需的交换图含于 $𝒮$, 因此 $η$ 是自动是自然变换.</p>
+    </li>
+  </ol>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Prod_Localisation"
+        title="NEXT: 局部化与积范畴交换">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Currying_Functor_Cat"
+        title="PREV: 函子范畴的 Curry 化">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

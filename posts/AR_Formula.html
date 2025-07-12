@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>AR 公式
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/AR_Formula">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>AR 公式</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        April 23, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="theorem">
+  <p>(AR 公式). 以下是自然同构.</p>
+  <p>$$
+D\underline{(τ⁻¹ N, M)} ≃ \mathrm{Ext}^1(M, N) ≃ D\overline{(N, τM)}.
+$$</p>
+  <ol>
+    <li>若 $p.\dim M = 1$, 则 $τ M$ 投射, 故 $\mathrm{Ext}^1(M,N) ≃ D(N, τ M)$.</li>
+    <li>若 $i.\dim N = 1$, 则 $τ⁻¹ N$ 内射, 故 $\mathrm{Ext}^1(M,N) ≃ D(τ⁻¹ N, M)$.</li>
+  </ol>
+</div>
+
+<div class="proof">
+  <p>待补充.</p>
+</div>
+
+<div class="corollary">
+  <p>通常情况下, $τ⁻¹$ 未必是 $τ$ 的左伴随函子. 对遗传代数而言, 总有伴随函子 $(τ⁻¹ N, M) ≃ (N, τ M)$.</p>
+  <ol>
+    <li>以上 AR 公式给出 $p.\dim M = 1 = i.\dim N$ 的同构;</li>
+    <li>
+      <p>若 $M$ 投射, 往证 $(τ⁻¹ N , M) = 0$ 即可. 假定 $N$ 不可分解且 $τ⁻¹N ≠ 0$, 则 $τ⁻¹ N$ 是不可分解非投射模. 对任意态射的满单分解</p>
+      <p>$$
+   τ ⁻¹ N \overset p ↠  L \overset i ↪ M
+   $$</p>
+      <p>由遗传代数的特性知 $L$ 投射, 由 $τ⁻¹ N$ 不可分解知 $τ⁻¹ N ≃ L$. 由于 $τ⁻¹ N$ 不是投射对象, 矛盾.</p>
+    </li>
+  </ol>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Gen_Eq_T"
+        title="NEXT: $𝐠𝐞𝐧 = 𝐓$ 或 $𝐜𝐨𝐠 = 𝐅$ 的充分条件">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Def_de_TP"
+        title="PREV: Torsion Pair 等价定义">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>Tilting 模维数无关左右
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Four_Dim_Equal">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>Tilting 模维数无关左右</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        April 29, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="theorem">
+  <p>(四链等长). 以下四者相同: $T_A$ 的投射维数, $_BT$ 的投射维数, $A$ 相对 $𝐚𝐝𝐝 (T)$ 的内射维数, $B$ 相对 $𝐚𝐝𝐝 (T)$ 的内射维数.</p>
+</div>
+
+<div class="proof">
+  <p>假定 $p.\dim T_A = d$. 考虑 $A = Ω_0(A)$ 的 $𝐚𝐝𝐝 (T)$-相对内射分解. 若相对内射维数为 $l > d$, 则</p>
+  <p>$$
+\mathrm{Ext}_A^1(T,Ω_{l-1}(A)) ≠ 0.
+$$</p>
+  <p>由维数移动得 $\mathrm{Ext}^{l-1}(T,Ω_1(A))≠0$. 这和 $T$ 的投射维数矛盾. 因此,</p>
+  <p>$$
+p.\dim T_A ≥ i.𝐚𝐝𝐝 (T_A).\dim A_A;\quad p.\dim {}_BT ≥ i.𝐚𝐝𝐝 (_BT).\dim {}_BB.
+$$</p>
+  <p>另一方面, 所有投射分解与相对内射分解都是 $(-,T)$-正合的, 因此</p>
+  <p>$$
+p.\dim T_A ≥ i.𝐚𝐝𝐝 (_BT).\dim {}_BB;\quad p.\dim {}_BT ≥ i.𝐚𝐝𝐝 (T_A).\dim A_A.
+$$</p>
+  <p>从而上述不等号只能取等.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Happel_Fully_Faithful"
+        title="NEXT: Happel 的导出等价定理 (第一部分证明)">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Dual_Tilting"
+        title="PREV: 对偶 tilting 模的相对分解">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

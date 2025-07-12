@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>五引理
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Five_Lemma">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>五引理</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        April 28, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="theorem">
+  <p>(单四引理). 给定上下正合列之间的态射, 若相应的竖向实箭头是单射与满射, 则虚线处是单射.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Five_Lemma/diagram_7cc320fde6264.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="proof">
+  <p>计算 ker-复形与 cok-复形如下:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Five_Lemma/diagram_bacb2ca607ec0.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>依照正合复形间的态射, $!$ 处的同调群等于 $0$ 处的同调群. 从而 $! = 0$, 即虚线处态射单.</p>
+</div>
+
+<div class="theorem">
+  <p>(满四引理). 给定上下正合列之间的态射, 若相应的竖向实箭头是单射与满射, 则虚线处是满射.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Five_Lemma/diagram_e366eb40b3c54.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="proof">
+  <p>计算 ker-复形与 cok-复形如下:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Five_Lemma/diagram_67a92cd38814b.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>依照正合复形间的态射, $!$ 处的同调群等于 $0$ 处的同调群. 从而 $! = 0$, 即虚线处态射满.</p>
+</div>
+
+<div class="theorem">
+  <p>(五引理). 给定上下正合列之间的态射, 若相应的竖向实箭头是单射, 满射以及同构, 则虚线处是同构.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Five_Lemma/diagram_d9421a8c479f2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="proof">
+  <p>计算 ker-复形与 cok-复形如下:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Five_Lemma/diagram_fcb29932cbeed.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>依照正合复形间的态射, $!$ 处的同调群等于 $0$ 处的同调群. 从而 $! = 0$, 即虚线处态射是同构.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Four_Lemma"
+        title="NEXT: 四引理 (推出拉回)">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/First_Five_Terms"
+        title="PREV: 前五项">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

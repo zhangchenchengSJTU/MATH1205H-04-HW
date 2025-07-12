@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>八面体公理的等价定义
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Long_Exact_Seq_Extriangulated">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>八面体公理的等价定义</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 21, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="theorem">
+  <p>(函子的同调长正合序列). 给定 $𝔼$-三角 $𝔰 (δ ) = [A\xrightarrow f B \xrightarrow g C]$, 则有六项反变函子的长正合列</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Long_Exact_Seq_Extriangulated/diagram_0dd354135291a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>需要提及, $𝔼(-, B)$ 处的正合性需要 ET4, 前五项长正合列仅通过 ET1, ET2, 与 ET3 推得.</p>
+  <div class="proof">
+    <p>先看看 $(-,B)$ 处正合性.</p>
+    <ol>
+      <li>由函子性, $\ker (g ∘ - ) ⊇ \mathrm{im}(f ∘ -)$.</li>
+      <li>若 $h ∈ \ker (g ∘ - )$, 则有 $𝔼$ 三角间的交换图         <center> <br /> <div class="tikz-diagram">
+            <embed src="/website/svg/Long_Exact_Seq_Extriangulated/diagram_fa8020e23107c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+          </div> <br /> </center>
+        <p>因此 $h ∈ \mathrm{im}(f ∘ -)$.</p>
+      </li>
+    </ol>
+    <p>再看 $(-,C)$ 处正合性.</p>
+    <ol>
+      <li>对任意 $h ∈ \mathrm{im}(g ∘ - )$, 不妨记作 $g ∘ l$. 下证明 $δ_!(g ∘ l) = 0$. 由定义, 只需证明 $l^∗g^∗δ = 0$. 下图表明 $g^∗ δ =0_∗ (0)$:         <center> <br /> <div class="tikz-diagram">
+            <embed src="/website/svg/Long_Exact_Seq_Extriangulated/diagram_e78608087e653.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+          </div> <br /> </center>
+      </li>
+      <li>若 $δ_!(h) = 0$, 下证明 $h$ 通过 $g$ 分解. 由 $𝔰(δ_!(h))$ 是可裂短正合列, 对于中项加上适当的同构, 得交换图         <center> <br /> <div class="tikz-diagram">
+            <embed src="/website/svg/Long_Exact_Seq_Extriangulated/diagram_8dc53d5a3aae5.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+          </div> <br /> </center>
+        <p>此处 $s$ 即为所求.</p>
+      </li>
+    </ol>
+    <p>下证明 $𝔼 (- ,A)$ 处的正合性.</p>
+    <ol>
+      <li>对任意 $δ_!$ 的像, 即形如 $h^∗ δ$ 的正合列, 下证明 $f_∗(h^∗ δ) = 0$. 直接地, $f_∗ δ = 0$.</li>
+      <li>若 $η ∈ 𝔼 (-, A)$ 满足 $f_∗ η = 0$, 下证明 $η$ 形如 $δ$ 的拉回. 仍不妨设 $f_∗ η$ 是直和形式, 则下图给出分解 $f = sa$:         <center> <br /> <div class="tikz-diagram">
+            <embed src="/website/svg/Long_Exact_Seq_Extriangulated/diagram_acc7f9cfda5a6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+          </div> <br /> </center>
+        <p>由 $f$ 通过 $s$ 分解, ET3 给出的虚线处态射即为所求:</p>
+        <center> <br /> <div class="tikz-diagram">
+            <embed src="/website/svg/Long_Exact_Seq_Extriangulated/diagram_3514fa85c9a81.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+          </div> <br /> </center>
+      </li>
+    </ol>
+    <p>最后考虑 $𝔼(-, B)$ 处的正合性.</p>
+    <ol>
+      <li>一方面, 函子性表明 $\mathrm{ker} (g_∗ )⊇ \mathrm{im}(f_∗)$.</li>
+      <li>另一方面, 若 $g_∗ (η) = 0$, 则有交换图         <center> <br /> <div class="tikz-diagram">
+            <embed src="/website/svg/Long_Exact_Seq_Extriangulated/diagram_8f20ffd97eb32.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+          </div> <br /> </center>
+        <p>此时, 依照 ET4 补全四个 $𝔼$-三角的交换图</p>
+        <center> <br /> <div class="tikz-diagram">
+            <embed src="/website/svg/Long_Exact_Seq_Extriangulated/diagram_dd75e33b0ef55.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+          </div> <br /> </center>
+        <p>此处 $f_∗ κ = η$.</p>
+      </li>
+    </ol>
+  </div>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/cp_complete_oth"
+        title="NEXT: 外三角范畴的 cotorsion pair 的性质">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Inflation_add_Inflation"
+        title="PREV: $i ∈ 𝐈𝐧𝐟 ⇒ \binom if ∈ 𝐈𝐧𝐟$">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>遗传范畴与可裂 torsion pair
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="遗传范畴的 torsion pair">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Hereditary_TP_Split">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>遗传范畴与可裂 torsion pair</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        April 27, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="遗传范畴的-torsion-pair">遗传范畴的 torsion pair</h2>
+
+<p>本节的范畴要求有足够投射对象, 且 tilting 对象 $T$ 使得一切 $(T,X)$ 均是有限生成右 $\mathrm{End}(T)$-模. 一个较弱的条件是 $\mathrm{Hom}$-群有限维.</p>
+
+<p>仿照三角范畴, 定义 Abel 范畴的厚子范畴为, 关于 ses 二推三封闭的全子范畴.</p>
+
+<div class="definition">
+  <p>(遗传范畴). 称 Abel 范畴遗传, 若米田积意义下的 $\mathrm{Ext}^2(-,-)$ 函子消失.</p>
+</div>
+
+<div class="proposition">
+  <p>(<a href="Hereditary_PBPO">证明</a>) 遗传范畴中的满单分解均可补全作推出拉回方块.</p>
+</div>
+
+<div class="theorem">
+  <p>(<a href="Hom_D_Hereditary">证明</a>). 遗传范畴中, $X^∙$ 与 $H^∙(X)$ (同调群构成的轴复形) 导出等价.</p>
+</div>
+
+<div class="definition">
+  <p>(遗传范畴的 Tilting 对象). 称 $T ∈ 𝒜$ 是 tilting 对象, 若 $T$ 生成的厚子范畴是 $𝒜$, 且 $\mathrm{Ext}^1(T,T)=0$.</p>
+</div>
+
+<p>可以发现, 遗传范畴中的 tilting 对象与通常意义的 tilting 模是兼容的.</p>
+
+<ol>
+  <li>遗传对应 $p.\dim T ≤ 1$,</li>
+  <li>$T$ 生成厚子范畴的条件对应 $A$ 的 $𝐚𝐝𝐝(T)$-余消解维度 $≤1$,</li>
+  <li>$\mathrm{Ext}^1(T,T) = 0$ 保持不变.</li>
+</ol>
+
+<div class="theorem">
+  <p>(遗传范畴的 torsion pair, <a href="KerHom_KerExt_TP">证明</a>). 对上述遗传范畴与 tilting 对象 $T$.</p>
+  <ol>
+    <li>$(\ker \mathrm{Ext}^0(T,-), \ker \mathrm{Ext}^1(T,-))$ 是 torsion pair, 记作 $(𝒯, ℱ)$.</li>
+    <li>BB 导出等价给出 $(𝒳 , 𝒴) ≃ (ℱ[1], 𝒯)$.</li>
+    <li>若 $B$ 遗传, 则 $(𝒯, ℱ)$ 可裂.</li>
+  </ol>
+</div>
+
+<p>示意图如下:</p>
+
+<p><img src="https://raw.githubusercontent.com/czhang271828/imgs/New_img//n_imgimage-20250424135358118.png" alt="image-20250424135358118" /></p>
+
+<div class="theorem">
+  <p>(可裂 torsion pair 的等价定义). 称 Abel 范畴 $𝒜$ 中的 torsion pair $(𝒯, ℱ)$ 可裂, 若以下等价命题成立.</p>
+  <ol>
+    <li>$𝒯∪ℱ$ 包含一切不可分解对象.</li>
+    <li>$\mathrm{Ext}_𝒜^1(ℱ, 𝒯) = 0$.</li>
+    <li>$𝒯$ 关于 $τ⁻¹$ 封闭.</li>
+    <li>$ℱ$ 关于 $τ$ 封闭.</li>
+  </ol>
+</div>
+
+<div class="proof">
+  <p>依次证明所有命题与 1. 等价.</p>
+  <ul>
+    <li>
+      <p>(1 ⇒ 2). 对任意 ses $0 → T → E → F → 0$. 由假定, $E ∈ ℱ ⊕ 𝒯$. 上述 ses 的矩阵形式是</p>
+      <p>$$
+  0 → T \xrightarrow {\binom a0} E_𝒯 ⊕ E_ℱ \xrightarrow{(0 \ b)} 0.
+  $$</p>
+      <p>显然 $a$ 与 $b$ 必是同构.</p>
+    </li>
+    <li>
+      <p>(2 ⇒ 1). 若不然, 则存在不可分解的对象 $X ∉ (𝒯 ∪ ℱ)$. 此时存在三项非零的典范短正合列</p>
+      <p>$$
+  0 → tX → X → fX → 0
+  $$</p>
+      <p>由 ses 可裂, 得 $X ∈ 𝒯 ⊕ ℱ$, 与假定矛盾.</p>
+    </li>
+    <li>(1 ⇒ 3). 任取 $T ∈ 𝒯$, 考虑几乎可裂 ses $0 → T → ⨁ E_i → τ⁻¹ T → 0$. 由 $(T,E_i) ≠ 0$, 以及不可分解对象 $E_i ∈ 𝒯 ∪ ℱ$, 只能有 $E_i ∈ 𝒯$. 因此, $τ⁻¹ T ∈ 𝒯$.</li>
+    <li>(3 ⇒ 2 ⇒ 1). 若 $(τ⁻¹𝒯 , ℱ) = 0$, 由 <a href="AR_Formula">AR 公式</a>知 $\mathrm{Ext}^1(ℱ , 𝒯 ) = 0$. 进而有 1.</li>
+    <li>(1 ⇒ 4 ⇒ 1). 与 1 ⇒ 3 ⇒ 1 d 证明完全对偶.</li>
+  </ul>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Happel_Derived_Equivalence"
+        title="NEXT: Happel 的导出等价定理">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Gr_Iso_is_Complete_Iso"
+        title="PREV: $\mathrm{Gr}(f)$ 是同构当且仅当 $𝐟$ 是同构">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

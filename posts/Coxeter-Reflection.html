@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>Coxeter 反射简介
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Coxeter-Reflection">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>Coxeter 反射简介</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 4, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <ul id="markdown-toc">
+  <li><a href="#coxeter-反射-ar-平移的另一表示方式" id="markdown-toc-coxeter-反射-ar-平移的另一表示方式">Coxeter 反射: AR 平移的另一表示方式</a>    <ul>
+      <li><a href="#反射函子初探" id="markdown-toc-反射函子初探">反射函子初探</a></li>
+      <li><a href="#mathjax_protectedjenfav7cssqmathjax_protected-几乎是等价" id="markdown-toc-mathjax_protectedjenfav7cssqmathjax_protected-几乎是等价">$C_i^±$ 几乎是等价</a></li>
+      <li><a href="#完全-coxeter-反射与-ar-转置" id="markdown-toc-完全-coxeter-反射与-ar-转置">完全 Coxeter 反射与 AR 转置</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="coxeter-反射-ar-平移的另一表示方式">Coxeter 反射: AR 平移的另一表示方式</h2>
+
+<p>约定所有 quiver 是有限无环的 (允许重边).</p>
+
+<div class="definition">
+  <p>(sink, source). 给定 $Q = (Q_0, Q_1, s, t)$, 称</p>
+  <ol>
+    <li>$i ∈ Q_0$ 是 sink, 当且仅当 $s^{-1}(i) = ∅$;</li>
+    <li>$i ∈ Q_0$ 是 source, 当且仅当 $t^{-1}(i) = ∅$.</li>
+  </ol>
+</div>
+
+<h3 id="反射函子初探">反射函子初探</h3>
+
+<div class="definition">
+  <p>(图的 Coxeter 反射). 给定 quiver $Q$, 对任意 sink $i ∈ Q_0$, 定义 Coxeter 反射为反转指向 $i$ 的箭头: ̧</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Coxeter-Reflection/diagram_e186caf078590.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>此处, $C_i$ 仅对 sink 定义.</p>
+</div>
+
+<div class="definition">
+  <p>(模 Coxeter 反射). 表示的 Coxeter 反射定义作如下函子</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Coxeter-Reflection/diagram_ec527d9471c7b.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>对给定 $X ∈ 𝐫𝐞𝐩(Q)$, $C_i X ∈ 𝐫𝐞𝐩 (C_iQ)$ 定义如下</p>
+  <ol>
+    <li>$X$ 与 $C_iX$ 在 $X_{≠ i}$ 与 $φ_{≠ [∙ → i]}$ 处相同 (仅有的改变是上图的着色部分);</li>
+    <li>$(C_iX)_i$ 是 $⨁\limits_{t(f) = i}X_{s(f)}$ 的 ker-子模; 态射由投影 $⨁\limits_{t(f) = i}X_{s(f)} ↠ X_{a}$ 诱导.</li>
+  </ol>
+</div>
+
+<div class="note">
+  <p>从 $Q → Q'$ 到 $𝐫𝐞𝐩 (Q) → 𝐫𝐞𝐩 (Q')$ 保持方向.</p>
+</div>
+
+<div class="definition">
+  <p>($C_i^±$). 记 $C_i^+$ 是 sink 处的反射 (以上定义的 $C_i$), $C_i^-$ 是 source 处的反射. 若无歧义, 统一使用 $C_i^±$ 表示图的 Coxeter 反射与模的 Coxeter 反射.</p>
+</div>
+
+<div class="example">
+  <p>(例子, Kronecker quiver). 给定 Kronecker quiver, 相应的 Coxeter 反射如下:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Coxeter-Reflection/diagram_e6148adb8f703.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="lemma">
+  <p>$C_i^±$ 是表示范畴间的加法函子. 其中, $C_i^± (φ)$ 由 kernel 或 cokernel 的泛性质诱导. $C_i^±$ 保持模的直和关系.</p>
+</div>
+
+<h3 id="mathjax_protectedjenfav7cssqmathjax_protected-几乎是等价">$C_i^±$ 几乎是等价</h3>
+
+<div class="proposition">
+  <p>(<a href="Coxeter_PM_Adjoint">证明</a>) 若 $i$ 是 $Q_1$ 的 sink, 则 $C_i^+ : Q_1 ⇄ Q_2 : C_i ^-$ 是互逆的图运算. 此时存在伴随函子: \begin{equation} C_i ^- : \mathbf{rep}_k(Q_2) ⇄ \mathbf{rep}_k(Q_1) : C_i ^+. \end{equation}</p>
+</div>
+
+<div class="example">
+  <p>$Q = →$. 对 $(f : A → B) ∈ 𝐫𝐞𝐩 (→)$, 有以下短正合列</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Coxeter-Reflection/diagram_8b4810b3f9f31.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>最右项是 $𝐫𝐞𝐩$ 中的投射单对象, 从而正合列可列. 确实也有线性空间的直和 $\mathrm{im}(f) ⊕ \mathrm{cok}(f) ≃ B$.</p>
+</div>
+
+<div class="example">
+  <p>容易计算,</p>
+  <ol>
+    <li>(单位, $i$ 是 source). $M ↠ C_i^+ C_i^- M$ 是投影.       <ol>
+        <li>合并 $i$ 处指出的箭头, 得态射 $φ : M_i → ⨁ M_{≠ i}$. 商对象 $C_i^+ C_i^- M$ 在 $i$ 处的分量是 $\mathrm{coim}(φ)$.</li>
+        <li>若 $φ$ 是单的, 则 $M ≃ C_i^+ C_i^- M$.</li>
+        <li>$M ≃ C_i^+ C_i^- M ⊕ S_i^{\dim \ker (φ )}$.</li>
+      </ol>
+    </li>
+    <li>(余单位, $i$ 是 sink) $C_i^- C_i^+ N ↪ N$ 是嵌入.       <ol>
+        <li>合并 $i$ 处指入的箭头, 得态射 $ψ : ⨁ _{ ≠ i} → N_i$. 子对象 $C_i^- C_i ^+$ 在 $i$ 处的分量是 $\mathrm{im}(ψ)$.</li>
+        <li>若 $ψ$ 是满的, 则 $C_i^- C_i^+ N ≃ N$.</li>
+        <li>$N ≃ C_i^- C_i^+ N ⊕ S_i^{\dim \mathrm{cok}(ψ )}$</li>
+      </ol>
+    </li>
+  </ol>
+</div>
+
+<div class="note">
+  <p>反射函子 $C_i^±$ 极大地分离出半单 $S_i$-部分.</p>
+</div>
+
+<div class="lemma">
+  <p>(<a href="Coxeter_Ref_Idem">证明</a>). Coxeter 反射 $C_i^±$ 保持不可分解模; 除了映 $S_i$ 至 $0$.</p>
+</div>
+
+<p>基于以上引理, 不难得到:</p>
+
+<div class="theorem">
+  <p>假定 $C_i ^- : Q_1 ⇆  Q_2 : C_i^+$. 记 $𝐢(Q_i)$ 是 $𝐦𝐨𝐝_{kQ_i}$ 中的不可分解对象 (的同构类), 则以下是双射:</p>
+  <p>$$
+C_i^- : 𝐢 (Q_1 ∖ \{S_i\}) ⇆ 𝐢 (Q_2 ∖ \{S_i\}) : C_i^+.
+$$</p>
+</div>
+
+<div class="example">
+  <p>(反射的例子). 考虑 $D_4$ 型 quiver 的反射, 比较如下 AR quiver:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Coxeter-Reflection/diagram_937b9d4e1ac61.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>可以发现, 在 $C_3^±$ 建立了不可分解对象的双射 ($S(3)$ 除外), 同时保持 $\mathrm{Irr}$-空间维度.</p>
+</div>
+
+<h3 id="完全-coxeter-反射与-ar-转置">完全 Coxeter 反射与 AR 转置</h3>
+
+<p>以下是一个自然的想法: 若存在一列遍历所有 $Q_0$ 的反射 $C_{i_k}^+$ 使得 $C^+_{i_n} \cdots C_{i_1}^+$ 可复合, 则得自函子 $𝐫𝐞𝐩_k(Q) → 𝐫𝐞𝐩_k(Q)$. 实际上, 这一自函子存在且唯一.</p>
+
+<div class="theorem">
+  <p>(完全 Coxeter 反射的存在性与唯一性, <a href="Complete_Coxeter_Reflection">证明</a>). 存在 $σ ∈ 𝔖_{Q_0}$, 使得有自函子</p>
+  <p>$$
+C^+ := C^+_{σ (n)} C^+_{σ (n-1)} \cdots C_{σ (1)}^+ : \mathbf{rep}_k (Q) → \mathbf{rep}_k (Q).
+$$</p>
+  <p>相应地记 $C^- = C^-_{σ (1)}C^-_{σ (2)}\cdots C^-_{σ (n)}$. 特别地, $C^±$ 的定义与置换顺序 $σ$ 无关.</p>
+</div>
+
+<div class="proposition">
+  <p>(<a href="Proj_Inj_Coxeter">证明</a>). 投射模与内射模在完全 Coxeter 分解下的表现如下.</p>
+  <ol>
+    <li>投射模经 $C^+$ 消失, 换言之, $C^+ P = 0$;</li>
+    <li>若 $C^+M = 0$, 则 $M$ 是投射模;</li>
+    <li>$C^+C^-M$ 是不含投射对象的极大直和项;</li>
+    <li>内射模经 $C^-$ 消失, 换言之, $C^- I = 0$;</li>
+    <li>若 $C^-M = 0$, 则 $M$ 是内射模;</li>
+    <li>$C^-C^+M$ 是不含内射对象的极大直和项.</li>
+  </ol>
+</div>
+
+<div class="lemma">
+  <p>(<a href="C_is_tau_for_Proj">证明</a>). 若 $i$ 是 source, 对不可分解投射对象 $P_i ∈ 𝐦𝐨𝐝_{kQ}$, 则 $τ⁻¹ (P_i)$ 与 $C_i^-P_i$ 是 $𝐦𝐨𝐝_{kC_i^- Q}$ 中同构的模.</p>
+</div>
+
+<div class="theorem">
+  <p>(完全 Coxeter 反射就是 AR 平移, <a href="C_is_tau">证明</a>). $C^+ M ≃ τ M$.</p>
+</div>
+
+<p>对偶地, $C^- = τ ⁻¹$.</p>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Quiver-and-Hereditary-Algebra"
+        title="NEXT: 遗传代数与箭图">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/FP_P_I_F"
+        title="PREV: 有限表现模, 投射模, 内射模, 平坦模的结构">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

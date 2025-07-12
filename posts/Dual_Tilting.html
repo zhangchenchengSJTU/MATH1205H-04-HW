@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>对偶 tilting 模的相对分解
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Dual_Tilting">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>对偶 tilting 模的相对分解</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        April 29, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="theorem">
+  <p>(对偶的投射分解). ${_B}T$ 是 tilting 模. 相应地,</p>
+  <ol>
+    <li>$A^∙ → T$ 给出 $B$ 的 $𝐚𝐝𝐝 (T)$-相对内射分解 $B → (A^∙)^T$;</li>
+    <li>$A → T^∙$ 给出 $T$ 的 $𝐚𝐝𝐝 (B)$-相对投射分解 $(T^∙ )^T → T$.</li>
+  </ol>
+</div>
+
+<div class="proof">
+  <p>先证明以下左 $B$-模复形</p>
+  <ol>
+    <li>$(A^∙ → T)^T = [B → (A^∙)^T]$ 与</li>
+    <li>$(A → T^∙)^T = [(T^∙)^T → T]$</li>
+  </ol>
+  <p>是正合复形, 从而构成 $B$ 的 $𝐚𝐝𝐝(T)$-内射分解, 以及 $T$ 的 $𝐚𝐝𝐝(B)$-投射分解.</p>
+  <ul>
+    <li>由维数有限, 以及 $\mathrm{Ext}_A^{≥ T}(T,T)=0$. 对如上两条形如 $(X^∙, T)_A$ 的复形使用<a href="Spectral_sequence_filtered#维数移动">一致的正合性条件</a>即可. 因此, 以上两条 $(X^∙, T)_A$ 确实是正合列.</li>
+  </ul>
+  <p>证明第三条 $\mathrm{Ext}^{≥ 1}_{B^{\mathrm{op}}}(T,T) =0$ 前, 先证明 $A ≃ \mathrm{End}_{B^{\mathrm{op}}}(_BT)$.</p>
+  <ul>
+    <li>
+      <p>考虑 $𝐦𝐨𝐝 _A$ 中相对内射分解 $A_A → T_A^∙$, 则 $_BB^∙ → {}_BT$ 是 $𝐦𝐨𝐝_A$ 中的相对投射分解. 考虑 $A$-代数 $A' := \mathrm{End}(_BT)$, 则有相对内射分解 $A'_A → T_A^∙$. 结合范畴等价</p>
+      <p>$$
+  𝐚𝐝𝐝(A_A)\xrightarrow[∼]{_BT_A} 𝐚𝐝𝐝(_BB)\xrightarrow[∼]{_BT_A} 𝐚𝐝𝐝(A'_A),
+  $$</p>
+      <p>因此, $A'_A$ 与 $A_A$ 是同构的 $A$-模, 从而 $A ≃ A'$.</p>
+    </li>
+  </ul>
+  <p>这给出范畴等价</p>
+  <p>\begin{equation} 𝐚𝐝𝐝 (A_A ⊕ T_A) \xrightarrow[∼]{T_A} 𝐚𝐝𝐝 ({}_B B ⊕ {}_BT). \end{equation}</p>
+  <p>回归命题 $\mathrm{Ext}^{≥ 1}_{B^{\mathrm{op}}}(T,T) =0$, 对 $T$ 作 $A$-投射分解或 $B^{\mathrm{op}}$-投射分解. 考虑双模复形的同构 $(B^∙ , T)_{B^{\mathrm{op}}}≃ (A^∙ , T)_A$, 上述两类投射分解在 $(-)^T$ 下是相同的. 相应地, $\mathrm{Ext}^{≥ 1}_A(T,T) = \mathrm{Ext}^{≥ 1}_{B^{\mathrm{op}}}(T,T) = 0$.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Four_Dim_Equal"
+        title="NEXT: Tilting 模维数无关左右">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/BB_Spectral_Sequence"
+        title="PREV: BB 谱序列">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

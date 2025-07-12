@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>有限型与仿射型 Dynkin 图
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="图示">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Finite_and_Affine_Root_System">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>有限型与仿射型 Dynkin 图</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        April 25, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="图示">图示</h2>
+
+<div class="definition">
+  <p>($A_n$). 该图具有 $n$ 个顶点, 形如</p>
+  <p>$$
+\begin{bmatrix}
+1 & - & 2 & - & \cdots  & - & n
+\end{bmatrix}.
+$$</p>
+</div>
+
+<div class="definition">
+  <p>($D_n$, $n ≥ 3$). 该图具有 $n$ 个顶点, 形如</p>
+  <p>$$
+\begin{bmatrix}
+1 & - & 3 & - & \cdots  & - & n\\
+ &  & \mid  &  &  &  & \\
+ &  & 2 &  &  &  &
+\end{bmatrix}.
+$$</p>
+</div>
+
+<div class="definition">
+  <p>($E_n$, $n = 6,7,8$). 该图具有 $n$ 个顶点, 形如</p>
+  <p>$$
+\begin{bmatrix}
+1 & - & 2 & - & 4 & - & \cdots  & - & n\\
+ &  &  &  & \mid  &  &  &  & \\
+ &  &  &  & 3 &  &  &  &
+\end{bmatrix}.
+$$</p>
+</div>
+
+<p>对于仿射型 Dynkin 图, 将一维空间 $\ker q(-)$ 的特征向量依分量写至顶点处.</p>
+
+<div class="definition">
+  <p>($\widehat {A_n}$). 该图具有 $n + 1$ 个顶点, 形如</p>
+  <p>$$
+\begin{bmatrix}
+1 & - &1 & - & \cdots_{1}  & - & 1 \\
+\mid  &  &  &  &  &  & |\\
+1 & - & 1 & - & \cdots_{1}  & - & 1&
+\end{bmatrix}.
+$$</p>
+  <p>特别地, $\widehat{A_1}$ 形如 $[1 = 2]$.</p>
+</div>
+
+<div class="definition">
+  <p>($\widehat {D_n}$, $n ≥ 4$). 该图具有 $n + 1$ 个顶点, 形如</p>
+  <p>$$
+\begin{bmatrix}
+1 & - & 2 & - & \cdots _{2} & - & 2 & - & 2\\
+ &  & \mid  &  &  &  & | &  & \\
+ &  & 1 &  &  &  & 1 &  &
+\end{bmatrix}
+$$</p>
+</div>
+
+<div class="definition">
+  <p>($\widehat {E_n}$, $n = 6,7,8$). 该图具有 $n + 1$ 个顶点, 其中</p>
+  <p>$$
+\widehat{E_6} := \begin{bmatrix}
+1 & - & 2 & - & 3 & - & 2 & - & 1\\
+ &  &  &  & \mid  &  &  &  & \\
+ &  &  &  & 2 &  &  &  & \\
+ &  &  &  & | &  &  &  & \\
+ &  &  &  & 1 &  &  &  &
+\end{bmatrix},
+$$</p>
+  <p>以及</p>
+  <p>$$
+\widehat{E_7} := \begin{bmatrix}
+1 & - & 2 & - & 3 & - & 4 & - & 3 & - & 2 & - & 1\\
+ &  &  &  &  &  & \mid  &  &  &  &  &  & \\
+ &  &  &  &  &  & 2 &  &  &  &  &  &
+\end{bmatrix},
+$$</p>
+  <p>以及</p>
+  <p>$$
+\widehat{E_8} := \begin{bmatrix}
+1 & - & 2 & - & 3 & - & 4 & - & 5 & - & 6 & - & 4 & - & 2\\
+ &  &  &  &  &  &  &  &  &  & | &  &  &  & \\
+ &  &  &  &  &  &  &  &  &  & 3 &  &  &  &
+\end{bmatrix}
+$$</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Gabriel_1"
+        title="NEXT: Gabriel 主定理 (I)">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/T_Y_Dim"
+        title="PREV: $\dim M$ 与 $\dim (T,M)$">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>$C^± ∼ τ ^±$
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/C_is_tau">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>$C^± ∼ τ ^±$</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 5, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="theorem">
+  <p>(完全 Coxeter 反射就是 AR 平移). $M$, $C^+ M ≃ τ M$.</p>
+</div>
+
+<div class="proof">
+  <p>若 $M$ 是不可分解投射模, 则$C^+ M ≃ 0 ≃ τ M$. 今假定 $M$ 是不可分解非投射模. 考虑</p>
+  <p>$$
+\begin{aligned}
+  C^+M & ≃ (A , C_1^+\cdots C_n ^+M) \\  
+  & ≃ (C_n^-\cdots C_1^- A, M)\\
+  & \overset ⋆ ≃ (τ⁻¹ A, M) \\
+  & ≃ (A, τ M)\\
+  & ≃ τ M.
+\end{aligned}
+$$</p>
+  <p>最后两行是依照遗传代数的 <a href="AR_Formula">AR 公式</a>. 同构 $⋆$ 来自以下两步数学归纳.</p>
+  <ol>
+    <li>依照<a href="C_is_tau_for_Proj">引理</a>, 每一 $C_i^-$ 将原图之 $P_i$ 变作新图之 $τ⁻¹ (P_i)$.</li>
+    <li>对 $j > i$, 由左伴随可交换知 $C_j^-$ 保持 $P_i → τ⁻¹(P_i)$, 也就是 $C_j^-(τ⁻¹ (P_i))≃ τ ⁻¹ (C_j^-(P_i))$.</li>
+  </ol>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/C_is_tau_for_Proj"
+        title="NEXT: $C_i^- (P_i) ≃ τ ⁻¹ (P_i)$">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Kronecker_Rep"
+        title="PREV: Kronecker quiver 的不可分解表示">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

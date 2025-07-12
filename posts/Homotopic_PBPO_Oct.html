@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>八面体公理的等价定义
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Homotopic_PBPO_Oct">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>八面体公理的等价定义</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 12, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<p>给定<a href="Tri_Cat_Def">预三角范畴</a>.</p>
+
+<div class="theorem">
+  <p>(八面体公理的等价定义, <a href="Homotopic_PBPO_Oct">证明</a>). 预三角范畴是三角范畴, 当且仅当</p>
+  <ol>
+    <li>预三角范畴满足八面体公理;</li>
+    <li>任意两个红色态射给出如下三角射与交换图:       <center> <br /> <div class="tikz-diagram">
+          <embed src="/website/svg/Homotopic_PBPO_Oct/diagram_2ed4ffc418ca6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        </div> <br /> </center>
+    </li>
+    <li>给定红色处三角与同伦推出拉回方块, 则可补全下图三角与三角射       <center> <br /> <div class="tikz-diagram">
+          <embed src="/website/svg/Homotopic_PBPO_Oct/diagram_276effd110343.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        </div> <br /> </center>
+    </li>
+  </ol>
+</div>
+
+<div class="proof">
+  <p>(1 ⇒ 2). 如有上图红色箭头, 则依照八面体公理得下图, 回推上图 (证明下行是好三角):</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Homotopic_PBPO_Oct/diagram_39dbbab778ed0.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>只需证明 $c_3$ 是好三角. <br /> <br /> (2 ⇒ 3). 给定 3. 的资料 (上图红色部分), 则可以通过 $2$ 补全 (下图绿色部分):</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Homotopic_PBPO_Oct/diagram_b18e02e024af7.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>由态射嵌入的唯一性, 得 $W ≃ W'$ (这一同构不改变同伦推出拉回方块中的态射). 由 $Z ≃ Z'$, 三角射与同伦推出拉回方块同时相差一个 $φ ∘ \mathrm{id}_Z ∘ φ^{-1}$, 从而保持结论. <br /> <br /> (3 ⇒ 1). 下证明八面体公理: 给定初始资料 (蓝), 取同伦的推出拉回 (红), 依照题设补全四个好三角的交换图 (如下所示)</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Homotopic_PBPO_Oct/diagram_f1a977e2b3fb5.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>继而证明绿色方块的交换性:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Homotopic_PBPO_Oct/diagram_6e0edaf05739c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>依定义, $j$ 恰是同伦推出拉回方块中的态射</p>
+  <p>$$\begin{equation}
+X\xrightarrow{\binom{a_1}{b_1}} Y_2\oplus Y_1\xrightarrow{(- b_2,a_2)} Z\overset j \to X[1].
+\end{equation}$$</p>
+  <p>同理, $-j$ 是同伦推出拉回方块中的态射</p>
+  <p>$$\begin{equation}
+X\xrightarrow{\binom{a_1}{b_1}} Y_2\oplus Y_1\xrightarrow{(b_2,- a_2)} Z\overset {-j} \to X[1].
+\end{equation}$$</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Exact_Cat_Short_Note"
+        title="NEXT: 正合范畴的重要结论 (精简版)">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Homotopic_PBPO"
+        title="PREV: 特殊的同伦推出拉回">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

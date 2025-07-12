@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>$\varprojlim{}_{ℕ}^1$ 是右导出极限
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Proj_is_1_Derivative">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>$\varprojlim{}_{ℕ}^1$ 是右导出极限</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 1, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="definition">
+  <p>(Abel 群的投射塔). 即预层 $\mathrm{PSh}(\mathbb N)$, 其对象 (函子 $M$) 表现做映射链 \begin{equation} \cdots \xrightarrow{m_2} M_2\xrightarrow{m_1} M_1\xrightarrow{m_0} M_0. \end{equation} 记 $m:\prod_{\mathbb N} M_k\to \prod _{\mathbb N}M_k,\quad (x_k)_{k\in \mathbb N}\mapsto (x_k-m_k(x_{k+1}))$ 由泛性质 $\{p_{k}m=m_{k+1}p_{k+1}\}_{k\in \mathbb N}$ 确立. 记正合列</p>
+  <p>\begin{equation} 0\to {\varprojlim}^0 M\to \prod_{\mathbb N} M\xrightarrow{1-m}\prod_{\mathbb N} M\to {\varprojlim}^1 M\to 0. \end{equation}</p>
+  <p>其中, $1-m$ 自动对应如下泛性质确立的序列 ($\oplus$ 强调了双积)</p>
+  <center> <!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHByb2QgTSJdLFsyLDAsIlxccHJvZCBNIl0sWzAsMSwiTV9rXFxvcGx1cyBNX3trKzF9Il0sWzIsMSwiTV9rIl0sWzAsMSwiMS1tIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiKHBfayxwX3trKzF9KSIsMl0sWzEsMywicF9rIl0sWzIsMywiKFxcbWF0aHJte2lkfV97TV9rfSwgLW1fe2srMX0pIiwyXSxbMCwzXV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHByb2QgTSJdLFsyLDAsIlxccHJvZCBNIl0sWzAsMSwiTV9rXFxvcGx1cyBNX3trKzF9Il0sWzIsMSwiTV9rIl0sWzAsMSwiMS1tIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiKHBfayxwX3trKzF9KSIsMl0sWzEsMywicF9rIl0sWzIsMywiKFxcbWF0aHJte2lkfV97TV9rfSwgLW1fe2srMX0pIiwyXSxbMCwzXV0=&amp;embed" width="600" height="180" style="border-radius: 8px; border: dahsed;"></iframe> </center>
+</div>
+
+<div class="problem">
+  <p>${\varprojlim}^1$ 是 $\varprojlim$ 的右导出函子.</p>
+</div>
+
+<div class="proof">
+  <p>证明的关键: 构造内射对象 $M\hookrightarrow I$, 使得 $I$ 的位移算子是满的.</p>
+  <ul>
+    <li>
+      <p>记 $X_{\geq n}: \left[X=X=\cdots = X\to 0\to \cdots 0\right]$ ($n$ 个 $0$ 对象), 则有伴随函子</p>
+      <p>\begin{equation} (Y,X_{\geq n})_{\mathrm{PSh}(\mathbb N)}\simeq (Y_n, X). \end{equation}</p>
+    </li>
+    <li>特别地, 若 $I$ 是 Abel 群范畴的内射对象, 则 $I_{\geq n}$ 亦然 (右伴随保持内射对象).</li>
+    <li>
+      <p>$X_{\geq n}$ 的位移算子是可裂满的. 例如对 $X_{\geq n}$, 其左逆元可以通过以下无穷阵的等式验证 (仍需要回溯一边泛性质的定义):</p>
+      <p>$$
+  \begin{pmatrix}
+    1 &   &   &        \\
+    1 & 1 &   &        \\
+      & 1 & 1 &        \\
+      &   & 1 & \ddots
+  \end{pmatrix} \cdot \begin{pmatrix}
+    1 & -1 &    &        &        \\
+      & 1  & -1 &        &        \\
+      &    & 1  & -1     &        \\
+      &    &    & \ddots & \ddots
+  \end{pmatrix} =\begin{pmatrix}
+    1 &   &   &        \\
+      & 1 &   &        \\
+      &   & 1 &        \\
+      &   &   & \ddots
+  \end{pmatrix}.
+  $$</p>
+    </li>
+    <li>记 $I(M_k)$ 是 $M_k$ 嵌入的内射对象, 则 $\prod (I(M_k))_{\geq k}$ 是 $M$ 嵌入的内射对象, 其 $(1-m)$-型算子也是可裂满 (直积正合).</li>
+  </ul>
+  <p>构造内射分解 $0\to M\xrightarrow{\iota} I_\alpha\xrightarrow{\varphi_{\beta,\alpha}} I_\beta\xrightarrow{\varphi_{\gamma,\beta}}  I_\gamma\to \cdots$. 依照定义, $\varprojlim$ 的一次右导出是 \begin{equation} (R^1\varprojlim)(M)=\frac{\ker (\varprojlim \varphi_{\gamma,\beta})}{\mathrm{im}(\varprojlim \varphi_{\beta,\alpha})}=\frac{\varprojlim (\ker \varphi_{\gamma,\beta})}{\mathrm{im}(\varprojlim \varphi_{\beta,\alpha})}. \end{equation} 对 $0\to M\to I_\alpha\to \ker (\varphi_{\gamma,\beta})\to 0$ 使用正合的直积, 使用蛇引理得长正合列 \begin{equation} 0\to \varprojlim M\xrightarrow{\iota} \varprojlim I_\alpha\xrightarrow{\varphi_{\beta,\alpha}} \varprojlim \ker(\varphi_{\gamma,\beta})\to {\varprojlim}^1 M\to 0. \end{equation} 其余核项等于 $R^1\varprojlim$, 因此 ${\varprojlim}^1$ 确实是 ${\varprojlim}$ 的右导出.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/When_1_m_epi"
+        title="NEXT: $(1-m)$ 满的充分条件">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Proj_0_is_Lim"
+        title="PREV: $\varprojlim{}_{ℕ}^0 = \varprojlim{}_{ℕ}$">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

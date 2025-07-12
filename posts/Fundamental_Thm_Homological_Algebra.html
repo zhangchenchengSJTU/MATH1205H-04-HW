@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>同调代数基本定理
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="同调代数基本定理">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Fundamental_Thm_Homological_Algebra">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>同调代数基本定理</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        April 28, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="同调代数基本定理">同调代数基本定理</h2>
+
+<div class="theorem">
+  <p>(同调代数基本定理). 以下是三种常见形式.</p>
+  <ol>
+    <li>(通常形式). 给定上链复形 (dg-模) 的正合列 $0 → K → X → Q → 0$, 此时有长正合列 \begin{equation} \cdots → H^{p-1} (Q) → H^p (K) → H^p (X) → H^p (Q) → H^{p+1} (K) → \cdots. \end{equation}</li>
+    <li>(同伦形式). 给定复形态射 $f : X → Y$, 取全复形 $E : = \mathrm{Cone}(f)$, 此时有长正合列 \begin{equation} \cdots → H^{p-1} (Y) → H^p (X) → H^p (E) → H^p (Y) → H^{p+1} (X) → \cdots. \end{equation}</li>
+    <li>(正合复形的态射). 给定正合复形间的态射 $f : X → Y$, 则 $H^{p+1}(\ker) ≃ H^{p-1}(\mathrm{cok})$, 即蛇引理.</li>
+  </ol>
+</div>
+
+<div class="example">
+  <p>(通常的同调代数基本定理). 给定上链复形 (dg-模) 的正合列 $0 → K → X → Q → 0$, 取滤过 $X ⊃ K$, 记 $Q = \frac{X}{K}$. 此时</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Fundamental_Thm_Homological_Algebra/diagram_2ffa9042de3aa.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>可以注意到, $E_2 = E_∞$. 拼凑短正合列 (右) 即得长正合列 (左):</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Fundamental_Thm_Homological_Algebra/diagram_b9a23b04de565.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="example">
+  <p>(同伦版本的同调代数基本定理). 给定复形态射 $f : X → Y$, 选定二项滤过 $E:= \mathrm{Cone}(f) ⊃ Y$, 得谱序列</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Fundamental_Thm_Homological_Algebra/diagram_fd974a11eb92a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>此时, $E_1$ 页的微分是 \begin{equation} H^∙(f): H^∙ (X) ↠ \frac{Z_X^∙}{f^{-1}(B_Y^∙)} ≃ \frac{f(Z^∙_X)}{B^∙_Y} ↪ H^∙(Y).<br /> \end{equation} 将 $E_2$ 中全复形的滤过并入 $E_1$, 得长正合列</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Fundamental_Thm_Homological_Algebra/diagram_38ae683b9eaf9.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="proposition">
+  <p>(复形态射基本定理). 给定复形态射 $f : X → Y$, 取全复形 $E : = \mathrm{Cone}(f)$, 以下分别计算两个朝向的谱序列.</p>
+  <ol>
+    <li>($d_0 = f$). 此时 $E_∞ = E_3$, 故 $E_2$ 给出长正合列       <center> <br /> <div class="tikz-diagram">
+          <embed src="/website/svg/Fundamental_Thm_Homological_Algebra/diagram_51062006092f3.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        </div> <br /> </center>
+      <p>此处, 定义 $0 → \ker^∙ → X^∙ → Y^∙ → \mathrm{cok}^∙ → 0$.</p>
+    </li>
+    <li>($d_0 = d_X, d_Y$). 此时 $E_2$ 给出同伦范畴的同调代数基本定理. \begin{equation} \cdots → H^{p-1}(E) → H^{p}(X) → H^{p}(Y) → H^p(E) → \cdots. \end{equation} 整合得两条长正合列       <center> <br /> <div class="tikz-diagram">
+          <embed src="/website/svg/Fundamental_Thm_Homological_Algebra/diagram_7ca1fa09f2005.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        </div> <br /> </center>
+      <p>特别地,</p>
+      <ol>
+        <li>若 $f$ 是单的或满的, 则第二行退化, 得同调代数基本定理;</li>
+        <li>若 $X$ 或 $Y$ 一者是正合复形, 则第一行退化, 得无名定理;</li>
+        <li>若 $X$ 或 $Y$ 均正合, 则 $H^{p+1}(\ker) ≃ H^{p-1}(\mathrm{cok})$, 得蛇引理.</li>
+      </ol>
+    </li>
+  </ol>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Grothendieck_Spectral_Sequence"
+        title="NEXT: Grothendieck 谱序列">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Four_Lemma"
+        title="PREV: 四引理 (推出拉回)">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>$Γ (A)$ 投射部分的态射
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/AR_Proj">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>$Γ (A)$ 投射部分的态射</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 4, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="proposition">
+  <p>对遗传代数,</p>
+  <ol>
+    <li>不可分解投射模之间的态射要么为零, 要么是单的;</li>
+    <li>不可分解内射模之间的态射要么为零, 要么是满的;</li>
+    <li>不可分解投射模是 brick;</li>
+    <li>不可分解内射模是 brick.</li>
+  </ol>
+</div>
+
+<div class="proof">
+  <p>假定 $A$ 是遗传代数, <a href="Hereditary_Alg_Eq_Def">等价定义</a>表明投射模的子模投射, 内射模的商模内射. 依照对称性, 只看 1. 和 3.. <br /> (1. 的证明). 假定 $f : P → Q$ 是不可分解投射对象间的态射, 则 $\operatorname{im}(f)$ 是 $Q$ 的投射子模. 由 $P$ 不可分解, 得 $P ↠ \operatorname{im}(f)$ 或为同构或为 $0$. <br /> (3. 的证明). 假定 $f : P → P$ 是不可分解投射对象的自同态, 则 $f$ 或零或单. 假定 $f$ 单以及 $P$ 不可分解, 由 fitting 引理得 $P = \mathrm{im}f^∞ := ⋂_{n ≥ 1} f^n$, 从而 $f$ 必然是满的. 这说明 $\mathrm{End}(P)$ 是除环, 从而是 brick.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Complete_Coxeter_Reflection"
+        title="NEXT: 完全 Coxeter 反射存在且唯一">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/AR_Finite_No_Multiple_Arrows"
+        title="PREV: 有限表示代数的 AR quiver 无重边">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>NBGC
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="Axioms of NBGC (the Usual Axioms for Algebraists)">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/NBGC">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>NBGC</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 9, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="axioms-of-nbgc-the-usual-axioms-for-algebraists">Axioms of NBGC (the Usual Axioms for Algebraists)</h2>
+
+<p>Throughout, $A$ and $B$ are classes and $C$ and $D$ are sets.</p>
+
+<ol>
+  <li>(外延公理: Axiom of extensionality). CLASSES are equal if and only if they have the same MEMBERS. For all $c ∈ A$, if and only if $c ∈ B$ then $A=B$.
+    <ul>
+      <li>In ZF, (CLASSES, MEMBERS) are replaced by (sets, elements).</li>
+    </ul>
+  </li>
+  <li>(正則公理: Axiom of Regularity). All non-empty CLASSES are disjoint from at least one of their MEMBERS.
+    <ul>
+      <li>In ZF, (CLASSES, MEMBERS) are replaced by (sets, elements).</li>
+    </ul>
+  </li>
+  <li>(分離公理模式: Axiom (Schema) of Class Comprehension/Separation/Specification, it is an axiom schema because there is one axiom for each $ϕ$) For any formula $ϕ$ which does not quantify over CLASS, there is a CLASS $A$ such that $x ∈ A$ if and only if $ϕ(x)$ is true, i.e,
+$$\begin{equation}
+     ∀ z∀ w_{1}∀ w_{2}\ldots ∀ w_{n}∃ y∀ x[x∈ y ⇔ ((x ∈ z)∧ φ (x,w_{1},w_{2},\ldots,w_{n},z))],
+   \end{equation}$$
+where $(z,w_1,w_2,\ldots, w_n,x)$ are free variables ($y$ is not free).
+    <ul>
+      <li>Axiom of Empty Set is a corollary.</li>
+      <li>In ZF, CLASSES is replaced by sets.</li>
+    </ul>
+  </li>
+  <li>(配對公理: Axiom of Pairing). For any two sets $C$ and $D$, there is a set with exactly $C$ and $D$ as elements.
+    <ul>
+      <li>It is exactly the same as the Axiom of Pairing in ZF.</li>
+    </ul>
+  </li>
+  <li>(併集公理: Axiom of Union). you can take the union of any set of sets.
+    <ul>
+      <li>It is exactly the same as the Axiom of Union in ZF.</li>
+    </ul>
+  </li>
+  <li>(替換公理模式: Axiom (Schema). of Replacement/Collection/Size, also 6 names) For any CLASS $A$, there is a set $c$ such that $c=\mathrm{Rep}(A)$ if and only if there is no total one-to-one function between $A$ and the CLASS of all sets. This is the one that creates that definition of classes as things too big to be sets.
+    <ul>
+      <li>This theorem has a weakened form, which is a the same as that in ZF. Under this stronger form, one can prove that the sub-class of a set is also a set.</li>
+    </ul>
+  </li>
+  <li>(無窮公理: Axiom of Infinity). There exists a set $N$ where:
+    <ol>
+      <li>The empty set $∅$ is an element of $N$</li>
+      <li>and for each element $x ∈ N$, $x ∪ \{x\} ∈ N$;</li>
+    </ol>
+
+    <ul>
+      <li>It is exactly the same as the Axiom of Infinity in ZF.</li>
+    </ul>
+  </li>
+  <li>(冪集公理: Axiom of Powerset). For any set $x$, there is a set which contains all of the subsets of $x$.
+    <ul>
+      <li>It is exactly the same as the Axiom of Powerset in ZF.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>When non-set-theoretic mathematicians talk about NBG, AC for Sets or even Axiom of Global Choice is possibly included.</p>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Additive_Localisation"
+        title="NEXT: 加法范畴的局部化">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/Morphism_Directed"
+        title="PREV: 预投射分支的态射单向性">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>

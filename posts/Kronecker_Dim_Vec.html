@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>Kronecker quiver 中预投射与预内射模的维数向量
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="证明">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/website/assets/favicon.png">
+<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
+<link rel="stylesheet" href="/website/assets/core.css">
+<link rel="canonical" href="/website/posts/Kronecker_Dim_Vec">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/website/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main>
+  <article>
+    <div class="center">
+      <h1>Kronecker quiver 中预投射与预内射模的维数向量</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        May 5, 2025
+      </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="证明">证明</h2>
+
+<div class="lemma">
+  <p>以下是预投射模与预内射模的的维数向量.</p>
+  <ol>
+    <li>预投射模的维数向量是 $\binom{n}{n + 1}$;</li>
+    <li>
+      <p>预投射模在同构的意义下形如</p>
+      <p>$$
+   k^n \ \overset A {\underset B ⇉} \ k^{n+1},\quad A = \binom{I_n}{0}, \ B = \binom{0}{I_n} ∈ k^{n × (n+1)}.
+   $$</p>
+    </li>
+    <li>预内射模的维数向量是 $\binom{n+1}{n}$.</li>
+    <li>
+      <p>预内射模在同构的意义下形如</p>
+      <p>$$
+   k^{n+1} \ \overset A {\underset B ⇉} \ k^{n},\quad A = \binom{I_n}{0}^T, \ B = \binom{0}{I_n}^T ∈ k^{(n+1) × n}.
+   $$</p>
+    </li>
+  </ol>
+</div>
+
+<div class="proof">
+  <p>仅看前两点. 若 $M$ 预投射, 当且仅当 $M$ 在有限次 $C^+$ 后变作零. 记 $𝐝𝐢𝐦 M = mn$, 依照</p>
+  <p>$$
+\begin{pmatrix}
+3 & -2 \\ 2 & -1
+\end{pmatrix} ^k = \begin{pmatrix}
+2k + 1 & -2k \\ 2k & -2k + 1
+\end{pmatrix}
+$$</p>
+  <p>得 $𝐝𝐢𝐦 (C^+)^q M = \binom{m + 2q (m-n)}{n + 2q (m-n)}$. 依照预投射的定义, 存在 $q$ 使得 $𝐝𝐢𝐦 (C^+)^q M ∈ \{\binom 01, \binom 12\}$. 容易验证, $M$ 预投射当且仅当 $m + 1 = n$. <br /> 往后归纳地计算 $τ^{-k} P(1)$ 与 $τ^{-k} P(2)$ 即可.</p>
+</div>
+
+
+  </article>
+
+  <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/Kronecker_Regular"
+        title="NEXT: Kronecker quiver 的 regular 模">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
+    
+    <a
+      class="home"
+      href="/website/"
+      title="Back to Homepage">Home</a>
+    
+      <span>
+        &middot;
+      </span>
+      <a
+        class="prev"
+        href="/website/posts/C_is_tau_for_Proj"
+        title="PREV: $C_i^- (P_i) ≃ τ ⁻¹ (P_i)$">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>
