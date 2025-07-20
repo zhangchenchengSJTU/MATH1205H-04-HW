@@ -3,7 +3,274 @@
   <channel>
     <title>Jekyll Latex</title>
     <description>A pretty good Jekyll theme</description>
-    <link>http://localhost:4000/website</link>
+    <link>https://zhangchenchengsjtu.github.io/website</link>
+    
+      
+        <item>
+          <title>2025-07-23-讨论班</title>
+          <description>&lt;h2 id=&quot;lecture-1&quot;&gt;Lecture 1&lt;/h2&gt;
+
+&lt;div class=&quot;abstract&quot;&gt;
+  &lt;h5 id=&quot;abstract&quot;&gt;Abstract&lt;/h5&gt;
+  &lt;div&gt;
+    &lt;p&gt;Throughout these lectures, we discuss and construct explicit examples of cotorsion theory. The categories of modules and chain complexes over rings serve as our principal examples, wherein we demonstrate how set-theoretic techniques may be employed to construct cotorsion pairs.&lt;/p&gt;
+    &lt;p&gt;During the initial few lectures, we follow &lt;a href=&quot;https://zhangchenchengsjtu.github.io/website/assets/PDF/RHA-1.pdf&quot;&gt;RHA-1&lt;/a&gt; and &lt;a href=&quot;https://zhangchenchengsjtu.github.io/website/assets/PDF/RHA-2.pdf&quot;&gt;RHA-2&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;We also introduce certain aspects of the theory of chain complexes over rings, which might be atypical in most standard textbooks.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Throughout,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$R$: a unital (not necessarily commutative) ring,&lt;/li&gt;
+  &lt;li&gt;$𝐌𝐨𝐝 _R \quad (≃ 𝐏𝐒𝐡_{𝐀𝐛}(R))$: the category of &lt;strong&gt;right&lt;/strong&gt; $R$-modules,&lt;/li&gt;
+  &lt;li&gt;$C(R)$: the category of chain complexes over $𝐌𝐨𝐝 _R$,
+    &lt;ul&gt;
+      &lt;li&gt;our convension is $\cdots → X^k \xrightarrow {d^k} X^{k+1} → \cdots$,&lt;/li&gt;
+      &lt;li&gt;$Σ$ and $Σ ^{-1}$ denote the suspension and desuspension functors respectively.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;$𝐏𝐫𝐨𝐣 (\mathcal{C})$: the class (or full subcategory) of projectives in $\mathcal{C}$,&lt;/li&gt;
+  &lt;li&gt;$𝐈𝐧𝐣 (\mathcal{C})$: the class (or full subcategory) of injectives in $\mathcal{C}$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;preliminaries&quot;&gt;Preliminaries&lt;/h2&gt;
+
+&lt;p&gt;We review some basic definitions and notions in homological algebra. We employ&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$∐$ to denote &lt;strong&gt;coproducts&lt;/strong&gt;,&lt;/li&gt;
+  &lt;li&gt;$∏$ for &lt;strong&gt;products&lt;/strong&gt;, and&lt;/li&gt;
+  &lt;li&gt;$⨁$ specifically when $∐ \xrightarrow{∼} ∏$, For example, $⨁_{n ∈ ℤ} Σ^n M_n$ represents the sum of stalk complexes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The symbols $\varinjlim$ and $\varprojlim$ are utilised for &lt;strong&gt;colimits&lt;/strong&gt; (injective limits) and &lt;strong&gt;limits&lt;/strong&gt; (projective limits), respectively; in particular, the superscript $fil$ in $\varinjlim^{fil}$ indicates the &lt;strong&gt;filtered colimits&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(Preserving, reflecting, and creating). We explain by functors between Abelian categories. Given $F : \mathcal{A} → \mathcal{B}$:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$F$ is said to &lt;strong&gt;preserve&lt;/strong&gt; or &lt;strong&gt;commute with&lt;/strong&gt; $\ker$, if any $0 → K \xrightarrow i X \xrightarrow f Y$ is exact in $\mathcal{A}$ implies $0 → F(K) \xrightarrow {F(i)} F(X) \xrightarrow {F(f)} F(Y)$ is exact in $\mathcal{B}$.&lt;/li&gt;
+    &lt;li&gt;$F$ is said to &lt;strong&gt;reflect&lt;/strong&gt; $\ker$, if any $0 → F(K) \xrightarrow {F(i)} F(X) \xrightarrow {F(f)} F(Y)$ is exact in $\mathcal{B}$ implies $0 → K \xrightarrow i X \xrightarrow f Y$ is exact in $\mathcal{A}$.&lt;/li&gt;
+    &lt;li&gt;$F$ is said to &lt;strong&gt;create&lt;/strong&gt; $\ker$, if any $0 → H \xrightarrow {φ } F(X) \xrightarrow {F(f)} F(Y)$ is exact in $\mathcal{B}$ implies the existence of the exact sequence $0 → K \xrightarrow i X \xrightarrow f Y$ in $\mathcal{A}$, such that $F(K) = H$ and $F(i) = φ$.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Demonstrate that&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;a fully faithful functor reflects limits;&lt;/li&gt;
+    &lt;li&gt;the left/right adjoint functor preserves all limits/colimits, respectively;&lt;/li&gt;
+    &lt;li&gt;for a &lt;a href=&quot;https://en.wikipedia.org/wiki/Subcategory#Types_of_subcategories&quot;&gt;Freydal luff&lt;/a&gt; sub-diagram $ι : Q' → Q$, the functor $ι ^∗ : 𝐅𝐮𝐧𝐜𝐭 (Q, \mathcal{C}) → 𝐅𝐮𝐧𝐜𝐭 (Q', \mathcal{C})$ creates all limits and colimits,       &lt;ul&gt;
+        &lt;li&gt;&lt;strong&gt;corollary: the (co)limits in $C(R)$ are computed objectwise!&lt;/strong&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;the forgetful functor $𝐌𝐨𝐝 _R → 𝐒𝐞𝐭𝐬$ creates all limits and filtered colimits,       &lt;ul&gt;
+        &lt;li&gt;&lt;strong&gt;corollary: the filtered colimits and limits in $𝐌𝐨𝐝 _R$ are computed elementwise!&lt;/strong&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Exactness). Left/right exact functors are &lt;strong&gt;precisely&lt;/strong&gt; those &lt;strong&gt;preserving&lt;/strong&gt; &lt;strong&gt;finite&lt;/strong&gt; limits/colimits, respectively. A functor is termed &lt;strong&gt;exact&lt;/strong&gt; if it is both left and right exact.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Grothendieck’s &lt;strong&gt;AB conditions&lt;/strong&gt;). See &lt;a href=&quot;https://stacks.math.columbia.edu/tag/079A&quot;&gt;stacks&lt;/a&gt;, or &lt;a href=&quot;https://ncatlab.org/nlab/show/additive+and+abelian+categories&quot;&gt;n-lab&lt;/a&gt;.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;The conditions AB3, AB3$^∗$, AB4, AB4$^∗$, and AB5 are standard in both $𝐌𝐨𝐝 _R$ and $C(R)$. &lt;strong&gt;We assert the isomorphisms such as $∏ \operatorname{cok}(f_∙ ) \xrightarrow ∼ \operatorname{cok}(∏ f_∙ )$ without further elaboration throughout these lectures.&lt;/strong&gt;&lt;/li&gt;
+    &lt;li&gt;The author refined the statement of AB6 in n-lab during a rather uneventful afternoon. Nevertheless, AB6 is not considered significant within the context of homological algebra.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;functors-for-chain-complexes&quot;&gt;Functors for Chain Complexes&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Chain complexes). We unfold $(X, d)$ into&lt;/p&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/20250723Talk/diagram_655952819e15f.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+  &lt;p&gt;Here $Z → X → ΣB$, $B → X → C$, $B → Z → H$ and $H → C → Σ B$ are &lt;strong&gt;ses&lt;/strong&gt; (short exact sequences). The $ZXHC$ squares are both pushouts and pullbacks.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;The functors $Z$, $B$, $C$ and $H$ preserve $∐$, $∏$, and $\varinjlim^{fil}$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;All $Z$, $B$, $C$ and $H$ are defined by kernels and cokernels, which are preserved by exact functors.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The adjunctions confer truncations and $C$, $Z$ with favourable properties. We readily verify the necessary aspects, thereby eschewing the deeper structures (e.g., Dold-Kan correspondence).&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;We set&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$(-)^k : C(R) → 𝐌𝐨𝐝 _R, \quad X ↦ X^k$,&lt;/li&gt;
+    &lt;li&gt;$\overline {(?)}: 𝐌𝐨𝐝 _R → C(R),\quad M ↦ [\cdots → 0 → \overset{\deg = 0} M = \overset{\deg = 1}M → 0 → \cdots]$;&lt;/li&gt;
+    &lt;li&gt;$\underline {(?)} : 𝐌𝐨𝐝 _R → C(R), \quad M ↦ [\cdots → 0 → \overset{\deg = 0} M → 0 → \cdots]$.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show the adjoint triple $(-)^1 ⊣ \overline {(-)} ⊣ (-)^0$, and extend it to an adjoint $∞$-ple.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show that $C^0 ⊣ (-) ⊣ Z^0$. We shall derive these functors later.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;resolving-chain-complexes&quot;&gt;Resolving Chain Complexes&lt;/h3&gt;
+
+&lt;p&gt;We analysis the projectives and injectives.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$C(R)$ has enough projectives, consisting of null-homotopic complexes with projective components.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;$⊇$ is clear. Conversely, we take projective object $P ∈ C(R)$, and find that&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;$P$ has projective components, since it lifts epimorphisms of stalk complexes;&lt;/li&gt;
+      &lt;li&gt;$P$ is null-homotopic, since $0 → P → \mathrm{Cone}({1_P}) → Σ P → 0$ splits, yielding $1_P$ is null-homotopic.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$C(R)$ has enough injectives, consisting of null-homotopic complexes with injective components.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Demonstrate that acyclic projective complexes are not necessarily projective. Hint: Let $R := k[x] / (x^2)$, and consider $X := [\cdots \to R \xrightarrow{\,\cdot x\,} R \xrightarrow{\,\cdot x\,} R \to \cdots]$, which is acyclic and projective; however, $X$ is not null-homotopic, as $X \otimes (x)$ is not acyclic.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;The adjunction $∞$-ple extends to $\mathrm{Ext}$-groups. For instance, $\mathrm{Ext}^k_R((-)^1, ?) ≃ \mathrm{Ext}^k_{C(R)}(-, \overline ?)$, and $\mathrm{Ext}^k_R(-, (?)^0) ≃ \mathrm{Ext}^k_{C(R)}(\overline -, ?)$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;All these functors preserves projective and injective resolutions.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The resolutions in related to $\underline {(-)}$ functors are much more complicated, since $\underline {(-)}$ does not preserve projectives and injectives in general. We begin with an easy example.&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;$Z^0(-) ≃ (\underline R, -)$, and $\mathrm R^k (Z^0) = H^k$ for $k ≥ 1$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We choose the projective resolution of $\underline R$ as&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+P^∙ (\underline R) := \cdots → Σ ^k \overline R → \cdots → Σ \overline R → \overline R ↠ \underline R → 0,
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;where $Ω ^k (\underline R) = Σ ^k (\underline R)$. We see that&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+(P^∙(\underline R), X) = \cdots → 0 → X^0 \xrightarrow {d^0} X^1 \xrightarrow {d^1} X^2 → \cdots,
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;Taking $H^∙$ yields the desired results.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The result generalises to Abelian category with enough projectives.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;Assume $\mathcal{A}$ has enough projectives. $\mathrm R^k (Z^0) = H^k$ for $k ≥ 1$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We take Eilenberg-Cartan resolution of $X$, i.e., firstly take injective resolutions for $H$-groups and $B$-groups, and then construct the resolutions for $Z$, $C$ and $X$ in steps with horseshoe lemma. The resulting complex looks like&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/20250723Talk/diagram_10edb38cfa68b.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;We denote this by $X ↪ \widetilde{I^0} → \widetilde{I^1} → \cdots$, and remend it into an injective resolutions by&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;$I^0$ is injective with $I^0(B^k ⊕ B^{k+1}) ⊕ I^0 (H^k ⊕ H^{k+1})$ on the $k$-th component,&lt;/li&gt;
+      &lt;li&gt;$I^1$ is injective with $I^1(B^k ⊕ B^{k+1}) ⊕ I^1 (H^k ⊕ H^{k+1}) ⊕ I^0 (H^{k+1} ⊕ H^{k+2})$ on the $k$-th component,&lt;/li&gt;
+      &lt;li&gt;$I^n$ is injective with $I^n(B^k ⊕ B^{k+1}) ⊕ ⨁_{0 ≤ s ≤ n} I^{n-s} (H^{k+s} ⊕ H^{k+s+1})$ on the $k$-th component,and so on.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Applying $Z^k(-)$ at $I^0 → I^1 → \cdots$, we obtain&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/20250723Talk/diagram_77bf041b15a14.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;The rows are injective resolutions of $Z^k$, $H^{k+1}$, etc. The cohomomology groups are computed as $Z^k$, $H^{k+1}$, etc.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It is noteworthy that the preceding computation admits an &lt;strong&gt;$\mathcal{X}$-relative version&lt;/strong&gt;, provided that there exist &lt;strong&gt;sufficiently many monomorphisms&lt;/strong&gt; from $\mathcal{A}$ to $\mathcal{X}$. Observe that a &lt;a href=&quot;Horse_Shoe_Lemma&quot;&gt;relative version of the horseshoe lemma&lt;/a&gt; is available, and consequently, a relative version of Eilenberg-Cartan resolutions is obtained.&lt;/p&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Verify that the resolutions remain diagonal during the above procedure.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;closed-monoidal-structure&quot;&gt;Closed Monoidal Structure&lt;/h3&gt;
+
+&lt;p&gt;We show that over the &lt;strong&gt;commutative&lt;/strong&gt; ring $R$, $C(R)$ is symmetric closed monoidal.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Tensor product). We define $X ^∙ ⊗ Y ^ ∙$ as an object in $C(R)$ by&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$∐_{p+q = n} X^p ⊗ Y^q$ as the $n$-th component,&lt;/li&gt;
+    &lt;li&gt;the differential $d_{X ⊗ Y} = (1_X ⊗ d_Y + d_X ⊗ 1_Y)$ satisfies Koszul sign rule ($(f ⊗ g) (x ⊗ y) = (-1)^{\deg g ⋅ \deg x}(fx ⊗ gy)$), i.e., $d_{X ⊗ Y} (x ⊗ y) = d_X (x) ⊗ y + (-1)^{\deg x} x ⊗ d_Y (y)$ for homogeneous elements $x$ and $y$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show the natural isomorphism $α _{X,Y,Z} : X ⊗ (Y ⊗ Z) \xrightarrow ∼ (X ⊗ Y) ⊗ Z$ as well as the &lt;a href=&quot;https://kerodon.net/tag/00BY&quot;&gt;pentagon identity&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show that $\underline R$ is unital element, i.e., there are natural isomorphisms $X ⊗ \underline R \xrightarrow ∼ X \xleftarrow ∼ \underline R ⊗ X$ satisfying the &lt;a href=&quot;https://kerodon.net/tag/00CH&quot;&gt;triangle identities&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;The morphism $B _{X,Y} : X ⊗ Y \xrightarrow ∼ Y ⊗ X$ characterised by&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+X^p ⊗ Y^q → (-1) ^{pq} ⋅ Y^q ⊗ X^p,\quad x ⊗ y ↦ (-1)^{pq} y ⊗ x
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;is a natural isomorphism satisfying the &lt;a href=&quot;https://ncatlab.org/nlab/show/symmetric+monoidal+category#:~:text=obey%20the%20first-,hexagon%20identity,-%3A&quot;&gt;hexagon identity&lt;/a&gt;.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We take $τ : a ⊗ b ↦ b ⊗ a$ for modules, and wish there exist a some $ε : ℤ × ℤ → \{± 1\}$ along with the commutative diagram&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/20250723Talk/diagram_3e86ad4d5315f.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;We see from the above diagram that $ε (p,q) = (-1)^{pq}$ is a solution:&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/20250723Talk/diagram_bdaa4934d246e.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;We finally show hexagon identity:&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/20250723Talk/diagram_fb7277d2b79e6.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;Observe that $(-1)^{pq} ⋅ (-1)^{qr} ⋅ (-1)^{rp} = 1$ as we keeping track of the signs at $X^p ⊗ Y^q ⊗ Z^r$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We finally show the &lt;strong&gt;natural&lt;/strong&gt; right adjoint of $X ⊗ -$ by construction.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;($̋\mathcal{HOM}(-, ?)$). We define $\mathcal{HOM}(X, Y)$ as an object in $C(R)$ by&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(\mathcal{HOM}(X,Y))^p$ consists of morphisms in $(X, Y)_{\text{Graded-Module}}$ of degree $p$, i.e., homogeneous morphisms in $(X, Σ ^p Y)_{\text{Graded-Module}}$;&lt;/li&gt;
+    &lt;li&gt;the differential for a homogeneous morphism $f$ is $[f,d] := f∘ d_X - (-1)^{\deg f}d_Y ∘ f$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Clearly,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$Z^0(\mathcal{HOM}(X,Y)) = (X,Y)_{C(R)}$;&lt;/li&gt;
+  &lt;li&gt;$B^0(\mathcal{HOM}(X,Y)) ⊆ (X,Y)_{C(R)}$ consists of null-homotopic morphisms;&lt;/li&gt;
+  &lt;li&gt;$H^0(\mathcal{HOM}(X,Y)) = (X,Y)_{K(R)}$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;The adjunction $(X ⊗ -) ⊣ \mathcal{HOM}(X, -)$ is natural in $X.
+
+&lt;div class='proof'&gt;&lt;p&gt;We show $\mathcal{HOM}(X ⊗ Y, Z) ≃ \mathcal{HOM}(X, \mathcal{HOM}(Y,Z))$ is natural in $X$, $Y$ and $Z$. Taking $Z^0$ yields the adjunction. Componentwise, we have&amp;lt;/p&amp;gt;&lt;/p&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/20250723Talk/diagram_d7871ca45dd71.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+  &lt;p&gt;Hence,&amp;lt;/div&amp;gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-07-20T00:00:00+08:00</pubDate>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/20250723Talk</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/20250723Talk</guid>
+        </item>
+      
     
       
         <item>
@@ -21,8 +288,8 @@
 
 </description>
           <pubDate>2025-07-08T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Completion_of_triangulated_Cat</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Completion_of_triangulated_Cat</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Completion_of_triangulated_Cat</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Completion_of_triangulated_Cat</guid>
         </item>
       
     
@@ -1063,8 +1330,8 @@ X \xrightarrow[∈ S_{cell}]{} \varinjlim {}_{&lt; γ } X_∙ = X_γ \xrightarro
 
 </description>
           <pubDate>2025-06-30T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Note-on-Quillen-Model-Structure</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Note-on-Quillen-Model-Structure</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Note-on-Quillen-Model-Structure</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Note-on-Quillen-Model-Structure</guid>
         </item>
       
     
@@ -1214,8 +1481,8 @@ K^{+, b}(\mathcal{I}) \simeq D^b(\mathcal{A}),\quad K^+(\mathcal{I}) \simeq D^+(
 
 </description>
           <pubDate>2025-06-22T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/DG_Cat</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/DG_Cat</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/DG_Cat</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/DG_Cat</guid>
         </item>
       
     
@@ -1687,8 +1954,8 @@ where $\mathcal{G}$ is the set of compact generators, $\mathcal{K}$ the class of
 &lt;/div&gt;
 </description>
           <pubDate>2025-06-06T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Brown-Resolution</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Brown-Resolution</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Brown-Resolution</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Brown-Resolution</guid>
         </item>
       
     
@@ -1980,8 +2247,8 @@ F(-) ≃ \mathrm{im}(ι ∘ π) = \mathrm{im}((-,α)) ≃  (-, M)
 &lt;p&gt;投射对象由 $(-, N) ∈ 𝐟𝐩 (𝒜 ^{\mathrm{op}}, 𝐌𝐨𝐝_k)$ 变作 $(N, -) ∈ 𝐟𝐩 (𝒜 , 𝐌𝐨𝐝 _k)$. 简单地说, 底范畴的箭头反转, 函子范畴的箭头不变.&lt;/p&gt;
 </description>
           <pubDate>2025-05-23T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/20250523Talk</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/20250523Talk</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/20250523Talk</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/20250523Talk</guid>
         </item>
       
     
@@ -4478,8 +4745,8 @@ The axioms of $S$ includes CL1-5, as well as reasonable closure that $S$ contain
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-23T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Diagram_Thm_Extri</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Diagram_Thm_Extri</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Diagram_Thm_Extri</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Diagram_Thm_Extri</guid>
         </item>
       
     
@@ -4533,8 +4800,8 @@ The axioms of $S$ includes CL1-5, as well as reasonable closure that $S$ contain
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Stable_Adjoint</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Stable_Adjoint</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Stable_Adjoint</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Stable_Adjoint</guid>
         </item>
       
     
@@ -4572,8 +4839,8 @@ The axioms of $S$ includes CL1-5, as well as reasonable closure that $S$ contain
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Equi_Def_Hovey_CP</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Equi_Def_Hovey_CP</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Equi_Def_Hovey_CP</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Equi_Def_Hovey_CP</guid>
         </item>
       
     
@@ -4608,8 +4875,8 @@ The axioms of $S$ includes CL1-5, as well as reasonable closure that $S$ contain
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/cp_complete_oth</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/cp_complete_oth</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/cp_complete_oth</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/cp_complete_oth</guid>
         </item>
       
     
@@ -4675,8 +4942,8 @@ The axioms of $S$ includes CL1-5, as well as reasonable closure that $S$ contain
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Long_Exact_Seq_Extriangulated</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Long_Exact_Seq_Extriangulated</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Long_Exact_Seq_Extriangulated</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Long_Exact_Seq_Extriangulated</guid>
         </item>
       
     
@@ -4735,8 +5002,8 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Inflation_add_Inflation</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Inflation_add_Inflation</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Inflation_add_Inflation</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Inflation_add_Inflation</guid>
         </item>
       
     
@@ -4792,8 +5059,8 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Ideal_Quotient</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Ideal_Quotient</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Ideal_Quotient</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Ideal_Quotient</guid>
         </item>
       
     
@@ -4839,8 +5106,8 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Homotopic_PBPO_Extri</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Homotopic_PBPO_Extri</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Homotopic_PBPO_Extri</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Homotopic_PBPO_Extri</guid>
         </item>
       
     
@@ -4873,8 +5140,8 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Enough_Proj_Cotorsion</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Enough_Proj_Cotorsion</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Enough_Proj_Cotorsion</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Enough_Proj_Cotorsion</guid>
         </item>
       
     
@@ -4906,8 +5173,8 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/EX3_Analogue_Extri</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/EX3_Analogue_Extri</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/EX3_Analogue_Extri</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/EX3_Analogue_Extri</guid>
         </item>
       
     
@@ -4943,8 +5210,8 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/4_times_4_extri</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/4_times_4_extri</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/4_times_4_extri</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/4_times_4_extri</guid>
         </item>
       
     
@@ -5099,8 +5366,8 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-20T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Model-Extriangulatd</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Model-Extriangulatd</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Model-Extriangulatd</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Model-Extriangulatd</guid>
         </item>
       
     
@@ -5112,8 +5379,8 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
 &lt;p&gt;&lt;a href=&quot;Coxeter-Reflection&quot;&gt;Coxeter 反射简介&lt;/a&gt;, 以及 &lt;a href=&quot;Kronecker_Rep&quot;&gt;Kronecker_quiver&lt;/a&gt; AR quiver 的计算.&lt;/p&gt;
 </description>
           <pubDate>2025-05-16T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/20250516Talk</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/20250516Talk</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/20250516Talk</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/20250516Talk</guid>
         </item>
       
     
@@ -5472,8 +5739,8 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
 &lt;h3 id=&quot;hovey-三元组&quot;&gt;Hovey 三元组&lt;/h3&gt;
 </description>
           <pubDate>2025-05-16T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Model</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Model</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Model</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Model</guid>
         </item>
       
     
@@ -5907,8 +6174,8 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-14T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Stable_Cat_Analogue</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Stable_Cat_Analogue</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Stable_Cat_Analogue</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Stable_Cat_Analogue</guid>
         </item>
       
     
@@ -6185,8 +6452,8 @@ p_1φ m=p_1φ (sx-e_1f)=-φ _{1,1}f +p_1φ sx.
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-13T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Exact_Cat_Short_Note</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Exact_Cat_Short_Note</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Exact_Cat_Short_Note</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Exact_Cat_Short_Note</guid>
         </item>
       
     
@@ -6240,8 +6507,8 @@ X\xrightarrow{\binom{a_1}{b_1}} Y_2\oplus Y_1\xrightarrow{(b_2,- a_2)} Z\overset
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-12T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Homotopic_PBPO_Oct</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Homotopic_PBPO_Oct</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Homotopic_PBPO_Oct</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Homotopic_PBPO_Oct</guid>
         </item>
       
     
@@ -6276,8 +6543,8 @@ X\xrightarrow{\binom{a_1}{b_1}} Y_2⊕ Y_1\xrightarrow{(b_2,-a_2)} Z\xrightarrow
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-12T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Homotopic_PBPO</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Homotopic_PBPO</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Homotopic_PBPO</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Homotopic_PBPO</guid>
         </item>
       
     
@@ -6541,8 +6808,8 @@ h^∙ : 𝒜 → 𝐅𝐮𝐧𝐜𝐭_{Lex} (𝒜 , 𝐀𝐛),\quad X ↦ (X,-)
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-12T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Exact_Cat</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Exact_Cat</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Exact_Cat</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Exact_Cat</guid>
         </item>
       
     
@@ -6804,8 +7071,8 @@ $$&lt;/p&gt;
 
 </description>
           <pubDate>2025-05-11T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/C_Similar_matrix</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/C_Similar_matrix</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/C_Similar_matrix</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/C_Similar_matrix</guid>
         </item>
       
     
@@ -6843,8 +7110,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-10T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Prod_Localisation</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Prod_Localisation</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Prod_Localisation</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Prod_Localisation</guid>
         </item>
       
     
@@ -6870,8 +7137,8 @@ Q^∗:𝐅𝐮𝐧𝐜𝐭(𝒜[S^{-1}] , ℬ) ↣ 𝐅𝐮𝐧𝐜𝐭(𝒜,ℬ
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-10T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/PB_Localisation_Fullyfaithful</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/PB_Localisation_Fullyfaithful</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/PB_Localisation_Fullyfaithful</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/PB_Localisation_Fullyfaithful</guid>
         </item>
       
     
@@ -6918,8 +7185,8 @@ F : 𝒜 × ℬ → ℰ,\quad (A,B) ↦ (𝔉(A))(B).
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-10T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Currying_Functor_Cat</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Currying_Functor_Cat</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Currying_Functor_Cat</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Currying_Functor_Cat</guid>
         </item>
       
     
@@ -6945,8 +7212,8 @@ F : 𝒜 × ℬ → ℰ,\quad (A,B) ↦ (𝔉(A))(B).
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-10T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Additive_Oplus_Closed_Implies</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Additive_Oplus_Closed_Implies</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Additive_Oplus_Closed_Implies</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Additive_Oplus_Closed_Implies</guid>
         </item>
       
     
@@ -7231,8 +7498,8 @@ $$&lt;/p&gt;
 
 </description>
           <pubDate>2025-05-10T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Tri_Cat_Def</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Tri_Cat_Def</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Tri_Cat_Def</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Tri_Cat_Def</guid>
         </item>
       
     
@@ -7337,8 +7604,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-10T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Extriangulated_Category</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Extriangulated_Category</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Extriangulated_Category</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Extriangulated_Category</guid>
         </item>
       
     
@@ -18611,8 +18878,8 @@ $$&lt;/p&gt;
 &lt;/table&gt;
 </description>
           <pubDate>2025-05-10T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Unicode_math_Table</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Unicode_math_Table</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Unicode_math_Table</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Unicode_math_Table</guid>
         </item>
       
     
@@ -18691,8 +18958,8 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.lexilogos.com/keyboard/russian.htm&quot;&gt;Cyrillic-Latin Converter&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2025-05-10T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Collection_of_Websites</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Collection_of_Websites</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Collection_of_Websites</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Collection_of_Websites</guid>
         </item>
       
     
@@ -18775,8 +19042,8 @@ $$&lt;/p&gt;
 &lt;p&gt;关于预投射部分存在性之判准, 留至 Directing 模.&lt;/p&gt;
 </description>
           <pubDate>2025-05-09T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/20250425Talk</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/20250425Talk</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/20250425Talk</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/20250425Talk</guid>
         </item>
       
     
@@ -18845,8 +19112,8 @@ C(ℬ) → C(ℬ) [S^{-1}] → K(ℬ)
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-09T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Stable_Add_Cat</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Stable_Add_Cat</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Stable_Add_Cat</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Stable_Add_Cat</guid>
         </item>
       
     
@@ -18947,8 +19214,8 @@ X &amp;  &amp;  &amp;  &amp; ⋅  &amp;   &amp; ⋅  &amp;  &amp;  &amp;  &amp; 
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-09T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Gabriel_Zisman</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Gabriel_Zisman</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Gabriel_Zisman</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Gabriel_Zisman</guid>
         </item>
       
     
@@ -19095,8 +19362,8 @@ Q^∗:𝐅𝐮𝐧𝐜𝐭(𝒜[S^{-1}] , ℬ) ↣ 𝐅𝐮𝐧𝐜𝐭(𝒜,ℬ
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-09T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Additive_Localisation</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Additive_Localisation</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Additive_Localisation</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Additive_Localisation</guid>
         </item>
       
     
@@ -19163,8 +19430,8 @@ where $(z,w_1,w_2,\ldots, w_n,x)$ are free variables ($y$ is not free).
 &lt;p&gt;When non-set-theoretic mathematicians talk about NBG, AC for Sets or even Axiom of Global Choice is possibly included.&lt;/p&gt;
 </description>
           <pubDate>2025-05-09T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/NBGC</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/NBGC</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/NBGC</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/NBGC</guid>
         </item>
       
     
@@ -19186,8 +19453,8 @@ where $(z,w_1,w_2,\ldots, w_n,x)$ are free variables ($y$ is not free).
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-07T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Morphism_Directed</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Morphism_Directed</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Morphism_Directed</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Morphism_Directed</guid>
         </item>
       
     
@@ -19210,8 +19477,8 @@ where $(z,w_1,w_2,\ldots, w_n,x)$ are free variables ($y$ is not free).
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-07T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/From_Simp_Proj</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/From_Simp_Proj</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/From_Simp_Proj</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/From_Simp_Proj</guid>
         </item>
       
     
@@ -19256,8 +19523,8 @@ where $(z,w_1,w_2,\ldots, w_n,x)$ are free variables ($y$ is not free).
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-07T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Finite_Pre_Post</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Finite_Pre_Post</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Finite_Pre_Post</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Finite_Pre_Post</guid>
         </item>
       
     
@@ -19294,8 +19561,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-06T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Non_Existence_of_Proproj</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Non_Existence_of_Proproj</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Non_Existence_of_Proproj</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Non_Existence_of_Proproj</guid>
         </item>
       
     
@@ -19325,8 +19592,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-06T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Preproj_cyclic</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Preproj_cyclic</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Preproj_cyclic</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Preproj_cyclic</guid>
         </item>
       
     
@@ -19379,8 +19646,8 @@ $$&lt;/p&gt;
 &lt;/ol&gt;
 </description>
           <pubDate>2025-05-06T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Preproj_Disconnected</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Preproj_Disconnected</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Preproj_Disconnected</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Preproj_Disconnected</guid>
         </item>
       
     
@@ -19412,8 +19679,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-06T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Pre_Post_Self_Oth_Brick</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Pre_Post_Self_Oth_Brick</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Pre_Post_Self_Oth_Brick</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Pre_Post_Self_Oth_Brick</guid>
         </item>
       
     
@@ -19469,8 +19736,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-06T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Post_Proj_Left_Finite</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Post_Proj_Left_Finite</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Post_Proj_Left_Finite</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Post_Proj_Left_Finite</guid>
         </item>
       
     
@@ -19508,8 +19775,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-05T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Kronecker_Regular</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Kronecker_Regular</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Regular</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Regular</guid>
         </item>
       
     
@@ -19551,8 +19818,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-05T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Kronecker_Dim_Vec</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Kronecker_Dim_Vec</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Dim_Vec</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Dim_Vec</guid>
         </item>
       
     
@@ -19583,8 +19850,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-05T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/C_is_tau_for_Proj</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/C_is_tau_for_Proj</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/C_is_tau_for_Proj</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/C_is_tau_for_Proj</guid>
         </item>
       
     
@@ -19616,8 +19883,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-05T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/C_is_tau</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/C_is_tau</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/C_is_tau</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/C_is_tau</guid>
         </item>
       
     
@@ -19729,8 +19996,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Kronecker_Rep</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Kronecker_Rep</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Rep</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Kronecker_Rep</guid>
         </item>
       
     
@@ -19775,8 +20042,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Proj_Inj_Coxeter</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Proj_Inj_Coxeter</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Proj_Inj_Coxeter</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Proj_Inj_Coxeter</guid>
         </item>
       
     
@@ -19818,8 +20085,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/L_Here_not_R_Here</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/L_Here_not_R_Here</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/L_Here_not_R_Here</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/L_Here_not_R_Here</guid>
         </item>
       
     
@@ -19896,8 +20163,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Hereditary_Alg_Eq_Def</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Hereditary_Alg_Eq_Def</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Hereditary_Alg_Eq_Def</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Hereditary_Alg_Eq_Def</guid>
         </item>
       
     
@@ -19934,8 +20201,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Coxeter_Ref_Idem</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Coxeter_Ref_Idem</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Coxeter_Ref_Idem</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Coxeter_Ref_Idem</guid>
         </item>
       
     
@@ -19966,8 +20233,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Coxeter_PM_Adjoint</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Coxeter_PM_Adjoint</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Coxeter_PM_Adjoint</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Coxeter_PM_Adjoint</guid>
         </item>
       
     
@@ -20022,8 +20289,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Complete_Coxeter_Reflection</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Complete_Coxeter_Reflection</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Complete_Coxeter_Reflection</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Complete_Coxeter_Reflection</guid>
         </item>
       
     
@@ -20047,8 +20314,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/AR_Proj</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/AR_Proj</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/AR_Proj</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/AR_Proj</guid>
         </item>
       
     
@@ -20078,8 +20345,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/AR_Finite_No_Multiple_Arrows</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/AR_Finite_No_Multiple_Arrows</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/AR_Finite_No_Multiple_Arrows</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/AR_Finite_No_Multiple_Arrows</guid>
         </item>
       
     
@@ -20367,8 +20634,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Quiver-and-Hereditary-Algebra</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Quiver-and-Hereditary-Algebra</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Quiver-and-Hereditary-Algebra</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Quiver-and-Hereditary-Algebra</guid>
         </item>
       
     
@@ -20529,8 +20796,8 @@ $$&lt;/p&gt;
 &lt;p&gt;对偶地, $C^- = τ ⁻¹$.&lt;/p&gt;
 </description>
           <pubDate>2025-05-04T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Coxeter-Reflection</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Coxeter-Reflection</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Coxeter-Reflection</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Coxeter-Reflection</guid>
         </item>
       
     
@@ -20633,8 +20900,8 @@ $$&lt;/p&gt;
 &lt;h2 id=&quot;投射模&quot;&gt;投射模&lt;/h2&gt;
 </description>
           <pubDate>2025-05-03T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/FP_P_I_F</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/FP_P_I_F</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/FP_P_I_F</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/FP_P_I_F</guid>
         </item>
       
     
@@ -20668,8 +20935,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-03T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Equi_Def_Generator</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Equi_Def_Generator</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Equi_Def_Generator</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Equi_Def_Generator</guid>
         </item>
       
     
@@ -20814,8 +21081,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-03T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Projective_Generators</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Projective_Generators</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Projective_Generators</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Projective_Generators</guid>
         </item>
       
     
@@ -20865,8 +21132,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-03T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/ML_analysis</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/ML_analysis</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/ML_analysis</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/ML_analysis</guid>
         </item>
       
     
@@ -21070,8 +21337,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-03T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Forget</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Forget</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Forget</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Forget</guid>
         </item>
       
     
@@ -21090,8 +21357,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-01T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/When_1_m_epi</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/When_1_m_epi</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/When_1_m_epi</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/When_1_m_epi</guid>
         </item>
       
     
@@ -21146,8 +21413,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-01T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Proj_is_1_Derivative</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Proj_is_1_Derivative</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Proj_is_1_Derivative</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Proj_is_1_Derivative</guid>
         </item>
       
     
@@ -21174,8 +21441,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-01T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Proj_0_is_Lim</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Proj_0_is_Lim</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Proj_0_is_Lim</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Proj_0_is_Lim</guid>
         </item>
       
     
@@ -21206,8 +21473,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-05-01T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/ML_Mod</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/ML_Mod</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/ML_Mod</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/ML_Mod</guid>
         </item>
       
     
@@ -21248,8 +21515,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-29T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Happel_Fully_Faithful</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Happel_Fully_Faithful</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Happel_Fully_Faithful</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Happel_Fully_Faithful</guid>
         </item>
       
     
@@ -21279,8 +21546,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-29T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Four_Dim_Equal</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Four_Dim_Equal</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Four_Dim_Equal</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Four_Dim_Equal</guid>
         </item>
       
     
@@ -21323,8 +21590,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-29T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Dual_Tilting</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Dual_Tilting</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Dual_Tilting</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Dual_Tilting</guid>
         </item>
       
     
@@ -21371,8 +21638,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-29T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/BB_Spectral_Sequence</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/BB_Spectral_Sequence</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/BB_Spectral_Sequence</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/BB_Spectral_Sequence</guid>
         </item>
       
     
@@ -21481,8 +21748,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-29T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Projlim_1_Vanish</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Projlim_1_Vanish</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Projlim_1_Vanish</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Projlim_1_Vanish</guid>
         </item>
       
     
@@ -21500,8 +21767,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-29T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Injlim_Ext_Seq</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Injlim_Ext_Seq</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Injlim_Ext_Seq</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Injlim_Ext_Seq</guid>
         </item>
       
     
@@ -21521,8 +21788,8 @@ $$&lt;/p&gt;
 
 </description>
           <pubDate>2025-04-29T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/AB5_Derived_Limit</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/AB5_Derived_Limit</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/AB5_Derived_Limit</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/AB5_Derived_Limit</guid>
         </item>
       
     
@@ -21538,8 +21805,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Z_Infty_Spectral_Not_Converge</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Z_Infty_Spectral_Not_Converge</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Z_Infty_Spectral_Not_Converge</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Z_Infty_Spectral_Not_Converge</guid>
         </item>
       
     
@@ -21575,8 +21842,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Six_Lemma</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Six_Lemma</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Six_Lemma</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Six_Lemma</guid>
         </item>
       
     
@@ -21615,8 +21882,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Proj_Epi_Complex</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Proj_Epi_Complex</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Proj_Epi_Complex</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Proj_Epi_Complex</guid>
         </item>
       
     
@@ -21654,8 +21921,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Nine_Lemma</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Nine_Lemma</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Nine_Lemma</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Nine_Lemma</guid>
         </item>
       
     
@@ -21761,8 +22028,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Kunneth_Spectral_Seq</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Kunneth_Spectral_Seq</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Kunneth_Spectral_Seq</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Kunneth_Spectral_Seq</guid>
         </item>
       
     
@@ -21808,8 +22075,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Horse_Shoe_Lemma</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Horse_Shoe_Lemma</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Horse_Shoe_Lemma</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Horse_Shoe_Lemma</guid>
         </item>
       
     
@@ -21925,8 +22192,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Grothendieck_Spectral_Sequence</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Grothendieck_Spectral_Sequence</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Grothendieck_Spectral_Sequence</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Grothendieck_Spectral_Sequence</guid>
         </item>
       
     
@@ -21988,8 +22255,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Fundamental_Thm_Homological_Algebra</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Fundamental_Thm_Homological_Algebra</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Fundamental_Thm_Homological_Algebra</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Fundamental_Thm_Homological_Algebra</guid>
         </item>
       
     
@@ -22048,8 +22315,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Four_Lemma</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Four_Lemma</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Four_Lemma</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Four_Lemma</guid>
         </item>
       
     
@@ -22104,8 +22371,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Five_Lemma</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Five_Lemma</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Five_Lemma</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Five_Lemma</guid>
         </item>
       
     
@@ -22141,8 +22408,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/First_Five_Terms</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/First_Five_Terms</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/First_Five_Terms</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/First_Five_Terms</guid>
         </item>
       
     
@@ -22165,8 +22432,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/E_2_Trick</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/E_2_Trick</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/E_2_Trick</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/E_2_Trick</guid>
         </item>
       
     
@@ -22217,8 +22484,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/AR_Tor</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/AR_Tor</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/AR_Tor</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/AR_Tor</guid>
         </item>
       
     
@@ -22238,8 +22505,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/AR_Defect</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/AR_Defect</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/AR_Defect</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/AR_Defect</guid>
         </item>
       
     
@@ -22338,8 +22605,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/KerHom_KerExt_TP</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/KerHom_KerExt_TP</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/KerHom_KerExt_TP</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/KerHom_KerExt_TP</guid>
         </item>
       
     
@@ -22571,8 +22838,8 @@ $$&lt;/p&gt;
 &lt;p&gt;待补充.&lt;/p&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Happel_Derived_Equivalence</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Happel_Derived_Equivalence</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Happel_Derived_Equivalence</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Happel_Derived_Equivalence</guid>
         </item>
       
     
@@ -22656,8 +22923,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Hereditary_TP_Split</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Hereditary_TP_Split</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Hereditary_TP_Split</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Hereditary_TP_Split</guid>
         </item>
       
     
@@ -22679,8 +22946,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Gr_Iso_is_Complete_Iso</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Gr_Iso_is_Complete_Iso</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Gr_Iso_is_Complete_Iso</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Gr_Iso_is_Complete_Iso</guid>
         </item>
       
     
@@ -22745,8 +23012,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/FFX_vs_FX</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/FFX_vs_FX</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/FFX_vs_FX</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/FFX_vs_FX</guid>
         </item>
       
     
@@ -22767,8 +23034,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Complete_Filtration</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Complete_Filtration</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Complete_Filtration</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Complete_Filtration</guid>
         </item>
       
     
@@ -23302,8 +23569,8 @@ $$&lt;/p&gt;
 &lt;p&gt;见&lt;a href=&quot;Happel_Derived_Equivalence#谱序列方法&quot;&gt;此章节&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Spectral_sequence_filtered</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Spectral_sequence_filtered</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Spectral_sequence_filtered</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Spectral_sequence_filtered</guid>
         </item>
       
     
@@ -23371,8 +23638,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Complete_Z_Filtration</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Complete_Z_Filtration</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Complete_Z_Filtration</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Complete_Z_Filtration</guid>
         </item>
       
     
@@ -23432,8 +23699,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-27T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Harada_Sai</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Harada_Sai</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Harada_Sai</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Harada_Sai</guid>
         </item>
       
     
@@ -23477,8 +23744,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-26T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/APR_tilting_def</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/APR_tilting_def</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/APR_tilting_def</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/APR_tilting_def</guid>
         </item>
       
     
@@ -23518,8 +23785,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-26T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/P_is_Section</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/P_is_Section</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/P_is_Section</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/P_is_Section</guid>
         </item>
       
     
@@ -23679,8 +23946,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-26T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Commutative_Diagram_Alg</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Commutative_Diagram_Alg</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Commutative_Diagram_Alg</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Commutative_Diagram_Alg</guid>
         </item>
       
     
@@ -24038,8 +24305,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-26T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Hereditary-AR-Quiver</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Hereditary-AR-Quiver</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Hereditary-AR-Quiver</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Hereditary-AR-Quiver</guid>
         </item>
       
     
@@ -24103,8 +24370,8 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;Proof-Gabriel&quot;&gt;Gabriel 定理的证明&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2025-04-25T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/20250425Talk</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/20250425Talk</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/20250425Talk</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/20250425Talk</guid>
         </item>
       
     
@@ -24144,8 +24411,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-25T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Gabriel_2</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Gabriel_2</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Gabriel_2</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Gabriel_2</guid>
         </item>
       
     
@@ -24219,8 +24486,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-25T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Gabriel_1</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Gabriel_1</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Gabriel_1</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Gabriel_1</guid>
         </item>
       
     
@@ -24315,8 +24582,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-25T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Finite_and_Affine_Root_System</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Finite_and_Affine_Root_System</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Finite_and_Affine_Root_System</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Finite_and_Affine_Root_System</guid>
         </item>
       
     
@@ -24370,8 +24637,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/T_Y_Dim</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/T_Y_Dim</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/T_Y_Dim</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/T_Y_Dim</guid>
         </item>
       
     
@@ -24412,8 +24679,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Hom_D_Hereditary</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Hom_D_Hereditary</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Hom_D_Hereditary</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Hom_D_Hereditary</guid>
         </item>
       
     
@@ -24441,8 +24708,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Gl_Dim_A_B</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Gl_Dim_A_B</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Gl_Dim_A_B</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Gl_Dim_A_B</guid>
         </item>
       
     
@@ -24552,8 +24819,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Uniqueness_of_Maximal_Orbit</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Uniqueness_of_Maximal_Orbit</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Uniqueness_of_Maximal_Orbit</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Uniqueness_of_Maximal_Orbit</guid>
         </item>
       
     
@@ -24710,8 +24977,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Ringel_Resolution</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Ringel_Resolution</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Ringel_Resolution</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Ringel_Resolution</guid>
         </item>
       
     
@@ -24755,8 +25022,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Key_Lemma_Gabriel</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Key_Lemma_Gabriel</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Key_Lemma_Gabriel</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Key_Lemma_Gabriel</guid>
         </item>
       
     
@@ -24941,8 +25208,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-24T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Proof-Gabriel</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Proof-Gabriel</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Proof-Gabriel</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Proof-Gabriel</guid>
         </item>
       
     
@@ -24980,8 +25247,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/gen_and_cog</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/gen_and_cog</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/gen_and_cog</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/gen_and_cog</guid>
         </item>
       
     
@@ -25065,8 +25332,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Torsion_Pair_Ext_Orth</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Torsion_Pair_Ext_Orth</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Torsion_Pair_Ext_Orth</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Torsion_Pair_Ext_Orth</guid>
         </item>
       
     
@@ -25147,8 +25414,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Tilting_Obj_Torsion_Pair</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Tilting_Obj_Torsion_Pair</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Tilting_Obj_Torsion_Pair</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Tilting_Obj_Torsion_Pair</guid>
         </item>
       
     
@@ -25176,8 +25443,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Partial_Tilting_Two_Torsion_pairs</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Partial_Tilting_Two_Torsion_pairs</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Partial_Tilting_Two_Torsion_pairs</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Partial_Tilting_Two_Torsion_pairs</guid>
         </item>
       
     
@@ -25242,8 +25509,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Hereditary_PBPO</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Hereditary_PBPO</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Hereditary_PBPO</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Hereditary_PBPO</guid>
         </item>
       
     
@@ -25279,8 +25546,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Gen_Eq_T</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Gen_Eq_T</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Gen_Eq_T</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Gen_Eq_T</guid>
         </item>
       
     
@@ -25319,8 +25586,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-23T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/AR_Formula</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/AR_Formula</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/AR_Formula</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/AR_Formula</guid>
         </item>
       
     
@@ -25418,8 +25685,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-22T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Def_de_TP</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Def_de_TP</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Def_de_TP</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Def_de_TP</guid>
         </item>
       
     
@@ -25450,8 +25717,8 @@ $$&lt;/p&gt;
 
 </description>
           <pubDate>2025-04-22T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Homological_Wk_Ker</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Homological_Wk_Ker</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Homological_Wk_Ker</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Homological_Wk_Ker</guid>
         </item>
       
     
@@ -25480,8 +25747,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Yoneda_Homological</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Yoneda_Homological</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Yoneda_Homological</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Yoneda_Homological</guid>
         </item>
       
     
@@ -25525,8 +25792,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Plat_et_Proj_Cover_Proj</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Plat_et_Proj_Cover_Proj</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Plat_et_Proj_Cover_Proj</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Plat_et_Proj_Cover_Proj</guid>
         </item>
       
     
@@ -25544,8 +25811,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Mod_Tri_is_Frobenius</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Mod_Tri_is_Frobenius</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Mod_Tri_is_Frobenius</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Mod_Tri_is_Frobenius</guid>
         </item>
       
     
@@ -25581,8 +25848,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Lazard_thm</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Lazard_thm</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Lazard_thm</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Lazard_thm</guid>
         </item>
       
     
@@ -25624,8 +25891,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Fp_et_Plat_est_Proj</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Fp_et_Plat_est_Proj</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Fp_et_Plat_est_Proj</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Fp_et_Plat_est_Proj</guid>
         </item>
       
     
@@ -25655,8 +25922,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Fp_Proj_Plat</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Fp_Proj_Plat</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Fp_Proj_Plat</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Fp_Proj_Plat</guid>
         </item>
       
     
@@ -25754,8 +26021,8 @@ $$ 由于后两项保持积, 蛇引理给出函子的满的自然变换 $(K ⊗ 
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Finitely_Presented_Functor</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Finitely_Presented_Functor</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Finitely_Presented_Functor</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Finitely_Presented_Functor</guid>
         </item>
       
     
@@ -25783,8 +26050,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Countable_Karoubi</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Countable_Karoubi</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Countable_Karoubi</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Countable_Karoubi</guid>
         </item>
       
     
@@ -25838,8 +26105,8 @@ $$ 由于 $(i(-),A)_𝒯$ 是有限表现的平坦对象, 从而投射 (&lt;a hr
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Coreflexive_Contravariantly_Finite</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Coreflexive_Contravariantly_Finite</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Coreflexive_Contravariantly_Finite</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Coreflexive_Contravariantly_Finite</guid>
         </item>
       
     
@@ -26233,8 +26500,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/mid</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/mid</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/mid</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/mid</guid>
         </item>
       
     
@@ -26340,8 +26607,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/mid-copy</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/mid-copy</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/mid-copy</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/mid-copy</guid>
         </item>
       
     
@@ -26393,8 +26660,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Almost_Split</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Almost_Split</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Almost_Split</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Almost_Split</guid>
         </item>
       
     
@@ -26739,8 +27006,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-20T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Notes_on_Tilting</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Notes_on_Tilting</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Notes_on_Tilting</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Notes_on_Tilting</guid>
         </item>
       
     
@@ -27004,8 +27271,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-20T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/template</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/template</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/template</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/template</guid>
         </item>
       
     
@@ -27327,8 +27594,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-20T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Reflexive_sub_cat</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Reflexive_sub_cat</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Reflexive_sub_cat</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Reflexive_sub_cat</guid>
         </item>
       
     
@@ -27388,8 +27655,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-20T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/syzygy_und_approx</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/syzygy_und_approx</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/syzygy_und_approx</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/syzygy_und_approx</guid>
         </item>
       
     
@@ -27405,8 +27672,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-20T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/stable_subquot</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/stable_subquot</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/stable_subquot</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/stable_subquot</guid>
         </item>
       
     
@@ -27424,8 +27691,8 @@ $$ 依照 $\mathrm{Rad}$ 的性质, 只能由于 $\mathrm{im}(f) = Y$. 故 $f$ �
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-20T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Top_surjective</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Top_surjective</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Top_surjective</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Top_surjective</guid>
         </item>
       
     
@@ -27459,8 +27726,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-19T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/exists_left_proj_app</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/exists_left_proj_app</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/exists_left_proj_app</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/exists_left_proj_app</guid>
         </item>
       
     
@@ -27494,8 +27761,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-19T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Torsion_Less</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Torsion_Less</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Torsion_Less</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Torsion_Less</guid>
         </item>
       
     
@@ -27522,8 +27789,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-19T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/Left_proj_approx</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/Left_proj_approx</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/Left_proj_approx</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/Left_proj_approx</guid>
         </item>
       
     
@@ -28087,8 +28354,8 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-04-19T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/AR-notes</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/AR-notes</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/AR-notes</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/AR-notes</guid>
         </item>
       
     
@@ -28113,8 +28380,8 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;Notes_on_Tilting&quot;&gt;Tilting 模的基本定义, 定理等&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2025-04-18T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/20250418Talk</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/20250418Talk</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/20250418Talk</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/20250418Talk</guid>
         </item>
       
     
@@ -28143,8 +28410,8 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 </description>
           <pubDate>2025-03-28T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/20250328Talk</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/20250328Talk</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/20250328Talk</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/20250328Talk</guid>
         </item>
       
     
@@ -28157,8 +28424,8 @@ $$&lt;/p&gt;
 
 </description>
           <pubDate>2025-03-21T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/20250321Talk</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/20250321Talk</guid>
+          <link>https://zhangchenchengsjtu.github.io/website/posts/20250321Talk</link>
+          <guid isPermaLink="true">https://zhangchenchengsjtu.github.io/website/posts/20250321Talk</guid>
         </item>
       
     
