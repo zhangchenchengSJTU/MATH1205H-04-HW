@@ -9,7 +9,7 @@
 
 
 
-  <title>2025-07-23-讨论班
+  <title>CT0
     ·
     Jekyll Latex</title>
 
@@ -74,7 +74,7 @@ MathJax = {
 	<main>
   <article>
     <div class="center">
-      <h1>2025-07-23-讨论班</h1>
+      <h1>CT0</h1>
       <p class="author">
         ZCC
         <br/>
@@ -345,17 +345,17 @@ X^p ⊗ Y^q → (-1) ^{pq} ⋅ Y^q ⊗ X^p,\quad x ⊗ y ↦ (-1)^{pq} y ⊗ x
 \end{aligned}$$</p>
     <p>Here $f_{n,p} ↔ f'_{p,n}$ are of degree $k$. We finally verify differentials via the identification</p>
     <p>$$\begin{equation}
-f ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f'.
+f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
 \end{equation}$$</p>
-    <p>The adjunction shows $f(-) ↔ [? ↦ f'(-, ?)]$ ($\deg ? = {-q}$). Hence,</p>
+    <p>The adjunction shows $f'(-) ↔ [? ↦ f(-, ?)]$ ($\deg ? = {-q}$). Hence,</p>
     <p>$$\begin{aligned}
-& \ \ \quad [d_{𝐋𝐇𝐒}, f(-)]\\
-& = d_{\mathcal{HOM}(Y,Z)} ∘ f(-) - (-1)^{p+q+r} f(-) ∘ d_X\\
-& ↔ [? ↦ [d_{\mathcal{HOM}(Y,Z)},f'(-, ?)]] - (-1)^{p+q+r} [? ↦ f'(-, ?) ∘ d_X]\\
-& = d_Z ∘ f' - (-1)^{q+r} f' ∘ d_Y - (-1)^{p+q+r} f' ∘ d_X\\
-& = d_Z ∘ f' - (-1)^{p+q+r} (f' ∘ d_Y + (-1)^p f' ∘ d_X)\\
-& = d_Z ∘ f' - (-1)^{p+q+r} (f' ∘ d_{X ⊗ Y})\\
-& = [d_{𝐑𝐇𝐒}, f']
+& \ \ \quad [d_{𝐋𝐇𝐒}, f'(-)]\\
+& = d_{\mathcal{HOM}(Y,Z)} ∘ f'(-) - (-1)^{p+q+r} f'(-) ∘ d_X\\
+& ↔ [? ↦ [d_{\mathcal{HOM}(Y,Z)},f(-, ?)]] - (-1)^{p+q+r} [? ↦ f(-, ?) ∘ d_X]\\
+& = d_Z ∘ f - (-1)^{q+r} f ∘ d_Y - (-1)^{p+q+r} f ∘ d_X\\
+& = d_Z ∘ f - (-1)^{p+q+r} (f ∘ d_Y + (-1)^p f ∘ d_X)\\
+& = d_Z ∘ f - (-1)^{p+q+r} (f ∘ d_{X ⊗ Y})\\
+& = [d_{𝐑𝐇𝐒}, f]
 \end{aligned}$$</p>
   </div>
 </div>
@@ -396,6 +396,8 @@ f ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f'.
     </ol>
   </div>
 </div>
+
+<p>It is unnecessary to demonstrate the additivity of the localisation $C → K_2$; this is not obvious if one tries to show this directly. Here is a note on <a href="Additive_Localisation">additive localisation</a>.</p>
 
 <div class="theorem">
   <p>The exact category $(C, \mathcal{E})$, where $\mathcal{E}$ consists of ses split componentwise, is Frobenius; that is, the contractible complexes are precisely the injectives and projectives. Consequently, $K / 𝐏𝐫𝐨𝐣 (C, \mathcal{E})$ is triangulated, where the desuspension is the syzygy.</p>
