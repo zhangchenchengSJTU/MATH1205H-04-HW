@@ -274,7 +274,93 @@ s_δ ∈ (X_δ , A) ≃ \varprojlim_{β < δ } (X_{β } , A) ∋ (s_β)_{β < δ
 
 <h2 id="small-objects">Small Objects</h2>
 
-<h3 id="set-theoretic-preliminaries">Set-theoretic Preliminaries</h3>
+<h3 id="an-interesting-example-on-transfinite-filtration">An Interesting Example on Transfinite Filtration</h3>
+
+<p>We begin with an exercise in elementary ring theory.</p>
+
+<div class="lemma">
+  <p>$M$ is finitely generated if and only if,</p>
+  <ul>
+    <li>for any (non-empty) set of <strong><em>proper submodules</em></strong> $\{N_i\}_{i ∈ I}$ such that either $N_i ⊆ N_j$ or $N_i ⊇ N_j$ for any $i, j ∈ I$, the union $⋃ N_∙$ is <strong><em>never</em></strong> equal to $M$ itself.</li>
+  </ul>
+  <div class="proof">
+    <p>($→$). We show $a → b$ by showing that $a ∧ (¬ b) → \text{false}$. By $(¬ b)$, there exists an ordered system of proper submodules $N_∙$ whose union is $M$. Let $\{x_i\}_{i=1}^n$ be a generating set of $M$ (by $(a)$). Thus, for each $i$, there exists $x_i ∈ N_{k_i}$. The proper submodule $⋃ _{i=1}^n N_{k_i} = \text{Largest}\{N_{k_i}\}$ yields a contradiction. <br /> <br /> ($←$). We show $b → a$ by showing that $b ∧ (¬ a) → \text{false}$. Consider the collection of proper submodules $N_∙ = \{N ∣ M / N\ \text{ is not f.g.}\}$. The set of proper submodules $N_∙$ is both</p>
+    <ul>
+      <li>non-empty by $(¬ a)$, and</li>
+      <li>contains no maximal elements by construction.</li>
+    </ul>
+    <p>Therefore, $N_∙$ contains a maximal inclusion chain ($C_∙$) of proper submodules. $C_∙$ contains no maximal elements, hence $⋃ C_∙ ∉ N_∙$. Equivalently, $M / (⋃ C_∙)$ is f.g., we see there exists a f.g. submodule $L$ such that $L + ⋃ C_∙ = M$; however, $⋃ (L + C_∙) ≠ M$ by $(b)$. This yields a contradiction.</p>
+  </div>
+</div>
+
+<p>In the above theorem, $N_∙$ is taken over arbitrary totally-ordered set. For colimit $⋃$, it suffices to consider a cofinal subsystem indexed by an ordinal. Hence,</p>
+
+<div class="theorem">
+  <p>$M$ is f.g., iff any transfinite composition of proper submodules,</p>
+  <p>$$\begin{equation}
+0 = M_0 ⊊ M_1 ⊊ \cdots ⊊ M_γ ⊊ \cdots,
+\end{equation}$$</p>
+  <p>satisfy $(⋃ M_∙) ⊊ M$.</p>
+</div>
+
+<p>We <strong><em>slightly</em></strong> revise such characterisation to the following <em>fake finitely generated</em> cases.</p>
+
+<div class="definition">
+  <p>(FAKE f.g.). A module $M$ is <em>fake finitely generated</em> if any $ω$-composition of proper submodules,</p>
+  <p>$$\begin{equation}
+0 = M_0 ⊊ M_1 ⊊ \cdots ⊊ M_n ⊊ \cdots \quad (n ∈ ℕ ),
+\end{equation}$$</p>
+  <p>satisfy $(⋃_{n ∈ ℕ} M_n) ⊊ M$.</p>
+</div>
+
+<p>We show FAKE f.g. $M$’s are precisely those $∐ (M, -) \xrightarrow ∼ (M, ∐ (-))$ in the rest of this subsection. We call such $M$ <em>a compact object in the underlying additive category</em>, i.e., $(M, -)$ is coproduct preserving</p>
+
+<ul>
+  <li>compact objects in general additive categories corresponds to $∐$-preserving $(M, -)$;</li>
+  <li>compact objects in AB5 category (e.g. $𝐌𝐨𝐝_R$) corresponds to $\varinjlim^{fil}$-preserving $(M, -)$ (e.g., f.p. modules).</li>
+</ul>
+
+<div class="problem">
+  <p>Show the subfunctor $∐ (M, -) ↪ (M, ∐ (-))$ for $𝐌𝐨𝐝_R$ or $C(R)$.</p>
+</div>
+
+<div class="lemma">
+  <p>If $M$ is FAKE f.g., then $M$ is compact in the underlying additive category of $𝐌𝐨𝐝_R$.</p>
+  <div class="proof">
+    <p>We take arbitrary $f$ in</p>
+    <p>$$\begin{equation}
+∐_{n ∈ ℕ} (M,N_n) ↪ (M, ∐_{n ∈ ℕ} N_n) ∋ f = (f_n)_{n ∈ ℕ}.
+\end{equation}$$</p>
+    <p>Then $⋂ _{m ≥ n} \ker f_m$ is an ascending chain of submodules of $M$, satisfying</p>
+    <p>$$\begin{equation}
+\limsup (\ker f_∙) = ⋃_{n ≥ 0} ⋂ _{m ≥ n} \ker f_m = M.
+\end{equation}$$</p>
+    <p>By FAKE f.g. condition, all but finite $⋂ _{m ≥ n} \ker f_m ⊆ ⋂ _{m ≥ n+1} \ker f_m$ takes $⊊$. Hence, there is $n_0$ such that $⋂ _{m ≥ n_0} \ker f_m = M$. In this case, $f$ is also characterised in $⨁ _{n ≤ n_0}(M, N_n)$.</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>Show the converse statement: when there exists $⋃ M_∙ = M$ for some inclusion sequence</p>
+  <p>$$\begin{equation}
+0 = M_0 ⊊ M_1 ⊊ \cdots ⊊ M_n ⊊ \cdots \quad (n ∈ ℕ ).
+\end{equation}$$</p>
+  <p>Show that $∐ (M, -) ≇ (M, ∐ (-))$. <br /> <br /> Hint: Let $π _n : M ↠ M/M_n$ be quotient maps. $(π _n) ∈ (M, ∐ \frac{M}{M_n})$ is well-defined since each support set $S_x := \{n ∣ π _n(x) ≠ 0\}$ is finite. However, one can never find $?$ along</p>
+  <p>$$\begin{equation}
+? ∈ ∐(M,\frac{M}{M_n}) ↪ (M, ∐ \frac{M}{M_n}) ∋ (π _n).
+\end{equation}$$</p>
+</div>
+
+<p>There exists of $ω$-filtered ordinal, e.g., the first uncountable cardinal and $|ℝ|$ (these two coincides under continuum hypothesis).</p>
+
+<div class="problem">
+  <p>We learn from analysis that $\mathcal{P}(X) = \mathrm{Hom}_{𝐒𝐞𝐭𝐬}(X,𝔽 _2)$ is an $𝔽_2$-algebra ($∅ = 0$ for convention). Let $X$ be uncountable. Show that</p>
+  <ul>
+    <li>The collection $X_ω := \{Y ∣ |Y| ≤ ω \}$ is an ideal of $\mathcal{P}(X)$;</li>
+    <li>$X_ω$ is not finitely generated as a $\mathcal{P}(X)$-module.</li>
+    <li>$X_ω$ is uncountable, but any proper submodule of $X_ω$ is countable.</li>
+  </ul>
+  <p>Hence, $X_ω$ is FAKE f.g. but not f.g.. This construction shows that for any cardinal $κ$, there exists examples such that the generating set of some FAKE f.g. modules must be $≥ κ$.</p>
+</div>
 
 <h3 id="eklof-trlifaj-theorem">Eklof-Trlifaj Theorem</h3>
 
