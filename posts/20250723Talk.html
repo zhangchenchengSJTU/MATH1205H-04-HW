@@ -9,12 +9,12 @@
 
 
 
-  <title>CT0
+  <title>Seminare on Cotorsion Theory
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="Lecture 0">
+<meta name="description" content="Lecture0. The preliminaries (complex resolutions, ring theories, etc.).">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -74,7 +74,7 @@ MathJax = {
 	<main>
   <article>
     <div class="center">
-      <h1>CT0</h1>
+      <h1>Seminare on Cotorsion Theory</h1>
       <p class="author">
         ZCC
         <br/>
@@ -85,323 +85,10 @@ MathJax = {
 
     <div class="divider"></div>
 
-    <h2 id="lecture-0">Lecture 0</h2>
+    <p><a href="25SumLec0">Lecture0</a>. The preliminaries (complex resolutions, ring theories, etc.).</p>
 
-<div class="abstract">
-  <h5 id="abstract">Abstract</h5>
-  <div>
-    <p>Throughout these lectures, we discuss and construct explicit examples of cotorsion theory. The categories of modules and chain complexes over rings serve as our principal examples, wherein we demonstrate how set-theoretic techniques may be employed to construct cotorsion pairs. Throughout these lectures, we discuss and construct explicit examples of cotorsion theory. The categories of modules and chain complexes over rings serve as our principal examples, wherein we demonstrate how set-theoretic techniques may be employed to construct cotorsion pairs.</p>
-    <p>During the initial few lectures, we follow <a href="https://zhangchenchengsjtu.github.io/website/assets/PDF/RHA-1.pdf">RHA-1</a> and <a href="https://zhangchenchengsjtu.github.io/website/assets/PDF/RHA-2.pdf">RHA-2</a>.</p>
-    <p>We also introduce certain aspects of the theory of chain complexes over rings, which might be atypical in most standard textbooks.</p>
-  </div>
-</div>
+<p><a href="25SumLec1">Lecture1</a>. Orthogonality on morphisms, cotorsion theory, and Eklof-Trlifaj’s criterion.</p>
 
-<p>Throughout,</p>
-
-<ul>
-  <li>$R$: a unital (not necessarily commutative) ring,</li>
-  <li>$𝐌𝐨𝐝 _R \quad (≃ 𝐏𝐒𝐡_{𝐀𝐛}(R))$: the category of <strong>right</strong> $R$-modules,</li>
-  <li>$C(R)$: the category of chain complexes over $𝐌𝐨𝐝 _R$,
-    <ul>
-      <li>our convension is $\cdots → X^k \xrightarrow {d^k} X^{k+1} → \cdots$,</li>
-      <li>$Σ$ and $Σ ^{-1}$ denote the suspension and desuspension functors respectively.</li>
-    </ul>
-  </li>
-  <li>$𝐏𝐫𝐨𝐣 (\mathcal{C})$: the class (or full subcategory) of projectives in $\mathcal{C}$,</li>
-  <li>$𝐈𝐧𝐣 (\mathcal{C})$: the class (or full subcategory) of injectives in $\mathcal{C}$.</li>
-</ul>
-
-<h2 id="on-chain-complexes">On Chain Complexes</h2>
-
-<p>We review some basic definitions and notions in homological algebra. We employ</p>
-
-<ul>
-  <li>$∐$ to denote <strong>coproducts</strong>,</li>
-  <li>$∏$ for <strong>products</strong>, and</li>
-  <li>$⨁$ specifically when $∐ \xrightarrow{∼} ∏$, For example, $⨁_{n ∈ ℤ} Σ^n M_n$ represents the sum of stalk complexes.</li>
-</ul>
-
-<p>The symbols $\varinjlim$ and $\varprojlim$ are utilised for <strong>colimits</strong> (injective limits) and <strong>limits</strong> (projective limits), respectively; in particular, the superscript $fil$ in $\varinjlim^{fil}$ indicates the <strong>filtered colimits</strong>.</p>
-
-<div class="example">
-  <p>(Preserving, reflecting, and creating). We explain by functors between Abelian categories. Given $F : \mathcal{A} → \mathcal{B}$:</p>
-  <ul>
-    <li>$F$ is said to <strong>preserve</strong> or <strong>commute with</strong> $\ker$, if any $0 → K \xrightarrow i X \xrightarrow f Y$ is exact in $\mathcal{A}$ implies $0 → F(K) \xrightarrow {F(i)} F(X) \xrightarrow {F(f)} F(Y)$ is exact in $\mathcal{B}$.</li>
-    <li>$F$ is said to <strong>reflect</strong> $\ker$, if any $0 → F(K) \xrightarrow {F(i)} F(X) \xrightarrow {F(f)} F(Y)$ is exact in $\mathcal{B}$ implies $0 → K \xrightarrow i X \xrightarrow f Y$ is exact in $\mathcal{A}$.</li>
-    <li>$F$ is said to <strong>create</strong> $\ker$, if any $0 → H \xrightarrow {φ } F(X) \xrightarrow {F(f)} F(Y)$ is exact in $\mathcal{B}$ implies the existence of the exact sequence $0 → K \xrightarrow i X \xrightarrow f Y$ in $\mathcal{A}$, such that $F(K) = H$ and $F(i) = φ$.</li>
-  </ul>
-</div>
-
-<div class="problem">
-  <p>Demonstrate that</p>
-  <ul>
-    <li>a fully faithful functor reflects limits;</li>
-    <li>the left/right adjoint functor preserves all limits/colimits, respectively;</li>
-    <li>for a <a href="https://en.wikipedia.org/wiki/Subcategory#Types_of_subcategories">Freydal luff</a> sub-diagram $ι : Q' → Q$, the functor $ι ^∗ : 𝐅𝐮𝐧𝐜𝐭 (Q, \mathcal{C}) → 𝐅𝐮𝐧𝐜𝐭 (Q', \mathcal{C})$ creates all limits and colimits,       <ul>
-        <li><strong>corollary: the (co)limits in $C(R)$ are computed objectwise!</strong></li>
-      </ul>
-    </li>
-    <li>the forgetful functor $𝐌𝐨𝐝 _R → 𝐒𝐞𝐭𝐬$ creates all limits and filtered colimits,       <ul>
-        <li><strong>corollary: the filtered colimits and limits in $𝐌𝐨𝐝 _R$ are computed elementwise!</strong></li>
-      </ul>
-    </li>
-  </ul>
-</div>
-
-<div class="definition">
-  <p>(Exactness). Left/right exact functors are <strong>precisely</strong> those <strong>preserving</strong> <strong>finite</strong> limits/colimits, respectively. A functor is termed <strong>exact</strong> if it is both left and right exact.</p>
-</div>
-
-<div class="definition">
-  <p>(Grothendieck’s <strong>AB conditions</strong>). See <a href="https://stacks.math.columbia.edu/tag/079A">stacks</a>, or <a href="https://ncatlab.org/nlab/show/additive+and+abelian+categories">n-lab</a>.</p>
-  <ul>
-    <li>The conditions AB3, AB3$^∗$, AB4, AB4$^∗$, and AB5 are standard in both $𝐌𝐨𝐝 _R$ and $C(R)$. <strong>We assert the isomorphisms such as $∏ \operatorname{cok}(f_∙ ) \xrightarrow ∼ \operatorname{cok}(∏ f_∙ )$ without further elaboration throughout these lectures.</strong></li>
-    <li>The author refined the statement of AB6 in n-lab during a rather uneventful afternoon. Nevertheless, AB6 is not considered significant within the context of homological algebra.</li>
-  </ul>
-</div>
-
-<h3 id="functors-for-chain-complexes">Functors for Chain Complexes</h3>
-
-<div class="definition">
-  <p>(Chain complexes). We unfold $(X, d)$ into</p>
-  <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/20250723Talk/diagram_655952819e15f.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-    </div> <br /> </center>
-  <p>Here $Z → X → ΣB$, $B → X → C$, $B → Z → H$ and $H → C → Σ B$ are <strong>ses</strong> (short exact sequences). The $ZXHC$ squares are both pushouts and pullbacks.</p>
-</div>
-
-<div class="lemma">
-  <p>The functors $Z$, $B$, $C$ and $H$ preserve $∐$, $∏$, and $\varinjlim^{fil}$.</p>
-  <div class="proof">
-    <p>All $Z$, $B$, $C$ and $H$ are defined by kernels and cokernels, which are preserved by exact functors.</p>
-  </div>
-</div>
-
-<p>The adjunctions confer truncations and $C$, $Z$ with favourable properties. We readily verify the necessary aspects, thereby eschewing the deeper structures (e.g., Dold-Kan correspondence).</p>
-
-<div class="definition">
-  <p>We set</p>
-  <ul>
-    <li>$(-)^k : C(R) → 𝐌𝐨𝐝 _R, \quad X ↦ X^k$,</li>
-    <li>$\overline {(?)}: 𝐌𝐨𝐝 _R → C(R),\quad M ↦ [\cdots → 0 → \overset{\deg = 0} M = \overset{\deg = 1}M → 0 → \cdots]$;</li>
-    <li>$\underline {(?)} : 𝐌𝐨𝐝 _R → C(R), \quad M ↦ [\cdots → 0 → \overset{\deg = 0} M → 0 → \cdots]$.</li>
-  </ul>
-</div>
-
-<div class="problem">
-  <p>Show the adjoint triple $(-)^1 ⊣ \overline {(-)} ⊣ (-)^0$, and extend it to an adjoint $∞$-ple.</p>
-</div>
-
-<div class="problem">
-  <p>Show that $C^0 ⊣ (-) ⊣ Z^0$. We shall derive these functors later.</p>
-</div>
-
-<h3 id="resolving-chain-complexes">Resolving Chain Complexes</h3>
-
-<p>We analysis the projectives and injectives.</p>
-
-<div class="theorem">
-  <p>$C(R)$ has enough projectives, consisting of null-homotopic complexes with projective components.</p>
-  <div class="proof">
-    <p>$⊇$ is clear. Conversely, we take projective object $P ∈ C(R)$, and find that</p>
-    <ul>
-      <li>$P$ has projective components, since it lifts epimorphisms of stalk complexes;</li>
-      <li>$P$ is null-homotopic, since $0 → P → \mathrm{Cone}({1_P}) → Σ P → 0$ splits, yielding $1_P$ is null-homotopic.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="theorem">
-  <p>$C(R)$ has enough injectives, consisting of null-homotopic complexes with injective components.</p>
-</div>
-
-<div class="problem">
-  <p>Demonstrate that acyclic projective complexes are not necessarily projective. Hint: Let $R := k[x] / (x^2)$, and consider $X := [\cdots \to R \xrightarrow{\,\cdot x\,} R \xrightarrow{\,\cdot x\,} R \to \cdots]$, which is acyclic and projective; however, $X$ is not null-homotopic, as $X \otimes (x)$ is not acyclic.</p>
-</div>
-
-<div class="theorem">
-  <p>The adjunction $∞$-ple extends to $\mathrm{Ext}$-groups. For instance, $\mathrm{Ext}^k_R((-)^1, ?) ≃ \mathrm{Ext}^k_{C(R)}(-, \overline ?)$, and $\mathrm{Ext}^k_R(-, (?)^0) ≃ \mathrm{Ext}^k_{C(R)}(\overline -, ?)$.</p>
-  <div class="proof">
-    <p>All these functors preserves projective and injective resolutions.</p>
-  </div>
-</div>
-
-<p>The resolutions in related to $\underline {(-)}$ functors are much more complicated, since $\underline {(-)}$ does not preserve projectives and injectives in general. We begin with an easy example.</p>
-
-<div class="example">
-  <p>$Z^0(-) ≃ (\underline R, -)$, and $\mathrm R^k (Z^0) = H^k$ for $k ≥ 1$.</p>
-  <div class="proof">
-    <p>We choose the projective resolution of $\underline R$ as</p>
-    <p>$$\begin{equation}
-P^∙ (\underline R) := \cdots → Σ ^k \overline R → \cdots → Σ \overline R → \overline R ↠ \underline R → 0,
-\end{equation}$$</p>
-    <p>where $Ω ^k (\underline R) = Σ ^k (\underline R)$. We see that</p>
-    <p>$$\begin{equation}
-(P^∙(\underline R), X) = \cdots → 0 → X^0 \xrightarrow {d^0} X^1 \xrightarrow {d^1} X^2 → \cdots,
-\end{equation}$$</p>
-    <p>Taking $H^∙$ yields the desired results.</p>
-  </div>
-</div>
-
-<p>The result generalises to Abelian category with enough projectives.</p>
-
-<div class="theorem">
-  <p>Assume $\mathcal{A}$ has enough projectives. $\mathrm R^k (Z^0) = H^k$ for $k ≥ 1$.</p>
-  <div class="proof">
-    <p>We take Eilenberg-Cartan resolution of $X$, i.e., firstly take injective resolutions for $H$-groups and $B$-groups, and then construct the resolutions for $Z$, $C$ and $X$ in steps with horseshoe lemma. The resulting complex looks like</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/20250723Talk/diagram_10edb38cfa68b.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>We denote this by $X ↪ \widetilde{I^0} → \widetilde{I^1} → \cdots$, and remend it into an injective resolutions by</p>
-    <ul>
-      <li>$I^0$ is injective with $I^0(B^k ⊕ B^{k+1}) ⊕ I^0 (H^k ⊕ H^{k+1})$ on the $k$-th component,</li>
-      <li>$I^1$ is injective with $I^1(B^k ⊕ B^{k+1}) ⊕ I^1 (H^k ⊕ H^{k+1}) ⊕ I^0 (H^{k+1} ⊕ H^{k+2})$ on the $k$-th component,</li>
-      <li>$I^n$ is injective with $I^n(B^k ⊕ B^{k+1}) ⊕ ⨁_{0 ≤ s ≤ n} I^{n-s} (H^{k+s} ⊕ H^{k+s+1})$ on the $k$-th component,and so on.</li>
-    </ul>
-    <p>Applying $Z^k(-)$ at $I^0 → I^1 → \cdots$, we obtain</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/20250723Talk/diagram_77bf041b15a14.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>The rows are injective resolutions of $Z^k$, $H^{k+1}$, etc. The cohomomology groups are computed as $Z^k$, $H^{k+1}$, etc.</p>
-  </div>
-</div>
-
-<p>It is noteworthy that the preceding computation admits an <strong>$\mathcal{X}$-relative version</strong>, provided that there exist <strong>sufficiently many monomorphisms</strong> from $\mathcal{A}$ to $\mathcal{X}$. Observe that a <a href="Horse_Shoe_Lemma">relative version of the horseshoe lemma</a> is available, and consequently, a relative version of Eilenberg-Cartan resolutions is obtained.</p>
-
-<div class="problem">
-  <p>Verify that the resolutions remain diagonal during the above procedure.</p>
-</div>
-
-<h3 id="closed-monoidal-structure">Closed Monoidal Structure</h3>
-
-<p>We show that over the <strong>commutative</strong> ring $R$, $C(R)$ is symmetric closed monoidal.</p>
-
-<div class="definition">
-  <p>(Tensor product). We define $X ^∙ ⊗ Y ^ ∙$ as an object in $C(R)$ by</p>
-  <ol>
-    <li>$∐_{p+q = n} X^p ⊗ Y^q$ as the $n$-th component,</li>
-    <li>the differential $d_{X ⊗ Y} = (1_X ⊗ d_Y + d_X ⊗ 1_Y)$ satisfies Koszul sign rule ($(f ⊗ g) (x ⊗ y) = (-1)^{\deg g ⋅ \deg x}(fx ⊗ gy)$), i.e., $d_{X ⊗ Y} (x ⊗ y) = d_X (x) ⊗ y + (-1)^{\deg x} x ⊗ d_Y (y)$ for homogeneous elements $x$ and $y$.</li>
-  </ol>
-</div>
-
-<div class="problem">
-  <p>Show the natural isomorphism $α _{X,Y,Z} : X ⊗ (Y ⊗ Z) \xrightarrow ∼ (X ⊗ Y) ⊗ Z$ as well as the <a href="https://kerodon.net/tag/00BY">pentagon identity</a>.</p>
-</div>
-
-<div class="problem">
-  <p>Show that $\underline R$ is unital element, i.e., there are natural isomorphisms $X ⊗ \underline R \xrightarrow ∼ X \xleftarrow ∼ \underline R ⊗ X$ satisfying the <a href="https://kerodon.net/tag/00CH">triangle identities</a>.</p>
-</div>
-
-<div class="theorem">
-  <p>The morphism $B _{X,Y} : X ⊗ Y \xrightarrow ∼ Y ⊗ X$ characterised by</p>
-  <p>$$\begin{equation}
-X^p ⊗ Y^q → (-1) ^{pq} ⋅ Y^q ⊗ X^p,\quad x ⊗ y ↦ (-1)^{pq} y ⊗ x
-\end{equation}$$</p>
-  <p>is a natural isomorphism satisfying the <a href="https://ncatlab.org/nlab/show/symmetric+monoidal+category#:~:text=obey%20the%20first-,hexagon%20identity,-%3A">hexagon identity</a>.</p>
-  <div class="proof">
-    <p>We take $τ : a ⊗ b ↦ b ⊗ a$ for modules, and wish there exist a some $ε : ℤ × ℤ → \{± 1\}$ along with the commutative diagram</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/20250723Talk/diagram_3e86ad4d5315f.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>We see from the above diagram that $ε (p,q) = (-1)^{pq}$ is a solution:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/20250723Talk/diagram_bdaa4934d246e.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>We finally show hexagon identity:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/20250723Talk/diagram_fb7277d2b79e6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>Observe that $(-1)^{pq} ⋅ (-1)^{qr} ⋅ (-1)^{rp} = 1$ as we keeping track of the signs at $X^p ⊗ Y^q ⊗ Z^r$.</p>
-  </div>
-</div>
-
-<p>We finally show the <strong>natural</strong> right adjoint of $X ⊗ -$ by construction.</p>
-
-<div class="definition">
-  <p>($̋\mathcal{HOM}(-, ?)$). We define $\mathcal{HOM}(X, Y)$ as an object in $C(R)$ by</p>
-  <ol>
-    <li>$(\mathcal{HOM}(X,Y))^p$ consists of morphisms in $(X, Y)_{\text{Graded-Module}}$ of degree $p$, i.e., homogeneous morphisms in $(X, Σ ^p Y)_{\text{Graded-Module}}$;</li>
-    <li>the differential for a homogeneous morphism $f$ is $[f,d] := d_Y ∘ f - (-1)^{\deg f} f∘ d_X$.</li>
-  </ol>
-</div>
-
-<p>Clearly,</p>
-
-<ul>
-  <li>$Z^0(\mathcal{HOM}(X,Y)) = (X,Y)_{C(R)}$;</li>
-  <li>$B^0(\mathcal{HOM}(X,Y)) ⊆ (X,Y)_{C(R)}$ consists of null-homotopic morphisms;</li>
-  <li>$H^0(\mathcal{HOM}(X,Y)) = (X,Y)_{K(R)}$.</li>
-</ul>
-
-<div class="theorem">
-  <p>The adjunction $(X ⊗ -) ⊣ \mathcal{HOM}(X, -)$ is natural in $X$.</p>
-  <div class="proof">
-    <p>We show $\mathcal{HOM}(X ⊗ Y, Z) ≃ \mathcal{HOM}(X, \mathcal{HOM}(Y,Z))$ is natural in $X$, $Y$ and $Z$. Taking $Z^0$ yields the adjunction. Componentwise, we take $\deg f = k$ and find that</p>
-    <p>$$\begin{aligned}
-𝐋𝐇𝐒 ∋ f & = \{∐_p X^p ⊗ Y^{n-p} → Z^{n+k}\}_{n ∈ ℤ}\\
-(f_{n,p})& ≅ \{X^p ⊗ Y^{n-p} → Z^{n+k}\}_{p, n ∈ ℤ}\\
-(f'_{p,n})& ≅ \{X^p → (Y^{n-p} , Z^{n+k})\}_{p, n ∈ ℤ}\\
-& ≅ \{X^p → ∏_n (Y^{n-p} , Z^{n+k})\}_{p ∈ ℤ}\quad = f' ∈ 𝐑𝐇𝐒.
-\end{aligned}$$</p>
-    <p>Here $f_{n,p} ↔ f'_{p,n}$ are of degree $k$. We finally verify differentials via the identification</p>
-    <p>$$\begin{equation}
-f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
-\end{equation}$$</p>
-    <p>The adjunction shows $f'(-) ↔ [? ↦ f(-, ?)]$ ($\deg ? = {-q}$). Hence,</p>
-    <p>$$\begin{aligned}
-& \ \ \quad [d_{𝐋𝐇𝐒}, f'(-)]\\
-& = d_{\mathcal{HOM}(Y,Z)} ∘ f'(-) - (-1)^{p+q+r} f'(-) ∘ d_X\\
-& ↔ [? ↦ [d_{\mathcal{HOM}(Y,Z)},f(-, ?)]] - (-1)^{p+q+r} [? ↦ f(-, ?) ∘ d_X]\\
-& = d_Z ∘ f - (-1)^{q+r} f ∘ d_Y - (-1)^{p+q+r} f ∘ d_X\\
-& = d_Z ∘ f - (-1)^{p+q+r} (f ∘ d_Y + (-1)^p f ∘ d_X)\\
-& = d_Z ∘ f - (-1)^{p+q+r} (f ∘ d_{X ⊗ Y})\\
-& = [d_{𝐑𝐇𝐒}, f]
-\end{aligned}$$</p>
-  </div>
-</div>
-
-<div class="problem">
-  <p>Show by Yoneda lemma that, one has natural isomorphisms</p>
-  <p>$$\begin{equation}
-\mathcal{HOM}(\varinjlim X_∙, Y) ≃ \varprojlim \mathcal{HOM}( X_∙, Y); \quad \mathcal{HOM}(X, \varprojlim Y_∙) ≃ \varprojlim \mathcal{HOM}(X, Y_∙).
-\end{equation}$$</p>
-</div>
-
-<div class="problem">
-  <p>Show that $(X, ∏ Y_∙)_{\text{null-ho}} ≃ ∏ (X,Y_∙)_{\text{null-ho}}$, and $(∐ X_∙, Y)_{\text{null-ho}} ≃ ∐ (X_∙, Y)_{\text{null-ho}}$.</p>
-</div>
-
-<h3 id="further-discussion-on-the-homotopy-category-mathjax_protectedjesouikkmathjax_protected">Further Discussion on the Homotopy Category $K(R)$</h3>
-
-<p>We present several formal approaches to computing the homotopy category $K(R)$. Here, $R$ may be replaced by a general Abelian category.</p>
-
-<div class="theorem">
-  <p>The following categories are isomorphic; that is, they possess the same class of objects and naturally isomorphic $\mathrm{Hom}$-sets.</p>
-  <ol>
-    <li>The $H^0(\mathcal{HOM})$-construction. (Observe that the Hom complex is defined for any Abelian category.)</li>
-    <li>The localisation $C(R) [S^{-1}]$, where $S$ comprises homotopy equivalences, i.e., morphisms $f$ for which there exists a morphism $g$ such that $f ∘ g$ and $g ∘ f$ are homotopic to the identity morphisms.</li>
-    <li>The additive quotient $C(R) / \mathcal{N}$, where $\mathcal{N}$ consists of split acyclic complexes (that is, contractible complexes).</li>
-    <li>The homotopy category $C(R) / ∼$, where $∼$ is an additive categorical equivalence relation on $\mathrm{Hom}$-sets, with $f ∼ 0$ if and only if $f$ is null-homotopic.</li>
-  </ol>
-  <div class="proof">
-    <p>We first demonstrate that $C(R) / ∼$ is well-defined. Note that $s : f ∼ g$ if and only if $s ∘ h : f ∘ h ∼ g ∘ h$, and the dual statement holds as well. We denote the category by $K_i$ $(i = 1,2,3,4)$ according to the constructions above.</p>
-    <ol>
-      <li>$(K_1 = K_4)$. This is evident.</li>
-      <li>$(K_2 = K_4)$. The quotient $C \to K_4$ maps $S$ to isomorphisms, yielding $K_2 \to K_4$. To establish the converse functor, observe that the collection of homotopies $\{(s,f,g) ∣ s : f ∼ g : X \to Y\}$ is represented by $(\mathrm{Cyl}(1_X), Y)$ via $Σ X ⊕ X ⊕ X \xrightarrow {(s,f,g)} Y$. In this context, we have         <ul>
-          <li>$f = [X \xrightarrow {e_2} \mathrm{Cyl}(1_X) \xrightarrow {(s,f,g)} Y]$;</li>
-          <li>$g = [X \xrightarrow {e_3} \mathrm{Cyl}(1_X) \xrightarrow {(s,f,g)} Y]$. Observe that $e_2 = e_2$ in $K_2$. Thus, whenever $f = g$ in $K_4$, it follows that $f = g$ in $K_2$.</li>
-        </ul>
-      </li>
-      <li>$(K_3 = K_4)$. Since $K_4$ is additive, the zero morphisms are precisely those which factor through zero objects. This yields $K_3 \to K_4$. Conversely, when $f ∼ g : X \to Y$ in $K_4$, we have $f ∼ g$ in $K_3$ as it factors through the zero object $\mathrm{Cyl}(1_X)$. Therefore, $K_4 = K_3$.</li>
-    </ol>
-  </div>
-</div>
-
-<p>It is unnecessary to demonstrate the additivity of the localisation $C → K_2$; this is not obvious if one tries to show this directly. Here is a note on <a href="Additive_Localisation">additive localisation</a>.</p>
-
-<div class="theorem">
-  <p>The exact category $(C, \mathcal{E})$, where $\mathcal{E}$ consists of ses split componentwise, is Frobenius; that is, the contractible complexes are precisely the injectives and projectives. Consequently, $K / 𝐏𝐫𝐨𝐣 (C, \mathcal{E})$ is triangulated, where the desuspension is the syzygy.</p>
-</div>
 
 
   </article>
@@ -410,8 +97,8 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
     
       <a
         class="next"
-        href="/website/posts/20250729Talk"
-        title="NEXT: CT1">&lt;&lt;</a>
+        href="/website/posts/25SumLec0"
+        title="NEXT: CT0">&lt;&lt;</a>
       <span>
         &middot;
       </span>
