@@ -574,7 +574,7 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
   </div>
 </div>
 
-<p>By definition, $f: \text{compact} → \text{induction of small}$ is described by $f : \text{compact} → \text{small}$. We wish $\text{induction of small} = \text{all objects}$.</p>
+<p>By definition, $f: \text{compact} → \text{induction of small}$ is described by $f : \text{compact} → \text{small}$ locally. We wish $\text{induction of small} = \text{all objects}$.</p>
 
 <p>Finite sets are exactly compact objects in $𝐒𝐞𝐭𝐬$, conversely, any set is a filtered colimit of its finite subsets (local compactness). It is reasonable for check whether a module is a filtered limit of the compact objects.</p>
 
@@ -655,7 +655,7 @@ $$</p>
 <p>Note that</p>
 
 <p>$$\begin{equation}
-\text{compact (紧对象)} ⊆ \text{f.g.} ⊆ \text{FAKE f.g.} \quad  \textcolor{gray}{= \ compact \ (紧模)}.
+\text{f.p.} = \text{compact (紧对象)} ⊆ \text{f.g.} ⊆ \text{FAKE f.g.} \quad  \textcolor{gray}{= \ compact \ (紧模)}.
 \end{equation}$$</p>
 
 <h3 id="mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-mathjax_protectedjpcdkijwnzcn8j2qoyqmathjax_protected-and-mathjax_protectedjpcdkixwnzcl8j2qmvcdkk0kmathjax_protected">$𝐏𝐫𝐨𝐣$, $𝐈𝐧𝐣$ and $𝐅𝐥𝐚𝐭$</h3>
@@ -755,13 +755,13 @@ P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^
 </div>
 
 <div class="theorem">
-  <p>Injective modules $I_R$ are summands of sum $∏ (R_R)^+$.</p>
+  <p>Injective modules $I_R$ are summands of the product $∏ (R_R)^+$.</p>
   <div class="proof">
-    <p>Consider the surjection from projective module $p : (_RR)^{(I_R)^+} ↠ (I_R)^+$. Note that</p>
+    <p>Consider any surjection from projective module $p : (_RR)^{(I_R)^+} ↠ (I_R)^+$. We show in <em>the subsection of characteristic modules</em> that</p>
     <ol>
-      <li>$(\text{flat})^+$ is injective module, and</li>
-      <li>$\text{(surjection)}^+$ is injection, and</li>
-      <li>the evaluation $(-) → (-)^{++},\quad ? ↦ [f ↦ f(?)]$ are injections.</li>
+      <li>$(\text{flat})^+$ is are injective modules, and</li>
+      <li>$\text{(surjection)}^+$ are injections, and</li>
+      <li>the evaluation $(-) → (-)^{++},\quad ? ↦ [f ↦ f(?)]$ are natural injections.</li>
     </ol>
     <p>Hence $I_R ↪ I_R^{++} ↪ ((_RR)^{(I_R)^+})^+$. In particular, $I_R$ is a summand of $∏ _{(I_R)^+}({}_RR)^+$.</p>
   </div>
@@ -783,7 +783,7 @@ P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^
   </ol>
   <p>We remark that $M ⊗ I ↪ M ⊗ R$ is injective iff it is isomorphic to its image, that is, $M ⊗ I ≃ MI$. As $M ⊗ I ↠ MI$, this is equivalent to $M ⊗ I → MI$ being injective.</p>
   <div class="proof">
-    <p>$1 → 3$ is clear. We show $1 ↔ 2$, $3 ↔ 4$, and $3 → 2$ in steps. <br /> ($1 ↔ 2$, and $3 ↔ 4$). We show $2 → 1$ only. To check whether $∑ x_i ⊗ m_i$ and $∑ x_i' ⊗ m_i'$ has the same image under $i ⊗ 1_M$, it suffices to check over the f.g. submodules $⟨\{x_i\} ∪ \{x_i'\}⟩ → ⟨\{i(x_i)\} ∪ \{i(x_i')\}⟩$.</p>
+    <p>(1 → 3). is clear. We show (1 ↔ 2), (3 ↔ 4), and (3 → 2) in steps. <br /> (1 ↔ 2, and 3 ↔ 4). We show $2 → 1$ only. To check whether $∑ x_i ⊗ m_i$ and $∑ x_i' ⊗ m_i'$ has the same image under $i ⊗ 1_M$, it suffices to check over the f.g. submodules $⟨\{x_i\} ∪ \{x_i'\}⟩ → ⟨\{i(x_i)\} ∪ \{i(x_i')\}⟩$.</p>
     <ul>
       <li>In short, to verify $1$, it suffices to verify a collection of $2$.</li>
     </ul>
