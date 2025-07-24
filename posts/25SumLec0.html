@@ -100,6 +100,7 @@ MathJax = {
   <li><a href="#on-rings-and-modules" id="markdown-toc-on-rings-and-modules">On Rings and Modules</a>    <ul>
       <li><a href="#an-interesting-example-on-transfinite-filtration" id="markdown-toc-an-interesting-example-on-transfinite-filtration">An Interesting Example on Transfinite Filtration</a></li>
       <li><a href="#the-real-compact-modules" id="markdown-toc-the-real-compact-modules">The REAL Compact Modules</a></li>
+      <li><a href="#mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-mathjax_protectedjpcdkijwnzcn8j2qoyqmathjax_protected-and-mathjax_protectedjpcdkixwnzcl8j2qmvcdkk0kmathjax_protected" id="markdown-toc-mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-mathjax_protectedjpcdkijwnzcn8j2qoyqmathjax_protected-and-mathjax_protectedjpcdkixwnzcl8j2qmvcdkk0kmathjax_protected">$𝐏𝐫𝐨𝐣$, $𝐈𝐧𝐣$ and $𝐅𝐥𝐚𝐭$</a></li>
       <li><a href="#coherency" id="markdown-toc-coherency">Coherency</a></li>
       <li><a href="#character-module" id="markdown-toc-character-module">Character Module</a></li>
     </ul>
@@ -502,9 +503,9 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
   <p>$$\begin{equation}
 0 = M_0 ⊊ M_1 ⊊ \cdots ⊊ M_n ⊊ \cdots \quad (n ∈ ℕ ).
 \end{equation}$$</p>
-  <p>Show that $∐ (M, -) ≇ (M, ∐ (-))$. <br /> <br /> Hint: Let $π _n : M ↠ M/M_n$ be quotient maps. $(π _n) ∈ (M, ∐ \frac{M}{M_n})$ is well-defined since each support set $S_x := \{n ∣ π _n(x) ≠ 0\}$ is finite. However, one can never find $?$ along</p>
+  <p>Show that $∐ (M, -) ≇ (M, ∐ (-))$. <br /> <br /> Hint: Let $π _n : M ↠ M/M_n$ be quotient maps. The morphism $(π _n) ∈ (M, ∏ \frac{M}{M_n})$ lies in $(M, ∐ \frac{M}{M_n})$, since each support set $S_x := \{n ∣ π _n(x) ≠ 0\}$ is finite. However, one can never find $?$ along</p>
   <p>$$\begin{equation}
-? ∈ ∐(M,\frac{M}{M_n}) ↪ (M, ∐ \frac{M}{M_n}) ∋ (π _n).
+? ∈ ∐(M,\frac{M}{M_n}) ↪ (M, ∐ \frac{M}{M_n}) ↪ (M, ∏ \frac{M}{M_n}) ∋ (π _n).
 \end{equation}$$</p>
 </div>
 
@@ -653,6 +654,113 @@ $$</p>
 \text{compact (紧对象)} ⊆ \text{f.g.} ⊆ \text{FAKE f.g.} \quad  \textcolor{gray}{= \ compact \ (紧模)}.
 \end{equation}$$</p>
 
+<h3 id="mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-mathjax_protectedjpcdkijwnzcn8j2qoyqmathjax_protected-and-mathjax_protectedjpcdkixwnzcl8j2qmvcdkk0kmathjax_protected">$𝐏𝐫𝐨𝐣$, $𝐈𝐧𝐣$ and $𝐅𝐥𝐚𝐭$</h3>
+
+<p>We summarise the tests for f.p. modules, proj. modules, inj. modules and flat modules at the very beginning.</p>
+
+<div class="theorem">
+  <p>$M$ is f.p., iff the following equivalent definition holds.</p>
+  <ol>
+    <li>$M ≃ \operatorname{cok}φ$, where $φ$ is a morphism in $𝐩𝐫𝐨𝐣$.</li>
+    <li>$(M, -)$ preserves filtered colimits.</li>
+    <li>$M ⊗ -$ preserves arbitrary products.</li>
+  </ol>
+</div>
+
+<div class="theorem">
+  <p>$M$ is projective, iff the following equivalent definition holds.</p>
+  <ol>
+    <li>$(M, -)$ is exact, $\mathrm{Ext}^1(M, -)=0$, etc.</li>
+    <li>$M$ is a summand of some free module $R^{(λ)}$;</li>
+    <li>$M$ is the coproduct of summands of $R^{(ω)}$ (the countably generated free module);</li>
+    <li>There exists a subset $\{(e_i, f_i)\}_{i ∈ I} ⊆ P × (P, R)$ such that any $x ∈ R$ is a finite sum of some $∑_{i ∈ I_0} e_i ⋅ f_i (x)$.</li>
+  </ol>
+</div>
+
+<div class="theorem">
+  <p>$M$ is injective, iff the following equivalent definition holds.</p>
+  <ol>
+    <li>$(-, M)$ exact, $\mathrm{Ext}^1(-, M)=0$; $\mathrm{Ext}^1(\text{quotient ring},M)=0$, etc.</li>
+    <li>$(i, M)$ is a surjection for any ideal inclusion $i : I → R$.</li>
+    <li>$M$ is a direct summand for $∏ (_RR)^+$, where $(-)^+ = (-, ℚ / ℤ )_{𝐀𝐛}$.</li>
+  </ol>
+</div>
+
+<div class="theorem">
+  <p>$M$ is flat iff the following equivalent definition holds.</p>
+  <ol>
+    <li>$M ⊗ i$ is injective for arbitrary $i ∈ \mathcal{I}$, where $\mathcal{I}$ can be either       <ol>
+        <li>the inclusions of a submomdule;</li>
+        <li>the inclusions of an ideal;</li>
+        <li>the inclusions of a f.g. submomdule;</li>
+        <li>the inclusions of an f.g. ideal;</li>
+      </ol>
+    </li>
+    <li>$\mathrm{Tor}_{≥ 1}(M, -) = 0$, or $\mathrm{Tor}_1 (M, -) = 0$;</li>
+    <li>For any matrix equation $𝐑 ⋅ 𝐦 = 𝐎$, there is some $𝐑$-matrix $𝐀$ such that $𝐑 ∈ \ker (⋅ 𝐀)$ and $𝐦 ∈ \operatorname{im}(𝐀 ⋅ )$.</li>
+    <li>For any exact sequence $0 → (A, M) → M^n → M^m$, there is some $M^l ↠ (A,M)$.</li>
+    <li>Any morphism from f.p. module to $M$ factors through some f.g. projective module.</li>
+    <li>$M$ is a filtered colimit of f.p. modules.</li>
+  </ol>
+</div>
+
+<p>We commence with projective modules.</p>
+
+<div class="theorem">
+  <p>Projective modules (defined by summand of free modules) is a coproduct of countably generated projective modules.</p>
+  <div class="proof">
+    <p>See examples and propositions in <a href="25SumLec1#ordinals-and-cardinals">this subsection</a>.</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>$P$ is a projective (summand of free), iff there exists a subset $\{(e_i, f_i)\}_{i ∈ I} ⊆ P × (P, R)$ such that any $x ∈ R$ is a finite sum of some $∑_{i ∈ I_0} e_i ⋅ f_i (x)$. We call this <em>projective basis</em>.</p>
+  <ul>
+    <li>When <em>… any $x ∈ R$ is a <strong>UNIQUE</strong> finite sum of …</em> holds, $P$ is a free module.</li>
+  </ul>
+  <div class="proof">
+    <p>When there exists a projective basis, we see the retract</p>
+    <p>$$\begin{equation}
+P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^i)_{i ∈ I}\  ↦ \ ∑ e_i ⋅ r^i} P.
+\end{equation}$$</p>
+    <p>Conversely, any retract $P ↪ R^{(J)} ↠ P$ yields such dual basis.</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>Show the rest of the equivalent definitions of projective modules. The proof is found in most textbooks.</p>
+</div>
+
+<p>Now we show equivalent definitions of injectives.</p>
+
+<div class="theorem">
+  <p>(Baer’s criterion). $M_R$ is injective iff any morphism from the ideal $I_R$ to $M_R$ extends along $I_R ↪ R_R$.</p>
+  <div class="proof">
+    <p>We show $(←)$ only. It suffices to check the lifting property for $L_R ↪ N_R$. Set</p>
+    <p>$$\begin{equation}
+\mathcal{S} := \{K ∣ L ⊆ K ⊆ N, \ (K, M) ↠ (L,M)\}.
+\end{equation}$$</p>
+    <p>$\mathcal{S}$ is non-empty ($L ∈ \mathcal{S}$), and closed under the union of any ascending chain. Hence $\mathcal{S}$ has a maximal element $Q$ by Zorn’s lemma. <br /> We show $Q = N$. Assume there is some $n ∈ (Q ∖ N)$, then $I := \{a ∣ na ∈ Q\}$ is right ideal. In this case, any $φ : Q → M$ extends to</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec0/diagram_5f24943f68f7a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We see that $(n ⋅ R) + Q ∈ \mathcal{S}$ is greater thatn $Q$, a contradiction!</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>Injective modules $I_R$ are summands of sum $∏ (R_R)^+$.</p>
+  <div class="proof">
+    <p>Consider the surjection from projective module $p : (_RR)^{(I_R)^+} ↠ (I_R)^+$. Note that</p>
+    <ol>
+      <li>$(\text{flat})^+$ is injective module, and</li>
+      <li>$\text{(surjection)}^+$ is injection, and</li>
+      <li>the evaluation $(-) → (-)^{++},\quad ? ↦ [f ↦ f(?)]$ are injections.</li>
+    </ol>
+    <p>Hence $I_R ↪ I_R^{++} ↪ ((_RR)^{(I_R)^+})^+$. In particular, $I_R$ is a summand of $∏ _{(I_R)^+}({}_RR)^+$.</p>
+  </div>
+</div>
+
 <h3 id="coherency">Coherency</h3>
 
 <p>Inducting from f.g. and f.p., it is natural to come up with the ideal of projection length. We show the following <em>atomatic</em> propositions over the ses</p>
@@ -732,12 +840,16 @@ $$</p>
 
 <ul>
   <li>
-    <p>the interchanging of  $\prod$  and flat objects;</p>
+    <p>the interchanging of $\prod$ and flat objects;</p>
   </li>
   <li>
-    <p>the  $\infty$ -presentability of f.p. objects.</p>
+    <p>the $\infty$-presentability of f.p. objects.</p>
   </li>
 </ul>
+
+<div class="theorem">
+  <p>Left hereditary rings are right coherent (<a href="Hereditary_Alg_Eq_Def">the analysis</a>).</p>
+</div>
 
 <h3 id="character-module">Character Module</h3>
 
@@ -796,6 +908,10 @@ $$</p>
 
 <div class="theorem">
   <p>$f.d. {}_R(M^+) = i.d. (M_R)$ holds for right Noetherian rings.</p>
+</div>
+
+<div class="problem">
+  <p>Set $R = ℝ [ℝ]$, the polynomial ring over indeterminates $\{x_t\}_{t ∈ ℝ}$. Show that $ℝ [ℕ]$ lifts f.g. ideals; whereas it is not injective.</p>
 </div>
 
 <p>In general, one can show that $f.d. M ≤ f.d. M^{++}$. Hence,
