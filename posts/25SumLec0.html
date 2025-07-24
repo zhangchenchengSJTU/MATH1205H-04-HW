@@ -413,8 +413,9 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
       <li>$(K_1 = K_4)$. This is evident.</li>
       <li>$(K_2 = K_4)$. The quotient $C \to K_4$ maps $S$ to isomorphisms, yielding $K_2 \to K_4$. To establish the converse functor, observe that the collection of homotopies $\{(s,f,g) ∣ s : f ∼ g : X \to Y\}$ is represented by $(\mathrm{Cyl}(1_X), Y)$ via $Σ X ⊕ X ⊕ X \xrightarrow {(s,f,g)} Y$. In this context, we have         <ul>
           <li>$f = [X \xrightarrow {e_2} \mathrm{Cyl}(1_X) \xrightarrow {(s,f,g)} Y]$;</li>
-          <li>$g = [X \xrightarrow {e_3} \mathrm{Cyl}(1_X) \xrightarrow {(s,f,g)} Y]$. Observe that $e_2 = e_2$ in $K_2$. Thus, whenever $f = g$ in $K_4$, it follows that $f = g$ in $K_2$.</li>
+          <li>$g = [X \xrightarrow {e_3} \mathrm{Cyl}(1_X) \xrightarrow {(s,f,g)} Y]$.</li>
         </ul>
+        <p>Observe that $e_2 = e_2$ in $K_2$. Thus, whenever $f = g$ in $K_4$, it follows that $f = g$ in $K_2$.</p>
       </li>
       <li>$(K_3 = K_4)$. Since $K_4$ is additive, the zero morphisms are precisely those which factor through zero objects. This yields $K_3 \to K_4$. Conversely, when $f ∼ g : X \to Y$ in $K_4$, we have $f ∼ g$ in $K_3$ as it factors through the zero object $\mathrm{Cyl}(1_X)$. Therefore, $K_4 = K_3$.</li>
     </ol>
@@ -488,7 +489,7 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
   <div class="proof">
     <p>We deduce the lemma to countable case, that is, $(M, -)$ preserves arbitrary coproducts if $(M, -)$ preserves countable coproducts.</p>
     <ul>
-      <li>Assume $∐_{i ∈ I} (M,  N_i ) \overset {≠}↪ (M, ∐_I N_{i} )$, we can find $F : M → N_i$ such that $N_i ∩ \mathrm{im}(F) ≠ 0$ for infinitely many $N_i$’s. Hence, there is a countable coproduct $N = (∐ _{n ∈ ℕ} N_n) ⊕ (∐ _{\text{the rest}}N_∙)$ where the image of $F$ has non-zero intersection with each summand. This provides an example that $(M, -)$ does not preserve countable coproducts.</li>
+      <li>Assume $∐_{i ∈ I} (M,  N_i ) \overset {≠}↪ (M, ∐_I N_{i} )$, we can find $F : M → ∐ _{i ∈ I}N_i$ such that $N_i ∩ \mathrm{im}(F) ≠ 0$ for infinitely many $N_i$’s. Hence, there is a countable coproduct $N = (∐ _{n ∈ ℕ} N_n) ⊕ (∐ _{\text{the rest}}N_∙)$ where the image of $F$ has non-zero intersection with each summand. This provides an example that $(M, -)$ does not preserve countable coproducts.</li>
     </ul>
     <p>We take arbitrary $f$ in</p>
     <p>$$\begin{equation}
