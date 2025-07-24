@@ -486,6 +486,10 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
 <div class="lemma">
   <p>If $M$ is FAKE f.g., then $M$ is compact in the underlying additive category of $𝐌𝐨𝐝_R$.</p>
   <div class="proof">
+    <p>We deduce the lemma to countable case, that is, $(M, -)$ preserves arbitrary coproducts if $(M, -)$ preserves countable coproducts.</p>
+    <ul>
+      <li>Assume $∐_{i ∈ I} (M,  N_i ) \overset {≠}↪ (M, ∐_I N_{i} )$, we can find $F : M → N_i$ such that $N_i ∩ \mathrm{im}(F) ≠ 0$ for infinitely many $N_i$’s. Hence, there is a countable coproduct $N = (∐ _{n ∈ ℕ} N_n) ⊕ (∐ _{\text{the rest}}N_∙)$ where the image of $F$ has non-zero intersection with each summand. This provides an example that $(M, -)$ does not preserve countable coproducts.</li>
+    </ul>
     <p>We take arbitrary $f$ in</p>
     <p>$$\begin{equation}
 ∐_{n ∈ ℕ} (M,N_n) ↪ (M, ∐_{n ∈ ℕ} N_n) ∋ f = (f_n)_{n ∈ ℕ}.
@@ -690,15 +694,17 @@ $$</p>
   <p>$M$ is flat iff the following equivalent definition holds.</p>
   <ol>
     <li>$M ⊗ i$ is injective for arbitrary $i ∈ \mathcal{I}$, where $\mathcal{I}$ can be either       <ol>
-        <li>the inclusions of a submomdule;</li>
+        <li>the inclusions of submodule;</li>
         <li>the inclusions of an ideal;</li>
-        <li>the inclusions of a f.g. submomdule;</li>
-        <li>the inclusions of an f.g. ideal;</li>
+        <li>the inclusions of two f.g. submodules;</li>
+        <li>the inclusions of a f.g. ideal;           <ul>
+            <li>we remark that $M ⊗ I ↪ M ⊗ R$ is injective iff it is isomorphic to its image, that is, $M ⊗ I ≃ MI$. As $M ⊗ I ↠ MI$, this is equivalent to $M ⊗ I → MI$ being injective.</li>
+          </ul>
+        </li>
       </ol>
     </li>
     <li>$\mathrm{Tor}_{≥ 1}(M, -) = 0$, or $\mathrm{Tor}_1 (M, -) = 0$;</li>
-    <li>For any matrix equation $𝐑 ⋅ 𝐦 = 𝐎$, there is some $𝐑$-matrix $𝐀$ such that $𝐑 ∈ \ker (⋅ 𝐀)$ and $𝐦 ∈ \operatorname{im}(𝐀 ⋅ )$.</li>
-    <li>For any exact sequence $0 → (A, M) → M^n → M^m$, there is some $M^l ↠ (A,M)$.</li>
+    <li>For any matrix equation $𝐑 ⋅ 𝐦 = 𝐎$, there is some $𝐑$-matrix $R$ such that $𝐑 ∈ \ker (⋅ 𝐀)$ and $𝐦 ∈ \operatorname{im}(𝐀 ⋅ )$.</li>
     <li>Any morphism from f.p. module to $M$ factors through some f.g. projective module.</li>
     <li>$M$ is a filtered colimit of f.p. modules.</li>
   </ol>
@@ -761,6 +767,89 @@ P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^
   </div>
 </div>
 
+<div class="problem">
+  <p>Show the rest of the equivalent definitions of injective modules. The proof is found in most textbooks.</p>
+</div>
+
+<p>Now it comes to the tricky stuff called <em>flat modules</em>. We show the following equivalent definitions (Baer’s criterion).</p>
+
+<div class="theorem">
+  <p>(Baer’s criterion). $M$ is flat iff $M ⊗ i$ is injective for arbitrary $i ∈ \mathcal{I}$, where $\mathcal{I}$ can be either</p>
+  <ol>
+    <li>the inclusions of submodule;</li>
+    <li>the inclusions of two f.g. submodules;</li>
+    <li>the inclusions of an ideal;</li>
+    <li>the inclusions of a f.g. ideal.</li>
+  </ol>
+  <p>We remark that $M ⊗ I ↪ M ⊗ R$ is injective iff it is isomorphic to its image, that is, $M ⊗ I ≃ MI$. As $M ⊗ I ↠ MI$, this is equivalent to $M ⊗ I → MI$ being injective.</p>
+  <div class="proof">
+    <p>$1 → 3$ is clear. We show $1 ↔ 2$, $3 ↔ 4$, and $3 → 2$ in steps. <br /> ($1 ↔ 2$, and $3 ↔ 4$). We show $2 → 1$ only. To check whether $∑ x_i ⊗ m_i$ and $∑ x_i' ⊗ m_i'$ has the same image under $i ⊗ 1_M$, it suffices to check over the f.g. submodules $⟨\{x_i\} ∪ \{x_i'\}⟩ → ⟨\{i(x_i)\} ∪ \{i(x_i')\}⟩$.</p>
+    <ul>
+      <li>In short, to verify $1$, it suffices to verify a collection of $2$.</li>
+    </ul>
+    <p>(3 → 2). We show $i ⊗ 1_M$ is injective for any inclusion of f.g. submodules $X ⊆ Y$. WLOG we assume $Y = X + ⟨x_0⟩$, hence $Y/X ≃ A/I$, and there is a lifting ($A$ is projective)</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec0/diagram_e437b111b8e29.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We obtain the commutative diagram by pulling back two epimorphisms:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec0/diagram_69216a6d27080.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Note that the middle row splits as $A ↠ A/I$ factors through $Y ↠ A/I$. Applying $M ⊗ -$ we obtain</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec0/diagram_ab31a572e881b.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Note that $H^{k-1}(\operatorname{cok}(g^∙)) ≃ H^{k+1}(\ker (g^∙))$ between exact complexes, $M ⊗ i$ is an injection.</p>
+  </div>
+</div>
+
+<p>We show <em>computational</em> properties of flat modules.</p>
+
+<div class="lemma">
+  <p>$M$ is flat, iff for any matrix equation $𝐑 ⋅ 𝐦 = 𝐎$, there is some $R$-matrix $𝐀$ such that $𝐑 ∈ \ker (⋅ 𝐀)$ and $𝐦 ∈ \operatorname{im}(𝐀 ⋅ )$.</p>
+  <ul>
+    <li>We use left modules here for convention of linear algebra.</li>
+  </ul>
+  <div class="proof">
+    <p>When $M$ is flat, the ses $0 → \ker (𝐑 ⋅ ) → R^m \xrightarrow {𝐑 ⋅ }  R^n → 0$ is $(M ⊗ -)$-exact:</p>
+    <p>$$\begin{equation}
+0 → \ker (𝐑 ⋅ ) ⊗ M → M ^m \xrightarrow {𝐑 ⋅ } M^n → 0.
+\end{equation}$$</p>
+    <p>By $\ker = \operatorname{im}$, $𝐦 ∈ \ker (𝐑 ⋅)$ iff it is of the form $𝐀 ⊗ 𝐦'$ for some $𝐑 ⋅ 𝐀 = 𝐎$. <br /> Conversely, if any matrix equation $𝐑 ⋅ 𝐦 = 𝐎$ <em>splits</em> by some $𝐀$, we shall show the flatness of $M$. By Baer’s criterion, it suffices to show $I ⊗ M ↪ IM$ for f.g. ideals. Suppose there is $∑ a_i ⊗ m_i$ with zero image. Then we have $𝐚^T ⋅ 𝐦 = 0$. Now there is $𝐀$ s.t. $𝐚^T ⋅ 𝐀 = \mathbf 0 ^T$ and $𝐦 = 𝐀 ⋅ 𝐦 '$ for some $𝐦 '$. Hence,</p>
+    <p>$$\begin{equation}
+∑ a_i ⊗ m_i = ∑ a_i ⊗ A_{i,j} m'_j = ∑ (a_i A_{i,j}) ⊗ m'_j = 0.
+\end{equation}$$</p>
+  </div>
+</div>
+
+<p>We are not satisfied with the above lemma, which is <em>not categorical enough</em>.</p>
+
+<div class="theorem">
+  <p>$M$ is flat, iff any morphism from f.p. module to $M$ factors through some f.g. projective module.</p>
+  <div class="proof">
+    <p>We show ($→$). When $M$ is flat, we take arbitrary f.p. module $R^m \xrightarrow {𝐁 ⋅ } R^n ↠ X$. A morphism $φ : X → M$ is characteristed by</p>
+    <ul>
+      <li>a set $\{[e_i] ↦ m_i\}_{i=1}^n$, where $[e_i]$ is the image of $e_i ∈ R^n$ in $X$.</li>
+    </ul>
+    <p>By $0 → (X, M) \xrightarrow{⊆} M^n → M^m$, the morphism $φ : X → M$ is characterised by the column vector $𝐦 := (m_i)_{i=1}^n$, such that $(𝐁 ^T)_{m × n} ⋅ 𝐦 = \mathbf 0$. By flatness, there is $(𝐀^T)_{n × l}$ and $(𝐦') ∈ M^l$ such that $(𝐁 ^T)_{m × n} ⋅ (𝐀 ^T)_{n × l} = 𝐎$ and $(𝐀 ^T)_{n × l} ⋅ 𝐦 ' = 𝐦$. Now $𝐀 ⋅ : R^n → R^l$ is our desired factorisation. <br /> The converse is nothing but a backwise verificationl; it is clear if one shows that flat modules are filtered colimits of f.g. projective modules.</p>
+  </div>
+  <p>In fact we deduce an exact sequence with syzygy</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/25SumLec0/diagram_1d900e34363e2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="problem">
+  <p>Demonstrate that a morphism $M → F$ from a finitely presented module $M$ to a flat module $F$ factors through some finitely generated projective module $P(M)$. Now, express $F$ as a filtered colimit of finitely presented modules, i.e., $\varinjlim^{fil} M_∙ ≃ F$. <a href="25SumLec0#the-real-compact-modules">Our construction</a> shows $P(M_∙)$ is a subsystem of $M_∙$. Demonstrate that $\varinjlim ^{fil} P(M_∙) ≃ F$ via cofinality.</p>
+</div>
+
+<div class="theorem">
+  <p>Flat modules are filtered colimits of finitely generated free modules.</p>
+  <div class="proof">
+    <p>We show filtered colimits of f.g. projective modules are flat ones. Clearly, $(\varinjlim^{fil}P_∙) ⊗ -$ is an exact functor. The converse is shown above.</p>
+  </div>
+</div>
+
 <h3 id="coherency">Coherency</h3>
 
 <p>Inducting from f.g. and f.p., it is natural to come up with the ideal of projection length. We show the following <em>atomatic</em> propositions over the ses</p>
@@ -790,7 +879,7 @@ P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/25SumLec0/diagram_be3fb110abb81.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>Now $Y ≃ \operatorname{cok}(ϕ ) ≃ \operatorname{cok}[H_0(P_∙ (K)) \xrightarrow{H_0(P_∙ (ϕ ))} H_0(P_∙ (X))]$. This is exactly $\operatorname{cok}(ϕ _0, d)$ by long exact sequence.</p>
+    <p>Now $Y ≃ \operatorname{cok}(ϕ ) ≃ \operatorname{cok}[H_0(P_∙ (K)) \xrightarrow{H_0(P_∙ (ϕ ))} H_0(P_∙ (X))]$. This is exactly $\operatorname{cok}(ϕ _0, d)$ by long exact sequence. <br /> ($1 → 4$).</p>
   </div>
 </div>
 
