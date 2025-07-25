@@ -325,7 +325,7 @@ X^p ⊗ Y^q → (-1) ^{pq} ⋅ Y^q ⊗ X^p,\quad x ⊗ y ↦ (-1)^{pq} y ⊗ x
   <div class="proof">
     <p>We take $τ : a ⊗ b ↦ b ⊗ a$ for modules, and wish there exist a some $ε : ℤ × ℤ → \{± 1\}$ along with the commutative diagram</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec0/diagram_c76332ab2afdd.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/25SumLec0/diagram_6bbf87b6594c8.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
     <p>We see from the above diagram that $ε (p,q) = (-1)^{pq}$ is a solution:</p>
     <center> <br /> <div class="tikz-diagram">
@@ -345,7 +345,7 @@ X^p ⊗ Y^q → (-1) ^{pq} ⋅ Y^q ⊗ X^p,\quad x ⊗ y ↦ (-1)^{pq} y ⊗ x
   <p>($\mathcal{HOM}(-, ?)$). We define $\mathcal{HOM}(X, Y)$ as an object in $C(R)$ by</p>
   <ol>
     <li>$(\mathcal{HOM}(X,Y))^p$ consists of morphisms in $(X, Y)_{\text{Graded-Module}}$ of degree $p$, i.e., homogeneous morphisms in $(X, Σ ^p Y)_{\text{Graded-Module}}$;</li>
-    <li>the differential for a homogeneous morphism $f$ is $[f,d] := d_Y ∘ f - (-1)^{\deg f} f∘ d_X$.</li>
+    <li>the differential for a homogeneous morphism $f$ is $[d,f] := d_Y ∘ f - (-1)^{\deg f} f∘ d_X$.</li>
   </ol>
 </div>
 
@@ -530,7 +530,7 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
   <p>On FAKE f.g. and f.g.. Show that</p>
   <ol>
     <li>f.g. are FAKE f.g..</li>
-    <li>for projective modules, f.g. coincides FAKE f.g..</li>
+    <li>f.g. coincides FAKE f.g. for projective modules;</li>
     <li>FAKE f.g. are closed under quotients (and summands);</li>
     <li>FAKE f.g. are closed under extensions (and finite sums);</li>
     <li>For ses $K ↪ X ↠ Y$ where $K$ is small in Y (e.g., radical inclusion), then $X$ is FAKE f.g. if so is $Y$.</li>
@@ -542,10 +542,10 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
   <div class="proof">
     <p>We show any FAKE f.g. module $M$ is f.g..</p>
     <ul>
-      <li>(by 5). the projective cover $P(M)$ is again FAKE f.g.</li>
+      <li>(by 5). the projective cover $P(M)$ is again FAKE f.g..</li>
       <li>(by 2). such $P(M)$ must be f.g..</li>
     </ul>
-    <p>By $P(M) ↠ M$, $M$ is f.g..</p>
+    <p>By $P(M) ↠ M$, $M$ is also f.g..</p>
   </div>
 </div>
 
@@ -662,7 +662,7 @@ $$</p>
 <p>We summarise the tests for f.p. modules, proj. modules, inj. modules and flat modules at the very beginning.</p>
 
 <div class="theorem">
-  <p>$M$ is f.p., iff the following equivalent definition holds.</p>
+  <p>$M$ is f.p., iff the following equivalent definitions hold.</p>
   <ol>
     <li>$M ≃ \operatorname{cok}φ$, where $φ$ is a morphism in $𝐩𝐫𝐨𝐣$.</li>
     <li>$(M, -)$ preserves filtered colimits.</li>
@@ -671,7 +671,7 @@ $$</p>
 </div>
 
 <div class="theorem">
-  <p>$M$ is projective, iff the following equivalent definition holds.</p>
+  <p>$M$ is projective, iff the following equivalent definitions hold.</p>
   <ol>
     <li>$(M, -)$ is exact, $\mathrm{Ext}^1(M, -)=0$, etc.</li>
     <li>$M$ is a summand of some free module $R^{(λ)}$;</li>
@@ -681,7 +681,7 @@ $$</p>
 </div>
 
 <div class="theorem">
-  <p>$M$ is injective, iff the following equivalent definition holds.</p>
+  <p>$M$ is injective, iff the following equivalent definitions hold.</p>
   <ol>
     <li>$(-, M)$ exact, $\mathrm{Ext}^1(-, M)=0$; $\mathrm{Ext}^1(\text{quotient ring},M)=0$, etc.</li>
     <li>$(i, M)$ is a surjection for any ideal inclusion $i : I → R$.</li>
@@ -690,7 +690,7 @@ $$</p>
 </div>
 
 <div class="theorem">
-  <p>$M$ is flat iff the following equivalent definition holds.</p>
+  <p>$M$ is flat iff the following equivalent definitions hold.</p>
   <ol>
     <li>$M ⊗ i$ is injective for arbitrary $i ∈ \mathcal{I}$, where $\mathcal{I}$ can be either       <ol>
         <li>all inclusions of submodule;</li>
@@ -706,6 +706,16 @@ $$</p>
     <li>For any matrix equation $𝐑 ⋅ 𝐦 = 𝐎$, there is some $𝐑$-matrix $R$ such that $𝐑 ∈ \ker (⋅ 𝐀)$ and $𝐦 ∈ \operatorname{im}(𝐀 ⋅ )$.</li>
     <li>Any morphism from f.p. module to $M$ factors through some f.g. projective module.</li>
     <li>$M$ is a filtered colimit of f.p. modules.</li>
+  </ol>
+</div>
+
+<div class="theorem">
+  <p>$M$ is f.g. projective iff the following equivalent definitions hold.</p>
+  <ol>
+    <li>$M$ is a summand of some $R^n$;</li>
+    <li>$M$ is projective, and $(M, -)$ preserves coproducts;</li>
+    <li>$(M, -)$ preserves all colimits;</li>
+    <li>$M ⊗ -$ preserves all limits.</li>
   </ol>
 </div>
 
@@ -848,6 +858,32 @@ P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^
     <p>We show filtered colimits of f.g. projective modules are flat ones. Clearly, $(\varinjlim^{fil}P_∙) ⊗ -$ is an exact functor. The converse is shown above.</p>
   </div>
 </div>
+
+<p>The following theorem is a characterization of f.g. projective modules, easy but functorial.</p>
+
+<div class="theorem">
+  <p>$M$ is f.g. projective iff the following equivalent definitions holds.</p>
+  <ol>
+    <li>$M$ is a summand of some $R^n$;</li>
+    <li>$M$ is projective, and $(M, -)$ preserves coproducts;</li>
+    <li>$(M, -)$ preserves all colimits;</li>
+    <li>$M ⊗ -$ preserves all limits.</li>
+  </ol>
+  <div class="proof">
+    <p>Clearly 1. implies the others. <br /> (2 → 1). This is clear by criterion of FAKE f.g. modules; we provide a straightforward and down-to-earth proof instead. There exists some $N$ such that $R^{(λ)} = M ⊕ N$ is free. In particular, $M$ is f.g. iff $λ$ can be finite. Since taking summand preserves the additive natural isomorphism, it suffices to show</p>
+    <ul>
+      <li>$(R^{(λ)}, -)$ is not $∐$-preserving when $λ$ is infinite.</li>
+    </ul>
+    <p>We consider $(R^{(λ)}, R)^{(λ)} ↪ (R^{(λ)}, R^{(λ)}) ∋ 1_{R^{(λ)}}$, or equivalently, $∐_λ ∏_λ R ↪ ∏_λ ∐_λ R ∋ 1_R$ by tracking the image of basis.</p>
+    <ul>
+      <li>$∐_λ ∏_λ R ⊆ R^{λ × λ}$ consists of $λ × λ$ matrices with finite many columns;</li>
+      <li>$∏_λ ∐_λ R ⊆ R^{λ × λ}$ consists of $λ × λ$ matrices with all finite length columns.</li>
+    </ul>
+    <p>The diagonal matrix lies in $∏_λ ∐_λ R ⊆ R^{λ × λ}$, but not in $∐_λ ∏_λ R ⊆ R^{λ × λ}$, <br /> (3 → 1). $(M, -)$ is an exact functor as it preserves finite limits. Hence $M$ is projective. By 2., $M$ has to be f.g. projective. <br /> (4 → 1). $(M ⊗ -)$ is an exact functor as it preserves finite limits. Hence $M$ is flat. $M$ is also f.p. as $M ⊗ -$ preserves products. By forthcoming techniques of character modules, f.p. flat modules are f.g. projective.</p>
+  </div>
+</div>
+
+<p>In particular, f.g. projective modules are precisely those $M$ such that $M ⊗ -$ and $(M, -)$ preserves all limits and colimits.</p>
 
 <h3 id="coherency">Coherency</h3>
 
