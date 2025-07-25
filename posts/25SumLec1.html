@@ -398,13 +398,13 @@ s_δ ∈ (X_δ , A) ≃ \varprojlim_{β < δ } (X_{β } , A) ∋ (s_β)_{β < δ
 <div class="lemma">
   <p>$λ ⋅ λ = λ$ for any infinite cardinal $λ$.</p>
   <div class="proof">
-    <p>Suppose there exists a least counterexample $κ$ (clearly $κ > ω$). Now consider the function</p>
+    <p>Suppose there exists a least counterexample among infinite cardinals $κ$ (clearly $κ ≠ ω$). Now consider the function</p>
     <p>$$\begin{equation}
 f : κ × κ → κ,\quad (m,n) ↦ \max (m,n).
 \end{equation}$$</p>
     <p>Observe that the graph of $f$ is larger than the codomain of $f$ ($|\mathrm{Graph}(f)| = κ ⋅ κ > κ$). <br /> <br /> Now equip $\mathrm{Graph}(f) ⊆ κ × κ × κ$ with the lexicographic order. There exists a point $(α,β,γ) ∈ \mathrm{Graph}(f)$ such that $|\{x ∣ x < (α,β,γ)\}| = κ$. Now</p>
     <p>$$\begin{equation}
-κ ≤ \max(α, β) × \max(α, β) = \max(α, β) < κ.
+κ ≤ \max(α, β) × \max(α, β) \xlongequal{\text{by assumptions}} \max(α, β) < κ.
 \end{equation}$$</p>
     <p>A contradiction.</p>
   </div>
@@ -420,14 +420,14 @@ f : κ × κ → κ,\quad (m,n) ↦ \max (m,n).
     <li>$\{(f_n)|_{M_γ}\}_{n ∈ ℕ} ⊆ \mathrm{End}(M_γ)$;</li>
     <li>$M_{γ} = M_γ ⊕ \ (\text{countably many}\ M_i \text{'s})$.</li>
   </ol>
-  <p>Set $P_γ := ∃ \ \text{construction of } \{M_α\}_{α ≤ γ}$. We show via transfinite induction that</p>
+  <p>Set $P_γ := (∃ \ \text{construction of } \{M_α\}_{α ≤ γ})$. We show via transfinite induction that</p>
   <ol>
     <li>$P_0$ is true;</li>
     <li>$P_γ → P_{γ +1}$;</li>
     <li>$⋀ _{α < γ}(P_α) → P_γ$ for $γ$ a limit ordinal.</li>
   </ol>
   <div class="proof">
-    <p>Step 1 and Step 3 are evident. We demonstrate Step 2 with $P_γ → P_{γ + 1}$ (when $M_γ ⊊ M$). Upon selecting an arbitrary summand $M^0$ with $M^0 ∩ M_γ = 0$, the countably generated image $∑ _{n ∈ ℕ }f_n(M^0)$ is covered by countably many $M_i$’s. Denote their direct sums as $M^1$. Consider $∑ _{n ∈ ℕ }f_n((M^1 ⊕ M^0)$ and obtain $M^3$. Now $M_{γ +1} := (⨁_{n ∈ ℕ} M^n) ⊕ M_γ$ is the desired construction.</p>
+    <p>Step 1 and Step 3 are clear. We show Step 2 with $P_γ → P_{γ + 1}$ (when $M_γ ⊊ M$). Upon selecting an arbitrary summand $M^0$ with $M^0 ∩ M_γ = 0$, the countably generated image $∑ _{n ∈ ℕ }f_n(M^0)$ is covered by countably many $M_i$’s. Denote their direct sums as $M^1$. Consider $∑ _{n ∈ ℕ }f_n((M^1 ⊕ M^0)$ and obtain $M^3$. Now $M_{γ +1} := (⨁_{n ∈ ℕ} M^n) ⊕ M_γ$ is the desired construction.</p>
   </div>
 </div>
 
@@ -560,6 +560,14 @@ M = M_0 ⊆ M_1 ⊆ \cdots ⊆ M_γ ⊆ \cdots \quad (γ < α)
   </article>
 
   <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/25SumLec2"
+        title="NEXT: 25sumlec2">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
     
     <a
       class="home"
