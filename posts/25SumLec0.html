@@ -444,12 +444,12 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
     <li>for any (non-empty) set of <strong><em>proper submodules</em></strong> $\{N_i\}_{i ∈ I}$ such that either $N_i ⊆ N_j$ or $N_i ⊇ N_j$ for any $i, j ∈ I$, the union $⋃ N_∙$ is <strong><em>never</em></strong> equal to $M$ itself.</li>
   </ul>
   <div class="proof">
-    <p>($→$). We show $a → b$ by showing that $a ∧ (¬ b) → \text{false}$. By $(¬ b)$, there exists an ordered system of proper submodules $N_∙$ whose union is $M$. Let $\{x_i\}_{i=1}^n$ be a generating set of $M$ (by $(a)$). Thus, for each $i$, there exists $x_i ∈ N_{k_i}$. The proper submodule $⋃ _{i=1}^n N_{k_i} = \text{Largest}\{N_{k_i}\}$ yields a contradiction. <br /> <br /> ($←$). We show $b → a$ by showing that $b ∧ (¬ a) → \text{false}$. Consider the collection of proper submodules $N_∙ = \{N ∣ M / N\ \text{ is not f.g.}\}$. The set of proper submodules $N_∙$ is both</p>
+    <p>($→$). We show $a → b$ by showing that $a ∧ (¬ b) → \text{false}$. By $(¬ b)$, there exists an ordered system of proper submodules $N_∙$ whose union is $M$. Let $\{x_i\}_{i=1}^n$ be a generating set of $M$ (by $(a)$). Thus, for each $i$, there exists $x_i ∈ N_{k_i}$. The proper submodule $⋃ _{i=1}^n N_{k_i} = \text{Largest}\{N_{k_i}\}$ yields a contradiction. <br /> <br /> ($←$). We show $b → a$ with $b ∧ (¬ a) → \text{false}$. Consider the collection of proper submodules $N_∙ = \{N ∣ M / N\ \text{ is not f.g.}\}$. The poset of proper submodules $N_∙$ is both</p>
     <ul>
       <li>non-empty by $(¬ a)$, and</li>
       <li>contains no maximal elements by construction.</li>
     </ul>
-    <p>Therefore, $N_∙$ contains a maximal inclusion chain ($C_∙$) of proper submodules. $C_∙$ contains no maximal elements, hence $⋃ C_∙ ∉ N_∙$. Equivalently, $M / (⋃ C_∙)$ is f.g., we see there exists a f.g. submodule $L$ such that $L + ⋃ C_∙ = M$; however, $⋃ (L + C_∙) ≠ M$ by $(b)$. This yields a contradiction.</p>
+    <p>We examine the partially ordered set $P := \{\text{chains in } N_∙\}$ with the binary relation $⊆$. Observe that each chain in $P$ possesses an upper bound, obtained by taking the common refinement. Therefore, by Zorn’s lemma, $N_∙$ contains a maximal inclusion chain of proper submodules, denoted by $C_∙$. <br /> $C_∙$ contains no maximal elements; thus, $⋃ C_∙ ∉ N_∙$. In this case $M / (⋃ C_∙)$ is f.g.. Consequently, there exists a finitely generated submodule $L$ such that $L + ⋃ C_∙ = M$; however, $⋃ (L + C_∙) ≠ M$ by $(b)$. This leads to a contradiction.</p>
   </div>
 </div>
 
@@ -997,7 +997,7 @@ P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^
 </div>
 
 <div class="problem">
-  <p>There are examples that f.g. flat modules are not projectve. An example is given in <a href="https://stacks.math.columbia.edu/tag/052H">Stacks project</a>.</p>
+  <p>There are examples that f.g. flat modules are not projectve. An example is given in <a href="https://stacks.math.columbia.edu/tag/052H">stacks project</a>.</p>
 </div>
 
 <div class="problem">
