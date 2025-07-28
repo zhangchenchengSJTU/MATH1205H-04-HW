@@ -7,6 +7,523 @@
     
       
         <item>
+          <title>CT3</title>
+          <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#lecture-3&quot; id=&quot;markdown-toc-lecture-3&quot;&gt;Lecture 3&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#abstract&quot; id=&quot;markdown-toc-abstract&quot;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#precover&quot; id=&quot;markdown-toc-precover&quot;&gt;(Pre)cover&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-projective-cover&quot; id=&quot;markdown-toc-the-projective-cover&quot;&gt;The Projective Cover&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#functorial-approach&quot; id=&quot;markdown-toc-functorial-approach&quot;&gt;Functorial Approach&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#flat-cotorsion-theory&quot; id=&quot;markdown-toc-flat-cotorsion-theory&quot;&gt;Flat Cotorsion Theory&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#purity&quot; id=&quot;markdown-toc-purity&quot;&gt;Purity&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#flat-cotorsion-pair&quot; id=&quot;markdown-toc-flat-cotorsion-pair&quot;&gt;Flat Cotorsion Pair&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lecture-3&quot;&gt;Lecture 3&lt;/h2&gt;
+
+&lt;div class=&quot;abstract&quot;&gt;
+  &lt;h5 id=&quot;abstract&quot;&gt;Abstract&lt;/h5&gt;
+  &lt;div&gt;
+    &lt;p&gt;A wide type of cotorsion pairs are constructed via covering and enveloping. We analysis the existence of projective cover at the beginning, and see where the obstakle rises. Then we introduce criterion of the existence of cover/envelope.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;precover&quot;&gt;(Pre)cover&lt;/h2&gt;
+
+&lt;p&gt;We explain the general theory of (pre)covers with projective (pre)covers in a functorial approach.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-projective-cover&quot;&gt;The Projective Cover&lt;/h3&gt;
+
+&lt;p&gt;For Abelian category with enough projectives, we provide two equivalent definitions of projective cover.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Small/superfluous). A subobject $i : K ↪ X$ is small, if for any subobject $j : L ↪ X$ with $L + K = X$, then $j$ must be an isomorphism.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;A subobject is characterised be a morphism&lt;/strong&gt;, rather than an plain object. The expression $L + K = X$ means that the following $θ$ induced by pushout is an isomorphism&lt;/p&gt;
+&lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+    &lt;embed src=&quot;/website/svg/25SumLec3/diagram_4b52b2ee90498.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+  &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+
+&lt;h3 id=&quot;functorial-approach&quot;&gt;Functorial Approach&lt;/h3&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;The Yoneda embedding $\mathcal{A} ↪ 𝐏𝐒𝐡 (\mathcal{A})$ via $X ↦ (-, X)_\mathcal{A}$ is fully faithful and left exact. In particular, the representable functor $(-, X)_\mathcal{A}$ are projective in $𝐏𝐒𝐡 (\mathcal{A})$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;The Yoneda embedding gives a bijection $(X,Y) ↔ [(-, X), (-, Y)]_{𝐏𝐒𝐡 (\mathcal{A})}$, which indentifies $f$ with a collection of natural transformation $\{(A, f)\}_{A ∈ \mathcal{A}}$.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;The assignment is $? ↦ (-, ?)$ preserves all limits, thus is left exact;&lt;/li&gt;
+      &lt;li&gt;For any surjection $θ : F → G$ of presheaves, we see $[(-, ?), θ] ≃ θ_?$ is surjective. Hence, representable functors are projective in $𝐏𝐒𝐡 (\mathcal{A})$.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we gives a functorial characterisation of (pre)cover. Throughout, $\mathcal{F}$ is a replete (= closed under iso.) class of objects.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;((Pre)cover). Let $X ∈ \mathcal{X}$ and $F ∈ \mathcal{F}$. Say $f : F → X$ is a $\mathcal{F}$-&lt;strong&gt;precover&lt;/strong&gt;, provided the following equivalent conditions:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Any morphism $g : G → X$ with $G ∈ \mathcal{F}$ factors through $f$;&lt;/li&gt;
+    &lt;li&gt;There is an epimorphism $f_∗ : (- , F)_\mathcal{F} ↠ (-, X)_\mathcal{A}$ from the projective object $(-, F)_\mathcal{F} ∈ 𝐏𝐒𝐡 (\mathcal{F})$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;Say a precover $f : F → X$ is a &lt;strong&gt;cover&lt;/strong&gt;, provided the following equivalent conditions:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Any endomorphism $α : F → X$ such that $f ∘ α = f$ implies $α$ is an automorphism;&lt;/li&gt;
+    &lt;li&gt;The epimorphism $f_∗ : (-, F)_\mathcal{F} ↠ (-, X)_\mathcal{A}$ is a projective cover.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;Note that for $2$, $\mathrm{End}_\mathcal{F}(F) ≃ \mathrm{End}_{𝐏𝐒𝐡 (\mathcal{F})}((-, F)_\mathcal{F})$ via $α ↦ α _∗$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Categorically speaking, to study the cover, it suffices to study the precover.&lt;/p&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show that $i : k ↪ X$ is small, if any pushout pullback square of the form &lt;span class=&quot;tikzinline-diagram&quot;&gt;       &lt;embed src=&quot;/website/svg/25SumLec3/diagram_cc353bb5ccf7a.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: inline-block; width: 10%; height: 10%; white-space: nowrap&quot; /&gt;
+ &lt;/span&gt;,&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;flat-cotorsion-theory&quot;&gt;Flat Cotorsion Theory&lt;/h2&gt;
+
+&lt;h3 id=&quot;purity&quot;&gt;Purity&lt;/h3&gt;
+
+&lt;h3 id=&quot;flat-cotorsion-pair&quot;&gt;Flat Cotorsion Pair&lt;/h3&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;Flat modules are closed under transfinite filtrations.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We prove with transfinite induction. Suppose $\{M_γ\}_{γ &lt; α}$ is a transfinite filtration of flat modules.&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;$M_0 = 0$ is flat.&lt;/li&gt;
+      &lt;li&gt;If $M_γ$ and $M_{γ + 1} / M_γ$ are flat, then the extension $M_{γ + 1}$ is also flat (by taking $\mathrm{Tor}_1$).&lt;/li&gt;
+      &lt;li&gt;If $\{M_{β}\}_{γ &lt; β}$ are flat for some limit ordinal $β$, then for any ses $θ$, the filtered colimit of ses $\varinjlim^{fil}_{γ &lt; β} (M_γ ⊗ θ)$ is also a ses.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It is straightforward to show that $(𝐅𝐥𝐚𝐭 , 𝐅𝐥𝐚𝐭 ^⟂ )$ is a cotorsion theory. Since&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$𝐏𝐫𝐨𝐣 ⊆ 𝐅𝐥𝐚𝐭$;&lt;/li&gt;
+  &lt;li&gt;$𝐅𝐥𝐚𝐭$ is closed under taking summands;&lt;/li&gt;
+  &lt;li&gt;$𝐅𝐥𝐚𝐭$ is closed under transfinite filtrations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hence, $𝐅𝐥𝐚𝐭 = 𝐒𝐦𝐝 (𝐏𝐫𝐨𝐣 ∗ 𝐅𝐢𝐥 (𝐅𝐥𝐚𝐭)) = {}^⟂ (𝐅𝐥𝐚𝐭^⟂ )$.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;We call $(𝐅𝐥𝐚𝐭 , 𝐅𝐥𝐚𝐭 ^⟂)$ a &lt;em&gt;flat cotorsion theory&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-07-27T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/website/posts/25SumLec3</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/25SumLec3</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>CT2</title>
+          <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#lecture-2&quot; id=&quot;markdown-toc-lecture-2&quot;&gt;Lecture 2&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#abstract&quot; id=&quot;markdown-toc-abstract&quot;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#remarks-on-e-t-lemma&quot; id=&quot;markdown-toc-remarks-on-e-t-lemma&quot;&gt;Remarks on E-T Lemma&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#functorial-approximations&quot; id=&quot;markdown-toc-functorial-approximations&quot;&gt;Functorial Approximations&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#reconstruction-lemma&quot; id=&quot;markdown-toc-reconstruction-lemma&quot;&gt;Reconstruction Lemma&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#kaplansky-class&quot; id=&quot;markdown-toc-kaplansky-class&quot;&gt;Kaplansky Class&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#acyclic-complexes&quot; id=&quot;markdown-toc-acyclic-complexes&quot;&gt;Acyclic Complexes&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#mathjax_protectedjch7fv7in4jdx3thy30sienfe2fjfskkmathjax_protected&quot; id=&quot;markdown-toc-mathjax_protectedjch7fv7in4jdx3thy30sienfe2fjfskkmathjax_protected&quot;&gt;$({}^⟂C_{ac}, C_{ac})$&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#mathjax_protectedjchdx3thy30sienfe2fjfv7in4ipjamathjax_protected&quot; id=&quot;markdown-toc-mathjax_protectedjchdx3thy30sienfe2fjfv7in4ipjamathjax_protected&quot;&gt;$(C_{ac}, C_{ac}^⟂)$&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#a-general-construction&quot; id=&quot;markdown-toc-a-general-construction&quot;&gt;A General Construction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#a-note-on-projectives&quot; id=&quot;markdown-toc-a-note-on-projectives&quot;&gt;A Note on Projectives&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-definitions&quot; id=&quot;markdown-toc-the-definitions&quot;&gt;The Definitions&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#resolutions-mathjax_protectedjetelsjwnzcp8j2qqcdkkjwnzcjksqmathjax_protected&quot; id=&quot;markdown-toc-resolutions-mathjax_protectedjetelsjwnzcp8j2qqcdkkjwnzcjksqmathjax_protected&quot;&gt;Resolutions ($K^-(𝐩𝐫𝐨𝐣)$)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#resolutions-dg&quot; id=&quot;markdown-toc-resolutions-dg&quot;&gt;Resolutions (DG)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;lecture-2&quot;&gt;Lecture 2&lt;/h2&gt;
+
+&lt;div class=&quot;abstract&quot;&gt;
+  &lt;h5 id=&quot;abstract&quot;&gt;Abstract&lt;/h5&gt;
+  &lt;div&gt;
+    &lt;p&gt;We analysis a criterion on a cotorsion pair cogenerated by set, which complete the counter part of Eklof-Trlifaj’s theorem. We introduce DG-projective complexes over the construction of $(^{⟂ }C_{ac}, C_{ac}, C_{ac}^⟂ )$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;remarks-on-e-t-lemma&quot;&gt;Remarks on E-T Lemma&lt;/h2&gt;
+
+&lt;h3 id=&quot;functorial-approximations&quot;&gt;Functorial Approximations&lt;/h3&gt;
+
+&lt;p&gt;We show in &lt;a href=&quot;25SumLec1#eklof-trlifaj-lemma&quot;&gt;the previous lecture&lt;/a&gt; that&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Eklof-Trlifaj lemma). For any object $S ∈ C(R)$, the cotorsion pair cogenerated by $S$ is complete. In paricular, any objects $X$ admits a ses&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+θ _X : 0 → X → X_F → X_C → 0,\quad (X_F ∈ {}^⟂ S, \ X_C ∈ 𝐅𝐢𝐥 (S)).
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;The construction is &lt;strong&gt;functorial&lt;/strong&gt; as the $|S|$-compact ordinal $α$ is fixed.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note that $C(R)$ has enough projectives. Any chain complex $X$ admits a functorial epimorphism $p_X$ from the free complex $𝐅𝐫𝐞𝐞(X)$:&lt;/p&gt;
+
+&lt;p&gt;$$\begin{equation}
+1_X ∈ (X,X)_{𝐒𝐞𝐭𝐬} ≃ (𝐅𝐫𝐞𝐞(X), X)_{C(R)} ∋ p_X.
+\end{equation}$$&lt;/p&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show that for $X ∈ 𝐌𝐨𝐝 _R ↪ C(R)$, the above $p_X$ is $R^{(X)} ↠ X, \quad e_x ↦ x$, where $𝐅𝐫𝐞𝐞 (X) = R^{(X)}$. In general,&lt;/p&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/25SumLec2/diagram_d75ada481e3fc.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;It is also convenient to give a &lt;strong&gt;functorial&lt;/strong&gt; $τ_X : 0 → X^F → X^C → X → 0$ by&lt;/p&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/25SumLec2/diagram_9c4d341a9b189.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Hence we give a &lt;strong&gt;functorial&lt;/strong&gt; approximations&lt;/p&gt;
+
+&lt;p&gt;$$\begin{equation}
+X ∈ \mathrm{coCone}(S^⟂ , 𝐅𝐢𝐥 (S)) = \mathrm{coCone}(S^⟂ , 𝐅𝐫𝐞𝐞 ∗ 𝐅𝐢𝐥 (S)).
+\end{equation}$$&lt;/p&gt;
+
+&lt;p&gt;In particular, $𝐅𝐢𝐥 (S) ⊆ (𝐅𝐫𝐞𝐞 ∗ 𝐅𝐢𝐥 (S)) ⊆ {}^⟂ (X^⟂)$.&lt;/p&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;Any $X ∈ {}^⟂ (S^⟂)$ is a summand of some $X' ∈ (𝐅𝐫𝐞𝐞 ∗ 𝐅𝐢𝐥 (S))$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;This follows from the split ses $τ _X$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;$$\begin{equation}
+(𝐏𝐫𝐨𝐣 ∗ 𝐅𝐢𝐥 (S)) = 𝐅𝐢𝐥 (𝐏𝐫𝐨𝐣 ∪ \{S\}).
+\end{equation}$$&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We show $⊇$. When $M$ is filtrated by either $S$ or some free object $F$ in each step. We denote $M_{α} \overset {\boxed X} ↪ M_{α + 1}$ for the filtration step $(M_{α +1} / M_α) ≃ X$. We construct $M' ↪ M ↠ M''$ by inducting on the following cases:&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec2/diagram_013fbb4f10522.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;Note that filtered colimits preserves exactness. Hence,&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+0 → \varinjlim{}^{fil} M_γ ' → \varinjlim{}^{fil} M_γ → \varinjlim{}^{fil} M_γ '' → 0
+\end{equation}$$&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If $X ∈ {}^⟂(S^⟂)$, then $τ _X$ splits. Hence,&lt;/p&gt;
+
+&lt;p&gt;$$\begin{aligned}
+\ &amp;𝐒𝐦𝐝 (𝐏𝐫𝐨𝐣 ∗ 𝐅𝐢𝐥 (S)) = 𝐒𝐦𝐝 (𝐅𝐢𝐥 (𝐏𝐫𝐨𝐣 ∪ \{S\})) \\
+= \ &amp;𝐒𝐦𝐝 (𝐅𝐫𝐞𝐞 ∗ 𝐅𝐢𝐥 (S)) = 𝐒𝐦𝐝 (𝐅𝐢𝐥 (𝐅𝐫𝐞𝐞 ∪ \{S\}))
+\end{aligned}$$&lt;/p&gt;
+
+&lt;p&gt;Therefore, one obtains ${}^⟂ (S^⟂ )$ from $S$ via either of the precedures&lt;/p&gt;
+
+&lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+    &lt;embed src=&quot;/website/svg/25SumLec2/diagram_889065ae61538.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+  &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show the transfinite filtration of free objects is projective.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;A &lt;a href=&quot;25SumLec1#ordinals-and-cardinals&quot;&gt;problem&lt;/a&gt; in the previous lecture gives a countably generated irreducible projective module, whereas f.g. free coincides f.g. projective over that ring.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;reconstruction-lemma&quot;&gt;Reconstruction Lemma&lt;/h3&gt;
+
+&lt;p&gt;We ask when a cotorsion theory (over $C(R)$) is cogenerated by a set $\mathcal{S}$ (or equivalently, a single element $(∐ \mathcal{S})^{(ω)}$).&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;Once $(\mathcal{C}, \mathcal{F})$ is cogenerated by a subset $\mathcal{S}$, we take $κ _0 := |⋃ \mathcal{S}|$. Now $(\mathcal{C}, \mathcal{F})$ is cogenerated by $\{M ∈ \mathcal{C}∣ |M| ≤ κ _0\}$. Indeed,&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;The isomorphisms classs in $\{M ∈ \mathcal{C}∣ |M| ≤ κ _0\}$ form of a set. Given an infinite set $X$, the number of ordered $ℤ$-partition over $X$ is controlled by $|X|^{ω}$. For each component $L$, the number of $R$-modules structures over over it is controlled by $|L|^{|R| ⋅ |L|}$, as a module is characterised by a morphism of the type $R → \mathrm{End}(L)$.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;($κ$-constructable). Say a class $\mathcal{X}$ is $κ$-constructable, provided $$\begin{equation}
+\mathcal{X} = 𝐅𝐢𝐥 (\mathcal{X}_{≤ κ}) := 𝐅𝐢𝐥 (\{M ∈ \mathcal{X} ∣ |M| ≤ κ\}).
+\end{equation}$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Reconstruction lemma). Let $\mathcal{X} ⊆ C(R)$ be a subclass such that&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\mathcal{X}$ is closed under taking summands and filtrations;&lt;/li&gt;
+    &lt;li&gt;$\mathcal{X}$ consists of all $\{Σ ^k (\overline R)\}_{k ∈ ℕ }$;&lt;/li&gt;
+    &lt;li&gt;$\mathcal{X}$ is $κ$-constructable for some cardinal $κ$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;Then $(\mathcal{X}, \mathcal{X}^⟂ )$ is a cotorsion pair cogenerated by a set.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;$\mathcal{X}_{≤ κ}$ is essentially a small set. Note that $\mathcal{X} ⊆ 𝐅𝐢𝐥 (\mathcal{X}_{≤ κ})$. Taking $𝐅𝐢𝐥$ on both sides yields $𝐅𝐢𝐥 (\mathcal{X}) = 𝐅𝐢𝐥 (\mathcal{X}_{≤ κ})$. Notice that&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+{}^⟂ ((\mathcal{X}_{≤ κ})^⟂ ) = 𝐒𝐦𝐝 (𝐏𝐫𝐨𝐣 ∗ 𝐅𝐢𝐥 (\mathcal{X}_{≤ κ})) = 𝐒𝐦𝐝 (𝐏𝐫𝐨𝐣 ∗ 𝐅𝐢𝐥 (\mathcal{X})) = \mathcal{X}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;By Galois connection, $\mathcal{X}^⟂ = (\mathcal{X}_{≤ κ})^⟂$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;kaplansky-class&quot;&gt;Kaplansky Class&lt;/h3&gt;
+
+&lt;p&gt;In practice, it is hard to determine whether a class is $κ$-constructable. The main obstackle is to determined whether the transfinite filtration terminates as&lt;/p&gt;
+
+&lt;p&gt;$$\begin{equation}
+M_{γ} = M_{γ + 1} = \cdots \quad ⊊ M.
+\end{equation}$$&lt;/p&gt;
+
+&lt;p&gt;We give a slightly stronger definition, which is called &lt;strong&gt;$κ$-Kaplansky class&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;($κ$-Kaplansky class). A class $\mathcal{X}$ is called $κ$-Kaplansky, provided for any $x ∈ M ∈ \mathcal{X}$, there is $x ∈ M' ⊆ M$ such that $(M/M') ∈ \mathcal{X}_{≤ κ}$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Clearly, $M$ in a $κ$-Kaplansky class admits a transfinite $\mathcal{X}_{≤ κ}$-filtration with length $|M|$. In short, a $κ$-Kaplansky class is a $κ$-constructable class where &lt;strong&gt;&lt;em&gt;the induction starts anywhere&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show that $𝐌𝐨𝐝_R$ is an $|R|$-Kaplansky class.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;acyclic-complexes&quot;&gt;Acyclic Complexes&lt;/h2&gt;
+
+&lt;p&gt;We denote $C_{ac}(R)$ or simply $C_{ac}$ as the class of acyclic complexes in $C(R)$. $C_{ac}$ is closed under symmetric opetations, e.g. taking extensions, summands, coproducts and products, transfinite filtrations and cofiltrations.&lt;/p&gt;
+
+&lt;p&gt;The symmetric behaviours are due to the cotorsion triple $({}^⟂ C_{ac}, C_{ac}, C_{ac}^⟂)$. Trivial examples of cotorsion triples includes $(𝐏𝐫𝐨𝐣 , \mathcal{A}, 𝐈𝐧𝐣)$, and (over Frobenius category) $(\mathcal{A}, 𝐏𝐫𝐨𝐣 , \mathcal{A})$.&lt;/p&gt;
+
+&lt;p&gt;For complexes, there are lots of good subcategories containing $𝐏𝐫𝐨𝐣 ∪ 𝐈𝐧𝐣$.&lt;/p&gt;
+
+&lt;h3 id=&quot;mathjax_protectedjch7fv7in4jdx3thy30sienfe2fjfskkmathjax_protected&quot;&gt;$({}^⟂C_{ac}, C_{ac})$&lt;/h3&gt;
+
+&lt;p&gt;We show that $({}^⟂C_{ac}, C_{ac})$ is cogenerated by sets with a straightforward construction.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$\mathcal{S} := \{Σ ^k (\underline R)\}_{k ∈ ℤ }$ is cogenerates $({}^⟂C_{ac}, C_{ac})$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;&lt;a href=&quot;25SumLec0#functors-for-chain-complexes&quot;&gt;Recall&lt;/a&gt; that $Z^d (-) ≃ (Σ ^d (\underline R), -)$ has right derivation $\mathrm R^∙ (Z^d) ≃ H^{k+d}$. Hence $\mathcal{S}^⟂ = C_{ac}$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;mathjax_protectedjchdx3thy30sienfe2fjfv7in4ipjamathjax_protected&quot;&gt;$(C_{ac}, C_{ac}^⟂)$&lt;/h3&gt;
+
+&lt;p&gt;We show that $(C_{ac}, C_{ac}^⟂)$ is cogenerated by sets by showing that $C_{ac}$ is a $\max (ω , |R|)$-Kaplansky class.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;For any $(x_n)_{n ∈ ℕ } ∈ E ∈ C_{ac}$, there is a subcomplex $x ∈ E' ∈ (C_{ac})_{≤ κ}$. Here $κ = \max (ω , |R|)$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We construct first $ω$ filtration of $E$ as follows $$\begin{equation}
+0 = E_0 ⊆ E_1 ⊆ E_2 ⊆ \cdots ⊆ E_ω ⊆ E,
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;such that $|E_{n+1} / E_{n}| ≤ κ$ and $E_ω$ is acylic. We take $$\begin{equation}
+E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots].
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;We construct $E_{k+1}$ from $E_k$ s.t. $Z(E_{k}) ⊆ B(E_{k+1})$, thus $⋃_{k ∈ ℕ} E_{k}$ is exact. We construct $Q^{p-1} ≃ \mathrm{ker}(d_{E_k}^{p}) × _{Z^p(E)} E^{p-1}$ by a pullback diagram&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec2/diagram_4cacc1cda6610.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;Here $Q^{p-1}$ reads the preimage of $\mathrm{ker}(d_{E_k}^{p})$ along $d_E^{p-1}$. It suffices to find $M ⊆ Q^{p-1}$ such that $$\begin{equation}
+|M| ≤ κ , \quad (E_k)^{p-1} ⊆ Q^{p-1},\quad d_E^{p-1} (M) = \ker (d_{E_k}^p).
+\end{equation}$$ We take any subset $X^{p-1} ⊆ Q^{p-1}$ so that $X^{p-1} \overset ∼ ↠ \ker (d_{E^k}^p)$ is a bijection. Now $|⟨X^{p-1}⟩| ≤ κ ⋅ κ = κ$. Now $E_{k+1}^{p-1} := ((E_k)^{p-1} + ⟨X^{p-1}⟩)$ is our desired construction.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$(^{⟂}(C_{ac}^⟂ ), C_{ac}^⟂)$ is a complete cotorsion pair cogenerated by a set.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;Note that $C_{ac}$ is a $\max (κ , ω)$-Kaplansky class which contains all projective objects, and is closed under taking summands and transfinite filtrations.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;a-general-construction&quot;&gt;A General Construction&lt;/h2&gt;
+
+&lt;p&gt;We are curious about the cotorsion triple $(^⟂ (\mathcal{S}^⟂), \mathcal{S}^⟂ , (\mathcal{S}^⟂ )^⟂)$, where $\mathcal{S}^⟂ = C_{ac}$. By &lt;em&gt;a note on projectives&lt;/em&gt; in the end, we know that $^⟂ (\mathcal{S}^⟂)$ is the collection of DG-projective complexes with another two equivalent definitions&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The complex lifts surjective quasi-isomorphisms;&lt;/li&gt;
+  &lt;li&gt;The $K$-projective complex with projective terms.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Give equivalent definition of $(\mathcal{S}^⟂ )^⟂$, the DG injective complexes.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We focus on a particular class of complexes.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Perfect). Say $P$ is a perfect complex, provided it is f.g. projective with finite terms.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The terminology is more used in derived categories.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(The triple). $\color{red}{\text{under construction...}}$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;a-note-on-projectives&quot;&gt;A Note on Projectives&lt;/h2&gt;
+
+&lt;p&gt;The objects in ${}^⟂C_{ac}$ has the name &lt;strong&gt;dg-projective&lt;/strong&gt;, Dold projective, homotopically projective objects, etc. We summarise projective related definitions in this note.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-definitions&quot;&gt;The Definitions&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Projective complex). $C(𝐏𝐫𝐨𝐣(\mathcal{A}))$, the complex with projective terms.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;($𝐏𝐫𝐨𝐣 (C(\mathcal{A}))$). The projective objects in $C(\mathcal{A})$ are precisely the split acyclic projective complexes.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;$⊇$ is clear. For $⊆$, the split ses $0 → P → \mathrm{Cone}(1_P) → Σ P → 0$ shows $P ≃ 0$ in $K(\mathcal{A})$. An termwise verification yields $P$ is has projective terms.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show the complex $\cdots \xrightarrow {× 2}ℤ / 4ℤ \xrightarrow {× 2}ℤ / 4ℤ → \cdots$ in $C(ℤ / 4ℤ)$ is acyclic with projective terms, but it is not a projective object.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;($K$-projective). $K$-projective complexes are &lt;strong&gt;defined in $K(\mathcal{A})$&lt;/strong&gt; with the following equivalent conditions:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\mathcal{HOM}(P, - ): K(\mathcal{A}) → K(𝐀𝐛 )$ preserves acyclic complexes;&lt;/li&gt;
+    &lt;li&gt;$\mathcal{HOM}(P, - ): K(\mathcal{A}) → K(𝐀𝐛 )$ preserves quasi-isomorphisms;&lt;/li&gt;
+    &lt;li&gt;$H^k (\mathcal{HOM}(P, - )) : K(\mathcal{A}) → 𝐀𝐛$ sends quasi-isomorphisms to isomorphisms for each/some $k ∈ ℤ$;&lt;/li&gt;
+    &lt;li&gt;$H^k (\mathcal{HOM}(P, -)) : K(\mathcal{A}) → 𝐀𝐛$ annihilates acyclic complexes for each/some $k ∈ ℤ$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;We use either each/some in the last two statemtents, as $Σ^±$ preserves and reflects quasi-isomorphisms and acyclic complexes.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;(1 → 2). Note that any quasi-isomorphsm $f$ fits into a distinguished triangle $⋅ \xrightarrow f ⋅ → \mathrm{Cone}(f)$. Applying $\mathcal{HOM}(P, - )$ yields the long exact sequence. Since $\mathcal{HOM}(P, \mathrm{Cone}(f))$ is acyclic, $\mathcal{HOM}(P, f)$ is a quasi-isomorphism. &lt;br /&gt; (2 → 3). Taking $H^k$ kills the statement. &lt;br /&gt; (3 → 4). Notice that $E$ is acyclic iff $0 → E$ is an quasi-isomorphism. &lt;br /&gt; (4 → 1). For any acyclic complex $E$, $H^∙ \mathcal{HOM}(P, E) ≡ 0$. Hence $\mathcal{HOM}(P, E)$ is acyclic.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;($π$-projective). A complex $P ∈ C(\mathcal{A})$ is called $π$-projective, provided it is $K$-projective in $K(\mathcal{A})$. Note that $P$ is $π$-projective iff $\mathcal{HOM}(P, -)$ preserves either quasi-isomorphisms (or equivalently, acyclic complexes).&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;(Easy). Find a $π$-projective complex with no projective terms.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(DG-projective). A complex $P$ is called DG-projective, provided the following equivalent conditions hold:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(P, -) : C(\mathcal{A}) → C(𝐀𝐛)$ lifts epic quasi-isomorphisms;&lt;/li&gt;
+    &lt;li&gt;$P$ is $π$-projective with projective terms;&lt;/li&gt;
+    &lt;li&gt;$\mathrm{Ext}^1(P, E) = 0$ for acyclic complexes $E$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;(1 → 3). Every ses in $\mathrm{Ext}^1(P, E)$ splits. &lt;br /&gt; (3 → 2). We show $P$ has projective terms. If $P^1$ is not projective, then there is a non-split ses $0 → E → T → P^1 → 0$. Hence we have&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec2/diagram_325655326a47e.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;Here $T \times _{P^1}P^0$ is pullback, and the dashed arrow $P^{-1} → T \times _{P^1}P^0$ is induced by $d_P^{-1}$ and $0_{T,P^{-1}}$. &lt;br /&gt; We also show $P$ is $π$-projective. If not, then there is some quasi-isomorphism $φ : A → B$ that $(P, φ )$ fails to preserve. WLOG, we assume $φ$ is an epimorphism by letting $A ↦ \mathrm{Cyl}(A)$. Now $\ker φ$ is acyclic, but $\mathrm{Ext}^1(P, \ker φ ) ≠ 0$ by long exact sequence, a contradiction. &lt;br /&gt; (2 → 1). For any epic quasi-isomorphism $p : A ↠ B$ and $f : P → B$, we have the pullback ses $0 → \ker p → P × _BA → P → 0$ which&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;split termwise ($(P^i)$’s are projective), and&lt;/li&gt;
+      &lt;li&gt;$P × _BA → P$ is a homotopy equivalence ($P$ is $K$-projective in $K(\mathcal{A})$).&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;By homotopy invariance of ses, it splits.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;resolutions-mathjax_protectedjetelsjwnzcp8j2qqcdkkjwnzcjksqmathjax_protected&quot;&gt;Resolutions ($K^-(𝐩𝐫𝐨𝐣)$)&lt;/h3&gt;
+
+&lt;p&gt;The following are easy resolutions.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;Let $X ∈ C(\mathcal{A})$ be a complex either bounded above or have uniform (or steady growing) projective dimensions. Then $X$ has a projective resolution.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;By Eilenburg-Cartan resolution, we take $φ(n)$ as the dimension of projective resolution of $B^n (X) ⊕ H^n (X) ⊕ B^{n+1}(X)$. As long as $\{(x,y) ∣ 0 ≤ y ≤ φ (n)\}$ has finite intersections with arbitrary line in $\{y = x = k\}_{k ∈ ℤ}$, the total complex is a projective resolution.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show that for acyclic complex $C$ and projective complex $P$, if either one is bounded above, then $(P,C)_{K(\mathcal{A})} = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We denote $K^-(𝐏𝐫𝐨𝐣)$ the subcategory of $K(\mathcal{A})$ consisting of projective complexes bounded above.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The minus $()^-$ means $X ∈ K^- (𝐏𝐫𝐨𝐣)$ &lt;strong&gt;almost&lt;/strong&gt; lies in the negative part.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;For Abelian category $\mathcal{A}$ with enough projectives,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Quasi-isomorphisms in $K^-(𝐏𝐫𝐨𝐣)$ are precisely homotopy equivalences;&lt;/li&gt;
+    &lt;li&gt;Every $X ∈ K^-(\mathcal{A})$ admits a $K^- (𝐏𝐫𝐨𝐣)$-replacement $ρ X$ with epic quasi-isomorphism $c_X : ρ X ↠ X$;&lt;/li&gt;
+    &lt;li&gt;It is possible to let $ρ$ be a triangulated functor right adjoint to the inclusion $K^-(𝐏𝐫𝐨𝐣 ) ↪ K^-(\mathcal{A})$;&lt;/li&gt;
+    &lt;li&gt;$K^-(𝐏𝐫𝐨𝐣)$ are exactly the DG-projective complexes bounded above.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;(1). Let $f : P → Q$ be a quasi-isomorphism in $K^-(𝐏𝐫𝐨𝐣)$. Since $Q ↪ \mathrm{Cone}(f)$ is null-homotopic, $f$ is a homotopy equivalence. &lt;br /&gt; (2). We take Cartan-Eilenburg resolution as $c_X : ρX ↠ X$, which is &lt;strong&gt;functorial&lt;/strong&gt;. In particular, $c_P : ρP ↠ P$ is a canonical isomorphim. The replacement means the natural isomorphism $(c_X)_∗ : (P, ρ X)_{K^-(𝐏𝐫𝐨𝐣 )} ≃ (P, X)_{K^-(\mathcal{A})}$. This is due to $(P, \mathrm{Cone}(c_X)) = 0$. &lt;br /&gt; (3). We show that $ρ$ is an additive functor right adjoint to the inclusion. The inclusion is triangle functor. By adjoint functor theorem, $ρ$ is also triangulated. &lt;br /&gt; (4). We show that $P ∈ K^- (𝐏𝐫𝐨𝐣)$ is $K$-injective with projective terms. Hence it is DG-projective.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;resolutions-dg&quot;&gt;Resolutions (DG)&lt;/h3&gt;
+
+&lt;p&gt;We discuss the projective resolutions of general Abelian category with &lt;strong&gt;exact arbitrary coproducts&lt;/strong&gt; (AB3, AB3*) and a projective generator $U$. The discussion are based on &lt;a href=&quot;Brown-Resolution&quot;&gt;Brown’s representability&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Unwinding its existence, we denote $K_{\mathrm{h \ proj}}$ as the class of projective resolutions of $K(\mathcal{A})$. We wish there is still a functor $ρ : K(\mathcal{A}) → K_{\mathrm{h \ proj}}$ right adjoint to the inclusion $K_{\mathrm{h \ proj}} ↪ K(\mathcal{A})$. That is,&lt;/p&gt;
+
+&lt;p&gt;$$\begin{equation}
+(i(-), Y) : K_{\mathrm{h \ proj}} → 𝐀𝐛
+\end{equation}$$&lt;/p&gt;
+
+&lt;p&gt;is represented by some $ρ Y$.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;$\underline U$ is the perfect generator of the additive full subcategory $\mathrm{Loc}(\underline U)$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$\mathrm{Loc}(\underline U)$ is the smallest triangulated category generated by $U$ under $Σ ^±$, $∐$ and $∗$.&lt;/li&gt;
+    &lt;li&gt;$U$ is perfect in $\mathcal{T}$, provided $\mathrm{Loc}(\underline U) = \mathcal{T}$, and $(\underline U, ∐ _{i ∈ I} f_i)$ is surjection when every $(\underline U, f_i)$ is surjective.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;(PG1). We show for any set of morphisms $f_i : A_i → B_i$ with $(\underline U,f_i)$ surjective, the morphism $(\underline U, ∐ f_i)$ is again surjective. Note that&lt;/p&gt;
+    &lt;p&gt;$$\begin{aligned}
+(\underline U, ∐ f_i)_{K(\mathcal{A})} &amp;≃ (\underline U, H^0(∐ (f_i)))_\mathcal{A} \overset {\text{Ab3*}}≃ (U, ∐ H^0(f_i))_\mathcal{A}\quad \text{is surj.}\\[6pt]
+&amp; ↔ ∐ H^0(f_i) \quad \text{is surj.}\\[6pt]
+&amp; ↔ \{H^0(f_i)\}_{i ∈ I} \quad \text{are surj.}\\[6pt]
+&amp; ↔ \{(U, H^0(f_i))_\mathcal{A}\}_{i ∈ I} \quad \text{are surj.}\\[6pt]
+&amp; ↔ ∐ (U, H^0(f_i))_\mathcal{A} = ∐ (\underline U, f_i)_{K(\mathcal{A})} \quad \text{is surj.}.
+\end{aligned}$$&lt;/p&gt;
+    &lt;p&gt;(PG2). $\mathrm{Loc}(\underline U) = \mathrm{Loc}(\underline U)$ is clear.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We set $K_{\mathrm{h \ proj}} := \mathrm{Loc}(\underline U)$.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$i : K_{\mathrm{h \ proj}} ↪ K(\mathcal{A})$ admits a right adjoint $ρ : K(\mathcal{A}) → K_{\mathrm{h \ proj}}$, which is triangulated.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;For any $X ∈ K(\mathcal{A})$, the functor $(i(-), X)_{K(\mathcal{A})} : K_{\mathrm{h \ proj}}^{\mathrm{op}} → 𝐀𝐛$ is cohomological, and sends $∐$ to $∏$. By functorial construction of Brown’s representability, there is a natural isomorphism&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+(-, ρ X)_{K_{\mathrm{h \ proj}}} ≃ (i(-), X)_{K_{\mathrm{h \ proj}}}
+\end{equation}$$&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-07-25T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/website/posts/25SumLec2</link>
+          <guid isPermaLink="true">http://localhost:4000/website/posts/25SumLec2</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>CT1</title>
           <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#lecture-1&quot; id=&quot;markdown-toc-lecture-1&quot;&gt;Lecture 1&lt;/a&gt;    &lt;ul&gt;
@@ -20,7 +537,7 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#small-objects&quot; id=&quot;markdown-toc-small-objects&quot;&gt;Small Objects&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#ordinals-and-cardinals&quot; id=&quot;markdown-toc-ordinals-and-cardinals&quot;&gt;Ordinals, and Cardinals&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#ordinals-and-cardinals&quot; id=&quot;markdown-toc-ordinals-and-cardinals&quot;&gt;Ordinals and Cardinals&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#cofinality-and-small&quot; id=&quot;markdown-toc-cofinality-and-small&quot;&gt;Cofinality, and Small&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#eklof-trlifaj-lemma&quot; id=&quot;markdown-toc-eklof-trlifaj-lemma&quot;&gt;Eklof-Trlifaj Lemma&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -167,7 +684,7 @@ L(f) ⋔ g \quad ↔ \quad f ⋔ R(g)\qquad (L ⊣ R).
     &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
         &lt;embed src=&quot;/website/svg/25SumLec1/diagram_728f47428ebba.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
       &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
-    &lt;p&gt;(4). A transfinite composition is characterised by a &lt;strong&gt;colimit-preserving functor&lt;/strong&gt; $(X,f) ∈ 𝐅𝐮𝐧𝐜𝐭 (α , \mathcal{C})$ for $α$ an ordinal. To be explicit,&lt;/p&gt;
+    &lt;p&gt;(4). A &lt;strong&gt;transfinite composition&lt;/strong&gt; is characterised by a &lt;strong&gt;colimit-preserving functor&lt;/strong&gt; $(X,f) ∈ 𝐅𝐮𝐧𝐜𝐭 (α , \mathcal{C})$ for $α$ an ordinal. To be explicit,&lt;/p&gt;
     &lt;p&gt;$$\begin{equation}
 X_0 \xrightarrow {f_{1,0}} X_1 \xrightarrow {f_{2,1}} X_2 \xrightarrow {f_{3,2}} \cdots X_γ \xrightarrow {f_{γ+1, γ}} X_{γ+1} → \cdots.
 \end{equation}$$&lt;/p&gt;
@@ -217,8 +734,10 @@ s_δ ∈ (X_δ , A) ≃ \varprojlim_{β &lt; δ } (X_{β } , A) ∋ (s_β)_{β &
 &lt;h3 id=&quot;complete-cotorsion-pair&quot;&gt;Complete Cotorsion Pair&lt;/h3&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;Say a cotorsion pair $(\mathcal{C}, \mathcal{F})$ is comlete, if $\mathrm{coCone}(\mathcal{F},\mathcal{C}) = \mathrm{coCone}(\mathcal{F},\mathcal{C}) = 𝖮𝖻 (\mathcal{A})$.&lt;/p&gt;
+  &lt;p&gt;Say a cotorsion pair $(\mathcal{C}, \mathcal{F})$ is comlete, provided $\mathrm{coCone}(\mathcal{F},\mathcal{C}) = \mathrm{Cone}(\mathcal{F},\mathcal{C}) = 𝖮𝖻 (\mathcal{A})$.&lt;/p&gt;
 &lt;/div&gt;
+
+&lt;p&gt;We write $X → X_F → X_C$ or $X^F → X^C → X$ for a general ses’s. There is no functoriality for such $\mathcal{C}$ or $\mathcal{F}$ replacements.&lt;/p&gt;
 
 &lt;p&gt;In fact, these conditions are overdetermined.&lt;/p&gt;
 
@@ -229,26 +748,57 @@ s_δ ∈ (X_δ , A) ≃ \varprojlim_{β &lt; δ } (X_{β } , A) ∋ (s_β)_{β &
     &lt;li&gt;for any object $X$, there exists $X ↪ F$ for $F ∈ \mathcal{F}$;&lt;/li&gt;
     &lt;li&gt;$\mathrm{coCone}(\mathcal{F},\mathcal{C}) = 𝖮𝖻 (\mathcal{A})$.&lt;/li&gt;
   &lt;/ol&gt;
-  &lt;p&gt;Now $(1).+(2). ↔ (1).+(3).$.&lt;/p&gt;
+  &lt;p&gt;We claim that $(1).+(2). ↔ (1).+(3).$.&lt;/p&gt;
   &lt;div class=&quot;proof&quot;&gt;
     &lt;p&gt;We show $(1).+(2). ↔ (1).+(3).$, as the other direction is trivial. To show every $X$ lies in $\mathrm{coCone}(\mathcal{F}, \mathcal{C})$, we take $X ↪ F$ and the approximation $(F/X)$. We pullback $r_1$ and $c_3$ in the following diagram:&lt;/p&gt;
     &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
-        &lt;embed src=&quot;/website/svg/25SumLec1/diagram_c5b854600548b.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec1/diagram_1623d3a50191e.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
       &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
     &lt;p&gt;Now $E ∈ \mathcal{F}$ by vanishing of $\mathrm{Ext}^1(c_2, -)$; $r_2$ is what our desire.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p&gt;We ask under what conditions $(-)^C$ and $(-)^F$ are functorial. The replacement $X^C → X$ is also known as the &lt;strong&gt;$\mathcal{C}$-precover&lt;/strong&gt; or &lt;strong&gt;right $\mathcal{C}$ approximation&lt;/strong&gt;. Since&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;any morphism $C → X$, factors through $X^C → X$, or equivalently,&lt;/li&gt;
+  &lt;li&gt;$(-, X^C)_\mathcal{C} ↠ (-|_\mathcal{C}, X)$ is epic.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hence, any morphism $C → F$ factors through $F^C → F$, where $F^C ∈ \mathcal{C} ∩ \mathcal{F}$. This yields&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;Set $ω := \mathcal{C} ∩ \mathcal{F}$. Then $\mathrm{Hom}_{\mathcal{A} / ω}(\mathcal{C}, \mathcal{F}) = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;The inclusion $\mathcal{C} /ω ↪ \mathcal{A} / ω$ admits a right adjoint $(-)^C$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We show $p_∗ : (C, X^C)_{\mathcal{A} / ω} → (C,X)_{\mathcal{A} / ω}$. &lt;br /&gt; The surjection is clear. The long es $(C,X^C)_\mathcal{A} → (C,X)_\mathcal{A} → \mathrm{Ext}^1(C, X^F) = 0$ shows $p_∗$ is surjective in $\mathcal{A}$. Hence $p_∗$ is also surjective in $\mathcal{A} / ω$. &lt;br /&gt; We show the injectivity, i.e., $[f] = [0]$ when $[pf] = 0$. By assumption, $pf$ factors through some $N ∈ ω$. Hence, there exists $s : N → X^C$ making $↻$ commutative:&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec1/diagram_0a7ee7c14e0e6.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;The long se shows $(f - sa) ∈ \ker p_∗  = \operatorname{im} i_∗$. Since $(f-sa)$ factors extends along some $C → X^F$, the morphism vanishes in $\mathcal{A}/ω$. Hence $[f] = [f-sa] + [sa] = [0]$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We conclude that&lt;/p&gt;
+&lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+    &lt;embed src=&quot;/website/svg/25SumLec1/diagram_db3810e1f06d5.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+  &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+
+&lt;p&gt;There is a similar lemma (with a long proof) of adjunction lemma for complete cotorsion pairs on chain complexes. For any complete cotorsion pair $(\mathcal{C}, \mathcal{F})$, there exists a right adjoint $(-)^C$ to the inclusion $K(\mathcal{C}) ↪ K(R)$. These two lemma coincides when $ω = C_{ac}(R)$ (see &lt;a href=&quot;25SumLec0#further-discussion-on-the-homotopy-category-mathjax_protectedjesouikkmathjax_protected&quot;&gt;here&lt;/a&gt; for equivalent definitions of $K(\mathcal{A})$).&lt;/p&gt;
+
 &lt;h2 id=&quot;small-objects&quot;&gt;Small Objects&lt;/h2&gt;
 
-&lt;h3 id=&quot;ordinals-and-cardinals&quot;&gt;Ordinals, and Cardinals&lt;/h3&gt;
+&lt;h3 id=&quot;ordinals-and-cardinals&quot;&gt;Ordinals and Cardinals&lt;/h3&gt;
 
-&lt;p&gt;We point out a fallible point in the study of &lt;strong&gt;well-ordered sets&lt;/strong&gt; (by axiom of choice, every set can be well-ordered). A well-ordered set $(X, ≤)$ is totoally ordered, i.e., for any $i,j ∈ X$ one has $i ≤ j$ or $j ≤ i$. Zorn’s lemma shows that $∞$-stricly descending chain is forbidden, i.e., there is no $\cdots ≨ i_2 ≨ i_1 ≨ i_0$ in a well-ordered set. In particular, $(ℚ, ≤)$ is not well-ordered.&lt;/p&gt;
+&lt;p&gt;We highlight a subtle point in the study of &lt;strong&gt;well-ordered sets&lt;/strong&gt; (by the axiom of choice, every set may be well-ordered). A well-ordered set $(X, ≤)$ is totally ordered; that is, for any $i, j ∈ X$, one has $i ≤ j$ or $j ≤ i$. Zorn’s lemma demonstrates that an infinite strictly descending chain is prohibited; specifically, there is no $\cdots ≨ i_2 ≨ i_1 ≨ i_0$ in a well-ordered set. In particular, $(ℚ, ≤)$ is not well-ordered.&lt;/p&gt;
 
-&lt;p&gt;We define ordinals and cardinals in sense of J. von Neumann. For simplicity, we introduce neither &lt;em&gt;ordinal arithmetic&lt;/em&gt; nor &lt;em&gt;universe&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;We define ordinals and cardinals in the sense of J. von Neumann. For simplicity, we introduce neither &lt;em&gt;ordinal arithmetic&lt;/em&gt; nor &lt;em&gt;universe&lt;/em&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;(Ordinal). The collection of ordinals means (a skeleton of) the category of well-ordered sets under algebraists’ preferred usual set-theoretic axioms. Inductively, any ordinal is obtained by the following procedures:&lt;/p&gt;
+  &lt;p&gt;(Ordinal). The collection of ordinals refers to (a skeleton of) the category of well-ordered sets under the usual set-theoretic axioms favoured by algebraists. Inductively, any ordinal is obtained by the following procedures:&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$0 = ∅$ is the initial ordinal;&lt;/li&gt;
     &lt;li&gt;for any ordinal $α$, the successor ordinal is defined as $α^+ := α ⊔ \{α\}$;&lt;/li&gt;
@@ -256,22 +806,22 @@ s_δ ∈ (X_δ , A) ≃ \varprojlim_{β &lt; δ } (X_{β } , A) ∋ (s_β)_{β &
   &lt;/ol&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Note that $β ≨ α$ iff $β ∈ α$ as sets. We do not use ordinal arithmetic throught these lectures, since it might be confusing to beginners.&lt;/p&gt;
+&lt;p&gt;Note that $β ≨ α$ if and only if $β ∈ α$ as sets. We do not employ ordinal arithmetic throughout these lectures, as it may be confusing to beginners.&lt;/p&gt;
 
-&lt;p&gt;There is the case when $α ≠ β$, but there exists an bijection of sets ($|α| = |β|$). For instance, we denote $ω = ⋃_{n ∈ ℕ} n$ as the first infinite ordinal, then $|ω| = |ω^+|$.&lt;/p&gt;
+&lt;p&gt;There are instances where $α ≠ β$, yet there exists a bijection of sets ($|α| = |β|$). For example, we denote $ω = ⋃_{n ∈ ℕ} n$ as the first infinite ordinal, and $|ω| = |ω^+|$.&lt;/p&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;(Cardinal). An ordinal $α$ gives the cardinal $\min \{β ∣ |β | = |α|\}$. One can check that this is a set, hence exists the minimal (thus least) element.&lt;/p&gt;
+  &lt;p&gt;(Cardinal). An ordinal $α$ yields the cardinal $\min \{β ∣ |β | = |α|\}$. One may verify that this is a set, and thus the minimal (hence least) element exists.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;Equivalently, and ordinal $α$ is a cardinal iff $|β| ≠ |α|$ for any $β ∈ α$.&lt;/p&gt;
+  &lt;p&gt;Equivalently, an ordinal $α$ is a cardinal if and only if $|β| ≠ |α|$ for any $β ∈ α$.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;We usually use $λ$, $μ$, $κ$ to denote cardinals, or $|X|$ for $X$ a set.&lt;/p&gt;
+&lt;p&gt;We typically use $λ$, $μ$, $κ$ to denote cardinals, or $|X|$ for $X$ a set.&lt;/p&gt;
 
 &lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;(Cardinal v.s. Sets). Convincing yourself that, for any set $S$ and $T$, the following cardinal arthmetic leads no contradiction:&lt;/p&gt;
+  &lt;p&gt;(Cardinal vs Sets). Convince yourself that, for any sets $S$ and $T$, the following cardinal arithmetic leads to no contradiction:&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$|S| + |T| := |S ⊔ T|$;&lt;/li&gt;
     &lt;li&gt;$|S| × |T| := |S × T|$;&lt;/li&gt;
@@ -286,15 +836,15 @@ s_δ ∈ (X_δ , A) ≃ \varprojlim_{β &lt; δ } (X_{β } , A) ∋ (s_β)_{β &
 &lt;/div&gt;
 
 &lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;$λ ⋅ λ = λ$ for infinite cardinal $λ$.&lt;/p&gt;
+  &lt;p&gt;$λ ⋅ λ = λ$ for any infinite cardinal $λ$.&lt;/p&gt;
   &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;Assume there is a least counterexample $κ$ (clearly $κ &gt; ω$). Now consider the function&lt;/p&gt;
+    &lt;p&gt;Suppose there exists a least counterexample among infinite cardinals $κ$ (clearly $κ ≠ ω$). Now consider the function&lt;/p&gt;
     &lt;p&gt;$$\begin{equation}
 f : κ × κ → κ,\quad (m,n) ↦ \max (m,n).
 \end{equation}$$&lt;/p&gt;
-    &lt;p&gt;Note that the graph of $f$ is larger than the codomain of $f$ ($|\mathrm{Graph}(f)| = κ ⋅ κ &gt; κ$). &lt;br /&gt; &lt;br /&gt; Now we equip $\mathrm{Graph}(f) ⊆ κ × κ × κ$ with lexicographic order. There exists a point $(α,β,γ) ∈ \mathrm{Graph}(f)$ such that $|\{x ∣ x &lt; (α,β,γ)\}| = κ$. Now&lt;/p&gt;
+    &lt;p&gt;Observe that the graph of $f$ is larger than the codomain of $f$ ($|\mathrm{Graph}(f)| = κ ⋅ κ &gt; κ$). &lt;br /&gt; &lt;br /&gt; Now equip $\mathrm{Graph}(f) ⊆ κ × κ × κ$ with the lexicographic order. There exists a point $(α,β,γ) ∈ \mathrm{Graph}(f)$ such that $|\{x ∣ x &lt; (α,β,γ)\}| = κ$. Now&lt;/p&gt;
     &lt;p&gt;$$\begin{equation}
-κ ≤ \max(α, β) × \max(α, β) = \max(α, β) &lt; κ.
+κ ≤ \max(α, β) × \max(α, β) \xlongequal{\text{by assumptions}} \max(α, β) &lt; κ.
 \end{equation}$$&lt;/p&gt;
     &lt;p&gt;A contradiction.&lt;/p&gt;
   &lt;/div&gt;
@@ -305,145 +855,142 @@ f : κ × κ → κ,\quad (m,n) ↦ \max (m,n).
 &lt;/div&gt;
 
 &lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;We show a technique called &lt;strong&gt;transfinite induction (how ordinal works)&lt;/strong&gt;. The proposition says: &lt;br /&gt; For any $M := ∐ _{i ∈ I} M_i$ where each $M_i$ is countably generated, $\{f_n\}_{n ∈ ℕ} ⊆ \mathrm{End}(M)$. Then there exists a transfinte filtration $0 = M_0 ⊆ M_1 ⊆ \cdots M_γ ⊆ \cdots$ of $M$ such that&lt;/p&gt;
+  &lt;p&gt;We demonstrate a technique termed &lt;strong&gt;transfinite induction (how ordinals operate)&lt;/strong&gt;. The proposition states: &lt;br /&gt; For any $M := ∐ _{i ∈ I} M_i$ where each $M_i$ is countably generated, $\{f_n\}_{n ∈ ℕ} ⊆ \mathrm{End}(M)$. Then there exists a transfinite filtration $0 = M_0 ⊆ M_1 ⊆ \cdots M_γ ⊆ \cdots$ of $M$ such that&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$\{(f_n)|_{M_γ}\}_{n ∈ ℕ} ⊆ \mathrm{End}(M_γ)$;&lt;/li&gt;
     &lt;li&gt;$M_{γ} = M_γ ⊕ \ (\text{countably many}\ M_i \text{'s})$.&lt;/li&gt;
   &lt;/ol&gt;
-  &lt;p&gt;Set $P_γ := ∃ \ \text{construction of } \{M_α\}_{α ≤ γ}$. We show via transfinite induction that&lt;/p&gt;
+  &lt;p&gt;Set $P_γ := (∃ \ \text{construction of } \{M_α\}_{α ≤ γ})$. We show via transfinite induction that&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$P_0$ is true;&lt;/li&gt;
     &lt;li&gt;$P_γ → P_{γ +1}$;&lt;/li&gt;
-    &lt;li&gt;$⋀ _{α &lt; γ}(P_α) → P_γ$ for $γ$ is a limit ordinal.&lt;/li&gt;
+    &lt;li&gt;$⋀ _{α &lt; γ}(P_α) → P_γ$ for $γ$ a limit ordinal.&lt;/li&gt;
   &lt;/ol&gt;
   &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;Step 1 and Step 3 are clear. We show Step 2 with $P_γ → P_{γ + 1}$ (when $M_γ ⊊ M$). Once take arbitrary summand $M^0$ with $M^0 ∩ M_γ = 0$, the countably generated image $∑ _{n ∈ ℕ }f_n(M^0)$ is covered by countably many $M_i$’s. We denote their direct sums as $M^1$. We consider $∑ _{n ∈ ℕ }f_n((M^1 ⊕ M^0)$ and obtained $M^3$. Now $M_{γ +1} := (⨁_{n ∈ ℕ} M^n) ⊕ M_γ$ is the desired construction.&lt;/p&gt;
+    &lt;p&gt;Step 1 and Step 3 are clear. We show Step 2 with $P_γ → P_{γ + 1}$ (when $M_γ ⊊ M$). Upon selecting an arbitrary summand $M^0$ with $M^0 ∩ M_γ = 0$, the countably generated image $∑ _{n ∈ ℕ }f_n(M^0)$ is covered by countably many $M_i$’s. Denote their direct sums as $M^1$. Consider $∑ _{n ∈ ℕ }f_n((M^1 ⊕ M^0)$ and obtain $M^3$. Now $M_{γ +1} := (⨁_{n ∈ ℕ} M^n) ⊕ M_γ$ is the desired construction.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;Projective modules are coproduct of countably generated projective modules.&lt;/p&gt;
+  &lt;p&gt;Projective modules are coproducts of countably generated projective modules.&lt;/p&gt;
   &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;Any projective module $P$ is of the form $f_0(∐ _λ R)$ for $(f_0)^2 = f_0$. Taking $M = ∐ _λ R$ and $\{f_n\}_{n ∈ ℕ} = \{1_M, f_0\}$ gives the $F^{(ω)}$-filtration of $M$. Since $f_0(-)$ preserves coproducts, $P = f_0(M)$ is the coproduct of summands of $F^{(ω)}$, i.e., the coproduct of countably generated projective modules.&lt;/p&gt;
+    &lt;p&gt;Any projective module $P$ is of the form $f_0(∐ _λ R)$ for $(f_0)^2 = f_0$. Taking $M = ∐ _λ R$ and $\{f_n\}_{n ∈ ℕ} = \{1_M, f_0\}$ yields the $F^{(ω)}$-filtration of $M$. Since $f_0(-)$ preserves coproducts, $P = f_0(M)$ is the coproduct of summands of $F^{(ω)}$, i.e., the coproduct of countably generated projective modules.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;Let $C^0([0,1], ℝ)$ be the function ring. Show that $\{f ∣ \mathrm{supp}(f) ⊆ (0 , 1]\}$ is an indecomposable projective module which is not finitely generated (but/hence countably generated).&lt;/p&gt;
+  &lt;p&gt;Let $C^0([0,1], ℝ)$ be the ring of functions. Show that $\{f ∣ \mathrm{supp}(f) ⊆ (0 , 1]\}$ is an indecomposable projective module which is not finitely generated (but/hence countably generated).&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;cofinality-and-small&quot;&gt;Cofinality, and Small&lt;/h3&gt;
 
-&lt;p&gt;Let $ω' := ⋃ _{n ∈ ℕ} (ω^{n\ + \text{'s}}) ∪ ⋃_{n ∈ ℕ} n$ be the second limit ordinal, which &lt;em&gt;looks like&lt;/em&gt; a juxtaposition of two $ℕ$’s. Clearly, one can find an inclusion $i : ω ↪ ω '$ so that $\varinjlim_{ω '} X_∙ ≃ \varinjlim _{ω} X_∙$ for any limit calculating problems.&lt;/p&gt;
+&lt;p&gt;Let $ω' := ⋃ _{n ∈ ℕ} (ω^{n\ + \text{'s}}) ∪ ⋃_{n ∈ ℕ} n$ be the second limit ordinal, which &lt;em&gt;resembles&lt;/em&gt; a juxtaposition of two $ℕ$’s. Clearly, one may find an inclusion $i : ω ↪ ω '$ such that $\varinjlim_{ω '} X_∙ ≃ \varinjlim _{ω} X_∙$ for any limit calculation problems.&lt;/p&gt;
 
-&lt;p&gt;This means $ω$ is a &lt;strong&gt;cofinal&lt;/strong&gt; subsystem of $ω '$ via $i$. Informally, $ω '$-induction is simplified via some $ω$-induction.&lt;/p&gt;
+&lt;p&gt;This signifies that $ω$ is a &lt;strong&gt;cofinal&lt;/strong&gt; subsystem of $ω '$ via $i$. Informally, $ω '$-induction is simplified via some $ω$-induction.&lt;/p&gt;
 
-&lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;Show that a morphism $M → F$ from f.p. module $M$ to a flat module $F$ factors through some f.g. projective module $P(M)$. Now we write $F$ as filtered colimit of f.p. modules, i.e., $\varinjlim^{fil} M_∙ ≃ F$. &lt;a href=&quot;25SumLec0#the-real-compact-modules&quot;&gt;Our construction&lt;/a&gt; shows $P(M_∙)$ is a subsystem of $M_∙$. Show that $\varinjlim ^{fil} P(M_∙) ≃ F$ via cofinality.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;Flat modules are filtered colimits of f.g. free modules.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;What if any kinds of $α ↪ β$ fails to be cofinal?&lt;/p&gt;
+&lt;p&gt;What if certain kinds of $α ↪ β$ fail to be cofinal?&lt;/p&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;For ordinals $α$ and $β$. Say $α$ is &lt;strong&gt;$β$-filtered&lt;/strong&gt;, provided $\sup (\operatorname{im}(f)) ∈ β$ for any poset morphism $f : α → β$.&lt;/p&gt;
+  &lt;p&gt;For ordinals $α$ and $β$, say $α$ is &lt;strong&gt;$β$-filtered&lt;/strong&gt; provided $\sup (\operatorname{im}(f)) ∈ β$ for any poset morphism $f : α → β$.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Clearly, the definition is trivial as $α = γ^+$. Therefore &lt;strong&gt;we assume $α$ to be a limit ordinal&lt;/strong&gt;. Zorn’s lemma shows that $β$-filtered ordinal are exactly $|β|$-filtered ones. Therefore &lt;strong&gt;we assume $β$ to be a cardinal&lt;/strong&gt;, e.g., $κ$.&lt;/p&gt;
+&lt;p&gt;Clearly, the definition is trivial when $α = γ^+$. Therefore, &lt;strong&gt;we assume $α$ to be a limit ordinal&lt;/strong&gt;. Zorn’s lemma shows that $β$-filtered ordinals are precisely $|β|$-filtered ones. Therefore, &lt;strong&gt;we assume $β$ to be a cardinal&lt;/strong&gt;, e.g., $κ$.&lt;/p&gt;
 
-&lt;p&gt;Here is a SLOGAN: &lt;strong&gt;$α$ is $κ$-filtered, iff $α$ has better cofinality than $∀ β ∈ κ$.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Here is a SLOGAN: &lt;strong&gt;$α$ is $κ$-filtered if and only if $α$ has better cofinality than $∀ β ∈ κ$.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;Show that the first $κ$-filtered ordinal is precisely the lest cardinal larger than $κ$.&lt;/p&gt;
+  &lt;p&gt;Show that the first $κ$-filtered ordinal ($\widetilde κ$) is precisely the least cardinal larger than $κ$. Hint: $κ ⋅ κ &lt; \widetilde κ$, and $\widetilde κ$ is a successor cardinal.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Hence, there exists non-$ω$-filtered ordinals. One can see this &lt;a href=&quot;25SumLec0#an-interesting-example-on-transfinite-filtration&quot;&gt;interesting example&lt;/a&gt; for deeper comprehension.&lt;/p&gt;
+&lt;p&gt;Hence, there exist non-$ω$-filtered ordinals. One may consult this &lt;a href=&quot;25SumLec0#an-interesting-example-on-transfinite-filtration&quot;&gt;interesting example&lt;/a&gt; for deeper understanding.&lt;/p&gt;
 
-&lt;p&gt;The following corollay motivates the concept of small.&lt;/p&gt;
+&lt;p&gt;The following corollary motivates the concept of small.&lt;/p&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;Let $α$ be $κ$-filtered. For any set $X$ with $|X| = κ$, and&lt;/p&gt;
   &lt;ul&gt;
-    &lt;li&gt;an $α$-transfinite composition of morphisms, i.e., a colimit preserving functor $Y_∙ : α → \mathcal{C}$.&lt;/li&gt;
+    &lt;li&gt;an $α$-transfinite composition of morphisms, i.e., a colimit-preserving functor $Y_∙ : α → \mathcal{C}$.&lt;/li&gt;
   &lt;/ul&gt;
   &lt;p&gt;Any set map $φ : X → \varinjlim Y_∙$ factors through some $Y_γ$.&lt;/p&gt;
   &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;For any $x ∈ X$, $φ |_x : x → \varinjlim Y_∙$ factors through some $Y_{γ _x}$. We select $x ↦ Y_{γ _x}$ for arbitrary $x ∈ X$, which defines a map $γ _∙ : X → α$. By definition, $\sup (\operatorname{im}(γ _∙ )) ∈ α$. Hence, $φ$-factors through $Y_{\sup (\operatorname{im}(γ _∙ ))}$.&lt;/p&gt;
+    &lt;p&gt;For any $x ∈ X$, $φ |_x : x → \varinjlim Y_∙$ factors through some $Y_{γ _x}$. Select $x ↦ Y_{γ _x}$ for arbitrary $x ∈ X$, which defines a map $γ _∙ : X → α$. By definition, $\sup (\operatorname{im}(γ _∙ )) ∈ α$. Hence, $φ$ factors through $Y_{\sup (\operatorname{im}(γ _∙ ))}$.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;(Small object). Say $X$ is $κ$-small, if for any $κ$-filtered ordinals and $α$-transfinite compositions, the following is an isomorphism:&lt;/p&gt;
+  &lt;p&gt;(Small object). Say $X$ is $κ$-small if, for any $κ$-filtered ordinals and $α$-transfinite compositions, the following is an isomorphism:&lt;/p&gt;
   &lt;p&gt;$$\begin{equation}
 \varinjlim _{γ &lt; α } (X, Y_γ ) \xrightarrow ∼  (X, \varinjlim _{γ &lt; α } Y_γ ).
 \end{equation}$$&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;We have shown that any set $X$ is $|X|$-small.&lt;/p&gt;
+&lt;p&gt;We have demonstrated that any set $X$ is $|X|$-small.&lt;/p&gt;
 
 &lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;Show that $X ∈ C(R)$ is $\max (|X|, |R|, ω)$-small. Hint: It suffices to show for graded modules, and thus for $𝐌𝐨𝐝 _R$. Note that $M ∈ 𝐌𝐨𝐝_R$ is $|R| ⋅ |X|$ small by tracking the image of cyclic modules. The final answer is $|X| ⋅ |R| ⋅ ω = \max (|X|, |R|, ω)$.&lt;/p&gt;
+  &lt;p&gt;Demonstrate that $X ∈ C(R)$ is $\max (|X|, |R|, ω)$-small. Hint: It suffices to show for graded modules, and thus for $𝐌𝐨𝐝 _R$. Note that $M ∈ 𝐌𝐨𝐝_R$ is $|R| ⋅ |X|$-small by tracking the image of cyclic modules. The final answer is $|X| ⋅ |R| ⋅ ω = \max (|X|, |R|, ω)$.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;It seems that in &lt;em&gt;good categories&lt;/em&gt;, every object is small (w.r.t. some cardinal). The following example shows that, in some bad categories, what seems to be &lt;em&gt;small&lt;/em&gt; may not be &lt;em&gt;small&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;It appears that in &lt;em&gt;good categories&lt;/em&gt;, every object is small (with respect to some cardinal). The following example shows that, in certain problematic categories, &lt;em&gt;finite&lt;/em&gt; objects may not be &lt;em&gt;small&lt;/em&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;We begin with two kinds of topological spaces.&lt;/p&gt;
   &lt;ul&gt;
-    &lt;li&gt;A Sierpiński space consists of $2$ points and $3$ open sets, which looks like $\boxed {x \ \boxed y}$.&lt;/li&gt;
-    &lt;li&gt;A topological over a limit ordinal $α$ is of base set $α^+$ and open sets are $\mathcal{O}_γ : = \{x ∣ x &gt; γ\}$. For $α = ω$, the space looks like $\boxed{0 \ \boxed{1 \ \boxed{2 \ \boxed {\cdots ω }}}}$.&lt;/li&gt;
+    &lt;li&gt;A Sierpiński space consists of $2$ points and $3$ open sets, which appears as $\boxed {x \ \boxed y}$.&lt;/li&gt;
+    &lt;li&gt;A topological space over a limit ordinal $α$ has base set $α^+$ and open sets $\mathcal{O}_γ : = \{x ∣ x &gt; γ\}$. For $α = ω$, the space appears as $\boxed{0 \ \boxed{1 \ \boxed{2 \ \boxed {\cdots ω }}}}$.&lt;/li&gt;
   &lt;/ul&gt;
   &lt;p&gt;For any ordinal $α$, consider the $α$-transfinite composition&lt;/p&gt;
   &lt;p&gt;$$\begin{equation}
 \begin{matrix}\boxed{0 \ \boxed{1 \ \boxed{2 \ \boxed {\cdots α }}}}\\\boxed{0 \ \boxed{1 \ \boxed{2 \ \boxed {\cdots α }}}}\end{matrix} ↠ \boxed{0 \ \begin{matrix}\boxed{1 \ \boxed{2 \ \boxed {\cdots α }}}\\ \boxed{1 \ \boxed{2 \ \boxed {\cdots α }}}\end{matrix}} ↠ \boxed{0 \ \boxed {1 \ \begin{matrix}\boxed{2 \ \boxed {\cdots α }}\\ \boxed{2 \ \boxed {\cdots α }}\end{matrix}}} ↠ \cdots
 \end{equation}$$&lt;/p&gt;
-  &lt;p&gt;Consider the continuous map from Sierpiński space to the colimit&lt;/p&gt;
+  &lt;p&gt;Consider the continuous map from the Sierpiński space to the colimit&lt;/p&gt;
   &lt;p&gt;$$\begin{equation}
 ϕ : \boxed{\begin{matrix}x \\ \boxed y\end{matrix}} → \boxed{0 \ \boxed{1 \ \boxed{2 \ \boxed {\cdots \begin{matrix}α\\α \end{matrix} }}}}, \quad \binom{x}{y} ↦ \binom{α _{↑}}{α _{↓}}.
 \end{equation}$$&lt;/p&gt;
-  &lt;p&gt;Since $ϕ$ never factors through any object in the composition; if so, then there is some open neighbourhood of $α _↑$ whose preimage is $\{x\}$ (not open).&lt;/p&gt;
+  &lt;p&gt;Since $ϕ$ never factors through any object in the composition; if it did, then there would exist some open neighbourhood of $α _↑$ whose preimage is $\{x\}$ (not open).&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;Show that the compact object in topological spaces is precisely the finite discrete spaces.&lt;/p&gt;
+  &lt;p&gt;Demonstrate that the compact objects in topological spaces are precisely the finite discrete spaces.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;eklof-trlifaj-lemma&quot;&gt;Eklof-Trlifaj Lemma&lt;/h3&gt;
 
-&lt;p&gt;We show Eklof-Trlifaj lemma with a rather similar proof to Quillen’s small object argument (but much easier).&lt;/p&gt;
+&lt;p&gt;We present the Eklof-Trlifaj lemma with a proof analogous to Quillen’s small object argument, albeit considerably simpler.&lt;/p&gt;
 
 &lt;p&gt;Recall that the cotorsion pair cogenerated by a class of objects $\mathcal{X}$ is denoted by $(^⟂(\mathcal{X}^⟂ ), \mathcal{X}^⟂ )$.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;For those familiar with cofibrantly generated model structures, the class $^⟂(\mathcal{X}^⟂ )$ should be rather similar to a closure of $\mathcal{X}^⟂$ under coproducts with some transfinite filtration.&lt;/li&gt;
+  &lt;li&gt;For those acquainted with cofibrantly generated model structures, the class $^⟂(\mathcal{X}^⟂ )$ is reminiscent of a closure of $\mathcal{X}^⟂$ under coproducts with a certain transfinite filtration.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;We commence with a deduction: when a cotorsion theory in $C(R)$ is cogenerated by a set of objects $\mathcal{X}$, iff it is cogenerated by a single object $∐ \mathcal{X}$.&lt;/p&gt;
+&lt;p&gt;We begin with the following deduction: a cotorsion theory in $C(R)$ is cogenerated by a set of objects $\mathcal{X}$ if and only if it is &lt;strong&gt;cogenerated by a single object&lt;/strong&gt; $(∐ \mathcal{X})^{(ω)}$. The trick is Eilenberg–Mazur swindle, e.g.,&lt;/p&gt;
+
+&lt;p&gt;$$\begin{equation}
+X = \ker [(X ⊕ Y) ∐ (X ⊕ Y) ∐ \cdots → X ∐ (Y ⊕ X) ⊕ (Y ⊕ X) ∐ → \cdots].
+\end{equation}$$&lt;/p&gt;
 
 &lt;div class=&quot;theorem&quot;&gt;
   &lt;p&gt;(Eklof-Trlifaj lemma). For any object $S ∈ C(R)$, the cotorsion pair cogenerated by $S$ is complete.&lt;/p&gt;
   &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;Let $𝐅𝐢𝐥 (S)$ denote the class of objects generated by $S$ under transfinite filtration. Clearly $𝐅𝐢𝐥 (S) ⊆ {}^⟂ (S^⟂ )$. It suffices to show $\mathrm{coCone}(S^⟂ , 𝐅𝐢𝐥 (S)) = C(R)$. In this case, the $S^⟂$-term appears as a colimit of the transfinite $S$-filtration: $$\begin{equation}
+    &lt;p&gt;Let $𝐅𝐢𝐥 (S)$ denote the class of objects generated by $S$ under transfinite filtration. Clearly, $𝐅𝐢𝐥 (S) ⊆ {}^⟂ (S^⟂ )$. It suffices to show that $\mathrm{coCone}(S^⟂ , 𝐅𝐢𝐥 (S)) = C(R)$. In this case, the $S^⟂$-term appears as a colimit of the transfinite $S$-filtration: $$\begin{equation}
 M = M_0 ⊆ M_1 ⊆ \cdots ⊆ M_γ ⊆ \cdots \quad (γ &lt; α)
-\end{equation}$$ We commence with ses $0 → K \xrightarrow i P \xrightarrow p S → 0$ where $P$ is projective. The construction of $M_γ$ is by a &lt;em&gt;universal&lt;/em&gt; pushout&lt;/p&gt;
+\end{equation}$$ We begin with short exact sequences $0 → K \xrightarrow i P \xrightarrow p S → 0$ where $P$ is projective. The construction of $M_γ$ is via a &lt;em&gt;universal&lt;/em&gt; pushout&lt;/p&gt;
     &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
-        &lt;embed src=&quot;/website/svg/25SumLec1/diagram_ed4f0c14132a3.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec1/diagram_f15079ae1e028.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
       &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
     &lt;p&gt;Here $Φ _γ ∈ (K^{∐ (K, M_γ )}, M_γ ) ≃ (K,M_γ)^{(K, M_γ )} ∋ 1_{(K,M_γ)}$. In particular,&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;for any $g : K → M_γ$, the morphism $f_γ ∘ g : K → M_{γ +1}$ extends along $i : K → P$.&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;p&gt;Let $α$ be $(|K|, |R|, ω )$-filtered. It remains to show that $M_α ∈ {}^⟂ S$. Equivalently, $(i, M_α)$ is surjective. For any $g : K → M_α = \varinjlim _{γ &lt; α } M_γ$, we see that $g$ factors throguh some $M_β$. The universal pushout gives dashed arrow.&lt;/p&gt;
+    &lt;p&gt;Let $α$ be $(|K|, |R|, ω )$-filtered. It remains to show that $M_α ∈ {}^⟂ S$. Equivalently, $(i, M_α)$ is surjective. For any $g : K → M_α = \varinjlim _{γ &lt; α } M_γ$, we observe that $g$ factors through some $M_β$. The universal pushout yields the dashed arrow.&lt;/p&gt;
     &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
-        &lt;embed src=&quot;/website/svg/25SumLec1/diagram_56af4f50d5056.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec1/diagram_7d7e2890a4bb5.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
       &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
-    &lt;p&gt;The composition $P → M_{β +1} → M_α$ is our disired morphism.&lt;/p&gt;
+    &lt;p&gt;The composition $P → M_{β +1} → M_α$ is our desired morphism.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;p&gt;We do not require any of $\mathcal{S}$, $\mathcal{S}^⟂$, or $^⟂ (\mathcal{S}^⟂ )$ to be closed under $Σ ^±$. We only use that, $S$ is a $\max(|S|, |R|, ω)$-small object.&lt;/p&gt;
 </description>
           <pubDate>2025-07-22T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/website/posts/25SumLec1</link>
@@ -459,18 +1006,20 @@ M = M_0 ⊆ M_1 ⊆ \cdots ⊆ M_γ ⊆ \cdots \quad (γ &lt; α)
       &lt;li&gt;&lt;a href=&quot;#abstract&quot; id=&quot;markdown-toc-abstract&quot;&gt;Abstract&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#on-rings-and-modules&quot; id=&quot;markdown-toc-on-rings-and-modules&quot;&gt;On Rings and Modules&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#an-interesting-example-on-transfinite-filtration&quot; id=&quot;markdown-toc-an-interesting-example-on-transfinite-filtration&quot;&gt;An Interesting Example on Transfinite Filtration&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-real-compact-modules&quot; id=&quot;markdown-toc-the-real-compact-modules&quot;&gt;The REAL Compact Modules&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-mathjax_protectedjpcdkijwnzcn8j2qoyqmathjax_protected-and-mathjax_protectedjpcdkixwnzcl8j2qmvcdkk0kmathjax_protected&quot; id=&quot;markdown-toc-mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-mathjax_protectedjpcdkijwnzcn8j2qoyqmathjax_protected-and-mathjax_protectedjpcdkixwnzcl8j2qmvcdkk0kmathjax_protected&quot;&gt;$𝐏𝐫𝐨𝐣$, $𝐈𝐧𝐣$ and $𝐅𝐥𝐚𝐭$&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#coherency&quot; id=&quot;markdown-toc-coherency&quot;&gt;Coherency&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#character-module&quot; id=&quot;markdown-toc-character-module&quot;&gt;Character Module&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#on-chain-complexes&quot; id=&quot;markdown-toc-on-chain-complexes&quot;&gt;On Chain Complexes&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#functors-for-chain-complexes&quot; id=&quot;markdown-toc-functors-for-chain-complexes&quot;&gt;Functors for Chain Complexes&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#resolving-chain-complexes&quot; id=&quot;markdown-toc-resolving-chain-complexes&quot;&gt;Resolving Chain Complexes&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#closed-monoidal-structure&quot; id=&quot;markdown-toc-closed-monoidal-structure&quot;&gt;Closed Monoidal Structure&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#further-discussion-on-the-homotopy-category-mathjax_protectedjesouikkmathjax_protected&quot; id=&quot;markdown-toc-further-discussion-on-the-homotopy-category-mathjax_protectedjesouikkmathjax_protected&quot;&gt;Further Discussion on the Homotopy Category $K(R)$&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#on-rings-and-modules&quot; id=&quot;markdown-toc-on-rings-and-modules&quot;&gt;On Rings and Modules&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#an-interesting-example-on-transfinite-filtration&quot; id=&quot;markdown-toc-an-interesting-example-on-transfinite-filtration&quot;&gt;An Interesting Example on Transfinite Filtration&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#the-real-compact-modules&quot; id=&quot;markdown-toc-the-real-compact-modules&quot;&gt;The REAL Compact Modules&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#coherency&quot; id=&quot;markdown-toc-coherency&quot;&gt;Coherency&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#character-module&quot; id=&quot;markdown-toc-character-module&quot;&gt;Character Module&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#a-module-like-analysis-of-mathjax_protectedjemouikkmathjax_protected&quot; id=&quot;markdown-toc-a-module-like-analysis-of-mathjax_protectedjemouikkmathjax_protected&quot;&gt;A Module-like Analysis of $C(R)$&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -501,6 +1050,664 @@ M = M_0 ⊆ M_1 ⊆ \cdots ⊆ M_γ ⊆ \cdots \quad (γ &lt; α)
   &lt;li&gt;$𝐈𝐧𝐣 (\mathcal{C})$: the class (or full subcategory) of injectives in $\mathcal{C}$.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&quot;on-rings-and-modules&quot;&gt;On Rings and Modules&lt;/h2&gt;
+
+&lt;p&gt;We recollect some basic properties of ring and modules.&lt;/p&gt;
+
+&lt;h3 id=&quot;an-interesting-example-on-transfinite-filtration&quot;&gt;An Interesting Example on Transfinite Filtration&lt;/h3&gt;
+
+&lt;p&gt;This demonstrates the distinctions between finitely generated modules and those $M$ for which $∐ (M, -) ↪ (M, ∐ (-))$ constitutes an isomorphism. An equivalent characterisation is provided via the cofinality of transfinite filtration.&lt;/p&gt;
+
+&lt;p&gt;We begin with an exercise in ring theory.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;$M$ is finitely generated if and only if,&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;for any (non-empty) set of &lt;strong&gt;&lt;em&gt;proper submodules&lt;/em&gt;&lt;/strong&gt; $\{N_i\}_{i ∈ I}$ such that either $N_i ⊆ N_j$ or $N_i ⊇ N_j$ for any $i, j ∈ I$, the union $⋃ N_∙$ is &lt;strong&gt;&lt;em&gt;never&lt;/em&gt;&lt;/strong&gt; equal to $M$ itself.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;($→$). We show $a → b$ by showing that $a ∧ (¬ b) → \text{false}$. By $(¬ b)$, there exists an ordered system of proper submodules $N_∙$ whose union is $M$. Let $\{x_i\}_{i=1}^n$ be a generating set of $M$ (by $(a)$). Thus, for each $i$, there exists $x_i ∈ N_{k_i}$. The proper submodule $⋃ _{i=1}^n N_{k_i} = \text{Largest}\{N_{k_i}\}$ yields a contradiction. &lt;br /&gt; &lt;br /&gt; ($←$). We show $b → a$ with $b ∧ (¬ a) → \text{false}$. Consider the collection of proper submodules $N_∙ = \{N ∣ M / N\ \text{ is not f.g.}\}$. The poset of proper submodules $N_∙$ is both&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;non-empty by $(¬ a)$, and&lt;/li&gt;
+      &lt;li&gt;contains no maximal elements by construction.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;We examine the partially ordered set $P := \{\text{chains in } N_∙\}$ with the binary relation $⊆$. Observe that each chain in $P$ possesses an upper bound, obtained by taking the common refinement. Therefore, by Zorn’s lemma, $N_∙$ contains a maximal inclusion chain of proper submodules, denoted by $C_∙$. &lt;br /&gt; $C_∙$ contains no maximal elements; thus, $⋃ C_∙ ∉ N_∙$. In this case $M / (⋃ C_∙)$ is f.g.. Consequently, there exists a finitely generated submodule $L$ such that $L + ⋃ C_∙ = M$; however, $⋃ (L + C_∙) ≠ M$ by $(b)$. This leads to a contradiction.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In the above theorem, $N_∙$ is taken over arbitrary totally-ordered set. For colimit $⋃$, it suffices to consider a cofinal subsystem indexed by an ordinal. Hence,&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$M$ is f.g., iff any transfinite composition of proper submodules,&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+0 = M_0 ⊊ M_1 ⊊ \cdots ⊊ M_γ ⊊ \cdots,
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;satisfy $(⋃ M_∙) ⊊ M$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;$M$ is f.g. if and only if every proper submodule is contained in a maximal submodule.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;(→). Suppose that $M$ is f.g.. For any $M_0 ⊆ M$, $M / M_0$ is f.g.. Now it suffices to show that $(M / M_0)$ possesses a maximal submodule. If not, then there exists some transfinite inclusion of proper submodules whose union is $(M / M_0)$. This is a contradiction. &lt;br /&gt; (←). Conversely, denote the non-empty set $$\begin{equation}
+\mathcal{S} := \{N ∣ N ⊊ M , N \ \text{is not contained in a maximal submodule}\}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;Note that $\mathcal{S}$ is closed under upward inclusion. The partially ordered set $\{\text{chains in} \ \mathcal{S}\}$ is closed under transfinite refinement. Hence, there exists a maximal chain $C_∙ ⊆ \mathcal{S}$. Clearly, $⋃ C_∙ = M$, so $M$ is not f.g..&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;ul&gt;
+    &lt;li&gt;This criterion admits an inductive proof, which reduces to the case that every ring possesses a maximal ideal.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We &lt;strong&gt;&lt;em&gt;slightly&lt;/em&gt;&lt;/strong&gt; revise such characterisation to the following &lt;em&gt;FAKE finitely generated&lt;/em&gt; cases.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(FAKE f.g.). A module $M$ is &lt;em&gt;FAKE finitely generated&lt;/em&gt; if any $ω$-composition of proper submodules,&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+0 = M_0 ⊊ M_1 ⊊ \cdots ⊊ M_n ⊊ \cdots \quad (n ∈ ℕ ),
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;satisfy $(⋃_{n ∈ ℕ} M_n) ⊊ M$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We show FAKE f.g. $M$’s are precisely those $∐ (M, -) \xrightarrow ∼ (M, ∐ (-))$ in the rest of this subsection. We call such $M$ &lt;em&gt;a compact object in the underlying additive category&lt;/em&gt;, i.e., $(M, -)$ is coproduct preserving&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;compact objects in general additive categories corresponds to $∐$-preserving $(M, -)$;&lt;/li&gt;
+  &lt;li&gt;compact objects in AB5 category (e.g. $𝐌𝐨𝐝_R$) corresponds to $\varinjlim^{fil}$-preserving $(M, -)$ (e.g., f.p. modules).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show the subfunctor $∐ (M, -) ↪ (M, ∐ (-))$ for $𝐌𝐨𝐝_R$ or $C(R)$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;If $M$ is FAKE f.g., then $M$ is compact in the underlying additive category of $𝐌𝐨𝐝_R$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We deduce the lemma to countable case, that is, $(M, -)$ preserves arbitrary coproducts if $(M, -)$ preserves countable coproducts.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Assume $∐_{i ∈ I} (M,  N_i ) \overset {≠}↪ (M, ∐_I N_{i} )$, we can find $F : M → ∐ _{i ∈ I}N_i$ such that $N_i ∩ \mathrm{im}(F) ≠ 0$ for infinitely many $N_i$’s. Hence, there is a countable coproduct $N = (∐ _{n ∈ ℕ} N_n) ⊕ (∐ _{\text{the rest}}N_∙)$ where the image of $F$ has non-zero intersection with each summand. This provides an example that $(M, -)$ does not preserve countable coproducts.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;We take arbitrary $f$ in&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+∐_{n ∈ ℕ} (M,N_n) ↪ (M, ∐_{n ∈ ℕ} N_n) ∋ f = (f_n)_{n ∈ ℕ}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;Then $⋂ _{m ≥ n} \ker f_m$ is an ascending chain of submodules of $M$, satisfying&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\limsup (\ker f_∙) = ⋃_{n ≥ 0} ⋂ _{m ≥ n} \ker f_m = M.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;By FAKE f.g. condition, all but finite $⋂ _{m ≥ n} \ker f_m ⊆ ⋂ _{m ≥ n+1} \ker f_m$ takes $⊊$. Hence, there is $n_0$ such that $⋂ _{m ≥ n_0} \ker f_m = M$. In this case, $f$ is also characterised in $⨁ _{n ≤ n_0}(M, N_n)$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show the converse statement: when there exists $⋃ M_∙ = M$ for some inclusion sequence&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+0 = M_0 ⊊ M_1 ⊊ \cdots ⊊ M_n ⊊ \cdots \quad (n ∈ ℕ ).
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;Show that $∐ (M, -) ≇ (M, ∐ (-))$. &lt;br /&gt; &lt;br /&gt; Hint: Let $π _n : M ↠ M/M_n$ be quotient maps. The morphism $(π _n) ∈ (M, ∏ \frac{M}{M_n})$ lies in $(M, ∐ \frac{M}{M_n})$, since each support set $S_x := \{n ∣ π _n(x) ≠ 0\}$ is finite. However, one can never find $?$ along&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+? ∈ ∐(M,\frac{M}{M_n}) ↪ (M, ∐ \frac{M}{M_n}) ↪ (M, ∏ \frac{M}{M_n}) ∋ (π _n).
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;Notice that $(π _n) ∈ (M, ∏ \frac{M}{M_n}) ≃ ∏ (M, \frac{M}{M_n})$ never belongs to $∐ (M, \frac{M}{M_n})$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;There exists of $ω$-filtered ordinal, e.g., the first uncountable cardinal and $|ℝ|$ (these two coincides under continuum hypothesis).&lt;/p&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;We learn from analysis that $\mathcal{P}(X) = \mathrm{Hom}_{𝐒𝐞𝐭𝐬}(X,𝔽 _2)$ is an $𝔽_2$-algebra ($∅ = 0$ and $∩ = ×$ for convention). Let $X$ be uncountable. Show that&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;The collection $X_ω := \{Y ∣ |Y| ≤ ω \}$ is an ideal of $\mathcal{P}(X)$;&lt;/li&gt;
+    &lt;li&gt;$X_ω$ is not f.g. as a $\mathcal{P}(X)$-module.&lt;/li&gt;
+    &lt;li&gt;$X_ω$ is uncountable, but any proper submodule of $X_ω$ is countable.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;Hence, $X_ω$ is FAKE f.g. but not f.g.. This construction shows that for any cardinal $κ$, there exists examples such that the generating set of some FAKE f.g. modules must be $≥ κ$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;On FAKE f.g. and f.g.. Show that&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;f.g. are FAKE f.g..&lt;/li&gt;
+    &lt;li&gt;f.g. coincides FAKE f.g. for projective modules;&lt;/li&gt;
+    &lt;li&gt;FAKE f.g. are closed under quotients (and summands);&lt;/li&gt;
+    &lt;li&gt;FAKE f.g. are closed under extensions (and finite sums);&lt;/li&gt;
+    &lt;li&gt;For ses $K ↪ X ↠ Y$ where $K$ is small in Y (e.g., radical inclusion), then $X$ is FAKE f.g. if so is $Y$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;For left modules, f.g. coincides FAKE f.g. over &lt;a href=&quot;https://en.wikipedia.org/wiki/Perfect_ring&quot;&gt;left perfect rings&lt;/a&gt;.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We show any FAKE f.g. module $M$ is f.g..&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;(by 5). the projective cover $P(M)$ is again FAKE f.g..&lt;/li&gt;
+      &lt;li&gt;(by 2). such $P(M)$ must be f.g..&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;By $P(M) ↠ M$, $M$ is also f.g..&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Over a left/right perfect ring, there are no need to distinguish between&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;f.g. and FAKE f.g. modules,&lt;/li&gt;
+  &lt;li&gt;projective modules and flat modules,&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-real-compact-modules&quot;&gt;The REAL Compact Modules&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;Say $M$ is compact, provided $(M, - )$ preserves all filtered colimits.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;Compact objects are closed under finite colimits. In particular, f.g. projective modules and &lt;strong&gt;f.p. modules are compact&lt;/strong&gt;.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;By AB5, filtered colimits commutes with finite limits. By pentagon procedure,&lt;/p&gt;
+    &lt;p&gt;$$\begin{aligned}
+(\varinjlim {}^{&lt;∞} M_i, \varinjlim{}^{fil}_jN_j) &amp; ≃ \varprojlim {}^{&lt;\infty}(M_i, \varinjlim{}^{fil}_j N_j) ≃ \varprojlim {}^{&lt;\infty} \varinjlim{}^{fil}_j (M_i, N_j)\\[6pt]
+&amp;≃ \varinjlim{}^{fil}_j \varprojlim {}^{&lt;\infty} (M_i, N_j) ≃ \varinjlim{}^{fil}_j (\varinjlim {}^{&lt;\infty} M_i, N_j).
+\end{aligned}$$&lt;/p&gt;
+    &lt;p&gt;We see $\varinjlim {}^{&lt;∞} M_i$ preserves $\varinjlim^{fil}$, thus is compact.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;By definition, $f: \text{compact} → \text{induction of small}$ is described by $f : \text{compact} → \text{small}$ locally. We wish $\text{induction of small} = \text{all objects}$.&lt;/p&gt;
+
+&lt;p&gt;Finite sets are exactly compact objects in $𝐒𝐞𝐭𝐬$, conversely, any set is a filtered colimit of its finite subsets (local compactness). It is reasonable for check whether a module is a filtered limit of the compact objects.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Local compactness for modules). Every module $M$ is a filtered colimit of compact modules.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;It suffices to show $M$ is a filtered colimit of f.p. modules. We take the canonical surjection $R^{(M)} ↠ M$, and construct the filtered system as follows.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;The system is indexed by a finite subset $I \subseteq M$ along with a finite subset of $\mathcal S \subseteq S_I\subseteq R^I$ which generates $\ker [R^I \hookrightarrow R^{(M)} \twoheadrightarrow M]$.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;We denote $\Phi _{(I, \mathcal S)}$ as an element, which stands for a chain complex $⟨\mathcal S⟩ \hookrightarrow R^I \to M$.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;We define the partial order $\Phi_{(I, \mathcal S)} \hookrightarrow \Phi_{(J, \mathcal T)}$.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;The poset is clearly filtered. We show the induced $\alpha : \varinjlim_{\Phi_{(I,\mathcal S)}}R^I\to M$ is an isomorphism.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;$\alpha$ is surjective, since any $x \in M$ is characterised by $R^{(x)} \to M$;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;$\alpha$ is injective. If $[p] \in \Phi_{(I, \mathcal S)}$ and $[q] \in \Phi _{(J, \mathcal T)}$ has the same image $m\in M$ , then we take $\Phi _{(I \cup J \cup \{m\}, \mathcal S \cup \mathcal T \cup \{p-e_m, q-e_m\})}$ , an upper bound of $\Phi_{ (I, \mathcal S)}$ and $\Phi _{(J, \mathcal T)}$ where $[p]$ and $[q]$ has the same image.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We show that f.p. modules are precisely compact modules. Indeed we have the following equivalent characterisation.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;In general, $M$ is finitely presented &lt;strong&gt;iff&lt;/strong&gt; the following equivalent definitions holds.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;p&gt;There is an exact sequence $R^m \to R^n \to M \to 0$,&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;&lt;strong&gt;$M \otimes-$&lt;/strong&gt; commutes with $\prod$,&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;$M \otimes R^{\Lambda} \simeq M^\Lambda$ for arbitrary index set $\Lambda$.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;$(M, -)$ preserves filtered colimits.&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;($1 \to 4$). We write $M = \mathrm{cok}(\varphi)$. Now&lt;/p&gt;
+    &lt;p&gt;$$
+\begin{align*}
+\varinjlim (\mathrm{cok}(\varphi), X_\bullet)&amp;\simeq\varinjlim\ker(\varphi, X_\bullet)\quad (\text{definition of cok})\\
+&amp;\simeq\ker \varinjlim(\varphi, X_\bullet)\quad (\text{AB5 for Ab})\\
+&amp;\simeq\ker (\varphi, \varinjlim X_\bullet)\quad (\text{holds for free modules})\\
+&amp;\simeq (\mathrm{cok}\varphi, \varinjlim X_\bullet)\quad (\text{definition of $\mathrm{cok}$}).
+\end{align*}
+$$&lt;/p&gt;
+    &lt;p&gt;($4 \to 1$). $M$ is a filtered colimit of f.p. modules, i.e., $M = \varinjlim M_\bullet$. The isomorphism $1_M \in (M,M) \simeq \varinjlim (M, M_\bullet)$ shows that $1_M$ factors through some f.p. modules. Hence $M$ is f.p.. &lt;br /&gt; ($1 \to 2$). We write $M = \mathrm{cok}(\varphi)$. Now&lt;/p&gt;
+    &lt;p&gt;$$
+\begin{align*}
+\prod ((\mathrm{cok}\varphi) \otimes X_\bullet) &amp;\simeq\prod \mathrm{cok}(\varphi \otimes X_\bullet)\quad (\text{$\otimes$ is left adj})\\
+&amp;\simeq\mathrm{cok}\prod (\varphi \otimes X_\bullet)\quad (\text{AB4* for Ab})\\
+&amp;\simeq\mathrm{cok} (\varphi \otimes \prod X_\bullet)\quad (\text{holds for free modules})\\
+&amp;\simeq (\mathrm{cok} \varphi) \otimes \prod X_\bullet\quad (\text{$\otimes$ is left adj}).
+\end{align*}
+$$&lt;/p&gt;
+    &lt;p&gt;($2 \to 3$). Clear. &lt;br /&gt; ($3 \to 1$).  We track $1_M \in M^M \simeq M \otimes R^M$, and see that $M$ is f.g.. We take ses $0 \to K \to R^n \to M \to 0$ and obtain the commutative diagram of exact sequences&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_01882327a1076.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;Here $K^K$ is a syzygy of the upper sequence. Hence, $K \otimes R^K \to K^K$ is surjective. We see $K$ is f.g. and thus $M$ is f.p..&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note that&lt;/p&gt;
+
+&lt;p&gt;$$\begin{equation}
+\text{f.p.} = \text{compact (紧对象)} ⊆ \text{f.g.} ⊆ \text{FAKE f.g.} \quad  \textcolor{gray}{= \ compact \ (紧模)}.
+\end{equation}$$&lt;/p&gt;
+
+&lt;h3 id=&quot;mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-mathjax_protectedjpcdkijwnzcn8j2qoyqmathjax_protected-and-mathjax_protectedjpcdkixwnzcl8j2qmvcdkk0kmathjax_protected&quot;&gt;$𝐏𝐫𝐨𝐣$, $𝐈𝐧𝐣$ and $𝐅𝐥𝐚𝐭$&lt;/h3&gt;
+
+&lt;p&gt;We summarise the tests for f.p. modules, proj. modules, inj. modules and flat modules at the very beginning.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$M$ is f.p., iff the following equivalent definitions hold.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$M ≃ \operatorname{cok}φ$, where $φ$ is a morphism in $𝐩𝐫𝐨𝐣$.&lt;/li&gt;
+    &lt;li&gt;$(M, -)$ preserves filtered colimits.&lt;/li&gt;
+    &lt;li&gt;$M ⊗ -$ preserves arbitrary products.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$M$ is projective, iff the following equivalent definitions hold.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(M, -)$ is exact, $\mathrm{Ext}^1(M, -)=0$, etc.&lt;/li&gt;
+    &lt;li&gt;$M$ is a summand of some free module $R^{(λ)}$;&lt;/li&gt;
+    &lt;li&gt;$M$ is the coproduct of summands of $R^{(ω)}$ (the countably generated free module);&lt;/li&gt;
+    &lt;li&gt;There exists a subset $\{(e_i, f_i)\}_{i ∈ I} ⊆ P × (P, R)$ such that any $x ∈ R$ is a finite sum of some $∑_{i ∈ I_0} e_i ⋅ f_i (x)$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$M$ is injective, iff the following equivalent definitions hold.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(-, M)$ exact, $\mathrm{Ext}^1(-, M)=0$; $\mathrm{Ext}^1(\text{quotient ring},M)=0$, etc.&lt;/li&gt;
+    &lt;li&gt;$(i, M)$ is a surjection for any ideal inclusion $i : I → R$.&lt;/li&gt;
+    &lt;li&gt;$M$ is a direct summand for $∏ (_RR)^+$, where $(-)^+ = (-, ℚ / ℤ )_{𝐀𝐛}$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$M$ is flat iff the following equivalent definitions hold.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$M ⊗ i$ is injective for arbitrary $i ∈ \mathcal{I}$, where $\mathcal{I}$ can be either       &lt;ol&gt;
+        &lt;li&gt;all inclusions of submodule;&lt;/li&gt;
+        &lt;li&gt;all inclusions of an ideal;&lt;/li&gt;
+        &lt;li&gt;all inclusions of two f.g. submodules;&lt;/li&gt;
+        &lt;li&gt;all inclusions of a f.g. ideal;           &lt;ul&gt;
+            &lt;li&gt;we remark that $M ⊗ I ↪ M ⊗ R$ is injective iff it is isomorphic to its image, that is, $M ⊗ I ≃ MI$. As $M ⊗ I ↠ MI$, this is equivalent to $M ⊗ I → MI$ being injective.&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;$\mathrm{Tor}_{≥ 1}(M, -) = 0$, or $\mathrm{Tor}_1 (M, -) = 0$;&lt;/li&gt;
+    &lt;li&gt;For any matrix equation $𝐑 ⋅ 𝐦 = 𝐎$, there is some $𝐑$-matrix $R$ such that $𝐑 ∈ \ker (⋅ 𝐀)$ and $𝐦 ∈ \operatorname{im}(𝐀 ⋅ )$.&lt;/li&gt;
+    &lt;li&gt;Any morphism from f.p. module to $M$ factors through some f.g. projective module.&lt;/li&gt;
+    &lt;li&gt;$M$ is a filtered colimit of f.p. modules.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$M$ is f.g. projective iff the following equivalent definitions hold.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$M$ is a summand of some $R^n$;&lt;/li&gt;
+    &lt;li&gt;$M$ is projective, and $(M, -)$ preserves coproducts;&lt;/li&gt;
+    &lt;li&gt;$(M, -)$ preserves all colimits;&lt;/li&gt;
+    &lt;li&gt;$M ⊗ -$ preserves all limits.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We commence with projective modules.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;Projective modules (defined by summand of free modules) is a coproduct of countably generated projective modules.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;See examples and propositions in &lt;a href=&quot;25SumLec1#ordinals-and-cardinals&quot;&gt;this subsection&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$P$ is a projective (summand of free), iff there exists a subset $\{(e_i, f_i)\}_{i ∈ I} ⊆ P × (P, R)$ such that any $x ∈ R$ is a finite sum of some $∑_{i ∈ I_0} e_i ⋅ f_i (x)$. We call this &lt;em&gt;projective basis&lt;/em&gt;.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;When &lt;em&gt;… any $x ∈ R$ is a &lt;strong&gt;UNIQUE&lt;/strong&gt; finite sum of …&lt;/em&gt; holds, $P$ is a free module.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;When there exists a projective basis, we see the retract&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^i)_{i ∈ I}\  ↦ \ ∑ e_i ⋅ r^i} P.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;Conversely, any retract $P ↪ R^{(J)} ↠ P$ yields such dual basis.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show the rest of the equivalent definitions of projective modules. The proof is found in most textbooks.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now we show equivalent definitions of injectives.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Baer’s criterion). $M_R$ is injective iff any morphism from the ideal $I_R$ to $M_R$ extends along $I_R ↪ R_R$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We show $(←)$ only. It suffices to check the lifting property for $L_R ↪ N_R$. Set&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\mathcal{S} := \{K ∣ L ⊆ K ⊆ N, \ (K, M) ↠ (L,M)\}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;$\mathcal{S}$ is non-empty ($L ∈ \mathcal{S}$), and closed under the union of any ascending chain. Hence $\mathcal{S}$ has a maximal element $Q$ by Zorn’s lemma. &lt;br /&gt; We show $Q = N$. Assume there is some $n ∈ (Q ∖ N)$, then $I := \{a ∣ na ∈ Q\}$ is right ideal. In this case, any $φ : Q → M$ extends to&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_5f24943f68f7a.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;We see that $(n ⋅ R) + Q ∈ \mathcal{S}$ is greater thatn $Q$, a contradiction!&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;Injective modules $I_R$ are summands of the product $∏ (R_R)^+$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;Consider any surjection from projective module $p : (_RR)^{(I_R)^+} ↠ (I_R)^+$. We show in &lt;em&gt;the subsection of characteristic modules&lt;/em&gt; that&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;$(\text{flat})^+$ is are injective modules, and&lt;/li&gt;
+      &lt;li&gt;$\text{(surjection)}^+$ are injections, and&lt;/li&gt;
+      &lt;li&gt;the evaluation $(-) → (-)^{++},\quad ? ↦ [f ↦ f(?)]$ is an injective natural transformation.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;Hence $I_R ↪ I_R^{++} ↪ ((_RR)^{(I_R)^+})^+$. In particular, $I_R$ is a summand of $∏ _{(I_R)^+}({}_RR)^+$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show the rest of the equivalent definitions of injective modules. The proof is found in most textbooks.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now it comes to the tricky stuff called &lt;em&gt;flat modules&lt;/em&gt;. We show the following equivalent definitions (Baer’s criterion).&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Baer’s criterion). $M$ is flat iff $M ⊗ i$ is injective for arbitrary $i ∈ \mathcal{I}$, where $\mathcal{I}$ can be either&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;all inclusions of submodule;&lt;/li&gt;
+    &lt;li&gt;all inclusions of two f.g. submodules;&lt;/li&gt;
+    &lt;li&gt;all inclusions of an ideal;&lt;/li&gt;
+    &lt;li&gt;all inclusions of a f.g. ideal.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;We remark that $M ⊗ I ↪ M ⊗ R$ is injective iff it is isomorphic to its image, that is, $M ⊗ I ≃ MI$. As $M ⊗ I ↠ MI$, this is equivalent to $M ⊗ I → MI$ being injective.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;(1 → 3). is clear. We show (1 ↔ 2), (3 ↔ 4), and (3 → 2) in steps. &lt;br /&gt; (1 ↔ 2, and 3 ↔ 4). We show $2 → 1$ only. To check whether $∑ x_i ⊗ m_i$ and $∑ x_i' ⊗ m_i'$ has the same image under $i ⊗ 1_M$, it suffices to check over the f.g. submodules $⟨\{x_i\} ∪ \{x_i'\}⟩ → ⟨\{i(x_i)\} ∪ \{i(x_i')\}⟩$.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;In short, to verify $1$, it suffices to verify a collection of $2$.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;(3 → 2). We show $i ⊗ 1_M$ is injective for any inclusion of f.g. submodules $X ⊆ Y$. WLOG we assume $Y = X + ⟨x_0⟩$, hence $Y/X ≃ A/I$, and there is a lifting ($A$ is projective)&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_e437b111b8e29.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;We obtain the commutative diagram by pulling back two epimorphisms:&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_69216a6d27080.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;Note that the middle row splits as $A ↠ A/I$ factors through $Y ↠ A/I$. Applying $M ⊗ -$ we obtain&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_ab31a572e881b.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;Note that $H^{k-1}(\operatorname{cok}(g^∙)) ≃ H^{k+1}(\ker (g^∙))$ when $f^∙$ is a morphism between exact complexes, $M ⊗ i$ is an injection.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We show &lt;em&gt;computational&lt;/em&gt; properties of flat modules.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;$M$ is flat, iff for any matrix equation $𝐑 ⋅ 𝐦 = 𝐎$, there is some $R$-matrix $𝐀$ such that $𝐑 ∈ \ker (⋅ 𝐀)$ and $𝐦 ∈ \operatorname{im}(𝐀 ⋅ )$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;We use left modules here for convention of linear algebra.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;When $M$ is flat, the ses $0 → \ker (𝐑 ⋅ ) → R^m \xrightarrow {𝐑 ⋅ }  R^n → 0$ is $(M ⊗ -)$-exact:&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+0 → \ker (𝐑 ⋅ ) ⊗ M → M ^m \xrightarrow {𝐑 ⋅ } M^n → 0.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;By $\ker = \operatorname{im}$, $𝐦 ∈ \ker (𝐑 ⋅)$ iff it is of the form $𝐀 ⋅ 𝐦'$ for some $𝐑 ⋅ 𝐀 = 𝐎$. &lt;br /&gt; Conversely, if the matrix equation $𝐑 ⋅ 𝐦 = 𝐎$ &lt;em&gt;splits&lt;/em&gt; by some $𝐀$, we shall show the flatness of $M$. By Baer’s criterion, it suffices to show $I ⊗ M ↪ IM$ for f.g. ideals. Suppose there exists $∑ a_i ⊗ m_i$ with zero image. Then we have $𝐚^T ⋅ 𝐦 = 0$. Now there is $𝐀$ s.t. $𝐚^T ⋅ 𝐀 = \mathbf 0 ^T$ and $𝐦 = 𝐀 ⋅ 𝐦 '$ for some $𝐦 '$. Hence,&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+∑ a_i ⊗ m_i = ∑ a_i ⊗ A_{i,j} m'_j = ∑ (a_i A_{i,j}) ⊗ m'_j = 0.
+\end{equation}$$&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We are not satisfied with the above lemma, which is &lt;em&gt;not homological enough&lt;/em&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$M$ is flat, iff any morphism from f.p. module to $M$ factors through some f.g. projective module.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We show ($→$). When $M$ is flat, we take arbitrary f.p. module $R^m \xrightarrow {𝐁 ⋅ } R^n ↠ X$. A morphism $φ : X → M$ is characteristed by&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;a set $\{[e_i] ↦ m_i\}_{i=1}^n$, where $[e_i]$ is the image of $e_i ∈ R^n$ in $X$.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;By $0 → (X, M) \xrightarrow{⊆} M^n → M^m$, the morphism $φ : X → M$ is characterised by the column vector $𝐦 := (m_i)_{i=1}^n$, such that $(𝐁 ^T)_{m × n} ⋅ 𝐦 = \mathbf 0$. By flatness, there is $(𝐀^T)_{n × l}$ and $(𝐦') ∈ M^l$ such that $(𝐁 ^T)_{m × n} ⋅ (𝐀 ^T)_{n × l} = 𝐎$ and $(𝐀 ^T)_{n × l} ⋅ 𝐦 ' = 𝐦$. Now $𝐀 ⋅ : R^n → R^l$ is our desired factorisation. &lt;br /&gt; The converse is nothing but a backwise verification; it is clear if one shows that flat modules are filtered colimits of f.g. projective modules.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;In fact, we deduce an exact sequence with syzygy&lt;/p&gt;
+  &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+      &lt;embed src=&quot;/website/svg/25SumLec0/diagram_1d900e34363e2.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+    &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Demonstrate that a morphism $M → F$ from a f.p. module $M$ to a flat module $F$ factors through some f.g. projective module $P(M)$. Now, express $F$ as a filtered colimit of f.p. modules, i.e., $\varinjlim^{fil} M_∙ ≃ F$. &lt;a href=&quot;25SumLec0#the-real-compact-modules&quot;&gt;Our construction&lt;/a&gt; shows $P(M_∙)$ is a subsystem of $M_∙$. Demonstrate that $\varinjlim ^{fil} P(M_∙) ≃ F$ via cofinality.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;Flat modules are filtered colimits of f.g. free modules.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We show filtered colimits of f.g. projective modules are flat ones. Clearly, $(\varinjlim^{fil}P_∙) ⊗ -$ is an exact functor. The converse is shown above.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The following theorem is a characterization of f.g. projective modules, easy but functorial.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$M$ is f.g. projective iff the following equivalent definitions holds.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$M$ is a summand of some $R^n$;&lt;/li&gt;
+    &lt;li&gt;$M$ is projective, and $(M, -)$ preserves coproducts;&lt;/li&gt;
+    &lt;li&gt;$(M, -)$ preserves all colimits;&lt;/li&gt;
+    &lt;li&gt;$M ⊗ -$ preserves all limits.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;Clearly 1. implies the others. &lt;br /&gt; (2 → 1). This is clear by criterion of FAKE f.g. modules; we provide a straightforward and down-to-earth proof instead. There exists some $N$ such that $R^{(λ)} = M ⊕ N$ is free. In particular, $M$ is f.g. iff $λ$ can be finite. Since taking summand preserves the additive natural isomorphism, it suffices to show&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;$(R^{(λ)}, -)$ is not $∐$-preserving when $λ$ is infinite.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;We consider $(R^{(λ)}, R)^{(λ)} ↪ (R^{(λ)}, R^{(λ)}) ∋ 1_{R^{(λ)}}$, or equivalently, $∐_λ ∏_λ R ↪ ∏_λ ∐_λ R ∋ 1_R$ by tracking the image of the free basis.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;$∐_λ ∏_λ R ⊆ R^{λ × λ}$ consists of $λ × λ$ matrices with finite many columns;&lt;/li&gt;
+      &lt;li&gt;$∏_λ ∐_λ R ⊆ R^{λ × λ}$ consists of $λ × λ$ matrices with all finite length columns.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;The diagonal matrix $1_{∏ R} ∈ R^{λ × λ}$ lies in $∏_λ ∐_λ R$, but not in $∐_λ ∏_λ R$, &lt;br /&gt; (3 → 1). $(M, -)$ is an exact functor as it preserves finite limits. Hence $M$ is projective. By 2., $M$ has to be f.g. projective. &lt;br /&gt; (4 → 1). $(M ⊗ -)$ is an exact functor as it preserves finite limits. Hence $M$ is flat. $M$ is also f.p. as $M ⊗ -$ preserves products. By forthcoming techniques of character modules, f.p. flat modules are f.g. projective.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In particular, f.g. projective modules are precisely those $M$ such that $M ⊗ -$ and $(M, -)$ preserves all limits and colimits.&lt;/p&gt;
+
+&lt;h3 id=&quot;coherency&quot;&gt;Coherency&lt;/h3&gt;
+
+&lt;p&gt;Inducting from f.g. and f.p., it is natural to come up with the ideal of projection length. We show the following &lt;em&gt;atomatic&lt;/em&gt; propositions over the ses&lt;/p&gt;
+
+&lt;p&gt;$$\begin{equation}
+0 → K → X → Y → 0.
+\end{equation}$$&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;When $K$ and $Y$ are both f.g. (resp. f.p.), then so is $X$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;By horseshoe lemma.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;When $X$ is f.g., then $Y$ is f.g..&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;Trivial.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;When $X$ is f.p. and $K$ is f.g., then $Y$ is f.p..&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We prove without taking elements. Taking projective resolutions of $K$ and $X$ yields the chain map $ϕ : P_∙ (K) → P_∙ (X)$. We shall construct $P_∙(Y)$ by mapping cone.&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_be3fb110abb81.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;Now $Y ≃ \operatorname{cok}(ϕ ) ≃ \operatorname{cok}[H_0(P_∙ (K)) \xrightarrow{H_0(P_∙ (ϕ ))} H_0(P_∙ (X))]$. This is exactly $\operatorname{cok}(ϕ _0, d)$ by long exact sequence.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;When $X$ is f.g., $Y$ is f.p., then $K$ is f.g.. Hint: by mapping coCone.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;These shows that&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;if $X$ f.g., then $Y$ f.g.;&lt;/li&gt;
+  &lt;li&gt;if $K$ f.g., $Y$ f.g., then $X$ f.g.;&lt;/li&gt;
+  &lt;li&gt;if $X$ f.p., $Y$ f.g., then $K$ f.g.;&lt;/li&gt;
+  &lt;li&gt;if $K$ f.g., $X$ f.p., then $Y$ f.p.;&lt;/li&gt;
+  &lt;li&gt;if $K$ f.p., $Y$ f.p., then $X$ f.p.;&lt;/li&gt;
+  &lt;li&gt;induction …&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In particular, $𝐦𝐨𝐝_R$ is not closed under kernel in general. To fix this, we may require f.p. is automatically  $3$-term f.p. (and thus $∞$-f.p.). This comes with coherency.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;$R$ is (right) &lt;strong&gt;coherent&lt;/strong&gt; provided (right) flat $R$-modules are closed under arbitrary products.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;TFAE:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\mathrm{flat}(\mathrm{Mod}_R)$ is closed under $\prod$,&lt;/li&gt;
+    &lt;li&gt;$\prod _{\lambda \in \Lambda}R_R=:R^\Lambda$ is flat,&lt;/li&gt;
+    &lt;li&gt;every f.g. submodule (left ideal) of ${}_RR$ is f.p.,&lt;/li&gt;
+    &lt;li&gt;the category consists of f.p. modules $\mathrm{mod}_R$ is Abelian,&lt;/li&gt;
+    &lt;li&gt;f.p. modules are $\infty$-presented.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We show ($1 \to 2 \to 3 \to 1$) with a set-theoritic analysis; and $(3\to 4 \to 5 \to 4)$ with a homological analysis. &lt;br /&gt; &lt;br /&gt; ($1 \to 2$) is clear. &lt;br /&gt; &lt;br /&gt; ($2 \to 3$). For any f.g. left ideal $I$ and index set $\Lambda$, we show $I^\Lambda\simeq R ^\Lambda\otimes I$ (recall the equivalent definitions of f.p. modules). The flatness shows injection, and the f.g. shows surjection. &lt;br /&gt; &lt;br /&gt; ($3 \to 1$). We show f.g. $\iota: _RI\hookrightarrow R$ is preserved by $R^\Lambda$ via Baer’s criterion. Since f.p. = f.g. (by assumption), $\iota \otimes -$ commutes with $\prod$. &lt;br /&gt; &lt;br /&gt; ($3\to 4$). Note that f.p. modules are closed under extensions and cokernels. For ses $0 \to K \to X \to Y \to 0$ with $X$ and $Y$ f.p., we have $K$ f.g. in general. By horseshoe lemma, we obtain ses $0 \to \Omega_1 (K) \to \Omega_1 (X) \to \Omega_1 (Y) \to 0$ for $\Omega _1(X)$ and $\Omega_1 (Y)$ f.g.; by 3., $\Omega _1 (Y)$ and $\Omega _1(X)$ are f.p., hence $\Omega _1(K)$ is f.g.. This shows $K$ f.p.. &lt;br /&gt; &lt;br /&gt; ($4 \to5$). By definition, we can choose the first syzygy of any f.p. module as some f.p. modules. &lt;br /&gt; &lt;br /&gt; ($5 \to 3$). When $I \hookrightarrow R$ is f.g. ideal, $R/I$ is f.p., thus is $\infty$-presentable by assumption. Now $I$ is also $\infty$-presentable.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show that the category of f.g. free modules $𝐟𝐫𝐞𝐞 _R$ has weak kernel, iff $R$ is coherent.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$A \xrightarrow i B$ is a weak kernel of $B \xrightarrow p C$, provided $\ker \mathrm{Hom}(-, p) = \operatorname{im} \mathrm{Hom}(-, i)$.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A right coherent ring shows&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;the interchanging of $\prod$ and flat objects;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;the $\infty$-presentability of f.p. objects.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;Left hereditary rings are right coherent (&lt;a href=&quot;Hereditary_Alg_Eq_Def&quot;&gt;the analysis&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;character-module&quot;&gt;Character Module&lt;/h3&gt;
+
+&lt;p&gt;The character module transfers and reflects from injective modules to flat modules; the dual procedure applies for Noetherian rings.&lt;/p&gt;
+
+&lt;p&gt;We commence with the contravariant functor $(-)^+ := (-, \mathbb Q / \mathbb Z)_{\mathbb Z}$, which maps $\mathrm{Mod}_R$ to $\mathrm{Mod}_{R^{\mathrm{op}}}$, and is&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;faithful&lt;/strong&gt; (as $\mathbb Q / \mathbb Z$ is a cogenerator) and&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;exact&lt;/strong&gt; (as $\mathbb Q / \mathbb Z$ is injective).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Consequently, &lt;strong&gt;it preserves and reflects exactness&lt;/strong&gt;. In particular, $((-)^+)^{\mathrm{op}}$ preserves and reflects monomorphisms and epimorphisms.&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;We demonstrate that f.p. flat modules are projective via $(-)^+$. If $F$ is flat, then $(F ⊗ -)^+ ≃ F ⊗ (-)^+$ is exact. Observe that&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$? ⊗ (-)^+ → (?, -)^+$ is a natural for right exact functors, which is an isomorphism for $?$ f.g. free, and thus for $?$ f.p. (by right exactness).&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;Therefore, $(F,-)^+ ≃ F ⊗ (-)^+$ is exact. Since $(-)^+$ reflects exactness, it follows that $F$ is projective.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;There are examples that f.g. flat modules are not projectve. An example is given in &lt;a href=&quot;https://stacks.math.columbia.edu/tag/052H&quot;&gt;stacks project&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Demonstrate that $F$ is flat &lt;strong&gt;if and only if&lt;/strong&gt; $F^+$ is injective. In general:&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$f.d. Y = i.d. Y^+$. The flat (respectively, injective) dimension is considered over $𝐌𝐨𝐝_R$ (respectively, ${}_R𝐌𝐨𝐝$).&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;Let $P(X)$ be a projective resolution of $X$. Then $(Y \otimes P^\bullet (X))^+ \simeq (P^\bullet (X), Y^+)$. Taking $H^\bullet$ groups yields $(\mathrm{Tor}_k(Y,X))^+ \simeq \mathrm{Ext}^k (X,Y^+)$. Note that $\mathrm{Tor}_d(Y,-)^+$ vanishes if and only if $\mathrm{Ext}^k(-,Y^+)$ does.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;One may enquire whether $i.d. F \overset ? = f.d. F^+$.&lt;/p&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show the isomorphism $\mathrm{Tor}_k (M, N^+) ≃ (\mathrm{Ext}^k (M,N))^+$ for all $N$ and f.p. $M$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Hint: recall that f.p. modules admit resolutions (finite or infinite) consisting of f.g. projective modules.&lt;/li&gt;
+    &lt;li&gt;The difficulty arises with $(\mathrm{Ext}^k (\varinjlim ^{fil }M_∙ ,N))^+ ≇ \varinjlim^{fil}(\mathrm{Ext}^k (M_∙,N))^+$ in proving $i.d. F = f.d. F^+$. In fact, coherency is insufficient to establish such an isomorphism.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;When $R$ is right coherent, we have $i.d. M_R ≥ f.d. {}_R(M^+)$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;We show that $M^+$ is flat when $M$ is injective.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Recall that $M^+$ is flat if and only if $M^+ ⊗ i$ is injective for any $i : I ↪ R$, the inclusion of f.g. ideal. By coherency, $I$ is f.p., hence $M^+ ⊗ I ≃ (I, M)^+$. Thus, $M^+ ⊗ i$ is injective if and only if $(i,M)^+$ is injective, which holds if and only if $(i, M)$ is surjective.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Suppose $θ$ is an injective resolution of $M$ of length $d$. Then $θ ^+$ is a flat resolution of $M^+$ of length $d$. This shows $f.d. M^+ ≤ i.d. M$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We observe that Baer’s criterion for injective modules is verified over &lt;em&gt;all ideals&lt;/em&gt;; the criterion for flat modules is verified over &lt;em&gt;all f.g. ideals&lt;/em&gt;. Hence,&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;$f.d. {}_R(M^+) = i.d. (M_R)$ holds for right Noetherian rings.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Set $R = ℝ [ℝ]$, the polynomial ring over indeterminates $\{x_t\}_{t ∈ ℝ}$. Show that $ℝ [ℕ]$ lifts f.g. ideals; whereas it is not an injective module.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In general, one can show that $f.d. M ≤ f.d. M^{++}$. Hence,
+$$\begin{equation}
+f.d. {}_RM = i.d. (M^+)_R ≥ f.d. {}_R(M^{++}) ≥ f.d. {}_R M.
+\end{equation}$$
+over right coherent rings.&lt;/p&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show that&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;evaluation $e_M: M → M^{++}, m ↦ [f ↦ f(m)]$ is injective.&lt;/li&gt;
+    &lt;li&gt;Moreover, $M^+ \xrightarrow {e_{M^+}} M^{+++} \xrightarrow {(e_{M})^+}M^+$ is identical. Hence $M^+$ is a summand of $M^{+++}$.&lt;/li&gt;
+    &lt;li&gt;In this case, $e_M ⊗ 1_X$ is injective for arbitrary $X$. Hint: equiv. to verify $(e_M ⊗ 1_X)^+ ≅ (1_X, (e_M)^+)$ is surjection, which is split epi!&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;$f.d. M ≤ f.d. M^{++}$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;WLOG assume $f.d. M^{++} = k$. For any flat resolution of $N$, we take homological truncation&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+T_k^∙ := (0 → Ω _{k+1}(N) \overset ι → F_{k} (N) → \cdots → F_0(N) → N → 0).
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;Since $\mathrm{Tor}_{k+1} (M^{++}, N) = H_{k+1} (M ^{++} ⊗ T_k ^∙) = 0$, $M^{++} ⊗ ι$ is injective. The diagram&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_a4ea18c71f8bb.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;shows that $M ⊗ ι$ is again injective. Equivalently, $\mathrm{Tor}_{k+1}(M, N) = 0$. This shows that if $\mathrm{Tor}_∙ (M^{++}, -)$ vanishes at $(k, N)$, then so does $\mathrm{Tor}_{∙}(M, -)$. Hence, $f.d. M ≤ f.d. M^{++}$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;on-chain-complexes&quot;&gt;On Chain Complexes&lt;/h2&gt;
 
 &lt;p&gt;We review some basic definitions and notions in homological algebra. We employ&lt;/p&gt;
@@ -528,7 +1735,7 @@ M = M_0 ⊆ M_1 ⊆ \cdots ⊆ M_γ ⊆ \cdots \quad (γ &lt; α)
     &lt;li&gt;a fully faithful functor reflects limits;&lt;/li&gt;
     &lt;li&gt;the left/right adjoint functor preserves all limits/colimits, respectively;&lt;/li&gt;
     &lt;li&gt;for a &lt;a href=&quot;https://en.wikipedia.org/wiki/Subcategory#Types_of_subcategories&quot;&gt;Freydal luff&lt;/a&gt; sub-diagram $ι : Q' → Q$, the functor $ι ^∗ : 𝐅𝐮𝐧𝐜𝐭 (Q, \mathcal{C}) → 𝐅𝐮𝐧𝐜𝐭 (Q', \mathcal{C})$ creates all limits and colimits,       &lt;ul&gt;
-        &lt;li&gt;&lt;strong&gt;corollary: the (co)limits in $C(R)$ are computed objectwise!&lt;/strong&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;strong&gt;corollary: the (co)limits in $C(R)$ are computed termwise!&lt;/strong&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/li&gt;
     &lt;li&gt;the forgetful functor $𝐌𝐨𝐝 _R → 𝐒𝐞𝐭𝐬$ creates all limits and filtered colimits,       &lt;ul&gt;
@@ -693,7 +1900,7 @@ X^p ⊗ Y^q → (-1) ^{pq} ⋅ Y^q ⊗ X^p,\quad x ⊗ y ↦ (-1)^{pq} y ⊗ x
   &lt;div class=&quot;proof&quot;&gt;
     &lt;p&gt;We take $τ : a ⊗ b ↦ b ⊗ a$ for modules, and wish there exist a some $ε : ℤ × ℤ → \{± 1\}$ along with the commutative diagram&lt;/p&gt;
     &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
-        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_c76332ab2afdd.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_6bbf87b6594c8.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
       &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
     &lt;p&gt;We see from the above diagram that $ε (p,q) = (-1)^{pq}$ is a solution:&lt;/p&gt;
     &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
@@ -713,7 +1920,7 @@ X^p ⊗ Y^q → (-1) ^{pq} ⋅ Y^q ⊗ X^p,\quad x ⊗ y ↦ (-1)^{pq} y ⊗ x
   &lt;p&gt;($\mathcal{HOM}(-, ?)$). We define $\mathcal{HOM}(X, Y)$ as an object in $C(R)$ by&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$(\mathcal{HOM}(X,Y))^p$ consists of morphisms in $(X, Y)_{\text{Graded-Module}}$ of degree $p$, i.e., homogeneous morphisms in $(X, Σ ^p Y)_{\text{Graded-Module}}$;&lt;/li&gt;
-    &lt;li&gt;the differential for a homogeneous morphism $f$ is $[f,d] := d_Y ∘ f - (-1)^{\deg f} f∘ d_X$.&lt;/li&gt;
+    &lt;li&gt;the differential for a homogeneous morphism $f$ is $[d,f] := d_Y ∘ f - (-1)^{\deg f} f∘ d_X$.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
@@ -728,7 +1935,7 @@ X^p ⊗ Y^q → (-1) ^{pq} ⋅ Y^q ⊗ X^p,\quad x ⊗ y ↦ (-1)^{pq} y ⊗ x
 &lt;div class=&quot;theorem&quot;&gt;
   &lt;p&gt;The adjunction $(X ⊗ -) ⊣ \mathcal{HOM}(X, -)$ is natural in $X$.&lt;/p&gt;
   &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;We show $\mathcal{HOM}(X ⊗ Y, Z) ≃ \mathcal{HOM}(X, \mathcal{HOM}(Y,Z))$ is natural in $X$, $Y$ and $Z$. Taking $Z^0$ yields the adjunction. Componentwise, we take $\deg f = k$ and find that&lt;/p&gt;
+    &lt;p&gt;We show $\mathcal{HOM}(X ⊗ Y, Z) ≃ \mathcal{HOM}(X, \mathcal{HOM}(Y,Z))$ is natural in $X$, $Y$ and $Z$. Taking $Z^0$ yields the adjunction. Termwisely, we take $\deg f = k$ and find that&lt;/p&gt;
     &lt;p&gt;$$\begin{aligned}
 𝐋𝐇𝐒 ∋ f &amp; = \{∐_p X^p ⊗ Y^{n-p} → Z^{n+k}\}_{n ∈ ℤ}\\[6pt]
 (f_{n,p})&amp; ≅ \{X^p ⊗ Y^{n-p} → Z^{n+k}\}_{p, n ∈ ℤ}\\[6pt]
@@ -781,8 +1988,9 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
       &lt;li&gt;$(K_1 = K_4)$. This is evident.&lt;/li&gt;
       &lt;li&gt;$(K_2 = K_4)$. The quotient $C \to K_4$ maps $S$ to isomorphisms, yielding $K_2 \to K_4$. To establish the converse functor, observe that the collection of homotopies $\{(s,f,g) ∣ s : f ∼ g : X \to Y\}$ is represented by $(\mathrm{Cyl}(1_X), Y)$ via $Σ X ⊕ X ⊕ X \xrightarrow {(s,f,g)} Y$. In this context, we have         &lt;ul&gt;
           &lt;li&gt;$f = [X \xrightarrow {e_2} \mathrm{Cyl}(1_X) \xrightarrow {(s,f,g)} Y]$;&lt;/li&gt;
-          &lt;li&gt;$g = [X \xrightarrow {e_3} \mathrm{Cyl}(1_X) \xrightarrow {(s,f,g)} Y]$. Observe that $e_2 = e_2$ in $K_2$. Thus, whenever $f = g$ in $K_4$, it follows that $f = g$ in $K_2$.&lt;/li&gt;
+          &lt;li&gt;$g = [X \xrightarrow {e_3} \mathrm{Cyl}(1_X) \xrightarrow {(s,f,g)} Y]$.&lt;/li&gt;
         &lt;/ul&gt;
+        &lt;p&gt;Observe that $e_2 = e_2$ in $K_2$. Thus, whenever $f = g$ in $K_4$, it follows that $f = g$ in $K_2$.&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;$(K_3 = K_4)$. Since $K_4$ is additive, the zero morphisms are precisely those which factor through zero objects. This yields $K_3 \to K_4$. Conversely, when $f ∼ g : X \to Y$ in $K_4$, we have $f ∼ g$ in $K_3$ as it factors through the zero object $\mathrm{Cyl}(1_X)$. Therefore, $K_4 = K_3$.&lt;/li&gt;
     &lt;/ol&gt;
@@ -792,410 +2000,77 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
 &lt;p&gt;It is unnecessary to demonstrate the additivity of the localisation $C → K_2$; this is not obvious if one tries to show this directly. Here is a note on &lt;a href=&quot;Additive_Localisation&quot;&gt;additive localisation&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;The exact category $(C, \mathcal{E})$, where $\mathcal{E}$ consists of ses split componentwise, is Frobenius; that is, the contractible complexes are precisely the injectives and projectives. Consequently, $K / 𝐏𝐫𝐨𝐣$ is triangulated, where the desuspension is the syzygy.&lt;/p&gt;
+  &lt;p&gt;The exact category $(C, \mathcal{E})$, where $\mathcal{E}$ consists of ses split termwise, is Frobenius; that is, the contractible complexes are precisely the injectives and projectives. Consequently, $K / 𝐏𝐫𝐨𝐣$ is triangulated, where the desuspension is the syzygy.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;on-rings-and-modules&quot;&gt;On Rings and Modules&lt;/h2&gt;
+&lt;h3 id=&quot;a-module-like-analysis-of-mathjax_protectedjemouikkmathjax_protected&quot;&gt;A Module-like Analysis of $C(R)$&lt;/h3&gt;
 
-&lt;p&gt;We recollect some basic properties of ring and modules.&lt;/p&gt;
+&lt;p&gt;We view a chain complex $X ∈ C(R)$ as graded set for convention. In particular $X = ⨆_{n ∈ ℤ } X^n$ as underlying sets.&lt;/p&gt;
 
-&lt;h3 id=&quot;an-interesting-example-on-transfinite-filtration&quot;&gt;An Interesting Example on Transfinite Filtration&lt;/h3&gt;
-
-&lt;p&gt;This demonstrates the distinctions between finitely generated modules and those $M$ for which $∐ (M, -) ↪ (M, ∐ (-))$ constitutes an isomorphism. An equivalent characterisation is provided via the cofinality of transfinite filtration.&lt;/p&gt;
-
-&lt;p&gt;We begin with an exercise in ring theory.&lt;/p&gt;
-
-&lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;$M$ is finitely generated if and only if,&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;for any (non-empty) set of &lt;strong&gt;&lt;em&gt;proper submodules&lt;/em&gt;&lt;/strong&gt; $\{N_i\}_{i ∈ I}$ such that either $N_i ⊆ N_j$ or $N_i ⊇ N_j$ for any $i, j ∈ I$, the union $⋃ N_∙$ is &lt;strong&gt;&lt;em&gt;never&lt;/em&gt;&lt;/strong&gt; equal to $M$ itself.&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;($→$). We show $a → b$ by showing that $a ∧ (¬ b) → \text{false}$. By $(¬ b)$, there exists an ordered system of proper submodules $N_∙$ whose union is $M$. Let $\{x_i\}_{i=1}^n$ be a generating set of $M$ (by $(a)$). Thus, for each $i$, there exists $x_i ∈ N_{k_i}$. The proper submodule $⋃ _{i=1}^n N_{k_i} = \text{Largest}\{N_{k_i}\}$ yields a contradiction. &lt;br /&gt; &lt;br /&gt; ($←$). We show $b → a$ by showing that $b ∧ (¬ a) → \text{false}$. Consider the collection of proper submodules $N_∙ = \{N ∣ M / N\ \text{ is not f.g.}\}$. The set of proper submodules $N_∙$ is both&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;non-empty by $(¬ a)$, and&lt;/li&gt;
-      &lt;li&gt;contains no maximal elements by construction.&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;Therefore, $N_∙$ contains a maximal inclusion chain ($C_∙$) of proper submodules. $C_∙$ contains no maximal elements, hence $⋃ C_∙ ∉ N_∙$. Equivalently, $M / (⋃ C_∙)$ is f.g., we see there exists a f.g. submodule $L$ such that $L + ⋃ C_∙ = M$; however, $⋃ (L + C_∙) ≠ M$ by $(b)$. This yields a contradiction.&lt;/p&gt;
-  &lt;/div&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;Show the free functor $𝐅𝐫𝐞𝐞 : 𝐒𝐞𝐭𝐬 → 𝐌𝐨𝐝 _R,\quad X ↦ R^{(X)}$ is left adjoint to the forgotful functor $U : 𝐌𝐨𝐝 _R → 𝐒𝐞𝐭𝐬$ sending every module to its under lying sets.&lt;/p&gt;
 &lt;/div&gt;
-
-&lt;p&gt;In the above theorem, $N_∙$ is taken over arbitrary totally-ordered set. For colimit $⋃$, it suffices to consider a cofinal subsystem indexed by an ordinal. Hence,&lt;/p&gt;
-
-&lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;$M$ is f.g., iff any transfinite composition of proper submodules,&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-0 = M_0 ⊊ M_1 ⊊ \cdots ⊊ M_γ ⊊ \cdots,
-\end{equation}$$&lt;/p&gt;
-  &lt;p&gt;satisfy $(⋃ M_∙) ⊊ M$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We &lt;strong&gt;&lt;em&gt;slightly&lt;/em&gt;&lt;/strong&gt; revise such characterisation to the following &lt;em&gt;FAKE finitely generated&lt;/em&gt; cases.&lt;/p&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;(FAKE f.g.). A module $M$ is &lt;em&gt;FAKE finitely generated&lt;/em&gt; if any $ω$-composition of proper submodules,&lt;/p&gt;
+  &lt;p&gt;(Free object). The free object generated by a graded subset $\{S^n\}_{n ∈ ℤ }$ is defined as the chain complex&lt;/p&gt;
   &lt;p&gt;$$\begin{equation}
-0 = M_0 ⊊ M_1 ⊊ \cdots ⊊ M_n ⊊ \cdots \quad (n ∈ ℕ ),
+\cdots \underset{\text{degree} \ n}{\underbrace{R^{(S^n)} ⊕ R^{(S^{n-1})}}} \xrightarrow{\binom {0 \ \ 0}{1 \ \ 0}} \underset{\text{degree} \ {n+1}}{\underbrace{R^{(S^{n+1})} ⊕ R^{(S^{n})}}} → \cdots.
 \end{equation}$$&lt;/p&gt;
-  &lt;p&gt;satisfy $(⋃_{n ∈ ℕ} M_n) ⊊ M$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We show FAKE f.g. $M$’s are precisely those $∐ (M, -) \xrightarrow ∼ (M, ∐ (-))$ in the rest of this subsection. We call such $M$ &lt;em&gt;a compact object in the underlying additive category&lt;/em&gt;, i.e., $(M, -)$ is coproduct preserving&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;compact objects in general additive categories corresponds to $∐$-preserving $(M, -)$;&lt;/li&gt;
-  &lt;li&gt;compact objects in AB5 category (e.g. $𝐌𝐨𝐝_R$) corresponds to $\varinjlim^{fil}$-preserving $(M, -)$ (e.g., f.p. modules).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;Show the subfunctor $∐ (M, -) ↪ (M, ∐ (-))$ for $𝐌𝐨𝐝_R$ or $C(R)$.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;If $M$ is FAKE f.g., then $M$ is compact in the underlying additive category of $𝐌𝐨𝐝_R$.&lt;/p&gt;
+  &lt;p&gt;One has the the free forgotful adjunction from graded sets to chain complexes.&lt;/p&gt;
   &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;We take arbitrary $f$ in&lt;/p&gt;
+    &lt;p&gt;We define the adjunction as a composition&lt;/p&gt;
     &lt;p&gt;$$\begin{equation}
-∐_{n ∈ ℕ} (M,N_n) ↪ (M, ∐_{n ∈ ℕ} N_n) ∋ f = (f_n)_{n ∈ ℕ}.
+𝐆𝐫𝐒𝐞𝐭𝐬 ⇆ 𝐆𝐫𝐌𝐨𝐝_R ⇆ C(R).
 \end{equation}$$&lt;/p&gt;
-    &lt;p&gt;Then $⋂ _{m ≥ n} \ker f_m$ is an ascending chain of submodules of $M$, satisfying&lt;/p&gt;
+    &lt;p&gt;The first adjunction is nothing but a free-forgotful adjunction by degrees. The second adjunction is&lt;/p&gt;
     &lt;p&gt;$$\begin{equation}
-\limsup (\ker f_∙) = ⋃_{n ≥ 0} ⋂ _{m ≥ n} \ker f_m = M.
+(M^\bullet , C^\bullet)_{\mathbf{GrSets}} \simeq((M^\bullet \oplus \Sigma^{-1}M, \binom {0 \ 0}{1 \ 0}), (C^\bullet, d^n))_{C(R)},\quad (f^n) \mapsto (f^n, d_C^{n-1} \circ f^n).
 \end{equation}$$&lt;/p&gt;
-    &lt;p&gt;By FAKE f.g. condition, all but finite $⋂ _{m ≥ n} \ker f_m ⊆ ⋂ _{m ≥ n+1} \ker f_m$ takes $⊊$. Hence, there is $n_0$ such that $⋂ _{m ≥ n_0} \ker f_m = M$. In this case, $f$ is also characterised in $⨁ _{n ≤ n_0}(M, N_n)$.&lt;/p&gt;
+    &lt;p&gt;The verification:&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_0490b6951c796.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;Show the converse statement: when there exists $⋃ M_∙ = M$ for some inclusion sequence&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-0 = M_0 ⊊ M_1 ⊊ \cdots ⊊ M_n ⊊ \cdots \quad (n ∈ ℕ ).
-\end{equation}$$&lt;/p&gt;
-  &lt;p&gt;Show that $∐ (M, -) ≇ (M, ∐ (-))$. &lt;br /&gt; &lt;br /&gt; Hint: Let $π _n : M ↠ M/M_n$ be quotient maps. $(π _n) ∈ (M, ∐ \frac{M}{M_n})$ is well-defined since each support set $S_x := \{n ∣ π _n(x) ≠ 0\}$ is finite. However, one can never find $?$ along&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-? ∈ ∐(M,\frac{M}{M_n}) ↪ (M, ∐ \frac{M}{M_n}) ∋ (π _n).
-\end{equation}$$&lt;/p&gt;
+&lt;p&gt;The argument on projective objects is similar.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;Free objects are projective, and projective objects are precisely direct summand of free objects.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;Note that the forgotful functor $U: C(R) → 𝐒𝐞𝐭𝐬$ preserves epimorphisms. The following lifting problems are the equivalent&lt;/p&gt;
+    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
+        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_e0f3a89237d72.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
+      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
+    &lt;p&gt;Clearly every graded set is projective, the the lifting problem has solutions. &lt;br /&gt; For any projective object $P$, the counit $𝐅𝐫𝐞𝐞 (U(P)) ↠ P$ is an epimorphism which splits. Hence, projective objects are summand of free objects.&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;There exists of $ω$-filtered ordinal, e.g., the first uncountable cardinal and $|ℝ|$ (these two coincides under continuum hypothesis).&lt;/p&gt;
+&lt;p&gt;In fact, it is shown in previous that projective (injective) objects are precisely the split acyclic complexes which is termwise projective (injective).&lt;/p&gt;
 
 &lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;We learn from analysis that $\mathcal{P}(X) = \mathrm{Hom}_{𝐒𝐞𝐭𝐬}(X,𝔽 _2)$ is an $𝔽_2$-algebra ($∅ = 0$ and $∩ = ×$ for convention). Let $X$ be uncountable. Show that&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;The collection $X_ω := \{Y ∣ |Y| ≤ ω \}$ is an ideal of $\mathcal{P}(X)$;&lt;/li&gt;
-    &lt;li&gt;$X_ω$ is not f.g. as a $\mathcal{P}(X)$-module.&lt;/li&gt;
-    &lt;li&gt;$X_ω$ is uncountable, but any proper submodule of $X_ω$ is countable.&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;p&gt;Hence, $X_ω$ is FAKE f.g. but not f.g.. This construction shows that for any cardinal $κ$, there exists examples such that the generating set of some FAKE f.g. modules must be $≥ κ$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;On FAKE f.g. and f.g.. Show that&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;f.g. are FAKE f.g..&lt;/li&gt;
-    &lt;li&gt;for projective modules, f.g. coincides FAKE f.g..&lt;/li&gt;
-    &lt;li&gt;FAKE f.g. are closed under quotients (and summands);&lt;/li&gt;
-    &lt;li&gt;FAKE f.g. are closed under extensions (and finite sums);&lt;/li&gt;
-    &lt;li&gt;For ses $K ↪ X ↠ Y$ where $K$ is small in Y (e.g., radical inclusion), then $X$ is FAKE f.g. if so is $Y$.&lt;/li&gt;
-  &lt;/ol&gt;
+  &lt;p&gt;Show that the morphism category $𝐌𝐨𝐝 _R^ →$ is also a module category. Hint:&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+[→, 𝐌𝐨𝐝 _R] ≃ [ → , [R^{\mathrm{op}}, 𝐀𝐛 ]] ≃ [R^{\mathrm{op}} \underset ? ⊗ → , 𝐀𝐛] ≃ [\binom{R \ R}{0 \ R}^{\mathrm{op}}, 𝐀𝐛].
+\end{equation}$$&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;For left modules, f.g. coincides FAKE f.g. over &lt;a href=&quot;https://en.wikipedia.org/wiki/Perfect_ring&quot;&gt;left perfect rings&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;The finitely presented objects in $C(R)$ is precisely $C(𝐦𝐨𝐝 _R)$.&lt;/p&gt;
   &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;We show any FAKE f.g. module $M$ is f.g..&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;(by 5). the projective cover $P(M)$ is again FAKE f.g.&lt;/li&gt;
-      &lt;li&gt;(by 2). such $P(M)$ must be f.g..&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;By $P(M) ↠ M$, $M$ is f.g..&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Over a left/right perfect ring, there are no need to distinguish between&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;f.g. and FAKE f.g. modules,&lt;/li&gt;
-  &lt;li&gt;projective modules and flat modules,&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;the-real-compact-modules&quot;&gt;The REAL Compact Modules&lt;/h3&gt;
-
-&lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;Say $M$ is compact, provided $(M, - )$ preserves all filtered colimits.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;Compact objects are closed under finite colimits. In particular, f.g. projective modules and &lt;strong&gt;f.p. modules are compact&lt;/strong&gt;.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;By AB5, filtered colimits commutes with finite limits. By pentagon procedure,&lt;/p&gt;
+    &lt;p&gt;For $M ∈ C(R)$ compact, we see that every $M^i$ has to be f.p.. Notice that&lt;/p&gt;
     &lt;p&gt;$$\begin{aligned}
-(\varinjlim {}^{&lt;∞} M_i, \varinjlim{}^{fil}_jN_j) &amp; ≃ \varprojlim {}^{&lt;\infty}(M_i, \varinjlim{}^{fil}_j N_j) ≃ \varprojlim {}^{&lt;\infty} \varinjlim{}^{fil}_j (M_i, N_j)\\[6pt]
-&amp;≃ \varinjlim{}^{fil}_j \varprojlim {}^{&lt;\infty} (M_i, N_j) ≃ \varinjlim{}^{fil}_j (\varinjlim {}^{&lt;\infty} M_i, N_j).
+(M^{k+1}, \varinjlim {}^{fil} X_∙)_R &amp; ≃ (M, Σ ^k( \overline {\varinjlim {}^{fil} X_∙}))_R ≃ (M, \varinjlim {}^{fil} Σ ^k \overline {X_∙})_R\\
+&amp; ≃ \varinjlim {}^{fil}  (M, Σ ^k \overline {X_∙})_R ≃ \varinjlim {}^{fil} (M^{k+1}, X_∙)_R.
 \end{aligned}$$&lt;/p&gt;
-    &lt;p&gt;We see $\varinjlim {}^{&lt;∞} M_i$ preserves $\varinjlim^{fil}$, thus is compact.&lt;/p&gt;
+    &lt;p&gt;A morphism $f : X → \varinjlim ^{fil} C_∙$ identifies a collection of morphisms in $𝐌𝐨𝐝_R ^→$, which is again a module category. Since gluing procedure preserves and reflect isomorphisms, $f$ identifies a morphism in $\varinjlim ^{fil}(X, C_∙)$ via structure map.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;By definition, $f: \text{compact} → \text{induction of small}$ is described by $f : \text{compact} → \text{small}$. We wish $\text{induction of small} = \text{all objects}$.&lt;/p&gt;
-
-&lt;p&gt;Finite sets are exactly compact objects in $𝐒𝐞𝐭𝐬$, conversely, any set is a filtered colimit of its finite subsets (local compactness). It is reasonable for check whether a module is a filtered limit of the compact objects.&lt;/p&gt;
-
-&lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;(Local compactness for modules). Every module $M$ is a filtered colimit of compact modules.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;It suffices to show $M$ is a filtered colimit of f.p. modules. We take the canonical surjection $R^{(M)} ↠ M$, and construct the filtered system as follows.&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;The system is indexed by a finite subset $I \subseteq M$ along with a finite subset of $\mathcal S \subseteq S_I\subseteq R^I$ which generates $\ker [R^I \hookrightarrow R^{(M)} \twoheadrightarrow M]$.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;We denote $\Phi _{(I, \mathcal S)}$ as an element, which stands for a chain complex $⟨\mathcal S⟩ \hookrightarrow R^I \to M$.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;We define the partial order $\Phi_{(I, \mathcal S)} \hookrightarrow \Phi_{(J, \mathcal T)}$.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;The poset is clearly filtered. We show the induced $\alpha : \varinjlim_{\Phi_{(I,\mathcal S)}}R^I\to M$ is an isomorphism.&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;$\alpha$ is surjective, since any $x \in M$ is characterised by $R^{(x)} \to M$;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;$\alpha$ is injective. If $[p] \in \Phi_{(I, \mathcal S)}$ and $[q] \in \Phi _{(J, \mathcal T)}$ has the same image $m\in M$ , then we take $\Phi _{(I \cup J \cup \{m\}, \mathcal S \cup \mathcal T \cup \{p-e_m, q-e_m\})}$ , an upper bound of $\Phi_{ (I, \mathcal S)}$ and $\Phi _{(J, \mathcal T)}$ where $[p]$ and $[q]$ has the same image.&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We show that f.p. modules are precisely compact modules. Indeed we have the following equivalent characterisation.&lt;/p&gt;
-
-&lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;In general, $M$ is finitely presented &lt;strong&gt;iff&lt;/strong&gt; the following equivalent definitions holds.&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;
-      &lt;p&gt;There is an exact sequence $R^m \to R^n \to M \to 0$,&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;p&gt;&lt;strong&gt;$M \otimes-$&lt;/strong&gt; commutes with $\prod$,&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;p&gt;$M \otimes R^{\Lambda} \simeq M^\Lambda$ for arbitrary index set $\Lambda$.&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;p&gt;$(M, -)$ preserves filtered colimits.&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;($1 \to 4$). We write $M = \mathrm{cok}(\varphi)$. Now&lt;/p&gt;
-    &lt;p&gt;$$
-\begin{align*}
-\varinjlim (\mathrm{cok}(\varphi), X_\bullet)&amp;\simeq\varinjlim\ker(\varphi, X_\bullet)\quad (\text{definition of cok})\\
-&amp;\simeq\ker \varinjlim(\varphi, X_\bullet)\quad (\text{AB5 for Ab})\\
-&amp;\simeq\ker (\varphi, \varinjlim X_\bullet)\quad (\text{holds for free modules})\\
-&amp;\simeq (\mathrm{cok}\varphi, \varinjlim X_\bullet)\quad (\text{definition of $\mathrm{cok}$}).
-\end{align*}
-$$&lt;/p&gt;
-    &lt;p&gt;($4 \to 1$). $M$ is a filtered colimit of f.p. modules, i.e., $M = \varinjlim M_\bullet$. The isomorphism $1_M \in (M,M) \simeq \varinjlim (M, M_\bullet)$ shows that $1_M$ factors through some f.p. modules. Hence $M$ is f.p..&lt;/p&gt;
-    &lt;p&gt;($1 \to 2$). We write $M = \mathrm{cok}(\varphi)$. Now&lt;/p&gt;
-    &lt;p&gt;$$
-\begin{align*}
-\prod ((\mathrm{cok}\varphi) \otimes X_\bullet) &amp;\simeq\prod \mathrm{cok}(\varphi \otimes X_\bullet)\quad (\text{$\otimes$ is left adj})\\
-&amp;\simeq\mathrm{cok}\prod (\varphi \otimes X_\bullet)\quad (\text{AB4* for Ab})\\
-&amp;\simeq\mathrm{cok} (\varphi \otimes \prod X_\bullet)\quad (\text{holds for free modules})\\
-&amp;\simeq (\mathrm{cok} \varphi) \otimes \prod X_\bullet\quad (\text{$\otimes$ is left adj}).
-\end{align*}
-$$&lt;/p&gt;
-    &lt;p&gt;($2 \to 3$). Clear.&lt;/p&gt;
-    &lt;p&gt;($3 \to 1$).  We track $1_M \in M^M \simeq M \otimes R^M$, and see that $M$ is f.g.. We take ses $0 \to K \to R^n \to M \to 0$ and obtain the commutative diagram of exact sequences&lt;/p&gt;
-    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
-        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_01882327a1076.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
-      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
-    &lt;p&gt;Here $K^K$ is a syzygy of the upper sequence. Hence, $K \otimes R^K \to K^K$ is surjective. We see $K$ is f.g. and thus $M$ is f.p..&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Note that&lt;/p&gt;
-
-&lt;p&gt;$$\begin{equation}
-\text{compact (紧对象)} ⊆ \text{f.g.} ⊆ \text{FAKE f.g.} \quad  \textcolor{gray}{= \ compact \ (紧模)}.
-\end{equation}$$&lt;/p&gt;
-
-&lt;h3 id=&quot;coherency&quot;&gt;Coherency&lt;/h3&gt;
-
-&lt;p&gt;Inducting from f.g. and f.p., it is natural to come up with the ideal of projection length. We show the following &lt;em&gt;atomatic&lt;/em&gt; propositions over the ses&lt;/p&gt;
-
-&lt;p&gt;$$\begin{equation}
-0 → K → X → Y → 0.
-\end{equation}$$&lt;/p&gt;
-
-&lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;When $K$ and $Y$ are both f.g. (resp. f.p.), then so is $X$.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;By horseshoe lemma.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;When $X$ is f.g., then $Y$ is f.g..&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;Trivial.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;When $X$ is f.p. and $K$ is f.g., then $Y$ is f.p..&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;We prove without set-theoretic methods. Taking projective resolutions of $K$ and $X$ yields the chain map $ϕ : P_∙ (K) → P_∙ (X)$. We shall construct $P_∙(Y)$ by mapping cone.&lt;/p&gt;
-    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
-        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_be3fb110abb81.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
-      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
-    &lt;p&gt;Now $Y ≃ \operatorname{cok}(ϕ ) ≃ \operatorname{cok}[H_0(P_∙ (K)) \xrightarrow{H_0(P_∙ (ϕ ))} H_0(P_∙ (X))]$. This is exactly $\operatorname{cok}(ϕ _0, d)$ by long exact sequence.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;When $X$ is f.g., $Y$ is f.p., then $K$ is f.g.. Hint: by mapping coCone.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;These shows that&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;if $X$ f.g., then $Y$ f.g.;&lt;/li&gt;
-  &lt;li&gt;if $K$ f.g., $Y$ f.g., then $X$ f.g.;&lt;/li&gt;
-  &lt;li&gt;if $X$ f.p., $Y$ f.g., then $K$ f.g.;&lt;/li&gt;
-  &lt;li&gt;if $K$ f.g., $X$ f.p., then $Y$ f.p.;&lt;/li&gt;
-  &lt;li&gt;if $K$ f.p., $Y$ f.p., then $X$ f.p.;&lt;/li&gt;
-  &lt;li&gt;induction …&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In particular, $𝐦𝐨𝐝_R$ is not closed under kernel in general. To fix this, we may require f.p. is automatically  $3$-term f.p. (and thus $∞$-f.p.). This comes with coherency.&lt;/p&gt;
-
-&lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;$R$ is (right) &lt;strong&gt;coherent&lt;/strong&gt; provided (right) flat $R$-modules are closed under arbitrary products.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;TFAE:&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;$\mathrm{flat}(\mathrm{Mod}_R)$ is closed under $\prod$,&lt;/li&gt;
-    &lt;li&gt;$\prod _{\lambda \in \Lambda}R_R=:R^\Lambda$ is flat,&lt;/li&gt;
-    &lt;li&gt;every f.g. submodule (left ideal) of ${}_RR$ is f.p.,&lt;/li&gt;
-    &lt;li&gt;the category consists of f.p. modules $\mathrm{mod}_R$ is Abelian,&lt;/li&gt;
-    &lt;li&gt;f.p. modules are $\infty$ -presented.&lt;/li&gt;
-  &lt;/ol&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;We show ($1 \to 2 \to 3 \to 1$) with a set-theoritic analysis; and $(3\to 4 \to 5 \to 4)$ with a homological analysis. &lt;br /&gt; &lt;br /&gt; ($1 \to 2$) is clear. &lt;br /&gt; &lt;br /&gt; ($2 \to 3$). For any f.g. left ideal $I$ and index set, we show $I^\Lambda\simeq R ^\Lambda\otimes I$. The flatness shows injection, and the f.g. shows surjection. &lt;br /&gt; &lt;br /&gt; ($3 \to 1$). We show f.g. $\iota: _RI\hookrightarrow R$ is preserved by $R^\Lambda$ via Baer’s criterion. Since f.p. = f.g. (by assumption), $\iota \otimes -$ commutes with $\prod$. &lt;br /&gt; &lt;br /&gt; ($3\to 4$). Note that f.p. modules are closed under extensions and cokernels. For ses $0 \to K \to X \to Y \to 0$ with $X$ and $Y$ f.p., we have $K$ f.g. in general. By horseshoe lemma, we obtain ses $0 \to \Omega_1 (K) \to \Omega_1 (X) \to \Omega_1 (Y) \to 0$ for $\Omega _1(X)$ and $\Omega_1 (Y)$ f.g.; by 3., $\Omega _1 (Y)$ and $\Omega _1(X)$ are f.p., hence $\Omega _1(K)$ is f.g.. This shows $K$ f.p.. &lt;br /&gt; &lt;br /&gt; ($4 \to5$). By definition, we can choose the first syzygy of any f.p. module as some f.p. modules. &lt;br /&gt; &lt;br /&gt; ($5 \to 3$). When $I \hookrightarrow R$ is f.g. ideal, $R/I$ is f.p., thus is $\infty$-presentable by assumption. Now $I$ is also $\infty$-presentable.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;Show that the category of f.g. free modules $𝐟𝐫𝐞𝐞 _R$ has weak kernel, iff $R$ is coherency.&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;$A \xrightarrow i B$ is a weak kernel of $B \xrightarrow p C$, provided $\ker \mathrm{Hom}(-, p) = \operatorname{im} \mathrm{Hom}(-, i)$.&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;p&gt;A right coherent ring shows&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;the interchanging of  $\prod$  and flat objects;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;the  $\infty$ -presentability of f.p. objects.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;character-module&quot;&gt;Character Module&lt;/h3&gt;
-
-&lt;p&gt;The character module transfers and reflects from injective modules to flat modules; the dual procedure applies for Noetherian rings.&lt;/p&gt;
-
-&lt;p&gt;We commence with the contravariant functor $(-)^+ := (-, \mathbb Q / \mathbb Z)_{\mathbb Z}$, which maps $\mathrm{Mod}_R$ to $\mathrm{Mod}_{R^{\mathrm{op}}}$, and is&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;faithful&lt;/strong&gt; (as $\mathbb Q / \mathbb Z$ is a cogenerator) and&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;exact&lt;/strong&gt; (as $\mathbb Q / \mathbb Z$ is injective).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Consequently, &lt;strong&gt;it preserves and reflects exactness&lt;/strong&gt;. In particular, $((-)^+)^{\mathrm{op}}$ preserves and reflects monomorphisms and epimorphisms.&lt;/p&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;We demonstrate that f.p. flat modules are projective via $(-)^+$. If $F$ is flat, then $(F ⊗ -)^+ ≃ F ⊗ (-)^+$ is exact. Observe that&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;$? ⊗ (-)^+ → (?, -)^+$ is a natural for right exact functors, which is an isomorphism for $?$ f.g. free, and thus for $?$ f.p. (by right exactness).&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;p&gt;Therefore, $(F,-)^+ ≃ F ⊗ (-)^+$ is exact. Since $(-)^+$ reflects exactness, it follows that $F$ is projective.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;Demonstrate that $F$ is flat &lt;strong&gt;if and only if&lt;/strong&gt; $F^+$ is injective. In general:&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;$f.d. Y = i.d. Y^+$. The flat (respectively, injective) dimension is considered over $𝐌𝐨𝐝_R$ (respectively, ${}_R𝐌𝐨𝐝$).&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;Let $P(X)$ be a projective resolution of $X$. Then $(Y \otimes P^\bullet (X))^+ \simeq (P^\bullet (X), Y^+)$. Taking $H^\bullet$ groups yields $(\mathrm{Tor}_k(Y,X))^+ \simeq \mathrm{Ext}^k (X,Y^+)$. Note that $\mathrm{Tor}_d(Y,-)^+$ vanishes if and only if $\mathrm{Ext}^k(-,Y^+)$ does.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;One may enquire whether $i.d. F \overset ? = f.d. F^+$.&lt;/p&gt;
-
-&lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;Show the isomorphism $\mathrm{Tor}_k (M, N^+) ≃ (\mathrm{Ext}^k (M,N))^+$ for all $N$ and f.p. $M$.&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Hint: recall that f.p. modules admit resolutions (finite or infinite) consisting of f.g. projective modules.&lt;/li&gt;
-    &lt;li&gt;The difficulty arises with $(\mathrm{Ext}^k (\varinjlim ^{fil }M_∙ ,N))^+ ≇ \varinjlim^{fil}(\mathrm{Ext}^k (M_∙,N))^+$ in proving $i.d. F = f.d. F^+$. In fact, coherency is insufficient to establish such an isomorphism.&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;When $R$ is right coherent, we have $i.d. M_R ≥ f.d. {}_R(M^+)$.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;We show that $M^+$ is flat when $M$ is injective.&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Recall that $M^+$ is flat if and only if $M^+ ⊗ i$ is injective for any $i : I ↪ R$, the inclusion of an ideal. By properties of the tensor product, it suffices to verify the case when $I$ is f.g.. By coherency, $I$ is f.p., hence $M^+ ⊗ I ≃ (I, M)^+$. Thus, $M^+ ⊗ i$ is injective if and only if $(i,M)^+$ is injective, which holds if and only if $(i, M)$ is surjective.&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;Suppose $θ$ is an injective resolution of $M$ of length $d$. Then $θ ^+$ is a flat resolution of $M^+$ of length $d$. This shows $f.d. M^+ ≤ i.d. M$.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;We observe that Baer’s criterion for injective modules is verified over &lt;em&gt;all ideals&lt;/em&gt;; the criterion for flat modules is verified over &lt;em&gt;all f.g. ideals&lt;/em&gt;. Hence,&lt;/p&gt;
-
-&lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;$f.d. {}_R(M^+) = i.d. (M_R)$ holds for right Noetherian rings.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;In general, one can show that $f.d. M ≤ f.d. M^{++}$. Hence,
-$$\begin{equation}
-f.d. {}_RM = i.d. (M^+)_R ≥ f.d. {}_R(M^{++}) ≥ f.d. {}_R M.
-\end{equation}$$
-over right coherent rings.&lt;/p&gt;
-
-&lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;Show that&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;evaluation $e_M: M → M^{++}, m ↦ [f ↦ f(m)]$ is injective.&lt;/li&gt;
-    &lt;li&gt;Moreover, $M^+ \xrightarrow {e_{M^+}} M^{+++} \xrightarrow {(e_{M})^+}M^+$ is identical. Hence $M^+$ is a summand of $M^{+++}$.&lt;/li&gt;
-    &lt;li&gt;In this case, $e_M ⊗ 1_X$ is injective for arbitrary $X$. Hint: equiv. to verify $(e_M ⊗ 1_X)^+ ≅ (1_X, (e_M)^+)$ is surjection, which is split epi!&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;$f.d. M ≤ f.d. M^{++}$.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;WLOG assume $f.d. M^{++} = k$. For any flat resolution of $N$, we take homological truncation&lt;/p&gt;
-    &lt;p&gt;$$\begin{equation}
-T_k^∙ := (0 → Ω _{k+1}(N) \overset ι → F_{k} (N) → \cdots → F_0(N) → N → 0).
-\end{equation}$$&lt;/p&gt;
-    &lt;p&gt;Since $\mathrm{Tor}_{k+1} (M^{++}, N) = H_{k+1} (M ^{++} ⊗ T_k ^∙) = 0$, $M^{++} ⊗ ι$ is injective. The diagram&lt;/p&gt;
-    &lt;center&gt; &lt;br /&gt; &lt;div class=&quot;tikz-diagram&quot;&gt;
-        &lt;embed src=&quot;/website/svg/25SumLec0/diagram_a4ea18c71f8bb.svg&quot; type=&quot;image/svg+xml&quot; style=&quot;display: block; width: 50%; height: 50%;&quot; /&gt;
-      &lt;/div&gt; &lt;br /&gt; &lt;/center&gt;
-    &lt;p&gt;shows that $M ⊗ ι$ is again injective. Equivalently, $\mathrm{Tor}_{k+1}(M, N) = 0$. This shows that if $\mathrm{Tor}_∙ (M^{++}, -)$ vanishes at $(k, N)$, then so is $\mathrm{Tor}_{k+1}(M, N)$. Hence, $f.d. M ≤ f.d. M^{++}$.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;Hence, a compact object need not be f.g..&lt;/p&gt;
 </description>
           <pubDate>2025-07-20T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/website/posts/25SumLec0</link>
@@ -1209,7 +2084,6 @@ T_k^∙ := (0 → Ω _{k+1}(N) \overset ι → F_{k} (N) → \cdots → F_0(N) �
           <description>&lt;p&gt;&lt;a href=&quot;25SumLec0&quot;&gt;Lecture0&lt;/a&gt;. The preliminaries (complex resolutions, ring theories, etc.).&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;25SumLec1&quot;&gt;Lecture1&lt;/a&gt;. Orthogonality on morphisms, cotorsion theory, and Eklof-Trlifaj’s criterion.&lt;/p&gt;
-
 </description>
           <pubDate>2025-07-20T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/website/posts/20250723Talk</link>
@@ -2433,7 +3307,7 @@ K^{+, b}(\mathcal{I}) \simeq D^b(\mathcal{A}),\quad K^+(\mathcal{I}) \simeq D^+(
     
       
         <item>
-          <title>A Note on Brown Representability and Resolutions</title>
+          <title>A Note on Brown Representability</title>
           <description>&lt;h2 id=&quot;note-on-brown-representability-and-dg-categories&quot;&gt;Note on Brown Representability and DG-categories&lt;/h2&gt;
 
 &lt;h3 id=&quot;basic-facts-of-triangulated-categories&quot;&gt;Basic Facts of Triangulated Categories&lt;/h3&gt;
@@ -2866,8 +3740,6 @@ where $\mathcal{G}$ is the set of compact generators, $\mathcal{K}$ the class of
 &lt;div class=&quot;corollary&quot;&gt;
   &lt;p&gt;Let $\mathcal{T}$ be compactly generated (hence it has arbitrary products). Any homological functor preserving arbitrary products is corepresentable, e.g., of the form $(X, -)$.&lt;/p&gt;
 &lt;/div&gt;
-
-&lt;p&gt;The notion of symmetric generator.&lt;/p&gt;
 
 &lt;h4 id=&quot;on-adjoint-functors&quot;&gt;On Adjoint Functors&lt;/h4&gt;
 
