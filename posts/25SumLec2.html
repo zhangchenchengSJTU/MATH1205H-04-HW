@@ -101,7 +101,12 @@ MathJax = {
       <li><a href="#mathjax_protectedjchdx3thy30sienfe2fjfv7in4ipjamathjax_protected" id="markdown-toc-mathjax_protectedjchdx3thy30sienfe2fjfv7in4ipjamathjax_protected">$(C_{ac}, C_{ac}^⟂)$</a></li>
     </ul>
   </li>
-  <li><a href="#a-general-construction" id="markdown-toc-a-general-construction">A General Construction</a></li>
+  <li><a href="#cotorsion-triple" id="markdown-toc-cotorsion-triple">Cotorsion Triple</a>    <ul>
+      <li><a href="#relative-dg" id="markdown-toc-relative-dg">Relative DG</a></li>
+      <li><a href="#c-h-cotorsion-pair" id="markdown-toc-c-h-cotorsion-pair">C. H. Cotorsion Pair</a></li>
+      <li><a href="#c-h-cotorsion-triple" id="markdown-toc-c-h-cotorsion-triple">C. H. Cotorsion Triple</a></li>
+    </ul>
+  </li>
   <li><a href="#a-note-on-projectives" id="markdown-toc-a-note-on-projectives">A Note on Projectives</a>    <ul>
       <li><a href="#the-definitions" id="markdown-toc-the-definitions">The Definitions</a></li>
       <li><a href="#resolutions-mathjax_protectedjetelsjwnzcp8j2qqcdkkjwnzcjksqmathjax_protected" id="markdown-toc-resolutions-mathjax_protectedjetelsjwnzcp8j2qqcdkkjwnzcjksqmathjax_protected">Resolutions ($K^-(𝐩𝐫𝐨𝐣)$)</a></li>
@@ -307,9 +312,22 @@ E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots
   </div>
 </div>
 
-<h2 id="a-general-construction">A General Construction</h2>
+<p>One can similarly show that the DG-construction preserves completeness. Moreover, the construction preserves and reflects the hereditary cotorsion pairs (triples).</p>
 
-<p>We are curious about the cotorsion triple $(^⟂ (\mathcal{S}^⟂), \mathcal{S}^⟂ , (\mathcal{S}^⟂ )^⟂)$, where $\mathcal{S}^⟂ = C_{ac}$. By <em>a note on projectives</em> in the end, we know that $^⟂ (\mathcal{S}^⟂)$ is the collection of DG-projective complexes with another two equivalent definitions</p>
+<h2 id="cotorsion-triple">Cotorsion Triple</h2>
+
+<p>We are curious about the cotorsion triple $(^⟂ (\mathcal{S}^⟂), \mathcal{S}^⟂ , (\mathcal{S}^⟂ )^⟂)$, where $\mathcal{S}^⟂ = C_{ac}$. In fact, there are much more examples</p>
+
+<ul>
+  <li>$(𝐏𝐫𝐨𝐣 , \mathcal{A}, 𝐈𝐧𝐣)$, the most elementary one. It is complete and hereditary.</li>
+  <li>$(\mathcal{G}\mathcal{P}, \mathcal{W}, \mathcal{G}\mathcal{P})$, aka the Gorenstein cotorsion triple, where $\mathcal{W} = \{M ∣ p.d. < ∞\}$. The triple is complete and hereditary under some good conditions (e.g., $R$ is Iwanaga-Gorenstein).</li>
+  <li>$(\mathcal{D}\mathcal{P}, \mathcal{W}, \mathcal{D}\mathcal{I})$, aka the 丁 cotorsion triple, where $\mathcal{W} = \{M ∣ f.d. < ∞\}$. The triple is complete and hereditary over 丁-陈 ring.</li>
+  <li>…</li>
+</ul>
+
+<h3 id="relative-dg">Relative DG</h3>
+
+<p>By <em>a note on projectives</em> in the end, we know that $^⟂ (\mathcal{S}^⟂)$ is the collection of DG-projective complexes with another two equivalent definitions</p>
 
 <ol>
   <li>The complex lifts surjective quasi-isomorphisms;</li>
@@ -317,19 +335,140 @@ E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots
 </ol>
 
 <div class="problem">
-  <p>Give equivalent definition of $(\mathcal{S}^⟂ )^⟂$, the DG injective complexes.</p>
+  <p>Give equivalent definition of $(\mathcal{S}^⟂ )^⟂$, (called the DG-injective complexes).</p>
 </div>
 
-<p>We focus on a particular class of complexes.</p>
+<p>J. Gillespie <a href="https://www.jstor.org/stable/3845035">introduce</a> introduce a procedure which construct cotorsion pairs in $C(R)$ from a cotorsion pair in $𝐌𝐨𝐝 _R$.</p>
 
 <div class="definition">
-  <p>(Perfect). Say $P$ is a perfect complex, provided it is f.g. projective with finite terms.</p>
+  <p>Let $(\mathcal{C}, \mathcal{F})$ be a cotorsion pair over an Abelian category.</p>
+  <ol>
+    <li>($\widetilde {\mathcal{C}}$). $\mathcal{C}$ complexes are those acyclic with boundaries in $\mathcal{C}$;</li>
+    <li>($\text{DG-}\widetilde {\mathcal{F}}$). DG-$\mathcal{C}$ complexes consist of $X ∈ C(\mathcal{C})$ such that $\mathcal{HOM}(X, F)$ is acyclic for all $\mathcal{F}$ complexes.</li>
+  </ol>
 </div>
 
-<p>The terminology is more used in derived categories.</p>
+<p>Notice that the cotorsion pair $(𝐏𝐫𝐨𝐣 , \mathcal{A})$ creates two cotorsion theories:</p>
+
+<ul>
+  <li>$(\widetilde {𝐏𝐫𝐨𝐣}, \text{DG-}\widetilde {\mathcal{A}})$, which is $(𝐏𝐫𝐨𝐣 (C(\mathcal{A})), \mathcal{A})$, and</li>
+  <li>$(\text{DG-}\widetilde {𝐏𝐫𝐨𝐣}, \widetilde {\mathcal{A}})$, which is $({}^⟂ C_{ac}, C_{ac})$.</li>
+</ul>
+
+<div class="problem">
+  <p>Show that the $\mathcal{F}$-complexes are precisely right othogonal to any of the following classes:</p>
+  <ol>
+    <li>all stalk complexes $\{Σ ^d (\underline C) ∣ C ∈ \mathcal{C}, d ∈ ℤ\}$,</li>
+    <li>all bounded complexes taking values in $\mathcal{C}$,</li>
+    <li>all bounded below complexes taking values in $\mathcal{C}$,</li>
+    <li>all DG-$\mathcal{C}$ complexes ($\text{DG-}\widetilde {C}$).</li>
+  </ol>
+  <p>Moreover, show that $(\text{DG-}\widetilde {C}, \widetilde {\mathcal{F}})$ is a cotorsion pair. <br /> Hint: the above generates the same cotorsion classes ($(\text{DG-}\widetilde {C})^⟂$). By 4., and $\underline {(-)} ⊣ Z^0 (-)$, we see $X ∈ \text{DG-}\widetilde {C}$ has cycles in $\mathcal{F}$. Deriving $Z^k (-)$, $X$ is acyclic. Clearly $(\text{DG-}\widetilde {C})^⟂ = \widetilde {\mathcal{F}}$. Conversely, ${}^⟂(\widetilde {\mathcal{F}})$ consists of complexes lifting epimorphisms with kernel in $\widetilde {\mathcal{F}}$. The analysis is similar to that in the note below.</p>
+</div>
+
+<h3 id="c-h-cotorsion-pair">C. H. Cotorsion Pair</h3>
+
+<div class="definition">
+  <p>(Hereditary). Say a cotorsion pair $(\mathcal{C},\mathcal{F})$ is hereditary, provided</p>
+  <ol>
+    <li>$\mathcal{C}$ is a <strong>resolving</strong> subcategory, i.e., contains projectives, closed under extensions, and <strong>closed under kernel of epimorphisms</strong>, and</li>
+    <li>$\mathcal{F}$ is <strong>coresolving</strong> subcategory, i.e., contains injectives, closed under cokernels of monomorphisms, and <strong>closed under cokernel of monomorphisms</strong>.</li>
+  </ol>
+</div>
+
+<p>Let $P$ be any property of cotorsion pair. Say the cotorsion triple $(\mathcal{A},\mathcal{B},\mathcal{C})$ is $P$, provided $(\mathcal{A}, \mathcal{B})$ is $P$ and $(\mathcal{B},\mathcal{C})$ is $P$.</p>
+
+<div class="problem">
+  <p>Show that $(𝐏𝐫𝐨𝐣 , \mathcal{A}, 𝐈𝐧𝐣)$ is complete and hereditary.</p>
+  <ul>
+    <li>Although the terminology <strong>hereditary</strong> originates from the vanishing of $\mathrm{Ext}^2$; it has nothing to do with the global dimension of $\mathcal{A}$.</li>
+  </ul>
+</div>
+
+<p>There is a $1$-sided criterion for a complete cotorsion pair to be hereditary.</p>
+
+<div class="lemma">
+  <p>Let $(\mathcal{C}, \mathcal{F})$ be a complete cotorsion pair. Then $\mathcal{C}$ is resolving iff $\mathcal{F}$ is coresolving.</p>
+  <div class="proof">
+    <p>We show → only. Let $0 → F_1 → F_2 → X → 0$ be ses. We show that any ses $0 → X → A → C → 0$ splits. We complete the Noether square from the the compostion $A^C ↠ A ↠ C$. $C' ∈ \mathcal{C}$ by assumption. Then we denote $δ ∈ \mathrm{Ext}^1(C,C')$ and $q_∗ δ ∈ \mathrm{Ext}^1(C,X)$.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec2/diagram_4964128685466.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We notice that $(C', F_1) → (C', X) → \mathrm{Ext}^1(C', F_1) = 0$. Hence $q$ we can write $q : [X' \xrightarrow a F_2 \xrightarrow b X]$. Clearly $a_∗ δ ∈ \mathrm{Ext}^1 (C, F_2)= 0$. We obtain $q_∗ δ = 0$.</p>
+  </div>
+</div>
+
+<div class="proposition">
+  <p>Recall that $\mathrm{Hom}_{\mathcal{A}/ω }(\mathcal{C}, \mathcal{F}) = 0$. For hereditary cases,</p>
+  <p>$$\begin{equation}
+\ker \mathrm{Hom}_{\mathcal{A}/ω }(\mathcal{C}, - ) = \mathcal{F}, \quad \ker \mathrm{Hom}_{\mathcal{A}/ω }(-, \mathcal{F}) = \mathcal{C}.
+\end{equation}$$</p>
+  <div class="proof">
+    <p>We show $⊆$ part of the second identity only. Suppose that any $X → F$ factors through $ω$. We consider the induced dashed ses</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec2/diagram_35c3e6599eb0a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>$Q ∈ \mathcal{F}$ as $(\mathcal{C},\mathcal{F})$ is hereditary. By assumption, $q$ factors through $ω$, thus $q$ factors through $p$. Now $X ∈ 𝐒𝐦𝐝 (X^C) ⊆ \mathcal{C}$.</p>
+  </div>
+</div>
+
+<p>Under some good conditions, $(\mathcal{C} , \mathcal{F})$ is a torsion theory in $\mathcal{A} / ω$.</p>
+
+<h3 id="c-h-cotorsion-triple">C. H. Cotorsion Triple</h3>
 
 <div class="theorem">
-  <p>(The triple). $\color{red}{\text{under construction...}}$. The write has trouble in showing the $(\mathcal{S}^⟂)$ is a Kaplansky class for arbitrary subset $\mathcal{S} ⊆ \mathrm{Per}(C(R))$.</p>
+  <p>Suppose that $(\mathcal{A}, \mathcal{B}, \mathcal{C})$ is a complete cotorsion triple. Then,</p>
+  <ol>
+    <li>it is hereditary iff $\mathcal{B}$ is closed thick subcategory of $\mathcal{A}$, i.e., closed under taking summands, two-out-three property of ses (extensions, kernel of epimorphisms, and cokernel of monomorphisms);</li>
+    <li>$\mathcal{A} ∩ \mathcal{B} = 𝐏𝐫𝐨𝐣$, and $\mathcal{B} ∩ \mathcal{C} = 𝐈𝐧𝐣$.</li>
+  </ol>
+  <p>We mentioned that, there is no need to assume $\mathcal{A}$ to have enough $𝐏𝐫𝐨𝐣$ or $𝐈𝐧𝐣$.</p>
+  <div class="proof">
+    <p>$1$ is clear by one-sided definition of complete hereditary cotorsion pair.<br /> For $2$., we show any $T ∈ \mathcal{A} ∩ \mathcal{B}$ is projective. Any ses $0 → M → N → T → 0$ admits a diagram</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec2/diagram_1e6ccaf78e933.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Since $\mathcal{B}$ is thick, $E ∈ \mathrm{coCone}(\mathcal{B},\mathcal{B}) = \mathcal{B}$. Since $\mathrm{Ext}^1(T,E) = 0$, pushing out $q$ yields the original split ses.</p>
+  </div>
+</div>
+
+<p>There are some connections between $\mathcal{A}$ and $\mathcal{C}$. We commence with the definition of left approximations, or preenvelopes.</p>
+
+<div class="definition">
+  <p>(Left approximation = preenvelope). Let $\mathcal{E}$ be a class (closed under isomorphisms). For any $E ∈ \mathcal{E}$ and arbitrary $X$, a morphism $φ : X → E$ is called a <strong>left $\mathcal{E}$-approximation</strong>, or an <strong>$\mathcal{E}$-preenvelope</strong>, provided it the following equivalent conditions:</p>
+  <ol>
+    <li>any $φ' : X → E'$ extends along $φ$,</li>
+    <li>the natural transformation $φ ^∗ : (E, -)_\mathcal{E} ↠ (X, (-)|_{\mathcal{E}})_\mathcal{A}$ is a projective precover.</li>
+  </ol>
+</div>
+
+<div class="problem">
+  <p>Show that for complete cotorsion pair $(\mathcal{C}, \mathcal{F})$, any $X$ admits</p>
+  <ul>
+    <li>a left $\mathcal{F}$-approximation ($X → X_F \ \color{grey}{⇢ X_C}$), and</li>
+    <li>a right $\mathcal{C}$-approximation (${\color{grey}{X^F ⇢}} \ X^C → X$).</li>
+  </ul>
+  <p>Such approximations are <strong><em>special</em></strong> due to their (co)kernels. Moreover, show that</p>
+  <ul>
+    <li>any left $\mathcal{F}$-approximation $φ : M → F$ is a <em>summand</em> of $i _F : M ↪ M_F$,</li>
+    <li>any right $\mathcal{C}$-approximation $ψ : C → N$ is a <em>summand</em> of $p_C : N^C ↠ N$.</li>
+  </ul>
+</div>
+
+<p>Now we characterise $\mathcal{A}$ with the lifting property of left $\mathcal{C}$-approximations, and vise versa.</p>
+
+<div class="proposition">
+  <p>Let $(\mathcal{A}, \mathcal{B}, \mathcal{C})$ be a complete hereditary cotorsion triple. Then $X ∈ \mathcal{A}$ <strong>iff</strong></p>
+  <ul>
+    <li>for any monic left $\mathcal{C}$ approximation $φ : M ↪ C$, any morphism $f : X → \operatorname{cok}(φ)$ lifts along $C ↠ \operatorname{cok}(φ)$.</li>
+  </ul>
+  <div class="proof">
+    <p>(→). Consider the commutative diagram of ses</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec2/diagram_a5228c25d8e53.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Since $X ∈ \mathcal{A}$, the morphism $X → \operatorname{cok}(i) → M_B$ factors through some $P ∈ \mathcal{A} ∩ \mathcal{B}$. The lifting property yields $P → M_C$. A pullback diagram yields $X → C$. <br /> Conversely, any such $X$ satisfies $(X, \mathcal{B}) = 0$ in $\frac{\text{Full Category}}{\mathcal{A} ∩ \mathcal{B}}$. Hence $X ∈ \mathcal{A}$.</p>
+  </div>
 </div>
 
 <h2 id="a-note-on-projectives">A Note on Projectives</h2>
@@ -455,7 +594,7 @@ E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots
 & ↔ ∐ H^0(f_i) \quad \text{is surj.}\\[6pt]
 & ↔ \{H^0(f_i)\}_{i ∈ I} \quad \text{are surj.}\\[6pt]
 & ↔ \{(U, H^0(f_i))_\mathcal{A}\}_{i ∈ I} \quad \text{are surj.}\\[6pt]
-& ↔ ∐ (U, H^0(f_i))_\mathcal{A} = ∐ (\underline U, f_i)_{K(\mathcal{A})} \quad \text{is surj.}.
+& ↔ ∐ (U, H^0(f_i))_\mathcal{A} ≃ ∐ (\underline U, f_i)_{K(\mathcal{A})} \quad \text{is surj.}.
 \end{aligned}$$</p>
     <p>(PG2). $\mathrm{Loc}(\underline U) = \mathrm{Loc}(\underline U)$ is clear.</p>
   </div>

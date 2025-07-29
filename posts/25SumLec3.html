@@ -94,7 +94,7 @@ MathJax = {
       <li><a href="#the-projective-cover" id="markdown-toc-the-projective-cover">The Projective Cover</a></li>
       <li><a href="#functorial-approach" id="markdown-toc-functorial-approach">Functorial Approach</a></li>
       <li><a href="#a-tautological-comparison" id="markdown-toc-a-tautological-comparison">A Tautological Comparison</a></li>
-      <li><a href="#lack-of-existence-covering-flat-objects" id="markdown-toc-lack-of-existence-covering-flat-objects">Lack of Existence (Covering Flat Objects)</a></li>
+      <li><a href="#mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-cover-of-flat-objects" id="markdown-toc-mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-cover-of-flat-objects">$𝐏𝐫𝐨𝐣$-cover of Flat Objects</a></li>
       <li><a href="#torsion-theory" id="markdown-toc-torsion-theory">Torsion Theory</a></li>
       <li><a href="#envelopes" id="markdown-toc-envelopes">Envelopes</a></li>
     </ul>
@@ -111,7 +111,7 @@ MathJax = {
 <div class="abstract">
   <h5 id="abstract">Abstract</h5>
   <div>
-    <p>A wide type of cotorsion pairs are constructed via covering and enveloping. We analysis the existence of projective cover at the beginning, and see where the obstakle rises. Then we introduce criterion of the existence of cover/envelope.</p>
+    <p>A wide range of cotorsion pairs are constructed via covering and enveloping. We analyse the existence of projective covers at the outset, and identify where the obstacle arises. Subsequently, we introduce criteria for the existence of covers and envelopes.</p>
   </div>
 </div>
 
@@ -121,46 +121,46 @@ MathJax = {
 
 <h3 id="the-projective-cover">The Projective Cover</h3>
 
-<p>For Abelian category with enough projectives, we provide two equivalent definitions of projective cover.</p>
+<p>For an Abelian category with enough projectives, we provide two equivalent definitions of projective cover.</p>
 
 <div class="definition">
-  <p>(Small/superfluous). A subobject $i : K ↪ X$ is small, if for any subobject $j : L ↪ X$ with $L + K = X$, then $j$ must be an isomorphism.</p>
+  <p>(Small/superfluous). A subobject $i : K ↪ X$ is small if, for any subobject $j : L ↪ X$ with $L + K = X$, then $j$ must be an isomorphism.</p>
 </div>
 
-<p><strong>A subobject is characterised be a morphism</strong>, rather than an plain object. The expression $L + K = X$ means that the following $θ$ induced by pushout is an isomorphism</p>
+<p><strong>A subobject is characterised by a morphism</strong>, rather than a plain object. The expression $L + K = X$ means that the following $θ$ induced by the pushout is an isomorphism</p>
 <center> <br /> <div class="tikz-diagram">
-    <embed src="/website/svg/25SumLec3/diagram_4b52b2ee90498.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    <embed src="/website/svg/25SumLec3/diagram_8c84b83712b2f.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
   </div> <br /> </center>
 
-<p>One can also write $L × _X K =: L ∩ K$ for convenient.</p>
+<p>One may also write $L × _X K =: L ∩ K$ for convenience.</p>
 
 <div class="problem">
-  <p>Show that $i : k ↪ X$ is small, if there exists some <strong>pushout pullback square</strong> of the form <span class="tikzinline-diagram">       <embed src="/website/svg/25SumLec3/diagram_cc353bb5ccf7a.svg" type="image/svg+xml" style="display: inline-block; width: 10%; height: 10%; white-space: nowrap" />
+  <p>Show that $i : k ↪ X$ is small if there exists some <strong>pushout pullback square</strong> of the form <span class="tikzinline-diagram">       <embed src="/website/svg/25SumLec3/diagram_605b8baf0abfc.svg" type="image/svg+xml" style="display: inline-block; width: 10%; height: 10%; white-space: nowrap" />
  </span>, then $j$ must be an isomorphism.</p>
 </div>
 
 <div class="theorem">
-  <p>Say $p : P → M$ is a projective cover, if the following equivalent conditions hold (projective cover = $𝐏𝐫𝐨𝐣$-cover!):</p>
+  <p>Suppose $p : P → M$ is a projective cover if the following equivalent conditions hold (projective cover = $𝐏𝐫𝐨𝐣$-cover!):</p>
   <ol>
     <li>(Projective cover). $p$ is an epimorphism, and $\ker p$ (as a morphism) is small;</li>
-    <li>($𝐏𝐫𝐨𝐣$-cover). Any morphism $Q → M$ ($Q$ projective) factors through $p$, and any $p ∘ α = p$ imples $α$ is an automorphism.</li>
+    <li>($𝐏𝐫𝐨𝐣$-cover). Any morphism $Q → M$ ($Q$ projective) factors through $p$, and any $p ∘ α = p$ implies $α$ is an automorphism.</li>
   </ol>
   <div class="proof">
-    <p>(1 → 2). Clearly, $Q → M$ factors through $p$ by lifting property of projectives. We show that $p ∘ α = p$ implies $α$ is an automorphism. We construct the pullback square of monomorphisms:</p>
+    <p>(1 → 2). Clearly, $Q → M$ factors through $p$ by the lifting property of projectives. We show that $p ∘ α = p$ implies $α$ is an automorphism. We construct the pullback square of monomorphisms:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec3/diagram_b38bea5afa954.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/25SumLec3/diagram_496ecc2b2f048.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>By $p ∘ α = p$, the morphism $p|_{\operatorname{im}α }$ is epic, thus the first row is an ses. By exercise, the subobject $\operatorname{im}(α ) ↪ P$ is an isomorphism. <strong>This shows $α$ is epic</strong>. We show $α$ is also monic. Let $j$ be the right inverse of $α$ (by lifting property of projectives). Then $p ∘ j = p ∘ α ∘ j = p$. Hence $j$ is epic. Since $j$ is also splic monic, $j$ is an isomorphism. <strong>Therefore $α$ is an automorphism</strong>. <br /> (2 → 1). $p$ is epic, since epimrophism $Q ↠ M$ factors through $p$. We show $\ker p$ is small. If not, there exists proper subobject $N ↪ P$ s.t. $N + \ker p = P$. Therefore we have the pullback pushout square of ses’s. We introduce $l$ by lifting property of projectives, then $α : λ ∘ l$ is a non-automorphism such that $p ∘ α = p$, a contradiction.</p>
+    <p>By $p ∘ α = p$, the morphism $p|_{\operatorname{im}α }$ is epic, thus the first row is a short exact sequence. By exercise, the subobject $\operatorname{im}(α ) ↪ P$ is an isomorphism. <strong>This shows $α$ is epic</strong>. We show $α$ is also monic. Let $j$ be the right inverse of $α$ (by the lifting property of projectives). Then $p ∘ j = p ∘ α ∘ j = p$. Hence $j$ is epic. Since $j$ is also split monic, $j$ is an isomorphism. <strong>Therefore $α$ is an automorphism</strong>. <br /> (2 → 1). $p$ is epic, since any epimorphism $Q ↠ M$ factors through $p$. We show $\ker p$ is small. If not, there exists a proper subobject $N ↪ P$ such that $N + \ker p = P$. Therefore we have the pullback pushout square of short exact sequences. We introduce $l$ by the lifting property of projectives, then $α : λ ∘ l$ is a non-automorphism such that $p ∘ α = p$, a contradiction.</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec3/diagram_db0c2e876078e.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/25SumLec3/diagram_0e8ee8dcb17d4.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
   </div>
 </div>
 
-<p>Here <strong>we do not require the objects are well-powered</strong>, which means that all subobjects of a certain object form a set.</p>
+<p>Here <strong>we do not require that the objects are well-powered</strong>, which means that all subobjects of a certain object form a set.</p>
 
 <div class="problem">
-  <p>Show another equivalent definition of projective cover: say $p : P → A$ is an projective cover iff it is an <em>essential epimorphism</em>, i.e., $p ∘ g$ is an epic iff $g$ is epic.</p>
+  <p>Show another equivalent definition of projective cover: say $p : P → A$ is a projective cover if and only if it is an <em>essential epimorphism</em>, i.e., $p ∘ g$ is epic if and only if $g$ is epic.</p>
 </div>
 
 <h3 id="functorial-approach">Functorial Approach</h3>
@@ -168,23 +168,23 @@ MathJax = {
 <div class="lemma">
   <p>The Yoneda embedding $\mathcal{A} ↪ 𝐏𝐒𝐡 (\mathcal{A})$ via $X ↦ (-, X)_\mathcal{A}$ is fully faithful and left exact. In particular, the <strong>representable functor $(-, X)_\mathcal{A}$ are projective</strong> in $𝐏𝐒𝐡 (\mathcal{A})$.</p>
   <div class="proof">
-    <p>The Yoneda embedding gives a bijection $(X,Y) ↔ [(-, X), (-, Y)]_{𝐏𝐒𝐡 (\mathcal{A})}$, which indentifies $f$ with a collection of natural transformation $\{(A, f)\}_{A ∈ \mathcal{A}}$.</p>
+    <p>The Yoneda embedding yields a bijection $(X,Y) ↔ [(-, X), (-, Y)]_{𝐏𝐒𝐡 (\mathcal{A})}$, which identifies $f$ with a collection of natural transformations $\{(A, f)\}_{A ∈ \mathcal{A}}$.</p>
     <ul>
-      <li>The assignment is $? ↦ (-, ?)$ preserves all limits, thus is left exact;</li>
-      <li>For any surjection $θ : F → G$ of presheaves, we see $[(-, ?), θ_-] ≃ θ_?$ is surjective. Hence, representable functors are projective in $𝐏𝐒𝐡 (\mathcal{A})$.</li>
+      <li>The assignment $? ↦ (-, ?)$ preserves all limits, and is thus left exact;</li>
+      <li>For any surjection $θ : F → G$ of presheaves, we observe $[(-, ?), θ_-] ≃ θ_?$ is surjective. Hence, representable functors are projective in $𝐏𝐒𝐡 (\mathcal{A})$.</li>
     </ul>
   </div>
 </div>
 
-<p>Now we gives a functorial characterisation of (pre)cover. Throughout, $\mathcal{F}$ is a replete (= closed under iso.) class of objects.</p>
+<p>We now provide a functorial characterisation of (pre)cover. Throughout, $\mathcal{F}$ denotes a replete (= closed under isomorphism) class of objects.</p>
 
 <div class="definition">
-  <p>((Pre)cover). Let $X ∈ \mathcal{X}$ and $F ∈ \mathcal{F}$. Say $f : F → X$ is a $\mathcal{F}$-<strong>precover</strong>, provided the following equivalent conditions:</p>
+  <p>((Pre)cover). Let $X ∈ \mathcal{A}$ and $F ∈ \mathcal{F}$. We say $f : F → X$ is an $\mathcal{F}$-<strong>precover</strong> if the following equivalent conditions hold:</p>
   <ol>
     <li>Any morphism $g : G → X$ with $G ∈ \mathcal{F}$ factors through $f$;</li>
-    <li>There is an epimorphism $f_∗ : (- , F)_\mathcal{F} ↠ (-, X)_\mathcal{A}$ from the projective object $(-, F)_\mathcal{F} ∈ 𝐏𝐒𝐡 (\mathcal{F})$.</li>
+    <li>There exists an epimorphism $f_∗ : (- , F)_\mathcal{F} ↠ (-, X)_\mathcal{A}$ from the projective object $(-, F)_\mathcal{F} ∈ 𝐏𝐒𝐡 (\mathcal{F})$.</li>
   </ol>
-  <p>Say a precover $f : F → X$ is a <strong>cover</strong>, provided the following equivalent conditions:</p>
+  <p>A precover $f : F → X$ is termed a <strong>cover</strong> if the following equivalent conditions hold:</p>
   <ol>
     <li>Any endomorphism $α : F → X$ such that $f ∘ α = f$ implies $α$ is an automorphism;</li>
     <li>The epimorphism $f_∗ : (-, F)_\mathcal{F} ↠ (-, X)_\mathcal{A}$ is a projective cover.</li>
@@ -192,30 +192,30 @@ MathJax = {
   <p>Note that for $2$, $\mathrm{End}_\mathcal{F}(F) ≃ \mathrm{End}_{𝐏𝐒𝐡 (\mathcal{F})}((-, F)_\mathcal{F})$ via $α ↦ α _∗$.</p>
 </div>
 
-<p>Categorically speaking, to study the cover, it suffices to study the projective covers.</p>
+<p>From a categorical perspective, to study covers, it suffices to study projective covers.</p>
 
-<p>The functorial construction has amazing results for AR theory, e.g., <a href="20250523Talk#与-ar-理论的关系">this note</a>, or a general theory of Auslander algebra.</p>
+<p>The functorial construction yields remarkable results for AR theory, e.g., <a href="20250523Talk#与-ar-理论的关系">this note</a>, or a general theory of Auslander algebra.</p>
 
 <h3 id="a-tautological-comparison">A Tautological Comparison</h3>
 
-<p>We learn from the above that</p>
+<p>From the above, we deduce that</p>
 
 <ul>
-  <li>either projective precovers or covers are epic;</li>
-  <li>if $M$ admits a projective cover, then it is unique under isomorphism, and is always a summand of $Q ↠ M$;</li>
+  <li>both projective precovers and covers are epic;</li>
+  <li>if $M$ admits a projective cover, then it is unique up to isomorphism, and is always a summand of $Q ↠ M$;</li>
   <li>$p : P ↠ M$ is a (pre)cover whenever $p_∗ : (-, P)_{𝐏𝐫𝐨𝐣} ↠ (-|_{𝐏𝐫𝐨𝐣}, M)_{\mathcal{A}}$ is.</li>
 </ul>
 
-<p>We are glad to compare the projective covers with that of the functorial cases.</p>
+<p>We are pleased to compare the projective covers with those arising in the functorial context.</p>
 
 <div class="example">
-  <p>(Idempotent obstacle). There is the case that idempotent morphism $e : X → X$ does not split. In this case $\mathrm{im}(-, e)$ is a non-representable f.g. projective objects.</p>
+  <p>(Idempotent obstacle). There exist cases where an idempotent morphism $e : X → X$ does not split. In this case, $\mathrm{im}(-, e)$ is a non-representable finitely generated projective object.</p>
 </div>
 
 <p><strong>Assuming $\mathcal{A}$ is idempotent complete</strong>, we begin with a well-known lemma.</p>
 
 <div class="problem">
-  <p>(Special Yoneda lemma). This is an element result in representation theory. Let $T'$ be a summand of finite biproducts of $T$. There is an isomorphism</p>
+  <p>(Special Yoneda lemma). This is a standard result in representation theory. Let $T'$ be a summand of finite biproducts of $T$. There is an isomorphism</p>
   <p>$$\begin{equation}
 (T', M)_{\mathcal{A}} → ((T,T')_\mathcal{A}, (T, M)_\mathcal{A})_{\mathrm{End}(T)}, \quad f ↦ f_∗ .
 \end{equation}$$</p>
@@ -223,68 +223,68 @@ MathJax = {
 </div>
 
 <div class="theorem">
-  <p>(Projectivisation). Let $𝐚𝐝𝐝 (T)$ denote the full subcategory contains $T$ and closed under isomorphisms, finite biproducts and summands. Then there is an equivalence:</p>
+  <p>(Projectivisation). Let $𝐚𝐝𝐝 (T)$ denote the full subcategory containing $T$ and closed under isomorphisms, finite biproducts and summands. Then there is an equivalence:</p>
   <p>$$\begin{equation}
 (T,-) : 𝐚𝐝𝐝 (T) → 𝐩𝐫𝐨𝐣 (𝐌𝐨𝐝 _{\mathrm{End}(T)}),\quad T_0 ↦ (T, T_0).
 \end{equation}$$</p>
   <div class="proof">
-    <p>By special Yoneda lemma.</p>
+    <p>By the special Yoneda lemma.</p>
   </div>
 </div>
 
 <p>The tautological comparison is as follows.</p>
 
 <div class="theorem">
-  <p>We assume idempotent completeness. Let $P ↠ M$ be an epimorphism from projectives, then the following are equivalent.</p>
+  <p>We assume idempotent completeness. Let $p : P → M$ be a $\mathcal{P}$-precover, then the following are equivalent.</p>
   <ol>
-    <li>$p : P ↠ M$ admits a projective cover;</li>
+    <li>$p : T → M$ admits a $\mathcal{P}$-cover;</li>
     <li>$p_∗ : (-, P)_{𝐏𝐫𝐨𝐣} ↠ (-|_{𝐏𝐫𝐨𝐣}, M)$ admits a projective cover;</li>
     <li>$p_∗ : (-, P)_{𝐚𝐝𝐝 (P)} ↠ (-|_{𝐚𝐝𝐝 (P)}, M)$ admits a projective cover;</li>
     <li>$p_∗ : (P, P)_{\mathrm{End}(P)} ↠ (P, M)_{\mathrm{End}(P)}$ admits a projective cover.</li>
   </ol>
-  <p>Note that all these are precovers as they are epimorphisms.</p>
+  <p>Note that the last three are projective precovers as they are epimorphisms.</p>
   <div class="proof">
-    <p>(1 ↔ 2) follows from the definition. When $1$, a projective cover must be a summand of $p$, which shows (1 → 3). (3 → 4) is given by special Yoneda lemma. It remains to show (4 → 1). <br /> When $p_∗ : (P, P)_{\mathrm{End}(P)} ↠ (P, M)_{\mathrm{End}(P)}$ admits a projective cover, it takes the form</p>
+    <p>(1 ↔ 2) follows from the definition. In the case of $1$, a projective cover must be a summand of $p$, which establishes (1 → 3). (3 → 4) is given by the special Yoneda lemma. It remains to show (4 → 1). <br /> When $p_∗ : (P, P)_{\mathrm{End}(P)} ↠ (P, M)_{\mathrm{End}(P)}$ admits a projective cover, it takes the form</p>
     <p>$$\begin{equation}
 (P, P)_{\mathrm{End}(P)} ↠ Q ↠ (P, M)_{\mathrm{End}(P)}.
 \end{equation}$$</p>
-    <p>Note that $Q ≃ (P, P_0)_{\mathrm{End}(P)}$ for $P_0 ∈ 𝐒𝐦𝐝 (P)$ by projectivisation. With special Yoneda lemma, we can write the mapping sequence as</p>
+    <p>Note that $Q ≃ (P, P_0)_{\mathrm{End}(P)}$ for $P_0 ∈ 𝐒𝐦𝐝 (P)$ by projectivisation. With the special Yoneda lemma, we may write the mapping sequence as</p>
     <p>$$\begin{equation}
 (P, P)_{\mathrm{End}(P)} \overset {a_∗ } ↠ (P, P_0)_{\mathrm{End}(P)} \overset {b_∗ } ↠ (P, M)_{\mathrm{End}(P)}.
 \end{equation}$$</p>
-    <p>We show that $b : P_0 → M$ is a projective cover. By special Yoneda lemma, $(ba)_∗ = π _∗$ yields $ba = π$. Hence $b$ is epic. When there is $b ∘ γ = b$, we have $b_∗ ∘ γ _∗ = b_∗$. Now $γ _∗$ is an isomorphism as $b_∗$ is a projective cover. By projectivisation, $γ$ is an automorphism.</p>
+    <p>We show that $b : P_0 → M$ is a $\mathcal{P}$-cover. By special Yoneda lemma, $(ba)_∗ = p _∗$ yields $ba = p$. As $a$ is split epic, $b$ and $p$ factors through each other, <strong>which shows that $b$ is a $\mathcal{P}$-precover</strong>. If there exists $b ∘ γ = b$, we have $b_∗ ∘ γ _∗ = b_∗$. Now $γ _∗$ is an isomorphism as $b_∗$ is a projective cover. By projectivisation, $γ$ is an automorphism. Hence $b$ is a $\mathcal{P}$-cover.</p>
   </div>
 </div>
 
-<p>It is a local property for exhibiting a projective cover. For idempotent completed cases, $P ↠ M$ has a projective cover when $\mathrm{End}(P)$ is right perfect.</p>
+<p>It is a local property to exhibit a projective cover. For idempotent complete cases, a $\mathcal{P}$-precover $P → M$ admits a $\mathcal{P}$-cover when $\mathrm{End}(P)$ is right semi-perfect (where f.g. modules admits a projective cover).</p>
 
-<h3 id="lack-of-existence-covering-flat-objects">Lack of Existence (Covering Flat Objects)</h3>
+<h3 id="mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-cover-of-flat-objects">$𝐏𝐫𝐨𝐣$-cover of Flat Objects</h3>
 
-<p>Not every objects has a projective cover. In particular, A flat module with projective cover in projective.</p>
+<p>Not every object has a projective cover. In particular, a flat module with projective cover is projective.</p>
 
 <ul>
-  <li>The author is glad to introduce the <em>equivalent definitions of a perfect ring</em>; for coherency of this lecture, <strong>we only focus on flat modules and projective covers</strong>.</li>
+  <li>The author is pleased to introduce the <em>equivalent definitions of a perfect ring</em>; for the sake of coherence in this lecture, <strong>we shall only focus on flat modules and projective covers</strong>.</li>
 </ul>
 
 <div class="theorem">
-  <p>A flat module with projective cover in projective.</p>
+  <p>A flat module with projective cover is projective.</p>
   <div class="proof">
-    <p>We provide a functorial proof which shows that it is not a non-set theoritic property. We write a flat object $F$ as the filtered colimit of f.g. projective objects, i.e., $F = \varinjlim ^{fil} P_∙$ along with structure morphisms $f_i : P_i → F$. Let $π : P → F$ denote the projective cover. <br /> Since $f_i$ factors through $π$, we obtain a collection of split pullback squares $P_i ⊕ Q_i := P × _F P_i$. This defines a new system for $\{(P ⊕ Q)_∙ , g_∙\}$:</p>
+    <p>We provide a functorial proof which shows that it is not a non-set-theoretic property. We write a flat object $F$ as the filtered colimit of finitely generated projective objects, i.e., $F = \varinjlim ^{fil} P_∙$ along with structure morphisms $f_i : P_i → F$. Let $π : P → F$ denote the projective cover. <br /> Since $f_i$ factors through $π$, we obtain a collection of split pullback squares $P_i ⊕ Q_i := P × _F P_i$. This defines a new system for $\{(P ⊕ Q)_∙ , g_∙\}$:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec3/diagram_016a3c2a10b86.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/25SumLec3/diagram_5b50b554f8ceb.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
     <p>In particular, $ψ _{j,i} = φ _{j,i} ⊕ μ _{j,i}$ is diagonal. The universal property of pullback shows $\{(P⊕ Q)_∙ , g_∙ \}$ is again a filtered system. The universal property of colimit yields the retraction $$\begin{equation}
 \mathrm{id} = \left[\varinjlim {}^{fil} P_∙ →  \varinjlim {}^{fil} P_∙⊕ Q_∙ → \varinjlim {}^{fil} P_∙\right].
 \end{equation}$$</p>
     <p>It remains to show $q : \varinjlim {}^{fil} P_∙⊕ Q_∙ ≃ P$. We firstly prove the injection $\varinjlim {}^{fil} P_∙⊕ Q_∙ ↪ P$. We take any $α : K → \varinjlim {}^{fil} P_∙⊕ Q_∙$ such that $K$ is compact, and $K \xrightarrow {α } \varinjlim {}^{fil} P_∙⊕ Q_∙ → P$ composes to $0$; then show that $α  = 0$. Notice that $α$ admits a factorisation</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec3/diagram_0b5e20a90772b.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/25SumLec3/diagram_950ac29b79545.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>Since $α_i$ and $0$ are both solutions to the pullback problem, we see $α _i = 0$. Hence $[q ∘ α = 0] → [α = 0]$ for any $α$ comes from a compact object. Note that every object is a filtered colimit of compact objects, we conclude that $q$ is injective. <br /> This gives morphisms between ses</p>
+    <p>Since $α_i$ and $0$ are both solutions to the pullback problem, we see $α _i = 0$. Hence $[q ∘ α = 0] → [α = 0]$ for any $α$ coming from a compact object. Note that every object is a filtered colimit of compact objects, so we conclude that $q$ is injective. <br /> This gives morphisms between short exact sequences</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec3/diagram_b90e04d542c71.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/25SumLec3/diagram_5a0a99dffc640.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>Since $\ker π$ is small, $\varinjlim^{fil}(P_\bullet \oplus Q_\bullet) ↪ P$ must be an isomorphism. It shows that $F$ is a retract of $P$, thus is projective.</p>
+    <p>Since $\ker π$ is small, $\varinjlim^{fil}(P_\bullet \oplus Q_\bullet) ↪ P$ must be an isomorphism. It shows that $F$ is a retract of $P$, and thus is projective.</p>
   </div>
 </div>
 
@@ -300,68 +300,68 @@ MathJax = {
 
 <p>Let $t : 𝐚𝐛 → 𝐚𝐛^{\text{finite}}$ be the functor of taking maximal torsion subgroup. Then $t(M) ↪ M$ is an $𝐚𝐛^{\text{finite}}$-cover.</p>
 
-<p>The f.g. torsion groups ($𝐚𝐛^{\text{finite}}$) and f.g. free Abelian groups ($𝐚𝐛^{\text{f.g. free}}$) are <strong>orthogonal</strong> with respect to $\mathrm{Hom}$-functor. We write $X ⟂_o Y$ for $\mathrm{Hom}(X,Y) = 0$, and denote $(-)^o := (-)^{⟂_o}$ and $^o(-) := {}^{⟂_o}(-)$ for simplicity.</p>
+<p>The f.g. torsion groups ($𝐚𝐛^{\text{finite}}$) and f.g. free Abelian groups ($𝐚𝐛^{\text{f.g. free}}$) are <strong>orthogonal</strong> with respect to the $\mathrm{Hom}$-functor. We write $X ⟂_o Y$ for $\mathrm{Hom}(X,Y) = 0$, and denote $(-)^o := (-)^{⟂_o}$ and $^o(-) := {}^{⟂_o}(-)$ for simplicity.</p>
 
-<p>Unwinding a brief introduction, we show enumerate some closure properties of a torsion class as follows.</p>
+<p>Unwinding a brief introduction, we enumerate some closure properties of a torsion class as follows.</p>
 
 <div class="definition">
   <p>(Torsion theory). Let $\mathcal{A}$ be an Abelian category which is <strong>well-powered</strong> and <strong>subobjects are closed under transfinite filtrations</strong>. Then the following are equivalent for defining a torsion theory $(\mathcal{T}, \mathcal{F})$:</p>
   <ol>
-    <li>There is a subfunctor $t ⊆ 1_\mathcal{A}$ s.t. $t ∘ t = t$ and $t(\frac{M}{tM}) = 0$. Here $t ∘ t = t$ means that $t(tM) = tM$ when idenfitying subobjects of $tM$ as that of $M$. Set $\mathcal{T} = \operatorname{im} t$ and $\mathcal{F} = \ker t$.</li>
-    <li>$\mathcal{T}⟂ _o \mathcal{F}$, and every object $M$ fits into a ses $0 → tM → M → M/tM → 0$. In this case, such ses is functorial in $M$.</li>
+    <li>There is a subfunctor $t ⊆ 1_\mathcal{A}$ such that $t ∘ t = t$ and $t(\frac{M}{tM}) = 0$. Here $t ∘ t = t$ means that $t(tM) = tM$ when identifying subobjects of $tM$ as that of $M$. Set $\mathcal{T} = \operatorname{im} t$ and $\mathcal{F} = \ker t$.</li>
+    <li>$\mathcal{T}⟂ _o \mathcal{F}$, and every object $M$ fits into a short exact sequence $0 → tM → M → M/tM → 0$. In this case, such a sequence is functorial in $M$.</li>
     <li>$\mathcal{T}^o = \mathcal{F}$ and $\mathcal{T} = {}^o \mathcal{F}$, or other equivalent form given by Galois connection.</li>
-    <li>$\mathcal{F} = \mathcal{T}^o$, and $\mathcal{T}$ is closed under taking transfinite filtration (including extensions) and quotient objects.</li>
-    <li>$\mathcal{F} = \mathcal{T}^o$, and there is a class of objects $\mathcal{X}$ such that $\mathcal{T}$ consists of objects which are transfinite filtration of quotient objects in $\mathcal{X}$.</li>
+    <li>$\mathcal{F} = \mathcal{T}^o$, and $\mathcal{T}$ is closed under taking transfinite filtrations (including extensions) and quotient objects.</li>
+    <li>$\mathcal{F} = \mathcal{T}^o$, and there is a class of objects $\mathcal{X}$ such that $\mathcal{T}$ consists of objects which are transfinite filtrations of quotient objects in $\mathcal{X}$.</li>
   </ol>
   <div class="proof">
-    <p>We explain 1 ↔ 2 → 3 → 4 ↔ 5 in few wrods, and show 5 → 1 (which requires supplementary conditions).<br /> (1 ↔ 2). A canonical injection refers to a canonical ses $t$. (2 → 3). For instance, we show $\mathcal{F} = \mathcal{T} ^o$. We claim $\mathcal{T} ⟂ _o \mathcal{F}$, if there is non-zero $f : T → F$, then $\operatorname{im}(f) ∈ \mathcal{T}$ is a subobject of $F$, yielding $tF ≠ 0$. Conversely we show $\mathcal{T} ^o ⊆ \mathcal{F}$, notice that every $X ∈ \mathcal{T} ^o$ has no subobjects in $\mathcal{T} ∖ \{0\}$. (3 → 4). Note that any $^o\mathcal{X}$ is closed under extensions and quotients. (4 ↔ 5). Clearly $→$ is by taking $\mathcal{X} = \mathcal{T}$. Conversely, any particular class $𝐅𝐢𝐥 (\text{quotients of } \ \mathcal{X})$ is closed under transfinite filtrations and quotient objects. <br /> (4 → 2). We show $X ∈ \mathcal{A}$ has a maximal subobject in $\mathcal{T}$, which is also the greatest. Let $\mathcal{S}$ denote the set of subobjects of $X$ lying in $\mathcal{T}$. $0 ∈ \mathcal{S}$ is non-empty. Notice that,</p>
+    <p>We explain $1 \leftrightarrow 2 \rightarrow 3 \rightarrow 4 \leftrightarrow 5$ in a few words, and show $5 \rightarrow 1$ (which requires supplementary conditions).<br /> ($1 \leftrightarrow 2$). A canonical injection refers to a canonical short exact sequence $t$. ($2 \rightarrow 3$). For instance, we show $\mathcal{F} = \mathcal{T} ^o$. We claim $\mathcal{T} ⟂ _o \mathcal{F}$; if there is a non-zero $f : T → F$, then $\operatorname{im}(f) ∈ \mathcal{T}$ is a subobject of $F$, yielding $tF ≠ 0$. Conversely, we show $\mathcal{T} ^o ⊆ \mathcal{F}$; notice that every $X ∈ \mathcal{T} ^o$ has no subobjects in $\mathcal{T} ∖ \{0\}$. ($3 \rightarrow 4$). Note that any $^o\mathcal{X}$ is closed under extensions and quotients. ($4 \leftrightarrow 5$). Clearly, $→$ is by taking $\mathcal{X} = \mathcal{T}$. Conversely, any particular class $𝐅𝐢𝐥 (\text{quotients of } \ \mathcal{X})$ is closed under transfinite filtrations and quotient objects. <br /> ($4 \rightarrow 2$). We show $X ∈ \mathcal{A}$ has a maximal subobject in $\mathcal{T}$, which is also the greatest. Let $\mathcal{S}$ denote the set of subobjects of $X$ lying in $\mathcal{T}$. $0 ∈ \mathcal{S}$ is non-empty. Notice that,</p>
     <ul>
       <li>Every chain in $\mathcal{S}$ has an upper bound, as $\mathcal{T}$ is closed under transfinite filtrations.</li>
-      <li>Any two maximal objects $T_1, T_2 ∈ \mathcal{S}$ coincides. If not, then $(T_1 + T_2) ∈ \mathcal{T}$, a contradiction.</li>
+      <li>Any two maximal objects $T_1, T_2 ∈ \mathcal{S}$ coincide. If not, then $(T_1 + T_2) ∈ \mathcal{T}$, a contradiction.</li>
     </ul>
-    <p>Let $tX$ denote such maximal subobject in $\mathcal{T}$, we complete the proof.</p>
+    <p>Let $tX$ denote such a maximal subobject in $\mathcal{T}$; we complete the proof.</p>
   </div>
 </div>
 
 <p>We call $\mathcal{T}$ a torsion class, and $\mathcal{F}$ a torsion-free class.</p>
 
-<p>The above are equivalent for either $𝐌𝐨𝐝 _R$ or $C(R)$. Note that these categories are well-powered and cocompleted.</p>
+<p>The above are equivalent for either $𝐌𝐨𝐝 _R$ or $C(R)$. Note that these categories are well-powered and cocomplete.</p>
 
 <div class="problem">
-  <p>Show that subobjects in either $𝐌𝐨𝐝 _R$ or $C(R)$ is closed under transfinite filtrations. Hint:</p>
+  <p>Show that subobjects in either $𝐌𝐨𝐝 _R$ or $C(R)$ are closed under transfinite filtrations. Hint:</p>
   <ol>
-    <li>the forgotful functor $U : \mathcal{A} → 𝐒𝐞𝐭𝐬$ creates all filtered colimits, and</li>
+    <li>the forgetful functor $U : \mathcal{A} → 𝐒𝐞𝐭𝐬$ creates all filtered colimits, and</li>
     <li>$i_∙ : M_∙ ↪ X$ induces a monomorphism $\varinjlim ^{fil} M_∙ ↪ X$.</li>
   </ol>
 </div>
 
 <h3 id="envelopes">Envelopes</h3>
 
-<p>This is the dual statement of covers. The general theory of envelopes also translated to that of projective covers.</p>
+<p>This is the dual statement of covers. The general theory of envelopes also translates to that of projective covers.</p>
 
 <div class="definition">
   <p>Let $\mathcal{E}$ be a replete class of objects. For any $E ∈ \mathcal{E}$, say $j : X ↪ E$ is</p>
   <ol>
-    <li>a preenvelope, provided an epimorphism from projective objects $j ^∗ : (E, -)_\mathcal{E} ↠ (X, -)_{\mathcal{A}}$;</li>
+    <li>a preenvelope, provided there is an epimorphism from projective objects $j ^∗ : (E, -)_\mathcal{E} ↠ (X, -)_{\mathcal{A}}$;</li>
     <li>an envelope, provided the projective cover $j ^∗ : (E, -)_\mathcal{E} ↠ (X, -)_{\mathcal{A}}$.</li>
   </ol>
 </div>
 
-<p>There <em>might</em> (the writer never met it before) be a dual concept called co-small quotient module or co-superfluous quotient module. Say $p: X ↠ C$ is co-small, provided for any quotient object $q: X ↠ C'$ such that $X \xrightarrow ∼ C' × _{C ⊔ _X C'} C$, $q$ is an isomorphism.</p>
+<p>There <em>might</em> (the writer has never encountered it before) be a dual concept called co-small quotient module or co-superfluous quotient module. Say $p: X ↠ C$ is co-small, provided for any quotient object $q: X ↠ C'$ such that $X \xrightarrow ∼ C' × _{C ⊔ _X C'} C$, $q$ is an isomorphism.</p>
 
-<p>For set-theoritic consideration, we <strong>substitute the expression co-small with essnetial extension</strong>.</p>
+<p>For set-theoretic consideration, we <strong>substitute the expression co-small with essential extension</strong>.</p>
 
 <div class="lemma">
-  <p>$p : X ↠ C$ is co-small, iff $\ker p ↪ X$ is a <strong>essential extension</strong> which is defined as follows:</p>
+  <p>$p : X ↠ C$ is co-small, if and only if $\ker p ↪ X$ is an <strong>essential extension</strong> which is defined as follows:</p>
   <ul>
     <li>any non-zero submodule $L ↪ X$ has a non-zero intersection with $\ker p$.</li>
   </ul>
   <div class="proof">
-    <p>(→). Suppose $p : X ↠ C$ is co-small, while there exists a non-zero submodule $L ↪ X$ s.t. $L ∩ \ker p = 0$. Then we shall see contradictions. By definition, one as the following pushout-pullback square</p>
+    <p>($\rightarrow$). Suppose $p : X ↠ C$ is co-small, while there exists a non-zero submodule $L ↪ X$ such that $L ∩ \ker p = 0$. Then we shall see contradictions. By definition, one has the following pushout-pullback square</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec3/diagram_ff9c3787490ca.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/25SumLec3/diagram_4751401dcf0d3.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>By definition of co-small, $X = \frac{X}{L \cap \ker p} ↠ \frac{X}{L}$ is an isomorphism, yieling $L = 0$, a contradiction. <br /> (←). Conversely, suppose that $\ker p ↪ X$ is essential yet $p : X ↠ \frac{X}{\ker p}$ is not co-small. Then it is possible to find a non-zero submodule $L$ such that the above diagram is a pushout-pullback square. Now $L ∩ \ker p = 0$, a contradiction.</p>
+    <p>By definition of co-small, $X = \frac{X}{L \cap \ker p} ↠ \frac{X}{L}$ is an isomorphism, yielding $L = 0$, a contradiction. <br /> ($\leftarrow$). Conversely, suppose that $\ker p ↪ X$ is essential yet $p : X ↠ \frac{X}{\ker p}$ is not co-small. Then it is possible to find a non-zero submodule $L$ such that the above diagram is a pushout-pullback square. Now $L ∩ \ker p = 0$, a contradiction.</p>
   </div>
 </div>
 
@@ -373,7 +373,7 @@ MathJax = {
   </ol>
 </div>
 
-<p>Unlike projective covers, the injective envelopes always exists.</p>
+<p>Unlike projective covers, the injective envelopes always exist.</p>
 
 <div class="theorem">
   <p>Every module $X ∈ 𝐌𝐨𝐝 _R$ has an injective envelope.</p>
@@ -382,20 +382,20 @@ MathJax = {
     <p>$$\begin{equation}
 ⋃ _{i ∈ I} (L ∩ Y_i) = L ∩ (⋃_{i ∈ I} Y_i)\qquad (⇔ \text{AB5 condition}).
 \end{equation}$$</p>
-    <p>We take any <strong>maximal object $Q ∈ \mathcal{S}$</strong>. Clearly $Q$ has only trivial essential extensions. We claim that <strong>$Q$ is injective</strong> by showing any ses $0 → Q → E → E/Q → 0$ splits. Again by AB5, there is a maximal subobject in $T ↪ E$ s.t. $T ∩ Q = 0$. By definition, $Q ↪ \frac{E}{T}$ is essential, thus $Q ↪ E ↠ \frac{E}{T}$ is an isomorphism. Now $Q+T = E$ and $Q ∩ T = 0$, hence $E = Q ⊕ T$. <br /> Finally, $X ↪ Q$ is an injective envelope as it is monic with co-small cokernel (= essential extension).</p>
+    <p>We take any <strong>maximal object $Q ∈ \mathcal{S}$</strong>. Clearly $Q$ has only trivial essential extensions. We claim that <strong>$Q$ is injective</strong> by showing any short exact sequence $0 → Q → E → E/Q → 0$ splits. Again by AB5, there is a maximal subobject $T ↪ E$ such that $T ∩ Q = 0$. By definition, $Q ↪ \frac{E}{T}$ is essential, thus $Q ↪ E ↠ \frac{E}{T}$ is an isomorphism. Now $Q+T = E$ and $Q ∩ T = 0$, hence $E = Q ⊕ T$. <br /> Finally, $X ↪ Q$ is an injective envelope as it is monic with co-small cokernel (= essential extension).</p>
   </div>
 </div>
 
-<p>We provide an non-trivial example that projective cover does not exists, yet the injective envelope is easy to construct. We begin with a well-known theorem.</p>
+<p>We provide a non-trivial example that projective cover does not exist, yet the injective envelope is easy to construct. We begin with a well-known theorem.</p>
 
 <div class="lemma">
   <p>(Specker’s theorem). $\mathrm{Hom}(∏_ω ℤ , ℤ ) ≃ ∐_ω ℤ$.</p>
   <div class="proof">
     <p>We show that any $f : ∏_ω ℤ → ℤ$ vanishes in the <em>ultraproduct part</em>, that is, $f = 0$ if $f|_{∐_ω ℤ } = 0$.</p>
     <ul>
-      <li>Suppose $f|_{∐_ω ℤ } = 0$, but there is some <em>infinite</em> sequence $(x_n)$ s.t. $A := f((x_n)) ≠ 0$. There is a way to write $x_n = 2^n ⋅ b_n+ 3^n ⋅ c_n$. Set $B := f((2^n ⋅ b_n))$ and $C := f((3^n ⋅ c_n))$. Now $A = B + C$. By cancelling the first finite terms, we see $2^n ∣ B$ for any $n$. Hence $B = 0$. Similarly $C = 0$. Now $A = 0$.</li>
+      <li>Suppose $f|_{∐_ω ℤ } = 0$, but there is some <em>infinite</em> sequence $(x_n)$ such that $A := f((x_n)) ≠ 0$. There is a way to write $x_n = 2^n ⋅ b_n+ 3^n ⋅ c_n$. Set $B := f((2^n ⋅ b_n))$ and $C := f((3^n ⋅ c_n))$. Now $A = B + C$. By cancelling the first finite terms, we see $2^n ∣ B$ for any $n$. Hence $B = 0$. Similarly $C = 0$. Now $A = 0$.</li>
     </ul>
-    <p>It suffices to show $f(e_k)$ vanishes for some large $k$. If not, then we assume (WLOG) every $f(e_k) ≠ 0$. We construct a <em>sharply increasing sequence</em> $s := (2^{n_0}, 2^{n_1}, \ldots )$, so that $|f(s_{≤ k})| ≪ n_{k+1}$ for $k ≥ 1$. Now we have triangle inequality</p>
+    <p>It suffices to show $f(e_k)$ vanishes for some large $k$. If not, then we assume (without loss of generality) every $f(e_k) ≠ 0$. We construct a <em>sharply increasing sequence</em> $s := (2^{n_0}, 2^{n_1}, \ldots )$, so that $|f(s_{≤ k})| ≪ n_{k+1}$ for $k ≥ 1$. Now we have the triangle inequality</p>
     <p>$$\begin{equation}
 |f(s)| + |f(s_{≤ k})| ≥ |f((s_{≥ k+1}))|\quad (∀ k).
 \end{equation}$$</p>
@@ -404,11 +404,11 @@ MathJax = {
 </div>
 
 <div class="example">
-  <p>We show a non-trivial example of module with injective envelope but not projective cover. Take $R = ℤ$ which is PID (hence coherent) set $X = ℤ^ω$.</p>
+  <p>We show a non-trivial example of a module with injective envelope but not projective cover. Take $R = ℤ$ which is a PID (hence coherent), set $X = ℤ^ω$.</p>
   <ol>
-    <li>$X$ is flat, since flatness are preserved by products over coherent rings.</li>
+    <li>$X$ is flat, since flatness is preserved by products over coherent rings.</li>
     <li>$X$ is not projective (= free over PID). If there is $ℤ ^{(λ)} ≃ ℤ^ω $, then $ℤ ^λ ≃ \mathrm{Hom}(ℤ^{(λ)}, ℤ ) ≃ \mathrm{Hom}(ℤ^ω, ℤ ) ≃ ℤ^{(ω)}$. Since $λ$ is uncountable, we see the contradiction.</li>
-    <li>$X$ has a injective envelope $ℤ ^ω ↪ ℚ ^ω$. $ℚ ^ω$ is clearly injective. Since $ℤ ↪ ℚ$ is essential, $ℤ ^ω ↪ ℚ ^ω$ is also essential.</li>
+    <li>$X$ has an injective envelope $ℤ ^ω ↪ ℚ ^ω$. $ℚ ^ω$ is clearly injective. Since $ℤ ↪ ℚ$ is essential, $ℤ ^ω ↪ ℚ ^ω$ is also essential.</li>
   </ol>
 </div>
 
@@ -443,6 +443,8 @@ MathJax = {
 <div class="definition">
   <p>We call $(𝐅𝐥𝐚𝐭 , 𝐅𝐥𝐚𝐭 ^⟂)$ a <em>flat cotorsion theory</em>.</p>
 </div>
+
+<p>We call $𝐅𝐥𝐚𝐭 ^⟂$ <em>Enochs cotorsion modules</em>. There are analogous definitions, e.g., Warfield cotorsion modules stands for the right orthogonal class of torsion-free modules.</p>
 
 
   </article>
