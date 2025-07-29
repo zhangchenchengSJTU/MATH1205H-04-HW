@@ -99,9 +99,10 @@ MathJax = {
       <li><a href="#envelopes" id="markdown-toc-envelopes">Envelopes</a></li>
     </ul>
   </li>
-  <li><a href="#set-theoretic-covers-and-envelopes" id="markdown-toc-set-theoretic-covers-and-envelopes">Set-theoretic Covers and Envelopes</a></li>
-  <li><a href="#flat-covers-and-its-cotorsion-theory" id="markdown-toc-flat-covers-and-its-cotorsion-theory">Flat Covers and Its Cotorsion Theory</a>    <ul>
+  <li><a href="#set-theoretic-consideration" id="markdown-toc-set-theoretic-consideration">Set-theoretic Consideration</a>    <ul>
       <li><a href="#flat-cotorsion-pair" id="markdown-toc-flat-cotorsion-pair">Flat Cotorsion Pair</a></li>
+      <li><a href="#when-precover-admits-a-cover" id="markdown-toc-when-precover-admits-a-cover">When Precover Admits a Cover</a></li>
+      <li><a href="#when-preenvelope-admits-an-envelope" id="markdown-toc-when-preenvelope-admits-an-envelope">When Preenvelope Admits an Envelope</a></li>
     </ul>
   </li>
 </ul>
@@ -238,13 +239,13 @@ MathJax = {
   <p>We assume idempotent completeness. Let $p : P → M$ be a $\mathcal{P}$-precover, then the following are equivalent.</p>
   <ol>
     <li>$p : T → M$ admits a $\mathcal{P}$-cover;</li>
-    <li>$p_∗ : (-, P)_{𝐏𝐫𝐨𝐣} ↠ (-|_{𝐏𝐫𝐨𝐣}, M)$ admits a projective cover;</li>
+    <li>$p_∗ : (-, P)_{\mathcal{P}} ↠ (-|_{\mathcal{P}}, M)$ admits a projective cover;</li>
     <li>$p_∗ : (-, P)_{𝐚𝐝𝐝 (P)} ↠ (-|_{𝐚𝐝𝐝 (P)}, M)$ admits a projective cover;</li>
     <li>$p_∗ : (P, P)_{\mathrm{End}(P)} ↠ (P, M)_{\mathrm{End}(P)}$ admits a projective cover.</li>
   </ol>
   <p>Note that the last three are projective precovers as they are epimorphisms.</p>
   <div class="proof">
-    <p>(1 ↔ 2) follows from the definition. In the case of $1$, a projective cover must be a summand of $p$, which establishes (1 → 3). (3 → 4) is given by the special Yoneda lemma. It remains to show (4 → 1). <br /> When $p_∗ : (P, P)_{\mathrm{End}(P)} ↠ (P, M)_{\mathrm{End}(P)}$ admits a projective cover, it takes the form</p>
+    <p>(1 ↔ 2) follows from the definition. In the case of $1$, a $\mathcal{P}$-cover must be a summand of $p$. Since there is no differences between $\mathcal{P}$-cover and $𝐚𝐝𝐝 (P)$-cover for $M$, we show (1 ↔ 3). (3 → 4) is given by the special Yoneda lemma. It remains to show (4 → 1). <br /> When $p_∗ : (P, P)_{\mathrm{End}(P)} ↠ (P, M)_{\mathrm{End}(P)}$ admits a projective cover, it takes the form</p>
     <p>$$\begin{equation}
 (P, P)_{\mathrm{End}(P)} ↠ Q ↠ (P, M)_{\mathrm{End}(P)}.
 \end{equation}$$</p>
@@ -335,6 +336,8 @@ MathJax = {
   </ol>
 </div>
 
+<p>Another <em>almost-example</em> for torsion theory derives from complete hereditary cotorsion pair $(\mathcal{C}, \mathcal{F})$. Recall that $\mathcal{C}^o = \mathcal{F}$ and ${}^o\mathcal{C} = \mathcal{F}$ holds in $\frac{\mathcal{A}}{\mathcal{C} ∩ \mathcal{F}}$. When $\frac{\mathcal{A}}{\mathcal{C} ∩ \mathcal{F}}$ has exact structure, we almost done.</p>
+
 <h3 id="envelopes">Envelopes</h3>
 
 <p>This is the dual statement of covers. The general theory of envelopes also translates to that of projective covers.</p>
@@ -342,8 +345,8 @@ MathJax = {
 <div class="definition">
   <p>Let $\mathcal{E}$ be a replete class of objects. For any $E ∈ \mathcal{E}$, say $j : X ↪ E$ is</p>
   <ol>
-    <li>a preenvelope, provided there is an epimorphism from projective objects $j ^∗ : (E, -)_\mathcal{E} ↠ (X, -)_{\mathcal{A}}$;</li>
-    <li>an envelope, provided the projective cover $j ^∗ : (E, -)_\mathcal{E} ↠ (X, -)_{\mathcal{A}}$.</li>
+    <li>a preenvelope, provided there is an epimorphism from projective objects $j ^∗ : (E, -)_\mathcal{E} ↠ (X, -|_\mathcal{E})_{\mathcal{A}}$;</li>
+    <li>an envelope, provided the projective cover $j ^∗ : (E, -)_\mathcal{E} ↠ (X, -|_\mathcal{E})_{\mathcal{A}}$.</li>
   </ol>
 </div>
 
@@ -369,7 +372,7 @@ MathJax = {
   <p>Show $i : X → E$ is an injective envelope, provided the following equivalent conditions:</p>
   <ol>
     <li>$i$ is injective with a co-small cokernel;</li>
-    <li>$i ^∗ : (E, -)_\mathcal{E} ↠ (X, -)_{\mathcal{A}}$ is a projective cover.</li>
+    <li>$i ^∗ : (E, -)_\mathcal{E} ↠ (X, -|_\mathcal{E})_{\mathcal{A}}$ is a projective cover.</li>
   </ol>
 </div>
 
@@ -397,7 +400,7 @@ MathJax = {
     </ul>
     <p>It suffices to show $f(e_k)$ vanishes for some large $k$. If not, then we assume (without loss of generality) every $f(e_k) ≠ 0$. We construct a <em>sharply increasing sequence</em> $s := (2^{n_0}, 2^{n_1}, \ldots )$, so that $|f(s_{≤ k})| ≪ n_{k+1}$ for $k ≥ 1$. Now we have the triangle inequality</p>
     <p>$$\begin{equation}
-|f(s)| + |f(s_{≤ k})| ≥ |f((s_{≥ k+1}))|\quad (∀ k).
+|f(s)| + |f(s_{≤ k})| ≥ |f((s_{≥ k+1}))| = 2^{n_{k+1}} ⋅ (\text{something in } \ ℕ_+) \quad (∀ k).
 \end{equation}$$</p>
     <p>Since $f(s)$ is constant, and $\lim_{k → ∞ }\frac{|f(s_{≤ k})|}{|f((s_{≥ k+1}))|} = 0$, a contradiction.</p>
   </div>
@@ -412,11 +415,13 @@ MathJax = {
   </ol>
 </div>
 
-<h2 id="set-theoretic-covers-and-envelopes">Set-theoretic Covers and Envelopes</h2>
+<h2 id="set-theoretic-consideration">Set-theoretic Consideration</h2>
 
-<h2 id="flat-covers-and-its-cotorsion-theory">Flat Covers and Its Cotorsion Theory</h2>
+<p>We show few results of the existence of cover and envelopes.</p>
 
 <h3 id="flat-cotorsion-pair">Flat Cotorsion Pair</h3>
+
+<p>The example comes from flat cotorsion pair.</p>
 
 <div class="lemma">
   <p>Flat modules are closed under transfinite filtrations.</p>
@@ -428,6 +433,7 @@ MathJax = {
       <li>If $\{M_{β}\}_{γ < β}$ are flat for some limit ordinal $β$, then for any ses $θ$, the filtered colimit of ses $\varinjlim^{fil}_{γ < β} (M_γ ⊗ θ)$ is also a ses.</li>
     </ol>
   </div>
+  <p>$𝐅𝐥𝐚𝐭$ is closed under filtered colimits, as $(\varinjlim^{fil}F_∙ ⊗ -) ≃ \varinjlim^{fil}(F_∙ ⊗ -)$ is exact.</p>
 </div>
 
 <p>It is straightforward to show that $(𝐅𝐥𝐚𝐭 , 𝐅𝐥𝐚𝐭 ^⟂ )$ is a cotorsion theory. Since</p>
@@ -445,6 +451,127 @@ MathJax = {
 </div>
 
 <p>We call $𝐅𝐥𝐚𝐭 ^⟂$ <em>Enochs cotorsion modules</em>. There are analogous definitions, e.g., Warfield cotorsion modules stands for the right orthogonal class of torsion-free modules.</p>
+
+<p>It has long been a conjecture that whether the flat cotorsion pair is cogenerated by a set. The existence of flat covers (Enochs’s flat covering theorem) solves the problem.</p>
+
+<h3 id="when-precover-admits-a-cover">When Precover Admits a Cover</h3>
+
+<p>Let $\mathcal{P}$ is a replete class of modules or chain complexes. We assume <strong>$\mathcal{P}$ is closed under filtered colimits</strong> and <strong>summands</strong>, e.g. $\mathcal{P} = 𝐅𝐥𝐚𝐭$ or the entire category.</p>
+
+<p>In this case, it is feasible to weaken the definition of $\mathcal{P}$-cover.</p>
+
+<div class="lemma">
+  <p>Let $p : P → M$ be a $\mathcal{P}$-precover. It is a $\mathcal{P}$-cover, iff the following equivalent conditions holds:</p>
+  <ol>
+    <li>for any other $\mathcal{P}$ precover $p$, $p' ∘ α = p$ implies $α$ is monic,</li>
+    <li>$p ∘ α = p$ implies $α$ is monic,</li>
+    <li>$p ∘ α = p$ implies $α$ is an isomorphism.</li>
+  </ol>
+  <div class="proof">
+    <p>(1 → 2) is clear. For (2 → 1), for any precover $p'$, we take any factoring morphisms $p = p' ∘ α$ and $p' = p ∘ β$. We see $(β ∘ α)$ is monic. Hence $α$ is monic. (3 → 2) is cleear.<br /> We show (2 → 3). If not, then there exists a stricly injection $i : P → P$ such that $p ∘ i = p$. We shall construct a transfinite composition which terminates at $κ ≫ |P|$:</p>
+    <p>$$\begin{equation}
+P_0 \xrightarrow {f_{1,0}} P_1  \xrightarrow {f_{2,1}} P_2 → \cdots P_γ \xrightarrow {f_{γ +1,γ }} \cdots P_{κ}.
+\end{equation}$$</p>
+    <p>For any $\mathcal{P}$-precover $p_γ : P_γ → M$, we define $P_{γ + 1} := P$ and $p_{γ + 1} = p$. In particular,</p>
+    <ul>
+      <li>when $P_γ = P$, we take $f_{γ + 1, γ } = i$,</li>
+      <li>when $γ$ is a limit ordinal, then $p_{γ}$ is induced by universal property of colimit. By closure property of $\mathcal{P}$, we see $P_γ ∈ \mathcal{P}$.</li>
+    </ul>
+    <p>Clearly, $p_{γ} = p$ when $γ$ is not a limit ordinal. We take the subsystem $S := \{P_γ ∣ p_γ = p\}$ consisting of strict monomorphisms. As a result, the subobjects of $P$ has cardinality $κ$. Since $κ$ is arbitrary large, a contradiction.</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>There is a small gap in the proof. Let $α$ be any infinite ordinal. Show that</p>
+  <p>$$\begin{equation}
+|\{γ ∈ α ∣ ∃ β \ \text{s.t.} \ γ = β^+\}| = |α|.
+\end{equation}$$</p>
+</div>
+
+<p>Therefore, in the category of $\mathcal{P}$-precovering of $M$, $\mathcal{P}$ cover <em>dominates the injections</em>. It is convenient to define the following.</p>
+
+<div class="definition">
+  <p>The collection of <em>admissible kernels</em> of a precover $p : P → M$ is defined as</p>
+  <p>$$\begin{equation}
+\mathrm{KER}(p) := \{\ker α ⊆ P ∣ ∃ \ \text{another precover, s.t.} \ p' ∘ α = p \}.
+\end{equation}$$</p>
+  <p>Clearly, $\mathrm{KER}(p)$ is a singleton $\{0\}$ <strong>iff</strong> $p : P → M$ is a $\mathcal{P}$-cover.</p>
+</div>
+
+<p>Now we show every $M$ has a $\mathcal{P}$-cover when there is a $\mathcal{P}$-precover.</p>
+
+<p>Again by Grothendieck’s insight, we firstly show the existence of <em>relative covering</em>.</p>
+
+<div class="definition">
+  <p>(Base change). Let $p = q ∘ α$ be morphism of precovers. Then there is a induced map</p>
+  <p>$$\begin{equation}
+α ^♯ : \mathrm{KER}(q) → \mathrm{KER}(p), \quad \ker (?) ↦ \ker (? ∘ α).
+\end{equation}$$</p>
+  <p>We say $α ^♯$ is a relative covering, provided $\operatorname{im}(α ^♯)$ is a singleton $\{\ker α \}$.</p>
+</div>
+
+<p>Now we show the existence of relative $\mathcal{P}$-covering.</p>
+
+<div class="lemma">
+  <p>For any precover $p : P → M$, there is some $α : P → Q$ ($p = q ∘ α$) such that $α ^♯$ is a relative $\mathcal{P}$-covering.</p>
+  <div class="proof">
+    <p>If not, then there is an transfinite composition of precovers such that $\{\ker f_{γ , 0}\}$ is non-decreasing, while strictly ascending for successor ordinals:</p>
+    <p>$$\begin{equation}
+P := P_0 \xrightarrow {f_{1,0}} P_1 \xrightarrow {f_{2,1}} P_2 → \cdots P_γ \xrightarrow {f_{γ +1,γ }} \cdots P_{κ}.
+\end{equation}$$</p>
+    <p>We explain the construction.</p>
+    <ul>
+      <li>If $(f_{γ , 0})^♯$ is not a relative covering, then there is some new precover $p_{γ + 1}$ extending along $p_γ$ s.t. $\ker (f_{γ , 0}) ⊊ \ker (f_{γ +1, 0})$.</li>
+      <li>Suppose $γ$ is a limit ordinal, then the induced morphism $\varinjlim^{fil}_{β < γ }P_β → M$ maps from $\mathcal{P}$. We take arbitrary precover $p_γ : P_γ → M$ and set $θ _γ : \varinjlim^{fil}_{β < γ }P_β → P_γ$. Now denote $f_{γ , β }$ as the composition $P_β → \varinjlim^{fil}_{β < γ }P_β \xrightarrow {θ _γ } P_γ$. Clearly $\ker (f_{γ , 0})$ is <strong>no less than</strong> any $\ker (f_{β , 0})$ for $β < γ$.</li>
+    </ul>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec3/diagram_b3017d78bab75.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Again, let $κ ≫ |P|$, we see contradictions.</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>Let $\mathcal{P}$ be a class of modules or complexes closed under summands and filtered colimits. <strong>When $X$ has a $\mathcal{P}$-precover, then it has a $\mathcal{P}$-cover.</strong></p>
+  <div class="proof">
+    <p>We construct a transfinite composition of relative covers:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec3/diagram_a36f3ebadeb93.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We explain the followings ($γ$ is a limit ordinal).</p>
+    <ol>
+      <li>$\varinjlim^{fil}_{\beta < \gamma }(P_\beta) → M$, induced by colimit, is just a morphism from $\mathcal{P}$, which not necessary a precover. We take $\overline {p_γ} : \overline {P_γ} → M$ as arbitrary precover it factors through. Then there is a relative cover $\overline {P_γ } → P_γ$.</li>
+      <li>We claim $α _1 |_{\mathrm{im}(α _0)} : \mathrm{im}(α _0) ↪ \mathrm{im}(α _1)$ is an injection. This is due to $\ker (α _1 ∘ α _0) = \ker (α _0)$.</li>
+      <li>The monomorphism $\varinjlim^{fil}_{\beta < \gamma }(\alpha _\beta) ↪ \mathrm{im}(\alpha _\gamma)$ is induced by the monomorphisms $\mathrm{im}(\alpha _\beta) ↪ \mathrm{im}(\alpha _\gamma)$. Notice that the coposition $P_β → P_γ$ is a relative covering.</li>
+    </ol>
+    <p>If we fix a certian precover $\overline {p_γ} : \overline {P_γ} → M$ for all limit ordinals $γ$, then the inclusion chain for $\operatorname{im}(α _β)$’s stablises for $|β| ≫ |P_γ|$. Now such $\mathrm{im}(α _β)$ belongs to $𝐒𝐦𝐝 (\mathcal{P}) = \mathcal{P}$. <br /> We denote $q : S → M$ as such summand of $p_{β +1} : P_{β +1} → M$. It remains to show that $q$ is a cover. Note that $q$ is a precover. It suffices to show that</p>
+    <ul>
+      <li>for any precover $r : R → M$ and $r ∘ δ = q$, $δ$ is monic.</li>
+    </ul>
+    <p>Consider the following diagram.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec3/diagram_f99b141bfa12d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>By definition of relative covering ($⋆$),</p>
+    <p>$$\begin{equation}
+\ker (π _β) = \ker (α _β ) \overset ⋆= \ker ((δ ∘ π  _{β +1}) ∘ α _β) = \ker (δ ∘ π _β ).
+\end{equation}$$</p>
+    <p>Hence $δ$ is monic. Now we see that $q$ is a $\mathcal{P}$-cover.</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>Show the (<strong>partly</strong>) equivalent definition of (right) perfect rings. All modules are right modules.</p>
+  <ol>
+    <li>$𝐅𝐥𝐚𝐭 = 𝐏𝐫𝐨𝐣$,</li>
+    <li>$𝐅𝐥𝐚𝐭$-precovers are $𝐏𝐫𝐨𝐣$-precovers,</li>
+    <li>$𝐏𝐫𝐨𝐣$-cover exists.</li>
+  </ol>
+  <p>Hint: (1 → 2) is clear. (2 → 3) is due to the analysis above, as $𝐏𝐫𝐨𝐣$-precover always exists. (3 → 1) is due to the fact that flat module with a projective cover is projective (see above section).</p>
+</div>
+
+<h3 id="when-preenvelope-admits-an-envelope">When Preenvelope Admits an Envelope</h3>
+
 
 
   </article>

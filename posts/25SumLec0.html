@@ -88,6 +88,8 @@ MathJax = {
     <ul id="markdown-toc">
   <li><a href="#lecture-0" id="markdown-toc-lecture-0">Lecture 0</a>    <ul>
       <li><a href="#abstract" id="markdown-toc-abstract">Abstract</a></li>
+      <li><a href="#notations" id="markdown-toc-notations">Notations</a></li>
+      <li><a href="#functors" id="markdown-toc-functors">Functors</a></li>
     </ul>
   </li>
   <li><a href="#on-rings-and-modules" id="markdown-toc-on-rings-and-modules">On Rings and Modules</a>    <ul>
@@ -119,6 +121,8 @@ MathJax = {
   </div>
 </div>
 
+<h3 id="notations">Notations</h3>
+
 <p>Throughout,</p>
 
 <ul>
@@ -133,6 +137,55 @@ MathJax = {
   <li>$𝐏𝐫𝐨𝐣 (\mathcal{C})$: the class (or full subcategory) of projectives in $\mathcal{C}$,</li>
   <li>$𝐈𝐧𝐣 (\mathcal{C})$: the class (or full subcategory) of injectives in $\mathcal{C}$.</li>
 </ul>
+
+<h3 id="functors">Functors</h3>
+
+<p>We review some basic definitions and notions in homological algebra. We employ</p>
+
+<ul>
+  <li>$∐$ to denote <strong>coproducts</strong>,</li>
+  <li>$∏$ for <strong>products</strong>, and</li>
+  <li>$⨁$ specifically when $∐ \xrightarrow{∼} ∏$, For example, $⨁_{n ∈ ℤ} Σ^n M_n$ represents the sum of stalk complexes.</li>
+</ul>
+
+<p>The symbols $\varinjlim$ and $\varprojlim$ are utilised for <strong>colimits</strong> (injective limits) and <strong>limits</strong> (projective limits), respectively; in particular, the superscript $fil$ in $\varinjlim^{fil}$ indicates the <strong>filtered colimits</strong>.</p>
+
+<div class="example">
+  <p>(Preserving, reflecting, and creating). We explain by functors between Abelian categories. Given $F : \mathcal{A} → \mathcal{B}$:</p>
+  <ul>
+    <li>$F$ is said to <strong>preserve</strong> or <strong>commute with</strong> $\ker$, if any $0 → K \xrightarrow i X \xrightarrow f Y$ is exact in $\mathcal{A}$ implies $0 → F(K) \xrightarrow {F(i)} F(X) \xrightarrow {F(f)} F(Y)$ is exact in $\mathcal{B}$.</li>
+    <li>$F$ is said to <strong>reflect</strong> $\ker$, if any $0 → F(K) \xrightarrow {F(i)} F(X) \xrightarrow {F(f)} F(Y)$ is exact in $\mathcal{B}$ implies $0 → K \xrightarrow i X \xrightarrow f Y$ is exact in $\mathcal{A}$.</li>
+    <li>$F$ is said to <strong>create</strong> $\ker$, if any $0 → H \xrightarrow {φ } F(X) \xrightarrow {F(f)} F(Y)$ is exact in $\mathcal{B}$ implies the existence of the exact sequence $0 → K \xrightarrow i X \xrightarrow f Y$ in $\mathcal{A}$, such that $F(K) = H$ and $F(i) = φ$.</li>
+  </ul>
+</div>
+
+<div class="problem">
+  <p>Demonstrate that</p>
+  <ul>
+    <li>a fully faithful functor reflects limits;</li>
+    <li>the left/right adjoint functor preserves all limits/colimits, respectively;</li>
+    <li>for a <a href="https://en.wikipedia.org/wiki/Subcategory#Types_of_subcategories">Freydal luff</a> sub-diagram $ι : Q' → Q$, the functor $ι ^∗ : 𝐅𝐮𝐧𝐜𝐭 (Q, \mathcal{C}) → 𝐅𝐮𝐧𝐜𝐭 (Q', \mathcal{C})$ creates all limits and colimits,       <ul>
+        <li><strong>corollary: the (co)limits in $C(R)$ are computed termwise!</strong></li>
+      </ul>
+    </li>
+    <li>the forgetful functor $𝐌𝐨𝐝 _R → 𝐒𝐞𝐭𝐬$ creates all limits and filtered colimits,       <ul>
+        <li><strong>corollary: the filtered colimits and limits in $𝐌𝐨𝐝 _R$ are computed elementwise!</strong></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="definition">
+  <p>(Exactness). Left/right exact functors are <strong>precisely</strong> those <strong>preserving</strong> <strong>finite</strong> limits/colimits, respectively. A functor is termed <strong>exact</strong> if it is both left and right exact.</p>
+</div>
+
+<div class="definition">
+  <p>(Grothendieck’s <strong>AB conditions</strong>). See <a href="https://stacks.math.columbia.edu/tag/079A">stacks</a>, or <a href="https://ncatlab.org/nlab/show/additive+and+abelian+categories">n-lab</a>.</p>
+  <ul>
+    <li>The conditions AB3, AB3$^∗$, AB4, AB4$^∗$, and AB5 are standard in both $𝐌𝐨𝐝 _R$ and $C(R)$. <strong>We assert the isomorphisms such as $∏ \operatorname{cok}(f_∙ ) \xrightarrow ∼ \operatorname{cok}(∏ f_∙ )$ without further elaboration throughout these lectures.</strong></li>
+    <li>The author refined the statement of AB6 in n-lab during a rather uneventful afternoon. Nevertheless, AB6 is not considered significant within the context of homological algebra.</li>
+  </ul>
+</div>
 
 <h2 id="on-rings-and-modules">On Rings and Modules</h2>
 
@@ -809,53 +862,6 @@ T_k^∙ := (0 → Ω _{k+1}(N) \overset ι → F_{k} (N) → \cdots → F_0(N) �
 </div>
 
 <h2 id="on-chain-complexes">On Chain Complexes</h2>
-
-<p>We review some basic definitions and notions in homological algebra. We employ</p>
-
-<ul>
-  <li>$∐$ to denote <strong>coproducts</strong>,</li>
-  <li>$∏$ for <strong>products</strong>, and</li>
-  <li>$⨁$ specifically when $∐ \xrightarrow{∼} ∏$, For example, $⨁_{n ∈ ℤ} Σ^n M_n$ represents the sum of stalk complexes.</li>
-</ul>
-
-<p>The symbols $\varinjlim$ and $\varprojlim$ are utilised for <strong>colimits</strong> (injective limits) and <strong>limits</strong> (projective limits), respectively; in particular, the superscript $fil$ in $\varinjlim^{fil}$ indicates the <strong>filtered colimits</strong>.</p>
-
-<div class="example">
-  <p>(Preserving, reflecting, and creating). We explain by functors between Abelian categories. Given $F : \mathcal{A} → \mathcal{B}$:</p>
-  <ul>
-    <li>$F$ is said to <strong>preserve</strong> or <strong>commute with</strong> $\ker$, if any $0 → K \xrightarrow i X \xrightarrow f Y$ is exact in $\mathcal{A}$ implies $0 → F(K) \xrightarrow {F(i)} F(X) \xrightarrow {F(f)} F(Y)$ is exact in $\mathcal{B}$.</li>
-    <li>$F$ is said to <strong>reflect</strong> $\ker$, if any $0 → F(K) \xrightarrow {F(i)} F(X) \xrightarrow {F(f)} F(Y)$ is exact in $\mathcal{B}$ implies $0 → K \xrightarrow i X \xrightarrow f Y$ is exact in $\mathcal{A}$.</li>
-    <li>$F$ is said to <strong>create</strong> $\ker$, if any $0 → H \xrightarrow {φ } F(X) \xrightarrow {F(f)} F(Y)$ is exact in $\mathcal{B}$ implies the existence of the exact sequence $0 → K \xrightarrow i X \xrightarrow f Y$ in $\mathcal{A}$, such that $F(K) = H$ and $F(i) = φ$.</li>
-  </ul>
-</div>
-
-<div class="problem">
-  <p>Demonstrate that</p>
-  <ul>
-    <li>a fully faithful functor reflects limits;</li>
-    <li>the left/right adjoint functor preserves all limits/colimits, respectively;</li>
-    <li>for a <a href="https://en.wikipedia.org/wiki/Subcategory#Types_of_subcategories">Freydal luff</a> sub-diagram $ι : Q' → Q$, the functor $ι ^∗ : 𝐅𝐮𝐧𝐜𝐭 (Q, \mathcal{C}) → 𝐅𝐮𝐧𝐜𝐭 (Q', \mathcal{C})$ creates all limits and colimits,       <ul>
-        <li><strong>corollary: the (co)limits in $C(R)$ are computed termwise!</strong></li>
-      </ul>
-    </li>
-    <li>the forgetful functor $𝐌𝐨𝐝 _R → 𝐒𝐞𝐭𝐬$ creates all limits and filtered colimits,       <ul>
-        <li><strong>corollary: the filtered colimits and limits in $𝐌𝐨𝐝 _R$ are computed elementwise!</strong></li>
-      </ul>
-    </li>
-  </ul>
-</div>
-
-<div class="definition">
-  <p>(Exactness). Left/right exact functors are <strong>precisely</strong> those <strong>preserving</strong> <strong>finite</strong> limits/colimits, respectively. A functor is termed <strong>exact</strong> if it is both left and right exact.</p>
-</div>
-
-<div class="definition">
-  <p>(Grothendieck’s <strong>AB conditions</strong>). See <a href="https://stacks.math.columbia.edu/tag/079A">stacks</a>, or <a href="https://ncatlab.org/nlab/show/additive+and+abelian+categories">n-lab</a>.</p>
-  <ul>
-    <li>The conditions AB3, AB3$^∗$, AB4, AB4$^∗$, and AB5 are standard in both $𝐌𝐨𝐝 _R$ and $C(R)$. <strong>We assert the isomorphisms such as $∏ \operatorname{cok}(f_∙ ) \xrightarrow ∼ \operatorname{cok}(∏ f_∙ )$ without further elaboration throughout these lectures.</strong></li>
-    <li>The author refined the statement of AB6 in n-lab during a rather uneventful afternoon. Nevertheless, AB6 is not considered significant within the context of homological algebra.</li>
-  </ul>
-</div>
 
 <h3 id="functors-for-chain-complexes">Functors for Chain Complexes</h3>
 
