@@ -110,7 +110,7 @@ MathJax = {
   <li><a href="#a-note-on-projectives" id="markdown-toc-a-note-on-projectives">A Note on Projectives</a>    <ul>
       <li><a href="#the-definitions" id="markdown-toc-the-definitions">The Definitions</a></li>
       <li><a href="#resolutions-mathjax_protectedjetelsjwnzcp8j2qqcdkkjwnzcjksqmathjax_protected" id="markdown-toc-resolutions-mathjax_protectedjetelsjwnzcp8j2qqcdkkjwnzcjksqmathjax_protected">Resolutions ($K^-(𝐩𝐫𝐨𝐣)$)</a></li>
-      <li><a href="#resolutions-dg" id="markdown-toc-resolutions-dg">Resolutions (DG)</a></li>
+      <li><a href="#resolutions-via-browns-rep" id="markdown-toc-resolutions-via-browns-rep">Resolutions via Brown’s Rep</a></li>
     </ul>
   </li>
 </ul>
@@ -465,11 +465,17 @@ E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots
   <div class="proof">
     <p>(→). Consider the commutative diagram of ses</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec2/diagram_a5228c25d8e53.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/25SumLec2/diagram_43607adf87f7b.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>Since $X ∈ \mathcal{A}$, the morphism $X → \operatorname{cok}(i) → M_B$ factors through some $P ∈ \mathcal{A} ∩ \mathcal{B}$. The lifting property yields $P → M_C$. A pullback diagram yields $X → C$. <br /> Conversely, any such $X$ satisfies $(X, \mathcal{B}) = 0$ in $\frac{\text{Full Category}}{\mathcal{A} ∩ \mathcal{B}}$. Hence $X ∈ \mathcal{A}$.</p>
+    <p>Since $X ∈ \mathcal{A}$, the morphism $X → \operatorname{cok}(i) → M_B$ factors through some $P ∈ \mathcal{A} ∩ \mathcal{B}$. The lifting property yields $P → M_C$. A pullback diagram yields $X → C$. <br /> (←). We show that for any such $X$, ses $0 → B → E → X → 0$ splits. Notice that $\mathcal{B} ∩ \mathcal{C} = 𝐈𝐧𝐣$, we have the commutative diagram of ses：</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec2/diagram_176084049d8d8.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Notice that $i$ is induced by lifting property of $𝐈𝐧𝐣$, $j$ is induced by cokernel. The right square is both a pullback and pushout. By property of $X$, there is a dashed arrow $s$. Hence $0 → B → E → X → 0$ splits.</p>
   </div>
 </div>
+
+<p>Throughout, there is no such assumption that the category has enough projectives or injectives. However, for a complete hereditary cotorsion triple $(\mathcal{A},\mathcal{B},\mathcal{C})$, there are enough projectives for $\mathcal{A}$, and enough injectives for $\mathcal{C}$.</p>
 
 <h2 id="a-note-on-projectives">A Note on Projectives</h2>
 
@@ -569,7 +575,7 @@ E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots
   </div>
 </div>
 
-<h3 id="resolutions-dg">Resolutions (DG)</h3>
+<h3 id="resolutions-via-browns-rep">Resolutions via Brown’s Rep</h3>
 
 <p>We discuss the projective resolutions of general Abelian category with <strong>exact arbitrary coproducts</strong> (AB3, AB3*) and a projective generator $U$. The discussion are based on <a href="Brown-Resolution">Brown’s representability</a>.</p>
 

@@ -653,6 +653,13 @@ P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^
   <li>induction …</li>
 </ol>
 
+<div class="problem">
+  <p>Show that the full subcategory $\{M ∈ 𝐌𝐨𝐝_R ∣ M \ \text{f.g.}\}$ is Abelian, <strong>iff</strong> $R$ is Noetherian.</p>
+  <ul>
+    <li>In particular, it is a Serre subcategory which is closed under subobjects and quotient objects.</li>
+  </ul>
+</div>
+
 <p>In particular, $𝐦𝐨𝐝_R$ is not closed under kernel in general. To fix this, we may require f.p. is automatically  $3$-term f.p. (and thus $∞$-f.p.). This comes with coherency.</p>
 
 <div class="definition">
@@ -669,8 +676,17 @@ P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^
     <li>f.p. modules are $\infty$-presented.</li>
   </ol>
   <div class="proof">
-    <p>We show ($1 \to 2 \to 3 \to 1$) with a set-theoritic analysis; and $(3\to 4 \to 5 \to 4)$ with a homological analysis. <br /> <br /> ($1 \to 2$) is clear. <br /> <br /> ($2 \to 3$). For any f.g. left ideal $I$ and index set $\Lambda$, we show $I^\Lambda\simeq R ^\Lambda\otimes I$ (recall the equivalent definitions of f.p. modules). The flatness shows injection, and the f.g. shows surjection. <br /> <br /> ($3 \to 1$). We show f.g. $\iota: _RI\hookrightarrow R$ is preserved by $R^\Lambda$ via Baer’s criterion. Since f.p. = f.g. (by assumption), $\iota \otimes -$ commutes with $\prod$. <br /> <br /> ($3\to 4$). Note that f.p. modules are closed under extensions and cokernels. For ses $0 \to K \to X \to Y \to 0$ with $X$ and $Y$ f.p., we have $K$ f.g. in general. By horseshoe lemma, we obtain ses $0 \to \Omega_1 (K) \to \Omega_1 (X) \to \Omega_1 (Y) \to 0$ for $\Omega _1(X)$ and $\Omega_1 (Y)$ f.g.; by 3., $\Omega _1 (Y)$ and $\Omega _1(X)$ are f.p., hence $\Omega _1(K)$ is f.g.. This shows $K$ f.p.. <br /> <br /> ($4 \to5$). By definition, we can choose the first syzygy of any f.p. module as some f.p. modules. <br /> <br /> ($5 \to 3$). When $I \hookrightarrow R$ is f.g. ideal, $R/I$ is f.p., thus is $\infty$-presentable by assumption. Now $I$ is also $\infty$-presentable.</p>
+    <p>We show ($1 \to 2 \to 3 \to 1$) with a set-theoritic analysis; and $(3\to 4 \to 5 \to 4)$ with a homological analysis. <br /> <br /> ($1 \to 2$) is clear. <br /> <br /> ($2 \to 3$). For any f.g. left ideal $I$ and index set $\Lambda$, we show $I^\Lambda\simeq R ^\Lambda\otimes I$ (recall the equivalent definitions of f.p. modules). The flatness shows injection, and the f.g. shows surjection. <br /> <br /> ($3 \to 1$). We show f.g. $\iota: _RI\hookrightarrow R$ is preserved by $R^\Lambda$ via Baer’s criterion. Since f.p. = f.g. (by assumption), $\iota \otimes -$ commutes with $\prod$. <br /> <br /> ($3\to 4$). Note that f.p. modules are closed under extensions and cokernels. For ses $0 \to K \to X \to Y \to 0$ with $X$ and $Y$ f.p., we have $K$ f.g. in general. By horseshoe lemma, we obtain ses $0 \to \Omega_1 (K) \to \Omega_1 (X) \to \Omega_1 (Y) \to 0$ for $\Omega _1(X)$ and $\Omega_1 (Y)$ f.g.; by 3., $\Omega _1 (Y)$ and $\Omega _1(X)$ are f.p., hence $\Omega _1(K)$ is f.g.. This shows $K$ f.p.. <br /> <br /> ($4 \to 5$). By definition, we can choose the first syzygy of any f.p. module as some f.p. modules. <br /> <br /> ($5 \to 3$). When $I \hookrightarrow R$ is f.g. ideal, $R/I$ is f.p., thus is $\infty$-presentable by assumption. Now $I$ is also $\infty$-presentable.</p>
   </div>
+</div>
+
+<p>We gives an example of coherent rings which is not Noetherian.</p>
+
+<div class="example">
+  <p>The ring $R = ℤ [X_1, X_2, \ldots]$ is coherent but not Noetherian. The trivial representation $ℤ = R / (x_1, x_2, \ldots)$ is constructed by quotienting a $∞$-generated ideal. Hence $ℤ$ is f.g. rather than f.p.. To construct a finite presentation of a certian f.g. ideal, we adopt the same construction for that over $ℤ [x_1, \ldots , x_N]$ ($N ≫ 0$).</p>
+  <ul>
+    <li>This example shows that the property of coherency preserved by some filtered colimits. <strong>Coherency is related to cofinality, rather than its actual size</strong>.</li>
+  </ul>
 </div>
 
 <div class="problem">
