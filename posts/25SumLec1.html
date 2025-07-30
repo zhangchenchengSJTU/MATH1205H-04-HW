@@ -361,21 +361,62 @@ s_δ ∈ (X_δ , A) ≃ \varprojlim_{β < δ } (X_{β } , A) ∋ (s_β)_{β < δ
   <p>(Ordinal). The collection of ordinals refers to (a skeleton of) the category of well-ordered sets under the usual set-theoretic axioms favoured by algebraists. Inductively, any ordinal is obtained by the following procedures:</p>
   <ol>
     <li>$0 = ∅$ is the initial ordinal;</li>
-    <li>for any ordinal $α$, the successor ordinal is defined as $α^+ := α ⊔ \{α\}$;</li>
-    <li>the limit ordinal is defined as $α = ⋃ _{β < α} β$ for any $α$ not a successor ordinal.</li>
+    <li>for any ordinal $α$, the <strong>successor ordinal</strong> is defined as $α^+ := α ⊔ \{α\}$;</li>
+    <li>if there exists a set of oridnals $S$, such that $0 ∈ S$ and $(β ∈ S) → (β ^+ ∈ S)$, then we define $α = ⋃ S$ as a <strong>limit ordinal</strong>.</li>
   </ol>
 </div>
 
-<p>Note that $β ≨ α$ if and only if $β ∈ α$ as sets. We do not employ ordinal arithmetic throughout these lectures, as it may be confusing to beginners.</p>
+<p>The existence of limit ordinal is clear. If we assume $n^+ = n+1$ for $n ∈ ℕ$, then $ω = ℕ$ is the first limit oridnal.</p>
+
+<div class="problem">
+  <p>Show that a limit ordinal is never a successor ordinal. Hint: there is no such set $X ∈ X$ by axiom of regularity.</p>
+</div>
+
+<p>Note that $β ≨ α$ <strong>iff</strong> $β ∈ α$ as sets. We do not employ ordinal arithmetic throughout these lectures, as it may be confusing to beginners.</p>
 
 <p>There are instances where $α ≠ β$, yet there exists a bijection of sets ($|α| = |β|$). For example, we denote $ω = ⋃_{n ∈ ℕ} n$ as the first infinite ordinal, and $|ω| = |ω^+|$.</p>
 
-<div class="definition">
-  <p>(Cardinal). An ordinal $α$ yields the cardinal $\min \{β ∣ |β | = |α|\}$. One may verify that this is a set, and thus the minimal (hence least) element exists.</p>
+<div class="example">
+  <p>We demonstrate a technique termed <strong>transfinite induction (how ordinals operate)</strong>. The proposition states: <br /> For any $M := ∐ _{i ∈ I} M_i$ where each $M_i$ is countably generated, $\{f_n\}_{n ∈ ℕ} ⊆ \mathrm{End}(M)$. Then there exists a transfinite filtration $0 = M_0 ⊆ M_1 ⊆ \cdots M_γ ⊆ \cdots$ of $M$ such that</p>
+  <ol>
+    <li>$\{(f_n)|_{M_γ}\}_{n ∈ ℕ} ⊆ \mathrm{End}(M_γ)$;</li>
+    <li>$M_{γ} = M_γ ⊕  (\text{countably many}\ M_i \text{'s})$.</li>
+  </ol>
+  <p>Set $P_γ := (∃ \ \text{a construction for } \{M_α\}_{α ≤ γ})$. We show via transfinite induction that</p>
+  <ol>
+    <li>$P_0$ is true;</li>
+    <li>$P_γ → P_{γ +1}$;</li>
+    <li>$⋀ _{α < γ}(P_α) → P_γ$ for $γ$ a limit ordinal.</li>
+  </ol>
+  <div class="proof">
+    <p>Step 1 and Step 3 are clear. We show Step 2 with $P_γ → P_{γ + 1}$ (when $M_γ ⊊ M$). Upon selecting an arbitrary summand $M^0$ with $M^0 ∩ M_γ = 0$, the countably generated image $∑ _{n ∈ ℕ }f_n(M^0)$ is covered by countably many $M_i$’s. Denote their direct sums as $M^1$. Consider $∑ _{n ∈ ℕ }f_n((M^1 ⊕ M^0)$ and obtain $M^3$. Now $M_{γ +1} := (⨁_{n ∈ ℕ} M^n) ⊕ M_γ$ is the desired construction.</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>Projective modules are coproducts of countably generated projective modules.</p>
+  <div class="proof">
+    <p>Any projective module $P$ is of the form $f_0(∐ _λ R)$ for $(f_0)^2 = f_0$. Taking $M = ∐ _λ R$ and $\{f_n\}_{n ∈ ℕ} = \{1_M, f_0\}$ yields the $F^{(ω)}$-filtration of $M$. Since $f_0(-)$ preserves coproducts, $P = f_0(M)$ is the coproduct of summands of $F^{(ω)}$, i.e., the coproduct of countably generated projective modules.</p>
+  </div>
 </div>
 
 <div class="problem">
-  <p>Equivalently, an ordinal $α$ is a cardinal if and only if $|β| ≠ |α|$ for any $β ∈ α$.</p>
+  <p>Let $C^0([0,1], ℝ)$ be the ring of functions. Show that $\{f ∣ \mathrm{supp}(f) ⊆ (0 , 1]\}$ is an indecomposable projective module which is not finitely generated (but/hence countably generated).</p>
+</div>
+
+<div class="definition">
+  <p>(Cardinal). An ordinal $α$ yields the cardinal $\min \{β ∣ |β | = |α|\}$.</p>
+</div>
+
+<div class="proposition">
+  <p>The above is well-defined, i.e., $\{β ∣ |β | = |α|\}$ is a set with a unique least element.</p>
+  <div class="proof">
+    <p>Let $X$ denote the under lying set of $α$. Zorn’s lemma ensures the existence of well-ordered structure over $X$, and all these well-ordered structures forms a set controlled by $\mathrm{Hom}_{𝐒𝐞𝐭𝐬 }(\mathrm{Hom}_{𝐒𝐞𝐭𝐬 }(X,X) × \mathrm{Hom}_{𝐒𝐞𝐭𝐬 }(X,X), 2)$ (by definition of binary relation). Hence $\{β ∣ |β | = |α|\}$ is a set. <br /> We can easily check by transfinite induction that <strong>any ordinal $γ$ is well-orderd</strong>. Indeed for any ordinal $γ$, there is <strong>no countably</strong> descending chain $γ ∋ γ_1 ∋ \cdots$. Hence, all non-empty subset of $γ$ has a minimal element. Since $γ$ is totoally ordered, the minimal element in unique.</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>An ordinal $α (≠ 0)$ is a cardinal iff $|β| ≠ |α|$ for any $β ∈ α$.</p>
 </div>
 
 <p>We typically use $λ$, $μ$, $κ$ to denote cardinals, or $|X|$ for $X$ a set.</p>
@@ -402,45 +443,19 @@ s_δ ∈ (X_δ , A) ≃ \varprojlim_{β < δ } (X_{β } , A) ∋ (s_β)_{β < δ
     <p>$$\begin{equation}
 f : κ × κ → κ,\quad (m,n) ↦ \max (m,n).
 \end{equation}$$</p>
-    <p>Observe that the graph of $f$ is larger than the codomain of $f$ ($|\mathrm{Graph}(f)| = κ ⋅ κ > κ$). <br /> <br /> Now equip $\mathrm{Graph}(f) ⊆ κ × κ × κ$ with the lexicographic order. There exists a point $(α,β,γ) ∈ \mathrm{Graph}(f)$ such that $|\{x ∣ x < (α,β,γ)\}| = κ$. Now</p>
+    <p>Observe that the graph of $f$ is larger than the codomain of $f$ ($|\mathrm{Graph}(f)| = κ ⋅ κ > κ$). <br /> <br /> Now equip $\mathrm{Graph}(f) = \{(f(x,y), x,y)\} ⊆ κ × κ × κ$ with the lexicographic order, which we learned the case $κ = 10$ in primary school. There exists a point $(α,β,γ) ∈ \mathrm{Graph}(f)$ such that $|\{x ∈ \mathrm{Graph}(f) ∣ x < (α,β,γ)\}| = κ$. Now</p>
     <p>$$\begin{equation}
-κ ≤ \max(α, β) × \max(α, β) \xlongequal{\text{by assumptions}} \max(α, β) < κ.
+κ ≤ \underset{\text{domain of truncated } \ f} {\underbrace{|α| × |α|}} \xlongequal{\text{by assumptions}} |α| < κ.
 \end{equation}$$</p>
     <p>A contradiction.</p>
   </div>
 </div>
 
 <div class="problem">
-  <p>Show that $\max \{λ , μ\} = λ + μ = λ ⋅ μ$ for any $λ ≥ ω$ and $μ ≠ 0$.</p>
+  <p>Show that $\max (λ , μ) = λ + μ = λ ⋅ μ$ for any $λ ≥ ω$ and $μ ≠ 0$.</p>
 </div>
 
-<div class="example">
-  <p>We demonstrate a technique termed <strong>transfinite induction (how ordinals operate)</strong>. The proposition states: <br /> For any $M := ∐ _{i ∈ I} M_i$ where each $M_i$ is countably generated, $\{f_n\}_{n ∈ ℕ} ⊆ \mathrm{End}(M)$. Then there exists a transfinite filtration $0 = M_0 ⊆ M_1 ⊆ \cdots M_γ ⊆ \cdots$ of $M$ such that</p>
-  <ol>
-    <li>$\{(f_n)|_{M_γ}\}_{n ∈ ℕ} ⊆ \mathrm{End}(M_γ)$;</li>
-    <li>$M_{γ} = M_γ ⊕ \ (\text{countably many}\ M_i \text{'s})$.</li>
-  </ol>
-  <p>Set $P_γ := (∃ \ \text{construction of } \{M_α\}_{α ≤ γ})$. We show via transfinite induction that</p>
-  <ol>
-    <li>$P_0$ is true;</li>
-    <li>$P_γ → P_{γ +1}$;</li>
-    <li>$⋀ _{α < γ}(P_α) → P_γ$ for $γ$ a limit ordinal.</li>
-  </ol>
-  <div class="proof">
-    <p>Step 1 and Step 3 are clear. We show Step 2 with $P_γ → P_{γ + 1}$ (when $M_γ ⊊ M$). Upon selecting an arbitrary summand $M^0$ with $M^0 ∩ M_γ = 0$, the countably generated image $∑ _{n ∈ ℕ }f_n(M^0)$ is covered by countably many $M_i$’s. Denote their direct sums as $M^1$. Consider $∑ _{n ∈ ℕ }f_n((M^1 ⊕ M^0)$ and obtain $M^3$. Now $M_{γ +1} := (⨁_{n ∈ ℕ} M^n) ⊕ M_γ$ is the desired construction.</p>
-  </div>
-</div>
-
-<div class="theorem">
-  <p>Projective modules are coproducts of countably generated projective modules.</p>
-  <div class="proof">
-    <p>Any projective module $P$ is of the form $f_0(∐ _λ R)$ for $(f_0)^2 = f_0$. Taking $M = ∐ _λ R$ and $\{f_n\}_{n ∈ ℕ} = \{1_M, f_0\}$ yields the $F^{(ω)}$-filtration of $M$. Since $f_0(-)$ preserves coproducts, $P = f_0(M)$ is the coproduct of summands of $F^{(ω)}$, i.e., the coproduct of countably generated projective modules.</p>
-  </div>
-</div>
-
-<div class="problem">
-  <p>Let $C^0([0,1], ℝ)$ be the ring of functions. Show that $\{f ∣ \mathrm{supp}(f) ⊆ (0 , 1]\}$ is an indecomposable projective module which is not finitely generated (but/hence countably generated).</p>
-</div>
+<p>The above identity simplifies cardinal arithmetic.</p>
 
 <h3 id="cofinality-and-small">Cofinality, and Small</h3>
 
@@ -450,16 +465,45 @@ f : κ × κ → κ,\quad (m,n) ↦ \max (m,n).
 
 <p>What if certain kinds of $α ↪ β$ fail to be cofinal?</p>
 
-<div class="definition">
-  <p>For ordinals $α$ and $β$, say $α$ is <strong>$β$-filtered</strong> provided $\sup (\operatorname{im}(f)) ∈ β$ for any poset morphism $f : α → β$.</p>
+<div class="example">
+  <p>For instance, $1$ is not cofinal for any limit ordinal $α$. Hence, any choice of element in the set $x ∈ ⋃ _{γ < α}X_γ$ implies $x ∈ X_γ$ for some $γ < α$.</p>
 </div>
 
-<p>Clearly, the definition is trivial when $α = γ^+$. Therefore, <strong>we assume $α$ to be a limit ordinal</strong>. Zorn’s lemma shows that $β$-filtered ordinals are precisely $|β|$-filtered ones. Therefore, <strong>we assume $β$ to be a cardinal</strong>, e.g., $κ$.</p>
+<div class="definition">
+  <p>For ordinals $α$ and $β$, say $α$ is <strong>$β$-filtered</strong> provided $\sup (\operatorname{im}(f)) ∈ β$ for any <em>order-preserving morphism</em> (more than inclusions) $f : α → β$.</p>
+</div>
 
-<p>Here is a SLOGAN: <strong>$α$ is $κ$-filtered if and only if $α$ has better cofinality than $∀ β ∈ κ$.</strong></p>
+<p>We slightly simplify the definition that $α$ is $β$-filtered.</p>
+
+<ol>
+  <li><strong>WLOG, we assume $α$ to be a limit ordinal</strong>. Clearly, the definition is trivial when $α = γ^+$.</li>
+  <li><strong>It is anodye to assume $β$ to be a cardinal</strong>. That is, $β$-filtered ordinals coincides $β '$-filtered ordinals if then have the same underlying cardinal $κ$. WLOG suppose $β ' = κ$.
+    <ol>
+      <li>Assume $α$ is $β$-filtered. Any order preserving morphism $κ → α$ extends to $β ↠ κ → α$ by compressing all $\{γ ∣ κ < γ\}$. Hence $α$ is $κ$-filtered.</li>
+      <li>Assume $α$ is $κ$-filtered. It suffices to construct an order preserving surjection $p : κ ↠ β$. Let $φ : κ → β$ be bijection of underlying sets. Set $p(0) = φ (0)$, $p(γ^+) = \max \{p(γ), φ (γ ^+)\}$ for successors, and $p (γ) = \sup_{δ < γ} \{p(δ)\}$ for limit ordinal $γ$.</li>
+    </ol>
+  </li>
+</ol>
 
 <div class="problem">
-  <p>Show that the first $κ$-filtered ordinal ($\widetilde κ$) is precisely the least cardinal larger than $κ$. Hint: $κ ⋅ κ < \widetilde κ$, and $\widetilde κ$ is a successor cardinal.</p>
+  <p>Show that it is anodyne to define a limit ordinal <strong>$α$ is cofinal to a set $X$.</strong></p>
+</div>
+
+<div class="example">
+  <p><strong>Large limit oridnals may have small cofinality.</strong> Let $ℵ _0 = ω$ denote the first infinite cardinal. There exists the least cardinal, $ℵ _1$, larger then $ℵ _0$. We define $ℵ _∙ : ω → \text{cardinals}$. Again, there is a least cardinal larger than any $ℵ _k$, denoted as $ℵ _{ω}$. Now, the functor $ℵ _∙ : ω → ℵ _ω$ satisfies</p>
+  <p>$$\begin{equation}
+\varinjlim {}^{fil}_{k ∈ ω } ℵ _k = \sup \{ℵ _k ∣ k ∈ ω\} = ℵ _ω ;\quad \text{but} \ ℵ _ω ≫ ω !
+\end{equation}$$</p>
+</div>
+
+<p>A slogan: $α$ is $κ$-filtered if and only if $α$ has <strong>better cofinality</strong> than $∀ β ∈ κ$.</p>
+
+<div class="problem">
+  <p>Show that</p>
+  <ul>
+    <li>the first $κ$-filtered ordinal ($\widetilde κ$) is precisely the least cardinal larger than $κ$. Hint: $κ ⋅ κ < \widetilde κ$, and $\widetilde κ$ is a successor cardinal.</li>
+    <li>not every cardinal larger than $κ$ is $κ$-filtered.</li>
+  </ul>
 </div>
 
 <p>Hence, there exist non-$ω$-filtered ordinals. One may consult this <a href="25SumLec0#an-interesting-example-on-transfinite-filtration">interesting example</a> for deeper understanding.</p>
@@ -469,9 +513,9 @@ f : κ × κ → κ,\quad (m,n) ↦ \max (m,n).
 <div class="example">
   <p>Let $α$ be $κ$-filtered. For any set $X$ with $|X| = κ$, and</p>
   <ul>
-    <li>an $α$-transfinite composition of morphisms, i.e., a colimit-preserving functor $Y_∙ : α → \mathcal{C}$.</li>
+    <li>for any $α$-transfinite composition of morphisms, i.e., a colimit-preserving functor $Y_∙ : α → \mathcal{C}$.</li>
   </ul>
-  <p>Any set map $φ : X → \varinjlim Y_∙$ factors through some $Y_γ$.</p>
+  <p>Then, any set map $φ : X → \varinjlim Y_∙$ factors through some $Y_γ$.</p>
   <div class="proof">
     <p>For any $x ∈ X$, $φ |_x : x → \varinjlim Y_∙$ factors through some $Y_{γ _x}$. Select $x ↦ Y_{γ _x}$ for arbitrary $x ∈ X$, which defines a map $γ _∙ : X → α$. By definition, $\sup (\operatorname{im}(γ _∙ )) ∈ α$. Hence, $φ$ factors through $Y_{\sup (\operatorname{im}(γ _∙ ))}$.</p>
   </div>
@@ -523,11 +567,12 @@ f : κ × κ → κ,\quad (m,n) ↦ \max (m,n).
   <li>For those acquainted with cofibrantly generated model structures, the class $^⟂(\mathcal{X}^⟂ )$ is reminiscent of a closure of $\mathcal{X}^⟂$ under coproducts with a certain transfinite filtration.</li>
 </ul>
 
-<p>We begin with the following deduction: a cotorsion theory in $C(R)$ is cogenerated by a set of objects $\mathcal{X}$ if and only if it is <strong>cogenerated by a single object</strong> $(∐ \mathcal{X})^{(ω)}$. The trick is Eilenberg–Mazur swindle, e.g.,</p>
+<p>We begin with the following deduction: a cotorsion theory in $C(R)$ is cogenerated by a set of objects $\mathcal{X}$ if and only if it is <strong>cogenerated by a single object</strong> $S:= (∐ \mathcal{X})$:</p>
 
-<p>$$\begin{equation}
-X = \ker [(X ⊕ Y) ∐ (X ⊕ Y) ∐ \cdots → X ∐ (Y ⊕ X) ⊕ (Y ⊕ X) ∐ → \cdots].
-\end{equation}$$</p>
+<ul>
+  <li>Since $S ∈ 𝐅𝐢𝐥 (\mathcal{X})$, one has $\mathcal{X}^⟂ = (\{S\} ∪ \mathcal{X})^⟂ ⊆ S^⟂$;</li>
+  <li>Since $\mathcal{X} ⊆ 𝐒𝐦𝐝 (S)$, one has $S^⟂ ⊆ \mathcal{X}^⟂$.</li>
+</ul>
 
 <div class="theorem">
   <p>(Eklof-Trlifaj lemma). For any object $S ∈ C(R)$, the cotorsion pair cogenerated by $S$ is complete.</p>
@@ -548,6 +593,12 @@ M = M_0 ⊆ M_1 ⊆ \cdots ⊆ M_γ ⊆ \cdots \quad (γ < α)
       </div> <br /> </center>
     <p>The composition $P → M_{β +1} → M_α$ is our desired morphism.</p>
   </div>
+</div>
+
+<div class="problem">
+  <p>Construct the dashed arrow. Hint: $$\begin{equation}
+g' = K \xrightarrow {ι _{g'}} K^{∐ (L, M_β)} \xrightarrow {Φ _β} M_β.
+\end{equation}$$</p>
 </div>
 
 <p>We do not require any of $\mathcal{S}$, $\mathcal{S}^⟂$, or $^⟂ (\mathcal{S}^⟂ )$ to be closed under $Σ ^±$. We only use that, $S$ is a $\max(|S|, |R|, ω)$-small object.</p>
