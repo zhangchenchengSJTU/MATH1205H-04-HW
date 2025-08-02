@@ -682,7 +682,7 @@ F_β = \varinjlim_{γ < β } \left[\frac{F_1}{0} \xrightarrow {\binom 10} \frac{
   <ol>
     <li>All projective complexes bounded above are DG-projective.</li>
     <li>The tensor product of two DG-projective complexes is DG-projective.</li>
-    <li>Dold’s well-known example $\cdots → ℤ / 4ℤ \xrightarrow {× 2} ℤ / 4ℤ→ \cdot$ is NOT DG-projective.</li>
+    <li>Dold’s well-known example $\cdots → ℤ / 4ℤ \xrightarrow {× 2} ℤ / 4ℤ→ \cdots$ is NOT DG-projective.</li>
   </ol>
 </div>
 
@@ -724,6 +724,12 @@ F_β = \varinjlim_{γ < β } \left[\frac{F_1}{0} \xrightarrow {\binom 10} \frac{
 
 <h3 id="derived-category-and-its-closed-monoidal-structure">Derived Category and Its Closed Monoidal Structure</h3>
 
+<p>This is an <em>easy</em> approach to derived category, as X.W. Chen <a href="https://arxiv.org/pdf/1908.04599">mentioned</a> that</p>
+
+<p>$$\begin{equation}
+\boxed{\text{resolutions make life easier, but not really easier}}
+\end{equation}$$</p>
+
 <p>We explain derived functors $\mathrm R^∙ \mathcal{HOM}(-, ?)$ and $\mathrm L_∙ (- ⊗ ?)$ in DG-complexes. We write $𝐑 \mathrm{Hom}$ and $⊗^𝐋$ for simplicity.</p>
 
 <p>The functors are defined for general Abelian categories with enough projectives and injectives. We talk about $C(R)$ ($R$ commutative) only.</p>
@@ -764,7 +770,7 @@ F_β = \varinjlim_{γ < β } \left[\frac{F_1}{0} \xrightarrow {\binom 10} \frac{
 <div class="example">
   <p>(Attempt). Once you attempt to show the monoidal structure of $D(R)$, you fails to show the identity $ρ (X ⊗ ^L Y) = ρ X ⊗ ρ Y$. This makes $(D(R), ⊗ ^L, \underline R)$ a <em>lax</em> monoidal category.</p>
   <ul>
-    <li>Thanks to MacLane, there is a way (possibly complicated) to reform the <em>strict</em> structure from the <em>lax</em> one.</li>
+    <li>Thanks to MacLane, there is a way (possibly by a complicated conjugation) to reform the <em>strict</em> structure from the <em>lax</em> one.</li>
   </ul>
   <p>We seek for a direct ways to obtain the strict monoidal structure of $D(R)$. Consider the quasi-isomorphisms:</p>
   <p>$$\begin{equation}
