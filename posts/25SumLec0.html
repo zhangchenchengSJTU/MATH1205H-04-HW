@@ -104,8 +104,10 @@ MathJax = {
       <li><a href="#functors-for-chain-complexes" id="markdown-toc-functors-for-chain-complexes">Functors for Chain Complexes</a></li>
       <li><a href="#resolving-chain-complexes" id="markdown-toc-resolving-chain-complexes">Resolving Chain Complexes</a></li>
       <li><a href="#closed-monoidal-structure" id="markdown-toc-closed-monoidal-structure">Closed Monoidal Structure</a></li>
-      <li><a href="#further-discussion-on-the-homotopy-category-mathjax_protectedjesouikkmathjax_protected" id="markdown-toc-further-discussion-on-the-homotopy-category-mathjax_protectedjesouikkmathjax_protected">Further Discussion on the Homotopy Category $K(R)$</a></li>
+      <li><a href="#more-on-mathjax_protectedjfxtyxroy2fse0hptx0kmathjax_protected" id="markdown-toc-more-on-mathjax_protectedjfxtyxroy2fse0hptx0kmathjax_protected">More on $\mathcal{HOM}$</a></li>
+      <li><a href="#a-discussion-on-the-homotopy-category-mathjax_protectedjesouikkmathjax_protected" id="markdown-toc-a-discussion-on-the-homotopy-category-mathjax_protectedjesouikkmathjax_protected">A Discussion on the Homotopy Category $K(R)$</a></li>
       <li><a href="#a-module-like-analysis-of-mathjax_protectedjemouikkmathjax_protected" id="markdown-toc-a-module-like-analysis-of-mathjax_protectedjemouikkmathjax_protected">A Module-like Analysis of $C(R)$</a></li>
+      <li><a href="#double-complexes" id="markdown-toc-double-complexes">Double Complexes</a></li>
     </ul>
   </li>
 </ul>
@@ -188,7 +190,7 @@ MathJax = {
 </div>
 
 <div class="problem">
-  <p>Here are some <strong>well-known properties</strong> of filtered colimits (over $𝐒𝐞𝐭𝐬$, $𝐌𝐨𝐝_R$, $C(R)$, etc). We take $ι _0 : M_{i_0} → \varinjlim ^{fil}_{i ∈ I} M_i$ as the structure morphism for filtered colimit.</p>
+  <p>Here are some <strong>well-known properties</strong> of filtered colimits (over $𝐌𝐨𝐝_R$, $C(R)$, or a general AB5 category). We take $ι _0 : M_{i_0} → \varinjlim ^{fil}_{i ∈ I} M_i$ as the structure morphism for filtered colimit.</p>
   <ol>
     <li>Any element $x : \{∗\} → \varinjlim ^{fil}_{i ∈ I} M_i$ factors through some $ι_i$. (As every point is <strong>small</strong>).</li>
     <li>$\ker (ι _{i}) = ⋃ _{α_{j,i}^{(k)} : i → j} \ker α _{j,i}^{(k)}$ (such set-theoretic union for modules is also a module).       <ul>
@@ -197,6 +199,10 @@ MathJax = {
     </li>
     <li>Let $\{f_i : M_i ↪ N\}_{i ∈ I}$ be a collection of monomorphisms which is compatible with the filtered diagram $I$. Then $\varinjlim ^{fil}_{i ∈ I} M_i ↪ N$ is also monic.</li>
     <li>$∑_{λ ∈ Λ } (V ∩ U_λ) = V ∩ ∑_{λ ∈ Λ } (U_λ)$. This is another equivalent definition of AB5 condition.</li>
+    <li>(Assuming enough $𝐏𝐫𝐨𝐣$). Let $F$ be a left adjoint. Then filtered colimit preserves its left derivatives, i.e., $\varinjlim ^{fil}(\mathrm L^k F)(M_∙) ≃ (\mathrm L^k F)(\varinjlim ^{fil}M_∙)$ for $k ≥ 0$.       <ul>
+        <li>General left adjoint functors include colimits (e.g. coproducts), free functors (e.g. $X ↦ R^{(X)}$, sheafification), realisations (e.g. geometric/categorical realisation of simplicial sets), $(? ⊗ -)$, inverse images of either sheaves or presheaves (e.g. stalks, constant sheaves, or the change of category in general).</li>
+      </ul>
+    </li>
   </ol>
 </div>
 
@@ -440,7 +446,7 @@ $$</p>
 <p>Note that</p>
 
 <p>$$\begin{equation}
-\text{f.p.} = \text{compact (紧对象)} ⊆ \text{f.g.} ⊆ \text{FAKE f.g.} \quad  \textcolor{gray}{= \ compact \ (紧模)}.
+\text{f.p.} = \text{compact (紧对象)} ⊆ \text{f.g.} ⊆ \text{FAKE f.g.} \quad  \color{gray}{= \ compact \ (紧模)}.
 \end{equation}$$</p>
 
 <h3 id="mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-mathjax_protectedjpcdkijwnzcn8j2qoyqmathjax_protected-and-mathjax_protectedjpcdkixwnzcl8j2qmvcdkk0kmathjax_protected">$𝐏𝐫𝐨𝐣$, $𝐈𝐧𝐣$ and $𝐅𝐥𝐚𝐭$</h3>
@@ -779,16 +785,16 @@ P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^
 
 <h3 id="character-module">Character Module</h3>
 
-<p>The character module transfers and reflects from injective modules to flat modules; the dual procedure applies for Noetherian rings.</p>
-
-<p>We commence with the contravariant functor $(-)^+ := (-, \mathbb Q / \mathbb Z)_{\mathbb Z}$, which maps $\mathrm{Mod}_R$ to $\mathrm{Mod}_{R^{\mathrm{op}}}$, and is</p>
+<p>The character module rises in the standard injective resolution $ℤ ↪ ℚ ↠ ℚ / ℤ$. This yields a functor functor $(-)^+ := \mathrm{Ext}^1_ℤ (-, ℤ) := (-, \mathbb Q / \mathbb Z)_{\mathbb Z}$, aka <strong>Pontryagin dual</strong>. Note that this functor is</p>
 
 <ul>
   <li><strong>faithful</strong> (as $\mathbb Q / \mathbb Z$ is a cogenerator) and</li>
   <li><strong>exact</strong> (as $\mathbb Q / \mathbb Z$ is injective).</li>
 </ul>
 
-<p>Consequently, <strong>it preserves and reflects exactness</strong>. In particular, $((-)^+)^{\mathrm{op}}$ preserves and reflects monomorphisms and epimorphisms.</p>
+<p>Consequently, <strong>it preserves and reflects zero objects and exactness</strong>. In particular, $((-)^+)^{\mathrm{op}}$ preserves and reflects monomorphisms and epimorphisms.</p>
+
+<p>We shall see this functor suprisingly transfers and reflects from injective modules to flat modules; the dual procedure applies for Noetherian rings.</p>
 
 <div class="example">
   <p>We demonstrate that f.p. flat modules are projective via $(-)^+$. If $F$ is flat, then $(F ⊗ -)^+ ≃ F ⊗ (-)^+$ is exact. Observe that</p>
@@ -799,7 +805,11 @@ P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^
 </div>
 
 <div class="problem">
-  <p>There are examples that f.g. flat modules are not projectve. An example is given in <a href="https://stacks.math.columbia.edu/tag/052H">stacks project</a>.</p>
+  <p>There are examples that f.g. flat modules are not projectve. An example is given in <a href="https://stacks.math.columbia.edu/tag/052H">stacks project</a>. A forthcoming example is the unique principal ideal of the vRN:</p>
+  <p>$$\begin{equation}
+I = \{φ ∈ \mathrm{End}_𝔽 (𝔽^{(ω)}) ∣ \dim _𝔽 \operatorname{im}(φ ) < ∞\} ↪ \mathrm{End}_𝔽 (𝔽^{(ω)}).
+\end{equation}$$</p>
+  <p>See discussion of <a href="25SumLec3#example-vnr-rings">von Neumann Ring</a>.</p>
 </div>
 
 <div class="problem">
@@ -1089,7 +1099,136 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
   <p>Show that $(X, ∏ Y_∙)_{\text{null-ho}} ≃ ∏ (X,Y_∙)_{\text{null-ho}}$, and $(∐ X_∙, Y)_{\text{null-ho}} ≃ ∏ (X_∙, Y)_{\text{null-ho}}$.</p>
 </div>
 
-<h3 id="further-discussion-on-the-homotopy-category-mathjax_protectedjesouikkmathjax_protected">Further Discussion on the Homotopy Category $K(R)$</h3>
+<div class="problem">
+  <p>Show that $\mathcal{HOM}(X, \mathrm{Cone}(f)) ≃ \mathrm{Cone}(\mathcal{HOM}(X, f))$, and $\mathcal{HOM}(Σ ^{-1}\mathrm{Cone}(f), A) ≃ \mathrm{Cone}(\mathcal{HOM}(f, A))$</p>
+</div>
+
+<p>There is also an <em>homotopical $\mathrm{Ext}$</em> functor.</p>
+
+<div class="definition">
+  <p>($\mathrm{Ext}_{dw}^∙$). We define the bifunctors</p>
+  <p>$$\begin{equation}
+\mathrm{Ext}_{dw}^∙ : C(R)^{\mathrm{op}} × C(R) → 𝐌𝐨𝐝 _R,\quad 
+\end{equation}$$</p>
+  <p>sending the pair $(X, Y)$ to $H^k (\mathcal {HOM}(X,Y)) = (X,Σ ^k Y)_K$.</p>
+</div>
+
+<p>Here $(-)_{dw}$ means <em>degreewise split</em>.</p>
+
+<div class="problem">
+  <p>Show that $\mathrm{Ext}^k_{dw}$ is a <strong>subfunctor</strong> of usual $\mathrm{Ext}^k$. Hint: it suffices to show for $k = 1$, by dimension shift. The distinguished triangle of cone embedding</p>
+  <p>$$\begin{equation}
+Σ ^{-1}X \xrightarrow f Y ↪ \mathrm{Cone}(f) ↠ X
+\end{equation}$$</p>
+  <p>gives the correspondence (by TR1) $[f] ↔ [\mathrm{Cone}(f)]$. Here</p>
+  <ul>
+    <li>$[f]$ runs through $H^0(\mathcal{HOM}(Σ^{-1}X, Y)) = H^1(\mathcal{HOM}(X, Y))$;</li>
+    <li>$\mathrm{Cone}(f)$ identifies termwise split ses in $\mathrm{Ext}^1(X,Y)$.</li>
+  </ul>
+</div>
+
+<h3 id="more-on-mathjax_protectedjfxtyxroy2fse0hptx0kmathjax_protected">More on $\mathcal{HOM}$</h3>
+
+<p>Thanks to closed monoidal structure, we <em>obtain</em> the following canonical morphisms without verification.</p>
+
+<div class="example">
+  <p>(Composition). There is a morphism extended from composition of $\mathrm{Hom}_{C(R)}(-, ?)$:</p>
+  <p>$$\begin{equation}
+φ : \mathcal{HOM}(Z,Y) ⊗ \mathcal{HOM}(Y,X) → \mathcal{HOM}(Z,X).
+\end{equation}$$</p>
+  <p>In view of closed monoidal structure, the morphism comes from</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/25SumLec0/diagram_b2dd1e4a520fd.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>In element, let $g ∈ \mathcal{HOM}(Y,Z)^q$ and $f ∈ \mathcal{HOM}(X,Y)^p$, then $(gf) ∈ \mathcal{HOM}(X,Z)^{p+q}$. One can verify the compatibility of differential:</p>
+  <p>$$\begin{aligned}
+d_{𝐋𝐇𝐒 }(g ⊗ f) & = [d,g] ⊗ f  + (-1)^{|g|} g ⊗ [d,f]\\
+& = (dg) ⊗ f - (-1)^{|g|} (gd)⊗ f + (-1)^{|g|} g⊗ (df) - (-1)^{|f|+|g|} g⊗ (fd) \\
+& \overset{φ } → (dg) f - (-1)^{|g|} (gd)f + (-1)^{|g|} g (df) - (-1)^{|f|+|g|} g (fd) \\
+& = d (gf) - (-1)^{|gf|} (gf) d\qquad = d_{𝐑𝐇𝐒 }(gf).
+\end{aligned}$$</p>
+</div>
+
+<div class="problem">
+  <p>Show the (canonical) natural transformation</p>
+  <p>$$\begin{aligned}
+A ⊗ \mathcal{HOM}(B,C) &→ \mathcal{HOM}(B, A ⊗ C), \\[6pt]
+∐\limits_{p+t=n} ∏\limits_{r-q=t} A^p ⊗ (B^q , C^r) &↦ ∏\limits_{s-q = n} ∐\limits_{p+r=s} (B^q , A^p ⊗  C^r).
+\end{aligned}$$</p>
+  <p>It is an isomorphism, iff <em>finiteness condition</em> is satisfied, while either</p>
+  <ul>
+    <li>$B^∙$ are f.g. projective modules, or</li>
+    <li>$B^∙$’s are f.p., and $A^∙$ are flat</li>
+  </ul>
+  <p>holds for each $(p,q,r)$. In particular, the isomorphism holds when $B$ is bounded with f.g. projective terms.</p>
+</div>
+
+<div class="problem">
+  <p>Show the (canonical) natural transformation</p>
+  <p>$$\begin{aligned}
+A ⊗ \mathcal{HOM}(B,C) &→ \mathcal{HOM}(\mathcal{HOM}(A, B), C), \\[6pt]
+∐\limits_{p+t=n} ∏\limits_{r-q=t} A^p ⊗ (B^q , C^r) &↦ ∏\limits_{r-s = n} ∏\limits_{q-p = s} ((A^p, B^q) , C^r).
+\end{aligned}$$</p>
+  <p>It is an isomorphism, iff <em>finiteness condition</em> is satisfied, while either</p>
+  <ul>
+    <li>$B^∙$ are f.g. projective modules, or</li>
+    <li>$B^∙$’s are f.p., and $C^∙$ are injective</li>
+  </ul>
+  <p>holds for each $(p,q,r)$. In particular, the isomorphism holds when $B$ is bounded with f.g. projective terms.</p>
+</div>
+
+<p>There are some simplified forms.</p>
+
+<div class="example">
+  <p>The <strong>evaluation</strong> takes the form</p>
+  <p>$$\begin{equation}
+\mathcal{HOM}(A,B) ⊗ A → B,\quad f ⊗ a ↦ f(a).
+\end{equation}$$</p>
+  <p>It is epic when any $b ∈ B^k$ lies in the image of some $∐ A^∙ → B^k$. In short, $B^k ∈ 𝐠𝐞𝐧 (∐ A^∙)$.</p>
+</div>
+
+<div class="example">
+  <p>The <strong>coevaluation</strong> takes the form</p>
+  <p>$$\begin{equation}
+A → \mathcal{HOM}(\mathcal{HOM}(A,B), B),\quad a ↦ [f ↦ f(a)]
+\end{equation}$$</p>
+  <p>It is monic when any $a ∈ A^n$ is detected by some $A → ∏ B^∙$. In short, $A^n ∈ 𝐜𝐨𝐠𝐞𝐧 (∏ B^∙)$.</p>
+</div>
+
+<div class="problem">
+  <p>Let $φ : A → B$ be a chain map. Then there is a induced chain map</p>
+  <p>$$\begin{equation}
+φ ∈ \mathcal{HOM}(A, B) → \mathcal{HOM} (\mathcal{HOM}(X,A),\mathcal{HOM}(X,B)) ∋  φ _∗.
+\end{equation}$$</p>
+  <p>Show that the morphism is compatible with the differential, i.e.,</p>
+  <p>$$\begin{equation}
+d_{\mathcal{HOM}(\mathcal{HOM}(X,A),\mathcal{HOM}(X,B))}(φ _∗) = (d_{\mathcal{HOM}(A,B)}(φ ))_∗ .
+\end{equation}$$</p>
+  <div class="proof">
+    <p>Consider</p>
+    <p>$$\begin{aligned}
+\{d_{𝐋𝐇𝐒}(φ _∗ )\}(α) & = [d_{𝐋𝐇𝐒}, φ _∗ ](α)\\
+&= d_{\mathcal{HOM}(X,B)} ∘ φ _∗ (α) - (-1)^{|φ _∗|} φ _∗ ∘ d_{\mathcal{HOM}(X,A)} (α)\\
+&= d_{\mathcal{HOM}(X,B)} (φα) - (-1)^{|φ|} φ (d_{\mathcal{HOM}(X,A)} (α))\\
+&= dφα - (-1)^{|φ α|}φ α d - (-1)^{|φ|} φ (dα - (-1)^{|α |}α d)\\
+&= dφα - (-1)^{|φ|} φ dα\quad = \{d_{𝐑𝐇𝐒} (φ)\}_∗ (α) .
+\end{aligned}$$</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>Show that $d(ψ ^∗) = (d (ψ ))^∗$.</p>
+</div>
+
+<p>Thanks to functoriality, we claim for any chain complex $K$, and chain map/null homotopy/homotopy equivalence $f : X → Y$,</p>
+
+<ol>
+  <li>$f_∗ : \mathcal{HOM}(K, X) → \mathcal{HOM}(K, Y)$ is again a chain map/null homotopy/homotopy equivalence;</li>
+  <li>$f^∗: \mathcal{HOM}(Y, K) → \mathcal{HOM}(X, K)$ is again a chain map/null homotopy/homotopy equivalence;</li>
+  <li>$f ⊗ 1 : Y ⊗ K → X ⊗ K$ is again a chain map/null homotopy/homotopy equivalence.</li>
+</ol>
+
+<h3 id="a-discussion-on-the-homotopy-category-mathjax_protectedjesouikkmathjax_protected">A Discussion on the Homotopy Category $K(R)$</h3>
 
 <p>We present several formal approaches to computing the homotopy category $K(R)$. Here, $R$ may be replaced by a general Abelian category.</p>
 
@@ -1191,6 +1330,10 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
 
 <p>Hence, a compact object need not to be f.g..</p>
 
+<ul>
+  <li>If we choose $\mathcal{HOM}$ instead, then compact objects are exactly bounded complexes with f.p. modules.</li>
+</ul>
+
 <div class="example">
   <p>In general, $C(R)$ can be regarded as a full subcategory of $𝐌𝐨𝐝 _{(R^ℤ) [d] / I}$, where $I$ is generated by</p>
   <p>$$\begin{equation}
@@ -1201,6 +1344,114 @@ f' ∈ (X^{-p}, (Y^{-q}, Z^r)) ≃ (X^{-p} ⊗ Y^{-q}, Z^r) ∋ f.
     <li>This definition is rarely used in practice; in this case, a functorial indentification $𝐌𝐨𝐝 _A ≃ 𝐅𝐮𝐧𝐜𝐭 (A^{\mathrm{op}}, 𝐀𝐛)$ is more convenient.</li>
     <li>This is not our/topological definition, at least $M^i ∩ M^j = ∅$ for our convention.</li>
   </ul>
+</div>
+
+<p>We are interested in DG-projective/DG-injective complexes in practice.</p>
+
+<h3 id="double-complexes">Double Complexes</h3>
+
+<p>For a general theory of complex resolution, we shall introduce $C(C(R))$, which is equivalent to the category of double complexes.</p>
+
+<div class="definition">
+  <p>(Double complex, or bicomplex). A double complex is a collection of objects $\{C^{p,q}\}_{p,q ∈ ℤ}$ with two differentials $d_h$ (horizontal) and $d_v$ (vertical), such that</p>
+  <p>$$\begin{equation}
+d_h ∘ d_h = 0, \quad d_v ∘ d_v = 0, \quad\text{and} \ \  d_h ∘ d_v + d_v ∘ d_h = 0.
+\end{equation}$$</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/25SumLec0/diagram_bdbbce00bb496.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<p>We write $DC(\mathcal{A})$ as the category of double complexes over $\mathcal{A}$.</p>
+
+<div class="problem">
+  <p>Show that if $\mathcal{A}$ is AB3/AB4/AB5/AB3*/…/, has enough projectives/injectives, well powered, etc., then so is $DC(\mathcal{A})$.</p>
+</div>
+
+<div class="definition">
+  <p>(Total complexes). For either $☆ ∈ \{∐ , ∏\}$, we define the functor</p>
+  <p>$$\begin{equation}
+\mathrm{Tot}^☆ : DC(\mathcal{A}) → C(\mathcal{A}), \quad (C^{p,q}, d_h , d_v) ↦ (\underset{p+q = n}{☆}C^{p,q}, (d_v + d_h)).
+\end{equation}$$</p>
+</div>
+
+<p>Since ses for in either $DC(\mathcal{A})$ or $C(\mathcal{A})$ are verified termwise, $\mathrm{Tot}^∏$ (resp., $\mathrm{Tot}^∐$) is an exact functor when $\mathcal{A}$ is AB4* (resp., AB3*).</p>
+
+<div class="definition">
+  <p>(Support). The support of $X^{∙ , ∙}$ consists of the pairs $(p,q) ∈ ℤ ^2$ such that $X^{p,q} ≠ 0$. In particular,</p>
+  <ul>
+    <li>say $X^{∙ , ∙ }$ is finite, provided $\mathrm{Supp}(X)$ is finite;</li>
+    <li>say $X^{∙ , ∙ }$ is locally finite, provided $\{(p,q) ∈ \mathrm{Supp}(X) ∣ p + q = m\}$ is finite for every $m ∈ ℤ$;       <ul>
+        <li>In this case, $\mathrm{Tot}^∐ (X) = \mathrm{Tot}^∏ (X)$. We write $\mathrm{Tot}(X)$ for simplicity.</li>
+      </ul>
+    </li>
+    <li>say $X^{∙ , ∙ }$ is a <strong>$k$-th quadrant double complex</strong> if $\mathrm{Supp}(X)$ lies in the $k$-th quadrant under finite steps of translations;</li>
+    <li>we also use the expression including <strong>upper half plane double complex</strong>, <strong>$(m × n)$ double complexes</strong>, etc.</li>
+  </ul>
+</div>
+
+<div class="proposition">
+  <p>Here are some criterion on exactness.</p>
+  <ol>
+    <li>Suppose $X$ is locally finite with exact rows (or columns). Then both $\mathrm{Tot}^∏(X)$ and $\mathrm{Tot}^∐(X)$ are exact.</li>
+    <li>Suppose $X$ lies in upper (or left) half plane with exact <strong>columns</strong>. Then $\mathrm{Tot}^∏(X)$ is exact.</li>
+    <li>Suppose $X$ lies in upper (or left) half plane with exact <strong>rows</strong>. Then $\mathrm{Tot}^∐(X)$ is exact.</li>
+  </ol>
+  <div class="proof">
+    <p>It is always quicker to write a proof rather than to read a proof.</p>
+  </div>
+  <ul>
+    <li>To remember this, just note that for complexes over upper half plane, <strong>$∐$ and column-exactness are not compatible; otherwise DG-projective complexes are meaningless!</strong></li>
+  </ul>
+</div>
+
+<p>We show some non-examples in accordance with the above proposition.</p>
+
+<div class="example">
+  <p>For $X ≠ 0$, consider the following double complexes.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/25SumLec0/diagram_0e719ad2c8c88.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>We see $\mathrm{Tot}^∏ (\text{Left})$ and $\mathrm{Tot}^∐ (\text{Right})$ are not acyclic; while $\mathrm{Tot}^∏ (\text{Right})$ and $\mathrm{Tot}^∐ (\text{Left})$ are acyclic.</p>
+</div>
+
+<p>Some books refer $⊗$ and $\mathrm{Hom}$ as <strong>bifunctors</strong> of the type $C × C → DC$. Recall our convention is $C × C → DC \xrightarrow {\mathrm{Tot}^{☆}} C$, i.e.,</p>
+
+<p>$$\begin{equation}
+(X ⊗ Y)^{∙ , ∙ } ↦ \underset{:= X ⊗ Y}{\underbrace{\mathrm{Tot}^{∐ }(X ⊗ Y)}},\quad (\mathrm{Hom}(X,Y))^{∙ , ∙ } ↦ \underset{:= \mathcal{HOM}(X,Y)}{\underbrace{\mathrm{Tot}^{∏ }(\mathrm{Hom}(X,Y))}}.
+\end{equation}$$</p>
+
+<div class="example">
+  <p>Bi-resolution shows the <em>balanced property</em> of $\mathrm{Ext}^k$, that is, there is a natural isomorphism</p>
+  <p>$$\begin{equation}
+\mathrm{Ext}^k(-, Y) (X) ≃ \mathrm{Ext}^k(X, -) (Y).
+\end{equation}$$</p>
+  <p>We take projective resolution $X$ and injective resolution $Y$. Consider the <strong>black</strong> double complex which is locally finite:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/25SumLec0/diagram_b205cc8fe3b93.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>By criterion of exactness, we see $\binom{\text{红}\ \text{紫}}{\text{黑} \ \text{蓝}}$, $\binom{\text{红}}{\text{黑}}$, and $({\text{黑}\ \text{蓝}})$ are exact. Hence $\text{黑} ⇠ \text{蓝}$ and $\text{黑}ᵀ ⇠ \text{红}$ are quasi-isomorphisms. Now</p>
+  <p>$$\begin{aligned}
+\mathrm{Ext}^k (-,Y)(X) & := H^k (\text{红}) ≃ H^k (\mathrm{Tot}(\text{蓝}))\\[6pt]
+& ≃ H^k (\text{红}) =: \mathrm{Ext}^k (X,-)(Y).
+\end{aligned}$$</p>
+</div>
+
+<p><strong>The balance comes from $H^∙ (\mathrm{Tot}^{☆}(X)) = H^∙ (\mathrm{Tot}^{☆}(X)ᵀ \ )$.</strong></p>
+
+<div class="definition">
+  <p>(Balance) Suppose $T : ⨉_{i=1}^n \mathcal{A}_i → \mathcal{B}$ is a (covariant) multi-functor between Abelian categories. Say it is balances, provided</p>
+  <ul>
+    <li>For any injective $I_k ∈ 𝐈𝐧𝐣 (\mathcal{A}_k)$, the functor $$\begin{equation}
+	T(X_1, \ldots, (-)_j, \ldots , X_{k-1}, I_k, X_{k+1}, \cdots, X_n) : \mathcal{A}_j → \mathcal{B}
+	\end{equation}$$ is exact for arbitrary $\{X_k\}_{k ∉ \{i,j\}}$.</li>
+  </ul>
+</div>
+
+<p>For balanced functors, the derivatives are free of the choice of the variables.</p>
+
+<div class="example">
+  <p>$((-)^{\mathrm{op}} ⊗(?)^{\mathrm{op}})^{\mathrm{op}}$ and $\mathrm{Hom}((-)^{\mathrm{op}},?)$ are balanced. The definition is introduced by Cartan-Eilenberg, and also by Weibel. They know no example of a balanced functor in three variables…</p>
 </div>
 
 

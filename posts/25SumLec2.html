@@ -107,10 +107,13 @@ MathJax = {
       <li><a href="#c-h-cotorsion-triple" id="markdown-toc-c-h-cotorsion-triple">C. H. Cotorsion Triple</a></li>
     </ul>
   </li>
-  <li><a href="#a-note-on-projectives" id="markdown-toc-a-note-on-projectives">A Note on Projectives</a>    <ul>
+  <li><a href="#a-note-on-resolutions" id="markdown-toc-a-note-on-resolutions">A Note on Resolutions</a>    <ul>
       <li><a href="#the-definitions" id="markdown-toc-the-definitions">The Definitions</a></li>
       <li><a href="#resolutions-mathjax_protectedjetelsjwnzcp8j2qqcdkkjwnzcjksqmathjax_protected" id="markdown-toc-resolutions-mathjax_protectedjetelsjwnzcp8j2qqcdkkjwnzcjksqmathjax_protected">Resolutions ($K^-(𝐩𝐫𝐨𝐣)$)</a></li>
       <li><a href="#resolutions-via-browns-rep" id="markdown-toc-resolutions-via-browns-rep">Resolutions via Brown’s Rep</a></li>
+      <li><a href="#semi-dg-free-complexes" id="markdown-toc-semi-dg-free-complexes">Semi-(DG-)free Complexes</a></li>
+      <li><a href="#dg-flat" id="markdown-toc-dg-flat">DG-Flat</a></li>
+      <li><a href="#derived-category-and-its-closed-monoidal-structure" id="markdown-toc-derived-category-and-its-closed-monoidal-structure">Derived Category and Its Closed Monoidal Structure</a></li>
     </ul>
   </li>
 </ul>
@@ -201,13 +204,6 @@ X ∈ \mathrm{coCone}(S^⟂ , 𝐅𝐢𝐥 (S)) = \mathrm{coCone}(S^⟂ , 𝐅�
 <center> <br /> <div class="tikz-diagram">
     <embed src="/website/svg/25SumLec2/diagram_889065ae61538.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
   </div> <br /> </center>
-
-<div class="problem">
-  <p>Show the transfinite filtration of free objects is projective.</p>
-  <ul>
-    <li>A <a href="25SumLec1#ordinals-and-cardinals">problem</a> in the previous lecture gives a countably generated irreducible projective module, whereas f.g. free coincides f.g. projective over that ring.</li>
-  </ul>
-</div>
 
 <h3 id="reconstruction-lemma">Reconstruction Lemma</h3>
 
@@ -477,7 +473,7 @@ E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots
 
 <p>Throughout, <strong>we make no assumption that the category has enough projectives or injectives.</strong> However, for a complete hereditary cotorsion triple $(\mathcal{A},\mathcal{B},\mathcal{C})$, there are <em>enough</em> projectives for $\mathcal{A}$, and <em>enough</em> injectives for $\mathcal{C}$.</p>
 
-<h2 id="a-note-on-projectives">A Note on Projectives</h2>
+<h2 id="a-note-on-resolutions">A Note on Resolutions</h2>
 
 <p>The objects in ${}^⟂C_{ac}$ has the name <strong>dg-projective</strong>, Dold projective, homotopically projective objects, etc. We summarise projective related definitions in this note.</p>
 
@@ -546,14 +542,22 @@ E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots
 
 <h3 id="resolutions-mathjax_protectedjetelsjwnzcp8j2qqcdkkjwnzcjksqmathjax_protected">Resolutions ($K^-(𝐩𝐫𝐨𝐣)$)</h3>
 
-<p>The following are easy resolutions.</p>
+<p>We begin with resolution of chain complex bounded above.</p>
 
 <div class="lemma">
-  <p>Let $X ∈ C(\mathcal{A})$ be a complex either bounded above or have uniform (or steady growing) projective dimensions. Then $X$ has a projective resolution.</p>
+  <p>Let $X ∈ C^-(\mathcal{A})$ be a complex bounded above. Then $X$ has a projective resolution.</p>
   <div class="proof">
-    <p>By Eilenburg-Cartan resolution, we take $φ(n)$ as the dimension of projective resolution of $B^n (X) ⊕ H^n (X) ⊕ B^{n+1}(X)$. As long as $\{(x,y) ∣ 0 ≤ y ≤ φ (n)\}$ has finite intersections with arbitrary line in $\{y = x = k\}_{k ∈ ℤ}$, the total complex is a projective resolution.</p>
+    <p>By Eilenburg-Cartan resolution, we obtain a locally finite double complex with projective terms and exact columns. The total complex ($∐$) is again exact and quasi-isomorphic to $X$.</p>
   </div>
 </div>
+
+<p>There is ususall no <em>easy</em> constructions for unbounded complexes. We enumerate some special cases.</p>
+
+<ol>
+  <li>If an unbounded chain complex has uniform projective/injective dimensions, then Eilenberg-Cartan resolution yields a projective/injective resolution, as the total complex is locally finite.</li>
+  <li>By <a href="https://www.jstor.org/stable/1993382?origin=crossref">Chase’s theorem</a>, $R$ is right perfect and left coherent if and only if projective right modules are closed under $∏$. In this case, we take Eilenberg-Cartan resolution of an unbounded chain complex $P^{∙ , ∙ } ↠ X^∙$, then $\mathrm{Tot}^∏ (P) ↠ X$ is a projective resolution.</li>
+  <li>By a well-known characterisation of Noetherian rings, we take Eilenberg-Cartan coresolution of an unbounded chain complex $X^∙ ↪ I^{∙ , ∙ }$, then $X ↪ \mathrm{Tot}^{∐ }(I)$ is an injective resolution.</li>
+</ol>
 
 <div class="problem">
   <p>Show that for acyclic complex $C$ and projective complex $P$, if either one is bounded above, then $(P,C)_{K(\mathcal{A})} = 0$.</p>
@@ -580,7 +584,7 @@ E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots
 
 <h3 id="resolutions-via-browns-rep">Resolutions via Brown’s Rep</h3>
 
-<p>We discuss the projective resolutions of general Abelian category with <strong>exact arbitrary coproducts</strong> (AB3, AB3*) and a projective generator $U$.</p>
+<p>We discuss the projective resolutions of general Abelian category with <strong>exact arbitrary coproducts</strong> (AB3, AB3*) and a projective generator $U$ (e.g. $R$ for $𝐌𝐨𝐝 _R$).</p>
 
 <div class="problem">
   <p>Show the following properties of projective generators.</p>
@@ -632,6 +636,201 @@ E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots
 \end{equation}$$</p>
   </div>
 </div>
+
+<h3 id="semi-dg-free-complexes">Semi-(DG-)free Complexes</h3>
+
+<p>We have shown the existence and some functorial properties of DG complexes. A DG-projective complex $P$ has the following equivalent definitions:</p>
+
+<ol>
+  <li>For any epic quasi-isomorphism $f$, then $(P, f)$ is a surjection.</li>
+  <li>$\mathrm{Ext}^1(P,E) = \mathrm{Ext}^1_{dw}(P,E) = (P, Σ E)_{K(\mathcal{A})} = 0$ for any acyclic $E$.</li>
+  <li>$\mathcal{HOM}(P, -)$ preserves acyclic complexes, and quasi-isomorphisms.</li>
+  <li>$\mathcal{HOM}(P, -)$ preserves exact sequences, and quasi-isomorphisms.</li>
+  <li>Any surjective quasi-isomorphism (aka <strong>resolution</strong>) $f : P → X$ is a homotopy equivalence, and $P$ has projective terms.</li>
+  <li>…</li>
+</ol>
+
+<p>In early study of DG-algebra, the prefix DG- is replaced by semi-.</p>
+
+<div class="definition">
+  <p>(Revised definition). Let $𝔉$ denote the collection of stalk complexes with free terms. Say $X$ is <strong>semi-free</strong>, provided $X ∈ 𝐅𝐢𝐥 (𝔉)$.</p>
+</div>
+
+<div class="lemma">
+  <p>Semi-free complexes are DG-projective complexes with free terms.</p>
+  <div class="proof">
+    <p>Clearly $𝐅𝐢𝐥 (𝔉) ⊆ {}^⟂C_{ac}$. It remains to show semi-free modules has free terms. By termwise analysis, we show a transfinite filtration of free modules are free. For any free filtration</p>
+    <p>$$\begin{equation}
+0 = F_0 ⊆ F_1 ⊆ \cdots ⊆ F_γ ⊆ \cdots F_α
+\end{equation}$$</p>
+    <p>We show the statement $P_γ : [F_{γ} = ∐ _{β < γ}\frac{F_{β + 1}}{F_β }]$ holds for all ordinals $γ ≤ α$. <br /> (Initial). Clearly $F_1 = F_1 / 0$. <br /> (Successor). Assume $P_γ$ holds, then split ses shows $F_{γ + 1} = F_{γ} ⊕ \frac{F_{γ +1}}{F_{γ}}$. Hence $P_{γ + 1}$ holds. <br /> (Limit). Assume $P_γ$ holds for all $γ < β$ wherein $β$ is a limit ordinal. We see</p>
+    <p>$$\begin{equation}
+F_β = \varinjlim_{γ < β } \left[\frac{F_1}{0} \xrightarrow {\binom 10} \frac{F_1}{0} ∐ \frac{F_2}{F_1} \xrightarrow {\binom 10} \frac{F_1}{0} ∐ \frac{F_2}{F_1} ∐ \frac{F_2}{F_2} \xrightarrow {\binom 10} \cdots \right].
+\end{equation}$$</p>
+    <p>Clearly, $∐ _{γ <β } \frac{F_{γ + 1}}{F_γ }$ is also the colimit of this system.</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>Show that the above filtration can be deformed into a countable filtration.</p>
+</div>
+
+<p>Corollary, DG-projective complexes are <strong>exactly</strong> the summand of semi-free complexes. It suffices to use countable cardinal to characterise DG-projective complexes in sense of homotopy colimit.</p>
+
+<div class="example">
+  <p>We show some examples of DG-projective complexes.</p>
+  <ol>
+    <li>All projective complexes bounded above are DG-projective.</li>
+    <li>The tensor product of two DG-projective complexes is DG-projective.</li>
+    <li>Dold’s well-known example $\cdots → ℤ / 4ℤ \xrightarrow {× 2} ℤ / 4ℤ→ \cdot$ is NOT DG-projective.</li>
+  </ol>
+</div>
+
+<h3 id="dg-flat">DG-Flat</h3>
+
+<div class="definition">
+  <p>(DG-Flat). Say $F$ is a DG-flat complex, provided the following equivalent consitions.</p>
+  <ol>
+    <li>$F ⊗ -$ preserves monic quasi-isomorphisms;</li>
+    <li>$F ⊗ -$ preserves exact sequences, and quasi-isomorphisms.</li>
+  </ol>
+</div>
+
+<div class="problem">
+  <p>Show the following properties of DG-flat complexes.</p>
+  <ol>
+    <li>Any complex in $C^- (𝐅𝐥𝐚𝐭 )$ is DG-flat.</li>
+    <li>The tensor product of two DG-flat complexes is again DG-flat.</li>
+    <li>$F$ is DG-flat <strong>iff</strong> $F^+$ is DG-injective.</li>
+  </ol>
+</div>
+
+<p>For the subcategory of DG-projective (resp. DG-injective) complexes, quasi-isomorphisms are precisely homotopy equivalence. This no longer holds for DG-flat complexes.</p>
+
+<div class="example">
+  <p>Let $φ : F → F'$ be a quasi-isomorphisms between DG-flat complexes. Then</p>
+  <ul>
+    <li>$φ ^+$ is a homotopy equivalence, i.e., $s : φ^+ ∼ 0$.</li>
+    <li>Note that $(X ⊗ φ)^+ = (X, φ ^+)$ is a homotopy equivalence. Both $(X ⊗ φ )$ and $(φ  ⊗ Y)$ are quasi-isomorphisms.</li>
+    <li>$φ$ is not necessary a homotopy equivalence, since $s$ does not take the form $t^+$ in general.</li>
+  </ul>
+  <p>For example, we take bounded DG-flat complexes</p>
+  <ul>
+    <li>$X = [\cdots → 0 → ℤ ↪ ℚ → 0 → \cdots ]$, and</li>
+    <li>$Y = [\cdots → 0 → ℚ / ℤ → 0 → \cdots ]$.</li>
+  </ul>
+  <p>The quasi-isomorphism $X ↠ Y$ is not a homotopy equivalence.</p>
+</div>
+
+<h3 id="derived-category-and-its-closed-monoidal-structure">Derived Category and Its Closed Monoidal Structure</h3>
+
+<p>We explain derived functors $\mathrm R^∙ \mathcal{HOM}(-, ?)$ and $\mathrm L_∙ (- ⊗ ?)$ in DG-complexes. We write $𝐑 \mathrm{Hom}$ and $⊗^𝐋$ for simplicity.</p>
+
+<p>The functors are defined for general Abelian categories with enough projectives and injectives. We talk about $C(R)$ ($R$ commutative) only.</p>
+
+<div class="definition">
+  <p>The right derived Hom-functor is defined as the endofunctor $$\begin{equation}
+𝐑 \mathrm{Hom}(M, -) := \mathcal{HOM}(ρM, -) : D(R) → D(R).
+\end{equation}$$</p>
+  <p>where $ρM ↠ M$ is chosen as a functorial resolution of $M$.</p>
+</div>
+
+<div class="theorem">
+  <p>The above $𝐑 \mathrm{Hom}(M, -)$ is a well-defined triangle functor.</p>
+  <div class="proof">
+    <p>The assignment $C(R) → C(R) → D(R)$, $X ↦ \mathcal{HOM}(ρM, X)$ is uniquely defined. <br /> To see this passing through the localisation $C(R) → D(R)$, any quasi-isomorphism $f$ yields $\mathcal{HOM}(ρM, f)$, which is again a quasi-isomorphism as $ρ M$ is DG-projective. <br /> $\mathcal{HOM}(ρ M, -)$ is a triangle functor, since it preserves $\mathrm{Cone}$.</p>
+  </div>
+</div>
+
+<p>We also define $𝐑 \mathrm{Hom}$ from injective coresolution. $𝐑 \mathrm{Hom}(X, ?)(Y) ≃ 𝐑 \mathrm{Hom}(-, Y)(X)$ comes from the functorial quasi-isomorphisms in $C(R)$:</p>
+
+<p>$$\begin{equation}
+\mathcal {HOM}(\rho M, N) → \mathcal {HOM}(\rho M, \iota N) ← \mathcal{HOM}(M,\iota N).
+\end{equation}$$</p>
+
+<div class="problem">
+  <p>Define and show the balance of derived tensor product</p>
+  <p>$$\begin{equation}
+(- ⊗ ^𝐋 Y)(X) = X ⊗ ρ Y \xrightarrow[∼ ]{⋆} ρ X ⊗ Y \xrightarrow[∼ ]{⋆^{-1}} (X ⊗ ^𝐋 ?)(Y)
+\end{equation}$$</p>
+  <p>One can use Yoneda lemma to see $(X ⊗ \mathrm{Cone}(f), -) ≃ (\mathrm{Cone}(X ⊗ f), -)$.</p>
+  <ul>
+    <li>Explain flat-resolution fails in $⋆$, while the projective resolution works well.</li>
+  </ul>
+</div>
+
+<p>One can also conclude some natural isomorphisms, inhererited from the closed monoidal structures of $C(R)$.</p>
+
+<div class="example">
+  <p>(Attempt). Once you attempt to show the monoidal structure of $D(R)$, you fails to show the identity $ρ (X ⊗ ^L Y) = ρ X ⊗ ρ Y$. This makes $(D(R), ⊗ ^L, \underline R)$ a <em>lax</em> monoidal category.</p>
+  <ul>
+    <li>Thanks to MacLane, there is a way (possibly complicated) to reform the <em>strict</em> structure from the <em>lax</em> one.</li>
+  </ul>
+  <p>We seek for a direct ways to obtain the strict monoidal structure of $D(R)$. Consider the quasi-isomorphisms:</p>
+  <p>$$\begin{equation}
+ρ (X ⊗ ^𝐋 Y) = ρ (X ⊗ ρ Y) ← ρ (ρ X ⊗ ρ Y) \overset {c} ← ρX ⊗ ρY.
+\end{equation}$$</p>
+  <p>Note that $ρX ⊗ ρY$ is again DG-projective.</p>
+</div>
+
+<div class="definition">
+  <p>(The symmetric derived tensor). We redefine the assignment</p>
+  <p>$$\begin{equation}
+X ⊗^L Y := ρ (ρ X ⊗ ρ Y).
+\end{equation}$$</p>
+</div>
+
+<div class="example">
+  <p>Set $α ^c = (c ⊗ 1) ^{-1} ∘ α ∘ (1 ⊗ c)$. The rule of associativity writes</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/25SumLec2/diagram_689019f2ce848.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="problem">
+  <p>(The pentagon rule). Consider the identity in $C(R)$:</p>
+  <p>$$\begin{equation}
+(α _{X,Y,Z} ⊗ W) ∘ (α _{X, Y ⊗ Z, W}) ∘ (X ⊗ α _{Y, Z, W}) = (α _{X⊗ Y, Z,W}) ∘ (α _{X,Y,Z ⊗ W}).
+\end{equation}$$</p>
+  <p>We apply $(-)^c$ and $ρ$ on both sides, and show</p>
+  <p>$$\begin{equation}
+(α^ρ _{X,Y,Z} ⊗^𝐋 W) ∘ (α^ρ _{X, Y ⊗^𝐋 Z, W}) ∘ (X ⊗^𝐋 α^ρ _{Y, Z, W}) = (α^ρ _{X ⊗^𝐋 Y, Z,W}) ∘ (α^ρ _{X,Y,Z ⊗^𝐋 W}).
+\end{equation}$$</p>
+</div>
+
+<div class="definition">
+  <p>(The unit). It is assumed in the construction of resolution that $ρ ^2 = ρ$. Now $\underline R ∈ C(R)$ is again the unit in $D(R)$ with the <strong>strict</strong> identity rule is</p>
+  <p>$$\begin{equation}
+\underline R ⊗^𝐋 X = ρ (\underline R ⊗ ρ X) = ρ X = X ⊗^𝐋 \underline R.
+\end{equation}$$</p>
+</div>
+
+<div class="problem">
+  <p>Now feel free to verify $(D(R), ⊗ ^𝐋 , \underline R)$ is closed monoidal.</p>
+</div>
+
+<p>We then proceed to the symmetric structure.</p>
+
+<div class="example">
+  <p>Note the isomorphism</p>
+  <p>$$\begin{equation}
+τ ^ρ : X ⊗ ^𝐋 Y = ρ (ρ X ⊗ ρ Y) \xrightarrow {ρ τ _{ρ X, ρ Y}} ρ (ρ Y ⊗ ρ X) = Y ⊗ ^𝐋 X.
+\end{equation}$$</p>
+  <p>The hexagon rule is satisfied, since $τ^c = τ$. The unit rules are also satisfied, since the unit morphism is already an equality.</p>
+</div>
+
+<div class="lemma">
+  <p>$𝐑 \mathrm{Hom}$ is precisely the internal Hom of the symmetric monoidal category $(D(R), ⊗ ^𝐋 , \underline R)$.</p>
+  <div class="proof">
+    <p>Recall the definiton $𝐑 \mathrm{Hom} (-, ?) := \mathcal{HOM}(ρ (-), ?)$. A direct computation shows</p>
+    <p>$$\begin{aligned}
+& 𝐑 \mathrm{Hom}(X ⊗^𝐋 Y, Z) = \mathcal{HOM}(ρ X ⊗ ρ Y, Z) \\[6pt]
+≃ \ & \mathcal{HOM}(ρ X ,\mathcal{HOM}(ρ Y, Z)) = 𝐑 \mathrm{Hom}(X, 𝐑 \mathrm{Hom}(Y,Z)).
+\end{aligned}$$</p>
+  </div>
+</div>
+
+<p>Moreover, there is also <a href="25SumLec0#more-on-mathjax_protectedjfxtyxroy2fse0hptx0kmathjax_protected">finiteness conditions</a> as we discussed in Lec0.</p>
 
 
   </article>
