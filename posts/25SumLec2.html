@@ -774,7 +774,7 @@ F_β = \varinjlim_{γ < β } \left[\frac{F_1}{0} \xrightarrow {\binom 10} \frac{
   </ul>
   <p>We seek for a direct ways to obtain the strict monoidal structure of $D(R)$. Consider the quasi-isomorphisms:</p>
   <p>$$\begin{equation}
-ρ (X ⊗ ^𝐋 Y) = ρ (X ⊗ ρ Y) ← ρ (ρ X ⊗ ρ Y) \overset {c} ← ρX ⊗ ρY.
+ρ (X ⊗ ^𝐋 Y) = ρ (X ⊗ ρ Y) ← ρ (ρ X ⊗ ρ Y) \overset {c} → ρX ⊗ ρY.
 \end{equation}$$</p>
   <p>Note that $ρX ⊗ ρY$ is again DG-projective.</p>
 </div>
@@ -782,14 +782,14 @@ F_β = \varinjlim_{γ < β } \left[\frac{F_1}{0} \xrightarrow {\binom 10} \frac{
 <div class="definition">
   <p>(The symmetric derived tensor). We redefine the assignment</p>
   <p>$$\begin{equation}
-X ⊗^L Y := ρ (ρ X ⊗ ρ Y).
+X ⊗^L Y := ρ X ⊗ ρ Y\quad (\xrightarrow[∼ ] {c} ρ (ρ X ⊗ ρ Y)).
 \end{equation}$$</p>
 </div>
 
 <div class="example">
-  <p>Set $α ^c = (c ⊗ 1) ^{-1} ∘ α ∘ (1 ⊗ c)$. The rule of associativity writes</p>
+  <p>Set $α ^ρ = (c ⊗ 1)^{-1} ∘ α ∘ (1 ⊗ c)$. The rule of associativity writes</p>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/25SumLec2/diagram_689019f2ce848.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/25SumLec2/diagram_cb9c32bc171c8.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
 </div>
 
@@ -798,21 +798,29 @@ X ⊗^L Y := ρ (ρ X ⊗ ρ Y).
   <p>$$\begin{equation}
 (α _{X,Y,Z} ⊗ W) ∘ (α _{X, Y ⊗ Z, W}) ∘ (X ⊗ α _{Y, Z, W}) = (α _{X⊗ Y, Z,W}) ∘ (α _{X,Y,Z ⊗ W}).
 \end{equation}$$</p>
-  <p>We apply $(-)^c$ and $ρ$ on both sides, and show</p>
+  <p>We apply $(-)^ρ$ on both sides, and show</p>
   <p>$$\begin{equation}
 (α^ρ _{X,Y,Z} ⊗^𝐋 W) ∘ (α^ρ _{X, Y ⊗^𝐋 Z, W}) ∘ (X ⊗^𝐋 α^ρ _{Y, Z, W}) = (α^ρ _{X ⊗^𝐋 Y, Z,W}) ∘ (α^ρ _{X,Y,Z ⊗^𝐋 W}).
 \end{equation}$$</p>
 </div>
 
 <div class="definition">
-  <p>(The unit). It is assumed in the construction of resolution that $ρ ^2 = ρ$. Now $\underline R ∈ C(R)$ is again the unit in $D(R)$ with the <strong>strict</strong> identity rule is</p>
+  <p>(The unit). $ρ (\underline R)$ is the unit in $D(R)$ with the (left) identity rule</p>
   <p>$$\begin{equation}
-\underline R ⊗^𝐋 X = ρ (\underline R ⊗ ρ X) = ρ X = X ⊗^𝐋 \underline R.
+l_X^ρ : \underline R ⊗^𝐋 X = ρ \underline R ⊗ ρ X \xrightarrow [∼ ]{c ⊗ 1} \underline R ⊗ ρ X\xrightarrow {λ} ρX \xrightarrow [∼ ]{c} X.
 \end{equation}$$</p>
 </div>
 
 <div class="problem">
-  <p>Now feel free to verify $(D(R), ⊗ ^𝐋 , \underline R)$ is closed monoidal.</p>
+  <p>Now feel free to verify $(D(R), ⊗ ^𝐋 , \underline R)$ is closed monoidal. For instance, we verify the pentagon diagram of left unit,</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/25SumLec2/diagram_552f86189bcbd.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>with the commutative diagram</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/25SumLec2/diagram_06378fb7d1d06.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Here all parallel line with the same colour yields gives the commutative square by functoriality. $\blacktriangle$ is by definition, $★$ is given by the monoidal structure of $C(R)$.</p>
 </div>
 
 <p>We then proceed to the symmetric structure.</p>
@@ -822,7 +830,7 @@ X ⊗^L Y := ρ (ρ X ⊗ ρ Y).
   <p>$$\begin{equation}
 τ ^ρ : X ⊗ ^𝐋 Y = ρ (ρ X ⊗ ρ Y) \xrightarrow {ρ τ _{ρ X, ρ Y}} ρ (ρ Y ⊗ ρ X) = Y ⊗ ^𝐋 X.
 \end{equation}$$</p>
-  <p>The hexagon rule is satisfied, since $τ^c = τ$. The unit rules are also satisfied, since the unit morphism is already an equality.</p>
+  <p>One can verify the hexagon rule and the unit rule are satisfied.</p>
 </div>
 
 <div class="lemma">
