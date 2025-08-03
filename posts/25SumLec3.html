@@ -104,6 +104,9 @@ MathJax = {
       <li><a href="#flat-cotorsion-pair" id="markdown-toc-flat-cotorsion-pair">Flat Cotorsion Pair</a></li>
       <li><a href="#precover--cover" id="markdown-toc-precover--cover">Precover ⇒ Cover</a></li>
       <li><a href="#special-preenvelope--special-envelope" id="markdown-toc-special-preenvelope--special-envelope">Special Preenvelope ⇒ Special Envelope</a></li>
+      <li><a href="#envelope--preenvelope" id="markdown-toc-envelope--preenvelope">Envelope ⇒ Preenvelope</a></li>
+      <li><a href="#special-precover--special-cover" id="markdown-toc-special-precover--special-cover">Special Precover ⇒ Special Cover</a></li>
+      <li><a href="#remarks" id="markdown-toc-remarks">Remarks</a></li>
     </ul>
   </li>
 </ul>
@@ -495,7 +498,16 @@ e := y \overline y (1-x) ,\quad e^2 = e.
 
 <h2 id="set-theoretic-consideration">Set-theoretic Consideration</h2>
 
-<p>We show few results of the existence of cover and envelopes.</p>
+<p>We show few results of the existence of (special) cover/envelope, provided the existence of (special) precover/preenvelope. The analysis holds for general well-powered Abelian category closed under some (co)limits. To conclude, we have the following theorem.</p>
+
+<div class="theorem">
+  <p>Suppose $(\mathcal{C},\mathcal{F})$ is a complete cotorsion theory such that either</p>
+  <ul>
+    <li>$\mathcal{C}$ is closed under filtered colimits, or</li>
+    <li>$\mathcal{F}$ is closed under cofiltered limits.</li>
+  </ul>
+  <p>Then $\mathcal{C}$ is a covering class and $\mathcal{F}$ is an enveloping class.</p>
+</div>
 
 <h3 id="flat-cotorsion-pair">Flat Cotorsion Pair</h3>
 
@@ -655,7 +667,7 @@ P_0 \xrightarrow {f_{1,0}} P_1  \xrightarrow {f_{2,1}} P_2 → \cdots P_γ \xrig
 
 <h3 id="special-preenvelope--special-envelope">Special Preenvelope ⇒ Special Envelope</h3>
 
-<p>We show a criterion that, for any subclass of modules or complexes $\mathcal{C}$ closed under summand and filtered colimits, if any $M$ admits a special $\mathcal{C}^⟂$-preenvelope (monic pre-envelope with cokernel in $\mathcal{C}$), then there is a special $\mathcal{C}^⟂$-envelope.</p>
+<p>We show a criterion that, for any subclass of modules or complexes $\mathcal{C}$ <strong>closed under summand, extensions and filtered colimits</strong>, if any $M$ admits a special $\mathcal{C}^⟂$-preenvelope (monic pre-envelope with cokernel in $\mathcal{C}$), then there is a special $\mathcal{C}^⟂$-envelope.</p>
 
 <p>Recall the procedure for showing the existence of $\mathcal{P}$-cover when there is a $\mathcal{P}$-precover.</p>
 
@@ -754,6 +766,83 @@ P_0 \xrightarrow {f_{1,0}} P_1  \xrightarrow {f_{2,1}} P_2 → \cdots P_γ \xrig
   </div>
 </div>
 
+<h3 id="envelope--preenvelope">Envelope ⇒ Preenvelope</h3>
+
+<p>Suppose $\mathcal{E}$ is a class of modules closed under summand, along with the following concession.</p>
+
+<div class="definition">
+  <p>(Concession). If there is a preenvelope $i : M → E$, then any morphism from $M$ to the cofiltered limit $\varprojlim^{cof} E_∙$ factors through $i$.</p>
+  <ul>
+    <li>In particular, the concession holds if $\mathcal{E}$ is closed under cofiltered limits.</li>
+  </ul>
+</div>
+
+<p>We denote $\widetilde {\mathcal{E}}$ as the $\varprojlim ^{cof}$-completion of $\mathcal{E}$, and introduce the <em>relative cokernel</em> (or <em>relative image</em> for convenience).</p>
+
+<div class="definition">
+  <p>(Image). For a general morphism of the type $j : M → \widetilde {\mathcal{E}}$, we define</p>
+  <p>$$\begin{equation}
+\mathrm{IM}(j) := \{\operatorname{im}(α ) ∣ α : i → j,\ i \ \text{ is a preenvelope}\}.
+\end{equation}$$</p>
+  <p>We also have the <em>cobase change</em>. Say $α ∈ \mathrm{IM}(j)$ is a <strong>relative envelope</strong>, provided</p>
+  <p>$$\begin{equation}
+α _♯ : \mathrm{IM}(i) → \mathrm{IM}(j), \quad \operatorname{im}(?) ↦ \operatorname{im}(α ∘ ?),\ \text{such that} \ \operatorname{im}(α _♯ ) = \{\operatorname{im}(α )\}.
+\end{equation}$$</p>
+</div>
+
+<p>We show the existence of relative envelope.</p>
+
+<div class="lemma">
+  <p>Any morphism of the type $j : M → F ∈ \widetilde {\mathcal{E}}$ has a relative envelope.</p>
+  <div class="proof">
+    <p>If not, then there is a transfinite composition of towers</p>
+    <p>$$\begin{equation}
+\cdots \overset {f_{γ +1, γ+0}}→  (E _{γ +1}, i _{γ +1}) \overset {f_{γ,γ+1}} → (E_γ, i _γ ) \cdots \overset {f_{1,2}}→  (E_1, i _1) \overset {f_{0,1}}→ (E_0, i _0) = (F, j),
+\end{equation}$$</p>
+    <p>such that</p>
+    <ol>
+      <li>for any $β$, $i_β ∘ α _β = i_{β +1}$;</li>
+      <li>if $β$ is a successor ordinal, then $i_β$ is a preenvelope;</li>
+      <li>if $β$ is a limit ordinal, then $i_β$ is induced by limit;</li>
+      <li>$\{\operatorname{im}(f_{0, γ})\}$ strictly descends when composing $f_{β +1, β +2}$.</li>
+    </ol>
+    <p>Let $κ ≫ |F|$, we see the contradiction.</p>
+  </div>
+</div>
+
+<p>We leave the dual procedure to readers.</p>
+
+<div class="problem">
+  <p>Show that</p>
+  <ol>
+    <li>Any preenvelope $i : M → E$ admits a trasnfinite tower of relative envelopes;</li>
+    <li>The stablised image $ε$ is a preenvelope;</li>
+    <li>Any endomorphism $α : ε → ε$ is surjective, hence bijective.</li>
+  </ol>
+</div>
+
+<h3 id="special-precover--special-cover">Special Precover ⇒ Special Cover</h3>
+
+<p>Suppose $\mathcal{F}$ is a class of modules closed under <strong>summands, extensions, and cofiltered limits</strong>. A special ${}^⟂\mathcal{F}$-(pre)cover is an epic ${}^⟂ \mathcal{F}$-(pre)cover with kernel in $\mathcal{F}$.</p>
+
+<div class="theorem">
+  <p>For $M$ admits a special ${}^⟂\mathcal{F}$-precover, $M$ there has a special ${}^⟂ \mathcal{F}$-cover.</p>
+  <div class="proof">
+    <p>Recall in the subsection <code class="language-plaintext highlighter-rouge">Special Preenvelope ⇒ Special Envelope</code>, we did not use AB5 property.</p>
+  </div>
+</div>
+
+<h3 id="remarks">Remarks</h3>
+
+<p>We are interested in <em>cogenerating</em> construction for set-theoritic issuse. For instance,</p>
+
+<div class="theorem">
+  <p>(Shelah). It is independent of ZFC that every whitehead group ($^⟂ℤ$) is a free group.</p>
+</div>
+
+<p>Completion (with ideal-metric) is a special case of cofiltered limit. We might see that in the study of (Enoch’s) cotorsion modules, etc.</p>
+
+<p>One can similarly define $\mathrm{Tor}$-cotorsion theory. Note that the left and right class of modules are closed under extensions, summands, coproducts, and <strong>filtered colimits</strong>. In this case, any $\varinjlim^{fil}$-closed $\mathcal{C}$-class corresponds to a $\mathrm{Tor}$-torsion theory.</p>
 
 
   </article>
