@@ -496,6 +496,33 @@ e := y \overline y (1-x) ,\quad e^2 = e.
   </ol>
 </div>
 
+<p>For Noetherian rings, the assignment $M ↦ E(M)$ preserves both products and coproducts. <a href="https://msp.org/pjm/1958/8-3/pjm-v8-n3-p13-p.pdf">Matlis’s theory</a> shows the $1:1$ correspondence between indecomposable injective modules and prime ideals, namely $𝔭 ↦ E(R / 𝔭)$.</p>
+
+<div class="theorem">
+  <p>(Injective modules and Noetherian rings). For arbitrary ring $R$, the followings are equivalent.</p>
+  <ol>
+    <li>$R$ is Noetherian.</li>
+    <li>$𝐈𝐧𝐣$ is closed under coproducts.</li>
+    <li>$𝐈𝐧𝐣$ is closed under filtered colimits.</li>
+  </ol>
+  <div class="proof">
+    <p>(1 → 2 and 3). Note that any inclusion of ideal ($i$) is a monomorphism between f.p. modules. Let $I_∙$ denote a filtered system in $𝐈𝐧𝐣$, we see</p>
+    <p>$$\begin{equation}
+\varinjlim{}^{fil}(ι , I_∙) ≃ (ι , \varinjlim{}^{fil} I_∙) ,\quad ∐ (ι , I_∙ ) ≃ (ι , ∐ I_∙)
+\end{equation}$$</p>
+    <p>are surjections. <br /> (2 → 1). When there exists some non-f.g. ideals, one can find a countably ascending chain of ideals</p>
+    <p>$$\begin{equation}
+0 = I_0 ⊊ I_1 ⊊ I_2 ⊊ \cdots,\quad I_ω = \bigcup_{n < ω} I_n.
+\end{equation}$$</p>
+    <p>Note that $(π _n)_{n ∈ ℕ} : I_ω → ∐_{n ∈ ω} \frac{I}{I_n}$ is well-defined. Since $∐_{n ∈ ω} \frac{I}{I_n} ↪ ∐_{n ∈ ω} E(\frac{I}{I_n} )$ is an essential extension towards injective, we obtain $φ$:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec3/diagram_8f375edb191cd.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Hence, $φ ∘ i$ factors through some $∐ _{n < n_0} E(\frac{I}{I_0})$ while $(∐ ι _n) ∘ (π)_∙$ does not. A contradiction.</p>
+    <p><br /> (3 → 1). Consider $∐ _{k ∈ ω } E_k = \varinjlim^{fil}_{n ∈ ω }(∐ _{k ≤ n}E_k)$. Then use (2 → 1).</p>
+  </div>
+</div>
+
 <h2 id="set-theoretic-consideration">Set-theoretic Consideration</h2>
 
 <p>We show few results of the existence of (special) cover/envelope, provided the existence of (special) precover/preenvelope. The analysis holds for general well-powered Abelian category closed under some (co)limits. To conclude, we have the following theorem.</p>
