@@ -9,7 +9,7 @@
 
 
 
-  <title>25sumlec4
+  <title>CT4
     ·
     Jekyll Latex</title>
 
@@ -74,9 +74,9 @@ MathJax = {
 	<main>
   <article>
     <div class="center">
-      <h1>25sumlec4</h1>
+      <h1>CT4</h1>
       <p class="author">
-        
+        ZCC
         <br/>
         August 4, 2025
       </p>
@@ -85,7 +85,256 @@ MathJax = {
 
     <div class="divider"></div>
 
-    
+    <ul id="markdown-toc">
+  <li><a href="#lecture-4" id="markdown-toc-lecture-4">Lecture 4</a>    <ul>
+      <li><a href="#abstract" id="markdown-toc-abstract">Abstract</a></li>
+    </ul>
+  </li>
+  <li><a href="#definable-subgroups" id="markdown-toc-definable-subgroups">Definable Subgroups</a>    <ul>
+      <li><a href="#pp-condition" id="markdown-toc-pp-condition">PP Condition</a></li>
+      <li><a href="#pp-lattice" id="markdown-toc-pp-lattice">PP Lattice</a></li>
+      <li><a href="#presentation" id="markdown-toc-presentation">Presentation</a></li>
+      <li><a href="#purity" id="markdown-toc-purity">Purity</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="lecture-4">Lecture 4</h2>
+
+<div class="abstract">
+  <h5 id="abstract">Abstract</h5>
+  <div>
+    <p>We discuss purity and its cotorsion theory.</p>
+  </div>
+</div>
+
+<h2 id="definable-subgroups">Definable Subgroups</h2>
+
+<p>We refer to <a href="https://home.mathematik.uni-freiburg.de/ziegler/preprints/modules/modules.pdf">Ziegler’s foundational article</a> for model theory of modules. The theory established a equivalence between</p>
+
+<ul>
+  <li><em>axiomatisable</em> subcategories (aka definable subcategory) of some $𝐌𝐨𝐝 _R$, and</li>
+  <li>the category of exact functors $\mathcal{A} → 𝐀𝐛$ for $\mathcal{A}$ essentially small.</li>
+</ul>
+
+<p>A typical example: the categry of injective (= divisible Abelian groups) is equivalent to the category of exact functors $\mathrm{Exact}(𝐚𝐛^{\mathrm{op}}, 𝐀𝐛)$.</p>
+
+<h3 id="pp-condition">PP Condition</h3>
+
+<p>We explain <em>axiomatisable</em> in positive primitive (<strong>pp</strong> for short) formula. All modules are <strong>right modules</strong> for convention, and all vectors are <strong>row vectors</strong>.</p>
+
+<div class="example">
+  <p>Consider ses of multiplicating $r$:</p>
+  <p>$$\begin{equation}
+0 → \mathrm{ann}_r(M) → M \xrightarrow{× r} Mr → 0.
+\end{equation}$$</p>
+  <p>We <em>axiomise</em></p>
+  <ul>
+    <li>$\mathrm{ann}_r(M) = \{x ∈ M^1 : x ⋅ r = 0\}$;</li>
+    <li>$Mr = \{x ∈ M^1 : ∃ y ∈ M^1 \ (x - y ⋅ r = 0)\}$.</li>
+  </ul>
+</div>
+
+<div class="example">
+  <p>(Another definition of f.p. modules). Once we fix the expression $R^m \xrightarrow {⋅ 𝐂 } R^n → M → 0$, then $(M, -)_R$ is a subfunctor of $(R^n, - ) : 𝐌𝐨𝐝 _R → 𝐀𝐛$ defined by sending</p>
+  <p>$$\begin{equation}
+X ↦ \{𝐱 ∈ X^n : 𝐱 ⋅ 𝐂^T = \mathbf 0\}.
+\end{equation}$$</p>
+  <p>We may rewrite the conditions as $⋀_{j=1}^m ∑ _{i =1} ^n c_{j,i} x _i = 0$.</p>
+</div>
+
+<p>We shall axiomatise such assignments (<em>functors</em>). Recall a <strong>structure</strong> over the <strong>language</strong> $\mathcal{L}$ (e.g. $\mathcal{N} = (ℕ, 0, ++)$ due to Peano) consists of an underlying set $M$, some chosen constants, together with some operations.</p>
+
+<p>Our language $M_R$ consists of first order logic and right module operations, e.g., $∧$, $¬$, $∃$, $∀$ and $⋅_R$, $+_R$, $1_R$, $0_R$.</p>
+
+<div class="definition">
+  <p>((pp-)definable subgroup). A definable subgroup of $M ∈ 𝐌𝐨𝐝 _R$ given by positive primitive (p.p) formula $φ$</p>
+  <p>$$\begin{equation}
+φ (M) := \{𝐱 ∈ M^k : M ⊧ φ [𝐱 , 𝐲]\},
+\end{equation}$$</p>
+  <p>where $φ$ takes the form $∃ 𝐲 \ ((𝐱 \ 𝐲) ⋅ \binom{𝐀}{ - 𝐁} = \mathbf 0)$, or simply $𝐁 ∣ 𝐱 𝐀$. The formula consists of $k = |𝐱|$ <strong>free variables</strong> and $(n-k) = |𝐲|$ <strong>bounds</strong>.</p>
+</div>
+
+<p>We write $φ [-]$ for a formula, and $φ (-)$ for functors.</p>
+
+<div class="lemma">
+  <p>$φ(-)$ is a <strong>subfunctor</strong> of the forgotful one $(R^n, -)_R : 𝐌𝐨𝐝 _R → 𝐀𝐛$.</p>
+  <div class="proof">
+    <p>For morphism of modules, $f : M → N$, we define</p>
+    <p>$$\begin{equation}
+φ (f) : \{𝐱 ∈ M^k : 𝐁 ∣ 𝐱 𝐀 \} ↠ \{f(𝐱) ∈ N^k : 𝐁 ∣ 𝐱 𝐀 \} ↪ \{𝐱' ∈ N^k : 𝐁 ∣ 𝐱' 𝐀 \}.
+\end{equation}$$</p>
+    <p>We obtain the natural inclusion $φ ↪ (R^n,-)$, which shows the functoriality.</p>
+  </div>
+</div>
+
+<p>We notice that</p>
+
+<ol>
+  <li>$φ$ preserves monomorphisms: larger underlying set implies larger solution set.
+    <ul>
+      <li>For submodule $L ↪ M$, one has $φ (L) ⊆ (φ (M) ∩ L)$. The equality does not hold in general (<strong>unless $L ↪ M$ is a pure submodule</strong>), e.g. $2ℤ ↪ ℤ$ with condition $φ [x , y] := ∃ y \ (x = y ⋅ 2)$.</li>
+    </ul>
+  </li>
+  <li>$φ$ does not preserve epimorphisms, e.g. $φ [x , y] := (x⋅2 = 0)$ and $ℤ ↠ ℤ / 2ℤ$.</li>
+  <li>$φ(M)$ is not necessary an $R$-submodule of $M^k$, but instead a $\mathrm{End}(M_R)$-submodule (under diagonal action).</li>
+</ol>
+
+<div class="problem">
+  <p>Recall <a href="25SumLec0#mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-mathjax_protectedjpcdkijwnzcn8j2qoyqmathjax_protected-and-mathjax_protectedjpcdkixwnzcl8j2qmvcdkk0kmathjax_protected">that</a> $M$ is flat iff $𝐦 ⋅ 𝐂 = \mathbf 0$ implies the existence of $𝐀$ s.t. $(A ∣ 𝐦) ∧ (𝐀𝐂 = 0)$. Show that $M$ is flat iff $M ⋅ ϕ (R) ⊆ ϕ (M)$ holds equality for all pp formula with $1$ free variable.</p>
+</div>
+
+<h3 id="pp-lattice">PP Lattice</h3>
+
+<p>We denote $φ [𝐱, 𝐲]$ by $∃ 𝐲 \ (𝐱 , 𝐲 )⋅ H = \mathbf 0$, and $H = \binom{A }{-B}$. We use</p>
+
+<ul>
+  <li>$A$, $B$ and $H$ for matrices in determing pp conditions,</li>
+  <li>$k = |𝐱|$ the number of free variables, $n = |𝐱| + |𝐲|$ the number of total variables.</li>
+</ul>
+
+<p>in the procedding analysis without mentioning.</p>
+
+<p>As how we learn linear algebra, we write $x$ (instead of $𝐱$) for general vectors (row vectors for default).</p>
+
+<p>Before we proceed, we introduce a criterion for $φ' ≤ φ$.</p>
+
+<div class="theorem">
+  <p>$φ' ≤ φ$ <strong>iff</strong> there are matrices $X$, $Y$ and $Z$ s.t. $\binom{I \ X}{O \ Y} ⋅ H = H' ⋅ Z$.</p>
+  <div class="proof">
+    <p>(← ). Consider</p>
+    <p>$$\begin{aligned}
+(x ∈ φ '(M)) ↔ (B' ∣ xA') → (B'Z ∣ xA'Z) ↔ (YB ∣ x(A-XB))\\[6pt]
+→ (B ∣ x(A-XB)) → (B ∣ xA) ↔ (x ∈ φ (M)).
+\end{aligned}$$</p>
+    <p>(→). We take $φ' (M) = \{x : B' ∣ xA'\}$ as the projection of the first $k$ coordinates of f.p. module $M: = \{(x,y) : (x,y)\binom{A'}{-B'}=O\} = \operatorname{cok}(A'^T, -B'^T)$. Let $\{z_k\}_{k=1}^n$ denote the image of coordinal basis along $R^n ↠ M$ generating set of $M$, which is a generating set of $M$. By definition, $(z_{[1,k]}, z_{(k,n]})\binom{A'}{-B'} = O$. Hence $(z_{[1,k]}, w)\binom{A}{-B} = O$ for some $w$. We write $w = z_{(k,n]}\binom{X}{Y}$ which recovers the construction.</p>
+  </div>
+</div>
+
+<div class="example">
+  <p>(Lattice). All pp condition (with $k$ free variabels) forms a lattice. For pp conditions</p>
+  <p>$$\begin{equation}
+φ _i[𝐱 ,𝐲_i] := ∃ 𝐲_i \ ((𝐱 , 𝐲 _i)⋅ H_{i} = \mathbf 0)\quad (i =1,2),
+\end{equation}$$</p>
+  <p>one has</p>
+  <ol>
+    <li>$(φ_1 ∧ φ _2) [𝐱 , ...] = ∃ 𝐲 _1, 𝐲 _2 \ ((𝐱, 𝐲_1 ) ⋅ H_{1} = 0 ∧ (𝐱, 𝐲_2 ) ⋅ H_{2} = 0)$, and</li>
+    <li>$(φ_1 ∨ φ _2) [𝐱 , ...] = ∃ 𝐚,𝐛,𝐜,𝐝  \ (𝐱 = 𝐚 + 𝐛 ∧ (𝐚, 𝐛) ⋅ H_{1} = 0 ∧ (𝐜, 𝐝) ⋅ H_{2} = 0)$.</li>
+  </ol>
+</div>
+
+<div class="lemma">
+  <p>The lattice is modular.</p>
+  <div class="proof">
+    <p>We show for $α' ≤ α$, one has $(α ∧ β ) ∨ α ' = α ∧ (β  ∨ α ')$. By universal property of $∧$ and $∨$, we obtain $⊆$. Conversely, consider</p>
+    <p>$$\begin{equation}
+α ∧ (β  ∨ α ') [𝐱 ,...]= ∃ \ ((𝐱,𝐚 )H_α =0 ∧ (𝐛 ,𝐜 )H_β =0∧ (𝐞, 𝐟 )H_{α '} =0 ∧ 𝐱=𝐛+𝐞 ).
+\end{equation}$$</p>
+    <p>We see $𝐱=𝐛+𝐞$ satisfies</p>
+    <p>$$\begin{equation}
+(𝐛 , 𝐚 - 𝐟 ) H_α = 0 ∧ (𝐛 , 𝐜 ) H_β = 0 ∧ (𝐞 , 𝐟 ) H_{α '} = 0.
+\end{equation}$$</p>
+  </div>
+</div>
+
+<div class="definition">
+  <p>(Galois connection). Once we fix $M ∈ 𝐌𝐨𝐝 _R$, there is a pairing to truth value</p>
+  <p>$$\begin{equation}
+\text{definable subgrps}  \ × \ \text{pp formula} → 𝔽 _2,\quad (G, φ) ↦ \{G ⊆ φ (M) \ ?\}.
+\end{equation}$$</p>
+  <p>We define the vanishing set of $𝐱 ∈ M^k$ as $pp^M_k(𝐱 ) := \{φ : 𝐱 ∈ φ (M)\}$. We write $pp(x)$ for simplicity.</p>
+</div>
+
+<div class="problem">
+  <p>Show that $pp(𝐱 )$ is a <strong>filter</strong>, i.e.,</p>
+  <ol>
+    <li>if $α , β ∈ pp(𝐱 )$ then $(α ∧ β ) ∈ pp(𝐱 )$,</li>
+    <li>if $α ∈ pp(𝐱 )$ then $α ' ∈ pp(𝐱 )$ for all $α ' ≥ α$.</li>
+  </ol>
+</div>
+
+<p>In particular, $pp(𝐱)$ is either principal (generated by one element) or infinitely generated.</p>
+
+<ul>
+  <li>A filter on the finite poset is always principal; note that the filtered colimit over finite index category is the valuation at the terminal object.</li>
+  <li>The assignment $X ↦ \mathcal{P}(\mathcal{P}(X)), \quad x ↦ \{A : x ∈ A\}$ takes each element in the set $X$ to its generating principal ultrafilter (ultra = maximal). Each filter is contained in some ultrafilter, as each ideal in $(𝔽_2)^X$ is contained in some maximal ideal. However, there exists some non-principle ($≈$ <em>unconstructable</em>) ultrafilter. Set $X = ℤ _{≥ 1}$, then any ultrafilter containing $\{k ℤ \}_{k ≥ 1}$ is non-principal. Such <em>unconstructable</em> ultrafilter yields a fruitful field of non-standard analysis.</li>
+</ul>
+
+<p>Fortunately, such filter of pp conditions is always principal for f.p. modules.</p>
+
+<div class="theorem">
+  <p>Let $M$ be f.p.. For any $x ∈ M^k$, $pp(x)$ is principal.</p>
+  <div class="proof">
+    <p>We write $R^m \overset {C^T} → R^n \overset π → M → 0$, then $\{z_k = π (e_k)\}_{k=1}^n$ generates $M$. Now $z C = 0$. We set $x + z X = 0$ and define</p>
+    <p>$$\begin{equation}
+φ_m [x,y] := ∃ y \ ((x,y)\binom{I \ O}{X \ C} = 0).
+\end{equation}$$</p>
+    <p>To see $φ _m$ is the least pp condition, we take any $x ∈ φ(M)$ and show that $φ_m ≤ φ$. There is $y'$ s.t. $(x,y')\binom{A}{-B} = 0$. Since $z$ is a generating set, there is $(x,y') = (x,z)\binom{I \ O}{O \ Q}$. Hence,</p>
+    <p>$$\begin{equation}
+\binom{I\ O}{O \ Q} ⋅ \binom{A}{-B} = \binom {A}{-QB} ∈ \ker ((x,z) ⋅ ) \overset ⋆= \operatorname{im} (\binom{I \ O}{X \ C}⋅ ).
+\end{equation}$$</p>
+    <p>Here $⋆$ is equivalent to $\ker ((0, z)⋅) = \operatorname{im}(\binom{I \ O}{O \ C} ⋅)$, which is more over equivalent to $\ker π = \operatorname{im} (C^T)$.</p>
+  </div>
+</div>
+
+<h3 id="presentation">Presentation</h3>
+
+<p>We wish a presentation of pp condition. Recall the assignment</p>
+
+<p>$$\begin{equation}
+(𝐦𝐨𝐝_R)_+ → \text{pp condition},\quad (M, x) ↦ \min pp^M(x).
+\end{equation}$$</p>
+
+<div class="problem">
+  <p>For pointed morphism $f : (M, m) → (N, n)$, one has $\min pp^M(m) ≥ \min pp^N(n)$.</p>
+</div>
+
+<div class="lemma">
+  <p>Such assignment is surjective.</p>
+  <div class="proof">
+    <p>Any $φ '$ has a preimage $(M, z_{[1,k]})$ as shown in the first theorem in <code class="language-plaintext highlighter-rouge">PP Lattice</code>, i.e.,</p>
+    <p>$$\begin{equation}
+φ' [z_{[1,k]},y] = ∃ y \ ((z_{[1,k]},y)⋅ \begin{pmatrix}I&O\\ -I&A\\ O&-B\end{pmatrix}).
+\end{equation}$$</p>
+    <p>One may take $y = z$ to obtain the <em>universal</em> solution.</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>The assignment $(M, z) ↦ φ$ gives the presentation of pp condition, i.e.,</p>
+  <p>$$\begin{equation}
+0 → (M / (z), - ) → (M, - ) → φ (-) → 0.
+\end{equation}$$</p>
+  <div class="proof">
+    <p>The morphism $(M, N) → φ (N)$ sends $f ↦ f(z)$ (with diagonal action). To see it is surjective, any $s ∈ φ (N)$ satisfies $\binom{I \ -A}{O \ \ \ B \ } ∣ s I$. Hence, $s$ maps from the generating set $z ⊆ M$. For exactness, we see</p>
+    <p>$$\begin{equation}
+\ker [(M, N) \xrightarrow{(-)(z)} φ (N)] = \{f : f(z) = 0\} ≃ (M/(z), N).
+\end{equation}$$</p>
+  </div>
+</div>
+
+<p>Now we show functorial property of pp condition.</p>
+
+<div class="proposition">
+  <p>$φ$ preserves $∐$, $∏$, $\varinjlim^{fil}$, and summands.</p>
+  <div class="proof">
+    <p>We write $φ(-) := \operatorname{cok}((p,-))$, where $p: M → M/(z)$ is a morphism between f.p. modules. For any $☆ ∈ \{∐ , ∏ , \varinjlim^{fil}\}$,</p>
+    <p>$$\begin{equation}
+☆ φ (M_∙ ) = ☆ \operatorname{cok}((p, M_∙ )) ≃ \operatorname{cok}((p, ☆M_∙ )) = φ (☆ M_∙).
+\end{equation}$$</p>
+    <p>$φ$ is clearly a additive functor, which preserves summands.</p>
+  </div>
+</div>
+
+<h3 id="purity">Purity</h3>
+
+<p>The functor $φ$ preserves $∐$, $∏$, $\varinjlim^{fil}$ and summands. It might preserves <em>a more general class of submodules</em>; nonetheless, $2ℤ ↪ ℤ$ is a non-example, since $φ (2ℤ) ≠ 2ℤ ∩ φ (ℤ)$ for $φ [x,y] = ∃ y \ (x-2y=0)$.</p>
+
+<div class="definition">
+  <p>A pure subgroup $L ↪ M$ is such that $φ (L) ⊆ φ (M) ∩ L$ holds equality for all pp formula $φ$.</p>
+</div>
+
+<p>The notion of pure subgroup (reine Untergruppe) is due to [Prüfer], where the pp conditions are specialised to the form $x = y ⋅ n$ for some $n ∈ ℕ$.</p>
 
 
   </article>
