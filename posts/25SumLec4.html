@@ -301,7 +301,7 @@ X ↦ \{𝐱 ∈ X^n : 𝐱 ⋅ 𝐂^T = \mathbf 0\}.
 </div>
 
 <div class="theorem">
-  <p>The assignment $(M, z) ↦ φ$ gives the presentation of pp condition, i.e.,</p>
+  <p>We denote $z = z_{[1,k]}$ in the previous lemma. The assignment $(M, z) ↦ φ$ gives the presentation of pp condition, i.e.,</p>
   <p>$$\begin{equation}
 0 → (M / (z), - ) → (M, - ) → φ (-) → 0.
 \end{equation}$$</p>
@@ -311,6 +311,16 @@ X ↦ \{𝐱 ∈ X^n : 𝐱 ⋅ 𝐂^T = \mathbf 0\}.
 \ker [(M, N) \xrightarrow{(-)(z)} φ (N)] = \{f : f(z) = 0\} ≃ (M/(z), N).
 \end{equation}$$</p>
   </div>
+</div>
+
+<p>This presentation indicates a universal property of $(M, z)$.</p>
+
+<div class="definition">
+  <p>(Free realisation). A free realisation of pp condition $φ$ is a pair $z ∈ φ (M)$ such that, for any $x ∈ φ (N)$, there is a morphism $f : (M, z) → (N, x)$ of pointed modules.</p>
+</div>
+
+<div class="problem">
+  <p>Verify such universal property according to the presentation.</p>
 </div>
 
 <p>Now we show functorial property of pp condition.</p>
@@ -331,10 +341,157 @@ X ↦ \{𝐱 ∈ X^n : 𝐱 ⋅ 𝐂^T = \mathbf 0\}.
 <p>The functor $φ$ preserves $∐$, $∏$, $\varinjlim^{fil}$ and summands. It might preserves <em>a more general class of submodules</em>; nonetheless, $2ℤ ↪ ℤ$ is a non-example, since $φ (2ℤ) ≠ 2ℤ ∩ φ (ℤ)$ for $φ [x,y] = ∃ y \ (x-2y=0)$.</p>
 
 <div class="definition">
-  <p>A pure subgroup $L ↪ M$ is such that $φ (L) ⊆ φ (M) ∩ L$ holds equality for all pp formula $φ$.</p>
+  <p>A pure submodule $L ↪ M$ is such that $φ (L) ⊆ φ (M) ∩ L^k$ holds equality for all pp formula $φ$.</p>
 </div>
 
-<p>The notion of pure subgroup (reine Untergruppe) is due to <a href="https://link.springer.com/article/10.1007/BF01504333">Prüfer</a>, where the pp conditions are specialised to the form $x = y ⋅ n$ for some $n ∈ ℕ$.</p>
+<ul>
+  <li>The notion of pure subgroup (reine Untergruppe) is due to <a href="https://link.springer.com/article/10.1007/BF01504333">Prüfer</a>, where the pp conditions are specialised to the form $x = y ⋅ n$ for some $n ∈ ℕ$.</li>
+</ul>
+
+<p>In this sense, $L ↪ M$ is a pure submodule iff $p^L(x) = p^M(x)$ for all $x ∈ L^k$, that is</p>
+
+<ul>
+  <li>a solution set of a pp condition $φ$ in $L$ is compatible with the restriction $L ↪ M$.</li>
+</ul>
+
+<div class="lemma">
+  <p>A <strong>pure submodule</strong>, or <strong>pure embedding</strong> $e_i : L_i ↪ M_i$ is preserved by $∐$, $∏$, $\varinjlim^{fil}$ and pure submodules (including summands).</p>
+  <div class="proof">
+    <p>For pp condition $φ$ and any $☆ ∈ \{∐ , ∏ , \varinjlim^{fil}\}$, one has</p>
+    <p>$$\begin{aligned}
+φ (☆ M_i) ∩ (☆ L_i)^k = (☆φ (M_i)) ∩ (☆ L_i^k) = \ker ☆(φ(M_i) ⊕ L_i^k → M_i)\\
+= ☆ \ker (φ(M_i) ⊕ L_i^k → M_i) = ☆ φ (L_i) = φ (☆ L_i).
+\end{aligned}$$</p>
+    <p>To see the pure embedding in transitive, we take $L ↪ M ↪ N$ and see that</p>
+    <p>$$\begin{equation}
+φ (M) ∩ L^k = (φ (M) ∩ N^k) ∩ L^k = φ (N) ∩ L^k = φ (L).
+\end{equation}$$</p>
+  </div>
+</div>
+
+<div class="lemma">
+  <p>A transfinite composition of pure embedding is again a pure embedding.</p>
+  <div class="proof">
+    <p>Let $L_0 ↪ L_1 ↪ \cdots L_γ ↪ \cdots$ be such system which terminates at some limit ordinal $α$. We denote $P_γ$ as the proposition that $L_0 ↪ L_γ$ is a pure embedding for some $γ ∈ α$. Clearly $P_0$ holds. $P_γ → P_{γ +1}$ is given by the transitivity of pure embedding. We see $⋀ _{β ∈ γ } P_β → P_γ$ for limit ordinal $γ$:</p>
+    <p>$$\begin{aligned}
+φ (L_γ) ∩ L_0 ^k &= φ (⋃\limits_{β ∈ γ } L_β) ∩ L_0 ^k = (⋃\limits_{β ∈ γ } φ (L_β)) ∩ L_0 ^k \\[6pt]
+&\overset{\text{AB5}}= ⋃\limits_{β ∈ γ } (φ (L_β) ∩ L_0 ^k) = ⋃\limits_{β ∈ γ } φ (L_0) =  φ (L_0).
+\end{aligned}$$</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>Conclude that,</p>
+  <ul>
+    <li>for any filtered system of pure embeddings, the structure morphism $L_β ↪ \varinjlim^{fil}L_∙$ is again a pure embedding.</li>
+    <li>any embedding of f.g. projective module $P$ to a flat module $M$ is a pure embedding.</li>
+  </ul>
+</div>
+
+<p>This indicates that a pure embeddings are $\varinjlim^{fil}$-closure of split monomorphisms. A pure embedding $i : L ↪ M$ is defined by the equivalent manners:</p>
+
+<ol>
+  <li>(pp). $φ (L) = φ (M) ∩ L^k$ for all pp condition $φ$;</li>
+  <li>(exactness). The ses $0 → L → M → M/L → 0$ is preserved by all $⊗$-type functor.</li>
+  <li>(pure morphism). The pure morphism in locally finitely presented category ($𝐌𝐨𝐝 _R$).</li>
+</ol>
+
+<p>We show a theorem connecting the first two conditions.</p>
+
+<div class="theorem">
+  <p>Say $0 → A → B → C → 0$ is a pure ses provided $A ↪ B$ is a pure embedding. $θ$ is pure exact iff $(K, θ)$ is pure exact for all f.p. $K$.</p>
+  <div class="proof">
+    <p>Note that the latter statement is equivalent to that, f.p. modules lifts $B ↠ C$.<br /> (←). Recall that $φ(-) = \operatorname{cok}((M/(z),-) ↪ (M, -))$. By assumption, both $(M/(z),θ)$ and $(M, θ)$ are exact, thus $φ (θ)$ is exact. We obtain a monomorphis of ses:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec4/diagram_2854b7fd52125.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>By inclusion of cokernels, $\square$ is a pullback. Hence $φ (B) ∩ A^k = φ (A)$. <br /> (→). For any pp condition $φ$, $c ∈ φ (C)$, there is $y$ s.t. $(c,z)H = 0$. Taking the preimage</p>
+    <p>$$\begin{equation}
+B^n ↠ C^n,\quad (b,y) ↦ (c , z),
+\end{equation}$$</p>
+    <p>we see $(b,y)H ∈ A^m$. By pure embedding, there is some $(a,x) ∈ A^n$ s.t. $(a,x)H = (b,y)H$. Hence, we obtain the induced surjection</p>
+    <p>$$\begin{equation}
+π : φ (B) ↠ φ (C),\quad (b-a) ↦ c.
+\end{equation}$$</p>
+    <p>Now we show that any morphism $h : K → C$ lifts to $\widetilde h : K → B$. Let $x$ be the generating set of $K$, and take $φ = \min pp^K(x)$. Now $h(x) ∈ φ (C)$. By induced surjection $φ (B) ↠ φ (C)$, there is some $y ∈ φ (B)$ s.t. $π (y) = h(x)$. Since $(K, x)$ is a free realisation of $φ$, there is a morphism $\widetilde h : K → B$ s.t. $\widetilde h (x) = y$. We see that $\widetilde h$ is a lift of $h$.</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>Let $0 → A \overset i→ B \overset π → C → 0$ be ses, show the following equivalent.</p>
+  <ol>
+    <li>$i$ is a pure embedding,</li>
+    <li>$i ⊗ X$ is monic for all $X ∈ 𝐌𝐨𝐝 _R$,</li>
+    <li>$i ⊗ K$ is monic for all $K ∈ 𝐦𝐨𝐝 _R$,</li>
+    <li>$(K, π)$ is epic for all $K ∈ 𝐦𝐨𝐝 _R$.</li>
+  </ol>
+  <p>Hint: we just show 1 ↔ 4. Since $\varinjlim^{fil}(𝐦𝐨𝐝 _R) = 𝐌𝐨𝐝_R$, and $\varinjlim^{fil}$ is exact, we see 2 ↔ 3. To see 3 ↔ 4, we consider two ways of finite cocompletion of $𝐚𝐝𝐝 (R)$ in $\mathrm{PSh}(𝐌𝐨𝐝 _R)$:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/25SumLec4/diagram_64314b193b615.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<p>We show another definition of purity.</p>
+
+<div class="definition">
+  <p>Say $f : X → Y$ is a pure morphism, if for any $g : A → B$ the morphism in $𝐦𝐨𝐝_R$, and for any commutative diagram $g ⇒ f$, there exists $s$ making $\circlearrowleft$ commutative:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/25SumLec4/diagram_ee6ba8fb80e40.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+</div>
+
+<div class="proposition">
+  <p>Any pure morphism $f:X → Y$ is monic.</p>
+  <div class="proof">
+    <p>Let $K$ be any f.p. module s.t. the composition $K \xrightarrow g X \xrightarrow f → Y$ is zero. We shall show that $g=0$. Recall that</p>
+    <ul>
+      <li>$f$ is a filtered colimit of morphisms between f.p.modules, and</li>
+      <li>any f.g. modules are $ω$-small objects.</li>
+    </ul>
+    <p>Hence, $g$ passes through some f.p. submodule $X_i ↪ X$, and $f(X_i)$ passed through some f.p. submodule $Y_j ↪ Y$. There is also dashed morphism $s$ making all $\circlearrowleft$ commutative:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec4/diagram_755b10f62feb4.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>By diagram chasing, $fg=0$ implies $g=0$.</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>Pure morphisms are <strong>precisely</strong> filtered colimits of split monomorphisms.</p>
+  <div class="proof">
+    <p>(←) split monomorphisms and pure. It suffices to show pure morphisms are closed under $\varinjlim^{fil}$. The partial lifting property of pure morphism $f_i$ and f.p. morphism $g$ is equivalent to $\operatorname{im}(2) ⊆ \operatorname{im}(3 ∘ 1)$ in the following diagram:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec4/diagram_af1c5fab3d6ba.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>By exactness of filtered colimit, we obtain $\operatorname{im}(2) ⊆ \operatorname{im}(3 ∘ 1)$ in the colimit diagram. <br /> (→). Any pure morphism $f : X ↪ Y$ is a filtered colimit of the injective system $f_i ⇒ f$. We assign each $i$ a pushout diagram, wherein $e_i$ splits by partial lifting property:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec4/diagram_1aa5d96ad4ec0.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Now $\varinjlim^{fil} Y_i ↪ \varinjlim^{fil} (X ⊔ _{X_i} Y_i) ↪ Y$. Hence the isomorphisms holds.</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>The followings are equivalent definitions for $f : X → Y$ to be a pure morphism.</p>
+  <ol>
+    <li>For any f.p. morphism $g:A → B$, and commutative diagram $g ⇒ f$, the morphism $A → X$ passes through $g$.</li>
+    <li>$f$ is a filtered colimit of split monomorphisms.</li>
+    <li>$f ⊗ X$ is injective for all $X ∈ 𝐌𝐨𝐝 _R$.</li>
+    <li>$f ⊗ K$ is injective for all f.p. $K ∈ 𝐦𝐨𝐝 _R$.</li>
+    <li>$(K, Y) ↠ (K, Y/X)$ is surjective for all f.p. $K ∈ 𝐦𝐨𝐝 _R$.</li>
+    <li>$φ (f(X)) = φ (Y) ∩ f(X)^k$ for any pp condition $φ$.</li>
+  </ol>
+  <div class="proof">
+    <p>We show 1 ↔ 2 and 5 ↔ 6, while 3 ↔ 4 ↔ 5 is an exercise. Clearly 2 → 3. It remains to show 5 → 3. <br /> (5 → 3). We shall find the partial lifting map $s$ in the diagram:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec4/diagram_7b1ccadf6bd44.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Here $\operatorname{cok}(g)$ is f.p.. By 5., there is dashed $t$ making $\circlearrowleft$ commutative. Since $(j - tp) ∈ (π _∗ )$, there is some $s$ s.t. $j - tp= fs$. Now</p>
+    <p>$$\begin{equation}
+(sg=i) ↔ (fsg=fi) ↔ ((j - tp)g =jg) ↔ \text{true}.
+\end{equation}$$</p>
+  </div>
+</div>
 
 
   </article>
