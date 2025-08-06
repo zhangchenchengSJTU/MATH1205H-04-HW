@@ -95,8 +95,10 @@ MathJax = {
       <li><a href="#pp-lattice" id="markdown-toc-pp-lattice">PP Lattice</a></li>
       <li><a href="#presentation" id="markdown-toc-presentation">Presentation</a></li>
       <li><a href="#purity" id="markdown-toc-purity">Purity</a></li>
+      <li><a href="#examples-of-pure-ses" id="markdown-toc-examples-of-pure-ses">Examples of Pure ses</a></li>
     </ul>
   </li>
+  <li><a href="#pure-relative-homological-algebra" id="markdown-toc-pure-relative-homological-algebra">Pure-Relative Homological Algebra</a></li>
 </ul>
 
 <h2 id="lecture-4">Lecture 4</h2>
@@ -482,7 +484,7 @@ B^n ↠ C^n,\quad (b,y) ↦ (c , z),
     <li>$φ (f(X)) = φ (Y) ∩ f(X)^k$ for any pp condition $φ$.</li>
   </ol>
   <div class="proof">
-    <p>We show 1 ↔ 2 and 5 ↔ 6, while 3 ↔ 4 ↔ 5 is an exercise. Clearly 2 → 3. It remains to show 5 → 3. <br /> (5 → 3). We shall find the partial lifting map $s$ in the diagram:</p>
+    <p>We show 1 ↔ 2 and 5 ↔ 6, while 3 ↔ 4 ↔ 5 is an exercise. Clearly 2 → 3. It remains to show 5 → 1. <br /> (5 → 1). We shall find the partial lifting map $s$ in the diagram:</p>
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/25SumLec4/diagram_7b1ccadf6bd44.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
@@ -500,6 +502,81 @@ B^n ↠ C^n,\quad (b,y) ↦ (c , z),
   <li>For $\mathrm{Hom}(?,-)$, $(i, -)$ is always epic <strong>iff</strong> $i$ is split mono.</li>
   <li>For $- ⊗ ?$, $i ⊗ X$ is always monic <strong>iff</strong> $i$ is pure mono.</li>
 </ul>
+
+<h3 id="examples-of-pure-ses">Examples of Pure ses</h3>
+
+<p>We show some examples of pure short exaxct sequences.</p>
+
+<div class="definition">
+  <p>We call the ker-coker pair in a pure exact sequence as <strong>pure monomorphism</strong> and <strong>pure epimorphism</strong>.</p>
+</div>
+
+<div class="problem">
+  <p>Let $g$ be an pure monomorphism. Then $g ∘ f$ is a pure monomorphism <strong>iff</strong> $f$ is a pure monomorphism. Hint: use $- ⊗ X$.<br /> Let $f$ be a pure epimorphism. Then $g ∘ f$ is a pure epimorphism <strong>iff</strong> $g$ is a pure epimorphism. Hint: use $(K,-)$.</p>
+</div>
+
+<div class="problem">
+  <p>Pure monomorphisms (resp. epimorphisms) are closed under pushout (resp. pullback). Hint: apply $(K, -)$.</p>
+  <ul>
+    <li>Corollary, if $N ↪ M$ is pure, then $\frac{N}{L} ↪ \frac{M}{L}$ is pure.</li>
+    <li>Corollary, if $L ↪ M$ and $\frac{N}{L} ↪ \frac{M}{L}$ are pure, then $L ↪ N$ is pure.</li>
+  </ul>
+</div>
+
+<p>This result shows convenience in construction when constructing a sequential pure embedding $M_0 ↪ M_1 ↪ M_2 ↪ \cdots ↪ M_α$.</p>
+
+<ul>
+  <li>If $M_{γ} ↪ M_α$ is a pure embedding, then for any pure submodule $\frac{M_{γ +1}}{M_γ } ↪ \frac{M_α }{M_γ}$, the embedding $M_γ ↪ M_{γ +1}$ is pure.</li>
+  <li>For limit cardinal $β$, $M_β ↪ M_α$ is a pure embedding when all $M_γ ↪ M_α$ ($γ < β$) are pure embeddings. Hence all $M_γ ↪ M_β$ are pure embeddings.</li>
+</ul>
+
+<div class="example">
+  <p>The pure ses $0 → A → B → C → 0$ splits when $C ∈ 𝐦𝐨𝐝 _R$.</p>
+</div>
+
+<div class="example">
+  <p>The pure ses are preserved by $∐$, $∏$, $\varinjlim^{fil}$, and summands.</p>
+  <div class="proof">
+    <p>Recall that pure embeddings are preserves by these exact functors.</p>
+  </div>
+</div>
+
+<div class="example">
+  <p>For any filtered colimit, the following is pure ses</p>
+  <p>$$\begin{equation}
+0 → K → ∐ X_∙ → \varinjlim{}^{fil} X_∙ → 0.
+\end{equation}$$</p>
+  <div class="proof">
+    <p>For any $K ∈ 𝐦𝐨𝐝 _R$, $f : K → \varinjlim{}^{fil} X_∙$ passes some $⨁ _{i=1}^n X_∙$.</p>
+  </div>
+</div>
+
+<div class="example">
+  <p>The following is pure ses</p>
+  <p>$$\begin{equation}
+0 → ∐ X_∙ → ∏ X_∙ → C → 0.
+\end{equation}$$</p>
+  <div class="proof">
+    <p>For any $K ∈ 𝐦𝐨𝐝 _R$, $K ⊗ -$ preserves $∐$ and $∏$.</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>(Löwenheim–Skolem). For any $x ∈ M$ belongs to a pure submodule $x ∈ L ↪ M$ for $|L| ≤ \max (ω , |R|)$.</p>
+  <ul>
+    <li>This theorem is specialised from <em>(Downward) Löwenheim–Skolem Theorem</em> in model theory, which discuss the existence and cardinality of models.</li>
+  </ul>
+  <div class="proof">
+    <p>Note that the cardinal of the set of pp conditions is no more than $\max (ω , |R|)$. Set $L_0 := (x)$. For each $x ∈ L_0$ and pp condition $φ$, one can find finitely many bound variables ${}^xS^0_φ ⊆ M$ such that $φ (M) ∩ L_0 ⊆ ({}^xS^0_φ ∪ L_0)$. Take</p>
+    <p>$$\begin{equation}
+L_{k+1} := (L_{k} ∪ ⋃ \limits_{x ∈ L_0, φ ∈ \ \text{pp condition}}{}^xS^k_φ),\quad k ∈ ℕ.
+\end{equation}$$</p>
+    <p>Hence, for arbitrary $k$ and pp condition $φ$, one has $φ (M) ∩ L_{k} ⊆ L_{k+1}$. Note that $|L_k|≤ \max (ω , |R|)$. We obtain the desired pure submodule $L := ⋃ _{k ∈ ℕ }L_k$.</p>
+  </div>
+</div>
+
+<h2 id="pure-relative-homological-algebra">Pure-Relative Homological Algebra</h2>
+
 
 
   </article>
