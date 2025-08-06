@@ -494,6 +494,13 @@ E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots
   <p>Show the complex $\cdots \xrightarrow {× 2}ℤ / 4ℤ \xrightarrow {× 2}ℤ / 4ℤ → \cdots$ in $C(ℤ / 4ℤ)$ is acyclic with projective terms, but it is not a projective object.</p>
 </div>
 
+<div class="problem">
+  <p>Show that $\mathcal{HOM}(X,-) : K(\mathcal{A}) → K(𝐀𝐛)$ is well-defined. Hint: show that</p>
+  <p>$$\begin{equation}
+C(\mathcal{A}) \xrightarrow{\mathcal{HOM}(X,-)} C(𝐀𝐛) ↠ K(𝐀𝐛),\quad C_{\text{null homo}} ↦ 0.
+\end{equation}$$</p>
+</div>
+
 <div class="theorem">
   <p>($K$-projective). $K$-projective complexes are <strong>defined in $K(\mathcal{A})$</strong> with the following equivalent conditions:</p>
   <ol>
@@ -615,7 +622,7 @@ E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots
   <div class="proof">
     <p>(PG1). We show for any set of morphisms $f_i : A_i → B_i$ with $(\underline U,f_i)$ surjective, the morphism $(\underline U, ∐ f_i)$ is again surjective. Note that</p>
     <p>$$\begin{aligned}
-(\underline U, ∐ f_i)_{K(\mathcal{A})} &≃ (\underline U, H^0(∐ (f_i)))_\mathcal{A} \overset {\text{Ab3*}}≃ (U, ∐ H^0(f_i))_\mathcal{A}\quad \text{is surj.}\\[6pt]
+(\underline U, ∐ f_i)_{K(\mathcal{A})} &≃ ( U, H^0(∐ (f_i)))_\mathcal{A} \overset {\text{Ab3*}}≃ (U, ∐ H^0(f_i))_\mathcal{A}\quad \text{is surj.}\\[6pt]
 & ↔ ∐ H^0(f_i) \quad \text{is surj.}\\[6pt]
 & ↔ \{H^0(f_i)\}_{i ∈ I} \quad \text{are surj.}\\[6pt]
 & ↔ \{(U, H^0(f_i))_\mathcal{A}\}_{i ∈ I} \quad \text{are surj.}\\[6pt]
@@ -824,9 +831,9 @@ l_X^ρ : \underline R ⊗^𝐋 X = ρ \underline R ⊗ ρ X \xrightarrow [∼ ]{
 </div>
 
 <div class="example">
-  <p>(Lax monoidal functor). Recall that we define the functor of resolution $ρ : D(R) → C(R) / ∼_{\text{homotopy equivalence}}$ with <em>axiom of choice of the class</em>. This extends to a lax monoidal functor</p>
+  <p>(Lax monoidal functor). Recall that we define the functor of resolution $ρ : D(R) → K(R)$ with <em>axiom of choice of the class</em>. This extends to a lax monoidal functor</p>
   <p>$$\begin{equation}
-ρ : (D(R), ⊗ ^𝐋 , \underline R) → (C(R)/ ∼, ⊗ , \underline R)
+ρ : (D(R), ⊗ ^𝐋 , \underline R) → (K(R), ⊗ , \underline R)
 \end{equation}$$</p>
   <p>consisting of</p>
   <ul>
