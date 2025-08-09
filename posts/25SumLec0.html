@@ -497,6 +497,7 @@ $$</p>
     <li>$\mathrm{Tor}_{≥ 1}(M, -) = 0$, or $\mathrm{Tor}_1 (M, -) = 0$;</li>
     <li>For any matrix equation $𝐑 ⋅ 𝐦 = 𝐎$, there is some $𝐑$-matrix $R$ such that $𝐑 ∈ \ker (⋅ 𝐀)$ and $𝐦 ∈ \operatorname{im}(𝐀 ⋅ )$.</li>
     <li>Any morphism from f.p. module to $M$ factors through some f.g. projective module.</li>
+    <li>$(X,-)$ lifts all surjections towards $M$, iff $X$ is f.p..</li>
     <li>$M$ is a filtered colimit of f.p. modules.</li>
   </ol>
 </div>
@@ -638,6 +639,13 @@ P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/25SumLec0/diagram_1d900e34363e2.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
+</div>
+
+<div class="theorem">
+  <p>$M$ is flat, <strong>iff</strong> exactly for f.p. modules $X$, $(X,-)$ lifts all surjections towards $M$.</p>
+  <div class="proof">
+    <p>Let $p : F ↠ M$ be a free precover. $X$ lifts all surjections towards $M$ iff $(X,p)$ is surjective. The rest is clear.</p>
+  </div>
 </div>
 
 <div class="problem">
@@ -797,11 +805,11 @@ P \xrightarrow {p \ ↦ \ (e_i ⋅ f_i (p))_{i ∈ I}} R^{(I)} \xrightarrow {(r^
 <p>We shall see this functor suprisingly transfers and reflects from injective modules to flat modules; the dual procedure applies for Noetherian rings.</p>
 
 <div class="example">
-  <p>We demonstrate that f.p. flat modules are projective via $(-)^+$. If $F$ is flat, then $(F ⊗ -)^+ ≃ F ⊗ (-)^+$ is exact. Observe that</p>
+  <p>We demonstrate that f.p. flat modules are projective via $(-)^+$. Observe that</p>
   <ul>
-    <li>$? ⊗ (-)^+ → (?, -)^+$ is a natural for right exact functors, which is an isomorphism for $?$ f.g. free, and thus for $?$ f.p. (by right exactness).</li>
+    <li>the natural transformation $? ⊗ (-)^+ → (?, -)^+$ is isomorphic when $?$ is f.g. free. Note that $? ⊗ (M)^+ → (?, M)^+$ are right exact functors, the isomorphism holds when $?$ is f.p..</li>
   </ul>
-  <p>Therefore, $(F,-)^+ ≃ F ⊗ (-)^+$ is exact. Since $(-)^+$ reflects exactness, it follows that $F$ is projective.</p>
+  <p>If $F$ is flat, then $F ⊗ (-)^+ ≃ (F ⊗ -)^+ ≃ (F,-)^+$ is exact. Since $(-)^+$ reflects exactness, it follows that $F$ is projective.</p>
 </div>
 
 <div class="problem">
@@ -1430,14 +1438,18 @@ d_h ∘ d_h = 0, \quad d_v ∘ d_v = 0, \quad\text{and} \ \  d_h ∘ d_v + d_v �
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/25SumLec0/diagram_b205cc8fe3b93.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>By criterion of exactness, we see $\binom{\text{红}\ \text{紫}}{\text{黑} \ \text{蓝}}$, $\binom{\text{红}}{\text{黑}}$, and $({\text{黑}\ \text{蓝}})$ are exact. Hence $\text{黑} ⇠ \text{蓝}$ and $\text{黑}ᵀ ⇠ \text{红}$ are quasi-isomorphisms. Now</p>
+  <p>By criterion of exactness, we see $\binom{ {\color{red}\text{红}}\ {\color{purple}\text{紫}} }{\text{黑} \ {\color{blue}\text{蓝}}}$, $\binom{ {\color{red}\text{红}}}{\text{黑}}$, and $({\text{黑}\ {\color{blue}\text{蓝}}})$ are exact. By ses</p>
+  <p>$$\begin{equation}
+0 → \text{黑} → ({\text{黑}\ {\color{blue}\text{蓝}}}) → {\color{blue}\text{蓝}} → 0,
+\end{equation}$$</p>
+  <p>Hence, $Σ\mathrm{Tot}(\text{黑}) ⇠ {\color{blue}\text{蓝} }$ and $Σ\mathrm{Tot}(\text{黑}^⊺) ⇠ {\color{red}\text{红} }$ are quasi-isomorphisms. We obtain</p>
   <p>$$\begin{aligned}
-\mathrm{Ext}^k (-,Y)(X) & := H^k (\text{红}) ≃ H^k (\mathrm{Tot}(\text{蓝}))\\[6pt]
-& ≃ H^k (\text{红}) =: \mathrm{Ext}^k (X,-)(Y).
+\mathrm{Ext}^k (-,Y)(X) & := H^k ({\color{red}\text{红}}) ≃ H^k (Σ \mathrm{Tot}(\text{黑}))\\[6pt]
+& ≃ H^k ({\color{blue}\text{蓝}}) =: \mathrm{Ext}^k (X,-)(Y).
 \end{aligned}$$</p>
 </div>
 
-<p><strong>The balance comes from $H^∙ (\mathrm{Tot}^{☆}(X)) = H^∙ (\mathrm{Tot}^{☆}(X)ᵀ \ )$.</strong></p>
+<p><strong>The balance comes from $H^∙ (\mathrm{Tot}^{☆}(X)) = H^∙ (\mathrm{Tot}^{☆}(X)^⊺ \ )$.</strong></p>
 
 <div class="definition">
   <p>(Balance) Suppose $T : ⨉_{i=1}^n \mathcal{A}_i → \mathcal{B}$ is a (covariant) multi-functor between Abelian categories. Say it is balances, provided</p>

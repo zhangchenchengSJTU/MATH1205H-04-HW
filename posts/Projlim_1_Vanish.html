@@ -105,7 +105,9 @@ MathJax = {
   <p>(Abel 群的投射塔). 即预层 $\mathrm{PSh}(\mathbb N)$, 其对象 (函子 $M$) 表现做映射链 \begin{equation} \cdots \xrightarrow{m_2} M_2\xrightarrow{m_1} M_1\xrightarrow{m_0} M_0. \end{equation} 记 $m:\prod_{\mathbb N} M_k\to \prod _{\mathbb N}M_k,\quad (x_k)_{k\in \mathbb N}\mapsto (x_k-m_k(x_{k+1}))$ 由泛性质 $\{p_{k}m=m_{k+1}p_{k+1}\}_{k\in \mathbb N}$ 确立. 记正合列</p>
   <p>\begin{equation} 0\to {\varprojlim}^0 M\to \prod_{\mathbb N} M\xrightarrow{1-m}\prod_{\mathbb N} M\to {\varprojlim}^1 M\to 0. \end{equation}</p>
   <p>其中, $1-m$ 自动对应如下泛性质确立的序列 ($\oplus$ 强调了双积)</p>
-  <center> <!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHByb2QgTSJdLFsyLDAsIlxccHJvZCBNIl0sWzAsMSwiTV9rXFxvcGx1cyBNX3trKzF9Il0sWzIsMSwiTV9rIl0sWzAsMSwiMS1tIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiKHBfayxwX3trKzF9KSIsMl0sWzEsMywicF9rIl0sWzIsMywiKFxcbWF0aHJte2lkfV97TV9rfSwgLW1fe2srMX0pIiwyXSxbMCwzXV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHByb2QgTSJdLFsyLDAsIlxccHJvZCBNIl0sWzAsMSwiTV9rXFxvcGx1cyBNX3trKzF9Il0sWzIsMSwiTV9rIl0sWzAsMSwiMS1tIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzAsMiwiKHBfayxwX3trKzF9KSIsMl0sWzEsMywicF9rIl0sWzIsMywiKFxcbWF0aHJte2lkfV97TV9rfSwgLW1fe2srMX0pIiwyXSxbMCwzXV0=&amp;embed" width="600" height="200" style="border-radius: 8px; border: dahsed;"></iframe> </center>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Projlim_1_Vanish/diagram_14e87928d1a57.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
 </div>
 
 <div class="proposition">
@@ -126,7 +128,9 @@ MathJax = {
 
 <div class="example">
   <p>给定余预层 $A\in \mathrm{PSh}(\mathbb N^{\mathrm{op}})$ (正向塔), 得函子范畴的塔 \begin{equation} h^A:[\cdots \to (A_2,-)\to (A_1,-)\to (A_0,-)]. \end{equation} 记正向塔的位移运算为 $f$, 由 AB5 知 $(1-f)$ 是单态射. 短正合列 $0\to \coprod A\to \coprod A\to \varinjlim A\to 0$ 给出</p>
-  <center> <!-- https://q.uiver.app/#q=WzAsMTMsWzEsMSwiKFxcdmFyaW5qbGltIEEsLSkiXSxbMCwxLCIwIl0sWzIsMSwiKFxcY29wcm9kIEEsLSkiXSxbMywxLCIoXFxjb3Byb2QgQSwtKSJdLFs0LDEsIlxcbWF0aHJte0V4dH1eMShcXHZhcmluamxpbSBBLC0pIl0sWzUsMSwiXFxtYXRocm17RXh0fV4xKFxcY29wcm9kIEEsLSkiXSxbNiwxLCJcXG1hdGhybXtFeHR9XjEoXFxjb3Byb2QgQSwtKSJdLFsxLDAsIlxcdmFycHJvamxpbSAoQSwtKSJdLFswLDAsIjAiXSxbMiwwLCJcXHByb2QgKEEsLSkiXSxbMywwLCJcXHByb2QgKEEsLSkiXSxbNCwwLCJ7XFx2YXJwcm9qbGltfV4xIChBLC0pIl0sWzUsMCwiMCJdLFsxLDBdLFs0LDVdLFswLDJdLFsyLDNdLFszLDRdLFs1LDZdLFs4LDddLFs3LDldLFs5LDEwXSxbMTAsMTFdLFsxMSwxMl0sWzcsMCwiXFxzaW0gIiwyXSxbOSwyLCJcXHNpbSAiLDJdLFsxMCwzLCJcXHNpbSAiLDJdXQ== --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTMsWzEsMSwiKFxcdmFyaW5qbGltIEEsLSkiXSxbMCwxLCIwIl0sWzIsMSwiKFxcY29wcm9kIEEsLSkiXSxbMywxLCIoXFxjb3Byb2QgQSwtKSJdLFs0LDEsIlxcbWF0aHJte0V4dH1eMShcXHZhcmluamxpbSBBLC0pIl0sWzUsMSwiXFxtYXRocm17RXh0fV4xKFxcY29wcm9kIEEsLSkiXSxbNiwxLCJcXG1hdGhybXtFeHR9XjEoXFxjb3Byb2QgQSwtKSJdLFsxLDAsIlxcdmFycHJvamxpbSAoQSwtKSJdLFswLDAsIjAiXSxbMiwwLCJcXHByb2QgKEEsLSkiXSxbMywwLCJcXHByb2QgKEEsLSkiXSxbNCwwLCJ7XFx2YXJwcm9qbGltfV4xIChBLC0pIl0sWzUsMCwiMCJdLFsxLDBdLFs0LDVdLFswLDJdLFsyLDNdLFszLDRdLFs1LDZdLFs4LDddLFs3LDldLFs5LDEwXSxbMTAsMTFdLFsxMSwxMl0sWzcsMCwiXFxzaW0gIiwyXSxbOSwyLCJcXHNpbSAiLDJdLFsxMCwzLCJcXHNpbSAiLDJdXQ==&amp;embed" width="600" height="150" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Projlim_1_Vanish/diagram_aaef011401033.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
   <p>依照 AB3, $\mathrm{Ext}^1$ 与 $\coprod$ 交换. 取 $\mathrm{Ext}^1(\varinjlim A,-)$ 处的合冲子得短正合列 \begin{equation} 0\to {\varprojlim}^1(A,-)\to \mathrm{Ext}^1(\varinjlim A,-)\to {\varprojlim}^0\mathrm{Ext}^1(A,-)\to 0. \end{equation}</p>
 </div>
 
@@ -154,7 +158,9 @@ MathJax = {
 
 <div class="example">
   <p>假定特定的核与积存在, 则对具体范畴而言, Mittag-Leffler 条件给出极限 $\{(x_n)_{n\geq 0}\mid φ_{i,i + j}(x_i)=x_{i+j}\}$. 此时</p>
-  <center> <!-- https://q.uiver.app/#q=WzAsOCxbMywwLCJNXzAiXSxbMiwwLCJNXzEiXSxbMSwwLCJNXzIiXSxbMCwwLCJcXGNkb3RzIl0sWzMsMSwiXFxtYXRocm17aW19KFxcdmFycGhpIF97XFxpbmZ0eSwwfSkiXSxbMiwxLCJcXG1hdGhybXtpbX0oXFx2YXJwaGkgX3tcXGluZnR5LDF9KSJdLFsxLDEsIlxcbWF0aHJte2ltfShcXHZhcnBoaSBfe1xcaW5mdHksMX0pIl0sWzAsMSwiXFxjZG90cyAiXSxbMSwwLCJcXHZhcnBoaSBfezEsMH0iXSxbMiwxLCJcXHZhcnBoaSBfezIsMH0iXSxbNSw0LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNiw1LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMywyXSxbNyw2XSxbNCwwLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs1LDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzYsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0= --> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsOCxbMywwLCJNXzAiXSxbMiwwLCJNXzEiXSxbMSwwLCJNXzIiXSxbMCwwLCJcXGNkb3RzIl0sWzMsMSwiXFxtYXRocm17aW19KFxcdmFycGhpIF97XFxpbmZ0eSwwfSkiXSxbMiwxLCJcXG1hdGhybXtpbX0oXFx2YXJwaGkgX3tcXGluZnR5LDF9KSJdLFsxLDEsIlxcbWF0aHJte2ltfShcXHZhcnBoaSBfe1xcaW5mdHksMX0pIl0sWzAsMSwiXFxjZG90cyAiXSxbMSwwLCJcXHZhcnBoaSBfezEsMH0iXSxbMiwxLCJcXHZhcnBoaSBfezIsMH0iXSxbNSw0LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNiw1LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMywyXSxbNyw2XSxbNCwwLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs1LDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzYsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0=&amp;embed" width="600" height="200" style="border-radius: 8px; border: dashed;"></iframe> </center>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Projlim_1_Vanish/diagram_7bd4953dd3ae7.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
   <p>是等价的逆像系统.</p>
 </div>
 
