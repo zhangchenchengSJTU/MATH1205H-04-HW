@@ -499,6 +499,7 @@ E_1 = [\cdots → ⟨x^k, d(x^{k+1})⟩ → ⟨x^{k+1}, d(x^{k+2})⟩ → \cdots
   <p>$$\begin{equation}
 C(\mathcal{A}) \xrightarrow{\mathcal{HOM}(X,-)} C(𝐀𝐛) ↠ K(𝐀𝐛),\quad C_{\text{null homo}} ↦ 0.
 \end{equation}$$</p>
+  <p>This shows that $(K(\mathcal{A}), ⊗ ,\mathcal{HOM})$ is again closed monoidal.</p>
 </div>
 
 <div class="theorem">
@@ -566,14 +567,21 @@ C(\mathcal{A}) \xrightarrow{\mathcal{HOM}(X,-)} C(𝐀𝐛) ↠ K(𝐀𝐛),\qua
   <li>By a well-known characterisation of Noetherian rings, we take Eilenberg-Cartan coresolution of an unbounded chain complex $X^∙ ↪ I^{∙ , ∙ }$, then $X ↪ \mathrm{Tot}^{∐ }(I)$ is an injective resolution.</li>
 </ol>
 
-<div class="problem">
-  <p>Show that for acyclic complex $C$ and projective complex $P$, if either one is bounded above, then $(P,C)_{K(\mathcal{A})} = 0$.</p>
+<div class="lemma">
+  <p>For acyclic complex $C$ and projective complex $P$, if either one is bounded above, then $(P,C)_{K(\mathcal{A})} = 0$.</p>
+  <div class="proof">
+    <p>Let $f : P → C$ be such chain map. Say $f$ is <strong>ok</strong> for $k$, when there is $s^{≥ k}$ s.t. $f^l = ds^{l}+s^{l+1}d$ for all $l ≥ k$. By assumption $f$ is ok for large $k$. We show $f$ is ok for $k-1$ when it is ok for $k$.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec2/diagram_62df07c3c6e44.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>We construct $s^{k-1} : P^{k-1} → C^{k-2}$ as follows. The morphism $Δ := (f^{k-1} - s^k d_P^{k-1})$ belongs to $\ker d_X^{k-1}$, thus $Δ$ factors through $B^{k-1}(C)$. We take $s^{k-1} : P^{k-1} → C^{k-2}$ by lifting property of projectives.</p>
+  </div>
 </div>
 
 <p>We denote $K^-(𝐏𝐫𝐨𝐣)$ the subcategory of $K(\mathcal{A})$ consisting of projective complexes bounded above.</p>
 
 <ul>
-  <li>The minus $()^-$ means $X ∈ K^- (𝐏𝐫𝐨𝐣)$ <strong>almost</strong> lies in the negative part.</li>
+  <li>The minus $(⋅ )^-$ means $X ∈ K^- (𝐏𝐫𝐨𝐣)$ <strong>almost</strong> lies in the negative part.</li>
 </ul>
 
 <div class="theorem">
@@ -587,6 +595,18 @@ C(\mathcal{A}) \xrightarrow{\mathcal{HOM}(X,-)} C(𝐀𝐛) ↠ K(𝐀𝐛),\qua
   <div class="proof">
     <p>(1). Let $f : P → Q$ be a quasi-isomorphism in $K^-(𝐏𝐫𝐨𝐣)$. Since $Q ↪ \mathrm{Cone}(f)$ is null-homotopic, $f$ is a homotopy equivalence. <br /> (2). We take Cartan-Eilenburg resolution $c_X : ρX ↠ X$, which is <strong>assumed to be functorial by axiom of choice</strong>. In particular, $c_P : ρP ↠ P$ is a canonical isomorphim. The replacement means the natural isomorphism $(c_X)_∗ : (P, ρ X)_{K^-(𝐏𝐫𝐨𝐣 )} ≃ (P, X)_{K^-(\mathcal{A})}$. This is due to $(P, \mathrm{Cone}(c_X)) = 0$. <br /> (3). We show that $ρ$ is an additive functor right adjoint to the inclusion. The inclusion is triangle functor. By adjoint functor theorem, $ρ$ is also triangulated. <br /> (4). We show that $P ∈ K^- (𝐏𝐫𝐨𝐣)$ is $K$-injective with projective terms. Hence it is DG-projective.</p>
   </div>
+</div>
+
+<p>The following exercises requires some techniques of diagram chasing.</p>
+
+<div class="problem">
+  <p>We know that $P ∈ C^- (𝐏𝐫𝐨𝐣)$ lifts epic quesiisomorphisms.</p>
+  <ol>
+    <li>For general $Q ∈ C (𝐏𝐫𝐨𝐣)$ and $Y ∈ C^- (\mathcal{A})$, show that any epic quasi-isomorphism $p : X ↠ Y$ is lifted by $P$.</li>
+    <li>Show the natural isomorphism: $$\begin{equation}
+   \{f ∈ (X,Y) ∣ \text{epic quasi-iso.}\}  \overset{1:1}↔ \{\widetilde {f} ∈ (X, (\operatorname{cok} (X)) ×_{\operatorname{cok} (Y)} Y) ∣ \text{epic}\}.
+   \end{equation}$$</li>
+  </ol>
 </div>
 
 <h3 id="resolutions-via-browns-rep">Resolutions via Brown’s Rep</h3>
