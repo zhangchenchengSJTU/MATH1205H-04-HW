@@ -104,6 +104,7 @@ MathJax = {
       <li><a href="#recollection-ml-conditions" id="markdown-toc-recollection-ml-conditions">Recollection: ML Conditions</a></li>
       <li><a href="#ml-module-revisited" id="markdown-toc-ml-module-revisited">ML Module Revisited</a></li>
       <li><a href="#pure-injective-and-compactness" id="markdown-toc-pure-injective-and-compactness">Pure Injective and Compactness</a></li>
+      <li><a href="#fp-injective" id="markdown-toc-fp-injective">Fp-Injective</a></li>
     </ul>
   </li>
 </ul>
@@ -113,7 +114,7 @@ MathJax = {
 <div class="abstract">
   <h5 id="abstract">Abstract</h5>
   <div>
-    <p>We discuss purity and its cotorsion theory.</p>
+    <p>We discuss purity and its cotorsion theory. We introduce definable subgroups and pp conditions, as a threshod for purity. We study pure exact sequence, pure projectives (and ML modules), pure injectives (= algebraically compact modules). A general pure-relative homological theory is based on cotorsion pairs which is discussed in the forthcoming lectures.</p>
   </div>
 </div>
 
@@ -654,6 +655,13 @@ B^n ↠ C^n,\quad (b,y) ↦ (c , z),
   </div>
 </div>
 
+<div class="proposition">
+  <p>$F$ is flat iff any ses $0 → K → M → F → 0$ is pure.</p>
+  <div class="proof">
+    <p>If $F$ is flat, then it is the filtered colimit of projectives. Hence, this ses is a filtered colimit of split ses’s. Conversely, we take $∐_F R ↠ F$. For any $K ∈ 𝐦𝐨𝐝 _R$, $K → F$ factors through some f.g. free module. Hence $F$ is flat.</p>
+  </div>
+</div>
+
 <div class="theorem">
   <p>(Löwenheim–Skolem). For any $x ∈ M$ belongs to a pure submodule $x ∈ L ↪ M$ for $|L| ≤ \max (ω , |R|)$.</p>
   <ul>
@@ -866,6 +874,10 @@ X_0 \xrightarrow{φ _0} X_1 \xrightarrow{φ _1} X_2 \xrightarrow{φ _2} \cdots
 \end{equation}$$</p>
 </div>
 
+<div class="example">
+  <p>Countable ML condition guarentees the vanishing of $\mathrm R^1\varprojlim _{ω}$. <strong>It is NOT ture that $\mathrm R^1 \varprojlim ^{ML}_I$ vanishes for uncountable $I$!</strong></p>
+</div>
+
 <p><a href="ML_analysis">This note</a> explains the Mittag-Leffler theorem in analysis.</p>
 
 <h3 id="ml-module-revisited">ML Module Revisited</h3>
@@ -1009,17 +1021,25 @@ x ∈ \ker \left(M_i ⊗ ∏ N_∙ → ∏ (M ⊗ N_∙ )\right) ≃ ∏_{λ ∈
 <p>We finally shows the <em>differences</em> between projectives and ML modules.</p>
 
 <div class="proposition">
-  <p>$M ∈ 𝐏𝐫𝐨𝐣$ <strong>iff</strong> the following are satisfied:</p>
+  <p>Consider the following conditions:</p>
   <ol>
     <li>$M$ is flat;</li>
     <li>$M$ is ML;</li>
     <li>$M$ is $∐$ of countably generated modules.</li>
   </ol>
-  <p>In particular, (1 ∧ 2). is equivalent to projective; (2 ∧ 3). implies pure projective; there are <a href="https://arxiv.org/pdf/1907.00356">some characterisation</a> of (1 ∧ 3) for commutative Noetherian rings, we show that it has projective dimension $≤ 1$.</p>
+  <p>In particular, (1 ∧ 2 ∧ 3) ↔ projective, (2 ∧ 3) ↔ pure projective; there are <a href="https://arxiv.org/pdf/1907.00356">some characterisation</a> of (1 ∧ 3) for commutative Noetherian rings, we show that it has projective dimension $≤ 1$.</p>
   <div class="proof">
-    <p>(1 ∧ 2 ↔ $𝐏𝐫𝐨𝐣$). Let $M = \varinjlim^{fil}F_∙$ be filtered colimit of f.g. free obejects. Note that $(M, -) = \varprojlim^{ML}(F_∙ , -)$ is a ML-limit of exact functors, $M$ is projective. Conversely, any projective module is a coproduct of countably generated projectives. Note that for countably generated modules, $$\begin{equation}
-\text{Proj} ⊆ \text{Pure Proj} = \text{ML Mod}
-\end{equation}$$ Hence, a projective module satisfies both 1. and 2.. <br /> (2 ∧ 3 ↔ $\text{Pure Proj}$). A pure projective module is a summand of $∐ 𝐦𝐨𝐝_R$. By Kaplansky’s argument,</p>
+    <p>(1 ∧ 2 ∧ 3 ↔ projective). (←). Any projective module satisfies 1 and 3. Any countably generated ML module is pure projective, including projectives. (→). Let $M = \varinjlim^{fil}F_∙$ be filtered colimit of f.g. free obejects. Let $\{x_i\}_{i ≥ 0}$ be the generating set of $x_i$. One can inductively find</p>
+    <ul>
+      <li>a countable chain $i_0^{(0)} → i_1^{(0)} → \cdots$ s.t. $\{x_{≤ k}\} ⊆ \operatorname{im} e_{i_k ^{(0)}}$;</li>
+      <li>$i_p ^{(t+1)} := φ (i_p ^{(t)} )$, by ML condition.</li>
+    </ul>
+    <p>By Cantor’s diagonal argument, we obtain a sequence $\{\overline {n}_i \}_{i ∈ ω}$. We take $n_0 := \overline {n} _0$ and $n_k ← n_{k+1} → \overline {n}_{k+1}$ and obtain an $ω$-chain $\{n_i\}_{i ∈ ω}$. We show $\varinjlim^{fil} M_{n_i}$.</p>
+    <ul>
+      <li>Clearly $\varinjlim ^{fil}_{i ∈ ω } M_{n_i} ↠ M$.</li>
+      <li>To see the injection, $\ker (e_{n_i}) = \ker ⋃ _{ {n_i} → {n_j} } φ _{n_j,n_i} = \ker φ _{n_k , n_i}$ for some $n_k ≥ φ (n_i)$. Hence, if $x ∈ M_{n_i}$ maps to $0$, then it vanishes within finite steps, which shows the injection.</li>
+    </ul>
+    <p>Hence, we find a cofinal $ω$-chain of the filtered system which is also ML under $(-, N)$ ($∀ N$). Note that $\varprojlim ^{fil}(M_i, -)$ is an exact functor, $M$ is projective. <br /> (2 ∧ 3 ↔ $\text{Pure Proj}$). A pure projective module is a summand of $∐ 𝐦𝐨𝐝_R$. By Kaplansky’s argument,</p>
     <p>$$\begin{equation}
 𝐒𝐦𝐝 (∐(\text{Countably generated})) = ∐(\text{Countably generated}).
 \end{equation}$$</p>
@@ -1034,9 +1054,9 @@ x ∈ \ker \left(M_i ⊗ ∏ N_∙ → ∏ (M ⊗ N_∙ )\right) ≃ ∏_{λ ∈
 <div class="example">
   <p>We show some examples of the above comparision.</p>
   <ol>
-    <li>$ℚ ∈ 𝐌𝐨𝐝 _ℤ$ is countably generated flat. $ℚ$ is never ML, since $ℚ ⊗ ∏_{n ≥ 1} ℤ / n ℤ ≠ 0 = ∏ _{n ≥ 0}(ℚ ⊗ ℤ / n ℤ)$.</li>
-    <li>Any f.p. module is countably generated and ML, but not flat in general.</li>
-    <li>$ℤ ^ω ∈ 𝐌𝐨𝐝 _ℤ$ is flat and ML, but not a coproduct of countably generated module. $ℤ ^ω$ is flat since $ℤ$ is coherent. To see it is ML, we take any turple $x = (x^s)_{s ∈ ω} ∈ (ℤ^ω )^k$. By commuting of pp condition and $∏$, $\min pp(x) = ⋀ _{s ∈ ω } pp (x^s)$ exists. Hence $pp^{ℤ ^ω }(x)$ is principal. We finally show that $ℤ^ω$ is not a coproduct of countable abelian groups. Sperker’s theorem shows $(ℤ ^ω ,ℤ ) ≃ ℤ ^{(ω)}$. If $ℤ ^ ω = ∐_{i ∈ I} A_i$ is coproduct of countable Abelian groups, then $ℤ ^{(ω )}$ is a product of the dual groups. Since $|2^ω| > ω$, there are exact finite many $i$ s.t. $(A_i, ℤ ) ≠ 0$. Hence, there is some uncountable summand $M ↪ ℤ ^ω$ s.t. $(M, ℤ) = 0$. Consider the projection $M \xrightarrow{p_k} ℤ$, a contradiction.</li>
+    <li>(¬ 1 ∧ 2 ∧ 3). Any f.p. module is countably generated and ML, but not flat in general.</li>
+    <li>(1 ∧ ¬ 2 ∧ 3). $ℚ ∈ 𝐌𝐨𝐝 _ℤ$ is countably generated flat. $ℚ$ is never ML, since $ℚ ⊗ ∏_{n ≥ 1} ℤ / n ℤ ≠ 0 = ∏ _{n ≥ 0}(ℚ ⊗ ℤ / n ℤ)$.</li>
+    <li>(1 ∧ 2 ∧ ¬ 3). $ℤ ^ω ∈ 𝐌𝐨𝐝 _ℤ$ is flat and ML, but not a coproduct of countably generated module. $ℤ ^ω$ is flat since $ℤ$ is coherent. To see it is ML, we take any turple $x = (x^s)_{s ∈ ω} ∈ (ℤ^ω )^k$. By commuting of pp condition and $∏$, $\min pp(x) = ⋀ _{s ∈ ω } pp (x^s)$ exists. Hence $pp^{ℤ ^ω }(x)$ is principal. We finally show that $ℤ^ω$ is not a coproduct of countable abelian groups. Sperker’s theorem shows $(ℤ ^ω ,ℤ ) ≃ ℤ ^{(ω)}$. If $ℤ ^ ω = ∐_{i ∈ I} A_i$ is coproduct of countable Abelian groups, then $ℤ ^{(ω )}$ is a product of the dual groups. Since $|2^ω| > ω$, there are exactly finite many $i$ s.t. $(A_i, ℤ ) ≠ 0$. Hence, there is some uncountable summand $M ↪ ℤ ^ω$ s.t. $(M, ℤ) = 0$. Consider the projection $M \xrightarrow{p_k} ℤ$, a contradiction.</li>
   </ol>
 </div>
 
@@ -1145,10 +1165,46 @@ M → M,\quad m ↦ mr\quad (r ∈ R)
   </div>
 </div>
 
+<h3 id="fp-injective">Fp-Injective</h3>
+
+<p>Another name for FP-Injective module is <em>absolutely pure</em> module. It is a dual notion of flat module.</p>
+
+<div class="example">
+  <p>Recall that, $M$ is flat <strong>iff</strong> any ses $0 → K → X → M → 0$ is pure.</p>
+</div>
+
+<div class="theorem">
+  <p>(Fp-Inj). The following are equivalent for $M$.</p>
+  <ol>
+    <li>Any ses $0 → M → X → Y → 0$ is pure exact;</li>
+    <li>$M ∈ (𝐦𝐨𝐝_R)^⟂$ (standard $\mathrm{Ext}^1$-orthogonality);</li>
+    <li>$M$ is a pure submodule of some injective module.</li>
+  </ol>
+  <div class="proof">
+    <p>(1 → 2, 3). Clear. <br /> (3 → 1). Assume $M ↪ I$, is pure embedding, then any monomorphism $M ↪ X$ passes through $X → I$. Recall that</p>
+    <ul>
+      <li>if $gf$ is pure embedding, then so is $f$.</li>
+    </ul>
+    <p>Hence $M ↪ X$ is a pure embedding. <br /> (2 → 3). Let $M ↪ I$ be any injective preenvelope. Since $\mathrm{Ext}^1(𝐦𝐨𝐝 _R, M) = 0$, for any $K ∈ 𝐦𝐨𝐝 _R$ the morphism $K → I/M$ lifts up to $K → I$. Hence $M → I → I/M$ is pure exact.</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>Show that $(𝐒𝐦𝐝 (𝐅𝐢𝐥 (𝐦𝐨𝐝 _R)), \text{fp-Injective})$ is cogenerated by set, thus it is complete.</p>
+</div>
+
 
   </article>
 
   <div class="page-navigation">
+    
+      <a
+        class="next"
+        href="/website/posts/25SumLec5"
+        title="NEXT: CT5">&lt;&lt;</a>
+      <span>
+        &middot;
+      </span>
     
     <a
       class="home"
