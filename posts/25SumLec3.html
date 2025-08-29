@@ -197,6 +197,14 @@ MathJax = {
   <p>Note that for $2$, $\mathrm{End}_\mathcal{F}(F) ≃ \mathrm{End}_{𝐏𝐒𝐡 (\mathcal{F})}((-, F)_\mathcal{F})$ via $α ↦ α _∗$.</p>
 </div>
 
+<div class="problem">
+  <p>Show that projective precovers are precisely those epimorphisms from projective objects.</p>
+</div>
+
+<div class="problem">
+  <p>Show that if $M$ has a $\mathcal{F}$-cover, then it is a summand of any $\mathcal{F}$-precover.</p>
+</div>
+
 <p>From a categorical perspective, to study covers, it suffices to study projective covers.</p>
 
 <p>The functorial construction yields remarkable results for AR theory, e.g., <a href="20250523Talk#与-ar-理论的关系">this note</a>, or a general theory of Auslander algebra.</p>
@@ -224,16 +232,17 @@ MathJax = {
   <p>$$\begin{equation}
 (T', M)_{\mathcal{A}} → ((T,T')_\mathcal{A}, (T, M)_\mathcal{A})_{\mathrm{End}(T)}, \quad f ↦ f_∗ .
 \end{equation}$$</p>
-  <p>The right module structure of $(T,M)$ is given by $f ⋅ α = f ∘ α ^∗$ for $α ∈ \mathrm{End}(T)$.</p>
+  <p>The right module structure of $(T,M)$ is given by $f ⋅ α = f ∘ α$ for $α ∈ \mathrm{End}(T)$.</p>
 </div>
 
 <div class="theorem">
-  <p>(Projectivisation). Let $𝐚𝐝𝐝 (T)$ denote the full subcategory containing $T$ and closed under isomorphisms, finite biproducts and summands. Then there is an equivalence:</p>
-  <p>$$\begin{equation}
-(T,-) : 𝐚𝐝𝐝 (T) → 𝐩𝐫𝐨𝐣 (𝐌𝐨𝐝 _{\mathrm{End}(T)}),\quad T_0 ↦ (T, T_0).
-\end{equation}$$</p>
+  <p>(Projectivisation). Let $𝐚𝐝𝐝 (T)$ denote the full subcategory containing $T$ and closed under isomorphisms, finite biproducts and summands. Then there is an equivalence(s):</p>
+  <p>$$\begin{aligned}
+(T,-) : 𝐚𝐝𝐝 (T) &→ 𝐩𝐫𝐨𝐣 (𝐦𝐨𝐝 _{\mathrm{End}(T)}),\quad T_0 ↦ (T, T_0)\\
+𝐀𝐝𝐝 (T) &→ 𝐏𝐫𝐨𝐣 (𝐌𝐨𝐝 _{\mathrm{End}(T)}),\quad T_0 ↦ (T, T_0).
+\end{aligned}$$</p>
   <div class="proof">
-    <p>By the special Yoneda lemma.</p>
+    <p>The first equivalence holds due to special Yoneda lemma. The full subcategory $𝐩𝐫𝐨𝐣 ↪ 𝐏𝐫𝐨𝐣$ is a $\{∐, 𝐒𝐦𝐝\}$-closure of the $𝐩𝐫𝐨𝐣 ↪ (𝐏𝐒𝐡(𝐩𝐫𝐨𝐣 ^{\mathrm{op}}))^{\mathrm{op}}$. Note that direct summands are determined by image of idempotent morphism in endomorphisms algebras. Hence the second isomorphism holds.</p>
   </div>
 </div>
 
@@ -265,7 +274,7 @@ MathJax = {
 
 <h3 id="example-mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-cover-of-flat-objects">Example: $𝐏𝐫𝐨𝐣$-cover of Flat Objects</h3>
 
-<p>Not every object has a projective cover. In particular, a flat module with projective cover is projective.</p>
+<p>Not every object has a projective cover! In particular, a flat module with projective cover is projective.</p>
 
 <ul>
   <li>The author is pleased to introduce the <em>equivalent definitions of a perfect ring</em>; for the sake of coherence in this lecture, <strong>we shall only focus on flat modules and projective covers</strong>.</li>
@@ -276,16 +285,13 @@ MathJax = {
   <div class="proof">
     <p>We provide a functorial proof which shows that it is not a non-set-theoretic property. We write a flat object $F$ as the filtered colimit of finitely generated projective objects, i.e., $F = \varinjlim ^{fil} P_∙$ along with structure morphisms $f_i : P_i → F$. Let $π : P → F$ denote the projective cover. <br /> Since $f_i$ factors through $π$, we obtain a collection of split pullback squares $P_i ⊕ Q_i := P × _F P_i$. This defines a new system for $\{(P ⊕ Q)_∙ , g_∙\}$:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec3/diagram_5b50b554f8ceb.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/25SumLec3/diagram_083431bd939e6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>In particular, $ψ _{j,i} = φ _{j,i} ⊕ μ _{j,i}$ is diagonal. The universal property of pullback shows $\{(P⊕ Q)_∙ , g_∙ \}$ is again a filtered system. The universal property of colimit yields the retraction $$\begin{equation}
-\mathrm{id} = \left[\varinjlim {}^{fil} P_∙ →  \varinjlim {}^{fil} P_∙⊕ Q_∙ → \varinjlim {}^{fil} P_∙\right].
-\end{equation}$$</p>
-    <p>It remains to show $q : \varinjlim {}^{fil} P_∙⊕ Q_∙ ≃ P$. We firstly prove the injection $\varinjlim {}^{fil} P_∙⊕ Q_∙ ↪ P$. We take any $α : K → \varinjlim {}^{fil} P_∙⊕ Q_∙$ such that $K$ is compact, and $K \xrightarrow {α } \varinjlim {}^{fil} P_∙⊕ Q_∙ → P$ composes to $0$; then show that $α  = 0$. Notice that $α$ admits a factorisation</p>
+    <p>Note that if $\boxed n  \boxed c$ and $\boxed c$ are pullback squares, then $\boxed n$ is a pullback. The morphism of split exact sequences shows $ψ_{j,i} = φ _{j,i} ⊕ φ ' _{j,i}$. Now we obtain a morphism of ses:</p>
     <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec3/diagram_950ac29b79545.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+        <embed src="/website/svg/25SumLec3/diagram_d43086354f5e6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>Since $α_i$ and $0$ are both solutions to the pullback problem, we see $α _i = 0$. Hence $[q ∘ α = 0] → [α = 0]$ for any $α$ coming from a compact object. Note that every object is a filtered colimit of compact objects, so we conclude that $q$ is injective. <br /> This gives morphisms between short exact sequences</p>
+    <p>We claim that $q$ is injective. For any compact object $K$ and morphism $l : K → \varinjlim (P_\bullet \oplus Q_\bullet )$ s.t. $ql = 0$, we show $l = 0$. By kernel, $l$ factors through $\varinjlim Q_∙$, thus it factors through some $Q_i$. Note that $Q_i ↪ (P_i ⊕ Q_i)$ is split monic, we see $K → Q_i → \ker π ↪ P$ is zero. By filtered colimits, $[K → Q_j] = 0$ for some $j$. Hence $l = 0$. <br /> This gives morphisms between short exact sequences</p>
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/25SumLec3/diagram_5a0a99dffc640.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
@@ -312,7 +318,11 @@ MathJax = {
     <li>All f.g. ideals are projective.</li>
   </ol>
   <div class="proof">
-    <p>(2 → 3). Clear. <br /> (3 → 2). All modules are filtered colimit of f.p. modules. Note that $𝐦𝐨𝐝 ⊆ 𝐏𝐫𝐨𝐣$ in this case. <br /> (3 → 1). Any $x ∈ R$ induces a retract of cyclic modules $Rx \overset {⋅ y}↪ R \overset {⋅ x} ↠ Rx$. <br /> (1 → 3). Clearly, principal ideals are projective. By induction, it suffices to show all $2$-generated ideals are principal and projective. Let $(x,y)$ be such ideal. Then $(x)$ and $(y)$ are projective. Since $(x,y) = (x,(1-x)y)$, we assume $xy = 0$. We take $\overline y$ s.t. $y \overline y y = y$. We take idempotent element</p>
+    <p>(2 → 3). Clear. <br /> (3 → 2). All modules are filtered colimit of f.p. modules. Note that $𝐦𝐨𝐝 ⊆ 𝐏𝐫𝐨𝐣$ in this case. <br /> (3 → 1). Any principal ideal $(x)$ is generated by an idempotent element $e$. We write $x = ez$ and $e = xy$. Now</p>
+    <p>$$\begin{equation}
+x = ez = e(ez) = xyx.
+\end{equation}$$</p>
+    <p>(1 → 3). Clearly, principal ideals are projective. By induction, it suffices to show all $2$-generated ideals are principal and projective. Let $(x,y)$ be such ideal. Then $(x)$ and $(y)$ are projective. Since $(x,y) = (x,(1-x)y)$, we assume $xy = 0$. We take $\overline y$ s.t. $y \overline y y = y$. We take idempotent element</p>
     <p>$$\begin{equation}
 e := y \overline y (1-x) ,\quad e^2 = e.
 \end{equation}$$</p>
@@ -326,7 +336,7 @@ e := y \overline y (1-x) ,\quad e^2 = e.
   <p>Let $V$ be a vector space over a field $𝔽$, then $\mathrm{End}_𝔽(V)$ is vNR. Since $φ$ has the matrix form $\binom {0 \ 0}{0 \ 1}$ over $V ≃ (\ker φ ⊕ \operatorname{im}(φ ))$. <br /> In particular, once $\dim_𝔽  (\operatorname{im}(φ )) = κ$ is an infinite cardinal, then the left (right) ideal generated by $φ$ contains precisely the endomorphisms with $\dim_𝔽  (\operatorname{im}(φ )) ≤ κ$. Therefore,</p>
   <ol>
     <li>$\mathrm{End}_𝔽 (V)$ is simple iff $\dim _𝔽 V < ∞$;</li>
-    <li>$\mathrm{End}_𝔽 (V)$ has a <strong>unique</strong> non-trivial ideal iff $\dim _𝔽 V = ω$.</li>
+    <li>$\mathrm{End}_𝔽 (V)$ has a non-trivial ideal iff $\dim _𝔽 V ≥ ω$.</li>
   </ol>
   <p>This example shows the <strong>non-projective f.g. flat modules</strong>.</p>
 </div>
