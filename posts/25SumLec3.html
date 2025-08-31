@@ -94,7 +94,6 @@ MathJax = {
       <li><a href="#the-projective-cover" id="markdown-toc-the-projective-cover">The Projective Cover</a></li>
       <li><a href="#functorial-approach" id="markdown-toc-functorial-approach">Functorial Approach</a></li>
       <li><a href="#a-tautological-comparison" id="markdown-toc-a-tautological-comparison">A Tautological Comparison</a></li>
-      <li><a href="#example-mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-cover-of-flat-objects" id="markdown-toc-example-mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-cover-of-flat-objects">Example: $𝐏𝐫𝐨𝐣$-cover of Flat Objects</a></li>
       <li><a href="#example-vnr-rings" id="markdown-toc-example-vnr-rings">Example: vNR Rings</a></li>
       <li><a href="#example-torsion-theory" id="markdown-toc-example-torsion-theory">Example: Torsion Theory</a></li>
       <li><a href="#envelopes-and-examples" id="markdown-toc-envelopes-and-examples">Envelopes and Examples</a></li>
@@ -281,35 +280,6 @@ MathJax = {
 </div>
 
 <p>It is a local property to exhibit a projective cover. For idempotent complete cases, a $\mathcal{P}$-precover $P → M$ admits a $\mathcal{P}$-cover when $\mathrm{End}(P)$ is right semi-perfect (where f.g. modules admits a projective cover).</p>
-
-<h3 id="example-mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-cover-of-flat-objects">Example: $𝐏𝐫𝐨𝐣$-cover of Flat Objects</h3>
-
-<p>Not every object has a projective cover! In particular, a flat module with projective cover is projective.</p>
-
-<ul>
-  <li>The author is pleased to introduce the <em>equivalent definitions of a perfect ring</em>; for the sake of coherence in this lecture, <strong>we shall only focus on flat modules and projective covers</strong>.</li>
-</ul>
-
-<div class="theorem">
-  <p>A flat module with projective cover is projective.</p>
-  <div class="proof">
-    <p>We provide a functorial proof which shows that it is not a non-set-theoretic property. We write a flat object $F$ as the filtered colimit of finitely generated projective objects, i.e., $F = \varinjlim ^{fil} P_∙$ along with structure morphisms $f_i : P_i → F$. Let $π : P → F$ denote the projective cover. <br /> Since $f_i$ factors through $π$, we obtain a collection of split pullback squares $P_i ⊕ Q_i := P × _F P_i$. This defines a new system for $\{(P ⊕ Q)_∙ , g_∙\}$:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec3/diagram_083431bd939e6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>Note that if $\boxed n  \boxed c$ and $\boxed c$ are pullback squares, then $\boxed n$ is a pullback. The morphism of split exact sequences shows $ψ_{j,i} = φ _{j,i} ⊕ φ ' _{j,i}$. Now we obtain a morphism of ses:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec3/diagram_d43086354f5e6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>We claim that $q$ is injective. For any compact object $K$ and morphism $l : K → \varinjlim (P_\bullet \oplus Q_\bullet )$ s.t. $ql = 0$, we show $l = 0$. By kernel, $l$ factors through $\varinjlim Q_∙$, thus it factors through some $Q_i$. Note that $Q_i ↪ (P_i ⊕ Q_i)$ is split monic, we see $K → Q_i → \ker π ↪ P$ is zero. By filtered colimits, $[K → Q_j] = 0$ for some $j$. Hence $l = 0$. <br /> This gives morphisms between short exact sequences</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/25SumLec3/diagram_5a0a99dffc640.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>Since $\ker π$ is small, $\varinjlim^{fil}(P_\bullet \oplus Q_\bullet) ↪ P$ must be an isomorphism. It shows that $F$ is a retract of $P$, and thus is projective.</p>
-  </div>
-</div>
-
-<p>The proof is valid for finitely presented categories.</p>
 
 <h3 id="example-vnr-rings">Example: vNR Rings</h3>
 
@@ -1078,25 +1048,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-3">
-      <a href="#example-mathjax_protectedjpcdkiwnzcr8j2qqpcdkkmkmathjax_protected-cover-of-flat-objects">
-        <span class="toc-number">2.4.</span>
-        <span class="toc-title">Example: $𝐏𝐫𝐨𝐣$-cover of Flat Objects</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-3">
       <a href="#example-vnr-rings">
-        <span class="toc-number">2.5.</span>
+        <span class="toc-number">2.4.</span>
         <span class="toc-title">Example: vNR Rings</span>
       </a>
     </div>
@@ -1113,7 +1066,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-3">
       <a href="#example-torsion-theory">
-        <span class="toc-number">2.6.</span>
+        <span class="toc-number">2.5.</span>
         <span class="toc-title">Example: Torsion Theory</span>
       </a>
     </div>
@@ -1130,7 +1083,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-3">
       <a href="#envelopes-and-examples">
-        <span class="toc-number">2.7.</span>
+        <span class="toc-number">2.6.</span>
         <span class="toc-title">Envelopes and Examples</span>
       </a>
     </div>
