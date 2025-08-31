@@ -148,17 +148,27 @@ MathJax = {
   <p>Suppose $p : P → M$ is a projective cover if the following equivalent conditions hold (projective cover = $𝐏𝐫𝐨𝐣$-cover!):</p>
   <ol>
     <li>(Projective cover). $p$ is an epimorphism, and $\ker p$ (as a morphism) is small;</li>
-    <li>($𝐏𝐫𝐨𝐣$-cover). Any morphism $Q → M$ ($Q$ projective) factors through $p$, and any $p ∘ α = p$ implies $α$ is an automorphism.</li>
+    <li>($𝐏𝐫𝐨𝐣$-cover). Any morphism $Q → M$ ($Q$ projective) factors through $p$, and any $p ∘ α = p$ implies $α$ is a(n)       <ol>
+        <li>epimorphism;</li>
+        <li>monomorphism;</li>
+        <li>automorphism.</li>
+      </ol>
+    </li>
   </ol>
   <div class="proof">
-    <p>(1 → 2). Clearly, $Q → M$ factors through $p$ by the lifting property of projectives. We show that $p ∘ α = p$ implies $α$ is an automorphism. We construct the pullback square of monomorphisms:</p>
+    <p>(1 → 2-(3)). Clearly, $Q → M$ factors through $p$ by the lifting property of projectives. We show that $p ∘ α = p$ implies $α$ is an automorphism. We construct the pullback square of monomorphisms:</p>
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/25SumLec3/diagram_496ecc2b2f048.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
-    <p>By $p ∘ α = p$, the morphism $p|_{\operatorname{im}α }$ is epic, thus the first row is a short exact sequence. By exercise, the subobject $\operatorname{im}(α ) ↪ P$ is an isomorphism. <strong>This shows $α$ is epic</strong>. We show $α$ is also monic. Let $j$ be the right inverse of $α$ (by the lifting property of projectives). Then $p ∘ j = p ∘ α ∘ j = p$. Hence $j$ is epic. Since $j$ is also split monic, $j$ is an isomorphism. <strong>Therefore $α$ is an automorphism</strong>. <br /> (2 → 1). $p$ is epic, since any epimorphism $Q ↠ M$ factors through $p$. We show $\ker p$ is small. If not, there exists a proper subobject $N ↪ P$ such that $N + \ker p = P$. Therefore we have the pullback pushout square of short exact sequences. We introduce $l$ by the lifting property of projectives, then $α : λ ∘ l$ is a non-automorphism such that $p ∘ α = p$, a contradiction.</p>
+    <p>By $p ∘ α = p$, the morphism $p|_{\operatorname{im}α }$ is epic, thus the first row is a short exact sequence. By exercise, the subobject $\operatorname{im}(α ) ↪ P$ is an isomorphism. This shows $α$ is epic. We show $α$ is also monic. Let $j$ be the right inverse of $α$ (by the lifting property of projectives). Then $p ∘ j = p ∘ α ∘ j = p$. Hence $j$ is epic. Since $j$ is also split monic, $j$ is an isomorphism. Therefore $α$ is an automorphism. <br /> (2(1) → 1). $p$ is epic, since any epimorphism $Q ↠ M$ factors through $p$. We show $\ker p$ is small. If not, there exists a proper subobject $N ↪ P$ such that $N + \ker p = P$. Therefore we have the pullback pushout square of short exact sequences. We introduce $l$ by the lifting property of projectives, then $α : λ ∘ l$ is a non-epimorphism such that $p ∘ α = p$, a contradiction.</p>
     <center> <br /> <div class="tikz-diagram">
         <embed src="/website/svg/25SumLec3/diagram_0e8ee8dcb17d4.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
       </div> <br /> </center>
+    <p><br /> We show 1 → 2(3) → 2(1,2), and 2(1) → 1. It remains to show 2(2) → 2(3). If there is a strict monomorphism $α$ s.t. $p ∘ α = p$, then there is an induced monomorphism $α|_{\ker p} : \ker p → \ker p$.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/25SumLec3/diagram_832e2c634fbbb.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>In the above diagram, the left square is pullback-pushout. Hence $\operatorname{im}α + \ker p = P$. A contradiction.</p>
   </div>
 </div>
 
