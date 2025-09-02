@@ -690,6 +690,10 @@ A_1 \xrightarrow {l} A_2 \xrightarrow {m_2} M \quad = \quad A_1 \xrightarrow {s-
 
 <h3 id="the-weak-pbpo-squares">The Weak PBPO Squares</h3>
 
+<div class="slogan">
+  <p>This section is obsoleted since all squares are proved to be homotopic!</p>
+</div>
+
 <div class="definition">
   <p>(Weak PO Square). A <strong>weak PO square</strong> (or <strong>weak coCatersian square</strong>) is an 2×2 diagram ($wf = hg$), such that for any $α f = β g$, there exists some $φ$ making the entire diagram commutative.</p>
   <center> <br /> <div class="tikz-diagram">
@@ -760,45 +764,94 @@ A_1 \xrightarrow {l} A_2 \xrightarrow {m_2} M \quad = \quad A_1 \xrightarrow {s-
 
 <p>Recall that in ET2, we made no more assumption on the middle dashed arrow between conflations. However, there is a way to take a good morphism.</p>
 
-<div class="theorem">
-  <p>(The homotopic square theorem). For any realisations of the morphism of extensions $(λ, 1): δ → λ_∗ δ$, there exists a suitable morphism $w$ rendering both diagrams commutative, and $y^∗ δ$ admits a realisation as depicted in the diagram below:</p>
-  <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_95c0561423857.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-    </div> <br /> </center>
-  <p>Remind the sign here.</p>
-  <div class="proof">
-    <p>We construct the Verdier diagram from $b$ and $y$:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_d8d27155daf7d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>Since $b^∗ δ =0$, we write $b^∗ λ _∗ δ$ in the standard split form which does not affect the solid arrows. By the anticommutative square in 4×4 diagram, we have</p>
-    <p>$$\begin{equation}
-0 = \binom {λ '}{a} {}_∗ δ + \binom {1}{0} {}_∗  λ _∗ δ = \binom {λ ' + λ} a {}_∗ δ.
+<p>We prove several kind of homotopic squares in this section. Recall that</p>
+
+<div class="definition">
+  <p>(Homotopic square). A commutative square <span class="tikzinline-diagram">       <embed src="/website/svg/Diagram_Thm_Extri/diagram_2813ac07217b4.svg" type="image/svg+xml" style="display: inline-block; width: 10%; height: 10%; white-space: nowrap" />
+ </span> is said to be homotopic, when there is a conflation</p>
+  <p>$$\begin{equation}
+0 → A \xrightarrow {\binom {f}{x}} B ⊕ C \xrightarrow {(g \ -y)} D → 0.
 \end{equation}$$</p>
-    <p>Hence, $(λ ' + λ) ∈ \ker δ^!$. By long exact sequence, there exists $l$ such that $(λ + λ ' ) = l ∘ a$. To be explicit, $$\begin{equation}
-X \xrightarrow a Y \xrightarrow l A\quad  = \quad  X \xrightarrow {λ + λ '} A.
-\end{equation}$$</p>
-    <p>It remains to show the existence of $w$ such that the following diagram commutes:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_fcdff033456ce.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>The left square commutes due to the choice of $l$. Taking $w = xl - w'$, we see that</p>
-    <ul>
-      <li>$wa - x λ = xla - w'a - xλ = xla - x λ ' - xλ = x(la - λ - λ ' ) = 0$;</li>
-      <li>$yw - b = yxl - yw' - b = 0 l + b - b = 0$.</li>
-    </ul>
-    <p>Hence, the right square also commutes.</p>
-  </div>
 </div>
 
 <div class="corollary">
   <p>The homotopic square is also a weak PBPO square.</p>
 </div>
 
-<p>The following proposition shows that the square in Noether diagram is automatically a homotopic square.</p>
+<div class="theorem">
+  <p>(Existence of homotopic square I). For morphism of extension $(λ , 1) : δ → λ _∗ δ$, there is $w$ making the left square homotopic while the entire diagram is commutative.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_f253969ac2411.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <div class="proof">
+    <p>We construct Verdier’s diagram from deflations $B \xrightarrow y Z \xleftarrow b Y$. We take $b^∗ (λ δ _∗) = 0$ as the canonical split sequence, and obtain</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_7f9df4a409e77.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Moreover, there is an identity at the anticommute square</p>
+    <p>$$\begin{equation}
+0 = \binom 10 _∗ (λ _∗ δ ) + \binom {λ '}{a}_∗ δ = \binom{λ + λ '}{a}_∗ δ .
+\end{equation}$$</p>
+    <p>By long exact sequence, we take $l a = (λ + λ ')$ where $X \overset a → Y \overset l→ A$. Now</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_a3a27421a4f28.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Note that our desired mapping sequence is isomorphic to a conflation.</p>
+  </div>
+</div>
 
-<div class="proposition">
-  <p>In the following ET4 diagram, $\square$ is a homotopic square.</p>
+<div class="theorem">
+  <p>(Existence of homotopic square I’). For morphism of extensions $(1, μ) : μ ^∗ δ → δ$, there is $u$ making the right square homotopic while the entire diagraom is commutative.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_cf59f22dc419d.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <div class="proof">
+    <p>Dual. But mind the sign!</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>(Existence of homotopic square II). When completing with ET3’, one can take $λ$ making the left square homotopic.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_d0dcb7811c73c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <div class="proof">
+    <p>We take any $λ' : X → A$ by ET3’, and choose $w' : Y → B$ by theorem <strong>existence of homotopic square I</strong>. Since $y(w - w') = 0$, we take $l : Y → A$ s.t. $xl = w-w'$.</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_aa401ce71994a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>Here $λ$ is chosen by composition.</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>(Existence of homotopic square II’). When completing with ET3, one can take $λ$ making the left square homotopic.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_97e5d2ac0a42f.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <div class="proof">
+    <p>Dual. But mind the sign!</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>(Existence of homotopic square III). For either of the situation</p>
+  <ol>
+    <li>there is a morphism of extension $(λ , μ): δ → ε$,</li>
+    <li>there is a right commuting square $(α , μ)$ from $δ$ to $ε$,</li>
+    <li>there is a left commuting square $(λ , α)$ from $δ$ to $ε$.</li>
+  </ol>
+  <p>Then we can find a morphism of extension $δ → ε$ passing through a conflation $η$, so that $\square$’s are homotopic.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_6ba7a1aa6afef.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <div class="proof">
+    <p>For case 1, we take $η = λ_∗  δ = μ ^∗ ε$, and choose $α _1$ ($α _2$) by theorem <strong>existence of homotopic square I(I’)</strong>. <br /> For case 2, we take $η = μ ^∗ ε$ and choose $α _2$ by theorem <strong>existence of homotopic square I’</strong>. We take $α$ by weak pullback, and choose $λ$ by theorem <strong>existence of homotopic square II</strong>. <br /> Case 3 is dual to Case 2.</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>(Existence of homotopic square IV). In the following ET4 diagram, $\square$ is a homotopic square.</p>
   <center> <br /> <div class="tikz-diagram">
       <embed src="/website/svg/Diagram_Thm_Extri/diagram_16121f7f8f9ca.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
@@ -809,16 +862,33 @@ X \xrightarrow a Y \xrightarrow l A\quad  = \quad  X \xrightarrow {λ + λ '} A.
       </div> <br /> </center>
     <p>Recall the two out of three principle for isomorphisms. We see that</p>
     <ul>
-      <li>$n ∘ m$ is an isomorphism by considering $δ _{c1}$;</li>
-      <li>$m ∘ n$ is an isomorphism by considering the conflation obtained by the homotopic square $\square$.</li>
+      <li>$n ∘ m$ is an isomorphism by 2-out-of-3 of isomorphisms for $δ _{c1}$;</li>
+      <li>$m ∘ n$ is an isomorphism by 2-out-of-3 of isomorphisms for conflation obtained by the homotopic square $\binom {YZ}{WM}$.</li>
     </ul>
   </div>
 </div>
 
-<div class="proposition">
-  <p>Verdier squares are also homotopic!</p>
+<div class="theorem">
+  <p>(Existence of homotopic square V). The following Verdier square is homotopic:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_5f7476e8bcbcb.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
   <div class="proof">
-    <p>We show this by a straightforward construction.</p>
+    <p>We erase $x_2$, $y_2$ and $δ _2$ firstly. By theorem of <strong>existence of homotopic square II’</strong>, we take $y_2' : B_2 → C$ making the two rows commutative, while the square is homotopic. Now there is a commutative diagram of conflations by S4×4 lemma:</p>
+    <center> <br /> <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_fc0143d5dcf40.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      </div> <br /> </center>
+    <p>The first row is a conflation whose morphisms are uniquely determined by compositions ($-λ _2m_2 = -x_2$ and $y_2'$). By uniqueness of embedding an inflation to a conflation, we may assume $ε = - δ _1$ and $y_2' = y_2$. <br /> We recover the original diagram by letting the square to be homotopic. Hence, the square in the original diagram is homotopic.</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>(Existence of homotopic square V’). The following Verdier square is homotopic:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_a095e590ee674.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <div class="proof">
+    <p>Dual. But mind the sign!</p>
   </div>
 </div>
 
