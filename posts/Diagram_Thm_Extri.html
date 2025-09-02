@@ -152,12 +152,6 @@ MathJax = {
       <li><a href="#the-triangulated-structure" id="markdown-toc-the-triangulated-structure">The Triangulated Structure</a></li>
     </ul>
   </li>
-  <li><a href="#the-localisation" id="markdown-toc-the-localisation">The Localisation</a>    <ul>
-      <li><a href="#exact-functors" id="markdown-toc-exact-functors">Exact Functors</a></li>
-      <li><a href="#two-step-localisation" id="markdown-toc-two-step-localisation">Two-step Localisation</a></li>
-      <li><a href="#the-bifunctor-mathjax_protectedjpcdllwg4oasifvwnzs8xsdihpig8j2vgyqmathjax_protected" id="markdown-toc-the-bifunctor-mathjax_protectedjpcdllwg4oasifvwnzs8xsdihpig8j2vgyqmathjax_protected">The Bifunctor $𝔼 → [𝔼] → 𝕃$</a></li>
-    </ul>
-  </li>
 </ul>
 
 <h2 id="on-diagrams-lemmas-of-ex-mathjax_protectedjfx0cmlhbmdszsqmathjax_protected-cats">On Diagrams Lemmas of Ex-$\triangle$ Cats</h2>
@@ -1723,42 +1717,44 @@ We now proceed to define Hovey twin cotorsion pairs. This definition is delibera
 </div>
 
 <div class="lemma">
-  <p>(The verification of retraction closedness). For $𝖢𝗈𝖿𝗂𝖻$, $𝖥𝗂𝖻$, $𝖳𝖥𝗂𝖻$, and $𝖳𝖢𝗈𝖿𝗂𝖻$, we verify the property by means of the lifting property. We select $𝖥𝗂𝖻$ as a representative example. Suppose that $b$ is a retract of $f ∈ 𝖥𝗂𝖻$. We verify the lifting property of $b$ with respect to an arbitrarily chosen $c ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$ and an arbitrarily chosen commutative square $c ⇒ b$.</p>
+  <p>(The verification of retraction closedness). We show $𝖢𝗈𝖿𝗂𝖻$ is retraction clsoed. The proofs for $𝖳𝖢𝗈𝖿𝗂𝖻$, $𝖥𝗂𝖻$ and $𝖳𝖥𝗂𝖻$ are similar. Let $A \xrightarrow i B \xrightarrow p C \xrightarrow{δ }$ be a conflation with $i ∈ 𝖢𝗈𝖿𝗂𝖻$, and $i' : A → B$ is a retraction of $i$. Idempotent completeness shows $i'$ is an inflation. We take the corresponding conflation $δ '$, and complete $j_C$ and $q_C$ with ET3.</p>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_453a2e2bf180b.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_757a5787d2c86.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>We show that $p ∘ s$ is our desired lifting morphism of the most left square:</p>
+  <p>Note that $(q_A)_∗ (j_A)_∗ δ ' = (q_A)_∗ (j_C)^∗ δ =(j_C)^∗ (q_C)^∗ δ$. Hence $q_C i_C$ is an isomorphism by 2-out-of-3 property of isomorphisms. Since $\mathcal{U}$ is closed under retractions, we see $i' ∈ 𝖢𝗈𝖿𝗂𝖻$. <br /> We show retract closedness of $𝖶𝖾𝗊$. We take the diagram</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_e90c2f7ff526a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>where $p_Xi_X = 1_{X'}$, $p_Zi_Z = Z'$, $g ∈ 𝖶𝖾𝗊$ and $g' = c' a' ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖢𝗈𝖿𝗂𝖻$. It suffices to show $a' ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$. We take a weak pullback (with Verdier diagram) from $Z \xrightarrow {p_Z} Z' \xleftarrow {c'} Y'$, and introduce dashed arrows:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_a0f51dbef0ee8.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Here $f ∈ 𝖳𝖥𝗂𝖻$ as $c' ∈ 𝖳𝖥𝗂𝖻$, $f w = g ∈ 𝖶𝖾𝗊$, and all square commutes except for $⊠$. However, one has</p>
+  <p>$$\begin{equation}
+(wi_X - j_Y a') ∈ \ker (f_∗ ) = \operatorname{im} (x_∗ ).
+\end{equation}$$</p>
+  <p>Hence we take $\widetilde l$ s.t.</p>
+  <p>$$\begin{equation}
+X' \xrightarrow {\widetilde l} K \xrightarrow x F \quad =\quad  X' \xrightarrow{wi_X - j_Y a'} F.
+\end{equation}$$</p>
+  <p>Set $l = X \xrightarrow {p_X} X' \xrightarrow {\widetilde l} K$. Then $q_Y x l = 0$. We obtain the retraction:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_da89a72c2c0e6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>We show the diagram is commutative:</p>
   <ul>
-    <li>$bps = qfs = qjd = d$;</li>
-    <li>$psc = pia = a$.</li>
+    <li>(Left). $\binom{\ w \ x}{-l \ 1} \binom {i_X}{l i_X} - \binom{j_Y}{0}a' = \binom{wi_X+xli_X}{-li_X+li_X} - \binom{j_Ya'}{0} = \binom {(wi_X-j_Ya')+x\widetilde l}{0} = 0$;</li>
+    <li>(Right). $q_Y(1,-x)\binom{\ w \ x}{-l \ 1}-a'(p_X,0) = q_Y(w+xl,0) - a'(p_X,0) = 0$.</li>
   </ul>
-  <p>Now we show that the retraction of $g ∈ 𝖶𝖾𝗊$, denoted by $g'$, is also an weak equivalence. We first factorise $g'$ into $𝖳𝖥𝗂𝖻 ∘ 𝖢𝗈𝖿𝗂𝖻$</p>
-  <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_01dab893b84de.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-    </div> <br /> </center>
-  <p>The object $Y$ along with the weak pullback square is constructed by 4×4 lemma, we re-draw the diagram as follows ($g' = b'∘ a'$):</p>
-  <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_08cff0371e222.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-    </div> <br /> </center>
-  <p>Here the weak quivalence $a$ and the retraction $i_Y$ are taken from weak PB diagram:</p>
-  <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_3b3d39f36cbea.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-    </div> <br /> </center>
-  <p>We focus on the upper portion of the diagram; that is, we demonstrate that if $a ∈ 𝖶𝖾𝗊$ and $a'$ is a retraction of $a$ with $a' ∈ 𝖢𝗈𝖿𝗂𝖻$, then $a'$ is a weak equivalence.</p>
+  <p>Note that $K ∈ \mathcal{W}$, hence $\binom{\ w \ x}{-l \ 1}∈ 𝖶𝖾𝗊$. It remains to show</p>
   <ul>
-    <li>The original problem was $x ∈ 𝖱𝖾𝗍𝗋𝖺𝖼(𝖶𝖾𝗊) ⟹ x ∈ 𝖶𝖾𝗊$;</li>
-    <li>We deduce this to $x ∈ 𝖱𝖾𝗍𝗋𝖺𝖼(𝖶𝖾𝗊) ∩ 𝖢𝗈𝖿𝗂𝖻 ⟹ x ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$.</li>
+    <li>if $a' ∈ 𝖢𝗈𝖿𝗂𝖻$ is a retraction of $𝖶𝖾𝗊$, then $a' ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$.</li>
   </ul>
+  <p>We factorise $\binom{\ w \ x}{-l \ 1}$ into $𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$. By lifting property, we obtain the dashed arrow.</p>
   <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_645fb55ffe0bd.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_d3e3083300f3a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
     </div> <br /> </center>
-  <p>The diagram is established with the procedure:</p>
-  <ol>
-    <li>We factorise $a$ as $a_{tf} ∘ a_{tc} ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$, and obtain all solid arrows.</li>
-    <li>The homotopic $\square$ comes from ET4. We obtain the red part.</li>
-    <li>By lifting property, we obtain all dashed blue arrows.</li>
-  </ol>
-  <p>We observe that $a'$ is a retraction of $a_{tc}$, hence $a' ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$. We finally demonstrate that $g' = b' ∘ a' ∈ 𝖳𝖥𝗂𝖻 ∘ 𝖳𝖢𝗈𝖿𝗂𝖻$ is a weak equivalence.</p>
+  <p>Hence $a'$ is a retraction of $𝖳𝖢𝗈𝖿𝗂𝖻$. We show $a' ∈ 𝖳𝖢𝗈𝖿𝗂𝖻$.</p>
 </div>
 
 <h3 id="remarks-on-mathjax_protectedjfxtyxroy2fse1d9jamathjax_protected-and-mathjax_protectedjpcdlrbwnza8j2xiiqmathjax_protected">Remarks on $\mathcal{W}$ and $𝖶𝖾𝗊$</h3>
@@ -2195,384 +2191,421 @@ QX \xrightarrow{Q(f)} QY \xrightarrow{Q(g)} QZ \xrightarrow{ℓ (η )}(QX) [1].
 
 <p>We remark that, these verifications are closely analogous to that employed in verifying that triangulated categories are extriangulated.</p>
 
-<h2 id="the-localisation">The Localisation</h2>
+<!-- ## The Localisation
 
-<h3 id="exact-functors">Exact Functors</h3>
+### Exact Functors
 
-<p>An extriangulated category resembles a triangulated category, yet one of the morphisms in the triangle is replaced by an extension element $δ$. The functor category admits a similar definition.</p>
+An extriangulated category resembles a triangulated category, yet one of the morphisms in the triangle is replaced by an extension element $δ$. The functor category admits a similar definition.
 
-<div class="definition">
-  <p>(Extriangulated Functor, or exact functor in short). An extriangulated functor from $(\mathcal{C} , 𝔼 , 𝔰 )$ to $(\mathcal{D} , 𝔽 , 𝔱)$ is described as a pair $(F, φ)$, wherein</p>
-  <ol>
-    <li>(F0). $F : \mathcal{C} → \mathcal{D}$ is an additive functor, and $φ_{-,?} : 𝔼(-,?) → 𝔽(F(-), F(?))$ is a natural transformation;</li>
-    <li>(F1). $φ_{Z,X} : 𝔼 (Z,X) → 𝔽 (FZ, FX)$ is compatible with composition, i.e., for any $f : Z' → Z$, $g : X → X'$ and $δ ∈ 𝔼 (X,Y)$, we have $φ_{Z', X'} (f^∗ g_∗ δ ) = (Ff)^∗ (Fg)_∗ φ _{Z,X}(δ)$.</li>
-    <li>(F2). Let $X \xrightarrow f Y \xrightarrow g Z$ be a realisation of $δ$. Then $FX \xrightarrow {Ff} FY \xrightarrow {Fg} FZ$ is a realisation of $φ (δ )$.</li>
-  </ol>
-  <p>The definition F1 means that the tacit natural transformation $(A, B) → (FA, FB)$ is composable with $φ$ on both sides, which is a natural requirement.</p>
+<div class='definition'><p>(Extriangulated Functor, or exact functor in short). An extriangulated functor from $(\mathcal{C} , 𝔼 , 𝔰 )$ to $(\mathcal{D} , 𝔽 , 𝔱)$ is described as a pair $(F, φ)$, wherein</p>
+
+<ol>
+  <li>(F0). $F : \mathcal{C} → \mathcal{D}$ is an additive functor, and $φ_{-,?} : 𝔼(-,?) → 𝔽(F(-), F(?))$ is a natural transformation;</li>
+  <li>(F1). $φ_{Z,X} : 𝔼 (Z,X) → 𝔽 (FZ, FX)$ is compatible with composition, i.e., for any $f : Z' → Z$, $g : X → X'$ and $δ ∈ 𝔼 (X,Y)$, we have $φ_{Z', X'} (f^∗ g_∗ δ ) = (Ff)^∗ (Fg)_∗ φ _{Z,X}(δ)$.</li>
+  <li>(F2). Let $X \xrightarrow f Y \xrightarrow g Z$ be a realisation of $δ$. Then $FX \xrightarrow {Ff} FY \xrightarrow {Fg} FZ$ is a realisation of $φ (δ )$.</li>
+</ol>
+
+<p>The definition F1 means that the tacit natural transformation $(A, B) → (FA, FB)$ is composable with $φ$ on both sides, which is a natural requirement.</p>
 </div>
 
-<p>We remark that F1 is obtained by F0 and F2. Say $(\triangle , δ)$ is compatible, provided $\triangle$ is the realisation of $δ$. Now ther following are compatible pairs</p>
+We remark that F1 is obtained by F0 and F2. Say $(\triangle , δ)$ is compatible, provided $\triangle$ is the realisation of $δ$. Now ther following are compatible pairs
 
-<center> <br /> <div class="tikz-diagram">
-    <embed src="/website/svg/Diagram_Thm_Extri/diagram_7a33ce1fa0e56.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-  </div> <br /> </center>
+<center>
+        <br>
+        <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_7a33ce1fa0e56.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;"/>
+        </div>
+        <br>
+        </center>
 
-<p>Since an conflation realises a unique conflation, $\varphi (f^\ast g_\ast \delta) = (Ff)^\ast (Fg)_\ast\varphi (\delta )$.</p>
+Since an conflation realises a unique conflation, $\varphi (f^\ast g_\ast \delta) = (Ff)^\ast (Fg)_\ast\varphi (\delta )$.
 
-<div class="definition">
-  <p>(Natural transformation). Say $α : (F, φ ) → (G, ψ)$ is a natural triansformation of triangulated functors from $(\mathcal{C} , 𝔼 , 𝔰 )$ to $(\mathcal{D} , 𝔽 , 𝔱)$, provided</p>
-  <ol>
-    <li>$α : F → G$ is a natural transformation of additive functors;</li>
-    <li>$(α_?, α _-) : 𝔽 (F-, F?) → 𝔽 (G-, G?)$ is gives functorial morphism of extension elements.</li>
-  </ol>
+<div class='definition'><p>(Natural transformation). Say $α : (F, φ ) → (G, ψ)$ is a natural triansformation of triangulated functors from $(\mathcal{C} , 𝔼 , 𝔰 )$ to $(\mathcal{D} , 𝔽 , 𝔱)$, provided</p>
+
+<ol>
+  <li>$α : F → G$ is a natural transformation of additive functors;</li>
+  <li>$(α_?, α _-) : 𝔽 (F-, F?) → 𝔽 (G-, G?)$ is gives functorial morphism of extension elements.</li>
+</ol>
 </div>
 
-<p>For instance, we show that the functor $(L, l)$ is an equivalence, if and only if $L$ is an equivalence of additive categories, and $l$ is a natural isomorphism.</p>
+For instance, we show that the functor $(L, l)$ is an equivalence, if and only if $L$ is an equivalence of additive categories, and $l$ is a natural isomorphism.
 
-<div class="example">
-  <p>Let $(L, l) : (\mathcal{C} ,𝔼 , 𝔰) → (\mathcal{D} , 𝔽 , 𝔱 )$ be exact functor, such that $L$ is an equivalence and $l$ is a natural isomorphism. We use the notation of adjoint pair $(L, R, η , ε)$ to denote the equivalence of additive categories $\mathcal{C}$ and $\mathcal{D}$. Now we define the natural isomorphism $r$ by the following zigzag diagram of natural isomorphisms:</p>
-  <p>$$\begin{equation}
-𝔽 (C,A) \xleftarrow[∼ ]{(ε _A)_∗ }𝔽 (C,LRA) \xrightarrow[∼ ]{(ε _C)^∗ }𝔽 (LRC,LRA) \xleftarrow[∼ ]{l_{RC,RA}}𝔼 (RC, RA).
-\end{equation}$$</p>
-  <p>It remains to show the naturality. By definition, we have that $$\begin{equation}
-l_{RC, RA} ∘ r_{C,A} : 𝔽 (C,A) → 𝔽 (LRC, LRA),\quad δ ↦ (ε _A)_∗ ^{-1} (ε _C)^∗ δ .
-\end{equation}$$</p>
-  <p>Now we claim that $r_{LZ, LX} ∘ l_{Z,X} (δ ) = (η _X)_∗ (η _Z^∗ )^{-1} (δ)$, that is, the following diagram commutes:</p>
-  <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_61778a82294cf.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-    </div> <br /> </center>
-  <p>By triangle identities of adjoint pair, $ε _{L?} = (Lη _?)^{-1}$. This completes the proof.</p>
-</div>
-
-<h3 id="two-step-localisation">Two-step Localisation</h3>
-
-<p>We localise an extriangulated category by fractional expressions. We firstly review the admissible multiplicative system for triangulated cases. Throughtout, we use $⇒$ to denote the morphisms in $S$.</p>
-
-<div class="example">
-  <p>(Admissible multiplicative system). Let $S$ be a class of morphisms for a triangulated category. Say $S$ is a (right) admissible multiplicative system with respect to the triangulated category, provided</p>
-  <ul>
-    <li>(FR1). $S$ cantains all isomorphisms and closed under compositions.</li>
-    <li>(FR2). Any $A → E ⇐ B$ admits a cone of the form $A ← F ⇒ B$.</li>
-    <li>(FR3). If $0 ∈ f ∘ S$, then $0 ∈ S ∘ f$.</li>
-  </ul>
-  <p>If $S$ satisfies FR1-3, then it is a right multiplicative system.</p>
-  <ul>
-    <li>(FR4). $S[1] ⊆ S$.</li>
-    <li>(FR5). Let $(X_i, Y_i, Z_i, f_i, g_i, h_i)$ be triangles for $i ∈ \{1,2\}$. Suppose that there is $α , β ∈ S$ such that $β ∘ f_1 = f_2 ∘ α$, then there is a $(γ : Z_1 →  Z_2) ∈ S$ making the entire diagram commutative. Roughly speaking, the 2-out-of-three principle for triangle morphisms in $S$.</li>
-    <li>(Sat). Say $S$ is saturated, if $\{fg, gh\} ⊆ S$ implies $g ∈ S$.</li>
-  </ul>
-  <p>Some remarks on multiplicative system of triangles.</p>
-  <ul>
-    <li>FR2 is a corollary of FR5 and FR1.</li>
-    <li>An admissible multiplicative system yields the Verdier quotient $\mathcal{T} → S^{-1} \mathcal{T}$. Here $\mathcal{T}$ is not triangulated in general.</li>
-    <li>An triangulated subcategory $\mathcal{C} ↣ \mathcal{T}$ yields a strong multiplicative system.</li>
-    <li>Say $h ∈ S$, if there is an triangle of the form $(X,Y,Z,f,g,h)$ for $X ∈ \mathcal{C}$.</li>
-    <li>Say the multiplicative system $S$ is strong, if any two morphisms in $\{f,g, gf\}$ belongs to $S$, then so is the third.</li>
-    <li>There is a $1:1$ correspondence between saturated multiplicative system and trianglated subcategories.</li>
-  </ul>
-</div>
-
-<div class="example">
-  <p>(<strong>Two-step localisation</strong>). To begin with, we assume the class of morphisms $S$ to be</p>
-  <ul>
-    <li>closed under biproduct $⊕$, so that the localisation is additive;</li>
-    <li>a strong multiplicative system, that is, if any two morphisms in $\{f,g, gf\}$ belong to $S$, then so does the third. This serves as a reasonable closure for $S$, since isomorphisms in $\mathcal{C} [S^{-1}]$ satisfy the 2-out-of-3 principle with respect to composition.</li>
-  </ul>
-  <p>The basic setting and principal procedure is summarised as</p>
-  <p>$$\begin{equation}
-Q_S: \  \mathcal{C} \xrightarrow[ \begin{bmatrix} - \end{bmatrix} ]{\text{fewer morphisms}} \mathcal{C} / \mathcal{N} \xrightarrow[Q]{\text{more morphisms}} \mathcal{C} [S^{-1}].
-\end{equation}$$</p>
-  <p>Here $\mathcal{N} = \{W ∣ (0 → W) ∈ S\}$ so that we may define the additive quotient functor $[-]$. The localisation $Q_S$ factors through such $[-]$, yielding $Q$.</p>
-  <p>We remark upon the following points.</p>
-  <ul>
-    <li>Observe that $(0 → W) ∈ S$ if and only if $(W → 0) ∈ S$ by virtue of the strong multiplicative system.</li>
-    <li>$\mathcal{N}$ is the subclass of zero objects in $\mathcal{C} [S^{-1}]$ which are directly detected.</li>
-    <li>Once the zigzag morphisms are written in fractions, $\mathcal{N}$ is precisely the class of zero objects in $\mathcal{C} [S^{-1}]$.</li>
-    <li>By uniqueness of localisation, $(\mathcal{C} / \mathcal{N}) ([S]^{-1})$ and $\mathcal{C} [S^{-1}]$ are isomorphic categories.</li>
-    <li>Note that $\mathcal{C} / \mathcal{N} ≠ \mathcal{C} [S^{-1}]$ in general. For instance, if $Q(f)$ is zero, then it is impossible to determine whether $f$ factors through some $N ∈ \mathcal{N}$.</li>
-  </ul>
-</div>
-
-<div class="definition">
-  <p>([-]). We denote $$\begin{equation}
-ϕ (S,x,y,z,\ldots) := \{ϕ (s, x,y,z,\ldots) ∣ \text{when it is defined}\}
-\end{equation}$$ for general operations. For instance,</p>
-  <ul>
-    <li>$[S] = \{[s] ∣ s ∈ S\}$,</li>
-    <li>$S ∘ f = \{s ∘ f ∣ s ∈ S, \ \text{and} \ s ∘ f \ \text{is defined}\}$,</li>
-    <li>$S^∗ δ = \{s^∗ δ ∣ s ∈ S \ \text{and} \ s^∗ δ \ \text{is defined}\}$.</li>
-  </ul>
-</div>
-
-<p>The advantages of the two-step localisation include the following.</p>
-
-<ul>
-  <li>When dealing with fractions, $[a] ∘ [s]^{-1} = [a'] ∘ [s]^{-1}$ if and only if $[a] = [a']$.</li>
-  <li>The axioms on $S$ ([L]’s) are stronger than those of $[S]$ ([CL]’s). Explicitly, to show that the localisation $Q_S : \mathcal{C} → \mathcal{C}[S^{-1}]$ is extriangulated along with the fractional condition $(\mathcal{C} , S) ⊧$ [L], it suffices to prove $Q : \mathcal{C} / \mathcal{N} → (\mathcal{C} / \mathcal{N}) [[S]^{-1}]$ with $(\mathcal{C} / \mathcal{N} , [S]) ⊧$ [CL]. Here [L] ⇒ [CL].</li>
-</ul>
-
-<div class="definition">
-  <p>(The [L] and [CL] axioms). The axioms [L]’s are defined for $(\mathcal{C}, S)$, while [CL]’s are defiend for $(\mathcal{C} / \mathcal{N} , [S])$.</p>
-  <ul>
-    <li>(L1). $S$ contains all isomorphisms, closed under biproduct and it is strongly multiplicative. This is exactly out basic setting.</li>
-    <li>(L2). $S$ is a multiplicative system in usual sense, i.e., it satisfies both FR and LFR.</li>
-    <li>(L3). For morphism of extension $(f,h) : δ → δ '$ with $f,h ∈ S$, there exists some $g ∈ S$ making the diagram of realisations commutative.</li>
-    <li>(L4). Let $\{i_∙ \}$, $\{d_∙ \}$, and $\{s_∙ \}$ denote the class of inflations, deflation, and $S$. Every $dsd'$ is equals to some $s'd''s''$, every $isi'$ equals to some $s'i''s''$.</li>
-  </ul>
-  <p>The [CL] axioms are similar to [L]’s.</p>
-  <ul>
-    <li>(CL1). $[S]$ contains all isomorphisms, closed under biproduct and it is strongly multiplicative.</li>
-    <li>(CL2). $[S]$ is a multiplicative system in usual sense, i.e., it satisfies both FR and LFR.</li>
-    <li>(CL3). For morphism of extension $(f,h) : δ → δ '$ with $[f],[h] ∈ [S]$, there exists some $[g] ∈ [S]$ making the diagram of realisations commutative in $\mathcal{C} / \mathcal{N}$.</li>
-    <li>(CL4). Let $\{i_∙ \}$, $\{d_∙ \}$, and $\{s_∙ \}$ denote the class of inflations, deflations, and $S$. Every $[dsd']$ is equals to some $[s'd''s'']$, every $[isi']$ equals to some $[s'i''s'']$.</li>
-  </ul>
-</div>
-
-<p>We show some connections between [L] and [CL]. The following reflection lemma is of great importance.</p>
-
-<div class="lemma">
-  <p>(Reflection lemma). $[-]$ reflect the $S$-morphisms, i.e., for any $f ∈ S$ such that $[g] = [f]$, then $g ∈ S$.</p>
-  <div class="proof">
-    <p>Denote $f,g : X → Y$. Suppose that $(g-f) = i ∘ j$ factors through some $W ∈ \mathcal{N}$. Now $g = (1,i) ∘ \binom f j$. We see that $\binom f j$ is the composition morphisms in $S$:</p>
-    <p>$$\begin{equation}
-X ⊕ 0 \xrightarrow {\binom {1 \ 0}{0 \ 0}} X ⊕ N \xrightarrow{\binom {1 \ 0}{j \ 1}} X⊕ N \xrightarrow {\binom{f \ 0}{0 \ 1}} Y ⊕ N.
-\end{equation}$$</p>
-    <p>One can show that $(1,i)$ is the composition of morphisms in $S$:</p>
-    <p>$$\begin{equation}
-Y ⊕ N \xrightarrow{\binom {1 \ i}{0 \ 1}}Y ⊕ N \xrightarrow{\binom {1 \ 0}{0 \ 0}} Y ⊕ 0.
-\end{equation}$$</p>
-  </div>
-</div>
-
-<p>We may assume $S$ to include $\{ f ∣ [f] ∈ 𝐈𝐬𝐨 (\mathcal{C} / \mathcal{N})\}$, serving as a reasonable closure. By reflection lemma, it is equivalent to assume that $[S]$ contains all isomorphisms of $\mathcal{C} / \mathcal{N}$.</p>
-
-<div class="lemma">
-  <p>Under the reasonable closure $[S] ⊆ 𝐈𝐬𝐨 (\mathcal{C} / \mathcal{N})$, [M]’s implies [CM]’s.</p>
-  <div class="proof">
-    <p>(CM1). By reflection lemma, we see that $[S]$ is strongly multiplicative whenever $S$ is. The rest part of CM1 is trivial. <br /> <br /> (CM2). We only show R2 and R3. R2 is trivial. For R3, suppose that $[sf] = 0$, then $fs = ji$ factors through $W ∈ \mathcal{N}$. Since there is a way to complete $λ ∈ S$ such that $λsf = 0$, we obtain $ft = 0$ for some $t ∈ S$. Hence $[ft] =0$ for $[t] ∈ [S]$.</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_31e8cf58c520c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>The converse is obtain by reversing all arrows. <br /> <br /> (CM3 and CM4). Trivial.</p>
-  </div>
-</div>
-
-<h3 id="the-bifunctor-mathjax_protectedjpcdllwg4oasifvwnzs8xsdihpig8j2vgyqmathjax_protected">The Bifunctor $𝔼 → [𝔼] → 𝕃$</h3>
-
-<p>By means of two-step localisation, we proceed to define, in succession:</p>
-
-<ul>
-  <li>The functor $[𝔼] : (\mathcal{C} / \mathcal{N}) ^{\mathrm{op}} × (\mathcal{C} / \mathcal{N}) → 𝐀𝐛$, which is, in some sense, a quotient of $𝔼$;</li>
-  <li>The functor $𝕃 : \mathcal{C}[S^{-1}]^{\mathrm{op}} × \mathcal{C}[S^{-1}] → 𝐁𝐢𝐠𝐀𝐛$, where $𝐁𝐢𝐠𝐀𝐛$ denotes the category of classes endowed with an Abelian group structure.</li>
-</ul>
-
-<p>There is, at present, no necessity to address set-theoretic considerations.
-<br />
-<br />
-The axioms of $S$ includes CL1-5, as well as reasonable closure that $S$ contains the preimages of isomorphisms in $\mathcal{C} / \mathcal{N}$ along the functor $[-]$. There is no need to think of L1-5, as they are weaker axioms.</p>
-
-<div class="example">
-  <p>(The two sided nullity). We learn by CL2 that, $[0] ∈ [S] ∘ [φ]$ iff $[0] ∈ [φ ] ∘ [S]$. We may with the analogous theorems for extension elements.</p>
-</div>
-
-<div class="lemma">
-  <p>When there is $s ∈ S$ such that $s^∗ η = 0$, then there is $t ∈ S$ such that $t_∗ η =0$.</p>
-  <div class="proof">
-    <p>By CL3, there exists $[q] ∈ [S]$ making the diagram commutative in $\mathcal{C} / \mathcal{N}$.</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_df92026aaf844.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>We denote $q = (f,t)$ without the loss of generality. By CL2, there is $u$ and $α$ making the red sqaure commutative in $\mathcal{C}/\mathcal{N}$.</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_89526dd9111e3.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>Since $[α ∘ f] = [u]$, we have that $(α ∘ f) ∈ S$ by reflection lemma. Now $(α ∘ f)_∗ η  =0$.</p>
-  </div>
-</div>
-
-<p>Now we define $[𝔼]$ in $\mathcal{C} / \mathcal{N}$ as a quotient functor of $𝔼$.</p>
-
-<div class="definition">
-  <p>($[𝔼] (-,-)$). For each pair of objects $(Z,X)$, we define</p>
-  <p>$$\begin{equation}
-0 → 𝕂 (Z, X) → 𝔼 (Z,X) → [𝔼] (Z,X) → 0.
-\end{equation}$$</p>
-  <p>Here $η ∈ 𝕂$ iff $0 ∈ S^∗ η$, or equivalently $0 ∈ S_∗ η$ by previous lemma.</p>
-</div>
-
-<div class="theorem">
-  <p>$[𝔼] : (\mathcal{C}/\mathcal{N})^{\mathrm{op}} × \mathcal{C}/\mathcal{N} → 𝐀𝐛$ is an additive bifunctor.</p>
-  <div class="proof">
-    <p>We firstly show that $[𝔼] : \mathcal{C}^{\mathrm{op}} × \mathcal{C} → 𝐀𝐛$ is an additive bifunctor.</p>
-    <ol>
-      <li>We show that $[𝔼]$ is functorial in the first entry, i.e., $g^∗ : [δ] ↦ [g^∗ δ]$ is well-defined. It suffices to show that $g^∗$ preserves extension elements in $𝕂$, which is clear.</li>
-      <li>$[𝔼]$ is functorial in the second entry by dual analysis.</li>
-      <li>$𝕂$ preserves biproducts. For instance, we take arbitrary $δ _i ∈ 𝕂 (Z, X_i)$ such that $(s_i)^∗ δ _i = 0$ for some $s_i ∈ S$. We apply CL2 to $⋅ ⇒ Z ⇐ ⋅$, and obtain $s ∈ S$ such that $[s^∗ δ _i] = [0]$. Hence, $δ _1 ⊕ δ _2 ∈ 𝕂$.</li>
-    </ol>
-    <p>Therefore, the functorial quotient $[𝔼]$ is well-defined.</p>
-    <p>For any $N ∈ \mathcal{N}$, we see that both $(0 → N)$ and $(N → 0)$ belongs to $𝔼$. Hence $𝕂 (\mathcal{N},-)$ and $𝕂 (-,\mathcal{N})$ vanished. We see that $[𝔼]$ is well-defined on the stable category.</p>
-  </div>
-</div>
-
-<p>By construction, $𝕂$ is somehow regarded as a closed subset: for any $s ∈ S$, $s_∗ η ∈ 𝕂$ iff $η ∈ 𝕂$. Informally, the preimage of $(s_∗)^{-1} 𝕂$ is contained in $𝕂$.</p>
-
-<div class="lemma">
-  <p>We denote this lemma by the formula $(S^∗)^{-1} (S_∗ )^{-1} 𝕂 = 𝕂$. That is, when there are some $s,t ∈ S$ such that $s^∗ t_∗ η ∈ 𝕂$, then $η ∈ 𝕂$.</p>
-</div>
-
-<p>Now we shall construct $𝕃$ from $[𝔼]$ by bifractions.</p>
-
-<div class="definition">
-  <p>(<strong>Bifraction</strong>). A bifraction is a triple $([s],[η], [t])$ for $η ∈ 𝔼 (Z,X)$, $(s : Z → Z') ∈ S$, and $(t : X' → X) ∈ S$. We denote it by a zigzag diagram $Z' \overset{[s]}⇐ Z \overset {[η]}→ X \overset {[t]}⇐ X'$. <br /> \</p>
-  <p>Say $([s],[η], [t])$ and $([s'],[η '],[t'])$ are equivalent, provided a diagram in $\mathcal{C} / \mathcal{N}$:</p>
-  <center> <br /> <div class="tikz-diagram">
-      <embed src="/website/svg/Diagram_Thm_Extri/diagram_3d4a22ddb4cd0.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-    </div> <br /> </center>
-  <p>All triangles commmute in the diagram, while $[p^∗ q_∗ η] =[η _0]$ and $[(p')^∗ (q')_∗ η'] = [η _0]$. <br /> <br /> We shall soon prove that such an equivalence class is an element in $𝕃 (Z', X')$.</p>
-</div>
-
-<p>Informally, $s_0$ is the left common denominator of $(s,s')$ and $t_0$ is the right common denominator of $(t,t')$, such that</p>
+<div class='example'><p>Let $(L, l) : (\mathcal{C} ,𝔼 , 𝔰) → (\mathcal{D} , 𝔽 , 𝔱 )$ be exact functor, such that $L$ is an equivalence and $l$ is a natural isomorphism. We use the notation of adjoint pair $(L, R, η , ε)$ to denote the equivalence of additive categories $\mathcal{C}$ and $\mathcal{D}$. Now we define the natural isomorphism $r$ by the following zigzag diagram of natural isomorphisms:</p>
 
 <p>$$\begin{equation}
-([s],[η],[t]) ∼ ([sp],[p^∗ q_∗ η],[qt]) = ([s'p'],[(p')^∗ (q')_∗ η'],[q't']) ∼ ([s'],[η'],[t']).
+𝔽 (C,A) \xleftarrow[∼ ]{(ε _A)_∗ }𝔽 (C,LRA) \xrightarrow[∼ ]{(ε _C)^∗ }𝔽 (LRC,LRA) \xleftarrow[∼ ]{l_{RC,RA}}𝔼 (RC, RA).
 \end{equation}$$</p>
 
-<p>The following lemma shows how $\mathcal{C} → \mathcal{C}/\mathcal{N}$ simplifies the fractional argument.</p>
+<p>It remains to show the naturality. By definition, we have that
+$$\begin{equation}
+l_{RC, RA} ∘ r_{C,A} : 𝔽 (C,A) → 𝔽 (LRC, LRA),\quad δ ↦ (ε _A)_∗ ^{-1} (ε _C)^∗ δ .
+\end{equation}$$</p>
 
-<div class="lemma">
-  <p>$([s],[η],[t]) ∼ ([s],[η'],[t])$ if and only if $[η] = [η']$. The only if part is due to $(S^∗)^{-1} (S_∗)^{-1} 𝕂 = 𝕂$.</p>
-  <ul>
-    <li>In short, there are no zero divisors in $[𝔼]$.</li>
-  </ul>
+<p>Now we claim that $r_{LZ, LX} ∘ l_{Z,X} (δ ) = (η _X)_∗ (η _Z^∗ )^{-1} (δ)$, that is, the following diagram commutes:</p>
+
+<center> <br /> <div class="tikz-diagram">
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_61778a82294cf.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+  </div> <br /> </center>
+
+<p>By triangle identities of adjoint pair, $ε _{L?} = (Lη _?)^{-1}$. This completes the proof.</p>
 </div>
 
-<div class="theorem">
-  <p>$∼$ is an equivalence relation of bifractions.</p>
-  <div class="proof">
-    <p>We only shows the transitivity. Suppose we have fractions $𝔉_i := ([s_i],[η_i],[t_i])$ for $i = 1,2,3$, such that $𝔉 _1 ∼ 𝔉 _2$ via $𝔉 _{1,2}$ and $𝔉 _2 ∼ 𝔉 _3$ via $𝔉 _{2,3}$. We present it as a commutative diagram in $\mathcal{C}/\mathcal{N}$:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_15aec859a8991.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>Our goal is to create $𝔉 _{1,2} ↗ 𝔉_2 ↖ 𝔉_{2,3}$ from $𝔉 _{1,2} ↘ 𝔉_2 ↙ 𝔉_{2,3}$ in the diagram. We firstly consider the $[s]$-part.</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_4d2bc3e141df0.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>The square $(P,B,C,D)$ along with the blue arrows are given by CL2 (all arrows are in $S$ by CL1). Now we pullback $η_{1,2}$, $η_2$, and $η_{2,3}$ along $B ⇒ P$, $C ⇒ P$, and $D ⇒ P$, respectively. This yields three extensions in green arrows.</p>
-    <p>By construction, we obtained $𝔉 _i ∼ 𝔉 _i'$:</p>
-    <p>$$\begin{equation}
+### Two-step Localisation
+
+We localise an extriangulated category by fractional expressions. We firstly review the admissible multiplicative system for triangulated cases. Throughtout, we use $⇒$ to denote the morphisms in $S$.
+
+<div class='example'><p>(Admissible multiplicative system). Let $S$ be a class of morphisms for a triangulated category. Say $S$ is a (right) admissible multiplicative system with respect to the triangulated category, provided</p>
+
+<ul>
+  <li>(FR1). $S$ cantains all isomorphisms and closed under compositions.</li>
+  <li>(FR2). Any $A → E ⇐ B$ admits a cone of the form $A ← F ⇒ B$.</li>
+  <li>(FR3). If $0 ∈ f ∘ S$, then $0 ∈ S ∘ f$.</li>
+</ul>
+
+<p>If $S$ satisfies FR1-3, then it is a right multiplicative system.</p>
+
+<ul>
+  <li>(FR4). $S[1] ⊆ S$.</li>
+  <li>(FR5). Let $(X_i, Y_i, Z_i, f_i, g_i, h_i)$ be triangles for $i ∈ \{1,2\}$. Suppose that there is $α , β ∈ S$ such that $β ∘ f_1 = f_2 ∘ α$, then there is a $(γ : Z_1 →  Z_2) ∈ S$ making the entire diagram commutative. Roughly speaking, the 2-out-of-three principle for triangle morphisms in $S$.</li>
+  <li>(Sat). Say $S$ is saturated, if $\{fg, gh\} ⊆ S$ implies $g ∈ S$.</li>
+</ul>
+
+<p>Some remarks on multiplicative system of triangles.</p>
+
+<ul>
+  <li>FR2 is a corollary of FR5 and FR1.</li>
+  <li>An admissible multiplicative system yields the Verdier quotient $\mathcal{T} → S^{-1} \mathcal{T}$. Here $\mathcal{T}$ is not triangulated in general.</li>
+  <li>An triangulated subcategory $\mathcal{C} ↣ \mathcal{T}$ yields a strong multiplicative system.</li>
+  <li>Say $h ∈ S$, if there is an triangle of the form $(X,Y,Z,f,g,h)$ for $X ∈ \mathcal{C}$.</li>
+  <li>Say the multiplicative system $S$ is strong, if any two morphisms in $\{f,g, gf\}$ belongs to $S$, then so is the third.</li>
+  <li>There is a $1:1$ correspondence between saturated multiplicative system and trianglated subcategories.</li>
+</ul>
+</div>
+
+<div class='example'><p>(<strong>Two-step localisation</strong>). To begin with, we assume the class of morphisms $S$ to be</p>
+
+<ul>
+  <li>closed under biproduct $⊕$, so that the localisation is additive;</li>
+  <li>a strong multiplicative system, that is, if any two morphisms in $\{f,g, gf\}$ belong to $S$, then so does the third. This serves as a reasonable closure for $S$, since isomorphisms in $\mathcal{C} [S^{-1}]$ satisfy the 2-out-of-3 principle with respect to composition.</li>
+</ul>
+
+<p>The basic setting and principal procedure is summarised as</p>
+
+<p>$$\begin{equation}
+Q_S: \  \mathcal{C} \xrightarrow[ \begin{bmatrix} - \end{bmatrix} ]{\text{fewer morphisms}} \mathcal{C} / \mathcal{N} \xrightarrow[Q]{\text{more morphisms}} \mathcal{C} [S^{-1}].
+\end{equation}$$</p>
+
+<p>Here $\mathcal{N} = \{W ∣ (0 → W) ∈ S\}$ so that we may define the additive quotient functor $[-]$. The localisation $Q_S$ factors through such $[-]$, yielding $Q$.</p>
+
+<p>We remark upon the following points.</p>
+
+<ul>
+  <li>Observe that $(0 → W) ∈ S$ if and only if $(W → 0) ∈ S$ by virtue of the strong multiplicative system.</li>
+  <li>$\mathcal{N}$ is the subclass of zero objects in $\mathcal{C} [S^{-1}]$ which are directly detected.</li>
+  <li>Once the zigzag morphisms are written in fractions, $\mathcal{N}$ is precisely the class of zero objects in $\mathcal{C} [S^{-1}]$.</li>
+  <li>By uniqueness of localisation, $(\mathcal{C} / \mathcal{N}) ([S]^{-1})$ and $\mathcal{C} [S^{-1}]$ are isomorphic categories.</li>
+  <li>Note that $\mathcal{C} / \mathcal{N} ≠ \mathcal{C} [S^{-1}]$ in general. For instance, if $Q(f)$ is zero, then it is impossible to determine whether $f$ factors through some $N ∈ \mathcal{N}$.</li>
+</ul>
+</div>
+
+<div class='definition'><p>([-]). We denote
+$$\begin{equation}
+ϕ (S,x,y,z,\ldots) := \{ϕ (s, x,y,z,\ldots) ∣ \text{when it is defined}\}
+\end{equation}$$
+for general operations. For instance,</p>
+
+<ul>
+  <li>$[S] = \{[s] ∣ s ∈ S\}$,</li>
+  <li>$S ∘ f = \{s ∘ f ∣ s ∈ S, \ \text{and} \ s ∘ f \ \text{is defined}\}$,</li>
+  <li>$S^∗ δ = \{s^∗ δ ∣ s ∈ S \ \text{and} \ s^∗ δ \ \text{is defined}\}$.</li>
+</ul>
+</div>
+
+The advantages of the two-step localisation include the following.
+
+- When dealing with fractions, $[a] ∘ [s]^{-1} = [a'] ∘ [s]^{-1}$ if and only if $[a] = [a']$.
+- The axioms on $S$ ([L]'s) are stronger than those of $[S]$ ([CL]'s). Explicitly, to show that the localisation $Q_S : \mathcal{C} → \mathcal{C}[S^{-1}]$ is extriangulated along with the fractional condition $(\mathcal{C} , S) ⊧$ [L], it suffices to prove $Q : \mathcal{C} / \mathcal{N} → (\mathcal{C} / \mathcal{N}) [[S]^{-1}]$ with $(\mathcal{C} / \mathcal{N} , [S]) ⊧$ [CL]. Here [L] ⇒ [CL].
+
+<div class='definition'><p>(The [L] and [CL] axioms). The axioms [L]’s are defined for $(\mathcal{C}, S)$, while [CL]’s are defiend for $(\mathcal{C} / \mathcal{N} , [S])$.</p>
+
+<ul>
+  <li>(L1). $S$ contains all isomorphisms, closed under biproduct and it is strongly multiplicative. This is exactly out basic setting.</li>
+  <li>(L2). $S$ is a multiplicative system in usual sense, i.e., it satisfies both FR and LFR.</li>
+  <li>(L3). For morphism of extension $(f,h) : δ → δ '$ with $f,h ∈ S$, there exists some $g ∈ S$ making the diagram of realisations commutative.</li>
+  <li>(L4). Let $\{i_∙ \}$, $\{d_∙ \}$, and $\{s_∙ \}$ denote the class of inflations, deflation, and $S$. Every $dsd'$ is equals to some $s'd''s''$, every $isi'$ equals to some $s'i''s''$.</li>
+</ul>
+
+<p>The [CL] axioms are similar to [L]’s.</p>
+
+<ul>
+  <li>(CL1). $[S]$ contains all isomorphisms, closed under biproduct and it is strongly multiplicative.</li>
+  <li>(CL2). $[S]$ is a multiplicative system in usual sense, i.e., it satisfies both FR and LFR.</li>
+  <li>(CL3). For morphism of extension $(f,h) : δ → δ '$ with $[f],[h] ∈ [S]$, there exists some $[g] ∈ [S]$ making the diagram of realisations commutative in $\mathcal{C} / \mathcal{N}$.</li>
+  <li>(CL4). Let $\{i_∙ \}$, $\{d_∙ \}$, and $\{s_∙ \}$ denote the class of inflations, deflations, and $S$. Every $[dsd']$ is equals to some $[s'd''s'']$, every $[isi']$ equals to some $[s'i''s'']$.</li>
+</ul>
+</div>
+
+We show some connections between [L] and [CL]. The following reflection lemma is of great importance.
+
+<div class='lemma'><p>(Reflection lemma). $[-]$ reflect the $S$-morphisms, i.e., for any $f ∈ S$ such that $[g] = [f]$, then $g ∈ S$.</p>
+
+<div class="proof">
+  <p>Denote $f,g : X → Y$. Suppose that $(g-f) = i ∘ j$ factors through some $W ∈ \mathcal{N}$. Now $g = (1,i) ∘ \binom f j$. We see that $\binom f j$ is the composition morphisms in $S$:</p>
+  <p>$$\begin{equation}
+X ⊕ 0 \xrightarrow {\binom {1 \ 0}{0 \ 0}} X ⊕ N \xrightarrow{\binom {1 \ 0}{j \ 1}} X⊕ N \xrightarrow {\binom{f \ 0}{0 \ 1}} Y ⊕ N.
+\end{equation}$$</p>
+  <p>One can show that $(1,i)$ is the composition of morphisms in $S$:</p>
+  <p>$$\begin{equation}
+Y ⊕ N \xrightarrow{\binom {1 \ i}{0 \ 1}}Y ⊕ N \xrightarrow{\binom {1 \ 0}{0 \ 0}} Y ⊕ 0.
+\end{equation}$$</p>
+</div>
+</div>
+
+We may assume $S$ to include $\{ f ∣ [f] ∈ 𝐈𝐬𝐨 (\mathcal{C} / \mathcal{N})\}$, serving as a reasonable closure. By reflection lemma, it is equivalent to assume that $[S]$ contains all isomorphisms of $\mathcal{C} / \mathcal{N}$.
+
+<div class='lemma'><p>Under the reasonable closure $[S] ⊆ 𝐈𝐬𝐨 (\mathcal{C} / \mathcal{N})$, [M]’s implies [CM]’s.</p>
+
+<div class="proof">
+  <p>(CM1). By reflection lemma, we see that $[S]$ is strongly multiplicative whenever $S$ is. The rest part of CM1 is trivial. <br /> <br /> (CM2). We only show R2 and R3. R2 is trivial. For R3, suppose that $[sf] = 0$, then $fs = ji$ factors through $W ∈ \mathcal{N}$. Since there is a way to complete $λ ∈ S$ such that $λsf = 0$, we obtain $ft = 0$ for some $t ∈ S$. Hence $[ft] =0$ for $[t] ∈ [S]$.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_31e8cf58c520c.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>The converse is obtain by reversing all arrows. <br /> <br /> (CM3 and CM4). Trivial.</p>
+</div>
+</div>
+
+### The Bifunctor $𝔼 → [𝔼] → 𝕃$
+
+By means of two-step localisation, we proceed to define, in succession:
+
+- The functor $[𝔼] : (\mathcal{C} / \mathcal{N}) ^{\mathrm{op}} × (\mathcal{C} / \mathcal{N}) → 𝐀𝐛$, which is, in some sense, a quotient of $𝔼$;
+- The functor $𝕃 : \mathcal{C}[S^{-1}]^{\mathrm{op}} × \mathcal{C}[S^{-1}] → 𝐁𝐢𝐠𝐀𝐛$, where $𝐁𝐢𝐠𝐀𝐛$ denotes the category of classes endowed with an Abelian group structure.
+
+There is, at present, no necessity to address set-theoretic considerations.
+\\
+\\
+The axioms of $S$ includes CL1-5, as well as reasonable closure that $S$ contains the preimages of isomorphisms in $\mathcal{C} / \mathcal{N}$ along the functor $[-]$. There is no need to think of L1-5, as they are weaker axioms.
+
+<div class='example'><p>(The two sided nullity). We learn by CL2 that, $[0] ∈ [S] ∘ [φ]$ iff $[0] ∈ [φ ] ∘ [S]$. We may with the analogous theorems for extension elements.</p>
+</div>
+
+<div class='lemma'><p>When there is $s ∈ S$ such that $s^∗ η = 0$, then there is $t ∈ S$ such that $t_∗ η =0$.</p>
+
+<div class="proof">
+  <p>By CL3, there exists $[q] ∈ [S]$ making the diagram commutative in $\mathcal{C} / \mathcal{N}$.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_df92026aaf844.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>We denote $q = (f,t)$ without the loss of generality. By CL2, there is $u$ and $α$ making the red sqaure commutative in $\mathcal{C}/\mathcal{N}$.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_89526dd9111e3.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Since $[α ∘ f] = [u]$, we have that $(α ∘ f) ∈ S$ by reflection lemma. Now $(α ∘ f)_∗ η  =0$.</p>
+</div>
+</div>
+
+Now we define $[𝔼]$ in $\mathcal{C} / \mathcal{N}$ as a quotient functor of $𝔼$.
+
+<div class='definition'><p>($[𝔼] (-,-)$). For each pair of objects $(Z,X)$, we define</p>
+
+<p>$$\begin{equation}
+0 → 𝕂 (Z, X) → 𝔼 (Z,X) → [𝔼] (Z,X) → 0.
+\end{equation}$$</p>
+
+<p>Here $η ∈ 𝕂$ iff $0 ∈ S^∗ η$, or equivalently $0 ∈ S_∗ η$ by previous lemma.</p>
+</div>
+
+<div class='theorem'><p>$[𝔼] : (\mathcal{C}/\mathcal{N})^{\mathrm{op}} × \mathcal{C}/\mathcal{N} → 𝐀𝐛$ is an additive bifunctor.</p>
+
+<div class="proof">
+  <p>We firstly show that $[𝔼] : \mathcal{C}^{\mathrm{op}} × \mathcal{C} → 𝐀𝐛$ is an additive bifunctor.</p>
+  <ol>
+    <li>We show that $[𝔼]$ is functorial in the first entry, i.e., $g^∗ : [δ] ↦ [g^∗ δ]$ is well-defined. It suffices to show that $g^∗$ preserves extension elements in $𝕂$, which is clear.</li>
+    <li>$[𝔼]$ is functorial in the second entry by dual analysis.</li>
+    <li>$𝕂$ preserves biproducts. For instance, we take arbitrary $δ _i ∈ 𝕂 (Z, X_i)$ such that $(s_i)^∗ δ _i = 0$ for some $s_i ∈ S$. We apply CL2 to $⋅ ⇒ Z ⇐ ⋅$, and obtain $s ∈ S$ such that $[s^∗ δ _i] = [0]$. Hence, $δ _1 ⊕ δ _2 ∈ 𝕂$.</li>
+  </ol>
+  <p>Therefore, the functorial quotient $[𝔼]$ is well-defined.</p>
+  <p>For any $N ∈ \mathcal{N}$, we see that both $(0 → N)$ and $(N → 0)$ belongs to $𝔼$. Hence $𝕂 (\mathcal{N},-)$ and $𝕂 (-,\mathcal{N})$ vanished. We see that $[𝔼]$ is well-defined on the stable category.</p>
+</div>
+</div>
+
+By construction, $𝕂$ is somehow regarded as a closed subset: for any $s ∈ S$, $s_∗ η ∈ 𝕂$ iff $η ∈ 𝕂$. Informally, the preimage of $(s_∗)^{-1} 𝕂$ is contained in $𝕂$.
+
+<div class='lemma'><p>We denote this lemma by the formula $(S^∗)^{-1} (S_∗ )^{-1} 𝕂 = 𝕂$. That is, when there are some $s,t ∈ S$ such that $s^∗ t_∗ η ∈ 𝕂$, then $η ∈ 𝕂$.</p>
+</div>
+
+Now we shall construct $𝕃$ from $[𝔼]$ by bifractions.
+
+<div class='definition'><p>(<strong>Bifraction</strong>). A bifraction is a triple $([s],[η], [t])$ for $η ∈ 𝔼 (Z,X)$, $(s : Z → Z') ∈ S$, and $(t : X' → X) ∈ S$. We denote it by a zigzag diagram $Z' \overset{[s]}⇐ Z \overset {[η]}→ X \overset {[t]}⇐ X'$. 
+<br />
+\</p>
+
+<p>Say $([s],[η], [t])$ and $([s'],[η '],[t'])$ are equivalent, provided a diagram in $\mathcal{C} / \mathcal{N}$:</p>
+
+<center> <br /> <div class="tikz-diagram">
+    <embed src="/website/svg/Diagram_Thm_Extri/diagram_3d4a22ddb4cd0.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+  </div> <br /> </center>
+
+<p>All triangles commmute in the diagram, while $[p^∗ q_∗ η] =[η _0]$ and $[(p')^∗ (q')_∗ η'] = [η _0]$.
+<br />
+<br />
+We shall soon prove that such an equivalence class is an element in $𝕃 (Z', X')$.</p>
+</div>
+
+Informally, $s_0$ is the left common denominator of $(s,s')$ and $t_0$ is the right common denominator of $(t,t')$, such that
+
+$$\begin{equation}
+([s],[η],[t]) ∼ ([sp],[p^∗ q_∗ η],[qt]) = ([s'p'],[(p')^∗ (q')_∗ η'],[q't']) ∼ ([s'],[η'],[t']).
+\end{equation}$$
+
+The following lemma shows how $\mathcal{C} → \mathcal{C}/\mathcal{N}$ simplifies the fractional argument.
+
+<div class='lemma'><p>$([s],[η],[t]) ∼ ([s],[η'],[t])$ if and only if $[η] = [η']$. The only if part is due to $(S^∗)^{-1} (S_∗)^{-1} 𝕂 = 𝕂$.</p>
+
+<ul>
+  <li>In short, there are no zero divisors in $[𝔼]$.</li>
+</ul>
+</div>
+
+<div class='theorem'><p>$∼$ is an equivalence relation of bifractions.</p>
+
+<div class="proof">
+  <p>We only shows the transitivity. Suppose we have fractions $𝔉_i := ([s_i],[η_i],[t_i])$ for $i = 1,2,3$, such that $𝔉 _1 ∼ 𝔉 _2$ via $𝔉 _{1,2}$ and $𝔉 _2 ∼ 𝔉 _3$ via $𝔉 _{2,3}$. We present it as a commutative diagram in $\mathcal{C}/\mathcal{N}$:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_15aec859a8991.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Our goal is to create $𝔉 _{1,2} ↗ 𝔉_2 ↖ 𝔉_{2,3}$ from $𝔉 _{1,2} ↘ 𝔉_2 ↙ 𝔉_{2,3}$ in the diagram. We firstly consider the $[s]$-part.</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_4d2bc3e141df0.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>The square $(P,B,C,D)$ along with the blue arrows are given by CL2 (all arrows are in $S$ by CL1). Now we pullback $η_{1,2}$, $η_2$, and $η_{2,3}$ along $B ⇒ P$, $C ⇒ P$, and $D ⇒ P$, respectively. This yields three extensions in green arrows.</p>
+  <p>By construction, we obtained $𝔉 _i ∼ 𝔉 _i'$:</p>
+  <p>$$\begin{equation}
 ([s_i],[η_i],[t_i]) ∼ ([s_0],[η_i'],[t_i']) \quad (i = 1,2,3).
 \end{equation}$$</p>
-    <p>By dual anlysis on $t_i$’s, we obtain $𝔉 _i ∼ 𝔉 _i''$:</p>
-    <p>$$\begin{equation}
+  <p>By dual anlysis on $t_i$’s, we obtain $𝔉 _i ∼ 𝔉 _i''$:</p>
+  <p>$$\begin{equation}
 ([s_i],[η_i],[t_i]) ∼ ([s_0],[η_i''],[t_0]) \quad (i = 1,2,3).
 \end{equation}$$</p>
-    <p>Here the equivalent relation is given by the composition</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_ccb124e2c1228.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>Now $[η _1 ''] = [η_2 '']$ since $𝔉_1 ∼ 𝔉 _2$; and similarly $[η _2 ''] = [η _3'']$. Hence, $𝔉_1 ∼ 𝔉_3$ via $([s_0],[η'' _1], [t_0])$.</p>
-  </div>
+  <p>Here the equivalent relation is given by the composition</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_ccb124e2c1228.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Now $[η _1 ''] = [η_2 '']$ since $𝔉_1 ∼ 𝔉 _2$; and similarly $[η _2 ''] = [η _3'']$. Hence, $𝔉_1 ∼ 𝔉_3$ via $([s_0],[η'' _1], [t_0])$.</p>
+</div>
 </div>
 
-<div class="definition">
-  <p>We take $[s,η,t]$ as a the equivalence class of the fractions, represented by $([s],[η ],[t])$. Denote</p>
-  <p>$$\begin{equation}
+<div class='definition'><p>We take $[s,η,t]$ as a the equivalence class of the fractions, represented by $([s],[η ],[t])$. Denote</p>
+
+<p>$$\begin{equation}
 𝕃 (Z,X) := \{[s,η ,t] ∣ ([s],[η ],[t]) \ \text{is a fraction}\}.
 \end{equation}$$</p>
 </div>
 
-<p>By general theory of localisation, the morphisms in $\mathcal{C}[S^{-1}] = S^{-1}\mathcal{C}$ is of the form of left fractions, or right fractions alternatively. Moreover. such fractions is additive by CL1. It remains to show that $𝕃(-,-)$ in functorial in $S^{-1}\mathcal{C}$. For instance,</p>
+By general theory of localisation, the morphisms in $\mathcal{C}[S^{-1}] = S^{-1}\mathcal{C}$ is of the form of left fractions, or right fractions alternatively. Moreover. such fractions is additive by CL1. It remains to show that $𝕃(-,-)$ in functorial in $S^{-1}\mathcal{C}$. For instance,
 
-<center> <br /> <div class="tikz-diagram">
-    <embed src="/website/svg/Diagram_Thm_Extri/diagram_bce25eee1a836.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-  </div> <br /> </center>
+<center>
+        <br>
+        <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_bce25eee1a836.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;"/>
+        </div>
+        <br>
+        </center>
 
-<p>it is supposed to gives the composition of fractions:</p>
+it is supposed to gives the composition of fractions:
+
+$$\begin{equation}
+[s, η, t] ∘ Q([f]) ∘ Q([p])^{-1} = [ps', (f')^∗ η, t].
+\end{equation}$$
+
+<div class='proposition'><p>The composition of bifractions and fractions are well-defined. It suffices to show that</p>
 
 <p>$$\begin{equation}
-[s, η, t] ∘ Q([f]) ∘ Q([p])^{-1} = [ps', (f')^∗ η, t].
-\end{equation}$$</p>
-
-<div class="proposition">
-  <p>The composition of bifractions and fractions are well-defined. It suffices to show that</p>
-  <p>$$\begin{equation}
 [s, η, t] ∘ Q([f]) ∘ Q([p])^{-1} = [ps', (f')^∗ η, t]
 \end{equation}$$</p>
-  <p>is well-defined. We shall show in steps that the result is independent of</p>
-  <ol>
-    <li>the choice of the 2×2 square given by CL2,</li>
-    <li>the choice of the fraction $Q([f]) ∘ Q([p])^{-1}$,</li>
-    <li>the choice of the bifraction $[s, η, t]$.</li>
-  </ol>
-  <div class="proof">
-    <p>(Proof of 1.). If there is another pair $(s'', f'')$ with $s'' ∈ S$, such that $[sf''] = [fs'']$. We shall show that</p>
-    <p>$$\begin{equation}
+
+<p>is well-defined. We shall show in steps that the result is independent of</p>
+
+<ol>
+  <li>the choice of the 2×2 square given by CL2,</li>
+  <li>the choice of the fraction $Q([f]) ∘ Q([p])^{-1}$,</li>
+  <li>the choice of the bifraction $[s, η, t]$.</li>
+</ol>
+
+<div class="proof">
+  <p>(Proof of 1.). If there is another pair $(s'', f'')$ with $s'' ∈ S$, such that $[sf''] = [fs'']$. We shall show that</p>
+  <p>$$\begin{equation}
 [ps', (f')^∗ η, t] = [ps'', (f'')^∗ η, t].
 \end{equation}$$</p>
-    <p>By CL2, there is a way to find $[a]$ and $[b]$ such that $\square$ commutes. We denote $[d] = [f''b - f'a]$, and find that $[s] ∘ [d] = 0$. By CL2, there is $w ∈ S$ such that $[d] ∘ [w] = 0$. Now</p>
-    <p>$$\begin{equation}
+  <p>By CL2, there is a way to find $[a]$ and $[b]$ such that $\square$ commutes. We denote $[d] = [f''b - f'a]$, and find that $[s] ∘ [d] = 0$. By CL2, there is $w ∈ S$ such that $[d] ∘ [w] = 0$. Now</p>
+  <p>$$\begin{equation}
 [ps', (f')^∗ η, t] = [ps'a, (f'a)^∗ η, t];\quad  [ps'', (f'')^∗ η, t] =  [ps''b, (f''b)^∗ η, t],
 \end{equation}$$</p>
-    <p>where $w^∗ (f'a - f''b)^∗ η ∈ 𝕂$. Hence, $(f'a - f''b)^∗ η ∈ 𝕂$ and thus</p>
-    <p>$$\begin{equation}
+  <p>where $w^∗ (f'a - f''b)^∗ η ∈ 𝕂$. Hence, $(f'a - f''b)^∗ η ∈ 𝕂$ and thus</p>
+  <p>$$\begin{equation}
 [ps'a, (f'a)^∗ η, t] = [ps'', (f'')^∗ η, t].
 \end{equation}$$</p>
-    <p>(Proof of 2.). Suppose that $Q[f] ∘ Q[p]^{-1} = Q[g] ∘ Q[q]^{-1}$. By induction, it suffice to prove the case when</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_38b1304e9a213.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>With out the loss of generality, we take</p>
-    <p>$$\begin{equation}
+  <p>(Proof of 2.). Suppose that $Q[f] ∘ Q[p]^{-1} = Q[g] ∘ Q[q]^{-1}$. By induction, it suffice to prove the case when</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_38b1304e9a213.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>With out the loss of generality, we take</p>
+  <p>$$\begin{equation}
 [s,η ,t] ∘ Q[g] ∘ Q[q]^{-1} = [qs', (g')^∗ η ,t],
 \end{equation}$$</p>
-    <p>where the 2×2 square is denoted by $\square$:</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_1096c8194ee9a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>This gives the 2×2 square $Q[s]^{-1} ∘ Q[f] = Q[g'] ∘ Q[rs']$. Hence,</p>
-    <p>$$\begin{equation}
+  <p>where the 2×2 square is denoted by $\square$:</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_1096c8194ee9a.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>This gives the 2×2 square $Q[s]^{-1} ∘ Q[f] = Q[g'] ∘ Q[rs']$. Hence,</p>
+  <p>$$\begin{equation}
 [s,η ,t] ∘ Q[f] ∘ Q[p]^{-1} = [prs', (g'r)^∗ η ,t] = [qs', (g')^∗ η ,t].
 \end{equation}$$</p>
-    <p>(Proof of 3.). Suppose that $[s,η ,t] = [s',η ',t']$, By induction, it suffice to prove the case when</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_e728a34c33afa.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>Here the middle rectangles stands for $[r^∗ s_∗ η] = [η ']$. Again we take the 2×2 square from $(f,s)$, for instance, $Q[f] ∘ Q[w]^{-1} = Q[s]^{-1} ∘ Q[g]$. This yields</p>
-    <p>$$\begin{equation}
+  <p>(Proof of 3.). Suppose that $[s,η ,t] = [s',η ',t']$, By induction, it suffice to prove the case when</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_e728a34c33afa.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>Here the middle rectangles stands for $[r^∗ s_∗ η] = [η ']$. Again we take the 2×2 square from $(f,s)$, for instance, $Q[f] ∘ Q[w]^{-1} = Q[s]^{-1} ∘ Q[g]$. This yields</p>
+  <p>$$\begin{equation}
 [s,η ,t] ∘ Q[f] ∘ Q[p]^{-1} = [pw, g^∗ η , t].
 \end{equation}$$</p>
-    <p>We complete the 2×2 square from $(f,s')$ by $(w,rg)$, as shown in the diagram</p>
-    <center> <br /> <div class="tikz-diagram">
-        <embed src="/website/svg/Diagram_Thm_Extri/diagram_1f76845453936.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-      </div> <br /> </center>
-    <p>This yields that</p>
-    <p>$$\begin{equation}
+  <p>We complete the 2×2 square from $(f,s')$ by $(w,rg)$, as shown in the diagram</p>
+  <center> <br /> <div class="tikz-diagram">
+      <embed src="/website/svg/Diagram_Thm_Extri/diagram_1f76845453936.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
+    </div> <br /> </center>
+  <p>This yields that</p>
+  <p>$$\begin{equation}
 [s', η' ,t'] ∘ Q[f] ∘ Q[p]^{-1} = [pw, (rg)^∗ η' , t'].
 \end{equation}$$</p>
-    <p>We observe that $[pw, g^∗ η , t] = [pw, r^∗ g^∗ η , t']$. This coincides $[s,η ,t] ∘ Q[f] ∘ Q[p]^{-1}$.</p>
-  </div>
+  <p>We observe that $[pw, g^∗ η , t] = [pw, r^∗ g^∗ η , t']$. This coincides $[s,η ,t] ∘ Q[f] ∘ Q[p]^{-1}$.</p>
+</div>
 </div>
 
-<p>We explain the bifunctoriality of $𝕃$, i.e,</p>
+We explain the bifunctoriality of $𝕃$, i.e,
 
-<p>$$\begin{equation}
+$$\begin{equation}
 (Z\overset p ⇐ ∙ \overset f → Z') ^∗ (X\overset g → ∙ \overset q ⇐ X')_∗ : 𝕃 (Z, X) → 𝕃 (Z', X'),
-\end{equation}$$</p>
+\end{equation}$$
 
-<p>with the diagram</p>
+with the diagram
 
-<center> <br /> <div class="tikz-diagram">
-    <embed src="/website/svg/Diagram_Thm_Extri/diagram_dfaa5a364e2c6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;" />
-  </div> <br /> </center>
+<center>
+        <br>
+        <div class="tikz-diagram">
+        <embed src="/website/svg/Diagram_Thm_Extri/diagram_dfaa5a364e2c6.svg" type="image/svg+xml" style="display: block; width: 50%; height: 50%;"/>
+        </div>
+        <br>
+        </center>
 
-<div class="proposition">
-  <p>$𝕃 (Z , X)$ admits an additive structure (it might be a big Abelian group), and $[𝔼] (Z,X)$ is a subgroup via $$\begin{equation}
+<div class='proposition'><p>$𝕃 (Z , X)$ admits an additive structure (it might be a big Abelian group), and $[𝔼] (Z,X)$ is a subgroup via
+$$\begin{equation}
 [𝔼] (Z,X) → 𝕃 (Z , X),\quad [δ] ↦ [1_X, δ, 1_Z].
 \end{equation}$$</p>
-  <div class="proof">
-    <p>The additive structure is given by Baer sum, that is,</p>
-  </div>
+
+<div class="proof">
+  <p>The additive structure is given by Baer sum, that is,</p>
 </div>
+</div>   -->
 
   </article>
 
@@ -3427,74 +3460,6 @@ document.addEventListener('DOMContentLoaded', function() {
       <a href="#the-triangulated-structure">
         <span class="toc-number">10.3.</span>
         <span class="toc-title">The Triangulated Structure</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-2">
-      <a href="#the-localisation">
-        <span class="toc-number">11.</span>
-        <span class="toc-title">The Localisation</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-3">
-      <a href="#exact-functors">
-        <span class="toc-number">11.1.</span>
-        <span class="toc-title">Exact Functors</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-3">
-      <a href="#two-step-localisation">
-        <span class="toc-number">11.2.</span>
-        <span class="toc-title">Two-step Localisation</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-3">
-      <a href="#the-bifunctor-mathjax_protectedjpcdllwg4oasifvwnzs8xsdihpig8j2vgyqmathjax_protected">
-        <span class="toc-number">11.3.</span>
-        <span class="toc-title">The Bifunctor $𝔼 → [𝔼] → 𝕃$</span>
       </a>
     </div>
   
