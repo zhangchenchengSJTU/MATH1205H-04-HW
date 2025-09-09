@@ -699,7 +699,33 @@ In particular,
 <h4 id="semi-local-rings-1">Semi-local Rings</h4>
 
 <div class="definition">
-  <p>(Semi-local rings). $R$ is semi-local if $R / J(R)$ is semisimple (= Artinian in this case).</p>
+  <p>(Generated and cogenerated). Say $M$ is finitely generated iff the following equivalent definitions hold:</p>
+  <ol>
+    <li>for any sum of submodules $M = ∑ M_∙$, there a finite sub-sum $M = ∑ _{i=1}^n M_i$;</li>
+    <li>any surjection $∐ M_∙ ↠ M$, factors through a finite sub-coproduct $∐ _{i=1}^n M_i ↠ M$;</li>
+    <li>any transfinite limit of inclusion of proper submodules is proper;</li>
+    <li>for any cogenerator $E$ (e.g. $(_RR)^+$), there is an injection $M ↪ E^n$ for some $n$.</li>
+  </ol>
+  <p>Dually, $M$ is finitely cogenerated iff the following equivalent definitions hold:</p>
+  <ol>
+    <li>for any intersection of submodules $0 = ⋂ M_∙$, there a finite sub-intersection $0 = ⋂ _{i=1}^n M_i$;</li>
+    <li>any injection $M ↪ ∏ M_∙$, factors through a finite subproduct $M ↪ ∏ _{i=1}^n M_i$;</li>
+    <li>any transfinite colimit of inclusion of proper submodules is non-zero;</li>
+    <li>for any generator $Q$ (e.g. $R_R$), there is a surjection $Q^n ↠ M$ for some $n$.</li>
+  </ol>
+</div>
+
+<div class="definition">
+  <p>(Semi-local rings). The following are equivalent for $R$ to be semi-local:</p>
+  <ol>
+    <li>$\frac{R}{J(R)}$ is semisimple;</li>
+    <li>$\frac{R}{J(R)}$ is right Artinian;</li>
+    <li>$\frac{R}{J(R)}$ is finitely cogenerated;</li>
+    <li>right semi-simple modules over $R$ are closed under $∏$.</li>
+  </ol>
+  <div class="proof">
+    <p>(1 → 2). By Wedderburn-Artin theorem. <br /> (2 → 3). For $M ↪ ∏ M_∙$, we identify $M$ as a submodule of $∏ M_∙$. If this product never factors through a finite subproduct, then we obtain an infinite descending chain of submodules of $M$ by projection to finite subproducts. A contradiction! <br /> (3 → 2). Since $J(\frac{R}{J(R)}) = 0$, for any $\frac{R}{J(R)}$-module $M$, $⋂ _{f : M → \text{simple}} \ker f = 0$. Hence the product of simple modules is a cogenerator. By assumption, $\frac{R}{J(R)}$ is a submodule of finite product of simple modules, it is right Artinian. <br /> (1 → 4). The product of semi-simple modules is a module over $\frac{R}{J(R)}$, hence it is semi-simple as both an $\frac{R}{J(R)}$ module and an $R$ module. <br /> (4 → 1). By analysis of (3 → 2), we see $\frac{R}{J(R)}$ is a submodule of a product of simple modules, hence it is semi-simple.</p>
+  </div>
 </div>
 
 <div class="example">
@@ -925,6 +951,8 @@ J(\mathrm{End}(M)) = \{f : \operatorname{im}(f) ↪ M \ \text{is superfluous}.\}
 J(\mathrm{End}(M)) ≃ (M, J(M)) ≃ (J(M), M).
 \end{equation}$$</p>
 </div>
+
+<p>Corollary, the statements holds for any finite length module $M$.</p>
 
 <h4 id="endolocal-modules">Endolocal Modules</h4>
 
@@ -1167,7 +1195,7 @@ M_t ⊆ ∐ _{H_t ∪ J_t} N_∙ ⊆ ∐ _{G ∪ I_t} M_∙.
 <div class="theorem">
   <p>(Nil lifting). Let $I$ be a nil ideal. Then idempotent element $[x] ∈ R/I$ has an idempotent preimage in $R$. In particular, the lifting is unique for commutative rings.</p>
   <div class="proof">
-    <p>Let $e$ be arbitrary preimage of $[x]$. There is $k$ s.t. $(e(1-e))^k = 0$. There is a polynomial $p = p(e)$ s.t. $e^k + (1-e)^k + p = 1$. Clearly $p ∈ I$, we take $q := (1-p)^{-1}$. Now</p>
+    <p>Let $e$ be arbitrary preimage of $[x]$. There is $k$ s.t. $(e(1-e))^k = 0$. There is a polynomial $p = p(e)$ s.t. $e^k + (1-e)^k + p = 1$. Clearly $p ∈ I$, we take $q := (1-p)^{-1}$ (also a polynomial in $e$). Now</p>
     <ul>
       <li>$e^kq$ is a preimage of $[x]$;</li>
       <li>$e^kq + (1-e)^kq = (1-p)^{-1}q = 1$;</li>
@@ -1193,6 +1221,37 @@ M_t ⊆ ∐ _{H_t ∪ J_t} N_∙ ⊆ ∐ _{G ∪ I_t} M_∙.
 \boxed{\text{For CommRings, Nil lifting is always unique!}}
 \end{equation}$$</p>
 
+<p>There is a concern whether nillifting preserves orthogonality.</p>
+
+<div class="proposition">
+  <p>Let $I ⊆ J(R)$ be a right ideal which admits idempotent lifting property. For any orthogonal idempotents $[e], [f] ∈ \frac{R}{J(R)}$ and any idempotent lifting $e$ of $[e]$, there exists an idempotent lifting $f'$ of $[f]$ s.t. $e,f'$ are orthogonal in $R$.</p>
+  <div class="proof">
+    <p>Let $f$ be any idempotent lifting of $f$. Then $fe ∈ I ⊆ J(R)$. We take $$\begin{equation}
+f' := (1-e)(1-fe)^{-1}f(1-fe)
+\end{equation}$$</p>
+    <p>We see that</p>
+    <ul>
+      <li>$(f - f') ≡ (1-e)(f - (1-fe)^{-1}f(1-fe)) ≡ 0 \mod I$;</li>
+      <li>$ef' = (e-e^2)(1-fe)^{-1}f(1-fe) = 0$;</li>
+      <li>$f' e = (1-e)(1-fe)^{-1}(fe - ffee) = 0$;</li>
+      <li>$f' ^2 = (1-e)(1-fe)^{-1}\underset{= f}{\underbrace{f(1-fe)(1-e)(1-fe)^{-1}f}}(1-fe) =f'$.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>For any countable set of orthogonal idempotents $\{[e_i]\}_{i ∈ ℕ} ⊆ R / I$, where $I ⊆ J(R)$ admits the idempotent lifting property. Then there is a way to find orthogonal idempotent liftings $\{e_i\}_{i ∈ ℕ} ⊆ R$. Moreover one can begin with any choice of lifting $e_{n_0} ↦ [e_{n_0}]$.</p>
+  <div class="proof">
+    <p>By induction. Since being an othogonal idempotent set is verified by collection of finite sums, the induction extends to countable sets.</p>
+  </div>
+</div>
+
+<p>Hence, for nil ideals, idempotent lifting can be chosen to preserve orthogonality.</p>
+
+<p>$$\begin{equation}
+\boxed{\text{Nil idempotent lifting preserves orthogonality!}}
+\end{equation}$$</p>
+
 <div class="theorem">
   <p>(Levitzki). Let $R$ be a right Noetherian ring. Then every nil right ideal is nilpotent.</p>
   <div class="proof">
@@ -1206,10 +1265,28 @@ M_t ⊆ ∐ _{H_t ∪ J_t} N_∙ ⊆ ∐ _{G ∪ I_t} M_∙.
 </div>
 
 <p>$$\begin{equation}
-\boxed{\text{For Noetherian rings, Nil = Nilpotent!}}
+\boxed{\text{For Noetherian rings, nil = nilpotent!}}
 \end{equation}$$</p>
 
 <p>The commutative case is easy, which reveals $\mathrm{Spec}(R/I) ≃ \mathrm{Spec}(R)$ induced by $R ↠ R/I$ for any nil ideal $I$.</p>
+
+<h4 id="nil-lifting-fg-projectives">Nil Lifting f.g. Projectives</h4>
+
+<p>We show nil lifting for idempotents, which suggests a bijection between f.g. projective modules.</p>
+
+<div class="theorem">
+  <p>Let $I$ be a nil right ideal, then $φ : R ↠ R / I$ induces a bijection between the isomorphism classes of f.g. projective modules via $φ^∗ : 𝐩𝐫𝐨𝐣(R/I) → 𝐩𝐫𝐨𝐣 (R)$ and $P ↦ P/PI$.</p>
+  <ul>
+    <li>This shows isomorphism between the Grothendieck groups $K_0(R) ≃ K_0(R/I)$.</li>
+  </ul>
+  <div class="proof">
+    <p>If $P ∈ 𝐌𝐨𝐝 _R$ is projective, then $P/PI ∈ 𝐌𝐨𝐝 _{R/I}$ is projective.</p>
+    <ul>
+      <li>(Surjective). Any projective module $Q$ over $R/I$ takes the form $[e] (R/I)^n$. By idempotent lifting, $Q = (eR^n)/I$.</li>
+      <li>(Injective). For projective $R$ modules $P$ and $P'$ s.t. $P/PI ≃ P'/P'I$. We take $P ↠ P/PI$ and $P' ↠ P'/P'I$. The lifting property yields $P → P'$. Note that $\operatorname{im}(P → P') + P'I = P'$, and $P' I ⊆ P' J(R)$ is superfluous (by Nakayama lemma). Hence $P → P'$ is surjective. By symmetric analysis, $P ≃ P'$.</li>
+    </ul>
+  </div>
+</div>
 
 <h4 id="semiperfect-rings">Semiperfect Rings</h4>
 
@@ -1342,7 +1419,7 @@ M = L = ∐ _{n ∈ ℕ} R,\quad N = (\{1_{n+1} r_n - 1_n\}_{n ∈ ℕ}).
 <div class="example">
   <p>A transfinite nilpotent ideal must be nil, thus</p>
   <ul>
-    <li>it lifts idempotents from quotient rings;</li>
+    <li>it lifts idempotents from quotient rings (and preserves orthogonality);</li>
     <li>it is contained in the Jacobson radical.</li>
   </ul>
 </div>
@@ -1359,6 +1436,51 @@ M = L = ∐ _{n ∈ ℕ} R,\quad N = (\{1_{n+1} r_n - 1_n\}_{n ∈ ℕ}).
   </div>
 </div>
 
+<div class="example">
+  <p>Over finite field, a f.g. sub-ideal of transfinite nilpotent ideal is nilpotent.</p>
+</div>
+
+<h4 id="transfinite-nilpotent-ideal-ii">Transfinite Nilpotent Ideal (II)</h4>
+
+<p>We conclude a sufficient condition for $J(R)$ to be transfinite nilpotent.</p>
+
+<div class="proposition">
+  <p>$J(R)$ is right transfinite nilpotent</p>
+  <ul>
+    <li>if every non-zero right module has a maximal submodule;</li>
+    <li>if every non-zero left module has a minimal submodule.</li>
+  </ul>
+  <div class="proof">
+    <p>If any right module $M (≠ 0)$ has a maximal submodule, then $MJ ⊆ J(M) ⊊ M$. Hence $J$ is transfinite nilpotent. The converse is not true (see following example). <br /> If left module $X (≠ 0)$ has a minimal submodule $X_0$, then $X_0$ is simple. Note that $J$ contains the annihilator of any simple module. Hence $J X_0 = 0$. Hence, $J$ is transfinite nilpotent. Conversely, $ℤ$ over $ℤ$ is a non-example.</p>
+  </div>
+</div>
+
+<p>We show some theorems (due to Hamsher) over commutative rings.</p>
+
+<div class="theorem">
+  <p>Let $R$ be commutative. Then the following are equivalent</p>
+  <ol>
+    <li>Every $M ≠ 0$ has maximal submodule;</li>
+    <li>$J(R)$ is transfinite nilpotent and every $R / J(R)$-module has a maximal submodule;</li>
+    <li>$J(R)$ is transfinite nilpotent and $R / J(R)$ is vNR.</li>
+  </ol>
+  <div class="proof">
+    <p>(1 → 2). $J(R)$ is transfinite nilpotent by previous proposition. $J(R/J(R)) = 0$ is again transfinite nilpotent. <br /> (2 → 3). We take arbitrary non-zero $[x] ∈ R / J(R)$ and show that $([x]) ⊕ \mathrm{ann}([x]) = R / J(R)$. WLOG We assume $J(R) = 0$. We consider the flat module $F:= \operatorname{cok}(R^{(ω )}\xrightarrow {1- x} R^{(ω)})$.</p>
+    <ul>
+      <li>If $F = 0$, then $\varinjlim (x^k) = 0$. By non-existence of nilpotent, $x = 0$.</li>
+    </ul>
+    <p>If $F ≠ 0$, we take a maximal submodule $M ⊊ F$.</p>
+    <p>Let $[e_n]$ (we assume $R^{(ω )} = ∐_{n ≥ 1} R e_n$) be the least coordinal idempotent $∉ M$. We take the combination</p>
+    <p>$$\begin{equation}
+([e_n]) + M = F,\quad r[e_n] + m = [e_{2n}],
+\end{equation}$$</p>
+    <p>and obtain</p>
+    <p>$$\begin{equation}
+[e_{2n}] = x^n [e_n] = r[e_n] + m
+\end{equation}$$</p>
+  </div>
+</div>
+
 <h3 id="right-perfect-rings">Right Perfect Rings</h3>
 
 <h4 id="def-via-idempotents">Def via Idempotents</h4>
@@ -1368,6 +1490,13 @@ M = L = ∐ _{n ∈ ℕ} R,\quad N = (\{1_{n+1} r_n - 1_n\}_{n ∈ ℕ}).
 </div>
 
 <p>Right perfect rings generalise semi-perfect rings by requiring radical to be transfinite nilpotent.</p>
+
+<div class="example">
+  <p>A right perfect ring with $\frac{R}{J(R)}$ simple is exactly the matrix ring $M_n (S)$, where $S$ is local with transfinite nilpotent maximal ideal.</p>
+  <div class="proof">
+    <p>(1 → 2). When $R$ is right perfect, it is semi-perfect, i.e., the endomorphism ring of a finite direct sum of endolocal modules. Since $\frac{R}{J(R)}$ is simple, $R$ takes the form $\mathrm{End}(M^n)$. Now $R ≃ M_n (\mathrm{End}(M))$. We take $S:= \mathrm{End}(M)$. Hence $J(R) = M_n (J(\mathrm{End}(M)))$. By checking the $(1,1)$-th entry, $J(S)$ is transfinite nilpotent. <br /> (2 → 1). By Morita equivalence, $R = M_n (S) ≃ \mathrm{End}(S^n)$ is semi-perfect. Note that $J(R) = M_n (J(S))$ is right transfinite nilpotent when $J(S)$ is .</p>
+  </div>
+</div>
 
 <div class="example">
   <p>The local ring $l⟨ \{x_i\}_{i ≥ 0} ∣ \{x_j x_i ∣ j ≥ 1\}⟩$ is right perfect but not left-perfect, as the maximal ideal is right transfinite nilpotent but not left-transfinite nilpotent.</p>
@@ -1545,10 +1674,10 @@ M = L = ∐ _{n ∈ ℕ} R,\quad N = (\{1_{n+1} r_n - 1_n\}_{n ∈ ℕ}).
   <p>The following are equivalent for a ring $R$:</p>
   <ol>
     <li>$J(R)$ is right transfinite nilpotent and $\frac{R}{J(R)}$ is semi-simple.</li>
-    <li>$R$ satisfies the following:       <ol>
+    <li>$R$ satisfies the following:       <ul>
         <li>there are no infinite sets of orthogonal idempotents;</li>
         <li>any non-zero left module $X$ has a simple submodule.</li>
-      </ol>
+      </ul>
     </li>
     <li>All right modules have a projective cover.</li>
   </ol>
@@ -1583,6 +1712,40 @@ M = L = ∐ _{n ∈ ℕ} R,\quad N = (\{1_{n+1} r_n - 1_n\}_{n ∈ ℕ}).
   </div>
 </div>
 
+<h4 id="def-via-hereditary-radical">Def via Hereditary Radical</h4>
+
+<p>Recall that for ses $0 → L → M → N → 0$, there is an induced chain complex $0 → J(L) → J(M) → J(N) → 0$. Note that $J(-)$ preserves only monomorphisms, but neither epimorphisms nor left/right exactness.</p>
+
+<div class="definition">
+  <p>$J(-)$ is hereditary iff for any inclusion $L ⊆ M$, one has $J(L) = L ∩ J(M)$.</p>
+</div>
+
+<div class="example">
+  <p>$J(-)$ is not hereditary over $ℤ$, e.g., consider $ℤ ⊆ ℚ$.</p>
+</div>
+
+<div class="proposition">
+  <p>$J(-)$ is left exact iff it is hereditary.</p>
+  <div class="proof">
+    <p>Since $J(-)$ preserves inclusions, left exactness means $J(L) = \ker [J(M) → J(M / L)]$. Note that</p>
+    <p>$$\begin{aligned}
+\ker [J(M) → J(M/L)] & = \ker [J(M) → J(M / L) ↪ L] \\
+&= \ker [J(M) ↪ M ↠ L] \quad = L ∩ J(M).
+\end{aligned}$$</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>$J$ is hereditary iff $R$ is right perfect.</p>
+  <div class="proof">
+    <p>(←). When $R$ is right perfect, we show $J(M) = MJ$.</p>
+    <ul>
+      <li>$M/MJ$ is semi-simple as $R / J(R)$ is. Now $J(M / MJ) = 0$. Hence, $J(M) ⊆ MJ$. The other inclusion is clear.</li>
+    </ul>
+    <p>checkcheck</p>
+  </div>
+</div>
+
 <h4 id="def-via-flat-modules">Def via Flat Modules</h4>
 
 <div class="theorem">
@@ -1605,23 +1768,11 @@ M = L = ∐ _{n ∈ ℕ} R,\quad N = (\{1_{n+1} r_n - 1_n\}_{n ∈ ℕ}).
   </div>
 </div>
 
-<h4 id="def-via-bass-chain-condition">Def via Bass’ Chain Condition</h4>
+<p>$$\begin{equation}
+\boxed{\text{Flat module with a projective cover is projective!}}
+\end{equation}$$</p>
 
-<p>Recall that once $J(R) = 0$ (= $R$ is semi-primitive), $R$ is semisimple iff it is Artinian.</p>
-
-<div class="theorem">
-  <p>The following are equivalent for a semi-primitive ring:</p>
-  <ol>
-    <li>$R$ is semi-simple;</li>
-    <li>$R$ if right (or left) Artinian;</li>
-    <li>all right (or left) principal ideals satisfies descending chain condition.</li>
-  </ol>
-  <div class="proof">
-    <p>We show for right modules. Note that (1 ↔ 2 → 3). We show (3 → 1). Note that any right ideal has a simple submodule. Now $R$ has enough simple summands. We claim that that the procedure of taking simple summands of $R$ terminates within finite steps. If not, then there is an infinite descending sequence of summands ($⊆$ principal ideals), a contradiction!</p>
-  </div>
-</div>
-
-<p>Here is a criterion on descending chain condition of principal left ideals.</p>
+<p>We recall a special countably presented flat module (it has projective dimension $≤ 1$) when characterising transfinite nilpotent ideals.</p>
 
 <div class="theorem">
   <p>For any sequence $\{r_∙\} ⊆ R$, then there is a descending chain of principal left ideals $R r_n \cdots r_0$. We denote</p>
@@ -1634,7 +1785,7 @@ F:= R^{(ω )} / (\{(1_n - 1_{n+1} r_n )_{n ∈ ℕ}\}).
     <li>it is zero iff the chain is eventually zero.</li>
   </ul>
   <div class="proof">
-    <p>Note that $F$ is countably presented by $F = \ker [∐ R^{ω } \overset {φ }↪ ∐ R^{ω}]$, thus is a filtered colimit of a cotower. By Lazard’s theorem, $F$ is flat. <br /> Consider $φ =(1-r) : (x_0,x_1,\ldots) ↦ (x_0, x_1 - x_0 a_0, x_2 - x_1a_1, \ldots)$. When it is split monic, we denote the right inverse by</p>
+    <p>Note that $F$ is countably presented by $F = \ker [∐ R^{ω } \overset {φ }↪ ∐ R^{ω}]$, thus is a filtered colimit of a cotower. By Lazard’s theorem, $F$ is flat. <br /> Consider $φ =(1-r) : (x_0,x_1,\ldots) ↦ (x_0 - x_1r_0, x_1 - x_2 r_1, x_2 - x_3r_2, \ldots)$. When it is split monic, we denote the right inverse by</p>
     <p>$$\begin{equation}
 ψ : (y_0,y_1,\ldots) ↦ (∑ y_∙ c_{∙, 0}, ∑ y_∙ c_{∙, 1}, \ldots).
 \end{equation}$$</p>
@@ -1646,34 +1797,93 @@ c_{k,n} - c_{k+ 1,n}r_k = δ _{k, n}.
     <p>$$\begin{equation}
 c_{n+1, n} r_n \cdots r_0 = - r_{n-1} \cdots r_0.
 \end{equation}$$</p>
-    <p>We see the ideal stablise. The rest is clear.</p>
+    <p>We see the ideal stablise when multiplying $r_{≥ n}$. The converse is clear. Once such limit exists, it corresponds to the following countable composition stabilises:</p>
+    <p>$$\begin{equation}
+R \xrightarrow {r_0} (r_0) \xrightarrow {r_1} (r_1 r_0) \xrightarrow {r_2} (r_2 r_1 r_0) \xrightarrow {r_3} \cdots.
+\end{equation}$$</p>
+    <p>Hence the PID vanishes iff the above colimit stables at $0$.</p>
   </div>
 </div>
-
-<p>Now we show a criterion of Bass.</p>
 
 <div class="theorem">
   <p>The following are equivalent for $R$:</p>
   <ol>
-    <li>$R$ is a right perfect ring;</li>
-    <li>any descending chain of principal left ideals stabilises.</li>
+    <li>$J(R)$ is right transfinite nilpotent and $\frac{R}{J(R)}$ is semi-simple.</li>
+    <li>$R$ satisfies the following:       <ul>
+        <li>there are no infinite sets of orthogonal idempotents;</li>
+        <li>any non-zero left module $X$ has a simple submodule.</li>
+      </ul>
+    </li>
+    <li>All right modules have a projective cover.</li>
+    <li>All flat modules are projective.</li>
+    <li>All countably presented flat modules are projective.</li>
+    <li>The collection of principal left ideals satisfies descending chain condition.</li>
   </ol>
+  <p>We show (1 ↔ 2 ↔ 3) previously.</p>
   <div class="proof">
-    <p>(2 → 1). $\frac{R}{J(R)}$ satisfies descending chain condition of principal left ideals, hence semi-simple. We show $J(R)$ is transfinite nilpotent</p>
-    <ul>
-      <li>for any decsending principal left ideal $\{(r_n \cdots r_0)\}_{n ∈ ℕ}$ with each $r_∙ ∈ J$, there is $r_{n+1}$ s.t. $(r_n \cdots r_0) = (r_{n+1} \cdots r_0)$. We take $a$ s.t. $r_n \cdots r_0 = ar_{n+1} r_n \cdots r_0$. Note that $(1- ar_{n+1})$ is a unit, we see $r_n \cdots r_0 = 0$.</li>
-    </ul>
-    <p>(¬ 2 → ¬ 1). Assume there is an infinite descending chain of principal left ideals $\{Rx_n\}_{n ∈ ℕ}$ which never stabilises. We show the image in $R ↠ \frac{R}{J(R)}$ stabilises.</p>
-    <ul>
-      <li>If not, then $\frac{R}{J(R)}$ never Artinian, hence not semi-simple. This contradicts the definition of right perfect rings.</li>
-    </ul>
-    <p>WLOG we assume $x_n$ has the same image in $\frac{R}{J(R)}$. We also assume $⋂ Rx_∙ = 0$ by the substitution $R ↦ \frac{R}{⋂ Rx_∙}$. Note that $Rx_{n+1} + J(R) = Rx_n + J(R)$, we take</p>
-    <p>$$\begin{equation}
-t_n x_{n+1} = x_n + j_n ,\quad (∀ j_n ∈ J). 
-\end{equation}$$</p>
-    <p>Here $0 ≠ j_n ∈ Rx_n ∩ J(R)$.</p>
+    <p>(3 → 4). Note that flat module with a projective cover is projective. <br /> (4 → 5). Clear. <br /> (5 → 6). We construct countably preserted flat module $F$ for any descending chain of principal left ideals. Such chain stabilises as $F$ is projective. <br /> (6 → 1). $\frac{R}{J(R)}$ satisfies descending chain condition of principal left ideals, hence semi-simple. We show $J(R)$ is transfinite nilpotent. <br /> For any decsending principal left ideal $\{(r_n \cdots r_0)\}_{n ∈ ℕ}$ with each $r_∙ ∈ J$, there is $r_{n+1}$ s.t. $(r_n \cdots r_0) = (r_{n+1} \cdots r_0)$. We take $a$ s.t. $r_n \cdots r_0 = ar_{n+1} r_n \cdots r_0$. Note that $(1- ar_{n+1})$ is a unit, we see $r_n \cdots r_0 = 0$.</p>
   </div>
 </div>
+
+<h4 id="coherency-and-chase-theorem">Coherency and Chase Theorem</h4>
+
+<p>The theorem shows when projective modules are closed under $∏$.</p>
+
+<div class="theorem">
+  <p>The following are equivalent for a ring $R$:</p>
+  <ol>
+    <li>$R$ is right perfect and left coherent;</li>
+    <li>any product of projective left modules is projective;</li>
+    <li>$∏ _I R$ is projective for any set $I$.</li>
+  </ol>
+  <div class="proof">
+    <p>(1 → 2). Over a right perfect ring, any flat right modules are projective. Over a left coherent ring, any product of flat right modules is flat. Hence, any product of projective left modules is projective. <br /> (2 → 3). Clear. <br /> (3 → 1). The product of free right modules is flat iff the ring is left coherent.</p>
+  </div>
+</div>
+
+<h4 id="def-via-bass-chain-condition">Def via Bass’ Chain Condition</h4>
+<!-- 
+Recall that once $J(R) = 0$ (= $R$ is semi-primitive), $R$ is semisimple iff it is Artinian.
+
+<div class='theorem'><p>The following are equivalent for a semi-primitive ring:</p>
+
+<ol>
+  <li>$R$ is semi-simple;</li>
+  <li>$R$ if right (or left) Artinian;</li>
+  <li>all right (or left) principal ideals satisfies descending chain condition.</li>
+</ol>
+
+<div class="proof">
+  <p>We show for right modules. Note that (1 ↔ 2 → 3). We show (3 → 1). Note that any right ideal has a simple submodule. Now $R$ has enough simple summands. We claim that that the procedure of taking simple summands of $R$ terminates within finite steps. If not, then there is an infinite descending sequence of summands ($⊆$ principal ideals), a contradiction!</p>
+</div>
+</div>
+
+Here is a criterion on descending chain condition of principal left ideals.
+
+
+
+Now we show a criterion of Bass.
+
+<div class='theorem'><p>The following are equivalent for $R$:</p>
+
+<ol>
+  <li>$R$ is a right perfect ring;</li>
+  <li>any descending chain of principal left ideals stabilises.</li>
+</ol>
+
+<div class="proof">
+  <p>(2 → 1).</p>
+  <p>(¬ 2 → ¬ 1). Assume there is an infinite descending chain of principal left ideals $\{Rx_n\}_{n ∈ ℕ}$ which never stabilises. We show the image in $R ↠ \frac{R}{J(R)}$ stabilises.</p>
+  <ul>
+    <li>If not, then $\frac{R}{J(R)}$ never Artinian, hence not semi-simple. This contradicts the definition of right perfect rings.</li>
+  </ul>
+  <p>WLOG we assume $x_n$ has the same image in $\frac{R}{J(R)}$. We also assume $⋂ Rx_∙ = 0$ by the substitution $R ↦ \frac{R}{⋂ Rx_∙}$. Note that $Rx_{n+1} + J(R) = Rx_n + J(R)$, we take</p>
+  <p>$$\begin{equation}
+t_n x_{n+1} = x_n + j_n ,\quad (∀ j_n ∈ J). 
+\end{equation}$$</p>
+  <p>Here $0 ≠ j_n ∈ Rx_n ∩ J(R)$.</p>
+</div>
+</div> -->
 
   </article>
 
@@ -2250,8 +2460,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-4">
-      <a href="#semiperfect-rings">
+      <a href="#nil-lifting-fg-projectives">
         <span class="toc-number">2.3.2.</span>
+        <span class="toc-title">Nil Lifting f.g. Projectives</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-4">
+      <a href="#semiperfect-rings">
+        <span class="toc-number">2.3.3.</span>
         <span class="toc-title">Semiperfect Rings</span>
       </a>
     </div>
@@ -2268,8 +2495,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-4">
       <a href="#transfinite-nilpotent-ideals">
-        <span class="toc-number">2.3.3.</span>
+        <span class="toc-number">2.3.4.</span>
         <span class="toc-title">Transfinite Nilpotent Ideals</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-4">
+      <a href="#transfinite-nilpotent-ideal-ii">
+        <span class="toc-number">2.3.5.</span>
+        <span class="toc-title">Transfinite Nilpotent Ideal (II)</span>
       </a>
     </div>
   
@@ -2352,8 +2596,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-4">
-      <a href="#def-via-flat-modules">
+      <a href="#def-via-hereditary-radical">
         <span class="toc-number">2.4.4.</span>
+        <span class="toc-title">Def via Hereditary Radical</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-4">
+      <a href="#def-via-flat-modules">
+        <span class="toc-number">2.4.5.</span>
         <span class="toc-title">Def via Flat Modules</span>
       </a>
     </div>
@@ -2369,8 +2630,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-4">
+      <a href="#coherency-and-chase-theorem">
+        <span class="toc-number">2.4.6.</span>
+        <span class="toc-title">Coherency and Chase Theorem</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-4">
       <a href="#def-via-bass-chain-condition">
-        <span class="toc-number">2.4.5.</span>
+        <span class="toc-number">2.4.7.</span>
         <span class="toc-title">Def via Bass’ Chain Condition</span>
       </a>
     </div>
