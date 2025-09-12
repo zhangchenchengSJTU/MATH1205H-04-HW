@@ -1,6 +1,0 @@
-PWD d:/GitHub/jekyll-latex/assets/PDF/Extri
-INPUT c:/texlive/2024/texmf.cnf
-INPUT c:/texlive/2024/texmf-dist/web2c/texmf.cnf
-INPUT c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT d:/GitHub/jekyll-latex/assets/PDF/Extri/Extri.tex
-OUTPUT Extri.log
