@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.28)  10 SEP 2025 22:26
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.28)  11 SEP 2025 22:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/GitHub/jekyll-latex/assets/PDF/Extri/Extri.tex
+**d:/GitHub/jekyll-latex/assets/PDF/Extri/Extri
 (d:/GitHub/jekyll-latex/assets/PDF/Extri/Extri.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -879,10 +879,10 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 83
  [1
 
 ] [2]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 215.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 233.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] (./Extri.bbl
+) [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] (./Extri.bbl
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -906,21 +906,21 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
- [25]) [26] (./Extri.aux)
+ [32]) [33] (./Extri.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/07/14>
  ***********
 Package rerunfilecheck Info: File `Extri.out' has not changed.
-(rerunfilecheck)             Checksum: D1909C237307163136384AC72E730851;1505.
+(rerunfilecheck)             Checksum: 390546622B91CF7EA1641667948D2908;1963.
  ) 
 Here is how much of TeX's memory you used:
- 39492 strings out of 474773
- 905226 string characters out of 5761289
- 2000842 words of memory out of 5000000
- 61085 multiletter control sequences out of 15000+600000
+ 41600 strings out of 474773
+ 960928 string characters out of 5761289
+ 2004842 words of memory out of 5000000
+ 63193 multiletter control sequences out of 15000+600000
  568831 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 131i,18n,135p,3278b,1407s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,18n,135p,3274b,1407s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Extri.xdv (26 pages, 1295540 bytes).
+Output written on Extri.pdf (33 pages).
