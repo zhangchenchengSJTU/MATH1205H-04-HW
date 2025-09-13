@@ -46,10 +46,6 @@ Jue Le and Xiao-Wu Chen.
 \newblock {\em Journal of Algebra}, 310(1):452--457, April 2007.
 \newblock \href {https://doi.org/10.1016/j.jalgebra.2006.11.027} {\path{doi:10.1016/j.jalgebra.2006.11.027}}.
 
-\bibitem[Lem]{Lemma12710DLPThe}
-Lemma 12.7.1 ({{0DLP}})---{{The Stacks}} project.
-\newblock URL: \url{https://stacks.math.columbia.edu/tag/0DLP}.
-
 \bibitem[May]{TriangulatedJPMay}
 John~P. May.
 \newblock The axioms for triangulated categories.
@@ -84,6 +80,11 @@ Hiroyuki Nakaoka and Yann Palu.
 \newblock {\em {Cahiers de topologie et g{\'e}om{\'e}trie diff{\'e}rentielle cat{\'e}goriques}}, LX(2):117--193, 2019.
 \newblock arXiv title ''Mutation via Hovey twin cotorsion pairs and model structures in extriangulated categories''.
 \newblock URL: \url{https://hal.science/hal-02136919}.
+
+\bibitem[Pro]{Lemma12710DLPThe}
+Stacks Project.
+\newblock Lemma 12.7.1 ({{0DLP}})---{{The Stacks}} project.
+\newblock URL: \url{https://stacks.math.columbia.edu/tag/0DLP}.
 
 \bibitem[RZ21]{rongStrongVersionSnake2021}
 Shi Rong and Pu~Zhang.
