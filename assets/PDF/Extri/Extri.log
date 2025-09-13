@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.28)  13 SEP 2025 22:25
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.28)  14 SEP 2025 03:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -906,24 +906,44 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 86
 
  [1
 
-]
-\openout2 = `Sections/Model.aux'.
+] [2]
+\openout2 = `Sections/Recollection.aux'.
 
- (./Sections/Model.tex
-LaTeX Font Info:    Trying to load font information for U+euf on input line 6.
+ (./Sections/Recollection.tex [3
+
+]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 171.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [39
+) [4] [5] [6] [7] [8] [9] [10]) [11]
+\openout2 = `Sections/Intro.aux'.
+
+ (./Sections/Intro.tex [12
 
 
 
+] [13] [14] [15] [16] [17] [18]) [19]
+\openout2 = `Sections/Diagram.aux'.
+
+ (./Sections/Diagram.tex [20
 
 
-] [40] [41] [42] [43] [44] [45]
 
-LaTeX Warning: Reference `eq:ext-tri-lift' on page 1 undefined on input line 655.
+] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30]) [31]
+\openout2 = `Sections/SpecialExtri.aux'.
 
-[46] [47] [48] [49]) [50] (./Extri.bbl
+ (./Sections/SpecialExtri.tex [32
+
+
+
+] [33] [34] [35] [36] [37] [38]) [39]
+\openout2 = `Sections/Model.aux'.
+
+ (./Sections/Model.tex [40
+
+
+
+] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51]) [52] (./Extri.bbl
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -947,28 +967,24 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
- [51
+ [53
 
 
-]) [52] (./Extri.aux (./Sections/Recollection.aux) (./Sections/Intro.aux) (./Sections/Diagram.aux) (./Sections/SpecialExtri.aux) (./Sections/Model.aux))
+]) [54] (./Extri.aux (./Sections/Recollection.aux) (./Sections/Intro.aux) (./Sections/Diagram.aux) (./Sections/SpecialExtri.aux) (./Sections/Model.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/07/14>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `Extri.out' has not changed.
-(rerunfilecheck)             Checksum: FC1C4AEF6DF2EC780CE66481C9CC8064;453.
+(rerunfilecheck)             Checksum: 8C30D54A616DD829F41F5265CEA0F08E;2964.
  ) 
 Here is how much of TeX's memory you used:
- 35724 strings out of 474773
- 800617 string characters out of 5761289
- 1970842 words of memory out of 5000000
- 57268 multiletter control sequences out of 15000+600000
- 570112 words of font info for 132 fonts, out of 8000000 for 9000
+ 46697 strings out of 474773
+ 1092286 string characters out of 5761289
+ 2004842 words of memory out of 5000000
+ 68232 multiletter control sequences out of 15000+600000
+ 570120 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 131i,28n,135p,3274b,1385s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,28n,135p,3274b,1536s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Extri.pdf (15 pages).
+Output written on Extri.pdf (54 pages).

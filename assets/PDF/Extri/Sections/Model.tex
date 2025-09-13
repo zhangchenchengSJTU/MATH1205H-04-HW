@@ -1,4 +1,3 @@
-
 \section{Hovey 对应}
 
 \subsection{余挠对}
@@ -32,7 +31,7 @@
 
 我们将 ET4 系列公理转化作如下引理.
 
-\begin{lemma}
+\begin{lemma}\label{lem:star-asso}
 	对任意对象类 $\mathcal{X}$, $\mathcal{Y}$, 与 $\mathcal{Z}$, 有如下等式.
 	\begin{enumerate}
 		\item $\mathrm{Cone}(\mathcal{X} , \mathrm{Cone}(\mathcal{Y} , \mathcal{Z} )) = \mathrm{Cone}(\mathcal{Y} \ast \mathcal{X} , \mathcal{Z} )$;
@@ -109,7 +108,7 @@
 
 结合 \Cref{thm:bi-pullback}, 得如下引理.
 
-\begin{lemma}
+\begin{lemma}\label{lem:star-inclu}
 	给定任意对象类 $\mathcal{X}$, $\mathcal{Y}$ 与 $\mathcal{Z}$, 有以下包含关系.
 	\begin{enumerate}
 		\item $\mathrm{coCone}(\mathcal{X} ,\mathcal{Z} )\ast \mathcal{Y} \subseteq \mathrm{coCone}(\mathcal{X} \ast \mathcal{Y} , \mathcal{Z} )\supseteq \mathrm{coCone}(\mathcal{Y} ,\mathrm{Cone}(\mathcal{X} ,\mathcal{Z} ))$;
@@ -570,9 +569,9 @@ $(\text{投射对象}, \mathcal{C})$ 与 $(\mathcal{C}, \text{内射对象})$ �
         \begin{equation}
             % https://q.uiver.app/#q=WzAsOCxbMCwxLCJNIl0sWzEsMSwiViJdLFsyLDEsIk4iXSxbMCwyLCJNIl0sWzEsMiwiTV9WIl0sWzIsMiwiTV9VIl0sWzMsMCwiWCJdLFszLDMsIlAiXSxbMCwzLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDEsImkiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzEsMiwicCIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsyLDUsIlxcbXUiXSxbMyw0LCJqIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFs0LDUsInEiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSw0LCJcXGxhbWJkYSJdLFs2LDIsImYiLDJdLFs2LDcsImEiXSxbNyw1LCJiIiwyXSxbNyw0LCJjIiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjdXJ2ZSI6LTJ9XSxbNiwxLCJnIiwyLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjdXJ2ZSI6Mn1dXQ==
 \begin{tikzcd}[ampersand replacement=\&]
-	\&\&\& X \\
+	\&\&\& X \\[-12pt]
 	M \& V \& N \\
-	M \& {M_V} \& {M_U} \\
+	M \& {M_V} \& {M_U} \\[-12pt]
 	\&\&\& P
 	\arrow["g"'{pos=0.6}, curve={height=12pt}, from=1-4, to=2-2]
 	\arrow["f"', from=1-4, to=2-3]
@@ -789,10 +788,10 @@ $(\text{投射对象}, \mathcal{C})$ 与 $(\mathcal{C}, \text{内射对象})$ �
 \end{lemma}
 
 \begin{example}\label{eg:cotorsion-to-lifting}
-	定义范畴向函子范畴的嵌入 $\mathfrak t : X \mapsto (0 \to X)$ 与 $\mathfrak s : X \mapsto (X \to 0)$. 给定余挠对 $(\mathcal{U},\mathcal{V})$, 取 $\mathfrak s (\mathcal{U})$ 余生成的弱垂直对 $(^\pitchfork(\mathfrak s (\mathcal{U})^\pitchfork), \mathcal{U}^\pitchfork)$. 此时有如下结论.
+	考虑范畴向态射范畴的两种嵌入 $X \mapsto (0 \to X)$ 与 $X \mapsto (X \to 0)$. 给定余挠对 $(\mathcal{U},\mathcal{V})$, 取 $(0 \to \mathcal{U})$ 余生成的弱垂直对 $(^\pitchfork((0 \to \mathcal{U})^\pitchfork), (0 \to \mathcal{U})^\pitchfork)$. 此时有如下结论.
 	\begin{enumerate}
-		\item 给定 conflation $V \overset i \rightarrowtail B \overset p \twoheadrightarrow C$, $V \in \mathcal{V}$, 则 $p \in \mathcal{U}^\pitchfork$. 由长正合列\Cref{eq:ext-tri-6-term} 容易验证.
-		\item 若 $\mathfrak t (X) \in {}^\pitchfork(\mathfrak s (\mathcal{U})^\pitchfork)$, 则 $X \in \mathcal{U}$.
+		\item 给定 conflation $V \overset i \rightarrowtail B \overset p \twoheadrightarrow C$, $V \in \mathcal{V}$, 则 $p \in (0 \to \mathcal{U})^\pitchfork$. 由长正合列\Cref{eq:ext-tri-6-term} 容易验证.
+		\item 若 $(X \to 0) \in {}^\pitchfork((0 \to \mathcal{U})^\pitchfork)$, 则 $X \in \mathcal{U}$.
 		\begin{proof}
 			对 $X$ 构造特殊预盖 $X^V \rightarrowtail X^U \twoheadrightarrow X$. 由上一条, 以下提升问题有解:
 			\begin{equation}
@@ -815,7 +814,7 @@ $(\text{投射对象}, \mathcal{C})$ 与 $(\mathcal{C}, \text{内射对象})$ �
 \end{example}
 
 \begin{remark}
-	容易发现, 所有形如 $(Y \to 0)$ 的态射属于 $\mathfrak s (\mathcal{U})^\pitchfork$, 这一态射类的关键信息蕴含在 inflation 的 $\mathrm{coCone}$-项中. 将余生成关系改作生成关系, 则有对偶的结论.
+	容易发现, 所有形如 $(Y \to 0)$ 的态射属于 $(0 \to \mathcal{U})^\pitchfork$, 这一态射类的关键信息蕴含在 inflation 的 $\mathrm{coCone}$-项中. 将余生成关系改作生成关系, 则有对偶的结论.
 \end{remark}
 
 \begin{corollary}
@@ -967,19 +966,135 @@ $(\text{投射对象}, \mathcal{C})$ 与 $(\mathcal{C}, \text{内射对象})$ �
 	\end{enumerate}
 \end{lemma}
 
-\begin{example}
-	(代换). 引入模型结构的一大动机是构造局部化. 试回忆 (\cite{gabrielCalculusFractionsHomotopy1967} ) 分式给出的局部化范畴 $\mathcal{C} \to S^{-1}\mathcal{C}$, 局部化范畴中的态射 $X \to Y$ 本质上拆解作 $X \Leftrightarrow X' \to Y$. 换言之, 先使用``同构''代换 $X$ 为 $X'$, 使得 $X'$ 至 $Y$ 的态射能被直接描述.
-	\\
-	类似地, 模型范畴中的 $\mathcal{S}$-态射类是 $\mathsf{Weq}$. 对任意对象 $X$, 对 $0 \to X$ 与 $X \to 0$ 使用 CM4 得
+% \begin{example}
+% 	(代换). 引入模型结构的一大动机是构造局部化. 试回忆 (\cite{gabrielCalculusFractionsHomotopy1967} ) 分式给出的局部化范畴 $\mathcal{C} \to S^{-1}\mathcal{C}$, 局部化范畴中的态射 $X \to Y$ 本质上拆解作 $X \Leftrightarrow X' \to Y$. 换言之, 先使用``同构''代换 $X$ 为 $X'$, 使得 $X'$ 至 $Y$ 的态射能被直接描述.
+% 	\\
+% 	类似地, 模型范畴中的 $\mathcal{S}$-态射类是 $\mathsf{Weq}$. 对任意对象 $X$, 对 $0 \to X$ 与 $X \to 0$ 使用 CM4 得
+% 	\begin{equation}
+% 		0 \xrightarrow{\mathsf{Cofib}}F \xRightarrow{\mathsf{TCofib}} X, \quad X \xRightarrow{\mathsf{TFib}} C \xrightarrow{\mathsf{Fib}} 0.
+% 	\end{equation}
+% 	换言之, 任意对象 $X$ 可被代换为余纤维对象 $F$ 或纤维对象 $C$.
+% \end{example}
+
+\subsection{Hovey 孪生余挠对}
+
+本小节取定外三角范畴 $(\mathcal{A}, \mathbb E, \mathfrak s)$.
+
+\begin{definition}
+	(Hovey 孪生余挠对). 考虑两个余挠对 $(\mathcal{S}, \mathcal{S}^\perp)$ 与 $(^\perp \mathcal{V}, \mathcal{V})$. 称资料 $(\mathcal{S}, \mathcal{S}^\perp; {}^\perp \mathcal{V}, \mathcal{V})$ 为 \textbf{Hovey 孪生余挠对}, 若 $\mathcal{S} \perp \mathcal{V}$, 且 $\mathrm{Cone}(\mathcal{V}, \mathcal{S}) = \mathrm{coCone}(\mathcal{V}, \mathcal{S})$.
+\end{definition}
+
+\begin{remark}
+	将 Hovey 孪生余挠对记作 $(\mathcal{S},\mathcal{T};\mathcal{U},\mathcal{V})$, 则 $\mathcal{S} \subseteq \mathcal{U}$, 且 $\mathcal{V} \subseteq \mathcal{T}$.
+\end{remark}
+
+\begin{remark}
+	有时将 $\mathrm{Cone}(\mathcal{V}, \mathcal{S})$ 记作 $\mathcal{N}$, 称 $(\mathcal{S}^\perp, \mathcal{N}, {}^\perp\mathcal{V})$ 为 Hovey 三元组.
+\end{remark}
+
+以下引理给出一种由 Hovey 三元组复原 Hovey 孪生余挠对的直接方法.
+
+\begin{lemma}
+	给定 Hovey 孪生余挠对 $(\mathcal{S}, \mathcal{S}^\perp; {} ^\perp \mathcal{V}, \mathcal{V})$, 有以下等式
 	\begin{equation}
-		0 \xrightarrow{\mathsf{Cofib}}F \xRightarrow{\mathsf{TCofib}} X, \quad X \xRightarrow{\mathsf{TFib}} C \xrightarrow{\mathsf{Fib}} 0.
+		\mathcal{S} = {}^\perp \mathcal{V} \cap \mathrm{coCone}(\mathcal{V}, \mathcal{S}), \quad \mathcal{V} = \mathcal{S}^\perp \cap \mathrm{Cone}(\mathcal{V}, \mathcal{S})
 	\end{equation}
-	换言之, 任意对象 $X$ 可被代换为余纤维对象 $F$ 或纤维对象 $C$.
-\end{example}
+	\begin{proof}
+		仅证明前一等式. ($\subseteq$ 方向). 由 $\mathcal{S} = {}^\perp \mathcal{V}$ 与 $\mathcal{S} = \mathrm{coCone}(\mathcal{V}, \mathcal{S})$, 得证.
+		\\
+		($\supseteq$ 方向). 任取 $X \in {}^\perp \mathcal{V}\cap \mathrm{coCone}(\mathcal{V}, \mathcal{S})$, 则有 conflation $V \rightarrowtail S \twoheadrightarrow X$. 由 $\mathbb E(X, V) = 0$, 这一 conflation 可裂. 从而 $X$ 是 $S$ 的直和项, 故 $X \in \mathcal{S}$.
+	\end{proof}
+\end{lemma}
 
+\begin{corollary}
+	作为推论, ${}^\perp \mathcal{V} \cap \mathcal{V} = {}^\perp \mathcal{V} \cap \mathcal{N} \cap \mathcal{S}^\perp = \mathcal{S} \cap \mathcal{S} ^\perp$. 
+\end{corollary}
 
+\begin{theorem}
+	$\mathcal{N}$ 是厚子范畴, 从而也是外三角范畴.
+	\begin{proof}
+		先说明 $\mathcal{N}$ 对直和项封闭. 实际上, $\mathcal{N}$ 对形变收缩封闭. 任取 conflation $V \rightarrowtail S \twoheadrightarrow N \overset \delta \dashrightarrow$ 与形变收缩 $N'$, 得以下交换图:
+		\begin{equation}
+			% https://q.uiver.app/#q=WzAsMTIsWzAsMSwiViJdLFsxLDEsIlMiXSxbMiwxLCJOIl0sWzAsMCwiViJdLFsyLDAsIk4nIl0sWzIsMiwiTiciXSxbMCwyLCJWIl0sWzEsMCwiUyciXSxbMSwyLCJTJyJdLFszLDAsIlxcLCAiXSxbMywxLCJcXCwgIl0sWzMsMiwiXFwsICJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMSwyLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMywwLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDYsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsNywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFs3LDQsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDIsImkiXSxbMiw1LCJwIl0sWzYsOCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFs4LDUsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs3LDFdLFsxLDhdLFs0LDksImleXFxhc3QgXFxkZWx0YSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDEwLCJcXGRlbHRhIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsMTEsImleXFxhc3QgXFxkZWx0YSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+	V \& {S'} \& {N'} \& {\, } \\
+	V \& S \& N \& {\, } \\
+	V \& {S'} \& {N'} \& {\, }
+	\arrow[tail, from=1-1, to=1-2]
+	\arrow[equals, from=1-1, to=2-1]
+	\arrow[two heads, from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow["{i^\ast \delta}", dashed, from=1-3, to=1-4]
+	\arrow["i", from=1-3, to=2-3]
+	\arrow[tail, from=2-1, to=2-2]
+	\arrow[equals, from=2-1, to=3-1]
+	\arrow[two heads, from=2-2, to=2-3]
+	\arrow[from=2-2, to=3-2]
+	\arrow["\delta", dashed, from=2-3, to=2-4]
+	\arrow["p", from=2-3, to=3-3]
+	\arrow[tail, from=3-1, to=3-2]
+	\arrow[two heads, from=3-2, to=3-3]
+	\arrow["{i^\ast \delta}", dashed, from=3-3, to=3-4]
+\end{tikzcd}.
+		\end{equation} 
+		复合态射 $S' \to S \to S'$ 必是同构 (\Cref{thm:ext-tri-2-out-of-3}), 从而 $S'$ 是 $S$ 的形变收缩. 因此 $S' \in \mathcal{S}$, 故 $N' \in \mathcal{N}$.
+		\\
+		(证明 $\mathrm{Cone}(\mathcal{N}, \mathcal{N}) \subseteq \mathcal{N}$). 依照\Cref{lem:star-asso}, 总有
+		\begin{equation}\label{eq:star-asso}
+			\mathrm{Cone}(\mathcal{N}, \mathcal{N}) = \mathrm{Cone}(\mathcal{N}, \mathrm{Cone}(\mathcal{V}, \mathcal{S})) = \mathrm{Cone}(\mathcal{V}\ast \mathcal{N}, \mathcal{S}).
+		\end{equation}
+		依照\Cref{lem:star-inclu}, 得
+		\begin{equation}\label{eq:star-inclu}
+			\mathcal{V}\ast \mathcal{N} = \mathcal{V} \ast \mathrm{Cone}(\mathcal{V}, \mathcal{S}) \subseteq \mathrm{Cone}(\mathcal{V}, \mathcal{V} \ast \mathcal{S}) = \mathrm{Cone}(\mathcal{V}, \mathcal{V} \oplus \mathcal{S}) \subseteq \mathrm{Cone}(\mathcal{V}, \mathcal{N}).
+		\end{equation}
+		将\Cref{eq:star-inclu} 代入\Cref{eq:star-asso}, 得
+		\begin{align}
+			\mathrm{Cone}(\mathcal{N}, \mathcal{N}) & \subseteq \mathrm{Cone}(\mathrm{Cone}(\mathcal{V}, \mathcal{N}), \mathcal{S}) = \mathrm{Cone}(\mathrm{Cone}(\mathcal{V}, \mathrm{coCone}(\mathcal{V}, \mathcal{S})), \mathcal{S})\\
+			& = \mathrm{Cone}(\mathrm{Cone}(\mathcal{V} \ast \mathcal{V}, \mathcal{S}), \mathcal{S}) = \mathrm{Cone}(\mathrm{Cone}(\mathcal{V}, \mathcal{S}), \mathcal{S}) \\
+			& = \mathrm{Cone}(\mathrm{coCone}(\mathcal{V}, \mathcal{S}), \mathcal{S}) \subseteq \mathrm{Cone}(\mathcal{V},\mathcal{S} \ast \mathcal{S}) \qquad  = \mathcal{N}.
+		\end{align}
+		(证明 $\mathrm{coCone}(\mathcal{N}, \mathcal{N}) \subseteq \mathcal{N}$). 证明对偶, 从略.
+		\\
+		(证明 $\mathcal{N} \ast \mathcal{N} \subseteq \mathcal{N}$). 由\Cref{lem:star-asso} 与\Cref{lem:star-inclu}, 得
+		\begin{align}
+\mathcal{N} \ast \mathcal{N} &= \mathcal{N} \ast \mathrm{Cone}(\mathcal{V} , \mathcal{S}) \subseteq \mathrm{Cone}(\mathcal{V} , \mathcal{N} \ast \mathcal{S} )\\
+&= \mathrm{Cone}(\mathcal{V} , \mathcal{N} ) = \mathrm{Cone}(\mathcal{V} , \mathrm{Cone}(\mathcal{V}, \mathcal{S})) \\
+&= \mathrm{Cone}(\mathcal{V} \ast \mathcal{V}, \mathcal{S}) = \mathcal{N}.
+\end{align}
+不难发现, 上述 $\subseteq$ 均可取为等号. 直接地,
+\begin{equation}
+	\mathrm{Cone}(\mathcal{N}, \mathcal{N}) = \mathrm{coCone}(\mathcal{N}, \mathcal{N}) = \mathcal{N} \ast \mathcal{N} = \mathcal{N}.
+\end{equation}
+	\end{proof}
+\end{theorem}
 
+\begin{corollary}
+	以上证明步骤暗藏等式 $\mathrm{Cone}(\mathcal{N}, \mathcal{S}) = \mathcal{N} = \mathrm{coCone}(\mathcal{V}, \mathcal{N})$.
+\end{corollary}
 
+\subsection{Hovey <=> Model}
+
+... 定义相容闭模型结构.
+
+... Model => Hovey (简单).
+
+... Hovey => Model (复杂).
+
+以下定理说明, 可以由 Hovey 孪生余挠对得到闭模型结构.
+
+\begin{theorem}
+	给定外三角范畴的 Hovey 孪生余挠对 $(\mathcal{S}, \mathcal{T}; \mathcal{U}, \mathcal{V}) = (\mathcal{S}, \mathcal{S}^\perp; {} ^\perp \mathcal{V}, \mathcal{V})$. 定义四个态射类:
+	\begin{enumerate}
+		\item $f \in \mathsf{Cofib}$, 当且仅当 $f$ 是 inflation, 且有 conflation $\cdot \overset f \rightarrowtail \cdot \twoheadrightarrow U$, 其中 $U \in \mathcal{U}$;
+		\item $f \in \mathsf{TCofib}$, 当且仅当 $f$ 是 inflation, 且有 conflation $\cdot \overset f \rightarrowtail \cdot \twoheadrightarrow S$, 其中 $S \in \mathcal{S}$;
+		\item $g \in \mathsf{Fib}$, 当且仅当 $g$ 是 deflation, 且有 conflation $T \rightarrowtail \cdot \overset g \twoheadrightarrow \cdot$, 其中 $T \in \mathcal{T}$;
+		\item $g \in \mathsf{TFib}$, 当且仅当 $g$ 是 deflation, 且有 conflation $V \rightarrowtail \cdot \overset g \twoheadrightarrow \cdot$, 其中 $V \in \mathcal{V}$.
+	\end{enumerate}
+	定义 $\mathsf{Weq} = \mathsf{TFib} \circ \mathsf{TCofib}$, 则 $(\mathsf{Cofib},\mathsf{Weq},\mathsf{Fib})$ 是一个闭模型结构.
+	\begin{proof}
+		
+	\end{proof}
+\end{theorem}
 
 
 
