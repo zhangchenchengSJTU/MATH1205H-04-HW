@@ -22,11 +22,32 @@ Xiao-Wu Chen.
 \newblock The {{Extension-lifting Lemma}} via {{Two-term Complexes}}.
 \newblock URL: \url{http://home.ustc.edu.cn/~xwchen/USTC%20Algebra%20Notes%20Archiv/The%20Extension-Lifting%20lemma%20via%20two-term%20complexes.pdf}.
 
+\bibitem[GZ67]{gabrielCalculusFractionsHomotopy1967}
+Peter Gabriel and Michel Zisman.
+\newblock {\em Calculus of {{Fractions}} and {{Homotopy Theory}}}.
+\newblock Springer, Berlin, Heidelberg, 1967.
+\newblock \href {https://doi.org/10.1007/978-3-642-85844-4} {\path{doi:10.1007/978-3-642-85844-4}}.
+
 \bibitem[Hap88]{happelTriangulatedCategoriesRepresentation1988}
 Dieter Happel.
 \newblock {\em Triangulated {{Categories}} in the {{Representation}} of {{Finite Dimensional Algebras}}}.
 \newblock Cambridge University Press, 1 edition, February 1988.
 \newblock URL: \url{https://www.cambridge.org/core/services/aop-cambridge-core/content/view/AD4EA5E6215A0B586678B10B2D417F74/9780511629228c1_p1-56_CBO.pdf/triangulated_categories.pdf}, \href {https://doi.org/10.1017/CBO9780511629228} {\path{doi:10.1017/CBO9780511629228}}.
+
+\bibitem[Hov07]{hoveyModelCategories2007}
+Mark Hovey.
+\newblock {\em Model {{Categories}}}.
+\newblock American Mathematical Soc., 2007.
+
+\bibitem[Joy]{joyal}
+Andr\'{e} Joyal.
+\newblock The theory of quasi-categories and its applications.
+\newblock URL: \url{https://mat.uab.cat/~kock/crm/hocat/advanced-course/Quadern45-2.pdf}.
+
+\bibitem[JT06]{joyalQuasicategoriesVsSegal2006}
+Andre Joyal and Myles Tierney.
+\newblock Quasi-categories vs {{Segal}} spaces, November 2006.
+\newblock \href {https://arxiv.org/abs/math/0607820} {\path{arXiv:math/0607820}}, \href {https://doi.org/10.48550/arXiv.math/0607820} {\path{doi:10.48550/arXiv.math/0607820}}.
 
 \bibitem[Kel82]{kellyBasicConceptsEnriched1982}
 G.~M. Kelly.
@@ -85,6 +106,10 @@ Hiroyuki Nakaoka and Yann Palu.
 Stacks Project.
 \newblock Lemma 12.7.1 ({{0DLP}})---{{The Stacks}} project.
 \newblock URL: \url{https://stacks.math.columbia.edu/tag/0DLP}.
+
+\bibitem[Ree]{reedyHOMOTOPYTHEORYMODEL}
+C~L Reedy.
+\newblock {{HOMOTOPY THEORY OF MODEL CATEGORIES}}.
 
 \bibitem[RZ21]{rongStrongVersionSnake2021}
 Shi Rong and Pu~Zhang.

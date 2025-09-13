@@ -14,44 +14,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: ref.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 19 entries,
+Warning--empty journal in joyal
+Warning--empty year in joyal
+Warning--empty journal in reedyHOMOTOPYTHEORYMODEL
+Warning--empty year in reedyHOMOTOPYTHEORYMODEL
+You've used 24 entries,
             3368 wiz_defined-function locations,
-            840 strings with 9624 characters,
-and the built_in function-call counts, 9075 in all, are:
-= -- 985
-> -- 233
-< -- 19
-+ -- 61
-- -- 58
-* -- 490
-:= -- 1246
-add.period$ -- 75
-call.type$ -- 19
-change.case$ -- 96
-chr.to.int$ -- 19
-cite$ -- 19
-duplicate$ -- 300
-empty$ -- 896
-format.name$ -- 91
-if$ -- 2344
+            870 strings with 10370 characters,
+and the built_in function-call counts, 11134 in all, are:
+= -- 1187
+> -- 302
+< -- 22
++ -- 80
+- -- 76
+* -- 598
+:= -- 1533
+add.period$ -- 90
+call.type$ -- 24
+change.case$ -- 121
+chr.to.int$ -- 24
+cite$ -- 28
+duplicate$ -- 371
+empty$ -- 1093
+format.name$ -- 117
+if$ -- 2869
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 18
-newline$ -- 112
-num.names$ -- 57
-pop$ -- 224
+missing$ -- 24
+newline$ -- 137
+num.names$ -- 72
+pop$ -- 298
 preamble$ -- 1
-purify$ -- 119
+purify$ -- 151
 quote$ -- 0
-skip$ -- 668
+skip$ -- 819
 stack$ -- 0
-substring$ -- 348
-swap$ -- 46
-text.length$ -- 33
-text.prefix$ -- 14
+substring$ -- 388
+swap$ -- 55
+text.length$ -- 40
+text.prefix$ -- 17
 top$ -- 0
-type$ -- 132
-warning$ -- 0
-while$ -- 60
-width$ -- 21
-write$ -- 270
+type$ -- 164
+warning$ -- 4
+while$ -- 72
+width$ -- 26
+write$ -- 330
+(There were 4 warnings)

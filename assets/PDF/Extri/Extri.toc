@@ -20,4 +20,5 @@
 \contentsline {section}{\numberline {5}Hovey 对应}{39}{section.5}%
 \contentsline {subsection}{\numberline {5.1}余挠对}{39}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}遗传余挠对}{42}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}闭模型结构}{45}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.3}态射观点}{45}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}模型结构}{48}{subsection.5.4}%
