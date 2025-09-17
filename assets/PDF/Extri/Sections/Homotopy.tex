@@ -329,7 +329,7 @@
 
 以下是一类特殊的加法局部化.
 
-\begin{theorem}
+\begin{theorem}\label{thm: quotient category is localization}
     给定加法范畴 $\mathcal{A}$ 与加法全子范畴 $\mathcal{B}$, 下定义两种商.
     \begin{enumerate}
         \item (加法商). 定义 $\mathcal{A} / \mathcal{B}$ 为如下范畴: 对象同 $\mathcal{A}$; 对任意 $X$ 与 $Y$, 态射群为原始态射群的商群:
@@ -417,7 +417,104 @@
 
 \subsection{由 \texorpdfstring{$\mathcal{C} \cap \mathcal{F}$}{} 到同伦范畴的三种方式}
 
-我们暂不给出\Cref{thm: quillen theorem} 的证明. 对相容闭模型结构, 本小节使用 $\mathcal{C} \cap \mathcal{F}$ 的三种``等价的商''描述同伦范畴.
+我们暂不给出\Cref{thm: quillen theorem} 的证明. 对相容闭模型结构, 本小节使用 $\mathcal{C} \cap \mathcal{F}$ 的三种``等价的商''描述同伦范畴. 往后选定外三角范畴 $\mathcal{A}$ 上的相容闭模型结构 (\Cref{def:compatible-model-structure}), 选定记号
+
+\begin{enumerate}
+    \item $\mathsf{Cofib}$, $\mathsf{Fib}$ 与 $\mathsf{Weq}$ 分别为闭模型结构中的余纤维, 纤维与弱等价类;
+    \item $\mathsf{TCofib} = \mathsf{Cofib} \cap \mathsf{Weq}$ 与 $\mathsf{TFib} = \mathsf{Fib} \cap \mathsf{Weq}$ 分别为平凡余纤维与平凡纤维;
+    \item $\mathcal{C}$, $\mathcal{F}$ 与 $\mathcal{W}$ 分别为闭模型结构中的余纤维对象, 纤维对象与平凡对象;
+    \item $\mathsf{T}\mathcal{F} = \mathcal{F} \cap \mathcal{W}$ 与 $\mathsf{T}\mathcal{C} = \mathcal{C} \cap \mathcal{W}$ 分别为平凡纤维对象与平凡余纤维对象.
+    \item (Hovey). $(\mathcal{S}, \mathcal{S}^\perp; {}^\perp \mathcal{V}, \mathcal{V}) = (\mathsf{T}\mathcal{C}, \mathcal{F}, \mathcal{C}, \mathsf{T}\mathcal{C})$ 是其对应的 Hovey 孪生余挠对 (见\Cref{thm:model-to-hovey}, 逆命题即\Cref{sec:hovey-to-model}).
+    \item (Hovey). 平凡对象类 $\mathcal{W} = \mathcal{N} = \mathrm{Cone}(\mathcal{V}, \mathcal{S}) = \mathrm{coCone}(\mathcal{V}, \mathcal{S})$.
+\end{enumerate}
+
+后续证明三种构造局部化的等价方式:
+\begin{equation}\label{eq: three ways to homotopy category}
+    % https://q.uiver.app/#q=WzAsNCxbMSwxLCJcXGZyYWN7XFxtYXRoY2FsIEMgXFxjYXAgXFxtYXRoY2FsIEZ9e1xcbWF0aGNhbCBDIFxcY2FwIFxcbWF0aGNhbCBGIFxcY2FwIFxcbWF0aGNhbCBXfSJdLFsxLDAsIlxcbWF0aGNhbCBDIFxcY2FwIFxcbWF0aGNhbCBGIl0sWzAsMSwiKFxcbWF0aGNhbCBDIFxcY2FwIFxcbWF0aGNhbCBGKVsoXFxtYXRoc2Z7V2VxfV97XFxtYXRoY2FsIEMgXFxjYXAgXFxtYXRoY2FsIEZ9KV57LTF9XSJdLFsyLDEsIlxccGkgKFxcbWF0aGNhbCBDIFxcY2FwIFxcbWF0aGNhbCBGKSJdLFsxLDAsIlFfMiJdLFsxLDMsIlFfMyIsMCx7ImN1cnZlIjotMn1dLFsxLDIsIlFfMSIsMix7ImN1cnZlIjoyfV1d
+\begin{tikzcd}[ampersand replacement=\&]
+	\& {\mathcal C \cap \mathcal F} \\
+	{(\mathcal C \cap \mathcal F)[(\mathsf{Weq}_{\mathcal C \cap \mathcal F})^{-1}]} \& {\frac{\mathcal C \cap \mathcal F}{\mathcal C \cap \mathcal F \cap \mathcal W}} \& {\pi (\mathcal C \cap \mathcal F)}
+	\arrow["{Q_1}"', curve={height=12pt}, from=1-2, to=2-1]
+	\arrow["{Q_2}", from=1-2, to=2-2]
+	\arrow["{Q_3}", curve={height=-12pt}, from=1-2, to=2-3]
+\end{tikzcd}.
+\end{equation}
+
+此处, $\mathsf{Weq}_{\mathcal{C} \cap \mathcal{F}} = \mathsf{Weq}\cap \mathsf{Mor}(\mathcal{C} \cap  \mathcal{F})$, $Q_1$ 是 GZ 局部化, $Q_2$ 是加法商, $Q_3$ 是同伦商 (稍后定义).
+
+\begin{lemma}
+    $\mathsf{Weq}_{\mathcal{C} \cap \mathcal{F}}$ 对直和封闭, 从而 (\Cref{thm: when localization is additive}) $Q_1$ 是加法函子.
+    \begin{proof}
+        给定 $\mathcal{C} \cap \mathcal{F}$ 中弱等价 $f : X \to Y$. 由\Cref{lem:basic-model-structure} 第二条, $f$ 分解作 $\mathsf{TFib} \circ \mathsf{TCofib}$, 得
+        \begin{equation}\label{eq: factorization of weq in C cap F}
+            % https://q.uiver.app/#q=WzAsNSxbMCwwLCJYIl0sWzIsMCwiWSJdLFsxLDEsIkUiXSxbMiwyLCJTIl0sWzAsMiwiViJdLFswLDIsIlxcbWF0aHNme1RDb2ZpYn0iLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzIsMSwiXFxtYXRoc2Z7VEZpYn0iLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCwxLCJmIl0sWzQsMiwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsyLDMsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+	X \&\& Y \\
+	\& E \\
+	V \&\& S
+	\arrow["f", from=1-1, to=1-3]
+	\arrow["{\mathsf{TCofib}}"', tail, from=1-1, to=2-2]
+	\arrow["{\mathsf{TFib}}"', two heads, from=2-2, to=1-3]
+	\arrow[two heads, from=2-2, to=3-3]
+	\arrow[tail, from=3-1, to=2-2]
+\end{tikzcd}.
+        \end{equation}
+        $\mathsf{TCofib}$ 所在的 conflation 表明 $E \in \mathcal{T}$, $\mathsf{TFib}$ 所在的 conflation 表明 $E \in \mathcal{U}$. 因此 $E \in \mathcal{U} \cap \mathcal{T} (=\mathcal{C} \cap \mathcal{F})$. 这说明 $w$ 经 $\mathcal{C} \cap \mathcal{F}$ 中对象分解. 容易验证 $\mathsf{Weq}_{\mathcal{C} \cap \mathcal{F}}$ 对直和封闭.
+    \end{proof}
+\end{lemma}
+
+\begin{theorem}
+    \Cref{eq: three ways to homotopy category} 中 $Q_1$ 与 $Q_2$ 互相分解, 诱导了\Cref{thm: quotient category is localization} 中所示的典范同构. 同\Cref{thm: quotient category is localization} 中记号, 我们暂时将 $Q_2(f)$ 记作 $[f]$.
+    \begin{proof}
+        ($Q_2$ 经 $Q_1$ 分解). 只需说明对任意 $f \in \mathsf{Weq}_{\mathcal{C} \cap \mathcal{W}}$, $[f]$ 是同构. 由态射分解\Cref{eq: factorization of weq in C cap F}, 只需证明 $X \rightarrowtail E$ 与 $E \twoheadrightarrow Y$ 是同构. 以前者为例, 将 $X \rightarrowtail E = X \oplus S$ 写作直和, 今断言 $(1 \ \ 0) : X \oplus S$ 是 $\frac{\mathcal{C} \cap \mathcal{F}}{\mathcal{C}\cap \mathcal{W} \cap \mathcal{F}}$ 中的逆映射. 往证 $\binom{0 \ \ 0}{0 \ \ 1} : X \oplus S \to X \oplus S$ 通过 $\mathcal{C} \cap \mathcal{W} \cap \mathcal{F}$ 中对象分解. 只需证明 $1_S$ 被 $\mathcal{C} \cap \mathcal{W} \cap \mathcal{F}$ 中对象分解. 考虑可裂 conflation $S \rightarrowtail S_V \twoheadrightarrow S_S$, 则 $S_V \in \mathcal{S} \cap \mathcal{V} = \mathcal{C} \cap \mathcal{F} \cap \mathcal{W}$. 得证.
+        \\
+        ($Q_1$ 经 $Q_2$ 分解). 依照\Cref{thm: quotient category is localization} 将加法商转写作 GZ-局部化. 只需说明对任意 $f : X \to Y$, 若 $[f]$ 是同构, 则 $f \in \mathsf{Weq}_{\mathcal{C} \cap \mathcal{F}}$. 将 $f$ 分解作 $p \circ i \in \mathsf{TFib} \circ \mathsf{Cofib}$, 则 $p$ 是可裂满态射, 记右逆元 $j$. 
+        \begin{equation}
+            % https://q.uiver.app/#q=WzAsNyxbMiwwLCJYIl0sWzQsMCwiWSJdLFszLDEsIkUiXSxbNCwyLCJVIl0sWzIsMiwiUyJdLFswLDAsIlxcLCJdLFs2LDAsIlxcLCJdLFswLDEsImYiXSxbMCwyLCJpIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsyLDEsInAiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiwwLCJxIiwwLHsib2Zmc2V0IjotMywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEsMiwiaiIsMCx7Im9mZnNldCI6LTMsInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbNCwyXSxbMiwzXV0=
+\begin{tikzcd}
+	{\,} && X && Y && {\,} \\
+	&&& E \\
+	&& V && U
+	\arrow["f", from=1-3, to=1-5]
+	\arrow["i", tail, from=1-3, to=2-4]
+	\arrow["j", shift left=3, tail, from=1-5, to=2-4]
+	\arrow["q", shift left=3, dotted, from=2-4, to=1-3]
+	\arrow["p", two heads, from=2-4, to=1-5]
+	\arrow[from=2-4, to=3-5]
+	\arrow[from=3-3, to=2-4]
+\end{tikzcd}.
+        \end{equation}
+        由上一步骤中的结论, $p \circ j$ 与 $1$ 相差一个 $1_S$, 从而 $[p]$ 与 $[j]$ 是同构. 因此 $[i] = [j] \circ [f]$ 也是同构. 任取 $q : E \to X$ 使得 $[q]$ 是 $[i]$ 的逆元. 下图是加法商范畴中交换:
+        \begin{equation}
+            % https://q.uiver.app/#q=WzAsOCxbMSwxLCJYIl0sWzMsMSwiRSJdLFs1LDEsIlUiXSxbMCwwLCJcXCwiXSxbNiwwLCJcXCwiXSxbMSwwLCJYIl0sWzUsMCwiVSJdLFszLDAsIlggXFxvcGx1cyBVIl0sWzAsMSwiaSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMSwwLCJxIiwwLHsib2Zmc2V0IjotMywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEsMiwiXFxwaSJdLFs1LDcsIlxcYmlub20gMTAiXSxbNyw2LCIoMCBcXCBcXCAxKSJdLFsxLDcsIlxcYmlub20gcSBcXHBpICJdLFswLDUsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsNiwiIiwxLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}
+	{\,} & X && {X \oplus U} && U & {\,} \\
+	& X && E && U
+	\arrow["{\binom 10}", from=1-2, to=1-4]
+	\arrow["{(0 \ \ 1)}", from=1-4, to=1-6]
+	\arrow[equals, from=2-2, to=1-2]
+	\arrow["i", tail, from=2-2, to=2-4]
+	\arrow["{\binom q \pi }", from=2-4, to=1-4]
+	\arrow["q", shift left=3, dotted, from=2-4, to=2-2]
+	\arrow["\pi", from=2-4, to=2-6]
+	\arrow[equals, from=2-6, to=1-6]
+\end{tikzcd}.
+        \end{equation}
+        因此 $[\binom 1 0] : X \to X \oplus U$ 是同构. 容易看出 $[1_U] = 0$. 由定义, $U$ 是 $\mathcal{W}$ 中对象的形变收缩, 故 $U \in \mathcal{U} \cap \mathcal{W} = \mathcal{S}$. 由定义, $i$ 是平凡纤维, 故 $f \in \mathsf{Weq}$.
+    \end{proof}
+\end{theorem}
+
+\begin{remark}
+    以上将 $\frac{\mathcal{C} \cap \mathcal{F}}{\mathcal{C} \cap \mathcal{W} \cap \mathcal{F}}$ 写作 $(\mathcal{C} \cap \mathcal{F})[S^{-1}]$ 的形式, 并证明了范畴关于 $S$ 与 $\mathsf{Weq}_{\mathcal{C} \cap \mathcal{F}}$ 两个态射类的局部化是同构的.
+\end{remark}
+
+\subsection{同伦范畴的三角结构}
+
+本章节证明 $\mathsf{Ho}\mathcal{A}$ 是三角范畴.
+
+
+
+
 
 
 

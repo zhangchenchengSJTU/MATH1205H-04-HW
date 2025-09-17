@@ -30,3 +30,4 @@
 \contentsline {subsection}{\numberline {6.2}加法局部化}{63}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Quillen 定理}{67}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}由 $\mathcal {C} \cap \mathcal {F}$ 到同伦范畴的三种方式}{67}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}同伦范畴的三角结构}{68}{subsection.6.5}%
