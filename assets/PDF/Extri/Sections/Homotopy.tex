@@ -609,11 +609,11 @@
     \end{proof}
 \end{lemma}
 
-\begin{lemma}
+\begin{lemma}\label{lem: equivalent definition of path homotopy}
     (路同伦的等价定义) 使用模型结构的性质, 定义路同伦时, 可以删去题设 $\binom{d_0}{d_1} \in \mathsf{Fib}$.
 \end{lemma}
 
-\begin{proposition}
+\begin{proposition}\label{prop: homotopy preserved by composition}
     向前复合 $- \circ \varphi$ 保持路同伦关系; 向后复合 $\psi \circ -$ 保持柱同伦关系.
     \begin{proof}
         以前者为例. 若 $(f,g)$ 通过 $h$ 实现柱同伦, 则 $(\psi \circ f, \psi \circ g)$ 通过 $\psi \circ h$ 实现柱同伦.
@@ -761,12 +761,88 @@
 \end{lemma}
 
 \begin{theorem}
-    (余纤维对象出发的路同伦).
+    (余纤维对象出发的路同伦). 选定 $\mathrm{Hom}(X,Y)$, 其中 $X \in \mathcal{C}$ (余纤维对象). 对任意的路同伦的态射 $f, g : X \to Y$, 有以下事实
+    \begin{enumerate}
+        \item 对任意 $\psi : U \to X$, $f \circ \psi$ 与 $g \circ \psi$ 也是路同伦的态射;
+        \item 对任意 $\varphi : Y \to W$, $\varphi \circ f$ 与 $\varphi \circ g$ 也是路同伦的态射.
+    \end{enumerate}
+    \begin{proof}
+        (1). \Cref{prop: homotopy preserved by composition} 说明向前复合永远保持路同伦关系.
+        \\
+        (2). 给定路同伦交换图
+        \begin{equation}\label{eq: path homotopy preserved by composition}
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJZJyJdLFsyLDAsIlkiXSxbMCwxLCJYIl0sWzIsMSwiWVxccHJvZCBZIl0sWzAsMywie3t7XFxiaW5vbXtkXzB9e2RfMX19fX0iLDEseyJjb2xvdXIiOlsyMzUsMTAwLDYwXX0sWzIzNSwxMDAsNjAsMV1dLFsxLDAsInMiLDJdLFsxLDMsInt7e1xcRGVsdGEgX1l9fX0iXSxbMiwwLCJcXGxhbWJkYSIsMCx7ImNvbG91ciI6Wy00LDEwMCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWy00LDEwMCw2MCwxXV0sWzIsMywie3t7XFxiaW5vbSBmZ319fSIsMix7ImNvbG91ciI6Wy00LDEwMCw2MF19LFstNCwxMDAsNjAsMV1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+	{Y'} \&\& Y \\
+	X \&\& {Y\prod Y}
+	\arrow["{{{{\binom{d_0}{d_1}}}}}"{description}, color={rgb,255:red,51;green,68;blue,255}, from=1-1, to=2-3]
+	\arrow["s"', from=1-3, to=1-1]
+	\arrow["{{{{\Delta _Y}}}}", from=1-3, to=2-3]
+	\arrow["\lambda", color={rgb,255:red,255;green,51;blue,65}, dashed, from=2-1, to=1-1]
+	\arrow["{{{{\binom fg}}}}"', color={rgb,255:red,255;green,51;blue,65}, from=2-1, to=2-3]
+\end{tikzcd}.
+        \end{equation}
+        由\Cref{lem: equivalent definition of path homotopy}, 假定 $\binom{d_0}{d_1} \in \mathsf{Fib}$. 将 $s$ 分解作 $\mathsf{Fib} \circ \mathsf{TCofib}$, 则存在提升态射 $\lambda'$ (CM3):
+        \begin{equation}
+            % https://q.uiver.app/#q=WzAsNSxbMSwxLCJZJyJdLFsyLDAsIlkiXSxbMCwyLCJYIl0sWzIsMiwiWVxccHJvZCBZIl0sWzAsMCwiXFx3aWRldGlsZGUgWSJdLFswLDMsInt7e1xcYmlub217ZF8wfXtkXzF9fX19IiwxLHsiY29sb3VyIjpbMjM1LDEwMCw2MF19LFsyMzUsMTAwLDYwLDFdXSxbMSwzLCJ7e3tcXERlbHRhIF9ZfX19Il0sWzIsMCwiXFxsYW1iZGEiLDAseyJjb2xvdXIiOlstNCwxMDAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19LFstNCwxMDAsNjAsMV1dLFsyLDMsInt7e1xcYmlub20gZmd9fX0iLDIseyJjb2xvdXIiOlstNCwxMDAsNjBdfSxbLTQsMTAwLDYwLDFdXSxbNCwwLCJzXzEiLDIseyJjb2xvdXIiOlsyMzUsMTAwLDYwXX0sWzIzNSwxMDAsNjAsMV1dLFsxLDQsInNfMiIsMl0sWzIsNCwiXFxsYW1iZGEgJyIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDQsIlxcbWF0aHNme1RDb2ZpYn0iLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDAsIlxcbWF0aHNme1RGaWJ9IiwwLHsibGFiZWxfcG9zaXRpb24iOjYwLCJjb2xvdXIiOlsyMzUsMTAwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fSxbMjM1LDEwMCw2MCwxXV1d
+\begin{tikzcd}[ampersand replacement=\&]
+	{\widetilde Y} \&\& Y \\
+	\& {Y'} \\
+	X \&\& {Y\prod Y}
+	\arrow["{s_1}"', color={rgb,255:red,51;green,68;blue,255}, from=1-1, to=2-2]
+	\arrow["{\mathsf{TFib}}"{pos=0.6}, color={rgb,255:red,51;green,68;blue,255}, draw=none, from=1-1, to=2-2]
+	\arrow["{s_2}"', from=1-3, to=1-1]
+	\arrow["{\mathsf{TCofib}}"{pos=0.4}, draw=none, from=1-3, to=1-1]
+	\arrow["{{{{\Delta _Y}}}}", from=1-3, to=3-3]
+	\arrow["{{{{\binom{d_0}{d_1}}}}}"{description}, color={rgb,255:red,51;green,68;blue,255}, from=2-2, to=3-3]
+	\arrow["{\lambda '}", dashed, from=3-1, to=1-1]
+	\arrow["\lambda", color={rgb,255:red,255;green,51;blue,65}, dashed, from=3-1, to=2-2]
+	\arrow["{{{{\binom fg}}}}"', color={rgb,255:red,255;green,51;blue,65}, from=3-1, to=3-3]
+\end{tikzcd}.
+        \end{equation}
+        因此, 不妨假设\Cref{eq: path homotopy preserved by composition} 中 $s \in \mathsf{TCofib}$. 将 $\Delta_C$ 分解作 $\mathsf{Fib} \circ \mathsf{TCofib}$, 由 CM3 得提升态射 $t$:
+\begin{equation}
+    % https://q.uiver.app/#q=WzAsNyxbMCwwLCJZJyJdLFswLDIsIlgiXSxbNCwyLCJXIFxccHJvZCBXIl0sWzQsMCwiVyJdLFszLDEsIlcnIl0sWzIsMCwiWSJdLFsyLDIsIllcXHByb2QgWSJdLFsxLDAsIlxcbGFtYmRhIiwwLHsiY29sb3VyIjpbLTQsMTAwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbLTQsMTAwLDYwLDFdXSxbMywyLCJcXERlbHRhX1ciXSxbNCwyLCJcXG1hdGhzZntGaWJ9Il0sWzMsNCwiXFxtYXRoc2Z7VENvZmlifSIsMix7ImxhYmVsX3Bvc2l0aW9uIjo3MH1dLFswLDQsInQiLDAseyJsYWJlbF9wb3NpdGlvbiI6NjAsImNvbG91ciI6Wy00LDEwMCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWy00LDEwMCw2MCwxXV0sWzUsMCwicyIsMl0sWzUsMCwiXFxtYXRoc2Z7VENvZmlifSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDMsIlxcdmFycGhpICJdLFs1LDYsInt7e1xcRGVsdGEgX1l9fX0iXSxbMSw2LCJcXGJpbm9tIHtmfXsgZ30iLDIseyJjb2xvdXIiOlstNCwxMDAsNjBdfSxbLTQsMTAwLDYwLDFdXSxbNiwyLCJcXHZhcnBoaSBcXHByb2QgXFx2YXJwaGkgIiwyXSxbMCw2LCJcXGJpbm9te2RfMH17ZF8xfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjo0MCwiY29sb3VyIjpbMjM1LDEwMCw2MF19LFsyMzUsMTAwLDYwLDFdXV0=
+\begin{tikzcd}[ampersand replacement=\&]
+	{Y'} \&\& Y \&\& W \\
+	\&\&\& {W'} \\
+	X \&\& {Y\prod Y} \&\& {W \prod W}
+	\arrow["t"{pos=0.6}, color={rgb,255:red,255;green,51;blue,65}, dashed, from=1-1, to=2-4]
+	\arrow["{\binom{d_0}{d_1}}"'{pos=0.4}, color={rgb,255:red,51;green,68;blue,255}, from=1-1, to=3-3]
+	\arrow["s"', from=1-3, to=1-1]
+	\arrow["{\mathsf{TCofib}}", draw=none, from=1-3, to=1-1]
+	\arrow["{\varphi }", from=1-3, to=1-5]
+	\arrow["{{{{\Delta _Y}}}}", from=1-3, to=3-3]
+	\arrow["{\mathsf{TCofib}}"'{pos=0.7}, from=1-5, to=2-4]
+	\arrow["{\Delta_W}", from=1-5, to=3-5]
+	\arrow["{\mathsf{Fib}}", from=2-4, to=3-5]
+	\arrow["\lambda", color={rgb,255:red,255;green,51;blue,65}, dashed, from=3-1, to=1-1]
+	\arrow["{\binom {f}{ g}}"', color={rgb,255:red,255;green,51;blue,65}, from=3-1, to=3-3]
+	\arrow["{\varphi \prod \varphi }"', from=3-3, to=3-5]
+\end{tikzcd}.
+\end{equation}
+        删减与 $Y$ 相连的态射, 以及 $\binom{d_0}{d_1}$, 得到路同伦关系
+\begin{equation}
+    % https://q.uiver.app/#q=WzAsNixbMCwxLCJZJyJdLFswLDIsIlgiXSxbMiwyLCJXIFxccHJvZCBXIl0sWzIsMCwiVyJdLFswLDAsIlcnIl0sWzEsMiwiWVxccHJvZCBZIl0sWzEsMCwiXFxsYW1iZGEiLDAseyJjb2xvdXIiOlstNCwxMDAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19LFstNCwxMDAsNjAsMV1dLFszLDIsIlxcRGVsdGFfVyJdLFs0LDIsIlxcbWF0aHNme0ZpYn0iXSxbMyw0LCJcXG1hdGhzZntUQ29maWJ9IiwyXSxbMCw0LCJ0IiwwLHsiY29sb3VyIjpbLTQsMTAwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbLTQsMTAwLDYwLDFdXSxbMSw1LCJcXGJpbm9tIHtmfXsgZ30iLDIseyJjb2xvdXIiOlstNCwxMDAsNjBdfSxbLTQsMTAwLDYwLDFdXSxbNSwyLCJcXHZhcnBoaSBcXHByb2QgXFx2YXJwaGkgIiwyXV0=
+\begin{tikzcd}[ampersand replacement=\&]
+	{W'} \&\& W \\
+	{Y'} \\
+	X \& {Y\prod Y} \& {W \prod W}
+	\arrow["{\mathsf{Fib}}", from=1-1, to=3-3]
+	\arrow["{\mathsf{TCofib}}"', from=1-3, to=1-1]
+	\arrow["{\Delta_W}", from=1-3, to=3-3]
+	\arrow["t", color={rgb,255:red,255;green,51;blue,65}, dashed, from=2-1, to=1-1]
+	\arrow["\lambda", color={rgb,255:red,255;green,51;blue,65}, dashed, from=3-1, to=2-1]
+	\arrow["{\binom {f}{ g}}"', color={rgb,255:red,255;green,51;blue,65}, from=3-1, to=3-2]
+	\arrow["{\varphi \prod \varphi }"', from=3-2, to=3-3]
+\end{tikzcd}.
+\end{equation}
+    \end{proof}
 \end{theorem}
 
-\begin{theorem}
+\begin{corollary}\label{cor: homotopy is ideal}
     柱同伦是 $\mathcal{F}$ 上的等价关系理想; 路同伦是 $\mathcal{C}$ 上的等价关系理想.
-\end{theorem}
+\end{corollary}
 
 我们暂不给出\Cref{thm: quillen theorem} 的证明. 
 
@@ -775,9 +851,9 @@
     \begin{equation}\label{eq: quillen theorem equivalence}
         % https://q.uiver.app/#q=WzAsOSxbMCwwLCJcXHBpIFxcbWF0aHNjciBDIl0sWzAsMiwiXFxwaSBcXG1hdGhzY3IgRiJdLFswLDEsIlxccGkgKFxcbWF0aHNjciBDIFxcY2FwIFxcbWF0aHNjciBGICkiXSxbMiwwLCJcXG1hdGhzZntIb30oXFxtYXRoc2NyIEMpIl0sWzMsMCwiXFxtYXRoc2NyIENbIFxcbWF0aHNme1RDb2ZpYn1eey0xfV0iXSxbMiwyLCJcXG1hdGhzZntIb30oXFxtYXRoc2NyIEYpIl0sWzMsMiwiXFxtYXRoc2NyIEZbIFxcbWF0aHNme1RGaWJ9XnstMX1dIl0sWzMsMSwiXFxtYXRoc2NyIENbIFxcbWF0aHNme1dlcX1eey0xfV0iXSxbMiwxLCJcXG1hdGhzZntIb30oXFxtYXRoc2NyIEEpIl0sWzIsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsyLDEsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMCwzLCJcXG92ZXJsaW5lIHtcXGdhbW1hIF9jfSJdLFszLDgsIlxcc2ltZXEiXSxbMSw1LCJcXG92ZXJsaW5lIHtcXGdhbW1hIF9mfSIsMl0sWzUsOCwiXFxzaW1lcSIsMl0sWzMsNCwiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCw3LCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDYsIiIsMix7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsOCwiXFxvdmVybGluZSBcXGdhbW1hICIsMl0sWzIsOCwiXFxzaW1lcSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszLDAsIiIsMix7Im9mZnNldCI6LTEsImN1cnZlIjotM31dLFs1LDEsIiIsMix7Im9mZnNldCI6MSwiY3VydmUiOjN9XSxbMTEsMjAsIlxcYm90IiwxLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIxLDEzLCJcXGJvdCIsMSx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \begin{tikzcd}
-	{\pi \mathscr C} && {\mathsf{Ho}(\mathscr C)} & {\mathscr C[ \mathsf{TCofib}^{-1}]} \\
-	{\pi (\mathscr C \cap \mathscr F )} && {\mathsf{Ho}(\mathscr A)} & {\mathscr C[ \mathsf{Weq}^{-1}]} \\
-	{\pi \mathscr F} && {\mathsf{Ho}(\mathscr F)} & {\mathscr F[ \mathsf{TFib}^{-1}]}
+	{\pi \mathcal C} && {\mathsf{Ho}(\mathcal C)} & {\mathcal C[ \mathsf{TCofib}^{-1}]} \\
+	{\pi (\mathcal C \cap \mathcal F )} && {\mathsf{Ho}(\mathcal A)} & {\mathcal C[ \mathsf{Weq}^{-1}]} \\
+	{\pi \mathcal F} && {\mathsf{Ho}(\mathcal F)} & {\mathcal F[ \mathsf{TFib}^{-1}]}
 	\arrow[""{name=0, anchor=center, inner sep=0}, "{\overline {\gamma _c}}", from=1-1, to=1-3]
 	\arrow[""{name=1, anchor=center, inner sep=0}, shift left, curve={height=-18pt}, from=1-3, to=1-1]
 	\arrow[equals, from=1-3, to=1-4]
@@ -795,6 +871,7 @@
 	\arrow["\bot"{description}, draw=none, from=3, to=2]
 \end{tikzcd}.
     \end{equation}
+    其中, $\pi(\mathcal{C})$ 是 $\mathcal{C}$ 关于路同伦这一等价关系 (\Cref{cor: homotopy is ideal}) 的商, $\pi(\mathcal{F})$ 是 $\mathcal{F}$ 关于柱同伦这一等价关系的商, $\pi(\mathcal{C} \cap \mathcal{F})$ 是 $\mathcal{C} \cap \mathcal{F}$ 关于柱同伦 (或路同伦) 这一等价关系的商.
 \end{theorem}
 
 \begin{example}
@@ -920,14 +997,14 @@
     以上将加法商写作 GZ 局部化 (\Cref{thm: quotient category is localization}), 并证明了范畴关于 $S$ 与 $\mathsf{Weq}_{\mathcal{C} \cap \mathcal{F}}$ 两个态射类的局部化是同构的. 
 \end{remark}
 
-\begin{theorem}
+\begin{theorem}\label{thm: homotopy category as homotopy quotient}
     \Cref{eq: three ways to homotopy category} 中存在 $Q_3 :{\mathcal{C} \cap \mathcal{F}} \to \pi(\mathcal{C} \cap \mathcal{F})$ 诱导的范畴同构 $\frac{\mathcal{C} \cap \mathcal{F}}{{\mathcal{C} \cap \mathcal{W} \cap \mathcal{F}}} \cong \pi (\mathcal{C} \cap \mathcal{F})$.
     \begin{proof}
         为证明 $\frac{\mathcal{C} \cap \mathcal{F}}{{\mathcal{C} \cap \mathcal{W} \cap \mathcal{F}}} \cong \pi (\mathcal{C} \cap \mathcal{F})$ 良定义, 只需说明 $\mathcal{C} \cap \mathcal{F}$ 中弱等价被映至 $\pi (\mathcal{C} \cap \mathcal{F})$ 中同构 (\Cref{thm: three ways to homotopy category}). 将弱等价分解作 $\mathsf{TFib} \circ \mathsf{TCofib}$, 下通过路同伦证明 $\mathsf{TFib}$ 在 $Q_3$ 下是同构. 通过柱同伦, 可以对偶地证明 $\mathsf{TCofib}$ 在 $Q_3$ 下也是同构.
         \\
         任取平凡纤维 $p : X \to Y$, 下证明 $\pi (-, p) : \pi(-, X) \to \pi(-, Y )$ 是函子的同构.
         \begin{enumerate}
-            \item (可裂满). 由 $(0 \to A) \pitchfork p$, 得 $(-, p)_{\mathcal{C} \cap \mathcal{F}}$ 是满自然变换. 由\Cref{lem:mono-epi-split} 知 $p$ 是可裂满, 故 $\pi (-, p)$ 可裂满.
+            \item (可裂满). 由 $(0 \to A) \pitchfork p$, 得 $(-, p)_{\mathcal{C} \cap \mathcal{F}}$ 是满自然变换. 由\Cref{lem:mono-epi-split} 知 $p$ 可裂满, 故 $\pi (-, p)$ 可裂满.
             \item (单). 即证: 若 $p\circ f, p\circ g: A \to X$ 通过 $h$ 实现柱同伦, 则 $f, g : A \to Y$ 也是柱同伦的. 考虑下图:
             \begin{equation}
                 % https://q.uiver.app/#q=WzAsNyxbMSwwLCJBIFxcY29wcm9kIEEiXSxbMSwyLCJBIl0sWzQsMiwiQSciXSxbNCwwLCJZIl0sWzMsMCwiWCJdLFswLDEsIlxcLCJdLFs1LDEsIlxcLCJdLFsyLDEsIlxcc2lnbWEgIl0sWzAsNCwiKGYsZykiXSxbNCwzLCJwIl0sWzAsMiwiKFxccGFydGlhbCBfMCwgXFxwYXJ0aWFsIF8xKSIsMix7ImxhYmVsX3Bvc2l0aW9uIjoyMH1dLFswLDIsIlxcbWF0aHNme0NvZmlifSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo0MCwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMywiaCIsMl0sWzQsMywiXFxtYXRoc2Z7VEZpYn0iLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiw0LCJzIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIsMSwiXFxtYXRoc2Z7V2VxfSIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDEsIlxcbmFibGFfQSIsMl1d
@@ -1109,14 +1186,14 @@
     \end{proof}
 \end{lemma}
 
-\begin{theorem}
+\begin{theorem}\label{thm: shift functor}
     存在加法双函子 $\Sigma: \mathcal{K} \to \mathcal{K}$, 使得 $\Sigma [\cdot] = [(\cdot )_U]$.
     \begin{proof}
         对\Cref{cor: functoriality of shift} 使用\Cref{lem: factor through w-2}, 得局部化诱导的函子 $\widetilde \Sigma : \mathsf{Ho}\mathcal{A} \to \mathcal{K}$. 最后复合 $\mathcal{K} \to \mathsf{Ho}\mathcal{A}$ 即可.
     \end{proof}
 \end{theorem}
 
-\begin{theorem}
+\begin{theorem}\label{thm:loop functor}
     存在加法双函子 $\Omega: \mathcal{K} \to \mathcal{K}$, 满足 $[(\cdot)^T] = \Omega [\cdot]$, 其中
     \begin{equation}
         % https://q.uiver.app/#q=WzAsNCxbMCwwLCJYXlQiXSxbMSwwLCJYXlMiXSxbMiwwLCJYIl0sWzMsMCwiXFwsIl0sWzAsMSwial9YIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsxLDIsInFfWCIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsyLDMsIlxcdmFyZXBzaWxvbiBfWCIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
@@ -1134,7 +1211,7 @@
 \begin{definition}\label{def:lesh-transform}
     ($\ell$-变换). 对 conflation $X \overset f \rightarrowtail Y \overset g \twoheadrightarrow Z \overset \eta \dashrightarrow$, 定义
     \begin{equation}
-        \ell : \mathbb E(Z,X) \to (Z, \Sigma X),\quad \eta \mapsto [a] \circ [s]^{-1}.
+        \ell : \mathbb E(Z,X) \to (Z, \Sigma X)_{\mathcal{K}},\quad \eta \mapsto [a] \circ [s]^{-1}.
     \end{equation}
     其中, $a$ 与 $s$ 来自\Cref{thm:bi-pullback} 给出的交换图:
     \begin{equation}
@@ -1176,16 +1253,199 @@
     \Cref{def:lesh-transform} 也可通过 $\mathsf{TCofib}$ 对偶地定义, 从而得到反向的分式. 我们不使用这种分式, 因此无需考虑左分式与右分式之别.
 \end{remark}
 
+\begin{proposition}\label{prop:lesh-well-defined}
+    沿用\Cref{def:lesh-transform} 中的记号. 假定存在另一组分式 $(t,b)$, 满足
+    \begin{equation}
+        s^\ast \eta = a^\ast \delta _X,\quad t^\ast \eta = b^\ast \delta _X.
+    \end{equation}
+    此时, $[a]\circ [s]^{-1} = [b] \circ [t]^{-1}$.
+    \begin{proof}
+        将 $(s,a)$ 与 $(t,b)$ 置于下图:
+        \begin{equation}
+            % https://q.uiver.app/#q=WzAsMTAsWzIsMCwiWiJdLFswLDAsIlgiXSxbMSwwLCJZIl0sWzMsMCwiXFwsIl0sWzIsMiwiWF9VIl0sWzMsMiwiXFwsIl0sWzEsMiwiWF9WIl0sWzAsMiwiWCJdLFsxLDEsIk0iLFsyLDEwMCw2MCwxXV0sWzMsMSwiTiIsWzIzNywxMDAsNjAsMV1dLFsxLDIsImYiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzIsMCwiZyIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFswLDMsIlxcZXRhIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzQsNSwiXFxkZWx0YV9YIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzYsNCwicF9YIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzEsNywiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCwwLCJzIiwyLHsiY29sb3VyIjpbMiwxMDAsNjBdfSxbMiwxMDAsNjAsMV1dLFs4LDQsImEiLDAseyJjb2xvdXIiOlsyLDEwMCw2MF19LFsyLDEwMCw2MCwxXV0sWzksMCwidCIsMCx7ImNvbG91ciI6WzIzNywxMDAsNjBdfSxbMjM3LDEwMCw2MCwxXV0sWzksNCwiYiIsMix7ImNvbG91ciI6WzIzNywxMDAsNjBdfSxbMjM3LDEwMCw2MCwxXV0sWzksMCwiXFxtYXRoc2Z7VEZpYn0iLDIseyJjb2xvdXIiOlsyMzcsMTAwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJlcGkifX19LFsyMzcsMTAwLDYwLDFdXSxbOCwwLCJcXG1hdGhzZntURmlifSIsMCx7ImNvbG91ciI6WzIsMTAwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJlcGkifX19LFsyLDEwMCw2MCwxXV0sWzcsNiwiaV9YIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dXQ==
+\begin{tikzcd}
+	X & Y & Z & {\,} \\
+	& \textcolor{rgb,255:red,255;green,58;blue,51}{M} && \textcolor{rgb,255:red,51;green,61;blue,255}{N} \\
+	X & {X_V} & {X_U} & {\,}
+	\arrow["f", tail, from=1-1, to=1-2]
+	\arrow[equals, from=1-1, to=3-1]
+	\arrow["g", two heads, from=1-2, to=1-3]
+	\arrow["\eta", dashed, from=1-3, to=1-4]
+	\arrow["s"', color={rgb,255:red,255;green,58;blue,51}, from=2-2, to=1-3]
+	\arrow["{\mathsf{TFib}}", color={rgb,255:red,255;green,58;blue,51}, no body, two heads, from=2-2, to=1-3]
+	\arrow["a", color={rgb,255:red,255;green,58;blue,51}, from=2-2, to=3-3]
+	\arrow["t", color={rgb,255:red,51;green,61;blue,255}, from=2-4, to=1-3]
+	\arrow["{\mathsf{TFib}}"', color={rgb,255:red,51;green,61;blue,255}, no body, two heads, from=2-4, to=1-3]
+	\arrow["b"', color={rgb,255:red,51;green,61;blue,255}, from=2-4, to=3-3]
+	\arrow["{i_X}"', tail, from=3-1, to=3-2]
+	\arrow["{p_X}"', two heads, from=3-2, to=3-3]
+	\arrow["{\delta_X}"', dashed, from=3-3, to=3-4]
+\end{tikzcd}.
+        \end{equation}
+        使用\Cref{thm:bi-pullback} 作 $s'$ 与 $t'$, 记合成态射 $st' = c = ts'$, 得下图:
+        \begin{equation}\label{eq:lesh-transform-well-defined}
+% https://q.uiver.app/#q=WzAsMTEsWzIsMCwiWiJdLFswLDAsIlgiXSxbMSwwLCJZIl0sWzMsMCwiXFwsIl0sWzIsMiwiWF9VIl0sWzMsMiwiXFwsIl0sWzEsMiwiWF9WIl0sWzAsMiwiWCJdLFsxLDEsIk0iLFsyLDEwMCw2MCwxXV0sWzMsMSwiTiIsWzIzNywxMDAsNjAsMV1dLFsyLDEsIkYiXSxbMSwyLCJmIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsyLDAsImciLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCwzLCJcXGV0YSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDUsIlxcZGVsdGFfWCIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs2LDQsInBfWCIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDcsIiIsMix7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzcsNiwiaV9YIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFs4LDAsInMiLDAseyJjb2xvdXIiOlsyLDEwMCw2MF0sInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX0sWzIsMTAwLDYwLDFdXSxbOCw0LCJhIiwyLHsiY29sb3VyIjpbMiwxMDAsNjBdfSxbMiwxMDAsNjAsMV1dLFs5LDAsInQiLDIseyJjb2xvdXIiOlsyMzcsMTAwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fSxbMjM3LDEwMCw2MCwxXV0sWzksNCwiYiIsMCx7ImNvbG91ciI6WzIzNywxMDAsNjBdfSxbMjM3LDEwMCw2MCwxXV0sWzEwLDgsInQnIiwyLHsiY29sb3VyIjpbMiwxMDAsNjBdLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19LFsyLDEwMCw2MCwxXV0sWzEwLDksInMnIiwwLHsiY29sb3VyIjpbMjM3LDEwMCw2MF0sInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX0sWzIzNywxMDAsNjAsMV1dLFsxMCwwLCJjIiwwLHsiY29sb3VyIjpbMjczLDEwMCw2MF19LFsyNzMsMTAwLDYwLDFdXSxbMTAsNCwiXFxib3hlZCA/IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\begin{tikzcd}
+	X & Y & Z & {\,} \\
+	& \textcolor{rgb,255:red,255;green,58;blue,51}{M} & F & \textcolor{rgb,255:red,51;green,61;blue,255}{N} \\
+	X & {X_V} & {X_U} & {\,}
+	\arrow["f", tail, from=1-1, to=1-2]
+	\arrow[equals, from=1-1, to=3-1]
+	\arrow["g", two heads, from=1-2, to=1-3]
+	\arrow["\eta", dashed, from=1-3, to=1-4]
+	\arrow["s", color={rgb,255:red,255;green,58;blue,51}, two heads, from=2-2, to=1-3]
+	\arrow["a"', color={rgb,255:red,255;green,58;blue,51}, from=2-2, to=3-3]
+	\arrow["c", color={rgb,255:red,163;green,51;blue,255}, from=2-3, to=1-3]
+	\arrow["{t'}"', color={rgb,255:red,255;green,58;blue,51}, two heads, from=2-3, to=2-2]
+	\arrow["{s'}", color={rgb,255:red,51;green,61;blue,255}, two heads, from=2-3, to=2-4]
+	\arrow["{\boxed ?}"{description}, draw=none, from=2-3, to=3-3]
+	\arrow["t"', color={rgb,255:red,51;green,61;blue,255}, two heads, from=2-4, to=1-3]
+	\arrow["b", color={rgb,255:red,51;green,61;blue,255}, from=2-4, to=3-3]
+	\arrow["{i_X}"', tail, from=3-1, to=3-2]
+	\arrow["{p_X}"', two heads, from=3-2, to=3-3]
+	\arrow["{\delta_X}"', dashed, from=3-3, to=3-4]
+\end{tikzcd}.
+        \end{equation}
+        由 $[a] \circ [s]^{-1} = [at'] \circ  [c]^{-1}$ 与 $[b] \circ [t] = [bs'] \circ [c]$, 下只需证明 $[at'] = [bs']$. 注意到
+        \begin{equation}
+            (at' - bs')^\ast \delta_X = (st' - ts')^\ast \eta = 0^\ast \eta = 0,
+        \end{equation}
+        因此, $(at' - bs')$ 经 $p_X$ 分解. 由 $X_V \in \mathcal{W}$, 得 $[at' - bs'] = 0$.
+    \end{proof}
+\end{proposition}
 
+\begin{proposition}
+    ($\ell$ 保持加法). 对任意 $\eta, \eta' \in \mathbb E(Z,X)$, 总有 $\ell(\eta + \eta ' ) = \ell (\eta) + \ell (\eta')$.
+    \begin{proof}
+        \Cref{prop:lesh-well-defined} 说明 $\ell(\cdot)$ 无关分式选取, \Cref{eq:lesh-transform-well-defined} 说明任意两个分式可以``通分''. 因此
+        \begin{equation}
+            \ell(\eta + \eta') = [a+a'] \circ [s]^{-1} = [a] \circ [s]^{-1} + [a'] \circ [s]^{-1} = \ell(\eta) + \ell(\eta').
+        \end{equation}
+    \end{proof}
+\end{proposition}
 
+\begin{theorem}
+    ($\ell$ 是自然变换). 假定下图左侧是 conflation 间的态射, 则下图右侧交换:
+    \begin{equation}
+        % https://q.uiver.app/#q=WzAsMTIsWzAsMCwiWCJdLFsxLDAsIlkiXSxbMiwwLCJaIl0sWzAsMSwiWCciXSxbMSwxLCJZJyJdLFsyLDEsIlonIl0sWzMsMCwiXFwsIl0sWzMsMSwiXFwsIl0sWzQsMCwiW1pdIl0sWzUsMCwiW1hfVV0iXSxbNSwxLCJbWCdfVV0iXSxbNCwxLCJbWiddIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsxLDIsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFszLDQsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbNCw1LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCwzLCJmIl0sWzIsNSwiZyJdLFsyLDYsIlxcZXRhIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsNywiXFxldGEnIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzgsOSwiXFxlbGwgKFxcZXRhKSJdLFs4LDExLCJbZ10iLDJdLFs5LDEwLCJbZl9VXSJdLFsxLDRdLFsxMSwxMCwiXFxlbGwgKFxcZXRhJykiLDJdXQ==
+\begin{tikzcd}
+	X & Y & Z & {\,} & {[Z]} & {[X_U]} \\
+	{X'} & {Y'} & {Z'} & {\,} & {[Z']} & {[X'_U]}
+	\arrow[tail, from=1-1, to=1-2]
+	\arrow["f", from=1-1, to=2-1]
+	\arrow[two heads, from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow["\eta", dashed, from=1-3, to=1-4]
+	\arrow["g", from=1-3, to=2-3]
+	\arrow["{\ell (\eta)}", from=1-5, to=1-6]
+	\arrow["{[g]}"', from=1-5, to=2-5]
+	\arrow["{[f_U]}", from=1-6, to=2-6]
+	\arrow[tail, from=2-1, to=2-2]
+	\arrow[two heads, from=2-2, to=2-3]
+	\arrow["{\eta'}", dashed, from=2-3, to=2-4]
+	\arrow["{\ell (\eta')}"', from=2-5, to=2-6]
+\end{tikzcd}.
+    \end{equation}
+    \begin{proof}
+        记 $(s,a)$ 与 $(t,b)$ 分别是 $\eta$ 与 $\eta'$ 对应的分式, 只需验证下图在局部化范畴中交换:
+        \begin{equation}
+            % https://q.uiver.app/#q=WzAsNixbMiwwLCJYX1UiXSxbMCwxLCJaJyJdLFsxLDAsIk0iXSxbMSwxLCJOIl0sWzIsMSwiWCdfVSJdLFswLDAsIloiXSxbMywxLCJ0IiwwLHsiY29sb3VyIjpbMzU5LDEwMCw1OV0sInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX0sWzM1OSwxMDAsNTksMV1dLFsyLDAsImEiXSxbMCw0LCJmX1UiXSxbNSwxLCJnIiwyXSxbMiw1LCJzIiwyLHsiY29sb3VyIjpbMzU5LDEwMCw1OV0sInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX0sWzM1OSwxMDAsNTksMV1dLFszLDQsImIiLDJdXQ==
+\begin{tikzcd}
+	Z & M & {X_U} \\
+	{Z'} & N & {X'_U}
+	\arrow["g"', from=1-1, to=2-1]
+	\arrow["s"', color={rgb,255:red,255;green,46;blue,49}, two heads, from=1-2, to=1-1]
+	\arrow["a", from=1-2, to=1-3]
+	\arrow["{f_U}", from=1-3, to=2-3]
+	\arrow["t", color={rgb,255:red,255;green,46;blue,49}, two heads, from=2-2, to=2-1]
+	\arrow["b"', from=2-2, to=2-3]
+\end{tikzcd}.
+        \end{equation}
+        由\Cref{thm:homotopy-pullback-2} 构造同伦的推出拉回方块 $1$, 得 $t' \in \mathsf{TCofib}$ 与 $p'$. 定义 $b' = b\circ p$, 得交换方块 $2$. 由\Cref{thm:bi-pullback} 作同伦的推出拉回方块 $3$, 以及 $\overline s, \overline {t'} \in \mathsf{TCofib}$. 最后只需证明 $\boxed ?$ 在局部化范畴中交换:
+        \begin{equation}\label{eq:lesh-naturality-goal}
+            % https://q.uiver.app/#q=WzAsMTEsWzAsMCwiWiJdLFs0LDAsIlhfVSJdLFs0LDMsIlhfVSciXSxbMCwzLCJaJyJdLFsyLDAsIk0iXSxbMiwzLCJOIl0sWzIsMiwiQyJdLFs0LDIsIlgnX1UiXSxbMCwyLCJaIl0sWzIsMSwiRSJdLFszLDEsIlxcYm94ZWQgPyJdLFs0LDAsInMiLDIseyJjb2xvdXIiOlszNTksMTAwLDU5XSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fSxbMzU5LDEwMCw1OSwxXV0sWzUsMywidCIsMCx7ImNvbG91ciI6WzM1OSwxMDAsNTldLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19LFszNTksMTAwLDU5LDFdXSxbNCwxLCJhIl0sWzUsMiwiYiIsMl0sWzEsNywiZl9VIl0sWzcsMiwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiw3LCJiJyIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs4LDMsImciLDJdLFs2LDgsInQnIiwyLHsiY29sb3VyIjpbMzU5LDEwMCw1OV0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJlcGkifX19LFszNTksMTAwLDU5LDFdXSxbMCw4LCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs5LDQsIlxcb3ZlcmxpbmUgcyIsMCx7ImNvbG91ciI6WzM1OSwxMDAsNTldLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19LFszNTksMTAwLDU5LDFdXSxbOSw2LCJcXG92ZXJsaW5lIHt0J30iLDIseyJjb2xvdXIiOlszNTksMTAwLDU5XSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fSxbMzU5LDEwMCw1OSwxXV0sWzYsNSwicCIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs4LDUsIjEiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiwyLCIyIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsNiwiMyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}
+	Z && M && {X_U} \\
+	&& E & {\boxed ?} \\
+	Z && C && {X'_U} \\
+	{Z'} && N && {X_U'}
+	\arrow[equals, from=1-1, to=3-1]
+	\arrow["3"{description}, draw=none, from=1-1, to=3-3]
+	\arrow["s"', color={rgb,255:red,255;green,46;blue,49}, two heads, from=1-3, to=1-1]
+	\arrow["a", from=1-3, to=1-5]
+	\arrow["{f_U}", from=1-5, to=3-5]
+	\arrow["{\overline s}", color={rgb,255:red,255;green,46;blue,49}, two heads, from=2-3, to=1-3]
+	\arrow["{\overline {t'}}"', color={rgb,255:red,255;green,46;blue,49}, two heads, from=2-3, to=3-3]
+	\arrow["g"', from=3-1, to=4-1]
+	\arrow["1"{description}, draw=none, from=3-1, to=4-3]
+	\arrow["{t'}"', color={rgb,255:red,255;green,46;blue,49}, dashed, two heads, from=3-3, to=3-1]
+	\arrow["{b'}", dashed, from=3-3, to=3-5]
+	\arrow["p", dashed, from=3-3, to=4-3]
+	\arrow["2"{description}, draw=none, from=3-3, to=4-5]
+	\arrow[equals, from=3-5, to=4-5]
+	\arrow["t", color={rgb,255:red,255;green,46;blue,49}, two heads, from=4-3, to=4-1]
+	\arrow["b"', from=4-3, to=4-5]
+\end{tikzcd}.
+        \end{equation}
+        我们希望 $(b'\circ \overline {t'} - f_U \circ a \circ \overline s)$ 通过 $p_{X'} : X'_V \twoheadrightarrow X'_U$ 分解, 即证 $(b'\circ \overline {t'} - f_U \circ a \circ \overline s)^\ast \delta _{X'} = 0$. 计算得
+\begin{align}
+& \quad \ (b'\circ \overline {t'} - f_U \circ a \circ \overline s)^\ast \delta _{X'} &&= (b\circ p \circ \overline {t'})^\ast \delta_{X'} - (f_U \circ a \circ \overline s)^\ast \delta _{X'} \\
+&= (p \circ \overline {t'})^\ast (b^\ast \delta_{X'}) - (a \circ \overline s)^\ast ((f_U)^\ast \delta _{X'}) &&= (p \circ \overline {t'})^\ast (t^\ast \eta') - (a \circ \overline s)^\ast (f_\ast \delta _{X}) \\
+&= (t\circ p \circ \overline {t'})^\ast \eta' - f_\ast \overline s^\ast (a^\ast \delta _{X}) &&= (g\circ s \circ \overline {s})^\ast \eta' - f_\ast \overline s^\ast (s^\ast \eta) \\
+&= \overline s^\ast s^\ast (g^\ast \eta' -f_\ast \eta) &&= 0.
+\end{align}
+    \end{proof}
+\end{theorem}
 
+在说明 $\ell$ 是自然变换的前提下, 我们证明 \Cref{thm: shift functor} 与\Cref{thm:loop functor} 是局部化范畴的自等价.
 
+\begin{theorem}\label{thm:shift-auto}
+    $\Sigma (\Omega (\cdot)) : \mathcal{K} \to \mathcal{K}$ 是自同构.
+    \begin{proof}
+        由\Cref{thm:bi-pullback} 作交换图:
+        \begin{equation}
+            % https://q.uiver.app/#q=WzAsMTAsWzAsMCwiWF5UIl0sWzEsMCwiWF5TIl0sWzIsMCwiWCJdLFswLDEsIihYXlQpX1YiXSxbMCwyLCIoWF5UKV9VIl0sWzEsMiwiKFheVClfVSJdLFsyLDEsIlgiXSxbMSwxLCJGWCJdLFszLDAsIlxcLCJdLFswLDMsIlxcLCJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMSwyLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCwzLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzMsNCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzMsNywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNyw2LCJzX1giLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifSwiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzEsNywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNyw1LCItdF9YIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDUsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsNiwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiw4LCJcXHZhcmVwc2lsb24gX1giLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNCw5LCJcXGRlbHRhX3tYXlR9IiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&]
+	{X^T} \& {X^S} \& X \& {\,} \\
+	{(X^T)_V} \& FX \& X \\
+	{(X^T)_U} \& {(X^T)_U} \\
+	{\,}
+	\arrow[tail, from=1-1, to=1-2]
+	\arrow[tail, from=1-1, to=2-1]
+	\arrow[two heads, from=1-2, to=1-3]
+	\arrow[dashed, tail, from=1-2, to=2-2]
+	\arrow["{\varepsilon _X}", dashed, from=1-3, to=1-4]
+	\arrow[equals, from=1-3, to=2-3]
+	\arrow[dashed, tail, from=2-1, to=2-2]
+	\arrow[two heads, from=2-1, to=3-1]
+	\arrow["{s_X}", dashed, two heads, from=2-2, to=2-3]
+	\arrow["{-t_X}", dashed, two heads, from=2-2, to=3-2]
+	\arrow[equals, from=3-1, to=3-2]
+	\arrow["{\delta_{X^T}}", dashed, from=3-1, to=4-1]
+\end{tikzcd}.
+        \end{equation}
+        由定义, $\ell(\varepsilon_X) = [t_X] \circ [s_X]^{-1}$. 因此 $\ell(\varepsilon_X) : X \to \Sigma\Omega X$ 是同构. 继而证明 $\ell (\varepsilon_\cdot)$ 是自然同构. 对任意 $f : X \to Y$, 则有诱导的 $S^f$, $f^T$ 与 $(f^T)_V$. 依照与\Cref{thm:extri-frobenius-happel} 中相同的论证, 取诱导的 $Ff : FX \to FY$, 以及 $\overline{f} : X \to Y$ 与 $\overline{(f^T)_U} : (X^T)_U \to (Y^T)_U$. 特别地, $[(f^T)_U] = [\overline {(f^T)_U}]$ 且 $[f] = [\overline f]$. 对扩张元间的态射 $(f^T, \overline f) : \varepsilon_X \to \varepsilon_Y$, 由 $\ell$ 是自然变换, 得
+        \begin{equation}
+            \ell(\varepsilon _Y) \circ [\overline f] = \Sigma[f^T] \circ \ell(\varepsilon _X) = \Sigma \Omega[f] \circ \ell(\varepsilon _X).
+        \end{equation}
+        这说明 $\ell(\varepsilon_X) : X \to \Sigma \Omega X$ 是一族自然同构.
+    \end{proof}
+\end{theorem}
 
-
-
-
-
-
+\begin{theorem}
+    $(\mathcal{K}, \Sigma, \mathcal{E})$ 是三角范畴. 其中,
+    \begin{equation}
+        \mathcal{E} = \{[X] \xrightarrow {[f]}[Y] \xrightarrow {[g]}[Z] \xrightarrow {\ell (\eta)}\Sigma [X] \mid X \overset f \rightarrowtail Y \overset g \twoheadrightarrow Z \overset \eta \dashrightarrow \ \text{是 conflation}\}.
+    \end{equation}
+\begin{proof}
+    由\Cref{thm: quillen theorem} 与\Cref{cor: homotopy is ideal}, $\mathcal{K}$ 即 $\frac{\mathcal{C} \cap \mathcal{F}}{\mathcal{C} \cap \mathcal{W} \cap \mathcal{F}}$ 的骨架. 由 $\mathcal{C} \cap \mathcal{F}$ 是外三角范畴 (\Cref{thm: extension-closed is extri}), $\mathcal{C} \cap \mathcal{W} \cap \mathcal{F}$ 包含投射且内射的对象, 因此 $\frac{\mathcal{C} \cap \mathcal{F}}{\mathcal{C} \cap \mathcal{W} \cap \mathcal{F}}$ 是外三角范畴 (\Cref{thm:extri-quotient}). 由 $\Sigma$ 是自同构 (\Cref{thm:shift-auto}), 只需证明\Cref{def:lesh-transform} 诱导的自然变换 $\mathbb E([Z], [X]) \to ([Z], \Sigma [X])$ 是同构.
+    \begin{enumerate}
+        \item (满). 对任意 $[f] : [Z] \to \Sigma [X]$, 有原像 $f^\ast \delta_X$.
+        \item (单). 记 $X \overset i \rightarrowtail Y \overset p \twoheadrightarrow Z \overset \eta \dashrightarrow$. 若 $\ell (\eta) = 0$, 则存在分式 $(s,a)$ 使得 $f^\ast \delta _X= s^\ast \eta = 0$, 其中 $s \in \mathsf{TFib}$ 通过 $p$ 分解. 由 $\mathbb E(Z, \mathcal{V}) = 0$, 则存在 $V \in \mathcal{V}$ 使得 $s = [M \simeq V \oplus Z \xrightarrow {(0 \ \ 1)}Z]$. 因此 $(0 \ \ 1)$ 被 $p$ 分解, 从而 $p$ 是可裂满, 即 $\eta = 0$. 
+    \end{enumerate}
+    结合\Cref{thm:extri-with-sigma-is-triangulated}, 以上是三角范畴.
+\end{proof}  
+\end{theorem}
 
 
 
