@@ -9,26 +9,26 @@
 
 
 
-  <title>Hw3
+  <title>HW3
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="2025-09-19 作业">
+<meta name="description" content="题">
 
 
   <meta name="google-site-verification" content="abc123">
 
 
-<link rel="icon" href="/website/assets/favicon.png">
-<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
-<link rel="stylesheet" href="/website/assets/core.css">
-<link rel="canonical" href="/website/posts/HW3">
+<link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
+<link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
+<link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW3">
 <link
   rel="alternate"
   type="application/atom+xml"
   title="Jekyll Latex"
-  href="/website/feed.xml" />
+  href="/MATH1205H-04-HW/feed.xml" />
 
 
 
@@ -65,7 +65,7 @@ MathJax = {
 	<script>
   // 根据当前页URL动态修改
   if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
-    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-link').href = "/MATH1205H-04-HW";
     document.getElementById('logo-prompt').textContent = 'Back to Home';
   }
 </script>
@@ -75,9 +75,9 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>Hw3</h1>
+      <h1>HW3</h1>
       <p class="author">
-        
+        Chencheng Zhang
         <br/>
         September 19, 2025
       </p>
@@ -85,45 +85,37 @@ MathJax = {
 
     <div class="divider"></div>
 
-    <h3 id="2025-09-19-作业">2025-09-19 作业</h3>
+    <h2 id="题">题</h2>
 
-<p><strong>Ex-1</strong> 给定矩阵 $A$. 记 $ref(A)$ 是其最简行阶梯形. 试完成以下题目, 并谈谈你的体会.</p>
-
-<p>(1). 交换 $A$ 的前两行, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?</p>
-
-<ul>
-  <li>用方程组语言说, 这是交换前两个方程式.</li>
-</ul>
-
-<p>(2). 交换 $A$ 的前两列, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?</p>
-
-<ul>
-  <li>用方程组语言说, 这是交换 $x_1$ 和 $x_2$.</li>
-</ul>
-
-<p>(3). 把 $A$ 的第一行乘以常数 $\lambda$, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?</p>
-
-<ul>
-  <li>用方程组语言说, 这是把第一个方程式乘以 $\lambda$.</li>
-</ul>
-
-<p>(4). 把 $A$ 的第一列乘以常数 $\lambda$, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?</p>
-
-<ul>
-  <li>用方程组语言说, 这是换元 $x_1 := \lambda x_1$, 也可能是 $x_1 := 0$.</li>
-</ul>
-
-<p>(5). 把 $A$ 的第一行加至第二行 (仅改变矩阵第二行), 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?</p>
-
-<ul>
-  <li>用方程组语言说, 这是把方程 $(ii)$ 换成方程 $(i) + (ii)$.</li>
-</ul>
-
-<p>(6). 把 $A$ 的第一列加至第二列 (仅改变矩阵第二列), 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?</p>
-
-<ul>
-  <li>用方程组语言说, 这是换元 $x_1 := x_1 + x_2$. 例如, 原方程式由  $a_{11}x_1 +  a_{12}x_2  + \cdots$ 变为 $a_{11}x_1 + (a_{11} + a_{12})x_2  + \cdots$, 这相当于在解方程 $a_{11}(x_1+x_2) + a_{12}x_2  + \cdots$.</li>
-</ul>
+<div class="problem">
+  <p>给定矩阵 $A$. 记 $ref(A)$ 是其最简行阶梯形. 试完成以下题目, 并谈谈你的体会.</p>
+  <ol>
+    <li>交换 $A$ 的前两行, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       <ul>
+        <li>用方程组语言说, 这是交换前两个方程式.</li>
+      </ul>
+    </li>
+    <li>交换 $A$ 的前两列, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       <ul>
+        <li>用方程组语言说, 这是交换 $x_1$ 和 $x_2$.</li>
+      </ul>
+    </li>
+    <li>把 $A$ 的第一行乘以常数 $\lambda$, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       <ul>
+        <li>用方程组语言说, 这是把第一个方程式乘以 $\lambda$.</li>
+      </ul>
+    </li>
+    <li>把 $A$ 的第一列乘以常数 $\lambda$, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       <ul>
+        <li>用方程组语言说, 这是换元 $x_1 := \lambda x_1$, 也可能是 $x_1 := 0$.</li>
+      </ul>
+    </li>
+    <li>把 $A$ 的第一行加至第二行 (仅改变矩阵第二行), 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       <ul>
+        <li>用方程组语言说, 这是把方程 $(ii)$ 换成方程 $(i) + (ii)$.</li>
+      </ul>
+    </li>
+    <li>把 $A$ 的第一列加至第二列 (仅改变矩阵第二列), 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       <ul>
+        <li>用方程组语言说, 这是换元 $x_1 := x_1 + x_2$. 例如, 原方程式由 $a_{11}x_1 +  a_{12}x_2  + \cdots$ 变为 $a_{11}x_1 + (a_{11} + a_{12})x_2  + \cdots$, 这相当于在解方程 $a_{11}(x_1+x_2) + a_{12}x_2  + \cdots$.</li>
+      </ul>
+    </li>
+  </ol>
+</div>
 
   </article>
 
@@ -221,10 +213,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <div class="toc-row toc-level-3">
-      <a href="#2025-09-19-作业">
-        <span class="toc-number">0.1.</span>
-        <span class="toc-title">2025-09-19 作业</span>
+    <div class="toc-row toc-level-2">
+      <a href="#题">
+        <span class="toc-number">1.</span>
+        <span class="toc-title">题</span>
       </a>
     </div>
   
@@ -277,13 +269,13 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/website/posts/HW4-solu" title="NEXT: Hw4 Solu">&lt;&lt;</a>
+      <a class="next" href="/MATH1205H-04-HW/posts/HW4-solu" title="NEXT: HW4-solu">&lt;&lt;</a>
       <span>&middot;</span>
     
-    <a class="home" href="/website/" title="Back to Homepage">Home</a>
+    <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/website/posts/HW3-solu" title="PREV: Hw3 Solu">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW3-solu" title="PREV: HW3-solu">&gt;&gt;</a>
     
   </div>
 </main>

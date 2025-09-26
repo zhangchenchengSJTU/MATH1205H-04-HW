@@ -3,70 +3,64 @@
   <channel>
     <title>Jekyll Latex</title>
     <description>A pretty good Jekyll theme</description>
-    <link>http://localhost:4000/website</link>
+    <link>http://localhost:4000/MATH1205H-04-HW</link>
     
       
         <item>
-          <title>Hw5</title>
-          <description>&lt;h3 id=&quot;2025-09-25-作业&quot;&gt;2025-09-25 作业&lt;/h3&gt;
+          <title>HW5</title>
+          <description>&lt;h2 id=&quot;初等行变换矩阵&quot;&gt;初等行变换矩阵&lt;/h2&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Ex-1&lt;/strong&gt; 给定 $n$ 行的矩阵 $A$.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;交换 $A$ 的第 $i$ 行与第 $j$ 行, 等价于左乘一个矩阵 $S_{i,j}$. 写出该矩阵.&lt;/li&gt;
-  &lt;li&gt;将 $A$ 第 $k$ 行的各项同时乘上一个非零常数 $\lambda$, 等价于左乘一个矩阵 $D_k^{\lambda}$. 写出该矩阵.&lt;/li&gt;
-  &lt;li&gt;向 $A$ 的第 $j$ 行加上其第 $i$ 行的 $\lambda$ 倍 (这一过程仅改变第 $j$ 行, 其他行不变), 等价于左乘一个矩阵 $T_{i,j}^\lambda$. 写出该矩阵.&lt;/li&gt;
-  &lt;li&gt;求逆变换 (逆矩阵) $S_{i,j}^{-1}$, $(D_k^\lambda)^{-1}$, 以及 $(T_{i,j}^\lambda)^{-1}$.&lt;/li&gt;
-  &lt;li&gt;使用自然语言描述这三类逆变换.&lt;/li&gt;
-  &lt;li&gt;求 $S_{i,j}S_{k,l}=S_{k,l}S_{i,j}$ 的充要条件.&lt;/li&gt;
-  &lt;li&gt;求 $T_{i,j}^\lambda T_{k,l}^\mu=T_{k,l}^\mu T_{i,j}^\lambda$ 的充要条件.&lt;/li&gt;
-  &lt;li&gt;以上给出了三类矩阵. 能否通过某两类矩阵得到第三类? 请讨论这三种情况 (构造或给出反例).&lt;/li&gt;
-  &lt;li&gt;假定 $A$ 是方阵. 将以上 $S_{i,j}$, $T_{i,j}$ 与 $D_k$ 乘在 $A$ 的右侧, 效果如何?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;[!CAUTION]&lt;/p&gt;
-
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定 $n$ 行的矩阵 $A$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;交换 $A$ 的第 $i$ 行与第 $j$ 行, 等价于左乘一个矩阵 $S_{i,j}$. 写出该矩阵.&lt;/li&gt;
+    &lt;li&gt;将 $A$ 第 $k$ 行的各项同时乘上一个常数 $\lambda$, 等价于左乘一个矩阵 $D_k^{\lambda}$. 写出该矩阵.&lt;/li&gt;
+    &lt;li&gt;向 $A$ 的第 $j$ 行加上其第 $i$ 行的 $\lambda$ 倍 (这一过程仅改变第 $j$ 行, 其他行不变), 等价于左乘一个矩阵 $T_{i,j}^\lambda$. 写出该矩阵.&lt;/li&gt;
+    &lt;li&gt;求逆变换 (逆矩阵) $S_{i,j}^{-1}$, $(D_k^\lambda)^{-1}$ (如果 $\lambda \neq 0$), 以及 $(T_{i,j}^\lambda)^{-1}$.&lt;/li&gt;
+    &lt;li&gt;使用自然语言描述这三类逆变换.&lt;/li&gt;
+    &lt;li&gt;求 $S_{i,j}S_{k,l}=S_{k,l}S_{i,j}$ 的充要条件.&lt;/li&gt;
+    &lt;li&gt;求 $T_{i,j}^\lambda T_{k,l}^\mu=T_{k,l}^\mu T_{i,j}^\lambda$ 的充要条件.&lt;/li&gt;
+    &lt;li&gt;以上给出了三类矩阵. 能否通过某两类矩阵得到第三类? 请讨论这三种情况 (构造或给出反例).&lt;/li&gt;
+    &lt;li&gt;假定 $A$ 是方阵. 将以上 $S_{i,j}$, $T_{i,j}$ 与 $D_k$ 乘在 $A$ 的右侧, 效果如何?&lt;/li&gt;
+  &lt;/ol&gt;
   &lt;p&gt;注意: 6, 7, 8, 9 四问涉及一些无聊的数学归纳法, 可以认为没有太大意义.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/div&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;相抵标准型的存在性&quot;&gt;相抵标准型的存在性&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-2&lt;/strong&gt; 简单证明如下事实:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;假定方阵 $A$ 可以通过初等行变换变成 $I$ (单位矩阵), $I$ 通过同样的初等行变换变成 $B$. 请证明 $AB = I$ 且 $BA = I$.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;任何矩阵都能表示成 &lt;strong&gt;Ex-1&lt;/strong&gt; 中 $S$, $D$ 与 $T$ 这三类矩阵交替的乘积.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;证明相抵标准型的存在性: 对任意矩阵 $A$, 存在可逆矩阵 $P$ 和 $Q$ 使得
-$$
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;简单证明如下事实:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;p&gt;假定方阵 $A$ 可以通过初等行变换变成 $I$ (单位矩阵), $I$ 通过同样的初等行变换变成 $B$. 请证明 $AB = I$ 且 $BA = I$.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;任何方阵都能表示成&lt;a href=&quot;HW5#初等行变换矩阵&quot;&gt;P1&lt;/a&gt;中 $S$, $D$ 与 $T$ 这三类矩阵交替的乘积.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;证明相抵标准型的存在性: 对任意矩阵 $A$, 存在可逆矩阵 $P$ 和 $Q$ 使得 $$
    A=P\begin{pmatrix}I_r&amp;O\\O&amp;O\end{pmatrix}Q.
-   $$
-以上, $I_r$ 是 $r$ 阶单位矩阵, $O$ 表示数字 $0$ 出现的位置.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+   $$ 此处 $I_r$ 是 $r$ 阶单位矩阵, $O$ 表示数字 $0$ 出现的位置.&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;初等列变换矩阵&quot;&gt;初等列变换矩阵&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-3&lt;/strong&gt; 给定 $n$ 列的矩阵 $A$.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;交换 $A$ 的第 $i$ 列与第 $j$ 列, 等价于右乘一个矩阵. 写出该矩阵.&lt;/li&gt;
-  &lt;li&gt;将 $A$ 第 $k$ 列的各项同时乘上一个非零常数 $\lambda$, 等价于右乘一个矩阵. 写出该矩阵.&lt;/li&gt;
-  &lt;li&gt;向 $A$ 的第 $j$ 列加上其第 $i$ 列的 $\lambda$ 倍 (这一过程仅改变第 $j$ 列, 其他列不变), 等价于右乘一个矩阵. 写出该矩阵.&lt;/li&gt;
-  &lt;li&gt;求以上三类矩阵的逆变换 (逆矩阵).&lt;/li&gt;
-  &lt;li&gt;简单说明 &lt;strong&gt;Ex-3&lt;/strong&gt; 与 &lt;strong&gt;Ex-1&lt;/strong&gt; 的联系. 一个角度是矩阵转置.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定 $n$ 列的矩阵 $A$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;交换 $A$ 的第 $i$ 列与第 $j$ 列, 等价于右乘一个矩阵. 写出该矩阵.&lt;/li&gt;
+    &lt;li&gt;将 $A$ 第 $k$ 列的各项同时乘上一个非零常数 $\lambda$, 等价于右乘一个矩阵. 写出该矩阵.&lt;/li&gt;
+    &lt;li&gt;向 $A$ 的第 $j$ 列加上其第 $i$ 列的 $\lambda$ 倍 (这一过程仅改变第 $j$ 列, 其他列不变), 等价于右乘一个矩阵. 写出该矩阵.&lt;/li&gt;
+    &lt;li&gt;求以上三类矩阵的逆变换 (逆矩阵).&lt;/li&gt;
+    &lt;li&gt;简单说明&lt;a href=&quot;HW5#初等列变换矩阵&quot;&gt;P3&lt;/a&gt;与&lt;a href=&quot;HW5#初等行变换矩阵&quot;&gt;P1&lt;/a&gt;的联系. 一个角度是矩阵转置.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-09-25T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/HW5</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/HW5</guid>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW5</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW5</guid>
         </item>
       
     
@@ -76,23 +70,25 @@ $$
           <description>
 </description>
           <pubDate>2025-09-25T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/HW5-solu</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/HW5-solu</guid>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW5-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW5-solu</guid>
         </item>
       
     
       
         <item>
-          <title>Hw4</title>
-          <description>&lt;h3 id=&quot;2025-09-23-作业&quot;&gt;2025-09-23 作业&lt;/h3&gt;
+          <title>HW4</title>
+          <description>&lt;h2 id=&quot;转置&quot;&gt;转置&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;定义 (矩阵转置).&lt;/strong&gt; 给定一个 $m \times n$ 矩阵 ($m$ 横行, $n$ 纵列) 的矩阵 $A = (a_{i,j})_{1 \leq i \leq m, \ 1 \leq j \leq n}$, 定义转置矩阵 $A^T$ 为 $n \times m$ 规格的矩阵
-$$
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(矩阵转置). 给定一个 $m \times n$ 矩阵 ($m$ 横行, $n$ 纵列) 的矩阵 $A = (a_{i,j})_{1 \leq i \leq m, \ 1 \leq j \leq n}$, 定义转置矩阵 $A^T$ 为 $n \times m$ 规格的矩阵 $$
 A^T = (a'_{i,j})_{1 \leq i \leq n, \ 1 \leq j \leq m},\quad a'_{i,j}= a_{j,i}.
-$$
-例如,&lt;/p&gt;
+$$&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;p&gt;$$
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;例如,&lt;/p&gt;
+  &lt;p&gt;$$
 \begin{pmatrix}
 1 &amp; 2 &amp; 3 \\
 4 &amp; 5 &amp; 6
@@ -102,71 +98,66 @@ $$
 3 &amp; 6
 \end{pmatrix}.
 $$&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;行秩-mathjax_protectedjd0kmathjax_protected-列秩&quot;&gt;行秩 $=$ 列秩&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-1&lt;/strong&gt; 给定矩阵 $A$. 证明最简行阶梯形的非零行数等于最简列阶梯形的非零列数. 用 9-19-Ex-1 的话说, $ref(A)$ 与 $ref(A^T)$ 有相同的非零行数.&lt;/p&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定矩阵 $A$. 证明最简行阶梯形的非零行数等于最简列阶梯形的非零列数等于. 用 9-19-Ex-1 的话说, $ref(A)$ 与 $ref(A^T)$ 有相同的非零行数. &lt;br /&gt; &lt;br /&gt; 注: 对矩阵 $X$ 而言, 行变换与列变换的顺序可以交换. 因为行变换的本质是左乘某个矩阵 $A$, 列变换的本质是右乘某个矩阵 $B$. 由 $(AX)B = A(XB)$, 得证.&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;[!TIP]&lt;/p&gt;
+&lt;h2 id=&quot;巧算秩不等式&quot;&gt;巧算秩不等式&lt;/h2&gt;
 
-  &lt;p&gt;对矩阵 $X$ 而言, 行变换与列变换的顺序可以交换. 因为行变换的本质是左乘某个矩阵 $A$, 列变换的本质是右乘某个矩阵 $B$. 由 $(AX)B = A(XB)$, 得证.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;记 $r(A)$ 为矩阵 $A$ 的秩, 也就是 $ref(A)$ 的非零行数. 请证明以下式子 (最好使用线性方程组的语言).&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$r(A) = r(A^T)$ (即, &lt;strong&gt;Ex-1&lt;/strong&gt; 结论);&lt;/li&gt;
+    &lt;li&gt;$r(A) \leq r(A \quad B) \leq r(A) + r(B)$ (假定 $A$ 和 $B$ 行数相同);&lt;/li&gt;
+    &lt;li&gt;$r(A) \leq r\binom AB \leq r(A) + r(B)$ (假定 $A$ 和 $B$ 列数相同);&lt;/li&gt;
+    &lt;li&gt;$r(AB) \leq \min\{r(A), r(B)\}$ (假定 $A$ 列数等于 $B$ 行数);&lt;/li&gt;
+    &lt;li&gt;$r(A) + r(B) = r\begin{pmatrix}A&amp;O\\ O&amp;B\end{pmatrix}$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;配完全平方&quot;&gt;配完全平方&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-2&lt;/strong&gt; 记 $r(A)$ 为矩阵 $A$ 的秩, 也就是 $ref(A)$ 的非零行数. 请证明以下式子 (最好使用线性方程组的语言).&lt;/p&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;假定 $A$ 是取值为实数的矩阵. 证明 $Ax = 0$ 与 $A^T Ax = 0$ 有相同的解.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;作为惯例, 我们不使用粗体表示矩阵与向量. 请各位习惯这一点. 同样地, 考试时无需把 $v$ 写作 $\overrightarrow v$ 或 $\mathbf v$.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;$r(A) = r(A^T)$ (即, &lt;strong&gt;Ex-1&lt;/strong&gt; 结论);&lt;/li&gt;
-  &lt;li&gt;$r(A) \leq r(A \quad B) \leq r(A) + r(B)$ (假定 $A$ 和 $B$ 行数相同);&lt;/li&gt;
-  &lt;li&gt;$r(A) \leq r\binom AB \leq r(A) + r(B)$ (假定 $A$ 和 $B$ 列数相同);&lt;/li&gt;
-  &lt;li&gt;$r(AB) \leq \min\{r(A), r(B)\}$ (假定 $A$ 列数等于 $B$ 行数);&lt;/li&gt;
-  &lt;li&gt;$r(A) + r(B) = r\begin{pmatrix}A&amp;O\\ O&amp;B\end{pmatrix}$.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&quot;稍难的题目&quot;&gt;稍难的题目&lt;/h2&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Ex-3&lt;/strong&gt; 假定 $A$ 是取值为实数的矩阵. 证明 $Ax = 0$ 与 $A^T Ax = 0$ 有相同的解.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;[!NOTE]&lt;/p&gt;
-
-  &lt;p&gt;作为惯例, 我们不使用粗体表示矩阵与向量. 请各位习惯这一点.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Ex-4&lt;/strong&gt; 假设 $A$ 是 $n \times m$ 规格的矩阵, $B$ 是 $m \times p$ 规格矩阵. 请证明,&lt;/p&gt;
-
-&lt;p&gt;$$
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;假设 $A$ 是 $n \times m$ 规格的矩阵, $B$ 是 $m \times p$ 规格矩阵. 请证明,&lt;/p&gt;
+  &lt;p&gt;$$
 r(AB) + m \geq r(A) + r(B).
+$$ 提示: 如果你熟悉线性空间, 则可以从零解的角度思考问题. 只需证明&lt;/p&gt;
+  &lt;p&gt;$$
+(m-r(A)) \geq (p-r(AB)) - (p-r(B)).
 $$&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;[!TIP]&lt;/p&gt;
-
-  &lt;p&gt;从零解的角度思考问题即可. 只需证明 $(m-r(A)) \geq (p-r(AB)) - (p-r(B))$.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-09-23T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/HW4</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/HW4</guid>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW4</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW4</guid>
         </item>
       
     
       
         <item>
-          <title>Hw4 Solu</title>
-          <description>&lt;h3 id=&quot;2025-09-23-作业&quot;&gt;2025-09-23 作业&lt;/h3&gt;
+          <title>HW4-solu</title>
+          <description>&lt;h2 id=&quot;转置&quot;&gt;转置&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;定义 (矩阵转置).&lt;/strong&gt; 给定一个 $m \times n$ 矩阵 ($m$ 横行, $n$ 纵列) 的矩阵 $A = (a_{i,j})_{1 \leq i \leq m, \ 1 \leq j \leq n}$, 定义转置矩阵 $A^T$ 为 $n \times m$ 规格的矩阵
-$$
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(矩阵转置). 给定一个 $m \times n$ 矩阵 ($m$ 横行, $n$ 纵列) 的矩阵 $A = (a_{i,j})_{1 \leq i \leq m, \ 1 \leq j \leq n}$, 定义转置矩阵 $A^T$ 为 $n \times m$ 规格的矩阵 $$
 A^T = (a'_{i,j})_{1 \leq i \leq n, \ 1 \leq j \leq m},\quad a'_{i,j}= a_{j,i}.
-$$
-例如,&lt;/p&gt;
+$$&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;p&gt;$$
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;例如,&lt;/p&gt;
+  &lt;p&gt;$$
 \begin{pmatrix}
 1 &amp; 2 &amp; 3 \\
 4 &amp; 5 &amp; 6
@@ -176,90 +167,72 @@ $$
 3 &amp; 6
 \end{pmatrix}.
 $$&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;行秩-mathjax_protectedjd0kmathjax_protected-列秩&quot;&gt;行秩 $=$ 列秩&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-1&lt;/strong&gt; 给定矩阵 $A$. 证明最简行阶梯形的非零行数等于最简列阶梯形的非零列数等于. 用 9-19-Ex-1 的话说, $ref(A)$ 与 $ref(A^T)$ 有相同的非零行数.&lt;/p&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定矩阵 $A$. 证明最简行阶梯形的非零行数等于最简列阶梯形的非零列数等于. 用 9-19-Ex-1 的话说, $ref(A)$ 与 $ref(A^T)$ 有相同的非零行数. &lt;br /&gt; &lt;br /&gt; 注: 对矩阵 $X$ 而言, 行变换与列变换的顺序可以交换. 因为行变换的本质是左乘某个矩阵 $A$, 列变换的本质是右乘某个矩阵 $B$. 由 $(AX)B = A(XB)$, 得证.&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;可逆的列变换不改变非零行数. 记 $A'$ 是 $A$ 的最简列阶梯形, 则 $ref(A)$ 与 $ref(A')$ 有相同的非零行数. 注意到 $ref(A') = \begin{pmatrix}I_r &amp; O \\ O &amp; O\end{pmatrix}$, $r$ 是列阶梯形中的主元 $1$ 的数量, 从而也是 $A'$ 的非零列数.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;[!TIP]&lt;/p&gt;
+&lt;h2 id=&quot;巧算秩不等式&quot;&gt;巧算秩不等式&lt;/h2&gt;
 
-  &lt;p&gt;对矩阵 $X$ 而言, 行变换与列变换的顺序可以交换. 因为行变换的本质是左乘某个矩阵 $A$, 列变换的本质是右乘某个矩阵 $B$. 由 $(AX)B = A(XB)$, 得证.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;记 $r(A)$ 为矩阵 $A$ 的秩, 也就是 $ref(A)$ 的非零行数. 请证明以下式子 (最好使用线性方程组的语言).&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$r(A) = r(A^T)$ (即, &lt;strong&gt;Ex-1&lt;/strong&gt; 结论);&lt;/li&gt;
+    &lt;li&gt;$r(A) \leq r(A \quad B) \leq r(A) + r(B)$ (假定 $A$ 和 $B$ 行数相同);&lt;/li&gt;
+    &lt;li&gt;$r(A) \leq r\binom AB \leq r(A) + r(B)$ (假定 $A$ 和 $B$ 列数相同);&lt;/li&gt;
+    &lt;li&gt;$r(AB) \leq \min\{r(A), r(B)\}$ (假定 $A$ 列数等于 $B$ 行数);&lt;/li&gt;
+    &lt;li&gt;$r(A) + r(B) = r\begin{pmatrix}A&amp;O\\ O&amp;B\end{pmatrix}$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;ol&gt;
+      &lt;li&gt;依照 &lt;strong&gt;Ex-1&lt;/strong&gt; 即可 ($A' = ref(A^T)^T$).&lt;/li&gt;
+      &lt;li&gt;(同时证明 (2) 与 (3) 的左侧 $\leq$). $ref(A)$ 的非零行数不超过 $ref(A \quad B)$ 非零行数, 从而得证. 实际上, 这也证明了 (3) 的左侧 $\leq$, 因为 $$
+   r(A) = r(A^T) \leq r(A^T \quad B^T) = r(\binom AB^T) = r(\binom AB).
+   $$&lt;/li&gt;
+      &lt;li&gt;(同时证明 (2) 与 (3) 的右侧 $\leq$). 注意到 $ref(\binom AB) = ref(\binom{ref(A)}{ref(B)})$, $\binom{ref(A)}{ref(B)}$ 的非零行数是 $ref(A)$ 与 $ref(B)$ 非零行数之和. 对矩阵 $X$, $ref(X)$ 的非零行数不超过 $X$ 的行数, 从而得证. 实际上, 这也证明了 (2) 的右侧 $\leq$, 因为 $$
+   r(A \quad B) = r((A \quad B)^T) = r(\binom{A^T}{B^T}) \leq r(A^T) + r(B^T) = r(A) + r(B).
+   $$&lt;/li&gt;
+      &lt;li&gt;$Bx = 0$ 蕴含 $ABx = 0$, 从而 $ref(AB)$ 主元的数量不超过 $ref(B)$ 主元的数量, 即 $r(AB) \leq r(B)$. 另一方面, $$
+   r(AB) = r((AB)^T) = r(B^T A^T) \leq r(A^T) = r(A).
+   $$&lt;/li&gt;
+      &lt;li&gt;$ref \begin{pmatrix}A&amp;O\\ O&amp;B\end{pmatrix} = ref\begin{pmatrix}ref(A)&amp;O\\ O&amp;ref(B)\end{pmatrix}$, 右侧非零函数等于 $ref(A)$ 与 $ref(B)$ 非零行数之和.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;解答&lt;/strong&gt; 可逆的列变换不改变非零行数. 记 $A'$ 是 $A$ 的最简列阶梯形, 则 $ref(A)$ 与 $ref(A')$ 有相同的非零行数. 注意到 $ref(A') = \begin{pmatrix}I_r &amp; O \\ O &amp; O\end{pmatrix}$, $r$ 是列阶梯形中的主元 $1$ 的数量, 从而也是 $A'$ 的非零列数.&lt;/p&gt;
+&lt;h2 id=&quot;配完全平方&quot;&gt;配完全平方&lt;/h2&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Ex-2&lt;/strong&gt; 记 $r(A)$ 为矩阵 $A$ 的秩, 也就是 $ref(A)$ 的非零行数. 请证明以下式子 (最好使用线性方程组的语言).&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;$r(A) = r(A^T)$ (即, &lt;strong&gt;Ex-1&lt;/strong&gt; 结论);&lt;/li&gt;
-  &lt;li&gt;$r(A) \leq r(A \quad B) \leq r(A) + r(B)$ (假定 $A$ 和 $B$ 行数相同);&lt;/li&gt;
-  &lt;li&gt;$r(A) \leq r\binom AB \leq r(A) + r(B)$ (假定 $A$ 和 $B$ 列数相同);&lt;/li&gt;
-  &lt;li&gt;$r(AB) \leq \min\{r(A), r(B)\}$ (假定 $A$ 列数等于 $B$ 行数);&lt;/li&gt;
-  &lt;li&gt;$r(A) + r(B) = r\begin{pmatrix}A&amp;O\\ O&amp;B\end{pmatrix}$.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;解答&lt;/strong&gt; (1). 依照 &lt;strong&gt;Ex-1&lt;/strong&gt; 即可 ($A' = ref(A^T)^T$).&lt;/p&gt;
-
-&lt;p&gt;((2) 与 (3) 的左侧 $\leq$). $ref(A)$ 的非零行数不超过 $ref(A \quad B)$ 非零行数, 从而得证. 实际上, 这也证明了 (3) 的左侧 $\leq$, 因为&lt;/p&gt;
-
-&lt;p&gt;$$
-r(A) = r(A^T) \leq r(A^T \quad B^T) = r(\binom AB^T) = r(\binom AB).
-$$&lt;/p&gt;
-
-&lt;p&gt;((2) 与 (3) 的右侧 $\leq$). 注意到 $ref(\binom AB) = ref(\binom{ref(A)}{ref(B)})$, $\binom{ref(A)}{ref(B)}$ 的非零行数是 $ref(A)$ 与 $ref(B)$ 非零行数之和. 对矩阵 $X$, $ref(X)$ 的非零行数不超过 $X$ 的行数, 从而得证. 实际上, 这也证明了 (2) 的右侧 $\leq$, 因为&lt;/p&gt;
-
-&lt;p&gt;$$
-r(A \quad B) = r((A \quad B)^T) = r(\binom{A^T}{B^T}) \leq r(A^T) + r(B^T) = r(A) + r(B).
-$$&lt;/p&gt;
-
-&lt;p&gt;(4). $Bx = 0$ 蕴含 $ABx = 0$, 从而 $ref(AB)$ 主元的数量不超过 $ref(B)$ 主元的数量, 即 $r(AB) \leq r(B)$. 另一方面,&lt;/p&gt;
-
-&lt;p&gt;$$
-r(AB) = r((AB)^T) = r(B^T A^T) \leq r(A^T) = r(A).
-$$&lt;/p&gt;
-
-&lt;p&gt;(5). $ref \begin{pmatrix}A&amp;O\\ O&amp;B\end{pmatrix} = ref\begin{pmatrix}ref(A)&amp;O\\ O&amp;ref(B)\end{pmatrix}$, 右侧非零函数等于 $ref(A)$ 与 $ref(B)$ 非零行数之和.&lt;/p&gt;
-
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Ex-3&lt;/strong&gt; 假定 $A$ 是取值为实数的矩阵. 证明 $Ax = 0$ 与 $A^T Ax = 0$ 有相同的解.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;[!NOTE]&lt;/p&gt;
-
-  &lt;p&gt;作为惯例, 我们不使用粗体表示矩阵与向量. 请各位习惯这一点.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;解答&lt;/strong&gt; 对列向量 $v$, $v= 0$ 当且仅当 $v^Tv = 0$. 这说明&lt;/p&gt;
-
-&lt;p&gt;$$
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;假定 $A$ 是取值为实数的矩阵. 证明 $Ax = 0$ 与 $A^T Ax = 0$ 有相同的解.&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;作为惯例, 我们不使用粗体表示矩阵与向量. 请各位习惯这一点. 同样地, 考试时无需把 $v$ 写作 $\overrightarrow v$ 或 $\mathbf v$.&lt;/strong&gt;&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;对列向量 $v$, $v= 0$ 当且仅当 $v^Tv = 0$. 这说明&lt;/p&gt;
+    &lt;p&gt;$$
 (A^T Ax = 0) \implies (x^T (A^T A x) = 0) \implies ((Ax)^T(Ax) = 0) \implies (A x = 0).
 $$&lt;/p&gt;
+    &lt;p&gt;另一方面, 显然 $(Ax = 0) \implies (A^TAx) = 0$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;p&gt;另一方面, 显然 $(Ax = 0) \implies (A^TAx) = 0$.&lt;/p&gt;
+&lt;h2 id=&quot;稍难的题目&quot;&gt;稍难的题目&lt;/h2&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Ex-4&lt;/strong&gt; 假设 $A$ 是 $n \times m$ 规格的矩阵, $B$ 是 $m \times p$ 规格矩阵. 请证明,&lt;/p&gt;
-
-&lt;p&gt;$$
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;假设 $A$ 是 $n \times m$ 规格的矩阵, $B$ 是 $m \times p$ 规格矩阵. 请证明,&lt;/p&gt;
+  &lt;p&gt;$$
 r(AB) + m \geq r(A) + r(B).
+$$ 提示: 如果你熟悉线性空间, 则可以从零解的角度思考问题. 只需证明&lt;/p&gt;
+  &lt;p&gt;$$
+(m-r(A)) \geq (p-r(AB)) - (p-r(B)).
 $$&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;[!TIP]&lt;/p&gt;
-
-  &lt;p&gt;从零解的角度思考问题即可. 只需证明 $(m-r(A)) \geq (p-r(AB)) - (p-r(B))$.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;解答&lt;/strong&gt; 简单地说, 左侧是 $A$ 零空间的维数, 右侧是 $A$ 的零空间中一切形如 $Bv$ 的向量所构成的空间的维数.&lt;/p&gt;
-
-&lt;p&gt;也可以从阶梯形的角度解答问题.&lt;/p&gt;
-
-&lt;p&gt;$$
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;简单地说, 左侧是 $A$ 零空间的维数, 右侧是 $A$ 的零空间中一切形如 $Bv$ 的向量所构成的空间的维数. &lt;br /&gt; &lt;br /&gt; 也可以从阶梯形的角度解答问题, 请看以下技巧:&lt;/p&gt;
+    &lt;p&gt;$$
 \begin{align*}
 r(AB) + m &amp; = r\begin{pmatrix}AB &amp; O\\ O&amp;I\end{pmatrix} \\
 (\text{作可逆列变换})\quad &amp; = r\begin{pmatrix}AB &amp; O\\ B&amp;I\end{pmatrix} \\
@@ -269,389 +242,276 @@ r(AB) + m &amp; = r\begin{pmatrix}AB &amp; O\\ O&amp;I\end{pmatrix} \\
 &amp; = r(A) + r(B).
 \end{align*}
 $$&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-09-23T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/HW4-solu</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/HW4-solu</guid>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW4-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW4-solu</guid>
         </item>
       
     
       
         <item>
-          <title>Hw3</title>
-          <description>&lt;h3 id=&quot;2025-09-19-作业&quot;&gt;2025-09-19 作业&lt;/h3&gt;
+          <title>HW3</title>
+          <description>&lt;h2 id=&quot;题&quot;&gt;题&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-1&lt;/strong&gt; 给定矩阵 $A$. 记 $ref(A)$ 是其最简行阶梯形. 试完成以下题目, 并谈谈你的体会.&lt;/p&gt;
-
-&lt;p&gt;(1). 交换 $A$ 的前两行, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;用方程组语言说, 这是交换前两个方程式.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(2). 交换 $A$ 的前两列, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;用方程组语言说, 这是交换 $x_1$ 和 $x_2$.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(3). 把 $A$ 的第一行乘以常数 $\lambda$, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;用方程组语言说, 这是把第一个方程式乘以 $\lambda$.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(4). 把 $A$ 的第一列乘以常数 $\lambda$, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;用方程组语言说, 这是换元 $x_1 := \lambda x_1$, 也可能是 $x_1 := 0$.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(5). 把 $A$ 的第一行加至第二行 (仅改变矩阵第二行), 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;用方程组语言说, 这是把方程 $(ii)$ 换成方程 $(i) + (ii)$.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(6). 把 $A$ 的第一列加至第二列 (仅改变矩阵第二列), 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;用方程组语言说, 这是换元 $x_1 := x_1 + x_2$. 例如, 原方程式由  $a_{11}x_1 +  a_{12}x_2  + \cdots$ 变为 $a_{11}x_1 + (a_{11} + a_{12})x_2  + \cdots$, 这相当于在解方程 $a_{11}(x_1+x_2) + a_{12}x_2  + \cdots$.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定矩阵 $A$. 记 $ref(A)$ 是其最简行阶梯形. 试完成以下题目, 并谈谈你的体会.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;交换 $A$ 的前两行, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       &lt;ul&gt;
+        &lt;li&gt;用方程组语言说, 这是交换前两个方程式.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;交换 $A$ 的前两列, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       &lt;ul&gt;
+        &lt;li&gt;用方程组语言说, 这是交换 $x_1$ 和 $x_2$.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;把 $A$ 的第一行乘以常数 $\lambda$, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       &lt;ul&gt;
+        &lt;li&gt;用方程组语言说, 这是把第一个方程式乘以 $\lambda$.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;把 $A$ 的第一列乘以常数 $\lambda$, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       &lt;ul&gt;
+        &lt;li&gt;用方程组语言说, 这是换元 $x_1 := \lambda x_1$, 也可能是 $x_1 := 0$.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;把 $A$ 的第一行加至第二行 (仅改变矩阵第二行), 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       &lt;ul&gt;
+        &lt;li&gt;用方程组语言说, 这是把方程 $(ii)$ 换成方程 $(i) + (ii)$.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;把 $A$ 的第一列加至第二列 (仅改变矩阵第二列), 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       &lt;ul&gt;
+        &lt;li&gt;用方程组语言说, 这是换元 $x_1 := x_1 + x_2$. 例如, 原方程式由 $a_{11}x_1 +  a_{12}x_2  + \cdots$ 变为 $a_{11}x_1 + (a_{11} + a_{12})x_2  + \cdots$, 这相当于在解方程 $a_{11}(x_1+x_2) + a_{12}x_2  + \cdots$.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-09-19T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/HW3</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/HW3</guid>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW3</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW3</guid>
         </item>
       
     
       
         <item>
-          <title>Hw3 Solu</title>
-          <description>&lt;h3 id=&quot;2025-09-19-作业&quot;&gt;2025-09-19 作业&lt;/h3&gt;
+          <title>HW3-solu</title>
+          <description>&lt;h2 id=&quot;题&quot;&gt;题&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-1&lt;/strong&gt; 给定矩阵 $A$. 记 $ref(A)$ 是其最简行阶梯形. 试完成以下题目, 并谈谈你的体会.&lt;/p&gt;
-
-&lt;p&gt;(1). 交换 $A$ 的前两行, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;用方程组语言说, 这是交换前两个方程式.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(2). 交换 $A$ 的前两列, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;用方程组语言说, 这是交换 $x_1$ 和 $x_2$.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(3). 把 $A$ 的第一行乘以常数 $\lambda$, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;用方程组语言说, 这是把第一个方程式乘以 $\lambda$.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(4). 把 $A$ 的第一列乘以常数 $\lambda$, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;用方程组语言说, 这是换元 $x_1 := \lambda x_1$, 也可能是 $x_1 := 0$.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(5). 把 $A$ 的第一行加至第二行 (仅改变矩阵第二行), 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;用方程组语言说, 这是把方程 $(ii)$ 换成方程 $(i) + (ii)$.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;(6). 把 $A$ 的第一列加至第二列 (仅改变矩阵第二列), 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;用方程组语言说, 这是换元 $x_1 := x_1 + x_2$. 例如, 原方程式由  $a_{11}x_1 +  a_{12}x_2  + \cdots$ 变为 $a_{11}x_1 + (a_{11} + a_{12})x_2  + \cdots$, 这相当于在解方程 $a_{11}(x_1+x_2) + a_{12}x_2  + \cdots$.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;解答&lt;/strong&gt; 行变换不改变最简行阶梯形. 列变换未必. 请注意, &lt;strong&gt;交换 $ref(A)$ 的前两列, 或是删去 $ref(A)$ 的第一列, 其结果未必是最简行阶梯形&lt;/strong&gt;. 对问题 (6), 将 $ref(A)$ 的第一列加至第二列, 其结果仍是最简行阶梯形 (比较 9-18-Ex-2 的算法).&lt;/p&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定矩阵 $A$. 记 $ref(A)$ 是其最简行阶梯形. 试完成以下题目, 并谈谈你的体会.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;交换 $A$ 的前两行, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       &lt;ul&gt;
+        &lt;li&gt;用方程组语言说, 这是交换前两个方程式.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;交换 $A$ 的前两列, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       &lt;ul&gt;
+        &lt;li&gt;用方程组语言说, 这是交换 $x_1$ 和 $x_2$.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;把 $A$ 的第一行乘以常数 $\lambda$, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       &lt;ul&gt;
+        &lt;li&gt;用方程组语言说, 这是把第一个方程式乘以 $\lambda$.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;把 $A$ 的第一列乘以常数 $\lambda$, 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       &lt;ul&gt;
+        &lt;li&gt;用方程组语言说, 这是换元 $x_1 := \lambda x_1$, 也可能是 $x_1 := 0$.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;把 $A$ 的第一行加至第二行 (仅改变矩阵第二行), 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       &lt;ul&gt;
+        &lt;li&gt;用方程组语言说, 这是把方程 $(ii)$ 换成方程 $(i) + (ii)$.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;把 $A$ 的第一列加至第二列 (仅改变矩阵第二列), 得 $A'$, 试问 $ref(A)$ 与 $ref(A')$ 的关系?       &lt;ul&gt;
+        &lt;li&gt;用方程组语言说, 这是换元 $x_1 := x_1 + x_2$. 例如, 原方程式由 $a_{11}x_1 +  a_{12}x_2  + \cdots$ 变为 $a_{11}x_1 + (a_{11} + a_{12})x_2  + \cdots$, 这相当于在解方程 $a_{11}(x_1+x_2) + a_{12}x_2  + \cdots$.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;行变换不改变最简行阶梯形. 列变换未必. 请注意, &lt;strong&gt;交换 $ref(A)$ 的前两列, 或是删去 $ref(A)$ 的第一列, 其结果未必是最简行阶梯形&lt;/strong&gt;. 对问题 (6), 将 $ref(A)$ 的第一列加至第二列, 其结果仍是最简行阶梯形 (比较 &lt;a href=&quot;HW2-solu#行阶梯形存在且唯一&quot;&gt;9-18-P2&lt;/a&gt; 的算法).&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-09-19T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/HW3-solu</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/HW3-solu</guid>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW3-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW3-solu</guid>
         </item>
       
     
       
         <item>
-          <title>Hw2</title>
-          <description>&lt;h3 id=&quot;2025-09-18-作业&quot;&gt;2025-09-18 作业&lt;/h3&gt;
-
-&lt;p&gt;自学任务:&lt;/p&gt;
+          <title>HW2</title>
+          <description>&lt;h2 id=&quot;自学任务&quot;&gt;自学任务&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;了解域的定义, 以及域和数域有何区别?&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;了解行阶梯形的定义. 此处的行阶梯形的拐角处均是 $1$, 这类 $1$ 的左/上/下位置均是 $0$. 有时称作最简行阶梯形 (reduced row échelon form).&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;[!NOTE]&lt;/p&gt;
-
-      &lt;p&gt;可以参考&lt;a href=&quot;https://czhang271828.github.io/Linear-algebra/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/%E8%B6%85%E6%B8%85%E6%99%B0%E7%89%88%EF%BC%81%EF%BC%81%E5%BC%A0%E8%B4%A4%E7%A7%91%20%E8%AE%B8%E7%94%AB%E5%8D%8E%20%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%EF%BC%882ed%EF%BC%89(1).pdf&quot;&gt;&lt;u&gt;**此书**&lt;/u&gt;&lt;/a&gt;的第 88 页 (PDF 的第 96 页), 理解 &lt;strong&gt;(既约) 阶梯形方程组&lt;/strong&gt;这一定义.&lt;/p&gt;
-    &lt;/blockquote&gt;
+  &lt;li&gt;了解行阶梯形的定义. 此处的行阶梯形的拐角处均是 $1$, 这类 $1$ 的左/上/下位置均是 $0$. 有时称作最简行阶梯形 (reduced row échelon form).
+    &lt;ul&gt;
+      &lt;li&gt;可以参考&lt;a href=&quot;https://czhang271828.github.io/Linear-algebra/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/%E8%B6%85%E6%B8%85%E6%99%B0%E7%89%88%EF%BC%81%EF%BC%81%E5%BC%A0%E8%B4%A4%E7%A7%91%20%E8%AE%B8%E7%94%AB%E5%8D%8E%20%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%EF%BC%882ed%EF%BC%89(1).pdf&quot;&gt;&lt;strong&gt;此书&lt;/strong&gt;&lt;/a&gt;的第 88 页 (PDF 的第 96 页), 理解 &lt;strong&gt;(既约) 阶梯形方程组&lt;/strong&gt;这一定义.&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;了解方程组秩的定义. 秩就是最简行阶梯形中非零行数.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;数域&quot;&gt;数域&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-1&lt;/strong&gt; 求包含有理数 $\mathbb Q$ 和 $\pi$ 的最小的数域.&lt;/p&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;求包含有理数 $\mathbb Q$ 和 $\pi$ 的最小的数域.&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;行阶梯形存在且唯一&quot;&gt;行阶梯形存在且唯一&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-2&lt;/strong&gt; 最简行阶梯形 (reduced row échelon form) 是否总存在? 若存在, 是否唯一?&lt;/p&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;最简行阶梯形 (reduced row échelon form) 是否总存在? 若存在, 是否唯一?&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;解方程&quot;&gt;解方程&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-3&lt;/strong&gt; 使用课堂方法求解以下方程组, &lt;strong&gt;应当标明每步行变换方式&lt;/strong&gt;. 请视个人时间与能力, 自行选题完成.&lt;/p&gt;
-
-&lt;p&gt;问题 1. $\left\{\begin{matrix}
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;使用课堂方法求解以下方程组, &lt;strong&gt;应当标明每步行变换方式&lt;/strong&gt;. 请视个人时间与能力, 自行选题完成.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;见&lt;a href=&quot;https://czhang271828.github.io/Linear-algebra/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/%E8%B6%85%E6%B8%85%E6%99%B0%E7%89%88%EF%BC%81%EF%BC%81%E5%BC%A0%E8%B4%A4%E7%A7%91%20%E8%AE%B8%E7%94%AB%E5%8D%8E%20%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%EF%BC%882ed%EF%BC%89(1).pdf&quot;&gt;&lt;strong&gt;此书&lt;/strong&gt;&lt;/a&gt; 3.3 习题与解答部分 (书中的第 97 页, PDF 的第 105 页).&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;问题 1. $\left\{\begin{matrix}
 2x_1 &amp; +x_2 &amp; +x_3&amp; = &amp; 2,\\
 x_1 &amp; +3x_2 &amp; +x_3&amp; = &amp; 5,\\
 x_1 &amp; +x_2 &amp; +5x_3&amp; = &amp; -7,\\
 2x_1 &amp; +3x_2 &amp; -3x_3&amp; = &amp; 14.
-\end{matrix}\right.$&lt;/p&gt;
-
-&lt;p&gt;问题 2. $\left\{\begin{matrix}
+\end{matrix}\right.$ &lt;br /&gt; &lt;br /&gt; 问题 2. $\left\{\begin{matrix}
 6x_1 &amp; +6x_2 &amp; +5x_3 &amp;+ 18x_4 &amp;+20x_5 &amp; = &amp; 14,\\
 10x_1 &amp; +9x_2 &amp; +7x_3 &amp;+ 24x_4 &amp;+30x_5 &amp; = &amp; 18,\\
 12x_1 &amp; +12x_2 &amp; +13x_3 &amp;+ 27x_4 &amp;+35x_5 &amp; = &amp; 32,\\
 8x_1 &amp; +6x_2 &amp; +6x_3 &amp;+ 15x_4 &amp;+20x_5 &amp; = &amp; 16,\\
 4x_1 &amp; +5x_2 &amp; +4x_3 &amp;+ 15x_4 &amp;+15x_5 &amp; = &amp; 11.
-\end{matrix}\right.$&lt;/p&gt;
-
-&lt;p&gt;问题 3. $\left\{\begin{matrix}
+\end{matrix}\right.$ &lt;br /&gt; &lt;br /&gt; 问题 3. $\left\{\begin{matrix}
 2x_1 &amp; +7x_2 &amp; +3x_3 &amp;+ x_4 &amp;= &amp; 5,\\
 x_1 &amp; +3x_2 &amp; +5x_3 &amp; -2x_4 &amp;= &amp; 3,\\
 x_1 &amp; +5x_2 &amp; -9x_3 &amp; +8x_4 &amp;= &amp; 1,\\
 5x_1 &amp; +18x_2 &amp; 4x_3 &amp; +5x_4 &amp;= &amp; 12.
-\end{matrix}\right.$&lt;/p&gt;
-
-&lt;p&gt;问题 4. $\left\{\begin{matrix}
+\end{matrix}\right.$ &lt;br /&gt; &lt;br /&gt; 问题 4. $\left\{\begin{matrix}
 2x_1 &amp; -x_2 &amp; +x_3 &amp;- x_4 &amp; = &amp; 3,\\
 4x_1 &amp; -2x_2 &amp; -2x_3 &amp;+3x_4 &amp; = &amp; 2,\\
 2x_1 &amp; -x_2 &amp; +5x_3 &amp; -6x_4 &amp; = &amp; 1,\\
 2x_1 &amp; -x_2 &amp; -3x_3 &amp; +4x_4 &amp; = &amp; 5.
 \end{matrix}\right.$&lt;/p&gt;
-
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;问题 1. 的解答: 可以先将方程组转化成增广矩阵, 也可以直接操作方程组. 以下 $:=$ 是赋值符号, 定义作 $\text{``新} := \text{旧''}$.
-$$
-\begin{align*}
-&amp;\left\{\begin{matrix}
-2x_1 &amp; +x_2 &amp; +x_3&amp; = &amp; 2,\\
-x_1 &amp; +3x_2 &amp; +x_3&amp; = &amp; 5,\\
-x_1 &amp; +x_2 &amp; +5x_3&amp; = &amp; -7,\\
-2x_1 &amp; +3x_2 &amp; -3x_3&amp; = &amp; 14.
-\end{matrix}\right.\\[6pt]
-
-\xrightarrow {\begin{matrix}(r_1;r_2;r_3):= (r_3;r_1;r_2)\end{matrix}} 
-
-&amp; \left\{\begin{matrix}
-x_1 &amp; +x_2 &amp; +5x_3&amp; = &amp; -7,\\
-2x_1 &amp; +x_2 &amp; +x_3&amp; = &amp; 2,\\
-x_1 &amp; +3x_2 &amp; +x_3&amp; = &amp; 5,\\
-2x_1 &amp; +3x_2 &amp; -3x_3&amp; = &amp; 14.
-\end{matrix}\right.\\[6pt]
-
-\xrightarrow {\begin{matrix}r_2 := r_2 - 2r_1\\r_3 := r_3 - r_1\\r_4:= r_4 - 2r_1\end{matrix}} \ 
-
-&amp; \left\{\begin{matrix}
-x_1 &amp; +x_2 &amp; +5x_3&amp; = &amp; -7,\\
- &amp; -x_2 &amp; -9x_3&amp; = &amp; 16,\\
- &amp; +2x_2 &amp; -4x_3&amp; = &amp; 12,\\
- &amp; +x_2 &amp; -13x_3&amp; = &amp; 28.
-\end{matrix}\right.\\[6pt]
-
-\xrightarrow {\begin{matrix}r_3 := r_3 + 2r_2\\ r_4 := r_4 + r_2\end{matrix}} \ 
-
-&amp; \left\{\begin{matrix}
-x_1 &amp; +x_2 &amp; +5x_3&amp; = &amp; -7,\\
- &amp; -x_2 &amp; -9x_3&amp; = &amp; 16,\\
- &amp;  &amp; -22x_3&amp; = &amp; 44,\\
- &amp;  &amp; -22x_3&amp; = &amp; 44.
-\end{matrix}\right.\\[6pt]
-
-\xrightarrow {\begin{matrix}r_4 := r_4 - r_3\end{matrix}} \ 
-
-&amp; \left\{\begin{matrix}
-x_1 &amp; +x_2 &amp; +5x_3&amp; = &amp; -7,\\
- &amp; -x_2 &amp; -9x_3&amp; = &amp; 16,\\
- &amp;  &amp; -22x_3&amp; = &amp; 44.
-\end{matrix}\right.\\[6pt]
-
-\xrightarrow {\begin{matrix}r_2 := - r_2 \\ r_3 = \frac{-1}{22}r_3\end{matrix}} \ 
-
-&amp; \left\{\begin{matrix}
-x_1 &amp; +x_2 &amp; +5x_3&amp; = &amp; -7,\\
- &amp; x_2 &amp; +9x_3&amp; = &amp; -16,\\
- &amp;  &amp; x_3&amp; = &amp; -2.
-\end{matrix}\right.\\[6pt]
-
-\xrightarrow {\begin{matrix}r_2 := r_2 - 9r_3\end{matrix}} \ 
-
-&amp; \left\{\begin{matrix}
-x_1 &amp; +x_2 &amp; +5x_3&amp; = &amp; -7,\\
- &amp; x_2 &amp; &amp; = &amp; 2,\\
- &amp;  &amp; x_3&amp; = &amp; -2.
-\end{matrix}\right.\\[6pt]
-
-\xrightarrow {\begin{matrix}r_1 := r_1 - r_2- 5r_3\end{matrix}} \ 
-
-&amp; \left\{\begin{matrix}
-x_1 &amp; &amp; &amp; = &amp; 1,\\
- &amp; x_2 &amp; &amp; = &amp; 2,\\
- &amp;  &amp; x_3&amp; = &amp; -2.
-\end{matrix}\right.
-\end{align*}
-$$&lt;/p&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-09-18T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/HW2</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/HW2</guid>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW2</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW2</guid>
         </item>
       
     
       
         <item>
-          <title>Hw2 Solu</title>
-          <description>&lt;h3 id=&quot;2025-09-18-作业&quot;&gt;2025-09-18 作业&lt;/h3&gt;
-
-&lt;p&gt;自学任务:&lt;/p&gt;
+          <title>HW2-solu</title>
+          <description>&lt;h2 id=&quot;自学任务&quot;&gt;自学任务&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;了解域的定义, 以及域和数域有何区别?&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;了解行阶梯形的定义. 此处的行阶梯形的拐角处均是 $1$, 这类 $1$ 的左/上/下位置均是 $0$. 有时称作最简行阶梯形 (reduced row échelon form).&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;[!NOTE]&lt;/p&gt;
-
-      &lt;p&gt;可以参考&lt;a href=&quot;https://czhang271828.github.io/Linear-algebra/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/%E8%B6%85%E6%B8%85%E6%99%B0%E7%89%88%EF%BC%81%EF%BC%81%E5%BC%A0%E8%B4%A4%E7%A7%91%20%E8%AE%B8%E7%94%AB%E5%8D%8E%20%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%EF%BC%882ed%EF%BC%89(1).pdf&quot;&gt;&lt;strong&gt;此书&lt;/strong&gt;&lt;/a&gt;的第 88 页 (PDF 的第 96 页), 理解 &lt;strong&gt;(既约) 阶梯形方程组&lt;/strong&gt;这一定义.&lt;/p&gt;
-    &lt;/blockquote&gt;
+  &lt;li&gt;了解行阶梯形的定义. 此处的行阶梯形的拐角处均是 $1$, 这类 $1$ 的左/上/下位置均是 $0$. 有时称作最简行阶梯形 (reduced row échelon form).
+    &lt;ul&gt;
+      &lt;li&gt;可以参考&lt;a href=&quot;https://czhang271828.github.io/Linear-algebra/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/%E8%B6%85%E6%B8%85%E6%99%B0%E7%89%88%EF%BC%81%EF%BC%81%E5%BC%A0%E8%B4%A4%E7%A7%91%20%E8%AE%B8%E7%94%AB%E5%8D%8E%20%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%EF%BC%882ed%EF%BC%89(1).pdf&quot;&gt;&lt;strong&gt;此书&lt;/strong&gt;&lt;/a&gt;的第 88 页 (PDF 的第 96 页), 理解 &lt;strong&gt;(既约) 阶梯形方程组&lt;/strong&gt;这一定义.&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;了解方程组秩的定义. 秩就是最简行阶梯形中非零行数.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;数域&quot;&gt;数域&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-1&lt;/strong&gt; 求包含有理数 $\mathbb Q$ 和 $\pi$ 的最小的数域.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;解答&lt;/strong&gt;. 这个数域必须包含一切 $f(\pi)$, 其中 $f$ 是有理系数的多项式.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;引理&lt;/strong&gt;. $f$ 是非零有理系数多项式, 则 $f(\pi) \neq 0$.
-&lt;strong&gt;证明&lt;/strong&gt;. 大家愿意相信即可. 这是比无理数复杂一些的性质.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;因此, 该数域必须包含所有 $\frac{f(\pi)}{g(\pi)}$, 其中 $g$ 是有理系数的非零多项式, $f$ 是有理系数多项式. 最后说明, 集合
-$$
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;求包含有理数 $\mathbb Q$ 和 $\pi$ 的最小的数域.&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;这个数域必须包含一切 $f(\pi)$, 其中 $f$ 是有理系数的多项式.&lt;/p&gt;
+    &lt;div class=&quot;lemma&quot;&gt;
+      &lt;p&gt;$f$ 是非零有理系数多项式, 则 $f(\pi) \neq 0$.&lt;/p&gt;
+      &lt;div class=&quot;proof&quot;&gt;
+        &lt;p&gt;大家愿意相信即可. 这是比无理数复杂一些的性质.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;因此, 该数域必须包含所有 $\frac{f(\pi)}{g(\pi)}$, 其中 $g$ 是有理系数的非零多项式, $f$ 是有理系数多项式. 最后说明, 集合 $$
 X:= \left\{\frac{f(\pi)}{g(\pi)} \mid f,g \ \text{是有理系数多项式}, g \neq 0 \right\}
-$$
-是个数域即可.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;(包含 $0$ 与 $1$). 显然 $0,1 \in X$.&lt;/li&gt;
-  &lt;li&gt;(加法封闭). $\frac{f_1(\pi)}{g_1(\pi)} + \frac{f_2(\pi)}{g_2(\pi)} = \frac{f_1(\pi)g_2(\pi) + f_2(\pi)g_1 (\pi)}{g_1(\pi)g_2(\pi)} \in X$.&lt;/li&gt;
-  &lt;li&gt;(减法封闭). 注意到 $- \frac{f(\pi)}{g(\pi)} \in X$. 验证对减法封闭, 就是验证对加法和相反数封闭.&lt;/li&gt;
-  &lt;li&gt;(乘法封闭). $\frac{f_1(\pi)}{g_1(\pi)} \cdot \frac{f_2(\pi)}{g_2(\pi)} = \frac{f_1(\pi)f_2(\pi)}{g_1(\pi)g_2(\pi)} \in X$.&lt;/li&gt;
-  &lt;li&gt;(除法封闭). 对非零的数, 注意到 $(\frac{f(\pi)}{g(\pi)})^{-1} \in X$. 验证对除法封闭就是验证对乘法和倒数封闭.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;[!IMPORTANT]&lt;/p&gt;
-
-  &lt;p&gt;多项式只能是有限和, 不能是无限和. 例如&lt;/p&gt;
-
+$$ 是个数域即可.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;(包含 $0$ 与 $1$). 显然 $0,1 \in X$.&lt;/li&gt;
+      &lt;li&gt;(加法封闭). $\frac{f_1(\pi)}{g_1(\pi)} + \frac{f_2(\pi)}{g_2(\pi)} = \frac{f_1(\pi)g_2(\pi) + f_2(\pi)g_1 (\pi)}{g_1(\pi)g_2(\pi)} \in X$.&lt;/li&gt;
+      &lt;li&gt;(减法封闭). 注意到 $- \frac{f(\pi)}{g(\pi)} \in X$. 验证对减法封闭, 就是验证对加法和相反数封闭.&lt;/li&gt;
+      &lt;li&gt;(乘法封闭). $\frac{f_1(\pi)}{g_1(\pi)} \cdot \frac{f_2(\pi)}{g_2(\pi)} = \frac{f_1(\pi)f_2(\pi)}{g_1(\pi)g_2(\pi)} \in X$.&lt;/li&gt;
+      &lt;li&gt;(除法封闭). 对非零的数, 注意到 $(\frac{f(\pi)}{g(\pi)})^{-1} \in X$. 验证对除法封闭就是验证对乘法和倒数封闭.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;p&gt;&lt;strong&gt;重要提示: 多项式只能是有限和, 不能是无限和.&lt;/strong&gt; 例如&lt;/p&gt;
   &lt;ul&gt;
     &lt;li&gt;(错误书写). 取多项式 $a_0 + a_1x +a_2 x^2+ \cdots $&lt;/li&gt;
     &lt;li&gt;(正确书写). 取多项式 $a_0 + a_1x +a_2 x^2+ \cdots + a_nx^n$.&lt;/li&gt;
   &lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;/div&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;行阶梯形存在且唯一&quot;&gt;行阶梯形存在且唯一&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-2&lt;/strong&gt; 最简行阶梯形 (reduced row échelon form) 是否总存在? 若存在, 是否唯一?&lt;/p&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;最简行阶梯形 (reduced row échelon form) 是否总存在? 若存在, 是否唯一?&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;从 9-19 作业可以观察到一个现象: 行变换不改变最简行阶梯形.&lt;/p&gt;
+    &lt;p&gt;假定 $A$ 是一个矩阵, $A'$ 由 $A$ 通过行变换得到, 且 $A'$ 可以通过行变换复原至 $A$. 记 $v_k$ 是 $A$ 的第 $k$ 列, $v'_k$ 是 $A'$ 的第 $k$ 列. 不难发现, 如有 $v_1 + 2 v_2 = v_3$ 一类的式子成立, 当且仅当 $v_1' + 2v_2' = v_3'$ 也成立. &lt;strong&gt;在可逆行变换中, 所有这类列向量的等式被无损地传递.&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;矩阵到最简行阶梯形的行变换是可逆的. 我们按照以上观察, 给出一个计算最简行阶梯形的算法, 并将以上的 $A'$ 构造作 $A$ 的最简行阶梯形. 这一算法适合借助线性空间的语言表述, 先给一个口语化的表述 (不完全归纳):&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;若 $v_1 = 0$, 则取 $v_1' = \left(\substack{0\\0\\0\\\vdots}\right)$. 若 $v_1 \neq 0$, 则取 $v_1' = \left(\substack{1\\0\\0\\\vdots}\right)$.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;假定 $v_1 \neq 0$, 且 $v_2 = \lambda \cdot v_1$, 则取 $v_2' = \left(\substack{\lambda\\0\\0\\\vdots}\right)$. 假定不存在 $v_2 = \lambda \cdot v_1$ 这类等式, 则取 $v_2' = \left(\substack{0\\1\\0\\\vdots}\right)$.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;假定 $v_1' = \left(\substack{1\\0\\0\\\vdots}\right)$, $v_2' = \left(\substack{0\\1\\0\\\vdots}\right)$. 若存在 $a v_1 + b v_2 = v_3$ 一类等式 (也就是 $v_3$ 落在 $\{v_1, v_2\}$ 所在的平面中), 则取 $v_3' = \left(\substack{a\\b\\0\\\vdots}\right)$. 若不存在这类等式, 则取 $v_3' = \left(\substack{0\\0\\1\\\vdots}\right)$.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;如是归纳即可.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;给一个基于线性空间语言的严谨表述 (约定 $e_l$ 是第 $l$ 项为 $1$, 其余项为 $0$ 的列向量):&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;找到最小的 $k$ 使得 $v_k \neq 0$. 记 $v'_{&lt; k}$ 为零向量. 记 $v'_k = e_1$.&lt;/li&gt;
+      &lt;li&gt;假定构造了 $\{v_{i}'\}_{i \leq d}$, 且 $d$ 小于矩阵宽度, 下构造 $v_{d+1}'$.         &lt;ol&gt;
+          &lt;li&gt;若 $v_{d+1} \notin \left\{\sum\limits_{1 \leq i\leq d} c_i v_i\right\}$, 则记 $v_{d+1} = e_{q+1}$, 其中 $q = \dim \left\{\sum\limits_{1 \leq i\leq d} c_i v_i\right\}$ 是向量空间的维数.&lt;/li&gt;
+          &lt;li&gt;若 $v_{d+1} \in \left\{\sum\limits_{1 \leq i\leq d} c_i v_i\right\}$, 那么任取一个等式 $v_{d+1} = \sum\limits_{1 \leq i\leq d} c_i v_i$, 定义 $v_{d+1}' = \sum\limits_{1 \leq i\leq d} c_i v_i'$ 即可.&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;解答&lt;/strong&gt; 从 9-19 作业可以观察到一个现象: 行变换不改变最简行阶梯形.&lt;/p&gt;
+&lt;h2 id=&quot;解方程&quot;&gt;解方程&lt;/h2&gt;
 
-&lt;p&gt;假定 $A$ 是一个矩阵, $A'$ 由 $A$ 通过行变换得到, 且 $A'$ 可以通过行变换复原至 $A$. 记 $v_k$ 是 $A$ 的第 $k$ 列, $v'_k$ 是 $A'$ 的第 $k$ 列. 不难发现, 如有 $v_1 + 2 v_2 = v_3$ 一类的式子成立, 当且仅当 $v_1' + 2v_2' = v_3'$ 也成立. &lt;strong&gt;在可逆行变换中, 所有这类列向量的等式被无损地传递.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;矩阵到最简行阶梯形的行变换是可逆的. 我们按照以上观察, 给出一个计算最简行阶梯形的算法, 并将以上的 $A'$ 构造作 $A$ 的最简行阶梯形. 这一算法适合借助线性空间的语言表述, 先给一个口语化的表述 (不完全归纳):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;若 $v_1 = 0$, 则取 $v_1' = \left(\substack{0\\0\\0\\\vdots}\right)$. 若 $v_1 \neq 0$, 则取 $v_1' = \left(\substack{1\\0\\0\\\vdots}\right)$.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;假定 $v_1 \neq 0$, 且 $v_2 = \lambda \cdot v_1$, 则取 $v_2' = \left(\substack{\lambda\\0\\0\\\vdots}\right)$. 假定不存在 $v_2 = \lambda \cdot v_1$ 这类等式, 则取 $v_2' = \left(\substack{0\\1\\0\\\vdots}\right)$.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;假定 $v_1' = \left(\substack{1\\0\\0\\\vdots}\right)$, $v_2' = \left(\substack{0\\1\\0\\\vdots}\right)$. 若存在 $a v_1 + b v_2 = v_3$ 一类等式 (也就是 $v_3$ 落在 $\{v_1, v_2\}$ 所在的平面中), 则取 $v_3' = \left(\substack{a\\b\\0\\\vdots}\right)$. 若不存在这类等式, 则取 $v_3' = \left(\substack{0\\0\\1\\\vdots}\right)$.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;如是归纳即可.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;给一个基于线性空间语言的严谨表述 (约定 $e_l$ 是第 $l$ 项为 $1$, 其余项为 $0$ 的列向量):&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;找到最小的 $k$ 使得 $v_k \neq 0$. 记 $v'_{&lt; k}$ 为零向量. 记 $v'_k = e_1$.&lt;/li&gt;
-  &lt;li&gt;假定构造了 $\{v_{i}'\}_{i \leq d}$, 且 $d$ 小于矩阵宽度, 下构造 $v_{d+1}'$.
-    &lt;ol&gt;
-      &lt;li&gt;若 $v_{d+1} \notin \left\{\sum\limits_{1 \leq i\leq d} c_i v_i\right\}$, 则记 $v_{d+1} = e_{q+1}$, 其中 $q = \dim \left\{\sum\limits_{1 \leq i\leq d} c_i v_i\right\}$ 是向量空间的维数.&lt;/li&gt;
-      &lt;li&gt;若 $v_{d+1} \in \left\{\sum\limits_{1 \leq i\leq d} c_i v_i\right\}$, 那么任取一个等式 $v_{d+1} = \sum\limits_{1 \leq i\leq d} c_i v_i$, 定义 $v_{d+1}' = \sum\limits_{1 \leq i\leq d} c_i v_i'$ 即可.&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Ex-3&lt;/strong&gt; 使用课堂方法求解以下方程组, &lt;strong&gt;应当标明每步行变换方式&lt;/strong&gt;. 请视个人时间与能力, 自行选题完成.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;见&lt;a href=&quot;https://czhang271828.github.io/Linear-algebra/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/%E8%B6%85%E6%B8%85%E6%99%B0%E7%89%88%EF%BC%81%EF%BC%81%E5%BC%A0%E8%B4%A4%E7%A7%91%20%E8%AE%B8%E7%94%AB%E5%8D%8E%20%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%EF%BC%882ed%EF%BC%89(1).pdf&quot;&gt;&lt;strong&gt;此书&lt;/strong&gt;&lt;/a&gt; 3.3 习题与解答部分 (书中的第 97 页, PDF 的第 105 页).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;问题 1. $\left\{\begin{matrix}
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;使用课堂方法求解以下方程组, &lt;strong&gt;应当标明每步行变换方式&lt;/strong&gt;. 请视个人时间与能力, 自行选题完成.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;见&lt;a href=&quot;https://czhang271828.github.io/Linear-algebra/%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99/%E8%B6%85%E6%B8%85%E6%99%B0%E7%89%88%EF%BC%81%EF%BC%81%E5%BC%A0%E8%B4%A4%E7%A7%91%20%E8%AE%B8%E7%94%AB%E5%8D%8E%20%E9%AB%98%E7%AD%89%E4%BB%A3%E6%95%B0%E8%A7%A3%E9%A2%98%E6%96%B9%E6%B3%95%EF%BC%882ed%EF%BC%89(1).pdf&quot;&gt;&lt;strong&gt;此书&lt;/strong&gt;&lt;/a&gt; 3.3 习题与解答部分 (书中的第 97 页, PDF 的第 105 页).&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;问题 1. $\left\{\begin{matrix}
 2x_1 &amp; +x_2 &amp; +x_3&amp; = &amp; 2,\\
 x_1 &amp; +3x_2 &amp; +x_3&amp; = &amp; 5,\\
 x_1 &amp; +x_2 &amp; +5x_3&amp; = &amp; -7,\\
 2x_1 &amp; +3x_2 &amp; -3x_3&amp; = &amp; 14.
-\end{matrix}\right.$&lt;/p&gt;
-
-&lt;p&gt;问题 2. $\left\{\begin{matrix}
+\end{matrix}\right.$ &lt;br /&gt; &lt;br /&gt; 问题 2. $\left\{\begin{matrix}
 6x_1 &amp; +6x_2 &amp; +5x_3 &amp;+ 18x_4 &amp;+20x_5 &amp; = &amp; 14,\\
 10x_1 &amp; +9x_2 &amp; +7x_3 &amp;+ 24x_4 &amp;+30x_5 &amp; = &amp; 18,\\
 12x_1 &amp; +12x_2 &amp; +13x_3 &amp;+ 27x_4 &amp;+35x_5 &amp; = &amp; 32,\\
 8x_1 &amp; +6x_2 &amp; +6x_3 &amp;+ 15x_4 &amp;+20x_5 &amp; = &amp; 16,\\
 4x_1 &amp; +5x_2 &amp; +4x_3 &amp;+ 15x_4 &amp;+15x_5 &amp; = &amp; 11.
-\end{matrix}\right.$&lt;/p&gt;
-
-&lt;p&gt;问题 3. $\left\{\begin{matrix}
+\end{matrix}\right.$ &lt;br /&gt; &lt;br /&gt; 问题 3. $\left\{\begin{matrix}
 2x_1 &amp; +7x_2 &amp; +3x_3 &amp;+ x_4 &amp;= &amp; 5,\\
 x_1 &amp; +3x_2 &amp; +5x_3 &amp; -2x_4 &amp;= &amp; 3,\\
 x_1 &amp; +5x_2 &amp; -9x_3 &amp; +8x_4 &amp;= &amp; 1,\\
 5x_1 &amp; +18x_2 &amp; 4x_3 &amp; +5x_4 &amp;= &amp; 12.
-\end{matrix}\right.$&lt;/p&gt;
-
-&lt;p&gt;问题 4. $\left\{\begin{matrix}
+\end{matrix}\right.$ &lt;br /&gt; &lt;br /&gt; 问题 4. $\left\{\begin{matrix}
 2x_1 &amp; -x_2 &amp; +x_3 &amp;- x_4 &amp; = &amp; 3,\\
 4x_1 &amp; -2x_2 &amp; -2x_3 &amp;+3x_4 &amp; = &amp; 2,\\
 2x_1 &amp; -x_2 &amp; +5x_3 &amp; -6x_4 &amp; = &amp; 1,\\
 2x_1 &amp; -x_2 &amp; -3x_3 &amp; +4x_4 &amp; = &amp; 5.
 \end{matrix}\right.$&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;问题 1. 的解答: 可以先将方程组转化成增广矩阵, 也可以直接操作方程组. 以下 $:=$ 是赋值符号, 定义作 $\text{``新} := \text{旧''}$.
-$$
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;问题 1. 的解答: 可以先将方程组转化成增广矩阵, 也可以直接操作方程组. 以下 $:=$ 是赋值符号, 定义作&lt;strong&gt;新 := 旧&lt;/strong&gt;. $$
 \begin{align*}
 &amp;\left\{\begin{matrix}
 2x_1 &amp; +x_2 &amp; +x_3&amp; = &amp; 2,\\
@@ -720,223 +580,184 @@ x_1 &amp; &amp; &amp; = &amp; 1,\\
 \end{matrix}\right.
 \end{align*}
 $$&lt;/p&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-09-18T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/HW2-solu</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/HW2-solu</guid>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW2-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW2-solu</guid>
         </item>
       
     
       
         <item>
-          <title>Hw1</title>
-          <description>&lt;h3 id=&quot;2025-09-16-作业&quot;&gt;2025-09-16 作业&lt;/h3&gt;
-
-&lt;p&gt;前置任务:&lt;/p&gt;
+          <title>HW1</title>
+          <description>&lt;h2 id=&quot;前置任务&quot;&gt;前置任务&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;请自学 $2 \times 2$ 矩阵的乘法.&lt;/li&gt;
   &lt;li&gt;请尝试使用电脑计算矩阵乘法, 比如基于 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sage&lt;/code&gt;, 在线网址是  &lt;a href=&quot;https://sagecell.sagemath.org/&quot;&gt;https://sagecell.sagemath.org/&lt;/a&gt;. 教程自行 Google.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;矩阵幂的计算&quot;&gt;矩阵幂的计算&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-1&lt;/strong&gt; 给定一个长宽相等的矩阵 (也称方阵) $A$, 定义 $A^2 = A \cdot A$. 归纳地定义 $A ^{k+1} = A ^k \cdot A$.&lt;/p&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定一个长宽相等的矩阵 (也称方阵) $A$, 定义 $A^2 = A \cdot A$. 归纳地定义 $A ^{k+1} = A ^k \cdot A$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;若 $A = \begin{pmatrix}x &amp; 0 \\ 0 &amp; y\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
+    &lt;li&gt;若 $A = \begin{pmatrix}1 &amp; x \\ 0 &amp; 1\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
+    &lt;li&gt;若 $A = \begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
+    &lt;li&gt;若 $A = \begin{pmatrix}13 &amp;-6 \\ 4 &amp; 2\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;提示: 将 $A$ 写作 $\begin{pmatrix}2 &amp; 3 \\ 1 &amp; 4 \end{pmatrix} \cdot \begin{pmatrix} 10 &amp; 0 \\ 0  &amp; 5 \end{pmatrix} \cdot \begin{pmatrix} 0.8 &amp; -0.6 \\ -0.2 &amp; 0.4 \end{pmatrix}$, 再尝试计算 $A^2$.&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;若 $A = \begin{pmatrix}x &amp; 0 \\ 0 &amp; y\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
-  &lt;li&gt;若 $A = \begin{pmatrix}1 &amp; x \\ 0 &amp; 1\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
-  &lt;li&gt;若 $A = \begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
-  &lt;li&gt;若 $A = \begin{pmatrix}13 &amp;-6 \\ 4 &amp; 2\end{pmatrix}$, 试计算 $A^k$ 的通式.
-    &lt;blockquote&gt;
-      &lt;p&gt;[!TIP]&lt;/p&gt;
+&lt;h2 id=&quot;矩阵与复数&quot;&gt;矩阵与复数&lt;/h2&gt;
 
-      &lt;p&gt;提示: 将 $A$ 写作 $\begin{pmatrix}2 &amp; 3 \\ 1 &amp; 4 \end{pmatrix} \cdot \begin{pmatrix} 10 &amp; 0 \\ 0  &amp; 5 \end{pmatrix} \cdot \begin{pmatrix} 0.8 &amp; -0.6 \\ -0.2 &amp; 0.4 \end{pmatrix}$, 再尝试计算 $A^2$.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Ex-2&lt;/strong&gt; 沿用上题 (3). 假定  $a$ 与 $b$ 是实数, 定义集合
-$$
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;沿用上题 (3). 假定 $a$ 与 $b$ 是实数, 定义集合 $$
 X = \left\{\begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix} \mid a, b \in \mathbb R\right\}.
 $$&lt;/p&gt;
-
-&lt;p&gt;请证明以下是集合间的双射:&lt;/p&gt;
-
-&lt;p&gt;$$
+  &lt;p&gt;请证明以下是集合间的双射:&lt;/p&gt;
+  &lt;p&gt;$$
 f : X \to \mathbb C, \quad \begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix} \mapsto a + ib.
 $$&lt;/p&gt;
+  &lt;p&gt;对任意 $A, B \in X$, 检验以下等式:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$f(A) \cdot f(B) = f(A \cdot B)$;&lt;/li&gt;
+    &lt;li&gt;$f(A + B) = f(A) + f(B)$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;若 $A$ 不是零矩阵, 如何定义 $A^{-1}$?&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;p&gt;对任意 $A, B \in X$, 检验以下等式:&lt;/p&gt;
+&lt;h2 id=&quot;矩阵与递推数列&quot;&gt;矩阵与递推数列&lt;/h2&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;$f(A) \cdot f(B) = f(A \cdot B)$;&lt;/li&gt;
-  &lt;li&gt;$f(A + B) = f(A) + f(B)$.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;若 $A$ 不是零矩阵, 如何定义 $A^{-1}$?&lt;/p&gt;
-
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Ex-3&lt;/strong&gt; 请先用(初)高中方法计算 $a_{n+2} = 2a_{n+1} + 3a_n$ 的通项, 结果用 $a_0$ 与 $a_1$ 表示. 若将递推式写作矩阵形式, 得到
-$$
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;请先用(初)高中方法计算 $a_{n+2} = 2a_{n+1} + 3a_n$ 的通项, 结果用 $a_0$ 与 $a_1$ 表示. 若将递推式写作矩阵形式, 得到 $$
 \begin{pmatrix}2 &amp; 3 \\ 1 &amp; 0\end{pmatrix} \cdot \begin{pmatrix}a_{n+1} \\ a_n\end{pmatrix} = \begin{pmatrix}a_{n+2} \\ a_{n+1}\end{pmatrix}.
 $$&lt;/p&gt;
-
-&lt;p&gt;此时, 计算数列的通项, 等价于计算 $\begin{pmatrix}2 &amp; 3 \\ 1 &amp; 0\end{pmatrix}^k$ 的通式.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;[!TIP]&lt;/p&gt;
-
-  &lt;p&gt;我们在 &lt;strong&gt;Ex1-4&lt;/strong&gt; 中给出一种计算方式, 即, 将矩阵 $A$ 写作 $P\cdot X \cdot P^{-1}$ 的形式.&lt;/p&gt;
-
-&lt;/blockquote&gt;
-
+  &lt;p&gt;此时, 计算数列的通项, 等价于计算 $\begin{pmatrix}2 &amp; 3 \\ 1 &amp; 0\end{pmatrix}^k$ 的通式. &lt;br /&gt; &lt;br /&gt; 提示: 我们在 &lt;a href=&quot;HW1-solu#矩阵幂的计算&quot;&gt;Ex1-4&lt;/a&gt; 中给出一种计算方式, 即, 将矩阵 $A$ 写作 $P\cdot X \cdot P^{-1}$ 的形式.&lt;/p&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-09-16T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/HW1</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/HW1</guid>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW1</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW1</guid>
         </item>
       
     
       
         <item>
-          <title>Hw1 Solu</title>
-          <description>&lt;h3 id=&quot;2025-09-16-作业&quot;&gt;2025-09-16 作业&lt;/h3&gt;
-
-&lt;p&gt;前置任务:&lt;/p&gt;
+          <title>HW1-solu</title>
+          <description>&lt;h2 id=&quot;前置任务&quot;&gt;前置任务&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;请自学 $2 \times 2$ 矩阵的乘法.&lt;/li&gt;
   &lt;li&gt;请尝试使用电脑计算矩阵乘法, 比如基于 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sage&lt;/code&gt;, 在线网址是  &lt;a href=&quot;https://sagecell.sagemath.org/&quot;&gt;https://sagecell.sagemath.org/&lt;/a&gt;. 教程自行 Google.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
+&lt;h2 id=&quot;矩阵幂的计算&quot;&gt;矩阵幂的计算&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Ex-1&lt;/strong&gt; 给定一个长宽相等的矩阵 (也称方阵) $A$, 定义 $A^2 = A \cdot A$. 归纳地定义 $A ^{k+1} = A ^k \cdot A$.&lt;/p&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定一个长宽相等的矩阵 (也称方阵) $A$, 定义 $A^2 = A \cdot A$. 归纳地定义 $A ^{k+1} = A ^k \cdot A$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;若 $A = \begin{pmatrix}x &amp; 0 \\ 0 &amp; y\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
+    &lt;li&gt;若 $A = \begin{pmatrix}1 &amp; x \\ 0 &amp; 1\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
+    &lt;li&gt;若 $A = \begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
+    &lt;li&gt;若 $A = \begin{pmatrix}13 &amp;-6 \\ 4 &amp; 2\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;提示: 将 $A$ 写作 $\begin{pmatrix}2 &amp; 3 \\ 1 &amp; 4 \end{pmatrix} \cdot \begin{pmatrix} 10 &amp; 0 \\ 0  &amp; 5 \end{pmatrix} \cdot \begin{pmatrix} 0.8 &amp; -0.6 \\ -0.2 &amp; 0.4 \end{pmatrix}$, 再尝试计算 $A^2$.&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;ol&gt;
+      &lt;li&gt;$A^k = \begin{pmatrix}x^k &amp; 0 \\ 0 &amp; y^k\end{pmatrix}$.&lt;/li&gt;
+      &lt;li&gt;$A^k = \begin{pmatrix}1 &amp; kx \\ 0 &amp; 1\end{pmatrix}$.&lt;/li&gt;
+      &lt;li&gt;依照下一题, $A^k = \begin{pmatrix}\mathrm{Re}((a+bi)^k) &amp; \mathrm{Im}((a+bi)^k) \\ -\mathrm{Im}((a+bi)^k) &amp; \mathrm{Re}((a+bi)^k)\end{pmatrix}$.&lt;/li&gt;
+      &lt;li&gt;$A^k = \begin{pmatrix}2 &amp; 3 \\ 1 &amp; 4 \end{pmatrix} \cdot \begin{pmatrix} 10^k &amp; 0 \\ 0  &amp; 5^k \end{pmatrix} \cdot \begin{pmatrix} 0.8 &amp; -0.6 \\ -0.2 &amp; 0.4 \end{pmatrix}$.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;若 $A = \begin{pmatrix}x &amp; 0 \\ 0 &amp; y\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
-  &lt;li&gt;若 $A = \begin{pmatrix}1 &amp; x \\ 0 &amp; 1\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
-  &lt;li&gt;若 $A = \begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix}$, 试计算 $A^k$ 的通式.&lt;/li&gt;
-  &lt;li&gt;若 $A = \begin{pmatrix}13 &amp;-6 \\ 4 &amp; 2\end{pmatrix}$, 试计算 $A^k$ 的通式.
-    &lt;blockquote&gt;
-      &lt;p&gt;[!TIP]&lt;/p&gt;
+&lt;h2 id=&quot;矩阵与复数&quot;&gt;矩阵与复数&lt;/h2&gt;
 
-      &lt;p&gt;提示: 将 $A$ 写作 $\begin{pmatrix}2 &amp; 3 \\ 1 &amp; 4 \end{pmatrix} \cdot \begin{pmatrix} 10 &amp; 0 \\ 0  &amp; 5 \end{pmatrix} \cdot \begin{pmatrix} 0.8 &amp; -0.6 \\ -0.2 &amp; 0.4 \end{pmatrix}$, 再尝试计算 $A^2$.&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;解答&lt;/strong&gt; (1). $A^k = \begin{pmatrix}x^k &amp; 0 \\ 0 &amp; y^k\end{pmatrix}$. (2). $A^k = \begin{pmatrix}1 &amp; kx \\ 0 &amp; 1\end{pmatrix}$.&lt;/p&gt;
-
-&lt;p&gt;(3). 依照下一题, $A^k = \begin{pmatrix}\mathrm{Re}((a+bi)^k) &amp; \mathrm{Im}((a+bi)^k) \\ -\mathrm{Im}((a+bi)^k) &amp; \mathrm{Re}((a+bi)^k)\end{pmatrix}$.&lt;/p&gt;
-
-&lt;p&gt;(4). $A^k = \begin{pmatrix}2 &amp; 3 \\ 1 &amp; 4 \end{pmatrix} \cdot \begin{pmatrix} 10^k &amp; 0 \\ 0  &amp; 5^k \end{pmatrix} \cdot \begin{pmatrix} 0.8 &amp; -0.6 \\ -0.2 &amp; 0.4 \end{pmatrix}$.&lt;/p&gt;
-
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Ex-2&lt;/strong&gt; 沿用上题 (3). 假定  $a$ 与 $b$ 是实数, 定义集合
-$$
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;沿用上题 (3). 假定 $a$ 与 $b$ 是实数, 定义集合 $$
 X = \left\{\begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix} \mid a, b \in \mathbb R\right\}.
 $$&lt;/p&gt;
-
-&lt;p&gt;请证明以下是集合间的双射:&lt;/p&gt;
-
-&lt;p&gt;$$
+  &lt;p&gt;请证明以下是集合间的双射:&lt;/p&gt;
+  &lt;p&gt;$$
 f : X \to \mathbb C, \quad \begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix} \mapsto a + ib.
 $$&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;解答&lt;/strong&gt; 只需证明 $f$ 是单射, 且是满射.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;(证单). 任取 $M = \begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix}$ 与 $M' = \begin{pmatrix}a' &amp; b' \\ -b' &amp; a'\end{pmatrix}$. 若 $f(X) = f(X')$, 则 $a+ib = a' + ib'$. 由高中知识, 两个复数相同当且仅当实部与虚部相同. 这说明 $a = a'$ 且 $b=b'$. 因此 $X = X'$.&lt;/li&gt;
-  &lt;li&gt;(证满). 任意复数 $a + ib$ 都能表示作 $f(\begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix})$.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;对任意 $A, B \in X$, 检验以下等式:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;$f(A) \cdot f(B) = f(A \cdot B)$;&lt;/li&gt;
-  &lt;li&gt;$f(A + B) = f(A) + f(B)$.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;解答&lt;/strong&gt; (1). 即证明
-$$
-\begin{pmatrix}a a' -bb' &amp; a'b + ab' \\ -(a'b + ab' ) &amp; a a' -bb'\end{pmatrix} = \begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix} \cdot \begin{pmatrix}a' &amp; b' \\ -b' &amp; a'\end{pmatrix}.
-$$
-(2). 即证明
-$$
-\begin{pmatrix}a + a' &amp; b + b' \\ -(b+ b') &amp; a' + a'\end{pmatrix} = \begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix} + \begin{pmatrix}a' &amp; b' \\ -b' &amp; a'\end{pmatrix}.
-$$&lt;/p&gt;
-
-&lt;p&gt;若 $A$ 不是零矩阵, 如何定义 $A^{-1}$?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;解答&lt;/strong&gt; &lt;strong&gt;逆矩阵就是复数倒数对应矩阵&lt;/strong&gt;. 我们发现 $f$ 与加法交换, 与乘法也交换. 实际上, $f$ 把零矩阵映作 $0$, 把单位矩阵 $\begin{pmatrix}1&amp;0\\0&amp;1\end{pmatrix}$ 映作 $1$. 若 $A^{-1}$ 有定义, 则应有
-$$
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;只需证明 $f$ 是单射, 且是满射.&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;(证单). 任取 $M = \begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix}$ 与 $M' = \begin{pmatrix}a' &amp; b' \\ -b' &amp; a'\end{pmatrix}$. 若 $f(X) = f(X')$, 则 $a+ib = a' + ib'$. 由高中知识, 两个复数相同当且仅当实部与虚部相同. 这说明 $a = a'$ 且 $b=b'$. 因此 $X = X'$.&lt;/li&gt;
+      &lt;li&gt;(证满). 任意复数 $a + ib$ 都能表示作 $f(\begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix})$.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+  &lt;p&gt;对任意 $A, B \in X$, 检验以下等式:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$f(A) \cdot f(B) = f(A \cdot B)$;&lt;/li&gt;
+    &lt;li&gt;$f(A + B) = f(A) + f(B)$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;即证明 $$
+   \begin{pmatrix}a a' -bb' &amp; a'b + ab' \\ -(a'b + ab' ) &amp; a a' -bb'\end{pmatrix} = \begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix} \cdot \begin{pmatrix}a' &amp; b' \\ -b' &amp; a'\end{pmatrix}.
+   $$&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;即证明 $$
+   \begin{pmatrix}a + a' &amp; b + b' \\ -(b+ b') &amp; a' + a'\end{pmatrix} = \begin{pmatrix}a &amp; b \\ -b &amp; a\end{pmatrix} + \begin{pmatrix}a' &amp; b' \\ -b' &amp; a'\end{pmatrix}.
+   $$&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+  &lt;p&gt;若 $A$ 不是零矩阵, 如何定义 $A^{-1}$?&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;&lt;strong&gt;逆矩阵就是复数倒数对应矩阵&lt;/strong&gt;. 我们发现 $f$ 与加法交换, 与乘法也交换. 实际上, $f$ 把零矩阵映作 $0$, 把单位矩阵 $\begin{pmatrix}1&amp;0\\0&amp;1\end{pmatrix}$ 映作 $1$. 若 $A^{-1}$ 有定义, 则应有 $$
 f(A^{-1}) \cdot f(A) = f(A^{-1} \cdot A) = 1 = f(A)^{-1} \cdot f(A).
-$$
-应当有 $f(A)^{-1} = f(A^{-1})$. 由于 $f$ 是双射, $f^{-1}$ 也是映射, 从而 $A^{-1} = f^{-1} (f(A)^{-1})$.&lt;/p&gt;
+$$ 应当有 $f(A)^{-1} = f(A^{-1})$. 由于 $f$ 是双射, $f^{-1}$ 也是映射, 从而 $A^{-1} = f^{-1} (f(A)^{-1})$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;[!IMPORTANT]&lt;/p&gt;
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;称 $y$ 是 $x$ 的逆元, 应该说明 $xy$ 与 $yx$ 均为恒等元. 两个条件缺一不可. 例如, 矩阵 $(1 \ \ 0) \cdot \binom 10 = 1$, 但是 $\binom 1 0$ 没有右逆元, 从而不是可逆矩阵.&lt;/p&gt;
+&lt;/div&gt;
 
-  &lt;p&gt;&lt;strong&gt;重要说明&lt;/strong&gt;. 称 $y$ 是 $x$ 的逆元, 应该说明 $xy$ 与 $yx$ 均为恒等元. 两个条件缺一不可.&lt;/p&gt;
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;如果 $f \circ g$ 是恒等映射, $g \circ h$ 是恒等映射, 则 $f = h$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;$f = f\circ (g \circ h) = (f \circ g) \circ h = h$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-  &lt;p&gt;&lt;strong&gt;例子&lt;/strong&gt;. 矩阵 $(1 \ \ 0) \cdot \binom 10 = 1$, 但是 $\binom 1 0$ 没有右逆元, 从而不是可逆矩阵.&lt;/p&gt;
+&lt;h2 id=&quot;矩阵与递推数列&quot;&gt;矩阵与递推数列&lt;/h2&gt;
 
-  &lt;p&gt;&lt;strong&gt;定理&lt;/strong&gt;. 如果 $f \circ g$ 是恒等映射, $g \circ h$ 是恒等映射, 则 $f = h$.&lt;/p&gt;
-
-  &lt;p&gt;&lt;em&gt;证明&lt;/em&gt;. $f = f\circ (g \circ h) = (f \circ g) \circ h = h$.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div style=&quot;page-break-after: always;&quot;&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Ex-3&lt;/strong&gt; 请先用(初)高中方法计算 $a_{n+2} = 2a_{n+1} + 3a_n$ 的通项, 结果用 $a_0$ 与 $a_1$ 表示. 若将递推式写作矩阵形式, 得到
-$$
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;请先用(初)高中方法计算 $a_{n+2} = 2a_{n+1} + 3a_n$ 的通项, 结果用 $a_0$ 与 $a_1$ 表示. 若将递推式写作矩阵形式, 得到 $$
 \begin{pmatrix}2 &amp; 3 \\ 1 &amp; 0\end{pmatrix} \cdot \begin{pmatrix}a_{n+1} \\ a_n\end{pmatrix} = \begin{pmatrix}a_{n+2} \\ a_{n+1}\end{pmatrix}.
 $$&lt;/p&gt;
-
-&lt;p&gt;此时, 计算数列的通项, 等价于计算 $\begin{pmatrix}2 &amp; 3 \\ 1 &amp; 0\end{pmatrix}^k$ 的通式.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;[!TIP]&lt;/p&gt;
-
-  &lt;p&gt;我们在 &lt;strong&gt;Ex1-4&lt;/strong&gt; 中给出一种计算方式, 即, 将矩阵 $A$ 写作 $P\cdot X \cdot P^{-1}$ 的形式.&lt;/p&gt;
-
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;解答&lt;/strong&gt; 由高中知识, 求 $x^2 = 2x + 3$ 的根 $x_1 = -1$ 与 $x_2 = 3$. 待定系数得
-$$
+  &lt;p&gt;此时, 计算数列的通项, 等价于计算 $\begin{pmatrix}2 &amp; 3 \\ 1 &amp; 0\end{pmatrix}^k$ 的通式. &lt;br /&gt; &lt;br /&gt; 提示: 我们在 &lt;a href=&quot;HW1-solu#矩阵幂的计算&quot;&gt;Ex1-4&lt;/a&gt; 中给出一种计算方式, 即, 将矩阵 $A$ 写作 $P\cdot X \cdot P^{-1}$ 的形式.&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;由高中知识, 求 $x^2 = 2x + 3$ 的根 $x_1 = -1$ 与 $x_2 = 3$. 待定系数得 $$
 a_n = \frac{a_0 + a_1}{4} \cdot 3^n + \frac{3a_0 - a_1}{4} \cdot (-1)^n.
-$$
-可以看出
-$$
+$$ 可以看出 $$
 3^n(a_0+a_1) = (a_n + a_{n+1}),\quad (-1)^n(3a_0-a_1) = (3a_n - a_{n+1}).
-$$
-因此,
-$$
+$$ 因此, $$
 \begin{pmatrix}3^n &amp; 0 \\ 0 &amp; (-1)^n\end{pmatrix} \cdot \begin{pmatrix}{a_0 + a_1}{} \\  {3a_0 - a_1}{}\end{pmatrix} = \begin{pmatrix} {a_{n} + a_{n+1}}{} \\  {3a_n - a_{n+1}}{}\end{pmatrix}.
-$$
-从而有
-$$
+$$ 从而有 $$
 \begin{pmatrix}3^n &amp; 0 \\ 0 &amp; (-1)^n\end{pmatrix} \cdot \begin{pmatrix}1&amp;1\\3&amp;-1\end{pmatrix} \cdot \begin{pmatrix}a_0 \\ a_1\end{pmatrix} =  \begin{pmatrix}1&amp;1\\3&amp;-1\end{pmatrix} \cdot \begin{pmatrix} a_{n} \\ a_{n+1}{}\end{pmatrix}.
-$$
-移项, 得
-$$
+$$ 移项, 得 $$
 \begin{pmatrix}1&amp;1\\3&amp;-1\end{pmatrix}^{-1} \cdot \begin{pmatrix}3^n &amp; 0 \\ 0 &amp; (-1)^n\end{pmatrix} \cdot \begin{pmatrix}1&amp;1\\3&amp;-1\end{pmatrix} = \begin{pmatrix}2 &amp; 3 \\ 1 &amp; 0\end{pmatrix}^n.
 $$&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;注: 该分解不唯一. 例如, 将 $(3a_0-a_1)$ 选成 $(2a_1-6a_0)$, 则会得到不同的答案.&lt;/li&gt;
-&lt;/ul&gt;
-
+    &lt;ul&gt;
+      &lt;li&gt;注: 该分解不唯一. 例如, 将 $(3a_0-a_1)$ 选成 $(2a_1-6a_0)$, 则会得到不同的答案.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-09-16T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/website/posts/HW1-solu</link>
-          <guid isPermaLink="true">http://localhost:4000/website/posts/HW1-solu</guid>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW1-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW1-solu</guid>
         </item>
       
     

@@ -9,26 +9,26 @@
 
 
 
-  <title>Hw5
+  <title>HW5
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="2025-09-25 作业">
+<meta name="description" content="初等行变换矩阵">
 
 
   <meta name="google-site-verification" content="abc123">
 
 
-<link rel="icon" href="/website/assets/favicon.png">
-<link rel="apple-touch-icon" href="/website/assets/touch-icon.png">
-<link rel="stylesheet" href="/website/assets/core.css">
-<link rel="canonical" href="/website/posts/HW5">
+<link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
+<link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
+<link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW5">
 <link
   rel="alternate"
   type="application/atom+xml"
   title="Jekyll Latex"
-  href="/website/feed.xml" />
+  href="/MATH1205H-04-HW/feed.xml" />
 
 
 
@@ -65,7 +65,7 @@ MathJax = {
 	<script>
   // 根据当前页URL动态修改
   if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
-    document.getElementById('logo-link').href = "/website";
+    document.getElementById('logo-link').href = "/MATH1205H-04-HW";
     document.getElementById('logo-prompt').textContent = 'Back to Home';
   }
 </script>
@@ -75,9 +75,9 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>Hw5</h1>
+      <h1>HW5</h1>
       <p class="author">
-        
+        Chencheng Zhang
         <br/>
         September 25, 2025
       </p>
@@ -85,61 +85,55 @@ MathJax = {
 
     <div class="divider"></div>
 
-    <h3 id="2025-09-25-作业">2025-09-25 作业</h3>
+    <h2 id="初等行变换矩阵">初等行变换矩阵</h2>
 
-<div style="page-break-after: always;"></div>
-
-<p><strong>Ex-1</strong> 给定 $n$ 行的矩阵 $A$.</p>
-
-<ol>
-  <li>交换 $A$ 的第 $i$ 行与第 $j$ 行, 等价于左乘一个矩阵 $S_{i,j}$. 写出该矩阵.</li>
-  <li>将 $A$ 第 $k$ 行的各项同时乘上一个非零常数 $\lambda$, 等价于左乘一个矩阵 $D_k^{\lambda}$. 写出该矩阵.</li>
-  <li>向 $A$ 的第 $j$ 行加上其第 $i$ 行的 $\lambda$ 倍 (这一过程仅改变第 $j$ 行, 其他行不变), 等价于左乘一个矩阵 $T_{i,j}^\lambda$. 写出该矩阵.</li>
-  <li>求逆变换 (逆矩阵) $S_{i,j}^{-1}$, $(D_k^\lambda)^{-1}$, 以及 $(T_{i,j}^\lambda)^{-1}$.</li>
-  <li>使用自然语言描述这三类逆变换.</li>
-  <li>求 $S_{i,j}S_{k,l}=S_{k,l}S_{i,j}$ 的充要条件.</li>
-  <li>求 $T_{i,j}^\lambda T_{k,l}^\mu=T_{k,l}^\mu T_{i,j}^\lambda$ 的充要条件.</li>
-  <li>以上给出了三类矩阵. 能否通过某两类矩阵得到第三类? 请讨论这三种情况 (构造或给出反例).</li>
-  <li>假定 $A$ 是方阵. 将以上 $S_{i,j}$, $T_{i,j}$ 与 $D_k$ 乘在 $A$ 的右侧, 效果如何?</li>
-</ol>
-
-<blockquote>
-  <p>[!CAUTION]</p>
-
+<div class="problem">
+  <p>给定 $n$ 行的矩阵 $A$.</p>
+  <ol>
+    <li>交换 $A$ 的第 $i$ 行与第 $j$ 行, 等价于左乘一个矩阵 $S_{i,j}$. 写出该矩阵.</li>
+    <li>将 $A$ 第 $k$ 行的各项同时乘上一个常数 $\lambda$, 等价于左乘一个矩阵 $D_k^{\lambda}$. 写出该矩阵.</li>
+    <li>向 $A$ 的第 $j$ 行加上其第 $i$ 行的 $\lambda$ 倍 (这一过程仅改变第 $j$ 行, 其他行不变), 等价于左乘一个矩阵 $T_{i,j}^\lambda$. 写出该矩阵.</li>
+    <li>求逆变换 (逆矩阵) $S_{i,j}^{-1}$, $(D_k^\lambda)^{-1}$ (如果 $\lambda \neq 0$), 以及 $(T_{i,j}^\lambda)^{-1}$.</li>
+    <li>使用自然语言描述这三类逆变换.</li>
+    <li>求 $S_{i,j}S_{k,l}=S_{k,l}S_{i,j}$ 的充要条件.</li>
+    <li>求 $T_{i,j}^\lambda T_{k,l}^\mu=T_{k,l}^\mu T_{i,j}^\lambda$ 的充要条件.</li>
+    <li>以上给出了三类矩阵. 能否通过某两类矩阵得到第三类? 请讨论这三种情况 (构造或给出反例).</li>
+    <li>假定 $A$ 是方阵. 将以上 $S_{i,j}$, $T_{i,j}$ 与 $D_k$ 乘在 $A$ 的右侧, 效果如何?</li>
+  </ol>
   <p>注意: 6, 7, 8, 9 四问涉及一些无聊的数学归纳法, 可以认为没有太大意义.</p>
-</blockquote>
+</div>
 
-<div style="page-break-after: always;"></div>
+<h2 id="相抵标准型的存在性">相抵标准型的存在性</h2>
 
-<p><strong>Ex-2</strong> 简单证明如下事实:</p>
-
-<ol>
-  <li>
-    <p>假定方阵 $A$ 可以通过初等行变换变成 $I$ (单位矩阵), $I$ 通过同样的初等行变换变成 $B$. 请证明 $AB = I$ 且 $BA = I$.</p>
-  </li>
-  <li>
-    <p>任何矩阵都能表示成 <strong>Ex-1</strong> 中 $S$, $D$ 与 $T$ 这三类矩阵交替的乘积.</p>
-  </li>
-  <li>
-    <p>证明相抵标准型的存在性: 对任意矩阵 $A$, 存在可逆矩阵 $P$ 和 $Q$ 使得
-$$
+<div class="problem">
+  <p>简单证明如下事实:</p>
+  <ol>
+    <li>
+      <p>假定方阵 $A$ 可以通过初等行变换变成 $I$ (单位矩阵), $I$ 通过同样的初等行变换变成 $B$. 请证明 $AB = I$ 且 $BA = I$.</p>
+    </li>
+    <li>
+      <p>任何方阵都能表示成<a href="HW5#初等行变换矩阵">P1</a>中 $S$, $D$ 与 $T$ 这三类矩阵交替的乘积.</p>
+    </li>
+    <li>
+      <p>证明相抵标准型的存在性: 对任意矩阵 $A$, 存在可逆矩阵 $P$ 和 $Q$ 使得 $$
    A=P\begin{pmatrix}I_r&O\\O&O\end{pmatrix}Q.
-   $$
-以上, $I_r$ 是 $r$ 阶单位矩阵, $O$ 表示数字 $0$ 出现的位置.</p>
-  </li>
-</ol>
+   $$ 此处 $I_r$ 是 $r$ 阶单位矩阵, $O$ 表示数字 $0$ 出现的位置.</p>
+    </li>
+  </ol>
+</div>
 
-<div style="page-break-after: always;"></div>
+<h2 id="初等列变换矩阵">初等列变换矩阵</h2>
 
-<p><strong>Ex-3</strong> 给定 $n$ 列的矩阵 $A$.</p>
-
-<ol>
-  <li>交换 $A$ 的第 $i$ 列与第 $j$ 列, 等价于右乘一个矩阵. 写出该矩阵.</li>
-  <li>将 $A$ 第 $k$ 列的各项同时乘上一个非零常数 $\lambda$, 等价于右乘一个矩阵. 写出该矩阵.</li>
-  <li>向 $A$ 的第 $j$ 列加上其第 $i$ 列的 $\lambda$ 倍 (这一过程仅改变第 $j$ 列, 其他列不变), 等价于右乘一个矩阵. 写出该矩阵.</li>
-  <li>求以上三类矩阵的逆变换 (逆矩阵).</li>
-  <li>简单说明 <strong>Ex-3</strong> 与 <strong>Ex-1</strong> 的联系. 一个角度是矩阵转置.</li>
-</ol>
+<div class="problem">
+  <p>给定 $n$ 列的矩阵 $A$.</p>
+  <ol>
+    <li>交换 $A$ 的第 $i$ 列与第 $j$ 列, 等价于右乘一个矩阵. 写出该矩阵.</li>
+    <li>将 $A$ 第 $k$ 列的各项同时乘上一个非零常数 $\lambda$, 等价于右乘一个矩阵. 写出该矩阵.</li>
+    <li>向 $A$ 的第 $j$ 列加上其第 $i$ 列的 $\lambda$ 倍 (这一过程仅改变第 $j$ 列, 其他列不变), 等价于右乘一个矩阵. 写出该矩阵.</li>
+    <li>求以上三类矩阵的逆变换 (逆矩阵).</li>
+    <li>简单说明<a href="HW5#初等列变换矩阵">P3</a>与<a href="HW5#初等行变换矩阵">P1</a>的联系. 一个角度是矩阵转置.</li>
+  </ol>
+</div>
 
   </article>
 
@@ -237,10 +231,44 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <div class="toc-row toc-level-3">
-      <a href="#2025-09-25-作业">
-        <span class="toc-number">0.1.</span>
-        <span class="toc-title">2025-09-25 作业</span>
+    <div class="toc-row toc-level-2">
+      <a href="#初等行变换矩阵">
+        <span class="toc-number">1.</span>
+        <span class="toc-title">初等行变换矩阵</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-2">
+      <a href="#相抵标准型的存在性">
+        <span class="toc-number">2.</span>
+        <span class="toc-title">相抵标准型的存在性</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-2">
+      <a href="#初等列变换矩阵">
+        <span class="toc-number">3.</span>
+        <span class="toc-title">初等列变换矩阵</span>
       </a>
     </div>
   
@@ -293,10 +321,10 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-    <a class="home" href="/website/" title="Back to Homepage">Home</a>
+    <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/website/posts/HW5-solu" title="PREV: Hw5 Solu">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW5-solu" title="PREV: Hw5 Solu">&gt;&gt;</a>
     
   </div>
 </main>
