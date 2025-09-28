@@ -476,7 +476,12 @@ $$ 是个数域即可.&lt;/p&gt;
         &lt;/ol&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
+    &lt;p&gt;可以从数学归纳的角度看出, 以上算法解得的矩阵就是 $ref(A)$. 对仅有 $1$ 列的矩阵, 该算法显然正确. 假定对 $n$ 列的矩阵该算法正确, 那么对 $n+1$ 列的矩阵, 该算法也正确 (第 $n+1$ 列要么由前 $n$ 列唯一决定, 要么另起一行).&lt;/p&gt;
   &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;slogan&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;(重要结论).&lt;/strong&gt; 矩阵的&lt;strong&gt;行&lt;/strong&gt;最简阶梯形表示&lt;strong&gt;列&lt;/strong&gt;向量的线性关系, 这一关于由上述贪心算法描述. &lt;strong&gt;行最简阶梯形是用来看列的, 而不是看行的&lt;/strong&gt;.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&quot;解方程&quot;&gt;解方程&lt;/h2&gt;
