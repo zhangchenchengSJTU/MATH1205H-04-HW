@@ -59,6 +59,65 @@
 &lt;/div&gt;
 </description>
           <pubDate>2025-09-25T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW6</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW6</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>HW5</title>
+          <description>&lt;h2 id=&quot;初等行变换矩阵&quot;&gt;初等行变换矩阵&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定 $n$ 行的矩阵 $A$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;交换 $A$ 的第 $i$ 行与第 $j$ 行, 等价于左乘一个矩阵 $S_{i,j}$. 写出该矩阵.&lt;/li&gt;
+    &lt;li&gt;将 $A$ 第 $k$ 行的各项同时乘上一个常数 $\lambda$, 等价于左乘一个矩阵 $D_k^{\lambda}$. 写出该矩阵.&lt;/li&gt;
+    &lt;li&gt;向 $A$ 的第 $j$ 行加上其第 $i$ 行的 $\lambda$ 倍 (这一过程仅改变第 $j$ 行, 其他行不变), 等价于左乘一个矩阵 $T_{i,j}^\lambda$. 写出该矩阵.&lt;/li&gt;
+    &lt;li&gt;求逆变换 (逆矩阵) $S_{i,j}^{-1}$, $(D_k^\lambda)^{-1}$ (如果 $\lambda \neq 0$), 以及 $(T_{i,j}^\lambda)^{-1}$.&lt;/li&gt;
+    &lt;li&gt;使用自然语言描述这三类逆变换.&lt;/li&gt;
+    &lt;li&gt;求 $S_{i,j}S_{k,l}=S_{k,l}S_{i,j}$ 的充要条件.&lt;/li&gt;
+    &lt;li&gt;求 $T_{i,j}^\lambda T_{k,l}^\mu=T_{k,l}^\mu T_{i,j}^\lambda$ 的充要条件.&lt;/li&gt;
+    &lt;li&gt;以上给出了三类矩阵. 能否通过某两类矩阵得到第三类? 请讨论这三种情况 (构造或给出反例).&lt;/li&gt;
+    &lt;li&gt;假定 $A$ 是方阵. 将以上 $S_{i,j}$, $T_{i,j}$ 与 $D_k$ 乘在 $A$ 的右侧, 效果如何?&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;注意: 6, 7, 8, 9 四问涉及一些无聊的数学归纳法, 可以认为没有太大意义.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;相抵标准型的存在性&quot;&gt;相抵标准型的存在性&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;简单证明如下事实:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;p&gt;假定方阵 $A$ 可以通过初等行变换变成 $I$ (单位矩阵), $I$ 通过同样的初等行变换变成 $B$. 请证明 $AB = I$ 且 $BA = I$.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;任何方阵都能表示成&lt;a href=&quot;HW5#初等行变换矩阵&quot;&gt;P1&lt;/a&gt;中 $S$, $D$ 与 $T$ 这三类矩阵交替的乘积.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;证明相抵标准型的存在性: 对任意矩阵 $A$, 存在可逆矩阵 $P$ 和 $Q$ 使得 $$
+   A=P\begin{pmatrix}I_r&amp;O\\O&amp;O\end{pmatrix}Q.
+   $$ 此处 $I_r$ 是 $r$ 阶单位矩阵, $O$ 表示数字 $0$ 出现的位置.&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;初等列变换矩阵&quot;&gt;初等列变换矩阵&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定 $n$ 列的矩阵 $A$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;交换 $A$ 的第 $i$ 列与第 $j$ 列, 等价于右乘一个矩阵. 写出该矩阵.&lt;/li&gt;
+    &lt;li&gt;将 $A$ 第 $k$ 列的各项同时乘上一个非零常数 $\lambda$, 等价于右乘一个矩阵. 写出该矩阵.&lt;/li&gt;
+    &lt;li&gt;向 $A$ 的第 $j$ 列加上其第 $i$ 列的 $\lambda$ 倍 (这一过程仅改变第 $j$ 列, 其他列不变), 等价于右乘一个矩阵. 写出该矩阵.&lt;/li&gt;
+    &lt;li&gt;求以上三类矩阵的逆变换 (逆矩阵).&lt;/li&gt;
+    &lt;li&gt;简单说明&lt;a href=&quot;HW5#初等列变换矩阵&quot;&gt;P3&lt;/a&gt;与&lt;a href=&quot;HW5#初等行变换矩阵&quot;&gt;P1&lt;/a&gt;的联系. 一个角度是矩阵转置.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-09-25T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/HW5</link>
           <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW5</guid>
         </item>
@@ -66,8 +125,8 @@
     
       
         <item>
-          <title>Hw5 Solu</title>
-          <description>
+          <title>HW5-solu</title>
+          <description>&lt;p&gt;见&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-09-25-HW5-solu%20(%E6%B2%BF%E7%94%A8%E5%8E%BB%E5%B9%B4%E8%A7%A3%E7%AD%94).pdf&quot;&gt;去年作业解答&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2025-09-25T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/HW5-solu</link>
@@ -231,7 +290,11 @@ $$ 提示: 如果你熟悉线性空间, 则可以从零解的角度思考问题.
 (m-r(A)) \geq (p-r(AB)) - (p-r(B)).
 $$&lt;/p&gt;
   &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;简单地说, 左侧是 $A$ 零空间的维数, 右侧是 $A$ 的零空间中一切形如 $Bv$ 的向量所构成的空间的维数. &lt;br /&gt; &lt;br /&gt; 也可以从阶梯形的角度解答问题, 请看以下技巧:&lt;/p&gt;
+    &lt;p&gt;简单地说, 左侧是 $A$ 零空间的维数, 右侧是 $A$ 的零空间中一切形如 $Bv$ 的向量所构成的空间的维数. 如果熟悉线性空间的语言, 题干中的不等式就是&lt;/p&gt;
+    &lt;p&gt;$$
+\dim N (A) \geq \dim (N(A) \cap C(B)).
+$$&lt;/p&gt;
+    &lt;p&gt;其中, $N(A) = \{x \mid Ax = 0\}$ 是 $A$ 的零空间, $C(B) = \{Bv \mid v \in \mathbb{R}^p\}$ 是 $B$ 的列空间. &lt;br /&gt; &lt;br /&gt; 也可以从阶梯形的角度解答问题, 请看以下技巧:&lt;/p&gt;
     &lt;p&gt;$$
 \begin{align*}
 r(AB) + m &amp; = r\begin{pmatrix}AB &amp; O\\ O&amp;I\end{pmatrix} \\
