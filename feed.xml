@@ -21,6 +21,10 @@
 &lt;div class=&quot;definition&quot;&gt;
   &lt;p&gt;(共轭转置). 对复矩阵 $A$, 定义其共轭转置 $A^H$ 为先取转置再取共轭, 即 $(A^H)_{i,j} = \overline{A_{j,i}}$.&lt;/p&gt;
 &lt;/div&gt;
+
+&lt;h2 id=&quot;typo&quot;&gt;Typo&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-09-30-solu-%E7%A7%A9%E4%B8%8D%E7%AD%89%E5%BC%8F.pdf#page=6&quot;&gt;&lt;strong&gt;习题 5.&lt;/strong&gt; 的解答&lt;/a&gt;中, 断言 $B_{11} = O$ 应改作 $B_{11} = I$.&lt;/p&gt;
 </description>
           <pubDate>2025-09-30T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/HW6</link>
@@ -84,6 +88,31 @@
           <pubDate>2025-09-25T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/HW5</link>
           <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW5</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>HW5-solu</title>
+          <description>&lt;p&gt;见&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-09-25-HW5-solu%20(%E6%B2%BF%E7%94%A8%E5%8E%BB%E5%B9%B4%E8%A7%A3%E7%AD%94).pdf&quot;&gt;去年作业解答&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;刊误: 问题 1.9-解答-2.&lt;/strong&gt;中,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$T_{i,j}^\lambda$ 右乘: 将第 $i$ 列的 $\lambda$ 倍加至第 $j$ 列;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;应该改作&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$T_{i,j}^\lambda$ 右乘: 将第 $j$ 列的 $\lambda$ 倍加至第 $i$ 列;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这一解答仅供参考. 因此我们使用刊误一词, 而非勘误.&lt;/p&gt;
+</description>
+          <pubDate>2025-09-25T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW5-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW5-solu</guid>
         </item>
       
     
