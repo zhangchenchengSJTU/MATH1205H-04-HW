@@ -9,12 +9,12 @@
 
 
 
-  <title>HW5
+  <title>HW7
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="初等行变换矩阵">
+<meta name="description" content="判断题">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW5">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW7">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,64 +75,90 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW5</h1>
+      <h1>HW7</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
-        September 25, 2025
+        October 9, 2025
       </p>
     </div>
 
     <div class="divider"></div>
 
-    <h2 id="初等行变换矩阵">初等行变换矩阵</h2>
+    <h2 id="判断题">判断题</h2>
 
-<div class="problem">
-  <p>给定 $n$ 行的矩阵 $A$.</p>
-  <ol>
-    <li>交换 $A$ 的第 $i$ 行与第 $j$ 行, 等价于左乘一个矩阵 $S_{i,j}$. 写出该矩阵.</li>
-    <li>将 $A$ 第 $k$ 行的各项同时乘上一个常数 $\lambda$, 等价于左乘一个矩阵 $D_k^{\lambda}$. 写出该矩阵.</li>
-    <li>向 $A$ 的第 $j$ 行加上其第 $i$ 行的 $\lambda$ 倍 (这一过程仅改变第 $j$ 行, 其他行不变), 等价于左乘一个矩阵 $T_{i,j}^\lambda$. 写出该矩阵.</li>
-    <li>求逆变换 (逆矩阵) $S_{i,j}^{-1}$, $(D_k^\lambda)^{-1}$ (如果 $\lambda \neq 0$), 以及 $(T_{i,j}^\lambda)^{-1}$.</li>
-    <li>使用自然语言描述这三类逆变换.</li>
-    <li>求 $S_{i,j}S_{k,l}=S_{k,l}S_{i,j}$ 的充要条件.</li>
-    <li>求 $T_{i,j}^\lambda T_{k,l}^\mu=T_{k,l}^\mu T_{i,j}^\lambda$ 的充要条件.</li>
-    <li>以上给出了三类矩阵. 能否通过某两类矩阵得到第三类? 请讨论这三种情况 (构造或给出反例).</li>
-    <li>假定 $A$ 是方阵. 将以上 $S_{i,j}$, $T_{i,j}$ 与 $D_k$ 乘在 $A$ 的右侧, 效果如何?</li>
-  </ol>
-  <p>注意: 6, 7, 8, 9 四问涉及一些无聊的数学归纳法, 可以认为没有太大意义.</p>
+<p>假定所有矩阵都是数域上的. 我们使用 $ref(A)$ 表示 $A$ 的最简行阶梯形矩阵, $r(A)$ 表示矩阵的秩, $A^T$ 表示 $A$ 的矩阵转置. $O$ 是零矩阵, $I$ 是单位矩阵. $\binom AB$ 表示将矩阵 $A$ 在上方, 矩阵 $B$ 在下方进行垂直拼接得到的矩阵, $(A \quad B)$ 表示将矩阵 $A$ 在左方, 矩阵 $B$ 在右方进行水平拼接得到的矩阵.</p>
+
+<div class="definition">
+  <p>(行 (列) 满秩). 给定 $m \times n$ 规格的矩阵 $A$. 若 $r(A) = m$, 则称 $A$ 为行满秩矩阵; 若 $r(A) = n$, 则称 $A$ 为列满秩矩阵.</p>
 </div>
 
-<h2 id="相抵标准型的存在性">相抵标准型的存在性</h2>
+<p>特别地, 行满秩矩阵的行数不超过列数, 列满秩矩阵的列数不超过行数.</p>
 
 <div class="problem">
-  <p>简单证明如下事实:</p>
+  <p>请判断以下命题是否正确. 若正确, 无需给出证明; 若错误, 请给出反例 (无需检验反例).</p>
   <ol>
-    <li>
-      <p>假定方阵 $A$ 可以通过初等行变换变成 $I$ (单位矩阵), $I$ 通过同样的初等行变换变成 $B$. 请证明 $AB = I$ 且 $BA = I$.</p>
-    </li>
-    <li>
-      <p>任何方阵都能表示成<a href="HW5#初等行变换矩阵">P1</a>中 $S$, $D$ 与 $T$ 这三类矩阵交替的乘积.</p>
-    </li>
-    <li>
-      <p>证明相抵标准型的存在性: 对任意矩阵 $A$, 存在可逆矩阵 $P$ 和 $Q$ 使得 $$
-   A=P\begin{pmatrix}I_r&O\\O&O\end{pmatrix}Q.
-   $$ 此处 $I_r$ 是 $r$ 阶单位矩阵, $O$ 表示数字 $0$ 出现的位置.</p>
-    </li>
+    <li>$r(A) = r (A^TA)$, 假定 $A$ 为 $m \times n$ 规格的矩阵.</li>
+    <li>$r(AB) = r(BA)$, 假定 $A$ 为 $m \times n$ 规格的矩阵, $B$ 为 $n \times m$ 规格的矩阵.</li>
+    <li>$r(A \quad B) = r \binom AB$, 假定 $A, B$ 均为 $m \times n$ 规格的矩阵.</li>
+    <li>$r(AB) = r(B)$, 当且仅当存在 $C$ 使得 $CAB = B$.</li>
+    <li>给定矩阵乘法的方程 $AX = B$, 方程有解当且仅当 $r(A\quad B) = r(A)$.</li>
+    <li>给定线性方程组 $A x = b$. 若系数矩阵 $A$ 的秩小于未知元个数, 则方程组有无穷多解.</li>
   </ol>
+  <div class="proof">
+    <p>以下给出答案.</p>
+    <ol>
+      <li>(错误). $A = \binom 1i$, $i$ 是虚数单位. 则 $r(A) = 1$, $r(A^TA) = 0$.</li>
+      <li>(错误). $A = \binom 10$, $B = (0 \quad 1)$. 则 $r(AB) = 0$, $r(BA) = 1$.</li>
+      <li>(错误). 假定 $(A\quad B)$ 是可逆二阶矩阵, $A$ 和 $B$ 是列向量, 则 $r(A\quad B) = 2$, $r\binom AB = 1$.</li>
+      <li>(正确). 由 $AB$ 与 $B$ 的行秩相等, 则左乘 $A$ 不改变 $B$ 的行空间. 换言之, $B$ 可以通过可逆行变换变作 $A$. 既然可逆, 则存在 $C$ 使得 $CAB = B$. 反之, 比较行秩得 $r(B) \geq r(AB) \geq r(CAB) = r(B)$, 因此不等号取等.</li>
+      <li>(正确). 由 $AX = B$ 有解, 当且仅当 $B$ 的所有列可以通过 $A$ 的各列表出, 即 $A$ 右乘某矩阵得 $B$.</li>
+      <li>(错误). 也有可能无解, 如 $A = O$, $b \neq 0$.</li>
+    </ol>
+  </div>
 </div>
 
-<h2 id="初等列变换矩阵">初等列变换矩阵</h2>
+<h3 id="初等变换的使用">初等变换的使用</h3>
+
+<p>请使用矩阵初等变换 (包括之前作业中的结论), 尽可能简短地证明如下问题.</p>
 
 <div class="problem">
-  <p>给定 $n$ 列的矩阵 $A$.</p>
+  <p>若 $A$ 是 $n \times n$ 规格的矩阵, 存在 $B$ 使得 $AB = I$, 则有 $BA = I$.</p>
+  <div class="proof">
+    <p>$I$ 是最简列阶梯形, 从而 $I$ 是 $A$ 的最简列阶梯形. 由<a href="HW4-solu#行秩-mathjax_protectedjd0kmathjax_protected-列秩">09-23-P1</a>, 得行最简阶梯形 $ref(A) = I$. 因此, 存在 $C$ 使得 $CA = I$. 注意到 $B = (CA)B = C(AB) = C$, 从而 $BA = I$.</p>
+  </div>
+</div>
+
+<h3 id="行满秩矩阵的一个例子">行满秩矩阵的一个例子</h3>
+
+<div class="problem">
+  <p>假定 $A$ 是 $m \times n$ 规格的矩阵 ($m \leq n$). 在 $A$ 的每一行中取定一个元素, 记 $a_{i, \sigma (i)}$ 是第 $i$ 行中取定的元素. 假定这些元素 $\{a_{i, \sigma (i)}\}_{1 \leq i \leq m}$ 满足如下性质.</p>
   <ol>
-    <li>交换 $A$ 的第 $i$ 列与第 $j$ 列, 等价于右乘一个矩阵. 写出该矩阵.</li>
-    <li>将 $A$ 第 $k$ 列的各项同时乘上一个非零常数 $\lambda$, 等价于右乘一个矩阵. 写出该矩阵.</li>
-    <li>向 $A$ 的第 $j$ 列加上其第 $i$ 列的 $\lambda$ 倍 (这一过程仅改变第 $j$ 列, 其他列不变), 等价于右乘一个矩阵. 写出该矩阵.</li>
-    <li>求以上三类矩阵的逆变换 (逆矩阵).</li>
-    <li>简单说明<a href="HW5#初等列变换矩阵">P3</a>与<a href="HW5#初等行变换矩阵">P1</a>的联系. 一个角度是矩阵转置.</li>
+    <li>若 $i \neq j$, 则 $\sigma (i) \neq \sigma (j)$. 换言之, 这些元素位于不同的 $m$ 列.</li>
+    <li>对任意 $a_{i, \sigma (i)}$, 总有 $|a_{i, \sigma (i)}| > \sum _{k \neq i} |a_{k, \sigma (i)}|$. 换言之, 元素的绝对值均大于所在列中其他元素绝对值之和.</li>
   </ol>
+  <p>请证明, 这个矩阵是行满秩的.</p>
+  <div class="proof">
+    <p>依照初等行变换, 存在可逆矩阵 $P$ 使得 $P A = ref(A)$. 假定 $A$ 不是行满秩的, 则 $ref(A)$ 有零行, 故存在非零行向量 $v$ 使得 $v \cdot ref (A) = 0$. 由 $P$ 可逆, 则 $u = vP$ 也是非零行向量. 因此, $u A = 0$. 记 $u = (u_1, \ldots , u_m)$, 并假定 $u_k$ 的绝对值最大. 由 $uA = 0$, 可得</p>
+    <p>$$\begin{equation}
+u_k a_{k, \sigma (k)} = - \sum _{i \neq k} u_i a_{i, \sigma (k)}.
+\end{equation}$$</p>
+    <p>另一方面,</p>
+    <p>$$\begin{equation}
+|u_k a_{k, \sigma (k)}| > \sum _{i \neq k} |u_i a_{i, \sigma (k)}|,
+\end{equation}$$</p>
+    <p>这产生列矛盾.</p>
+  </div>
+</div>
+
+<p>作为推论, 我们有如下结论.</p>
+
+<div class="theorem">
+  <p>(可逆矩阵的充分条件). 给定 $n \times n$ 规格的矩阵 $A = (a_{ij})$. 若对任意 $1 \leq i \leq n$, 有</p>
+  <p>$$\begin{equation}
+|a_{ii}| > \sum _{j \neq i} |a_{ji}|,
+\end{equation}$$</p>
+  <p>则 $A$ 可逆.</p>
 </div>
 
   </article>
@@ -232,9 +258,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#初等行变换矩阵">
+      <a href="#判断题">
         <span class="toc-number">1.</span>
-        <span class="toc-title">初等行变换矩阵</span>
+        <span class="toc-title">判断题</span>
       </a>
     </div>
   
@@ -248,10 +274,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <div class="toc-row toc-level-2">
-      <a href="#相抵标准型的存在性">
-        <span class="toc-number">2.</span>
-        <span class="toc-title">相抵标准型的存在性</span>
+    <div class="toc-row toc-level-3">
+      <a href="#初等变换的使用">
+        <span class="toc-number">1.1.</span>
+        <span class="toc-title">初等变换的使用</span>
       </a>
     </div>
   
@@ -265,10 +291,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <div class="toc-row toc-level-2">
-      <a href="#初等列变换矩阵">
-        <span class="toc-number">3.</span>
-        <span class="toc-title">初等列变换矩阵</span>
+    <div class="toc-row toc-level-3">
+      <a href="#行满秩矩阵的一个例子">
+        <span class="toc-number">1.2.</span>
+        <span class="toc-title">行满秩矩阵的一个例子</span>
       </a>
     </div>
   
@@ -321,13 +347,10 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW6-solu" title="NEXT: HW6-solu">&lt;&lt;</a>
-      <span>&middot;</span>
-    
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW5-solu" title="PREV: HW5-solu">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW6" title="PREV: HW6">&gt;&gt;</a>
     
   </div>
 </main>
