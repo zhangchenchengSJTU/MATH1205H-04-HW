@@ -38,6 +38,8 @@
   &lt;p&gt;若 $A$ 是 $n \times n$ 规格的矩阵, 存在 $B$ 使得 $AB = I$, 则有 $BA = I$.&lt;/p&gt;
 &lt;/div&gt;
 
+&lt;p&gt;&lt;strong&gt;特别注意&lt;/strong&gt; 请从零开始证明这个命题, 我们并没有引入”满秩的方阵是可逆的”这类结论. 秩的定义是行秩, 也就是 $ref$ 的非零行数. 可以使用作业中出现的结论, 例如&lt;a href=&quot;HW4-solu#行秩-mathjax_protectedjd0kmathjax_protected-列秩&quot;&gt;行秩等于列秩&lt;/a&gt;.&lt;/p&gt;
+
 &lt;h2 id=&quot;行满秩矩阵的一个例子&quot;&gt;行满秩矩阵的一个例子&lt;/h2&gt;
 
 &lt;div class=&quot;problem&quot;&gt;
