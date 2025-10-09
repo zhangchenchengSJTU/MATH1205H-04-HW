@@ -145,6 +145,14 @@ P = (C_A \quad C' \quad C_B), \quad Q = \begin{pmatrix}
 R_A \\ R' \\ R_B
 \end{pmatrix}.
 \end{equation}$$&lt;/p&gt;
+    &lt;p&gt;此时,&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+P \begin{pmatrix} I &amp; O &amp; O\\ O &amp; O &amp; O \\ O &amp; O &amp; O\end{pmatrix} Q = C_A R_A = A, \quad P \begin{pmatrix} O &amp; O &amp; O \\ O &amp; O &amp; O\\ O &amp; O &amp; I \end{pmatrix} Q = C_B R_B = B.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;以及,&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+P \begin{pmatrix} I &amp; O &amp; O\\ O &amp; O &amp; O \\ O &amp; O &amp; I\end{pmatrix} Q = C_A R_A + C_B R_B = A + B.
+\end{equation}$$&lt;/p&gt;
     &lt;p&gt;这就完成了证明.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
