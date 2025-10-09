@@ -111,6 +111,45 @@
 &lt;h2 id=&quot;typo&quot;&gt;Typo&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-09-30-solu-%E7%A7%A9%E4%B8%8D%E7%AD%89%E5%BC%8F.pdf#page=6&quot;&gt;&lt;strong&gt;习题 5.&lt;/strong&gt; 的解答&lt;/a&gt;中, 断言 $B_{11} = O$ 应改作 $B_{11} = I$.&lt;/p&gt;
+
+&lt;h2 id=&quot;同时相抵化&quot;&gt;同时相抵化&lt;/h2&gt;
+
+&lt;p&gt;我们证明&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-09-30-solu-%E7%A7%A9%E4%B8%8D%E7%AD%89%E5%BC%8F.pdf&quot;&gt;解答&lt;/a&gt;中式 (0.9) 对应的命题.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;若 $r(A+B) = r(A) + r(B)$, 则存在可逆矩阵 $P, Q$ 使得&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+PAQ = \begin{pmatrix} I &amp; O &amp; O\\ O &amp; O &amp; O \\ O &amp; O &amp; O\end{pmatrix}, \quad PBQ = \begin{pmatrix} O &amp; O &amp; O \\ O &amp; O &amp; O\\ O &amp; O &amp; I \end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;简单地说, 如果 $A$ 与 $B$ 的秩是所谓互斥的, 当且仅当它们的相抵标准形也可以互斥地写出.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;依照相抵标准型, 任何矩阵能写作列满秩矩阵与行满秩矩阵的乘积, 具体的做法是&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+A = R \cdot \begin{pmatrix}
+I_r &amp; O \\ O &amp; O
+\end{pmatrix}
+\cdot S = \left[R \cdot \begin{pmatrix}
+I_r \\ O
+\end{pmatrix}\right]\cdot \left[\begin{pmatrix}
+I_r &amp; O
+\end{pmatrix}
+\cdot S\right].
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;记这个乘积为 $A = C_A R_A$, 相应地记 $B = C_B R_B$. 相抵标准型通常不唯一, 以上两组乘积是任意取定的. 我们注意到&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+A+B = C_A R_A + C_B R_B = (C_A \quad C_B) \binom{R_A}{R_B}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;比较行秩, $r(\binom{R_A}{R_B}) \geq r(A+B) = r(A) + r(B) = r(R_A) + r(R_B) \geq r(\binom{R_A}{R_B})$. 因此, $\binom{R_A}{R_B}$ 是行满秩的. 对称的证明表明 $(C_A \quad C_B)$ 是列满秩的. 我们可以将 $(C_A \quad C_B)$ 与 $\binom{R_A}{R_B}$ 填充成可逆矩阵&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+P = (C_A \quad C' \quad C_B), \quad Q = \begin{pmatrix}
+R_A \\ R' \\ R_B
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;这就完成了证明.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这个命题的通常采用分块矩阵的相抵标准型证明, 或是通过矩阵的线性映射表示证明.&lt;/p&gt;
 </description>
           <pubDate>2025-09-30T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/HW6-solu</link>
