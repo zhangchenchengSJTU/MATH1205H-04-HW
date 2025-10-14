@@ -9,7 +9,7 @@
 
 
 
-  <title>HW7
+  <title>HW8
     ·
     Jekyll Latex</title>
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW7">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW8">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,11 +75,11 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW7</h1>
+      <h1>HW8</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
-        October 9, 2025
+        October 14, 2025
       </p>
     </div>
 
@@ -87,54 +87,53 @@ MathJax = {
 
     <h2 id="判断题">判断题</h2>
 
-<p>假定所有矩阵都是数域上的. 我们使用 $ref(A)$ 表示 $A$ 的最简行阶梯形矩阵, $r(A)$ 表示矩阵的秩, $A^T$ 表示 $A$ 的矩阵转置. $O$ 是零矩阵, $I$ 是单位矩阵. $\binom AB$ 表示将矩阵 $A$ 在上方, 矩阵 $B$ 在下方进行垂直拼接得到的矩阵, $(A \quad B)$ 表示将矩阵 $A$ 在左方, 矩阵 $B$ 在右方进行水平拼接得到的矩阵.</p>
+<div class="problem">
+  <p>假定以下所有矩阵都是方阵. 判断以下命题是否成立 (若不成立, 举出反例).</p>
+  <ol>
+    <li>若 $AB$ 可逆, 则 $A$ 与 $B$ 均可逆.</li>
+    <li>若 $A$ 与 $B$ 可逆, 则 $\begin{pmatrix}
+    A&C\\O&B
+\end{pmatrix}$ 可逆.</li>
+    <li>若 $A$ 可逆, 则 $A^T$ 可逆, 且 $(A^T)^{-1} = (A^{-1})^T$.</li>
+    <li>若 $A'$ 是 $A$ 逆时针旋转 $90^\circ$ 得到的矩阵, 则 $A'$ 可逆, 且 $(A')^{-1}$ 是 $A^{-1}$ 顺时针旋转 $90^\circ$ 得到的矩阵.</li>
+    <li>给定矩阵 $M = \begin{pmatrix}
+    A&B\\C&D
+\end{pmatrix}$. 若 $(AD-BC)$ 可逆, 则 $M$ 可逆.</li>
+  </ol>
+</div>
+
+<h2 id="题二">题二</h2>
+
+<div class="problem">
+  <p>对矩阵 $A$, 若存在唯一的矩阵 $X$ 使得 $AXA=A$, 则 $A$ 可逆. 此时, $X = A^{-1}$.</p>
+</div>
+
+<h2 id="题三">题三</h2>
 
 <div class="definition">
-  <p>(行 (列) 满秩). 给定 $m \times n$ 规格的矩阵 $A$. 若 $r(A) = m$, 则称 $A$ 为行满秩矩阵; 若 $r(A) = n$, 则称 $A$ 为列满秩矩阵.</p>
+  <p>(组合数). 对任意整数 $n \geq 0$ 与 $0 \leq k \leq n$, 定义组合数 $C_n^k = \frac{n!}{k!(n-k)!}$. 约定 $0! = 1$.</p>
 </div>
-
-<p>特别地, 行满秩矩阵的行数不超过列数, 列满秩矩阵的列数不超过行数.</p>
 
 <div class="problem">
-  <p>请判断以下命题是否正确. 若正确, 无需给出证明; 若错误, 请给出反例 (无需检验反例).</p>
-  <ol>
-    <li>$r(A) = r (A^TA)$, 假定 $A$ 为 $m \times n$ 规格的矩阵.</li>
-    <li>$r(AB) = r(BA)$, 假定 $A$ 为 $m \times n$ 规格的矩阵, $B$ 为 $n \times m$ 规格的矩阵.</li>
-    <li>$r(A \quad B) = r \binom AB$, 假定 $A, B$ 均为 $m \times n$ 规格的矩阵.</li>
-    <li>$r(AB) = r(B)$, 当且仅当存在 $C$ 使得 $CAB = B$.</li>
-    <li>给定矩阵乘法的方程 $AX = B$, 方程有解当且仅当 $r(A\quad B) = r(A)$.</li>
-    <li>给定线性方程组 $A x = b$. 若系数矩阵 $A$ 的秩小于未知元个数, 则方程组有无穷多解.</li>
-  </ol>
+  <p>假定矩阵是数域上的, $k$ 是域中的非零常数. 试计算以下矩阵的逆矩阵 (能否给一个简单的计算过程?) $$\begin{equation}
+        M=\begin{pmatrix}
+            k^{0} \cdot C_{0}^{0} &  &  &  &  &  & \\[6pt]
+            k^{1} \cdot C_{1}^{0} & k^{0} \cdot C_{1}^{1} &  &  &  &  & \\[6pt]
+            k^{2} \cdot C_{2}^{0} & k^{1} \cdot C_{2}^{1} & k^{0} \cdot C_{2}^{2} &  &  &  & \\[6pt]
+            \vdots  & \vdots  & \vdots  & \ddots  &  &  & \\[6pt]
+            k^{n-2} \cdot C_{n-2}^{0} & k^{n-3} \cdot C_{n-2}^{1} & k^{n-4} \cdot C_{n-2}^{2} & \cdots  & k^{0} \cdot C_{n-2}^{n-2} &  & \\[6pt]
+            k^{n-1} \cdot C_{n-1}^{0} & k^{n-2} \cdot C_{n-1}^{1} & k^{n-3} \cdot C_{n-1}^{2} & \cdots  & k^{1} \cdot C_{n-1}^{n-2} & k^{0} \cdot C_{n-1}^{n-1} & \\[6pt]
+            k^{n} \cdot C_{n}^{0} & k^{n-1} \cdot C_{n}^{1} & k^{n-2} \cdot C_{n}^{2} & \cdots  & k^{2} \cdot C_{n}^{n-2} & k^{1} \cdot C_{n}^{n-1} & k^{0} \cdot C_{n}^{n}
+        \end{pmatrix}.
+    \end{equation}$$</p>
 </div>
 
-<h2 id="初等变换的使用">初等变换的使用</h2>
+<h2 id="题四">题四</h2>
 
-<p>请使用矩阵初等变换 (包括之前作业中的结论), 尽可能简短地证明如下问题.</p>
+<p>自行思考本问题即可, 不必书面作答.</p>
 
-<div class="problem">
-  <p>若 $A$ 是 $n \times n$ 规格的矩阵, 存在 $B$ 使得 $AB = I$, 则有 $BA = I$.</p>
-</div>
-
-<p><strong>特别注意</strong> 请从零开始证明这个命题, 不能出现任何循环论证. 例如, 我们并没有引入满秩的方阵是可逆的这类结论, 因此不能使用 (该题实际上也就是在证明这个). 秩的定义是行秩, 也就是 $ref$ 的非零行数. 可以使用作业中出现的结论, 例如<a href="HW4-solu#行秩-mathjax_protectedjd0kmathjax_protected-列秩">行秩等于列秩</a>.</p>
-
-<h2 id="行满秩矩阵的一个例子">行满秩矩阵的一个例子</h2>
-
-<div class="problem">
-  <p>假定 $A$ 是 $m \times n$ 规格的矩阵 ($m \leq n$). 在 $A$ 的每一行中取定一个元素, 记 $a_{i, \sigma (i)}$ 是第 $i$ 行中取定的元素. 假定这些元素 $\{a_{i, \sigma (i)}\}_{1 \leq i \leq m}$ 满足如下性质.</p>
-  <ol>
-    <li>若 $i \neq j$, 则 $\sigma (i) \neq \sigma (j)$. 换言之, 这些元素位于不同的 $m$ 列.</li>
-    <li>对任意 $a_{i, \sigma (i)}$, 总有 $|a_{i, \sigma (i)}| > \sum _{k \neq i} |a_{k, \sigma (i)}|$. 换言之, 元素的绝对值均大于所在列中其他元素绝对值之和.</li>
-  </ol>
-  <p>请证明, 这个矩阵是行满秩的.</p>
-</div>
-
-<p>作为推论, 我们有如下结论.</p>
-
-<div class="theorem">
-  <p>(可逆矩阵的充分条件). 给定 $n \times n$ 规格的矩阵 $A = (a_{ij})$. 若对任意 $1 \leq i \leq n$, 有</p>
-  <p>$$\begin{equation}
-|a_{ii}| > \sum _{j \neq i} |a_{ji}|,
-\end{equation}$$ 则 $A$ 可逆.</p>
+<div class="example">
+  <p>(逆矩阵的课堂求解方式). 给定方阵 $A$, 若 $(A \quad I)$ 能通过行变换得到 $(I \quad B)$, 则 $B$ 是 $A$ 的逆. 请思考, 以上过程说明了 $BA = I$, 为什么有 $AB = I$?</p>
 </div>
 
   </article>
@@ -251,9 +250,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#初等变换的使用">
+      <a href="#题二">
         <span class="toc-number">2.</span>
-        <span class="toc-title">初等变换的使用</span>
+        <span class="toc-title">题二</span>
       </a>
     </div>
   
@@ -268,9 +267,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#行满秩矩阵的一个例子">
+      <a href="#题三">
         <span class="toc-number">3.</span>
-        <span class="toc-title">行满秩矩阵的一个例子</span>
+        <span class="toc-title">题三</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-2">
+      <a href="#题四">
+        <span class="toc-number">4.</span>
+        <span class="toc-title">题四</span>
       </a>
     </div>
   
@@ -323,13 +339,10 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW8" title="NEXT: HW8">&lt;&lt;</a>
-      <span>&middot;</span>
-    
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW6" title="PREV: HW6">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW7" title="PREV: HW7">&gt;&gt;</a>
     
   </div>
 </main>

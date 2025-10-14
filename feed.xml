@@ -7,6 +7,66 @@
     
       
         <item>
+          <title>HW8</title>
+          <description>&lt;h2 id=&quot;判断题&quot;&gt;判断题&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;假定以下所有矩阵都是方阵. 判断以下命题是否成立 (若不成立, 举出反例).&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;若 $AB$ 可逆, 则 $A$ 与 $B$ 均可逆.&lt;/li&gt;
+    &lt;li&gt;若 $A$ 与 $B$ 可逆, 则 $\begin{pmatrix}
+    A&amp;C\\O&amp;B
+\end{pmatrix}$ 可逆.&lt;/li&gt;
+    &lt;li&gt;若 $A$ 可逆, 则 $A^T$ 可逆, 且 $(A^T)^{-1} = (A^{-1})^T$.&lt;/li&gt;
+    &lt;li&gt;若 $A'$ 是 $A$ 逆时针旋转 $90^\circ$ 得到的矩阵, 则 $A'$ 可逆, 且 $(A')^{-1}$ 是 $A^{-1}$ 顺时针旋转 $90^\circ$ 得到的矩阵.&lt;/li&gt;
+    &lt;li&gt;给定矩阵 $M = \begin{pmatrix}
+    A&amp;B\\C&amp;D
+\end{pmatrix}$. 若 $(AD-BC)$ 可逆, 则 $M$ 可逆.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;题二&quot;&gt;题二&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;对矩阵 $A$, 若存在唯一的矩阵 $X$ 使得 $AXA=A$, 则 $A$ 可逆. 此时, $X = A^{-1}$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;题三&quot;&gt;题三&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(组合数). 对任意整数 $n \geq 0$ 与 $0 \leq k \leq n$, 定义组合数 $C_n^k = \frac{n!}{k!(n-k)!}$. 约定 $0! = 1$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;假定矩阵是数域上的, $k$ 是域中的非零常数. 试计算以下矩阵的逆矩阵 (能否给一个简单的计算过程?) $$\begin{equation}
+        M=\begin{pmatrix}
+            k^{0} \cdot C_{0}^{0} &amp;  &amp;  &amp;  &amp;  &amp;  &amp; \\[6pt]
+            k^{1} \cdot C_{1}^{0} &amp; k^{0} \cdot C_{1}^{1} &amp;  &amp;  &amp;  &amp;  &amp; \\[6pt]
+            k^{2} \cdot C_{2}^{0} &amp; k^{1} \cdot C_{2}^{1} &amp; k^{0} \cdot C_{2}^{2} &amp;  &amp;  &amp;  &amp; \\[6pt]
+            \vdots  &amp; \vdots  &amp; \vdots  &amp; \ddots  &amp;  &amp;  &amp; \\[6pt]
+            k^{n-2} \cdot C_{n-2}^{0} &amp; k^{n-3} \cdot C_{n-2}^{1} &amp; k^{n-4} \cdot C_{n-2}^{2} &amp; \cdots  &amp; k^{0} \cdot C_{n-2}^{n-2} &amp;  &amp; \\[6pt]
+            k^{n-1} \cdot C_{n-1}^{0} &amp; k^{n-2} \cdot C_{n-1}^{1} &amp; k^{n-3} \cdot C_{n-1}^{2} &amp; \cdots  &amp; k^{1} \cdot C_{n-1}^{n-2} &amp; k^{0} \cdot C_{n-1}^{n-1} &amp; \\[6pt]
+            k^{n} \cdot C_{n}^{0} &amp; k^{n-1} \cdot C_{n}^{1} &amp; k^{n-2} \cdot C_{n}^{2} &amp; \cdots  &amp; k^{2} \cdot C_{n}^{n-2} &amp; k^{1} \cdot C_{n}^{n-1} &amp; k^{0} \cdot C_{n}^{n}
+        \end{pmatrix}.
+    \end{equation}$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;题四&quot;&gt;题四&lt;/h2&gt;
+
+&lt;p&gt;自行思考本问题即可, 不必书面作答.&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;(逆矩阵的课堂求解方式). 给定方阵 $A$, 若 $(A \quad I)$ 能通过行变换得到 $(I \quad B)$, 则 $B$ 是 $A$ 的逆. 请思考, 以上过程说明了 $BA = I$, 为什么有 $AB = I$?&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-10-14T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW8</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW8</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>HW7</title>
           <description>&lt;h2 id=&quot;判断题&quot;&gt;判断题&lt;/h2&gt;
 
