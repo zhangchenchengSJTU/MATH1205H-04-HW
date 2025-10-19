@@ -9,7 +9,7 @@
 
 
 
-  <title>HW7
+  <title>HW7-solu
     ·
     Jekyll Latex</title>
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW7">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW7-solu">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,7 +75,7 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW7</h1>
+      <h1>HW7-solu</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
@@ -105,6 +105,17 @@ MathJax = {
     <li>给定矩阵乘法的方程 $AX = B$, 方程有解当且仅当 $r(A\quad B) = r(A)$.</li>
     <li>给定线性方程组 $A x = b$. 若系数矩阵 $A$ 的秩小于未知元个数, 则方程组有无穷多解.</li>
   </ol>
+  <div class="proof">
+    <p>以下给出答案.</p>
+    <ol>
+      <li>(错误). $A = \binom 1i$, $i$ 是虚数单位. 则 $r(A) = 1$, $r(A^TA) = 0$.</li>
+      <li>(错误). $A = \binom 10$, $B = (0 \quad 1)$. 则 $r(AB) = 0$, $r(BA) = 1$.</li>
+      <li>(错误). 假定 $(A\quad B)$ 是可逆二阶矩阵, $A$ 和 $B$ 是列向量, 则 $r(A\quad B) = 2$, $r\binom AB = 1$.</li>
+      <li>(正确). 由 $AB$ 与 $B$ 的行秩相等, 则左乘 $A$ 不改变 $B$ 的行空间. 换言之, $B$ 可以通过可逆行变换变作 $A$. 既然可逆, 则存在 $C$ 使得 $CAB = B$. 反之, 比较行秩得 $r(B) \geq r(AB) \geq r(CAB) = r(B)$, 因此不等号取等.</li>
+      <li>(正确). 由 $AX = B$ 有解, 当且仅当 $B$ 的所有列可以通过 $A$ 的各列表出, 即 $A$ 右乘某矩阵得 $B$.</li>
+      <li>(错误). 也有可能无解, 如 $A = O$, $b \neq 0$.</li>
+    </ol>
+  </div>
 </div>
 
 <h2 id="初等变换的使用">初等变换的使用</h2>
@@ -113,9 +124,10 @@ MathJax = {
 
 <div class="problem">
   <p>若 $A$ 是 $n \times n$ 规格的矩阵, 存在 $B$ 使得 $AB = I$, 则有 $BA = I$.</p>
+  <div class="proof">
+    <p>$I$ 是最简列阶梯形, 从而 $I$ 是 $A$ 的最简列阶梯形. 由<a href="HW4-solu#行秩-mathjax_protectedjd0kmathjax_protected-列秩">09-23-P1</a>, 得行最简阶梯形 $ref(A) = I$. 因此, 存在 $C$ 使得 $CA = I$. 注意到 $B = (CA)B = C(AB) = C$, 从而 $BA = I$.</p>
+  </div>
 </div>
-
-<p><strong>特别注意</strong> 请从零开始证明这个命题, 不能出现任何循环论证. 例如, 我们并没有引入满秩的方阵是可逆的这类结论, 因此不能使用 (该题实际上也就是在证明这个). 秩的定义是行秩, 也就是 $ref$ 的非零行数. 可以使用作业中出现的结论, 例如<a href="HW4-solu#行秩-mathjax_protectedjd0kmathjax_protected-列秩">行秩等于列秩</a>.</p>
 
 <h2 id="行满秩矩阵的一个例子">行满秩矩阵的一个例子</h2>
 
@@ -126,6 +138,17 @@ MathJax = {
     <li>对任意 $a_{i, \sigma (i)}$, 总有 $|a_{i, \sigma (i)}| > \sum _{k \neq i} |a_{k, \sigma (i)}|$. 换言之, 元素的绝对值均大于所在列中其他元素绝对值之和.</li>
   </ol>
   <p>请证明, 这个矩阵是行满秩的.</p>
+  <div class="proof">
+    <p>依照初等行变换, 存在可逆矩阵 $P$ 使得 $P A = ref(A)$. 假定 $A$ 不是行满秩的, 则 $ref(A)$ 有零行, 故存在非零行向量 $v$ 使得 $v \cdot ref (A) = 0$. 由 $P$ 可逆, 则 $u = vP$ 也是非零行向量. 因此, $u A = 0$. 记 $u = (u_1, \ldots , u_m)$, 并假定 $u_k$ 的绝对值最大. 由 $uA = 0$, 可得</p>
+    <p>$$\begin{equation}
+u_k a_{k, \sigma (k)} = - \sum _{i \neq k} u_i a_{i, \sigma (k)}.
+\end{equation}$$</p>
+    <p>另一方面,</p>
+    <p>$$\begin{equation}
+|u_k a_{k, \sigma (k)}| > \sum _{i \neq k} |u_i a_{i, \sigma (k)}|,
+\end{equation}$$</p>
+    <p>矛盾.</p>
+  </div>
 </div>
 
 <p>作为推论, 我们有如下结论.</p>
@@ -134,7 +157,8 @@ MathJax = {
   <p>(可逆矩阵的充分条件). 给定 $n \times n$ 规格的矩阵 $A = (a_{ij})$. 若对任意 $1 \leq i \leq n$, 有</p>
   <p>$$\begin{equation}
 |a_{ii}| > \sum _{j \neq i} |a_{ji}|,
-\end{equation}$$ 则 $A$ 可逆.</p>
+\end{equation}$$</p>
+  <p>则 $A$ 可逆.</p>
 </div>
 
   </article>
@@ -323,13 +347,13 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW8" title="NEXT: HW8">&lt;&lt;</a>
+      <a class="next" href="/MATH1205H-04-HW/posts/HW7" title="NEXT: HW7">&lt;&lt;</a>
       <span>&middot;</span>
     
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW7-solu" title="PREV: HW7-solu">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW6" title="PREV: HW6">&gt;&gt;</a>
     
   </div>
 </main>
