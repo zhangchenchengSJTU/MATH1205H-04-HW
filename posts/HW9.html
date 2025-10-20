@@ -9,12 +9,12 @@
 
 
 
-  <title>HW8
+  <title>HW9
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="判断题">
+<meta name="description" content="所有矩阵都是数域上的.">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW8">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW9">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,66 +75,37 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW8</h1>
+      <h1>HW9</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
-        October 14, 2025
+        October 21, 2025
       </p>
     </div>
 
     <div class="divider"></div>
 
-    <h2 id="判断题">判断题</h2>
+    <p><strong>所有矩阵都是数域上的.</strong></p>
+
+<h2 id="构造题">构造题</h2>
 
 <div class="problem">
-  <p>假定以下所有矩阵都是方阵. 判断以下命题是否成立 (若不成立, 举出反例).</p>
+  <p>找一个 $2025 \times 2025$ 规格的矩阵 $A$, 满足以下条件:</p>
   <ol>
-    <li>若 $AB$ 可逆, 则 $A$ 与 $B$ 均可逆.</li>
-    <li>若 $A$ 与 $B$ 可逆, 则 $\begin{pmatrix}
-    A&C\\O&B
-\end{pmatrix}$ 可逆.</li>
-    <li>若 $A$ 可逆, 则 $A^T$ 可逆, 且 $(A^T)^{-1} = (A^{-1})^T$.</li>
-    <li>若 $A'$ 是 $A$ 逆时针旋转 $90^\circ$ 得到的矩阵. 假定 $A'$ 可逆, 则 $(A')^{-1}$ 是 $A^{-1}$ 顺时针旋转 $90^\circ$ 得到的矩阵.</li>
-    <li>给定矩阵 $M = \begin{pmatrix}
-    A&B\\C&D
-\end{pmatrix}$. 若 $(AD-BC)$ 可逆, 则 $M$ 可逆.</li>
+    <li>$A$ 不可逆.</li>
+    <li>$A$ 删去任意 $1$ 行与任意 $1$ 列后, 得到的 $2024 \times 2024$ 矩阵均可逆.</li>
   </ol>
 </div>
 
-<h2 id="题二">题二</h2>
+<p><strong>思考题</strong> 给定常数 $1 < k < n$. 找一个 $n \times n$ 的矩阵 $A$, 使得</p>
 
-<div class="problem">
-  <p>对矩阵 $A$, 若存在唯一的矩阵 $X$ 使得 $AXA=A$, 则 $A$ 可逆. 此时, $X = A^{-1}$.</p>
-</div>
+<ol>
+  <li>删去任意 $k$ 行与任意 $k$ 列后, 得到的 $(n-k) \times (n-k)$ 矩阵均不可逆;</li>
+  <li>删去任意 $k+1$ 行与任意 $k+1$ 列后, 得到的 $(n-k-1) \times (n-k-1)$ 矩阵均可逆.</li>
+</ol>
 
-<h2 id="题三">题三</h2>
+<h2 id="计算题">计算题</h2>
 
-<div class="definition">
-  <p>(组合数). 对任意整数 $n \geq 0$ 与 $0 \leq k \leq n$, 定义组合数 $C_n^k = \frac{n!}{k!(n-k)!}$. 约定 $0! = 1$.</p>
-</div>
-
-<div class="problem">
-  <p>假定矩阵是数域上的, $k$ 是域中的非零常数. 试计算以下矩阵的逆矩阵 (能否给一个简单的计算过程?) $$\begin{equation}
-        M=\begin{pmatrix}
-            k^{0} \cdot C_{0}^{0} &  &  &  &  &  & \\[6pt]
-            k^{1} \cdot C_{1}^{0} & k^{0} \cdot C_{1}^{1} &  &  &  &  & \\[6pt]
-            k^{2} \cdot C_{2}^{0} & k^{1} \cdot C_{2}^{1} & k^{0} \cdot C_{2}^{2} &  &  &  & \\[6pt]
-            \vdots  & \vdots  & \vdots  & \ddots  &  &  & \\[6pt]
-            k^{n-2} \cdot C_{n-2}^{0} & k^{n-3} \cdot C_{n-2}^{1} & k^{n-4} \cdot C_{n-2}^{2} & \cdots  & k^{0} \cdot C_{n-2}^{n-2} &  & \\[6pt]
-            k^{n-1} \cdot C_{n-1}^{0} & k^{n-2} \cdot C_{n-1}^{1} & k^{n-3} \cdot C_{n-1}^{2} & \cdots  & k^{1} \cdot C_{n-1}^{n-2} & k^{0} \cdot C_{n-1}^{n-1} & \\[6pt]
-            k^{n} \cdot C_{n}^{0} & k^{n-1} \cdot C_{n}^{1} & k^{n-2} \cdot C_{n}^{2} & \cdots  & k^{2} \cdot C_{n}^{n-2} & k^{1} \cdot C_{n}^{n-1} & k^{0} \cdot C_{n}^{n}
-        \end{pmatrix}.
-    \end{equation}$$</p>
-</div>
-
-<h2 id="题四">题四</h2>
-
-<p>自行思考本问题即可, 不必书面作答.</p>
-
-<div class="example">
-  <p>(逆矩阵的课堂求解方式). 给定方阵 $A$, 若 $(A \quad I)$ 能通过行变换得到 $(I \quad B)$, 则 $B$ 是 $A$ 的逆. 请思考, 以上过程说明了 $BA = I$, 为什么有 $AB = I$?</p>
-</div>
 
   </article>
 
@@ -232,10 +203,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
+    
+    
     <div class="toc-row toc-level-2">
-      <a href="#判断题">
+      <a href="#构造题">
         <span class="toc-number">1.</span>
-        <span class="toc-title">判断题</span>
+        <span class="toc-title">构造题</span>
       </a>
     </div>
   
@@ -250,43 +223,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#题二">
+      <a href="#计算题">
         <span class="toc-number">2.</span>
-        <span class="toc-title">题二</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-2">
-      <a href="#题三">
-        <span class="toc-number">3.</span>
-        <span class="toc-title">题三</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-2">
-      <a href="#题四">
-        <span class="toc-number">4.</span>
-        <span class="toc-title">题四</span>
+        <span class="toc-title">计算题</span>
       </a>
     </div>
   
@@ -339,13 +278,10 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW9" title="NEXT: HW9">&lt;&lt;</a>
-      <span>&middot;</span>
-    
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW7" title="PREV: HW7">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW8" title="PREV: HW8">&gt;&gt;</a>
     
   </div>
 </main>

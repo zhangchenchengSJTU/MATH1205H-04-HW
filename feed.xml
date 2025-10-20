@@ -7,6 +7,37 @@
     
       
         <item>
+          <title>HW9</title>
+          <description>&lt;p&gt;&lt;strong&gt;所有矩阵都是数域上的.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;构造题&quot;&gt;构造题&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;找一个 $2025 \times 2025$ 规格的矩阵 $A$, 满足以下条件:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$A$ 不可逆.&lt;/li&gt;
+    &lt;li&gt;$A$ 删去任意 $1$ 行与任意 $1$ 列后, 得到的 $2024 \times 2024$ 矩阵均可逆.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;思考题&lt;/strong&gt; 给定常数 $1 &lt; k &lt; n$. 找一个 $n \times n$ 的矩阵 $A$, 使得&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;删去任意 $k$ 行与任意 $k$ 列后, 得到的 $(n-k) \times (n-k)$ 矩阵均不可逆;&lt;/li&gt;
+  &lt;li&gt;删去任意 $k+1$ 行与任意 $k+1$ 列后, 得到的 $(n-k-1) \times (n-k-1)$ 矩阵均可逆.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;计算题&quot;&gt;计算题&lt;/h2&gt;
+
+</description>
+          <pubDate>2025-10-21T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW9</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW9</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>HW8</title>
           <description>&lt;h2 id=&quot;判断题&quot;&gt;判断题&lt;/h2&gt;
 
