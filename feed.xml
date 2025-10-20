@@ -29,6 +29,19 @@
 
 &lt;h2 id=&quot;计算题&quot;&gt;计算题&lt;/h2&gt;
 
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;记 $x$ 与 $y$ 是 $n$ 阶列向量. 给出 $I + xy^T$ 可逆的充要条件, 并求其逆.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-21-%E9%80%86%E7%9F%A9%E9%98%B5.pdf&quot;&gt;该讲义&lt;/a&gt;习题 2.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-21-%E9%80%86%E7%9F%A9%E9%98%B5.pdf&quot;&gt;该讲义&lt;/a&gt;习题 6.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;讲义中困难习题的答案见 PDF 内的链接. 基础习题解答见 &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-21-minamomo-高等代数第七周作业-1.pdf&quot;&gt;Ebisumoto Minamomo 的解答&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2025-10-21T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/HW9</link>
