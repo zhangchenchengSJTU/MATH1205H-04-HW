@@ -29,6 +29,14 @@
 
 &lt;h2 id=&quot;计算题&quot;&gt;计算题&lt;/h2&gt;
 
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(下一题的提示). 若 $\begin{pmatrix}
+    A&amp;B\\O&amp;D
+\end{pmatrix}$ 有逆矩阵 $\begin{pmatrix}
+    E&amp;F\\G&amp;H
+\end{pmatrix}$, 则 $H$ 与 $D$ 互为逆矩阵. 证明容易.&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;div class=&quot;problem&quot;&gt;
   &lt;p&gt;记 $x$ 与 $y$ 是 $n$ 阶列向量. 给出 $I + xy^T$ 可逆的充要条件, 并求其逆.&lt;/p&gt;
 &lt;/div&gt;
