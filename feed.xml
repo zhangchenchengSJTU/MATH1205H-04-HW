@@ -18,6 +18,7 @@
     &lt;li&gt;$A$ 不可逆.&lt;/li&gt;
     &lt;li&gt;$A$ 删去任意 $1$ 行与任意 $1$ 列后, 得到的 $2024 \times 2024$ 矩阵均可逆.&lt;/li&gt;
   &lt;/ol&gt;
+  &lt;p&gt;提示: 把提取 $k$ 行 (列) 看作左乘 (右乘) 某特定矩阵.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;思考题&lt;/strong&gt; 给定常数 $1 &lt; k &lt; n$. 找一个 $n \times n$ 的矩阵 $A$, 使得&lt;/p&gt;
