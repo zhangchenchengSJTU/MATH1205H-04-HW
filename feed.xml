@@ -7,8 +7,135 @@
     
       
         <item>
-          <title>Review</title>
-          <description>
+          <title>期中考试复习提纲</title>
+          <description>&lt;p&gt;本文为期中考试的复习提纲, 包含以下专题.&lt;/p&gt;
+
+&lt;h2 id=&quot;考试内容&quot;&gt;考试内容&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-21-%E4%B8%8A%E4%BA%A4%E5%A4%A7%E6%95%99%E6%9D%90.pdf&quot;&gt;教材地址&lt;/a&gt;.&lt;/p&gt;
+
+&lt;center&gt; &lt;img src=&quot;https://raw.githubusercontent.com/czhang271828/imgs/New_img//n_imgimage-20251021115847639.png&quot; alt=&quot;image-20251021115847639&quot; style=&quot;zoom:50%;&quot; /&gt; &lt;/center&gt;
+
+&lt;p&gt;时间: 2025年11月07日 (周五) 14:00 - 15:40 (第 7 至 8 节).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;注: 考试原则上不予延时, 因为生物班稍后有课.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;考试内容: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-21-%E4%B8%8A%E4%BA%A4%E5%A4%A7%E6%95%99%E6%9D%90.pdf&quot;&gt;教材&lt;/a&gt;中的第一章至第三章.&lt;/p&gt;
+
+&lt;h2 id=&quot;书写规范-如何手写符号&quot;&gt;书写规范 (如何手写符号)&lt;/h2&gt;
+
+&lt;center&gt; &lt;img src=&quot;https://raw.githubusercontent.com/czhang271828/imgs/New_img//n_imgimage-20251021121805726.png&quot; alt=&quot;image-20251021121805726&quot; style=&quot;zoom:30%;&quot; /&gt; &lt;/center&gt;
+
+&lt;h2 id=&quot;复习内容&quot;&gt;复习内容&lt;/h2&gt;
+
+&lt;p&gt;关于数域: 定义, 数域的例子, 域和数域的区别, 求解包含某个数集的最小数域 (如找到包含 $\sqrt 2 + \sqrt 3$ 的最小数域?).&lt;/p&gt;
+
+&lt;p&gt;线性方程组.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;($Ax = b$ 解集的含义). 将 $A$ 的列向量线性组合得到 $b$, 记列向量 $x$ 为可能的线性组合系数, 则所有这样的 $x$ 是方程 $Ax = b$ 的解集.&lt;/li&gt;
+  &lt;li&gt;(线性方程组有解的充要条件). $A$ 和 $[A|b]$ 的 (列) 秩相等.&lt;/li&gt;
+  &lt;li&gt;(线性方程组有无限解的充要条件). 有解, 且 $A$ 的 (列) 秩小于 $A$ 的列数.&lt;/li&gt;
+  &lt;li&gt;特别地, 齐次线性方程组 $Ax = 0$ 总是有解 (零解). 这些解构成零空间 $N(A)$.&lt;/li&gt;
+  &lt;li&gt;从空间维数理解, $\dim N(A) + r(A)$ 是 $A$ 的列数, 因为 $\dim N(A)$ 是 $cef(A)$ 的零列数量, $r(A)$ 是 $cef(A)$ 的非零列数量.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;slogan&quot;&gt;
+  &lt;p&gt;遇事不决, 先化为阶梯形.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;矩阵计算: 左乘为行变换, 右乘为列变换. 特别地, 左乘与右乘是可交换, 因为结合律 $L(AR) = (LA)R$.&lt;/p&gt;
+
+&lt;p&gt;阶梯形. 以行 (最简) 阶梯形 $ref(A)$ 为例.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;(行阶梯形的算法). 如何避免行初等变换, 逐列地写出 $ref(A)$? 行阶梯形的存在性与唯一性 (见&lt;a href=&quot;HW2-solu#行阶梯形存在且唯一&quot;&gt;作业&lt;/a&gt;). 特别地, 行阶梯形的前 $k$ 列就是前 $k$ 列 (所在的子矩阵) 的行阶梯形, 这归纳地刻画了列向量的线性组合关系.&lt;/li&gt;
+  &lt;li&gt;(行阶梯形由行变换得到). $ref(A)$ 与 $A$ 能通过初等行变换互化. 特别地, 存在可逆矩阵 $P$ 使得 $PA = ref(A)$.&lt;/li&gt;
+  &lt;li&gt;(行秩). 行秩即 $ref(A)$ 中非零行的数量. 行秩与矩阵运算的关系见&lt;a href=&quot;HW4-solu#巧算秩不等式&quot;&gt;作业&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;对 $A$ 与 $LA$ 同时进行 $ref(-)$ 算法. 则 $ref(LA)$ 换行时, $ref(A)$ 必在相应位置换行. 从而 $LA$ 的行秩不超过 $A$ 的行秩. 两者行秩相同, 当且仅当存在 $L'$ 使得 $L'(LA )= A$.&lt;/li&gt;
+  &lt;li&gt;对 $A$ 与 $AR$ 同时进行 $ref(-)$ 算法. 依照左乘与右乘的交换性, 可以发现 $AR$ 的行秩不超过 $A$ 的行秩. 两者行秩相同, 当且仅当存在 $R'$ 使得 $(AR)R' = A$.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;行满秩矩阵. 行满秩矩阵的列数不少于行数. $A \in \mathbb F^{m \times n}$ 行满秩, 当且仅当以下等价命题成立:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;$ref(A)$ 的每一行都有主元, 即不存在零行.&lt;/li&gt;
+  &lt;li&gt;$cef(A) = (I_m \quad O)$.&lt;/li&gt;
+  &lt;li&gt;$\mathbb F^m$ 的任意向量都能由 $A$ 的列向量线性组合得到.&lt;/li&gt;
+  &lt;li&gt;列向量的映射 $\begin{bmatrix}\mathbb F^n &amp;\to&amp; \mathbb F^m \\ v &amp;\mapsto&amp; A\cdot v\end{bmatrix}$ 是满射.&lt;/li&gt;
+  &lt;li&gt;$A$ 行线性无关.&lt;/li&gt;
+  &lt;li&gt;行向量的映射 $\begin{bmatrix}\mathbb F^{1\times m} &amp;\to&amp; \mathbb F^{1 \times n} \\ u^T &amp;\mapsto&amp; u^T\cdot A \end{bmatrix}$ 是单射.&lt;/li&gt;
+  &lt;li&gt;存在 $R$ 使得 $AR = I_m$.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;行秩等于列秩.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;相抵标准型 $A = P \cdot \begin{pmatrix} I_{r(A)} &amp;O\\ O&amp;O \end{pmatrix} \cdot Q$.&lt;/li&gt;
+  &lt;li&gt;任何 (非零) 矩阵 $A$ 能写作 $C \cdot R$, 其中 $C$ 行满秩, $R$ 列满秩. 此时 $r(C) = r(R) = r(A)$. $C$ 与 $A$ 有相同的列空间, $R$ 与 $A$ 有相同的行空间.&lt;/li&gt;
+  &lt;li&gt;若 $A$ 是方阵, 记映射 $\varphi$ 为 $\begin{bmatrix}\mathbb F^n &amp;\to&amp; \mathbb F^n \\ v &amp;\mapsto&amp; A\cdot v\end{bmatrix}$. 则 $\varphi$ 是单射, 当且仅当 $\varphi$ 是满射, 当且仅当 $\varphi$ 是双射. 这好比有限集合 $X$ 到自身的映射 $\psi : X \to X$, $\psi$ 是单射, 当且仅当 $\psi$ 是满射, 当且仅当 $\psi$ 是双射.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;可逆矩阵.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;矩阵 $M$ 可逆, 当且仅当存在 $L$ 与 $R$ 使得 $LM = I$, 且 $MR = I$ (缺一不可). 可逆矩阵必是方阵.&lt;/li&gt;
+  &lt;li&gt;方阵 $M$ 可逆, 当且仅当 $r(M) = n$, 当且仅当 $M$ 有左逆元, 当且仅当 $ref(M) = I$ (对偶命题略).&lt;/li&gt;
+  &lt;li&gt;$(M^T)^{-1} = (M^{-1})^T$, $(M^k)^{-1} = (M^{-1})^k$, $B^{-1} A^{-1} = (AB)^{-1}$ 等初等性质.&lt;/li&gt;
+  &lt;li&gt;$\binom{A \ B}{O \ C}$ 的逆形如 $\binom{D \ E}{O \ F}$, 其中 $A$ 与 $D$ 互为逆, $C$ 与 $F$ 互为逆.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;计算题练习建议&quot;&gt;计算题练习建议&lt;/h2&gt;
+
+&lt;p&gt;(Gauss 消元的应用). 化线性方程组为阶梯形 (用合适的初等行变换), 判断方程组有无解, 以及求解通解.&lt;/p&gt;
+
+&lt;p&gt;(判断列向量组 $V = (v_1 \ v_2 \cdots v_k)$ 线性相关与否). 例如,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;若能通过初等行变换化为对角非零的上三角矩阵, 则线性无关.&lt;/li&gt;
+  &lt;li&gt;当且仅当 $ref(V)$ 形如 $\binom {I_k}O$, 向量组线性无关.&lt;/li&gt;
+  &lt;li&gt;当且仅当 $Vx = 0$ 只有零解.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;(秩不等式). 见作业 &lt;a href=&quot;HW4-solu#巧算秩不等式&quot;&gt;HW4 的阶梯形技巧&lt;/a&gt;, &lt;a href=&quot;HW4-solu#稍难的题目&quot;&gt;HW4 分块矩阵的行变换&lt;/a&gt;, 以及 &lt;a href=&quot;HW6-solu&quot;&gt;HW6&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;(矩阵相乘可交换问题). 给定 $A$, 找到 $B$ 使得 $AB = BA$.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;若 $A$ 是数量矩阵 (形如 $kI$), 则任意矩阵 $B$ 都满足 $AB = BA$.&lt;/li&gt;
+  &lt;li&gt;对低阶矩阵, 解线性方程组 $AB=BA$ 即可.&lt;/li&gt;
+  &lt;li&gt;对特殊的矩阵, 例如对角元不同的对角矩阵, 再如 $\begin{pmatrix} 0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0\\ \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\  0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0\\\end{pmatrix}$.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;(逆矩阵的判断依据与计算).&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;(&lt;strong&gt;重要例子&lt;/strong&gt;). 通过初等行变换, 将&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-21-%E4%B8%8A%E4%BA%A4%E5%A4%A7%E6%95%99%E6%9D%90.pdf#page=56&quot;&gt;课本例 2.22&lt;/a&gt; 所示的 Vandermonde 矩阵化对角元非零的上三角矩阵, 进而判断其可逆.&lt;/li&gt;
+  &lt;li&gt;(&lt;strong&gt;重要反例&lt;/strong&gt;). 记 $A,B,C,D \in \mathbb F^{2 \times 2}$, 则 $\binom{A \ B}{C \ D}$ 可逆是 $AD-BC$ 可逆的既不充分也不必要条件.&lt;/li&gt;
+  &lt;li&gt;(&lt;strong&gt;重要例子&lt;/strong&gt;). &lt;a href=&quot;HW7-solu#行满秩矩阵的一个例子&quot;&gt;HW7&lt;/a&gt; 的 Theorem 1 表明, 主对角占优的矩阵必是可逆的.&lt;/li&gt;
+  &lt;li&gt;(基础计算方法). 若 $(A \mid I)$ 能通过行变换化为 $(I \mid B)$, 则 $A$ 可逆且 $A^{-1} = B$.&lt;/li&gt;
+  &lt;li&gt;更多计算例子见 &lt;a href=&quot;HW9&quot;&gt;HW9&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;(矩阵幂). 取定 $A \in \mathbb F^{n \times n}$. 约定 $A^0 = I$. 回忆 $n = r(A) + \dim N(A)$.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;$r(A^k)$ 是递减数列, 相应地 $\dim N(A^k)$ 是递增数列.&lt;/li&gt;
+  &lt;li&gt;以下条件等价
+    &lt;ol&gt;
+      &lt;li&gt;$r(A^k) = r(A^{k+1})$.&lt;/li&gt;
+      &lt;li&gt;$\dim N(A^k) = \dim N(A^{k+1})$.&lt;/li&gt;
+      &lt;li&gt;若 $A^kx = 0$ 的解 $x_0$ 形如 $Ay_0$, 则 $y_0$ 也是 $A^k x = 0$ 的解.&lt;/li&gt;
+      &lt;li&gt;若 $Ax = 0$ 的解 $x_0$ 形如 $A^k y_0$, 则 $x_0 = 0$.&lt;/li&gt;
+      &lt;li&gt;$\begin{bmatrix} C(A^k) &amp; \to &amp; \mathbb F^n \\ v &amp; \mapsto &amp; A\cdot v \end{bmatrix}$ 是单射.&lt;/li&gt;
+      &lt;li&gt;$\begin{bmatrix} C(A^k) &amp; \to &amp; C(A^k) \\ v &amp; \mapsto &amp; A\cdot v \end{bmatrix}$ 是双射.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;(秩的停止增长). 依照基于单射的等价刻画, 得以下结论. 若 $r(A^k) = r(A^{k+1})$, 则 $r(A^{k+1}) = r(A^{k+2})$. 特别地, $r(A^n) = r(A^{n+1})$.&lt;/li&gt;
+  &lt;li&gt;$\dim N(A^{k+2}) - \dim N(A^{k+1}) \le \dim N(A^{k+1}) - \dim N(A^k)$. 证明: 考虑满射 $\varphi _k = \begin{bmatrix} C(A^k) &amp; \to &amp; C(A^{k+1}) \\ v &amp; \mapsto &amp; A\cdot v \end{bmatrix}$, 我们发现 $\dim N(A^{k+1}) - \dim N(A^k) = \dim C(A^k) - \dim C(A^{k+1})$ 是 $\varphi_k$ 零解空间的维数. 类似地定义 $\varphi _{k+1} = \begin{bmatrix} C(A^{k+1}) &amp; \to &amp; C(A^{k+2}) \\ v &amp; \mapsto &amp; A\cdot v \end{bmatrix}$, 则 $\dim N(A^{k+2}) - \dim N(A^{k+1})$ 是 $\varphi_{k+1}$ 零解空间的维数. 注意到映射 $\varphi_{k+1}$ 就是 $\varphi_k$ 限制在子集 $C(A^{k+1}) \subseteq C(A^{k})$ 上的映射, 因此 $\varphi_{k+1}$ 的零解空间包含在 $\varphi_k$ 的零解空间中, 从而得出结论. 也可以通过分块矩阵直接计算 $2r(A^{k+1}) \leq r(A^k) + r(A^{k+2})$, 这非常容易 (但无法体现线性映射的本质).&lt;/li&gt;
+&lt;/ol&gt;
 </description>
           <pubDate>2025-10-21T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/Review</link>
