@@ -344,7 +344,7 @@
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;(逆矩阵的课堂求解方式). 给定方阵 $A$, 若 $(A \quad I)$ 能通过行变换得到 $(I \quad B)$, 则 $B$ 是 $A$ 的逆. 请思考, 以上过程说明了 $BA = I$, 为什么有 $AB = I$?&lt;/p&gt;
   &lt;div class=&quot;solution&quot;&gt;
-    &lt;p&gt;&lt;a href=&quot;HW7#初等变换的使用&quot;&gt;见上一次习题&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;HW7-solu#初等变换的使用&quot;&gt;见上一次习题&lt;/a&gt;.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </description>
