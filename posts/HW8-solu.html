@@ -9,7 +9,7 @@
 
 
 
-  <title>HW8
+  <title>HW8-solu
     ·
     Jekyll Latex</title>
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW8">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW8-solu">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,7 +75,7 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW8</h1>
+      <h1>HW8-solu</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
@@ -95,17 +95,43 @@ MathJax = {
     A&C\\O&B
 \end{pmatrix}$ 可逆.</li>
     <li>若 $A$ 可逆, 则 $A^T$ 可逆, 且 $(A^T)^{-1} = (A^{-1})^T$.</li>
-    <li>若 $A'$ 是 $A$ 逆时针旋转 $90^\circ$ 得到的矩阵. 假定 $A'$ 可逆, 则 $(A')^{-1}$ 是 $A^{-1}$ 顺时针旋转 $90^\circ$ 得到的矩阵.</li>
+    <li>若 $A'$ 是 $A$ 逆时针旋转 $90^\circ$ 得到的矩阵, 假定 $A'$ 可逆, 则 $(A')^{-1}$ 是 $A^{-1}$ 顺时针旋转 $90^\circ$ 得到的矩阵.</li>
     <li>给定矩阵 $M = \begin{pmatrix}
     A&B\\C&D
 \end{pmatrix}$. 若 $(AD-BC)$ 可逆, 则 $M$ 可逆.</li>
   </ol>
+  <div class="solution">
+    <p>以下依次作答.</p>
+    <ol>
+      <li>正确. 因为 $AB$ 能通过行变换变为 $I$, 从而 $B$ 能通过行变换变为 $I$, 因此 $B$ 可逆. 从列变换的角度看, $A$ 可逆.</li>
+      <li>正确. 存在可逆行变换 $\begin{pmatrix}    A&C\\O&B\end{pmatrix}  \to \begin{pmatrix}    A&O\\O&B\end{pmatrix}$. 同时 $\begin{pmatrix}    A&O\\O&B\end{pmatrix}^{-1} = \begin{pmatrix}    A^{-1}&O\\O&B^{-1}\end{pmatrix}$.</li>
+      <li>正确. 回顾 $(AB)^T = B^TA^T$, 则 $(A^{-1})^TA^T = I = A^T(A^{-1})^T$. 因此 $(A^{-1})^T$ 是 $A^T$ 的逆矩阵.</li>
+      <li>正确. 记 $T$ 是 $(i, n+1-i)$ 处为 $1$, 其他位置为 $0$ 的矩阵. 特别地, $T^T = T^{-1} = T$. 此时, $AT$ 是将 $A$ 行倒序排列所得的矩阵, 那么 $A' = (AT)^T = TA^T$. 因此 $(A')^{-1} = (A^T)^{-1}T = (A^{-1})^T T$.</li>
+      <li>错误. $\begin{pmatrix}
+    0&1&0&0\\0&0&1&0\\0&1&0&0\\0&0&1&0
+\end{pmatrix}$.</li>
+    </ol>
+  </div>
 </div>
+
+<p>特别地, $M = \begin{pmatrix}
+    A&B\\C&D
+\end{pmatrix}$ 可逆是 $(AD-BC)$ 可逆的不充分不必要条件. 另一方向的反例是 $\begin{pmatrix}
+    1&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&1
+\end{pmatrix}$.</p>
 
 <h2 id="题二">题二</h2>
 
 <div class="problem">
   <p>对矩阵 $A$, 若存在唯一的矩阵 $X$ 使得 $AXA=A$, 则 $A$ 可逆. 此时, $X = A^{-1}$.</p>
+  <div class="proof">
+    <p>假定存在唯一的矩阵 $X$ 使得 $AXA=A$, 下证明 $A$ 可逆, 即行满秩且列满秩.</p>
+    <ol>
+      <li>证明行满秩. 若不然, 则存在非零行向量 $y$ 使得 $yA=0$. 将 $y$ 加至 $X$ 的第一行, 记新矩阵 $X'$. 则 $AX'A = A$, 与 $X$ 的唯一性矛盾.</li>
+      <li>证明列满秩. 若不然, 则存在非零列向量 $z$ 使得 $Az=0$. 将 $z$ 加至 $X$ 的第一列, 记新矩阵 $X''$. 则 $AX''A = A$, 与 $X$ 的唯一性矛盾.</li>
+    </ol>
+    <p>因此, $A$ 有双侧逆, 从而可逆. 显然 $X = A^{-1}$.</p>
+  </div>
 </div>
 
 <h2 id="题三">题三</h2>
@@ -116,16 +142,23 @@ MathJax = {
 
 <div class="problem">
   <p>假定矩阵是数域上的, $k$ 是域中的非零常数. 试计算以下矩阵的逆矩阵 (能否给一个简单的计算过程?) $$\begin{equation}
-        M=\begin{pmatrix}
-            k^{0} \cdot C_{0}^{0} &  &  &  &  &  & \\[6pt]
-            k^{1} \cdot C_{1}^{0} & k^{0} \cdot C_{1}^{1} &  &  &  &  & \\[6pt]
-            k^{2} \cdot C_{2}^{0} & k^{1} \cdot C_{2}^{1} & k^{0} \cdot C_{2}^{2} &  &  &  & \\[6pt]
-            \vdots  & \vdots  & \vdots  & \ddots  &  &  & \\[6pt]
-            k^{n-2} \cdot C_{n-2}^{0} & k^{n-3} \cdot C_{n-2}^{1} & k^{n-4} \cdot C_{n-2}^{2} & \cdots  & k^{0} \cdot C_{n-2}^{n-2} &  & \\[6pt]
-            k^{n-1} \cdot C_{n-1}^{0} & k^{n-2} \cdot C_{n-1}^{1} & k^{n-3} \cdot C_{n-1}^{2} & \cdots  & k^{1} \cdot C_{n-1}^{n-2} & k^{0} \cdot C_{n-1}^{n-1} & \\[6pt]
-            k^{n} \cdot C_{n}^{0} & k^{n-1} \cdot C_{n}^{1} & k^{n-2} \cdot C_{n}^{2} & \cdots  & k^{2} \cdot C_{n}^{n-2} & k^{1} \cdot C_{n}^{n-1} & k^{0} \cdot C_{n}^{n}
-        \end{pmatrix}.
-    \end{equation}$$</p>
+  M=\begin{pmatrix}
+      k^{0} \cdot C_{0}^{0} &  &  &  &  &  & \\[6pt]
+      k^{1} \cdot C_{1}^{0} & k^{0} \cdot C_{1}^{1} &  &  &  &  & \\[6pt]
+      k^{2} \cdot C_{2}^{0} & k^{1} \cdot C_{2}^{1} & k^{0} \cdot C_{2}^{2} &  &  &  & \\[6pt]
+      \vdots  & \vdots  & \vdots  & \ddots  &  &  & \\[6pt]
+      k^{n-2} \cdot C_{n-2}^{0} & k^{n-3} \cdot C_{n-2}^{1} & k^{n-4} \cdot C_{n-2}^{2} & \cdots  & k^{0} \cdot C_{n-2}^{n-2} &  & \\[6pt]
+      k^{n-1} \cdot C_{n-1}^{0} & k^{n-2} \cdot C_{n-1}^{1} & k^{n-3} \cdot C_{n-1}^{2} & \cdots  & k^{1} \cdot C_{n-1}^{n-2} & k^{0} \cdot C_{n-1}^{n-1} & \\[6pt]
+      k^{n} \cdot C_{n}^{0} & k^{n-1} \cdot C_{n}^{1} & k^{n-2} \cdot C_{n}^{2} & \cdots  & k^{2} \cdot C_{n}^{n-2} & k^{1} \cdot C_{n}^{n-1} & k^{0} \cdot C_{n}^{n}
+  \end{pmatrix}.
+\end{equation}$$</p>
+  <div class="solution">
+    <p>对数域中的数 $x$, 定义列向量 $v_x = (1, x, x^2, \ldots , x^n)$. 特别地, 对任意不同的 $\{x_i\}_{i=0}^n$, 矩阵 $(v_{x_0} \ v_{x_1} \ \cdots v_{x_n})$ 是满秩的 (消元检验, 或直接使用 Vandermonde 行列式). 因此, $\mathbb F^{n+1}$ 中的所有向量都是 $\{v_{x_i}\}_{i=0}^n$ 的线性组合. 这定义了映射</p>
+    <p>$$\begin{equation}
+(M\cdot \ ): \ \mathbb F^{n+1} \to \mathbb F^{n+1}, \qquad \sum_{i=1}^d c_d\cdot v_{x_i} \mapsto M \cdot \sum_{i=1}^d c_d\cdot v_{x_i} = \sum_{i=1}^d c_d\cdot v_{k + x_i}.
+\end{equation}$$</p>
+    <p>容易找到其逆映射 $(M' \cdot \ )$, 使得 $v_x$ 映至 $v_{x-k}$. 将 $M$ 中所有 $k$ 换作 $-k$, 得 $M'$.</p>
+  </div>
 </div>
 
 <h2 id="题四">题四</h2>
@@ -134,6 +167,9 @@ MathJax = {
 
 <div class="example">
   <p>(逆矩阵的课堂求解方式). 给定方阵 $A$, 若 $(A \quad I)$ 能通过行变换得到 $(I \quad B)$, 则 $B$ 是 $A$ 的逆. 请思考, 以上过程说明了 $BA = I$, 为什么有 $AB = I$?</p>
+  <div class="solution">
+    <p><a href="HW7#初等变换的使用">见上一次习题</a>.</p>
+  </div>
 </div>
 
   </article>
@@ -339,13 +375,13 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW9" title="NEXT: HW9">&lt;&lt;</a>
+      <a class="next" href="/MATH1205H-04-HW/posts/HW8" title="NEXT: HW8">&lt;&lt;</a>
       <span>&middot;</span>
     
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW8-solu" title="PREV: HW8-solu">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW7" title="PREV: HW7">&gt;&gt;</a>
     
   </div>
 </main>
