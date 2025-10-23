@@ -7,6 +7,101 @@
     
       
         <item>
+          <title>HW10</title>
+          <description>&lt;p&gt;&lt;strong&gt;所有矩阵都是数域上的. 试完成 Problems.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;带主元选取的-lu-分解&quot;&gt;(带主元选取的) LU 分解&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;(可逆方阵的 LU 分解). 试依次证明如下问题.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;记方阵 $Q$ 的第 $k$ 个顺序主子式为左上角 $k \times k$ 部分. 假定 $Q \in \mathbb F^{n \times n}$ 的 $n$ 个顺序主子式可逆. 试证明, 存在行初等变换 $(Q \mid I) \to (U \mid L)$ 使得 $U$ 是上三角矩阵, $L$ 是下三角矩阵且对角线元素均为 $1$. 此时, $Q = LU$.&lt;/li&gt;
+    &lt;li&gt;假定 $n \times (n+1)$ 规格的矩阵 $A$ 行满秩, 则可以移除 $A$ 某列, 使得移除后的 $n \times n$ 矩阵可逆.&lt;/li&gt;
+    &lt;li&gt;试证明任意可逆矩阵 $Q \in \mathbb F^{n \times n}$ 都可以写作 $Q = LUS$, 其中 $L$ 是下三角矩阵且对角线元素均为 $1$, $U$ 是上三角矩阵, $S$ 是置换矩阵.&lt;/li&gt;
+    &lt;li&gt;简单说明, 并非所有可逆矩阵都能写作 $Q = LU$ 的形式.&lt;/li&gt;
+    &lt;li&gt;可逆矩阵 $Q$ 能写作 $Q = LU$, 当且仅当 $Q$ 的所有顺序主子式均非零.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;作为推论, 任意矩阵 $A \in \mathbb F^{m \times n}$ 可以写作乘积 $A = LRS$. 其中,&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$L\in \mathbb F^{m \times m}$ 是下三角矩阵, 且对角线元素均为 $1$;&lt;/li&gt;
+    &lt;li&gt;$R\in \mathbb F^{m \times n}$ 是阶梯形状的矩阵 (上三角矩阵在非方阵中的推广);&lt;/li&gt;
+    &lt;li&gt;$S\in \mathbb F^{m \times m}$ 是置换矩阵.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;作为推论, 所有矩阵 $A \in \mathbb F^{m \times n}$ 可以写成乘积 $A = LJDUS$, 其中&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$L\in \mathbb F^{m \times m}$ 是下三角矩阵, 且对角线元素均为 $1$;&lt;/li&gt;
+    &lt;li&gt;$J\in \mathbb F^{m \times n}$ 是形如 $\binom{I \ \ O}{O \ \ O}$ 的矩阵;&lt;/li&gt;
+    &lt;li&gt;$D\in \mathbb F^{n \times n}$ 是对角矩阵, 且对角线元素均非零;&lt;/li&gt;
+    &lt;li&gt;$U\in \mathbb F^{n \times n}$ 是上三角矩阵, 且对角线元素均为 $1$;&lt;/li&gt;
+    &lt;li&gt;$S\in \mathbb F^{m \times m}$ 是置换矩阵.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;可使用 &lt;a href=&quot;https://sagecell.sagemath.org/&quot;&gt;sage&lt;/a&gt; 查看一个矩阵的 $ref$ 型与 $PA = LU$ 分解. 例如, 我们创建 $\mathbb Q$ 上的矩阵&lt;/p&gt;
+  &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;
+    &lt;div class=&quot;highlight&quot;&gt;
+      &lt;div class=&quot;language-plaintext highlight highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A = matrix(QQ, [
+ [ 1, 1, 4, 5, 1, 4, 0, 0, 1],
+ [-1, 9,-1,-9, 8,-1, 0,-7,-7],
+ [ 1, 2,-3,-4, 5, 6,-7,-8, 9],
+ [ 3, 1, 4, 1, 5, 9, 2, 6, 5],
+ [ 2, 7, 1, 8, 2, 8, 1, 8, 3]
+ ]); # Create $A\in \mathbb Q^{m\times n}$
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;可以使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;A.rref()&lt;/code&gt; 计算 $A$ 的行最简形, 使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P, L, U = A.LU()&lt;/code&gt; 计算 $PA = LU$ 分解, 其中 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;P&lt;/code&gt; 是置换矩阵.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;矩阵与映射&quot;&gt;矩阵与映射&lt;/h2&gt;
+
+&lt;p&gt;行满秩矩阵的列数不少于行数. 请用尽量简洁的语言证明如下问题.&lt;/p&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;$A \in \mathbb F^{m \times n}$ 行满秩, 当且仅当以下等价命题成立:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;(行满秩的定义). $ref(A)$ 的每一行都有主元, 即不存在零行.&lt;/li&gt;
+    &lt;li&gt;$cef(A) = (I_m \quad O)$.&lt;/li&gt;
+    &lt;li&gt;$\mathbb F^m$ 的任意向量都能由 $A$ 的列向量线性组合得到.&lt;/li&gt;
+    &lt;li&gt;列向量的映射 $\begin{bmatrix}\mathbb F^n &amp;\to&amp; \mathbb F^m \\ v &amp;\mapsto&amp; A\cdot v\end{bmatrix}$ 是满射.&lt;/li&gt;
+    &lt;li&gt;存在 $R$ 使得 $AR = I_m$.&lt;/li&gt;
+    &lt;li&gt;$A$ 行线性无关.&lt;/li&gt;
+    &lt;li&gt;行向量的映射 $\begin{bmatrix}\mathbb F^{1\times m} &amp;\to&amp; \mathbb F^{1 \times n} \\ u^T &amp;\mapsto&amp; u^T\cdot A \end{bmatrix}$ 是单射.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;从映射角度看, 若 $A$ 和 $B$ 行满秩, 则 $AB$ 行满秩. 若 $AB$ 行满秩, 则 $A$ 行满秩.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定矩阵 $B \in \mathbb F^{m \times m}$ 与 $C \in \mathbb F^{n \times n}$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;假定矩阵方程 $BXC = O$ 的解仅有 $X = O$, 则任何 $\mathbb F^{m \times n}$ 中的矩阵 $Y$ 都能写作 $Y = BXC$ 的形式.&lt;/li&gt;
+    &lt;li&gt;假定矩阵方程 $BX = XC$ 的解仅有 $X = O$, 则任何 $\mathbb F^{m \times n}$ 中的矩阵 $Y$ 都能写作 $Y = BX - XC$ 的形式.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;提示: 试回顾对方阵 $A$, 存在映射&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\begin{bmatrix}\mathbb F^n &amp;\to&amp; \mathbb F^n \\ v &amp;\mapsto&amp; A\cdot v\end{bmatrix}
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;这是单射 ($A$ 列满秩), 当且仅当这是满射 ($A$ 行满秩), 当且仅当这是双射 ($A$ 可逆).&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-10-23T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW10</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW10</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>期中考试复习提纲</title>
           <description>&lt;p&gt;本文为期中考试的复习提纲, 包含以下专题.&lt;/p&gt;
 
