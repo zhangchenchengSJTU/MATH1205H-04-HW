@@ -15,11 +15,11 @@
 &lt;div class=&quot;problem&quot;&gt;
   &lt;p&gt;(可逆方阵的 LU 分解). 试依次证明如下问题.&lt;/p&gt;
   &lt;ol&gt;
-    &lt;li&gt;记方阵 $Q$ 的第 $k$ 个顺序主子式为左上角 $k \times k$ 部分. 假定 $Q \in \mathbb F^{n \times n}$ 的 $n$ 个顺序主子式可逆. 试证明, 存在行初等变换 $(Q \mid I) \to (U \mid L)$ 使得 $U$ 是上三角矩阵, $L$ 是下三角矩阵且对角线元素均为 $1$. 此时, $Q = LU$.&lt;/li&gt;
+    &lt;li&gt;记方阵 $Q$ 的第 $k$ 个顺序主子式为左上角 $k \times k$ 部分. 假定 $Q \in \mathbb F^{n \times n}$ 的 $n$ 个顺序主子式可逆. 试证明, 存在行初等变换 $(Q \mid I) \to (U \mid L)$ 使得 $U$ 是上三角矩阵, $L$ 是下三角矩阵且对角线元素均为 $1$. 此时, $Q = L^{-1} U$ ($L^{-1}$ 也是主对角为 $1$ 的下三角矩阵).&lt;/li&gt;
     &lt;li&gt;假定 $n \times (n+1)$ 规格的矩阵 $A$ 行满秩, 则可以移除 $A$ 某列, 使得移除后的 $n \times n$ 矩阵可逆.&lt;/li&gt;
     &lt;li&gt;试证明任意可逆矩阵 $Q \in \mathbb F^{n \times n}$ 都可以写作 $Q = LUS$, 其中 $L$ 是下三角矩阵且对角线元素均为 $1$, $U$ 是上三角矩阵, $S$ 是置换矩阵.&lt;/li&gt;
     &lt;li&gt;简单说明, 并非所有可逆矩阵都能写作 $Q = LU$ 的形式.&lt;/li&gt;
-    &lt;li&gt;可逆矩阵 $Q$ 能写作 $Q = LU$, 当且仅当 $Q$ 的所有顺序主子式均非零.&lt;/li&gt;
+    &lt;li&gt;可逆矩阵 $Q$ 能写作 $Q = LU$, 当且仅当 $Q$ 的所有顺序主子式均均可逆.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 
