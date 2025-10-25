@@ -573,7 +573,7 @@ u_k a_{k, \sigma (k)} = - \sum _{i \neq k} u_i a_{i, \sigma (k)}.
 \end{equation}$$&lt;/p&gt;
     &lt;p&gt;另一方面,&lt;/p&gt;
     &lt;p&gt;$$\begin{equation}
-|u_k a_{k, \sigma (k)}| &gt; \sum _{i \neq k} |u_i a_{i, \sigma (k)}|,
+|u_k a_{k, \sigma (k)}| &gt; |u_k|\cdot \sum _{i \neq k} |a_{i, \sigma (k)}| = \sum _{i \neq k} |u_k a_{i, \sigma (k)}| \geq \sum _{i \neq k} |u_i a_{i, \sigma (k)}|,
 \end{equation}$$&lt;/p&gt;
     &lt;p&gt;矛盾.&lt;/p&gt;
   &lt;/div&gt;
