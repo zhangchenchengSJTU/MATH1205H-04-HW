@@ -28,7 +28,7 @@
   &lt;li&gt;Reason: 本意是随便写一个第二列是第一列两倍的矩阵.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Page 7, Line10&lt;/p&gt;
+&lt;p&gt;Page 7, Line 10&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Original: 即, $(B \mid v)\binom c{-1} =0 \xrightarrow{Q\cdot (-)} (ref(B) \mid v) \binom {c}{-1} = 0$;&lt;/li&gt;
