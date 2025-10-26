@@ -8,13 +8,33 @@
       
         <item>
           <title>Exersice Class 6</title>
-          <description>&lt;p&gt;录制：26-Oct-25 线性代数习题课&lt;/p&gt;
+          <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
+
+&lt;p&gt;录制：26-Oct-25 线性代数习题课&lt;/p&gt;
 
 &lt;p&gt;日期：2025-10-26 17:55:52&lt;/p&gt;
 
 &lt;p&gt;录制文件：&lt;a href=&quot;https://meeting.tencent.com/crm/NAOmXwGd8e&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;文档:&lt;/p&gt;
+&lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-26-%E7%AC%AC%E5%85%AD%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;typos&quot;&gt;Typos&lt;/h2&gt;
+
+&lt;p&gt;Page 5, Line 17&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Original: $v_2 = 2v_1$ $\left(\substack{1 \ 4 \\ 2 \ 5 \\ 3 \ 6}\right)$;&lt;/li&gt;
+  &lt;li&gt;Corrected: $v_2 = 2v_1$ $\left(\substack{1 \ 2 \\ 3 \ 4 \\ 5 \ 6}\right)$;&lt;/li&gt;
+  &lt;li&gt;Reason: 本意是随便写一个第二列是第一列两倍的矩阵.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Page 7, Line10&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Original: 即, $(B \mid v)\binom c{-1} =0 \xrightarrow{Q\cdot (-)} (ref(B) \mid v) \binom {c}{-1} = 0$;&lt;/li&gt;
+  &lt;li&gt;Corrected: 即, $(B \mid v)\binom c{-1} =0 \xrightarrow{Q\cdot (-)} (ref(B) \mid Qv) \binom {c}{-1} = 0$;&lt;/li&gt;
+  &lt;li&gt;Reason: 这里左乘 $Q$ 会把 $v$ 变成 $Qv$.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
           <pubDate>2025-10-26T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/EX6</link>
