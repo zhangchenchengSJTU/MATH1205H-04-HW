@@ -7,6 +7,85 @@
     
       
         <item>
+          <title>HW11</title>
+          <description>&lt;h2 id=&quot;基的定义&quot;&gt;基的定义&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;注意: 我们没有定义线性空间的维数.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;选定域 $\mathbb F$ 上的线性空间 $V$. 定义两种关于子集 $S \subseteq V$ 的性质. &lt;br /&gt; (性质一). 对任意 $v \in V$, 总存在线性组合 $$\begin{equation}
+v = \sum _{i=1}^n c_i u_i,\quad u_i \in S, \quad c_i \in \mathbb F.
+\end{equation}$$ &lt;br /&gt; (性质二). $S$ 是线性无关集. 换言之, 若有线性组合式 $$\begin{equation}
+0 = \sum _{i=1}^n c_i u_i,\quad u_i \in S, \quad c_i \in \mathbb F
+\end{equation}$$ 则必然有一切 $c_i = 0$. &lt;br /&gt; 试证明, 以下&lt;strong&gt;论述&lt;/strong&gt;等价:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$S$ 满足性质一, 且任意 $T$ ($T \subsetneq S$ 为真子集) 不满足性质一.&lt;/li&gt;
+    &lt;li&gt;$S$ 满足性质二, 且任意 $W$ ($S \subsetneq W$ 为真子集) 不满足性质二.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;&lt;strong&gt;注意: 我们证明的是以上两条论述等价, 并不是证明性质一与性质二等价.&lt;/strong&gt; \&lt;/p&gt;
+  &lt;p&gt;这给出基的两种等价表述:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;能通过线性组合复现空间的极小子集;&lt;/li&gt;
+    &lt;li&gt;线性无关的极大子集.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(基). 如果存在上一题所说的情况, 则称 $S$ 是线性空间 $V$ 的一个&lt;strong&gt;基&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(维数). 如果线性空间 $V$ 的基是有限集, 则容易证明任意两个基大小相同, 称作线性空间的维数.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;子空间的运算&quot;&gt;子空间的运算&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(线性子空间, 简称子空间). 称子集 $U \subseteq V$ 是线性空间 $V$ 的子空间, 若 $U$ 是一个线性空间, 其继承了 $V$ 的加法与数乘.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;给定线性空间 $V$, 以下 $U_i$ 都是 $V$ 的子空间.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(子空间的加法). 定义&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+U_1 + U_2 := \{u_1 + u_2 \mid u_1 \in U_1, u_2 \in U_2\}.
+\end{equation}$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;注意: 子空间的并 ($\cup$) 一般不是子空间.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(子空间的交). 子空间的交就是集合的交, 其结果仍是一个子空间.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;判断题. 若不成立, 则给出反例 (所有反例可以在 $\mathbb R^2$ 中找到).&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;他们的交有可能为空集.&lt;/li&gt;
+    &lt;li&gt;如果 $(U_1 + U_2)\subseteq (U_1 + U_3)$, 则 $U_2 \subseteq U_3$.&lt;/li&gt;
+    &lt;li&gt;如果 $U_1 \cup U_2$ 是子空间, 则 $U_1 \subseteq U_2$ 或 $U_2 \subseteq U_1$.&lt;/li&gt;
+    &lt;li&gt;$(U_1 \cap U_2) \cap U_3 = U_1 \cap (U_2 \cap U_3)$.&lt;/li&gt;
+    &lt;li&gt;$(U_1 + U_2) \cap U_3 = (U_1 \cap U_3) + (U_2 \cap U_3)$.&lt;/li&gt;
+    &lt;li&gt;$(U_1 \cap U_2) + U_3 = (U_1 + U_3) \cap (U_2 + U_3)$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;若 $U_1 \subseteq U_2$, 对任意 $U_3$, 总有&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+U_1 + (U_3 \cap U_2) = (U_1 + U_3) \cap U_2.
+\end{equation}$$&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-10-28T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW11</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW11</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Exersice Class 6</title>
           <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
 

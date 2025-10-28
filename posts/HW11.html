@@ -9,12 +9,12 @@
 
 
 
-  <title>Exersice Class 6
+  <title>HW11
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="Files">
+<meta name="description" content="基的定义">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/EX6">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW11">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,43 +75,85 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>Exersice Class 6</h1>
+      <h1>HW11</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
-        October 26, 2025
+        October 28, 2025
       </p>
     </div>
 
     <div class="divider"></div>
 
-    <h2 id="files">Files</h2>
+    <h2 id="基的定义">基的定义</h2>
 
-<p>录制：26-Oct-25 线性代数习题课</p>
+<p><strong>注意: 我们没有定义线性空间的维数.</strong></p>
 
-<p>日期：2025-10-26 17:55:52</p>
+<div class="problem">
+  <p>选定域 $\mathbb F$ 上的线性空间 $V$. 定义两种关于子集 $S \subseteq V$ 的性质. <br /> (性质一). 对任意 $v \in V$, 总存在线性组合 $$\begin{equation}
+v = \sum _{i=1}^n c_i u_i,\quad u_i \in S, \quad c_i \in \mathbb F.
+\end{equation}$$ <br /> (性质二). $S$ 是线性无关集. 换言之, 若有线性组合式 $$\begin{equation}
+0 = \sum _{i=1}^n c_i u_i,\quad u_i \in S, \quad c_i \in \mathbb F
+\end{equation}$$ 则必然有一切 $c_i = 0$. <br /> 试证明, 以下<strong>论述</strong>等价:</p>
+  <ol>
+    <li>$S$ 满足性质一, 且任意 $T$ ($T \subsetneq S$ 为真子集) 不满足性质一.</li>
+    <li>$S$ 满足性质二, 且任意 $W$ ($S \subsetneq W$ 为真子集) 不满足性质二.</li>
+  </ol>
+  <p><strong>注意: 我们证明的是以上两条论述等价, 并不是证明性质一与性质二等价.</strong> \</p>
+  <p>这给出基的两种等价表述:</p>
+  <ol>
+    <li>能通过线性组合复现空间的极小子集;</li>
+    <li>线性无关的极大子集.</li>
+  </ol>
+</div>
 
-<p>录制文件：<a href="https://meeting.tencent.com/crm/NAOmXwGd8e">地址</a></p>
+<div class="definition">
+  <p>(基). 如果存在上一题所说的情况, 则称 $S$ 是线性空间 $V$ 的一个<strong>基</strong>.</p>
+</div>
 
-<p>文档: <a href="https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-26-%E7%AC%AC%E5%85%AD%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf">地址</a></p>
+<div class="definition">
+  <p>(维数). 如果线性空间 $V$ 的基是有限集, 则容易证明任意两个基大小相同, 称作线性空间的维数.</p>
+</div>
 
-<h2 id="typos">Typos</h2>
+<h2 id="子空间的运算">子空间的运算</h2>
 
-<p>Page 5, Line 17</p>
+<div class="definition">
+  <p>(线性子空间, 简称子空间). 称子集 $U \subseteq V$ 是线性空间 $V$ 的子空间, 若 $U$ 是一个线性空间, 其继承了 $V$ 的加法与数乘.</p>
+</div>
 
-<ul>
-  <li>Original: $v_2 = 2v_1$ $\left(\substack{1 \ 4 \\ 2 \ 5 \\ 3 \ 6}\right)$;</li>
-  <li>Corrected: $v_2 = 2v_1$ $\left(\substack{1 \ 2 \\ 3 \ 4 \\ 5 \ 6}\right)$;</li>
-  <li>Reason: 本意是随便写一个第二列是第一列两倍的矩阵.</li>
-</ul>
+<p>给定线性空间 $V$, 以下 $U_i$ 都是 $V$ 的子空间.</p>
 
-<p>Page 7, Line 10</p>
+<div class="definition">
+  <p>(子空间的加法). 定义</p>
+  <p>$$\begin{equation}
+U_1 + U_2 := \{u_1 + u_2 \mid u_1 \in U_1, u_2 \in U_2\}.
+\end{equation}$$</p>
+</div>
 
-<ul>
-  <li>Original: 即, $(B \mid v)\binom c{-1} =0 \xrightarrow{Q\cdot (-)} (ref(B) \mid v) \binom {c}{-1} = 0$;</li>
-  <li>Corrected: 即, $(B \mid v)\binom c{-1} =0 \xrightarrow{Q\cdot (-)} (ref(B) \mid Qv) \binom {c}{-1} = 0$;</li>
-  <li>Reason: 这里左乘 $Q$ 会把 $v$ 变成 $Qv$.</li>
-</ul>
+<p>注意: 子空间的并 ($\cup$) 一般不是子空间.</p>
+
+<div class="definition">
+  <p>(子空间的交). 子空间的交就是集合的交, 其结果仍是一个子空间.</p>
+</div>
+
+<div class="problem">
+  <p>判断题. 若不成立, 则给出反例 (所有反例可以在 $\mathbb R^2$ 中找到).</p>
+  <ol>
+    <li>他们的交有可能为空集.</li>
+    <li>如果 $(U_1 + U_2)\subseteq (U_1 + U_3)$, 则 $U_2 \subseteq U_3$.</li>
+    <li>如果 $U_1 \cup U_2$ 是子空间, 则 $U_1 \subseteq U_2$ 或 $U_2 \subseteq U_1$.</li>
+    <li>$(U_1 \cap U_2) \cap U_3 = U_1 \cap (U_2 \cap U_3)$.</li>
+    <li>$(U_1 + U_2) \cap U_3 = (U_1 \cap U_3) + (U_2 \cap U_3)$.</li>
+    <li>$(U_1 \cap U_2) + U_3 = (U_1 + U_3) \cap (U_2 + U_3)$.</li>
+  </ol>
+</div>
+
+<div class="problem">
+  <p>若 $U_1 \subseteq U_2$, 对任意 $U_3$, 总有</p>
+  <p>$$\begin{equation}
+U_1 + (U_3 \cap U_2) = (U_1 + U_3) \cap U_2.
+\end{equation}$$</p>
+</div>
 
   </article>
 
@@ -210,9 +252,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#files">
+      <a href="#基的定义">
         <span class="toc-number">1.</span>
-        <span class="toc-title">Files</span>
+        <span class="toc-title">基的定义</span>
       </a>
     </div>
   
@@ -227,9 +269,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#typos">
+      <a href="#子空间的运算">
         <span class="toc-number">2.</span>
-        <span class="toc-title">Typos</span>
+        <span class="toc-title">子空间的运算</span>
       </a>
     </div>
   
@@ -282,13 +324,10 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW11" title="NEXT: HW11">&lt;&lt;</a>
-      <span>&middot;</span>
-    
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW10" title="PREV: HW10">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/EX6" title="PREV: Exersice Class 6">&gt;&gt;</a>
     
   </div>
 </main>
