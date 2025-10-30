@@ -9,12 +9,12 @@
 
 
 
-  <title>HW11
+  <title>HW12
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="基的定义">
+<meta name="description" content="子空间的直和">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW11">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW12">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,84 +75,138 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW11</h1>
+      <h1>HW12</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
-        October 28, 2025
+        October 30, 2025
       </p>
     </div>
 
     <div class="divider"></div>
 
-    <h2 id="基的定义">基的定义</h2>
+    <h2 id="子空间的直和">子空间的直和</h2>
 
-<p><strong>注意: 我们没有定义线性空间的维数.</strong></p>
-
-<div class="problem">
-  <p>选定域 $\mathbb F$ 上的线性空间 $V$. 定义两种关于子集 $S \subseteq V$ 的性质. <br /> (性质一). 对任意 $v \in V$, 总存在线性组合 $$\begin{equation}
-v = \sum _{i=1}^n c_i u_i,\quad u_i \in S, \quad c_i \in \mathbb F.
-\end{equation}$$ <br /> (性质二). $S$ 是线性无关集. 换言之, 若有线性组合式 $$\begin{equation}
-0 = \sum _{i=1}^n c_i u_i,\quad u_i \in S, \quad c_i \in \mathbb F
-\end{equation}$$ 则必然有一切 $c_i = 0$. <br /> 试证明, 以下<strong>论述</strong>等价:</p>
-  <ol>
-    <li>$S$ 满足性质一, 且任意 $T$ ($T \subsetneq S$ 为真子集) 不满足性质一.</li>
-    <li>$S$ 满足性质二, 且任意 $W$ ($S \subsetneq W$ 为真子集) 不满足性质二.</li>
-  </ol>
-  <p><strong>注意: 我们证明的是以上两条论述等价, 并不是证明性质一与性质二等价.</strong> \</p>
-  <p>这给出基的两种等价表述:</p>
-  <ol>
-    <li>能通过线性组合复现空间的极小子集;</li>
-    <li>线性无关的极大子集.</li>
-  </ol>
-</div>
+<h3 id="直和的定义">直和的定义</h3>
 
 <div class="definition">
-  <p>(基). 如果存在上一题所说的情况, 则称 $S$ 是线性空间 $V$ 的一个<strong>基</strong>.</p>
-</div>
-
-<div class="definition">
-  <p>(维数). 如果线性空间 $V$ 的基是有限集, 则容易证明任意两个基大小相同, 称作线性空间的维数.</p>
-</div>
-
-<h2 id="子空间的运算">子空间的运算</h2>
-
-<div class="definition">
-  <p>(线性子空间, 简称子空间). 称子集 $U \subseteq V$ 是线性空间 $V$ 的子空间, 若 $U$ 是一个线性空间, 其继承了 $V$ 的加法与数乘.</p>
-</div>
-
-<p>给定线性空间 $V$, 以下 $U_i$ 都是 $V$ 的子空间.</p>
-
-<div class="definition">
-  <p>(子空间的加法). 定义</p>
+  <p>(子空间的直和). 记 $U_1$ 与 $U_2$ 是线性空间 $V$ 的两个子空间. 称 $V$ 是 $U_1$ 与 $U_2$ 的直和, 若有</p>
   <p>$$\begin{equation}
-U_1 + U_2 := \{u_1 + u_2 \mid u_1 \in U_1, u_2 \in U_2\}.
+V = U_1 + U_2\quad \text{且}\quad U_1 \cap U_2 = 0.
 \end{equation}$$</p>
+  <p>记作 $V = U_1 \oplus U_2$.</p>
 </div>
 
-<p>注意: 子空间的并 ($\cup$) 一般不是子空间.</p>
+<div class="lemma">
+  <p>假定有直和关系 $V = U_1 \oplus U_2$. 记 $U_1 \times U_2$ 是集合的 Cartesian 积, 其中的元素是 $\{(u_1, u_2) \mid u_1 \in U_1, \ u_2\in U_2\}$. $U_1 \times U_2$ 作为线性空间, 定义如下加法与数乘:</p>
+  <ul>
+    <li>加法: $(u_1, u_2) + (u_1', u_2') := (u_1 + u_1', u_2 + u_2')$;</li>
+    <li>数乘: $\lambda (u_1, u_2) := (\lambda u_1, \lambda u_2)$.</li>
+  </ul>
+  <p>此时, 存在保持线性组合的集合双射</p>
+  <p>$$\begin{equation}
+\varphi : U_1 \times U_2 \to U_1 \oplus U_2,\quad (u_1, u_2) \mapsto u_1 + u_2.
+\end{equation}$$</p>
+  <div class="proof">
+    <p>先证明 $\varphi$ 保持线性组合关系. 任取 $(u_1, u_2) + \lambda (u_1', u_2')$, 则</p>
+    <p>$$\begin{aligned}
+&\varphi ((u_1, u_2) + \lambda (u_1', u_2')) \\
+= \ &\varphi ((u_1 + \lambda u_1', u_2 + \lambda  u_2'))\\
+= \ &(u_1 + \lambda u_1') + (u_2 + \lambda  u_2')\\
+= \ &(u_1 + u_2) + \lambda (u_1' + u_2')\\
+= \  & \varphi (u_1, u_2) + \lambda \varphi (u_1', u_2').
+\end{aligned}$$</p>
+    <p>下证明 $\varphi$ 是单射. 若 $\varphi (u_1, u_2) = 0$, 则 $u_1 + u_2 = 0$. 依照直和关系</p>
+    <p>$$\begin{equation}
+u_1 = -u_2 \in U_1 \cap U_2 = 0.
+\end{equation}$$</p>
+    <p>从而 $u_1 = u_2 = 0$, 说明 $\varphi$ 是单射. <br /> 下证明 $\varphi$ 是满射. 任取 $v \in V$, 依照直和关系, 存在 $u_1 \in U_1, u_2 \in U_2$ 使得 $v = u_1 + u_2$. 则 $\varphi (u_1, u_2) = v$, 说明 $\varphi$ 是满射.</p>
+  </div>
+</div>
+
+<p>这告诉我们, 若 $V = U_1 \oplus U_2$, 则 $V$ 与 $U_1 \times U_2$ 是同构的线性空间. 线性同构即保持线性组合关系的集合双射.</p>
+
+<h3 id="直和的性质">直和的性质</h3>
+
+<div class="problem">
+  <p>判断题, 对不正确的命题举出反例. 以下默认 $U_i$ 是线性空间 $V$ 的子空间.</p>
+  <ol>
+    <li>若 $V = U_1 \oplus U_2$, 且 $V = U_1 \oplus U_3$, 则 $U_2 = U_3$.</li>
+    <li>若 $V = U_1 \oplus U_2$, 且 $V = U_1 \oplus U_3$, 同时 $U_2 \subseteq U_3$, 则 $U_2 = U_3$.</li>
+    <li>假定 $V$ 有一组基, 记作 $S$. 若有 $V = U_1 \oplus U_2$, 则 $S$ 可分解为不交并 $S = S_1 \cup S_2$, 其中 $S_i$ 是 $U_i$ 的基.</li>
+    <li>假定 $V$ 有一组基, 记作 $S$. 若有 $S = S_1 \cup S_2$, 且 $S_1 \cap S_2 = \emptyset$, 则存在唯一的直和分解 $V = U_1 \oplus U_2$, 使得 $S_i$ 是 $U_i$ 的基.</li>
+    <li>若 $U_1 + U_2 + U_3 = V$, $U_1 \cap U_2 \cap U_3 = 0$, 则 $V = U_1 \oplus U_2 \oplus U_3$.</li>
+  </ol>
+</div>
+
+<h3 id="直和与维数">直和与维数</h3>
 
 <div class="definition">
-  <p>(子空间的交). 子空间的交就是集合的交, 其结果仍是一个子空间.</p>
+  <p>(有限维线性空间). 称线性空间 $V$ 是有限维的, 若其存在有限基. 基的定义见<a href="HW11#基的定义">上一次作业</a>.</p>
+</div>
+
+<div class="lemma">
+  <p>有限维线性空间的任意两组基大小相同.</p>
+  <div class="proof">
+    <p>假定 $S = \{u_i\}_{i=1}^m$ 与 $T = \{v_j\}_{j=1}^n$ 是两组基. 由于所有 $v_i$ 可以被 $S$ 线性表示, 存在系数 $a_{ij}$ 使得</p>
+    <p>$$\begin{equation}
+v_j = \sum _{i=1}^m a_{ij} u_i, \quad j = 1, 2, \ldots, n.
+\end{equation}$$</p>
+    <p>同理, 存在系数 $b_{ji}$ 使得</p>
+    <p>$$\begin{equation}
+u_i = \sum _{j=1}^n b_{ij} v_j, \quad i = 1, 2, \ldots, m.
+\end{equation}$$</p>
+    <p>将数组 $a_{ij}$ 与 $b_{ij}$ 整合成矩阵 $A \in \mathbb F^{m \times n}$ 与 $B \in \mathbb F^{n \times m}$, 则有 $AB = I_n$ 与 $BA = I_m$. 这说明 $m = n$.</p>
+  </div>
+</div>
+
+<div class="theorem">
+  <p>若 $V$ 不是有限维线性空间, 则存在可数的线性无关组.</p>
+  <div class="proof">
+    <p>任取非零向量 $v_1 \in V$, 记 $U_1 = \{ \lambda v_{1} \mid \lambda \in \mathbb F\}$. 假定我们构造了 $k$ 维线性子空间 $U_k$. 依照题设有 $U_k \neq V$, 此时取 $v_{k+1} \in (V \setminus U_k)$. 记 $U_{k+1} = U_k + \{ \lambda v_{k+1} \mid \lambda \in \mathbb F\}$. 这个归纳过程不会在有限步内终止, 即任意大的向量组 $\{v_k\}_{k=1}^n$ 均能被构造. <br /> 依照 axiom of dependent choice, 或者是像数学分析那样凭感觉论断, 以上构造给出可数集 $\{v_k\}_{k=1}^\infty$. 下证明这是线性无关组. 依照线性组合的定义, $\{v_k\}_{k=1}^\infty$ 的任意线性组合是有限和. 由于 $\{v_k\}_{k=1}^\infty$ 中有限个向量线性无关, 故 $\{v_k\}_{k=1}^\infty$ 线性无关.</p>
+  </div>
+</div>
+
+<div class="definition">
+  <p>(无限维线性空间). 称线性空间 $V$ 是无限维的, 若它不是有限维的. 在凭感觉论断的意义下, $V$ 是无限维线性空间, 当且仅当 $V$ 中存在构成无穷集的线性无关组.</p>
+</div>
+
+<p>以下假定 $V$ 是有限维线性空间, 从而可以谈论维数.</p>
+
+<div class="problem">
+  <p>判断题, 对不正确的命题举出反例. 以下默认 $U_i$ 是线性空间 $V$ 的子空间.</p>
+  <ol>
+    <li>假定 $V$ 有限维. 若有直和分解 $V = U_1 \oplus U_2$, 则 $\dim V = \dim U_1 + \dim U_2$.</li>
+    <li>假定 $V$ 有限维. 若有 $V = U_1 + U_2$, 则 $\dim V = \dim U_1 + \dim U_2 - \dim (U_1 \cap U_2)$.</li>
+    <li>假定 $V$ 有限维. 若有 $V = U_1 + U_2 + U_3$, 则 $\dim V = \dim U_1 + \dim U_2 + \dim U_3 - \dim (U_1 \cap U_2) - \dim (U_2 \cap U_3) - \dim (U_3 \cap U_1) + \dim (U_1 \cap U_2 \cap U_3)$.</li>
+    <li>可能存在两两交集为 $0$ 的子空间 $U_1, U_2, U_3 \subseteq V$, 使得 $V = U_1 \oplus U_2 = U_2 \oplus U_3 = U_3 \oplus U_1$.</li>
+  </ol>
+</div>
+
+<h3 id="基本空间">基本空间</h3>
+
+<div class="definition">
+  <p>(基本空间). 给定矩阵 $A \in \mathbb F^{m \times n}$. 使用</p>
+  <ul>
+    <li>$C(A) \subseteq \mathbb F^m$ 表示列空间,</li>
+    <li>$N(A) \subseteq \mathbb F^n$ 表示零空间,</li>
+    <li>$R(A) \subseteq \mathbb F^{1 \times n}$ 表示行空间,</li>
+    <li>$L(A) \subseteq \mathbb F^{1 \times m}$ 表示左零空间.</li>
+  </ul>
 </div>
 
 <div class="problem">
-  <p>判断题. 若不成立, 则给出反例 (所有反例可以在 $\mathbb R^2$ 中找到).</p>
+  <p>(简答题).</p>
   <ol>
-    <li>他们的交有可能为空集.</li>
-    <li>如果 $(U_1 + U_2)\subseteq (U_1 + U_3)$, 则 $U_2 \subseteq U_3$.</li>
-    <li>如果 $U_1 \cup U_2$ 是子空间, 则 $U_1 \subseteq U_2$ 或 $U_2 \subseteq U_1$.</li>
-    <li>$(U_1 \cap U_2) \cap U_3 = U_1 \cap (U_2 \cap U_3)$.</li>
-    <li>$(U_1 + U_2) \cap U_3 = (U_1 \cap U_3) + (U_2 \cap U_3)$.</li>
-    <li>$(U_1 \cap U_2) + U_3 = (U_1 + U_3) \cap (U_2 + U_3)$.</li>
+    <li>把 $A$ 化为 $ref(A)$, 哪些空间不变?</li>
+    <li>矩阵 $A$ 决定了映射 $\mathbb F^n \to \mathbb F^m$, $v \mapsto Av$. 这个映射的像是什么? 核是什么? (即, 把什么映到 $0$?)</li>
+    <li>从 $cef(A)$ 的角度解释 $\dim C(A) + \dim N(A) = n$.</li>
+    <li>假定 $A$ 是实数域上的. $A^TA$ 和 $A$ 有什么关系? 它们的基本空间之间有什么关系? 回答一些你认为重要的方面.</li>
   </ol>
 </div>
 
 <div class="problem">
-  <p>若 $U_1 \subseteq U_2$, 对任意 $U_3$, 总有</p>
-  <p>$$\begin{equation}
-U_1 + (U_3 \cap U_2) = (U_1 + U_3) \cap U_2.
-\end{equation}$$</p>
+  <p>给定两个实数域上的矩阵 $A,B \in \mathbb R^{n \times n}$. 请找一个形式尽可能简单的矩阵 $X \in \mathbb R^{n \times n}$, 使得 $C(A) + C(B) = C(X)$.</p>
 </div>
 
   </article>
@@ -252,9 +306,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#基的定义">
+      <a href="#子空间的直和">
         <span class="toc-number">1.</span>
-        <span class="toc-title">基的定义</span>
+        <span class="toc-title">子空间的直和</span>
       </a>
     </div>
   
@@ -268,10 +322,61 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <div class="toc-row toc-level-2">
-      <a href="#子空间的运算">
-        <span class="toc-number">2.</span>
-        <span class="toc-title">子空间的运算</span>
+    <div class="toc-row toc-level-3">
+      <a href="#直和的定义">
+        <span class="toc-number">1.1.</span>
+        <span class="toc-title">直和的定义</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#直和的性质">
+        <span class="toc-number">1.2.</span>
+        <span class="toc-title">直和的性质</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#直和与维数">
+        <span class="toc-number">1.3.</span>
+        <span class="toc-title">直和与维数</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#基本空间">
+        <span class="toc-number">1.4.</span>
+        <span class="toc-title">基本空间</span>
       </a>
     </div>
   
@@ -324,13 +429,10 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW12" title="NEXT: HW12">&lt;&lt;</a>
-      <span>&middot;</span>
-    
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/EX6" title="PREV: Exersice Class 6">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW11" title="PREV: HW11">&gt;&gt;</a>
     
   </div>
 </main>

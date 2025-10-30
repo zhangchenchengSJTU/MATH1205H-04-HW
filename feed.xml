@@ -7,6 +7,139 @@
     
       
         <item>
+          <title>HW12</title>
+          <description>&lt;h2 id=&quot;子空间的直和&quot;&gt;子空间的直和&lt;/h2&gt;
+
+&lt;h3 id=&quot;直和的定义&quot;&gt;直和的定义&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(子空间的直和). 记 $U_1$ 与 $U_2$ 是线性空间 $V$ 的两个子空间. 称 $V$ 是 $U_1$ 与 $U_2$ 的直和, 若有&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+V = U_1 + U_2\quad \text{且}\quad U_1 \cap U_2 = 0.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;记作 $V = U_1 \oplus U_2$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;假定有直和关系 $V = U_1 \oplus U_2$. 记 $U_1 \times U_2$ 是集合的 Cartesian 积, 其中的元素是 $\{(u_1, u_2) \mid u_1 \in U_1, \ u_2\in U_2\}$. $U_1 \times U_2$ 作为线性空间, 定义如下加法与数乘:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;加法: $(u_1, u_2) + (u_1', u_2') := (u_1 + u_1', u_2 + u_2')$;&lt;/li&gt;
+    &lt;li&gt;数乘: $\lambda (u_1, u_2) := (\lambda u_1, \lambda u_2)$.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;此时, 存在保持线性组合的集合双射&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\varphi : U_1 \times U_2 \to U_1 \oplus U_2,\quad (u_1, u_2) \mapsto u_1 + u_2.
+\end{equation}$$&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;先证明 $\varphi$ 保持线性组合关系. 任取 $(u_1, u_2) + \lambda (u_1', u_2')$, 则&lt;/p&gt;
+    &lt;p&gt;$$\begin{aligned}
+&amp;\varphi ((u_1, u_2) + \lambda (u_1', u_2')) \\
+= \ &amp;\varphi ((u_1 + \lambda u_1', u_2 + \lambda  u_2'))\\
+= \ &amp;(u_1 + \lambda u_1') + (u_2 + \lambda  u_2')\\
+= \ &amp;(u_1 + u_2) + \lambda (u_1' + u_2')\\
+= \  &amp; \varphi (u_1, u_2) + \lambda \varphi (u_1', u_2').
+\end{aligned}$$&lt;/p&gt;
+    &lt;p&gt;下证明 $\varphi$ 是单射. 若 $\varphi (u_1, u_2) = 0$, 则 $u_1 + u_2 = 0$. 依照直和关系&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+u_1 = -u_2 \in U_1 \cap U_2 = 0.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;从而 $u_1 = u_2 = 0$, 说明 $\varphi$ 是单射. &lt;br /&gt; 下证明 $\varphi$ 是满射. 任取 $v \in V$, 依照直和关系, 存在 $u_1 \in U_1, u_2 \in U_2$ 使得 $v = u_1 + u_2$. 则 $\varphi (u_1, u_2) = v$, 说明 $\varphi$ 是满射.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这告诉我们, 若 $V = U_1 \oplus U_2$, 则 $V$ 与 $U_1 \times U_2$ 是同构的线性空间. 线性同构即保持线性组合关系的集合双射.&lt;/p&gt;
+
+&lt;h3 id=&quot;直和的性质&quot;&gt;直和的性质&lt;/h3&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;判断题, 对不正确的命题举出反例. 以下默认 $U_i$ 是线性空间 $V$ 的子空间.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;若 $V = U_1 \oplus U_2$, 且 $V = U_1 \oplus U_3$, 则 $U_2 = U_3$.&lt;/li&gt;
+    &lt;li&gt;若 $V = U_1 \oplus U_2$, 且 $V = U_1 \oplus U_3$, 同时 $U_2 \subseteq U_3$, 则 $U_2 = U_3$.&lt;/li&gt;
+    &lt;li&gt;假定 $V$ 有一组基, 记作 $S$. 若有 $V = U_1 \oplus U_2$, 则 $S$ 可分解为不交并 $S = S_1 \cup S_2$, 其中 $S_i$ 是 $U_i$ 的基.&lt;/li&gt;
+    &lt;li&gt;假定 $V$ 有一组基, 记作 $S$. 若有 $S = S_1 \cup S_2$, 且 $S_1 \cap S_2 = \emptyset$, 则存在唯一的直和分解 $V = U_1 \oplus U_2$, 使得 $S_i$ 是 $U_i$ 的基.&lt;/li&gt;
+    &lt;li&gt;若 $U_1 + U_2 + U_3 = V$, $U_1 \cap U_2 \cap U_3 = 0$, 则 $V = U_1 \oplus U_2 \oplus U_3$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;直和与维数&quot;&gt;直和与维数&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(有限维线性空间). 称线性空间 $V$ 是有限维的, 若其存在有限基. 基的定义见&lt;a href=&quot;HW11#基的定义&quot;&gt;上一次作业&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;有限维线性空间的任意两组基大小相同.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;假定 $S = \{u_i\}_{i=1}^m$ 与 $T = \{v_j\}_{j=1}^n$ 是两组基. 由于所有 $v_i$ 可以被 $S$ 线性表示, 存在系数 $a_{ij}$ 使得&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+v_j = \sum _{i=1}^m a_{ij} u_i, \quad j = 1, 2, \ldots, n.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;同理, 存在系数 $b_{ji}$ 使得&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+u_i = \sum _{j=1}^n b_{ij} v_j, \quad i = 1, 2, \ldots, m.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;将数组 $a_{ij}$ 与 $b_{ij}$ 整合成矩阵 $A \in \mathbb F^{m \times n}$ 与 $B \in \mathbb F^{n \times m}$, 则有 $AB = I_n$ 与 $BA = I_m$. 这说明 $m = n$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;若 $V$ 不是有限维线性空间, 则存在可数的线性无关组.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;任取非零向量 $v_1 \in V$, 记 $U_1 = \{ \lambda v_{1} \mid \lambda \in \mathbb F\}$. 假定我们构造了 $k$ 维线性子空间 $U_k$. 依照题设有 $U_k \neq V$, 此时取 $v_{k+1} \in (V \setminus U_k)$. 记 $U_{k+1} = U_k + \{ \lambda v_{k+1} \mid \lambda \in \mathbb F\}$. 这个归纳过程不会在有限步内终止, 即任意大的向量组 $\{v_k\}_{k=1}^n$ 均能被构造. &lt;br /&gt; 依照 axiom of dependent choice, 或者是像数学分析那样凭感觉论断, 以上构造给出可数集 $\{v_k\}_{k=1}^\infty$. 下证明这是线性无关组. 依照线性组合的定义, $\{v_k\}_{k=1}^\infty$ 的任意线性组合是有限和. 由于 $\{v_k\}_{k=1}^\infty$ 中有限个向量线性无关, 故 $\{v_k\}_{k=1}^\infty$ 线性无关.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(无限维线性空间). 称线性空间 $V$ 是无限维的, 若它不是有限维的. 在凭感觉论断的意义下, $V$ 是无限维线性空间, 当且仅当 $V$ 中存在构成无穷集的线性无关组.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以下假定 $V$ 是有限维线性空间, 从而可以谈论维数.&lt;/p&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;判断题, 对不正确的命题举出反例. 以下默认 $U_i$ 是线性空间 $V$ 的子空间.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;假定 $V$ 有限维. 若有直和分解 $V = U_1 \oplus U_2$, 则 $\dim V = \dim U_1 + \dim U_2$.&lt;/li&gt;
+    &lt;li&gt;假定 $V$ 有限维. 若有 $V = U_1 + U_2$, 则 $\dim V = \dim U_1 + \dim U_2 - \dim (U_1 \cap U_2)$.&lt;/li&gt;
+    &lt;li&gt;假定 $V$ 有限维. 若有 $V = U_1 + U_2 + U_3$, 则 $\dim V = \dim U_1 + \dim U_2 + \dim U_3 - \dim (U_1 \cap U_2) - \dim (U_2 \cap U_3) - \dim (U_3 \cap U_1) + \dim (U_1 \cap U_2 \cap U_3)$.&lt;/li&gt;
+    &lt;li&gt;可能存在两两交集为 $0$ 的子空间 $U_1, U_2, U_3 \subseteq V$, 使得 $V = U_1 \oplus U_2 = U_2 \oplus U_3 = U_3 \oplus U_1$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;基本空间&quot;&gt;基本空间&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(基本空间). 给定矩阵 $A \in \mathbb F^{m \times n}$. 使用&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$C(A) \subseteq \mathbb F^m$ 表示列空间,&lt;/li&gt;
+    &lt;li&gt;$N(A) \subseteq \mathbb F^n$ 表示零空间,&lt;/li&gt;
+    &lt;li&gt;$R(A) \subseteq \mathbb F^{1 \times n}$ 表示行空间,&lt;/li&gt;
+    &lt;li&gt;$L(A) \subseteq \mathbb F^{1 \times m}$ 表示左零空间.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;(简答题).&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;把 $A$ 化为 $ref(A)$, 哪些空间不变?&lt;/li&gt;
+    &lt;li&gt;矩阵 $A$ 决定了映射 $\mathbb F^n \to \mathbb F^m$, $v \mapsto Av$. 这个映射的像是什么? 核是什么? (即, 把什么映到 $0$?)&lt;/li&gt;
+    &lt;li&gt;从 $cef(A)$ 的角度解释 $\dim C(A) + \dim N(A) = n$.&lt;/li&gt;
+    &lt;li&gt;假定 $A$ 是实数域上的. $A^TA$ 和 $A$ 有什么关系? 它们的基本空间之间有什么关系? 回答一些你认为重要的方面.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定两个实数域上的矩阵 $A,B \in \mathbb R^{n \times n}$. 请找一个形式尽可能简单的矩阵 $X \in \mathbb R^{n \times n}$, 使得 $C(A) + C(B) = C(X)$.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-10-30T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW12</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW12</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>HW11</title>
           <description>&lt;h2 id=&quot;基的定义&quot;&gt;基的定义&lt;/h2&gt;
 
@@ -406,6 +539,109 @@ U_1 + (U_3 \cap U_2) = (U_1 + U_3) \cap U_2.
           <pubDate>2025-10-21T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/HW9</link>
           <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW9</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>HW9</title>
+          <description>&lt;p&gt;&lt;strong&gt;所有矩阵都是数域上的.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;构造题&quot;&gt;构造题&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;找一个 $2025 \times 2025$ 规格的矩阵 $A$, 满足以下条件:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$A$ 不可逆.&lt;/li&gt;
+    &lt;li&gt;$A$ 删去任意 $1$ 行与任意 $1$ 列后, 得到的 $2024 \times 2024$ 矩阵均可逆.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;提示: 把提取 $k$ 行 (列) 看作左乘 (右乘) 某特定矩阵.&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;记 $R$ 是一个 $2025 \times 2024$ 的行满秩矩阵, 且任意 $2024$ 行线性无关. 此时 $RR^T$ 即为所求矩阵.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;我们说明 $RR^T$ 为何即为所求. 注意到, 提取 $2025$ 行 (列) 的矩阵某 $2024$ 行 (列) 可以通过左 (右) 乘特定矩阵实现. 例如删去 $RR^T$ 的第 $i$ 行与第 $j$ 列, 等价于计算矩阵 $P(RR^T)Q$, 即 $(PR)(R^TQ)$. 其中 $P$ 是将第 $i$ 行删去的提取矩阵, $Q$ 是将第 $j$ 列删去的提取矩阵. 依照假定, $PR$ 是行满秩矩阵, $R^TQ$ 是列满秩矩阵, 故 $(PR)(R^TQ)$ 可逆.&lt;/li&gt;
+      &lt;li&gt;我们再说明 $R$ 如何构造. 记 $r_x$ 是行向量 $(1, x, x^2, \ldots, x^{2023})$. 取 $2025$ 个互不相同的数 $a_1, a_2, \ldots, a_{2025}$, 将 $\{r_1, \ldots, r_{2025}\}$ 从上到下地排列作 $R$. 依照&lt;a href=&quot;HW8-solu##题三&quot;&gt;此题&lt;/a&gt;中技巧, 矩阵 $R$ 的任意 $2024$ 行线性无关.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;思考题&lt;/strong&gt; 给定常数 $1 &lt; k &lt; n$. 找一个 $n \times n$ 的矩阵 $A$, 使得&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;删去任意 $k$ 行与任意 $k$ 列后, 得到的 $(n-k) \times (n-k)$ 矩阵均不可逆;&lt;/li&gt;
+  &lt;li&gt;删去任意 $k+1$ 行与任意 $k+1$ 列后, 得到的 $(n-k-1) \times (n-k-1)$ 矩阵均可逆.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;类似构造可证.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;计算题&quot;&gt;计算题&lt;/h2&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;(下一题的提示). 若 $\begin{pmatrix}
+    A&amp;B\\O&amp;D
+\end{pmatrix}$ 有逆矩阵 $\begin{pmatrix}
+    E&amp;F\\G&amp;H
+\end{pmatrix}$, 则 $H$ 与 $D$ 互为逆矩阵. 证明容易.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;记 $x$ 与 $y$ 是 $n$ 阶列向量. 给出 $I + xy^T$ 可逆的充要条件, 并求其逆.&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;$I + xy^T$ 可逆当且仅当分块矩阵 $\begin{pmatrix}
+    1&amp;0\\0&amp;I + xy^T
+\end{pmatrix}$ 可逆. 考虑列变换, 也当且仅当分块矩阵 $\begin{pmatrix}
+    1&amp;y^T\\0&amp;I + xy^T
+\end{pmatrix}$ 可逆. 例行公事,&lt;/p&gt;
+    &lt;p&gt;$$\begin{aligned}
+&amp;\begin{pmatrix}
+    1&amp;y^T&amp;1&amp;0\\0&amp;I + xy^T&amp;0&amp;I
+\end{pmatrix} \\[6pt]
+\xrightarrow{\text{第一行左乘 $-x$ 加至第二行}} \
+&amp;\begin{pmatrix}
+    1&amp;y^T&amp;1&amp;0\\-x&amp;I&amp;-x&amp;I
+\end{pmatrix}\\[6pt]
+\xrightarrow{\text{第二行左乘 $-y^T$ 加至第一行}} \
+&amp;\begin{pmatrix}
+    1+y^Tx&amp;0&amp;1+y^Tx&amp;-y^T\\-x&amp;I&amp;-x&amp;I
+\end{pmatrix}\\[6pt]
+\xrightarrow{\text{第一行左乘 $(1+y^Tx)^{-1}\cdot x$ 加至第二行}} \
+&amp;\begin{pmatrix}
+    1+y^Tx&amp;0&amp;1+y^Tx&amp;-y^T\\0&amp;I&amp;0&amp;I-(1+y^Tx)^{-1}\cdot xy^T
+\end{pmatrix}\\[6pt]
+\xrightarrow{\text{第一行数乘 $(1+y^Tx)^{-1}$}} \
+&amp;\begin{pmatrix}
+    1&amp;0&amp;1&amp;-(1+y^Tx)^{-1} \cdot y^T\\0&amp;I&amp;0&amp;I-(1+y^Tx)^{-1}\cdot xy^T
+\end{pmatrix}
+\end{aligned}$$&lt;/p&gt;
+    &lt;p&gt;最后两步可行当且仅当 $1+y^Tx \neq 0$.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;注意到 $I + xy^T$ 可逆的充要条件是 $\begin{pmatrix}
+    1&amp;y^T\\0&amp;I + xy^T
+\end{pmatrix}$ 可逆, 当且仅当经行初等变换所得的 $\begin{pmatrix}
+    1+y^Tx&amp;0\\0&amp;I
+\end{pmatrix}$ 满秩, 当且仅当 $1+y^Tx \neq 0$.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;根据上一个 &lt;strong&gt;Lemma&lt;/strong&gt;, $I + xy^T$ 的逆矩阵是 $I-(1+y^Tx)^{-1}\cdot xy^T$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-21-%E9%80%86%E7%9F%A9%E9%98%B5.pdf&quot;&gt;该讲义&lt;/a&gt;习题 2.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-21-%E9%80%86%E7%9F%A9%E9%98%B5.pdf&quot;&gt;该讲义&lt;/a&gt;习题 6.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;讲义中困难问题的答案见 PDF 内链接. 基础习题解答见 &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-21-minamomo-高等代数第七周作业-1.pdf&quot;&gt;Ebisumoto Minamomo 的解答&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;注: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-21-%E9%80%86%E7%9F%A9%E9%98%B5.pdf&quot;&gt;讲义&lt;/a&gt; 中的 $E_{i,j}$ 是指 $(i,j)$ 分量为 $1$, 其余分量为 $0$ 的矩阵.&lt;/p&gt;
+</description>
+          <pubDate>2025-10-21T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW9-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW9-solu</guid>
         </item>
       
     
