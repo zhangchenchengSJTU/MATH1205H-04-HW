@@ -7,6 +7,35 @@
     
       
         <item>
+          <title>Exersice Class 7</title>
+          <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
+
+&lt;p&gt;录制：02-Nov-25 线性代数习题课&lt;/p&gt;
+
+&lt;p&gt;日期：2025-10-26 18:00-21:00&lt;/p&gt;
+
+&lt;p&gt;录制文件：&lt;a href=&quot;https://pan.sjtu.edu.cn/web/share/0f62a9cd43cb66178b4f4daff28ab418&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-02-%E7%AC%AC%E4%B8%83%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;typos&quot;&gt;Typos&lt;/h2&gt;
+
+&lt;p&gt;Page 5, Line 10&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Original: $r(ref(A) + r(...$;&lt;/li&gt;
+  &lt;li&gt;Corrected: $r(ref(A)) + r(ref(B))$;&lt;/li&gt;
+  &lt;li&gt;Reason: 漏掉了一个括号.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          <pubDate>2025-11-02T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/EX7</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/EX7</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>HW12</title>
           <description>&lt;h2 id=&quot;子空间的直和&quot;&gt;子空间的直和&lt;/h2&gt;
 
@@ -224,9 +253,9 @@ U_1 + (U_3 \cap U_2) = (U_1 + U_3) \cap U_2.
 
 &lt;p&gt;录制：26-Oct-25 线性代数习题课&lt;/p&gt;
 
-&lt;p&gt;日期：2025-10-26 17:55:52&lt;/p&gt;
+&lt;p&gt;日期：2025-10-26 18:00-21:00&lt;/p&gt;
 
-&lt;p&gt;录制文件：&lt;a href=&quot;https://meeting.tencent.com/crm/NAOmXwGd8e&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;录制文件：&lt;a href=&quot;https://pan.sjtu.edu.cn/web/share/4812fe00a5a35d9cf5e2c8cf26c81992&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-10-26-%E7%AC%AC%E5%85%AD%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
 
