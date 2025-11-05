@@ -9,7 +9,7 @@
 
 
 
-  <title>HW11
+  <title>HW11-solu
     ·
     Jekyll Latex</title>
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW11">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW11-solu">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,7 +75,7 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW11</h1>
+      <h1>HW11-solu</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
@@ -99,7 +99,19 @@ v = \sum _{i=1}^n c_i u_i,\quad u_i \in S, \quad c_i \in \mathbb F.
     <li>$S$ 满足性质一, 且任意 $T$ ($T \subsetneq S$ 为真子集) 不满足性质一.</li>
     <li>$S$ 满足性质二, 且任意 $W$ ($S \subsetneq W$ 为真子集) 不满足性质二.</li>
   </ol>
-  <p><strong>注意: 我们证明的是以上两条论述等价, 并不是证明性质一与性质二等价.</strong> \</p>
+  <p><strong>注意: 我们证明的是以上两条论述等价, 并不是证明性质一与性质二等价.</strong></p>
+  <div class="proof">
+    <p>假定 $S$ 满足第一条论述, 下证明其满足第二条论述.</p>
+    <ol>
+      <li>(证明 $S$ 满足性质二) 若不然, 则有零线性组合式 $0 = \sum _{i=1}^n c_i u_i$, 其中 $u_i = 0$. 假定某个 $c_{i_0} \neq 0$, 则 $u_{i_0} = \sum _{i \neq i_0}\frac{-c_i}{c_{i_0}}u_i$. 这说明, 对任何涉及 $u_{i_0}$ 的线性组合式, $u_{i_0}$ 总能被 $S \setminus \{u_{i_0}\}$ 中向量的线性组合表示. 取 $T = (S \setminus \{u_{i_0}\})$, 这与论述一的第二部分矛盾.</li>
+      <li>(证明 $S$ 满足论述二的第二部分). 任取 $S \subsetneq W$, 取 $w \in (W \setminus S)$, 则依照性质一, $w$ 能写作 $S$ 中向量的线性组合. 这说明 $W$ 不满足性质二.</li>
+    </ol>
+    <p>假定 $S$ 满足第二条论述, 下证明其满足第一条论述.</p>
+    <ol>
+      <li>(证明 $S$ 满足性质一). 若不然, 则存在 $v \in (V \setminus S)$ 使得 $v$ 不能写作 $S$ 中向量的线性组合. 我们断言 $(S \cup \{v\})$ 也是线性无关组. 假定存在一个关于 $(S \cup \{v\})$ 中向量的线性组合式, 若该式不涉及 $v$, 则线性组合系数必为 $0$; 若涉及 $v$, 则 $v$ 前的系数也为零, 这归结到上一分句. 这说明 $(S \cup \{v\})$ 满足性质二, 与假定矛盾.</li>
+      <li>(证明 $S$ 满足论述一的第二部分). 任取 $T \subsetneq S$, $v \in (S \setminus T)$, 则依照性质二, $v$ 不能写作 $T$ 中向量的线性组合. 这说明 $T$ 不满足性质一.</li>
+    </ol>
+  </div>
   <p>这给出基的两种等价表述:</p>
   <ol>
     <li>能通过线性组合复现空间的极小子集;</li>
@@ -146,6 +158,17 @@ U_1 + U_2 := \{u_1 + u_2 \mid u_1 \in U_1, u_2 \in U_2\}.
     <li>$(U_1 + U_2) \cap U_3 = (U_1 \cap U_3) + (U_2 \cap U_3)$.</li>
     <li>$(U_1 \cap U_2) + U_3 = (U_1 + U_3) \cap (U_2 + U_3)$.</li>
   </ol>
+  <div class="solution">
+    <p>依次解答如下. 所有反例都是 $\mathbb R^2$ 中的.</p>
+    <ol>
+      <li>错误. 子空间必包含零向量, 因此交集至少包含零向量.</li>
+      <li>错误. $U_1$ 与 $U_2$ 均为 $x$ 轴, $U_3$ 为 $y$ 轴.</li>
+      <li>正确. 若不然, 则存在 $u_1 \in (U_1 \setminus U_2)$, $u_2 \in (U_2 \setminus U_1)$. 由于线性空间对加法封闭, 得 $u_1 + u_2 \in U_1 \cup U_2$. 不妨假设 $u_1 + u_2 \in U_1$. 则 $u_2 = (u_1 + u_2) - u_1 \in U_1$, 矛盾.</li>
+      <li>正确. 交集满足结合律.</li>
+      <li>错误. 取 $U_1$ 为 $x$ 轴, $U_2$ 为 $y$ 轴, $U_3$ 为直线 $y = x$. 则左边为零空间, 右边为直线 $y = x$.</li>
+      <li>错误. 取 $U_1$ 为 $x$ 轴, $U_2$ 为 $y$ 轴, $U_3$ 为直线 $y = x$. 则左边为直线 $y = x$, 右边为整个平面.</li>
+    </ol>
+  </div>
 </div>
 
 <div class="problem">
@@ -153,6 +176,9 @@ U_1 + U_2 := \{u_1 + u_2 \mid u_1 \in U_1, u_2 \in U_2\}.
   <p>$$\begin{equation}
 U_1 + (U_3 \cap U_2) = (U_1 + U_3) \cap U_2.
 \end{equation}$$</p>
+  <div class="proof">
+    <p>($\subseteq$ 方向). 任取 $v \in U_1 + (U_3 \cap U_2)$, 则存在 $u_1 \in U_1$, $u_{32} \in (U_3 \cap U_2)$ 使得 $v = u_1 + u_{32}$. $u_1$ 与 $u_{32}$ 均属于 $U_2$, 也均属于 $U_1 + U_3$. 因此, $v \in (U_1 + U_3) \cap U_2$. <br /> ($\supseteq$ 方向). 任取 $v \in (U_1 + U_3) \cap U_2$, 则存在 $u_1 \in U_1$, $u_3 \in U_3$ 使得 $v = u_1 + u_3$. 由于 $v, u_1 \in U_2$, 则 $u_3 = v - u_1 \in U_2$. 因此, $u_3 \in (U_3 \cap U_2)$, 从而 $v \in U_1 + (U_3 \cap U_2)$.</p>
+  </div>
 </div>
 
   </article>
@@ -324,13 +350,13 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW12" title="NEXT: HW12">&lt;&lt;</a>
+      <a class="next" href="/MATH1205H-04-HW/posts/HW11" title="NEXT: HW11">&lt;&lt;</a>
       <span>&middot;</span>
     
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW11-solu" title="PREV: HW11-solu">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/EX6" title="PREV: Exersice Class 6">&gt;&gt;</a>
     
   </div>
 </main>
