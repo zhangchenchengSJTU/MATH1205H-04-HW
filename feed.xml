@@ -35,6 +35,7 @@
   &lt;li&gt;Corrected: 分块矩阵右侧 $\begin{pmatrix}1+t^Tx &amp; -t^T \\ -x &amp; I\end{pmatrix}$;&lt;/li&gt;
   &lt;li&gt;Reason: 该步骤将第二行左乘 $-y^T$ 并加到第一行, 因此第二行不变. 该行附近蓝色注释无误.&lt;/li&gt;
 &lt;/ul&gt;
+
 </description>
           <pubDate>2025-11-02T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/EX7</link>
