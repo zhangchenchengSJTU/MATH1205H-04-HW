@@ -31,7 +31,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://space.bilibili.com/691509037&quot;&gt;出卷人&lt;/a&gt;的&lt;a href=&quot;2025-11-07-MidTermSolution.pdf&quot;&gt;解答&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;t1-判断题&quot;&gt;T1 判断题&lt;/h2&gt;
+&lt;h3 id=&quot;t1-判断题&quot;&gt;T1 判断题&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;总结: 3, 4, 6, 7, 8, 10 正确.&lt;/li&gt;
@@ -102,7 +102,7 @@
   &lt;p&gt;正确! 取 $x \in \mathbb R$, 作分解 $A =  (A+xI) - xI$. 当 $x$ 足够大时, $(A+xI)$ 可逆. 可对照&lt;a href=&quot;HW7-solu#行满秩矩阵的一个例子&quot;&gt;此作业题&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;t2&quot;&gt;T2&lt;/h2&gt;
+&lt;h3 id=&quot;t2-计算基本空间&quot;&gt;T2 计算基本空间&lt;/h3&gt;
 
 &lt;p&gt;设 $A = \begin{pmatrix}3&amp;-2&amp;2&amp;-3\\2&amp;-1&amp;1&amp;-2\\2&amp;-2&amp;2&amp;-2\\-1&amp;1&amp;-1&amp;1\end{pmatrix}$.&lt;/p&gt;
 
@@ -166,6 +166,9 @@ A=\begin{pmatrix}
 \end{pmatrix} = : LU.
 \end{equation}$$&lt;/p&gt;
   &lt;p&gt;$A^n = L(UL)^{n-1} U = L\begin{pmatrix}4&amp;-3\\0&amp;1\end{pmatrix}^{n-1} U$. 由初中方法知 $(UL)^k = \begin{pmatrix}4^k&amp;1-4^k\\0&amp;1\end{pmatrix}$. 写至此步即可.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;注: $UL$ 不唯一. 实际上, 这在相差一个相似矩阵的意义下唯一. $UL$ 的特征根应当是 $4$ 和 $-1$.&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;p&gt;(4) 求 $A$ 的四个子空间的各一组基并验证 Strang 的线性代数基本定理.&lt;/p&gt;
@@ -186,7 +189,7 @@ A=\begin{pmatrix}
   &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;t3&quot;&gt;T3&lt;/h2&gt;
+&lt;h3 id=&quot;t3-构造幂等与幂零方阵&quot;&gt;T3 构造幂等与幂零方阵&lt;/h3&gt;
 
 &lt;p&gt;(1) 构造三阶非对角矩阵 $A$ 与 $B$ 使得 $A^3 = I$, $A^2 \neq I$, $B^3 = O$, $B^2 \neq O$.&lt;/p&gt;
 
@@ -217,7 +220,7 @@ A=\begin{pmatrix}0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\\1 &amp; 0 &amp; 0\end{pma
   &lt;p&gt;这是开放问题. 我们修改 (2) 中构造使得本题易于回答: $A$ 不变, $B$ 加上负号. 那么 $A+B$ 是左下角为 $1$ 剩余位置为 $0$ 的矩阵, 因此不可逆.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;t4&quot;&gt;T4&lt;/h2&gt;
+&lt;h3 id=&quot;t4-送分题&quot;&gt;T4 送分题&lt;/h3&gt;
 
 &lt;p&gt;设 $v_1,v_2,\ldots ,v_s \in \mathbb R^n$. 证明或否定: $v_1,v_2,\ldots,v_n$ 线性无关当且仅当 $v_1-v_2$, $v_2-v_3$, $v_3-v_4$, $\ldots$, $v_{s}-v_1$ 线性无关.&lt;/p&gt;
 
@@ -225,7 +228,7 @@ A=\begin{pmatrix}0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\\1 &amp; 0 &amp; 0\end{pma
   &lt;p&gt;错误. 右侧总是线性相关的, 因为全加起来是 $0$.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;t5&quot;&gt;T5&lt;/h2&gt;
+&lt;h3 id=&quot;t5-直接验证题&quot;&gt;T5 直接验证题&lt;/h3&gt;
 
 &lt;p&gt;设所有矩阵均可逆, 证明华罗庚恒等式 (1949年):&lt;/p&gt;
 
@@ -241,6 +244,20 @@ A - (A^{-1} + (B^{-1} - A)^{-1})^{-1} = ABA.
 \end{aligned}$$&lt;/p&gt;
   &lt;p&gt;对方阵而言, 左逆等于右逆 (见&lt;a href=&quot;HW7-solu#初等变换的使用&quot;&gt;作业&lt;/a&gt;), 证毕.&lt;/p&gt;
 &lt;/div&gt;
+
+&lt;h3 id=&quot;t6-略&quot;&gt;T6 略&lt;/h3&gt;
+
+&lt;h2 id=&quot;评分标准&quot;&gt;评分标准&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;T1&lt;/strong&gt; 每小题 2 分, 共 20 分.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;T2&lt;/strong&gt; (1) 5 分; (2) 5 分; (3) 5 分; (4) 5 分; 共 20 分. 每小题酌情给 0, 2, 3, 5 分.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;T3&lt;/strong&gt; (1) 5 分; (2) 5 分; (3) 5 分; (4) 5 分; 共 20 分. 每小题酌情给 0, 2, 3, 5 分.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;T4&lt;/strong&gt; 指出右侧向量线性相关 (举例或证明一般情况均可) 得 20 分. 不满足上述情形的非白卷得 10 分. 白卷得 0 分.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;T5&lt;/strong&gt; 过程完整得 10 分, 缺少细节得 8 分, 不满足上述任意情形的非白卷得 5 分, 白卷得 0 分.&lt;/p&gt;
 </description>
           <pubDate>2025-11-09T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/EX8</link>

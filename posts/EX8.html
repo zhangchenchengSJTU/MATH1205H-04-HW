@@ -93,7 +93,7 @@ MathJax = {
 
 <p><a href="https://space.bilibili.com/691509037">出卷人</a>的<a href="2025-11-07-MidTermSolution.pdf">解答</a>.</p>
 
-<h2 id="t1-判断题">T1 判断题</h2>
+<h3 id="t1-判断题">T1 判断题</h3>
 
 <ul>
   <li>总结: 3, 4, 6, 7, 8, 10 正确.</li>
@@ -164,7 +164,7 @@ MathJax = {
   <p>正确! 取 $x \in \mathbb R$, 作分解 $A =  (A+xI) - xI$. 当 $x$ 足够大时, $(A+xI)$ 可逆. 可对照<a href="HW7-solu#行满秩矩阵的一个例子">此作业题</a>.</p>
 </div>
 
-<h2 id="t2">T2</h2>
+<h3 id="t2-计算基本空间">T2 计算基本空间</h3>
 
 <p>设 $A = \begin{pmatrix}3&-2&2&-3\\2&-1&1&-2\\2&-2&2&-2\\-1&1&-1&1\end{pmatrix}$.</p>
 
@@ -228,6 +228,9 @@ A=\begin{pmatrix}
 \end{pmatrix} = : LU.
 \end{equation}$$</p>
   <p>$A^n = L(UL)^{n-1} U = L\begin{pmatrix}4&-3\\0&1\end{pmatrix}^{n-1} U$. 由初中方法知 $(UL)^k = \begin{pmatrix}4^k&1-4^k\\0&1\end{pmatrix}$. 写至此步即可.</p>
+  <ul>
+    <li>注: $UL$ 不唯一. 实际上, 这在相差一个相似矩阵的意义下唯一. $UL$ 的特征根应当是 $4$ 和 $-1$.</li>
+  </ul>
 </div>
 
 <p>(4) 求 $A$ 的四个子空间的各一组基并验证 Strang 的线性代数基本定理.</p>
@@ -248,7 +251,7 @@ A=\begin{pmatrix}
   </ul>
 </div>
 
-<h2 id="t3">T3</h2>
+<h3 id="t3-构造幂等与幂零方阵">T3 构造幂等与幂零方阵</h3>
 
 <p>(1) 构造三阶非对角矩阵 $A$ 与 $B$ 使得 $A^3 = I$, $A^2 \neq I$, $B^3 = O$, $B^2 \neq O$.</p>
 
@@ -279,7 +282,7 @@ A=\begin{pmatrix}0 & 1 & 0\\0 & 0 & 1\\1 & 0 & 0\end{pmatrix}, B=\begin{pmatrix}
   <p>这是开放问题. 我们修改 (2) 中构造使得本题易于回答: $A$ 不变, $B$ 加上负号. 那么 $A+B$ 是左下角为 $1$ 剩余位置为 $0$ 的矩阵, 因此不可逆.</p>
 </div>
 
-<h2 id="t4">T4</h2>
+<h3 id="t4-送分题">T4 送分题</h3>
 
 <p>设 $v_1,v_2,\ldots ,v_s \in \mathbb R^n$. 证明或否定: $v_1,v_2,\ldots,v_n$ 线性无关当且仅当 $v_1-v_2$, $v_2-v_3$, $v_3-v_4$, $\ldots$, $v_{s}-v_1$ 线性无关.</p>
 
@@ -287,7 +290,7 @@ A=\begin{pmatrix}0 & 1 & 0\\0 & 0 & 1\\1 & 0 & 0\end{pmatrix}, B=\begin{pmatrix}
   <p>错误. 右侧总是线性相关的, 因为全加起来是 $0$.</p>
 </div>
 
-<h2 id="t5">T5</h2>
+<h3 id="t5-直接验证题">T5 直接验证题</h3>
 
 <p>设所有矩阵均可逆, 证明华罗庚恒等式 (1949年):</p>
 
@@ -303,6 +306,20 @@ A - (A^{-1} + (B^{-1} - A)^{-1})^{-1} = ABA.
 \end{aligned}$$</p>
   <p>对方阵而言, 左逆等于右逆 (见<a href="HW7-solu#初等变换的使用">作业</a>), 证毕.</p>
 </div>
+
+<h3 id="t6-略">T6 略</h3>
+
+<h2 id="评分标准">评分标准</h2>
+
+<p><strong>T1</strong> 每小题 2 分, 共 20 分.</p>
+
+<p><strong>T2</strong> (1) 5 分; (2) 5 分; (3) 5 分; (4) 5 分; 共 20 分. 每小题酌情给 0, 2, 3, 5 分.</p>
+
+<p><strong>T3</strong> (1) 5 分; (2) 5 分; (3) 5 分; (4) 5 分; 共 20 分. 每小题酌情给 0, 2, 3, 5 分.</p>
+
+<p><strong>T4</strong> 指出右侧向量线性相关 (举例或证明一般情况均可) 得 20 分. 不满足上述情形的非白卷得 10 分. 白卷得 0 分.</p>
+
+<p><strong>T5</strong> 过程完整得 10 分, 缺少细节得 8 分, 不满足上述任意情形的非白卷得 5 分, 白卷得 0 分.</p>
 
   </article>
 
@@ -417,9 +434,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <div class="toc-row toc-level-2">
+    <div class="toc-row toc-level-3">
       <a href="#t1-判断题">
-        <span class="toc-number">2.</span>
+        <span class="toc-number">1.1.</span>
         <span class="toc-title">T1 判断题</span>
       </a>
     </div>
@@ -434,10 +451,78 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     
-    <div class="toc-row toc-level-2">
-      <a href="#t2">
-        <span class="toc-number">3.</span>
-        <span class="toc-title">T2</span>
+    <div class="toc-row toc-level-3">
+      <a href="#t2-计算基本空间">
+        <span class="toc-number">1.2.</span>
+        <span class="toc-title">T2 计算基本空间</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#t3-构造幂等与幂零方阵">
+        <span class="toc-number">1.3.</span>
+        <span class="toc-title">T3 构造幂等与幂零方阵</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#t4-送分题">
+        <span class="toc-number">1.4.</span>
+        <span class="toc-title">T4 送分题</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#t5-直接验证题">
+        <span class="toc-number">1.5.</span>
+        <span class="toc-title">T5 直接验证题</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#t6-略">
+        <span class="toc-number">1.6.</span>
+        <span class="toc-title">T6 略</span>
       </a>
     </div>
   
@@ -452,43 +537,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#t3">
-        <span class="toc-number">4.</span>
-        <span class="toc-title">T3</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-2">
-      <a href="#t4">
-        <span class="toc-number">5.</span>
-        <span class="toc-title">T4</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-2">
-      <a href="#t5">
-        <span class="toc-number">6.</span>
-        <span class="toc-title">T5</span>
+      <a href="#评分标准">
+        <span class="toc-number">2.</span>
+        <span class="toc-title">评分标准</span>
       </a>
     </div>
   
