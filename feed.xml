@@ -144,10 +144,10 @@
   &lt;p&gt;此题答案不唯一, 因为 $P$ 的后两行可以随意线性组合 (同时保持满秩) 并加至前两行.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;(2) 设 $b = Ae_1 + Ae_2$, 求 $Ax=b$ 的所有解.&lt;/p&gt;
+&lt;p&gt;(2) 设 $b = Ae_1 + 2Ae_2$, 求 $Ax=b$ 的所有解.&lt;/p&gt;
 
 &lt;div class=&quot;solution&quot;&gt;
-  &lt;p&gt;我们知道解等于特殊解加上零解. 依照 $ref$, $Ax = 0$ 的解形如列向量 $(a,b,b,a)$. 从而方程的解是 $(1+a,1+b,b,a)$, 其中 $a,b$ 是任意实数.&lt;/p&gt;
+  &lt;p&gt;我们知道解等于特殊解加上零解. 依照 $ref$, $Ax = 0$ 的解形如列向量 $(a,b,b,a)$. 从而方程的解是 $(1+a,2+b,b,a)$, 其中 $a,b$ 是任意实数.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;(3) 求矩阵 $L_{4 \times 2}$, $U_{2 \times 4}$ 使得 $A = LU$; 由此计算 $A^n$.&lt;/p&gt;
