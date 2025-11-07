@@ -9,7 +9,7 @@
 
 
 
-  <title>HW12
+  <title>HW12-solu
     ·
     Jekyll Latex</title>
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW12">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW12-solu">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,7 +75,7 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW12</h1>
+      <h1>HW12-solu</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
@@ -137,6 +137,16 @@ u_1 = -u_2 \in U_1 \cap U_2 = 0.
     <li>假定 $V$ 有一组基, 记作 $S$. 若有 $S = S_1 \cup S_2$, 且 $S_1 \cap S_2 = \emptyset$, 则存在唯一的直和分解 $V = U_1 \oplus U_2$, 使得 $S_i$ 是 $U_i$ 的基.</li>
     <li>若 $U_1 + U_2 + U_3 = V$, $U_1 \cap U_2 \cap U_3 = 0$, 则 $V = U_1 \oplus U_2 \oplus U_3$.</li>
   </ol>
+  <div class="solution">
+    <p>依次解答如下. 所有反例都是 $\mathbb R^2$ 中的.</p>
+    <ol>
+      <li>错误. 取 $U_1$ 为 $x$ 轴, $U_2$ 为 $y$ 轴, $U_3$ 为直线 $y = x$.</li>
+      <li>正确. 若不然, 假定存在 $w \in (U_3 \setminus U_2)$. 依照 $V = U_1 \oplus U_2$, 存在 $w = u_1 + u_2$. 注意到 $u_1 = (w - u_2) \in U_3$ 与 $U_1 \cap U_3 = 0$, 得 $u_1 = 0$, 即 $w = u_2 \in U_2$, 矛盾.</li>
+      <li>错误. 取 $U_1$ 为 $x$ 轴, $U_2$ 为 $y$ 轴, 以及 $S = \{(1,1), (-1,1)\}$.</li>
+      <li>正确. 将 $U_i$ 取作包含 $S_i$ 的最小的线性空间. 仔细验证即可.</li>
+      <li>错误. 取 $U_1$ 为 $x$ 轴, $U_2$ 为 $y$ 轴, $U_3$ 为直线 $y = x$. 正确表述是: 若 $U_1 + U_2 + U_3 = V$, $U_1 \cap U_2 = U_2  \cap U_3 = U_3 \cap U_1 = 0$, 则 $V = U_1 \oplus U_2 \oplus U_3$. 需要两两交集为零, 而非三者交集为零.</li>
+    </ol>
+  </div>
 </div>
 
 <h3 id="直和与维数">直和与维数</h3>
@@ -181,6 +191,15 @@ u_i = \sum _{j=1}^n b_{ij} v_j, \quad i = 1, 2, \ldots, m.
     <li>假定 $V$ 有限维. 若有 $V = U_1 + U_2 + U_3$, 则 $\dim V = \dim U_1 + \dim U_2 + \dim U_3 - \dim (U_1 \cap U_2) - \dim (U_2 \cap U_3) - \dim (U_3 \cap U_1) + \dim (U_1 \cap U_2 \cap U_3)$.</li>
     <li>可能存在两两交集为 $0$ 的子空间 $U_1, U_2, U_3 \subseteq V$, 使得 $V = U_1 \oplus U_2 = U_2 \oplus U_3 = U_3 \oplus U_1$.</li>
   </ol>
+  <div class="solution">
+    <p>依次解答如下. 所有反例都是 $\mathbb R^2$ 中的.</p>
+    <ol>
+      <li>正确. 记 $S_i$ 是 $U_i$ 的基. 可以验证 $S_1 \cup S_2$ 是 $V$ 的基. (需要自行练习其证明).</li>
+      <li>正确. 取 $S$ 是 $U_1 \cap U_2$ 的基, 将其扩展为 $U_1$ 与 $U_2$ 的基 $S_1$ 与 $S_2$. 则 $S_1 \cup S_2$ 是 $V$ 的基. (需要自行练习其证明).</li>
+      <li>错误. 取 $U_1$ 为 $x$ 轴, $U_2$ 为 $y$ 轴, $U_3$ 为直线 $y = x$.</li>
+      <li>正确. 取 $U_1$ 为 $x$ 轴, $U_2$ 为 $y$ 轴, $U_3$ 为直线 $y = x$.</li>
+    </ol>
+  </div>
 </div>
 
 <h3 id="基本空间">基本空间</h3>
@@ -203,10 +222,25 @@ u_i = \sum _{j=1}^n b_{ij} v_j, \quad i = 1, 2, \ldots, m.
     <li>从 $cef(A)$ 的角度解释 $\dim C(A) + \dim N(A) = n$.</li>
     <li>假定 $A$ 是实数域上的. $A^TA$ 和 $A$ 有什么关系? 它们的基本空间之间有什么关系? 回答一些你认为重要的方面.</li>
   </ol>
+  <div class="solution">
+    <p>依次解答如下.</p>
+    <ol>
+      <li>行空间与零空间不变.</li>
+      <li>像是 $A$ 列向量的线性组合构成的空间, 即 $C(A)$. 核是 $Ax = 0$ 的解构成的空间, 即 $N(A)$.</li>
+      <li>$cef(A)$ 中 $\dim C(A)$ 列非零, $\dim N(A)$ 列为零, 加起来就是 $n$ 列.</li>
+      <li>$A^TA$ 与 $A$ 有相同行空间与零空间. <a href="HW4-solu#配完全平方">一方面</a>, $Ax = 0$ 等价于 $A^TAx = 0$, 从而 $N(A) = N(A^TA)$. 作为推论, 两者秩相同. <a href="HW7-solu#判断题">另一方面</a>, 存在 $C$ 使得 $CA^TA = A$. 这说明 $A$ 与 $R(A^TA)$ 的行能彼此表示, 从而 $R(A) = R(A^TA)$.</li>
+    </ol>
+  </div>
 </div>
 
 <div class="problem">
   <p>给定两个实数域上的矩阵 $A,B \in \mathbb R^{n \times n}$. 请找一个形式尽可能简单的矩阵 $X \in \mathbb R^{n \times n}$, 使得 $C(A) + C(B) = C(X)$.</p>
+  <div class="solution">
+    <p>注意到</p>
+    <p>$$\begin{equation}
+C(A) + C(B) = C(A\quad B) = C((A\quad B)(A\quad B)^T) = C(AA^T + BB^T).
+\end{equation}$$</p>
+  </div>
 </div>
 
   </article>
@@ -429,13 +463,13 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/EX7" title="NEXT: Exersice Class 7">&lt;&lt;</a>
+      <a class="next" href="/MATH1205H-04-HW/posts/HW12" title="NEXT: HW12">&lt;&lt;</a>
       <span>&middot;</span>
     
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW12-solu" title="PREV: HW12-solu">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW11" title="PREV: HW11">&gt;&gt;</a>
     
   </div>
 </main>
