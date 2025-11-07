@@ -22,6 +22,257 @@
     
       
         <item>
+          <title>Exersice Class 8</title>
+          <description>&lt;h2 id=&quot;期中考试试题分析&quot;&gt;期中考试试题分析&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;注意 1: 本试卷所有问题均属于实数域.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;t1-判断题&quot;&gt;T1 判断题&lt;/h2&gt;
+
+&lt;p&gt;考虑以下 10 个命题:&lt;/p&gt;
+
+&lt;p&gt;(1) 若 $A,B,C$ 是同阶方阵且满足 $AB = AC$, 则 $A=O$ 或 $B=C$.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;错误! 反例: 设 $A = \begin{pmatrix}1 &amp; 0 \\ 0 &amp; 0\end{pmatrix}, B = \begin{pmatrix}0 &amp; 0 \\ 1 &amp; 0\end{pmatrix}, C = O$. 则 $AB = AC = O$, 但 $A \neq O$ 且 $B \neq C$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(2) 方程 $Ax = b$ 有唯一解 $\iff$ $A$ 列满秩.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;错误! 反例: 设 $A = \begin{pmatrix}1 \\ 0\end{pmatrix}, b = \begin{pmatrix}0 \\ 1\end{pmatrix}$. 则 $A$ 列满秩, 但 $Ax = b$ 无解.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(3) 设 $A,B$ 为同阶方阵, 则 $AB$ 可逆 $\iff$ $A,B$ 均可逆.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;正确! 检验略.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(4) 设 $Ax=b$ 有解. 则 $Ax=b$ 与 $A^TAx = A^Tb$ 同解.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;若 $Ax=b$, 则 $A^TAx = A^Tb$. 若 $A^TAx = A^Tb$, 则 $A^T(Ax - b) = 0$. 依题设记 $b = Ax_0$, 则 $A^TA(x-x_0) = 0$. 因此 $(x-x_0)A^TA(x-x_0) = 0$, 从而 $A(x-x_0)$ 是零向量. 这说明 $Ax = b$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(5) 设 $AB$ 有意义. 则 $r(AB) = r(B)$ $\iff$ $A$ 列满秩.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;错误! 反例: $A = B = O$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(6) 矩阵 $A$ 行满秩 $\iff$ 存在矩阵 $B$ 使得 $AB$ 可逆.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;正确! 行满秩矩阵的列阶梯形是 $AQ = (I \mid O)$. 注意到 $A(Q\binom IO) = I$ 可逆矩阵.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(7) 向量 $u,v,w$ 线性相关 $\iff$ $u+v,v+w,w+u$ 线性相关.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;正确! 设 $u,v,w$ 线性相关, 则存在不全为零的 $\alpha,\beta,\gamma$ 使得 $\alpha u + \beta v + \gamma w = 0$. 则 $(\alpha - \gamma)(u+v) + (\beta - \alpha)(v+w) + (\gamma - \beta)(w+u) = 0$. 注意到不全为零. 反之亦然.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(8) 设 $A \in \mathbb R^{n \times n}$. 若 $AX=XA$, $\forall X \in \mathbb R^{n \times n}$, 则 $A$ 是纯量矩阵.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;正确! 记 $E_{i,j}$ 是仅在 $(i,j)$ 位置为 1 的矩阵, 其余位置为 0 的矩阵. 考虑 $AE_{i,j} = E_{i,j}A$, 则 $a_{i,i} = a_{j,j}$, 同时 $A$ 第 $i$ 列与第 $j$ 行的其余元素均为 0. 因此 $A$ 是纯量矩阵.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(9) $Ax = b$ 有解 $\iff$ $A^Ty = 0$, $y^T b = 1$ 无解.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;错误! $A = O$, $b = 0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(10) 任何方阵都是两个可逆矩阵的和.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;正确! 取 $x \in \mathbb R$, 作分解 $A =  (A+xI) - xI$. 当 $x$ 足够大时, $(A+xI)$ 可逆.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;t2&quot;&gt;T2&lt;/h2&gt;
+
+&lt;p&gt;设 $A = \begin{pmatrix}3&amp;-2&amp;2&amp;-3\\2&amp;-1&amp;1&amp;-2\\2&amp;-2&amp;2&amp;-2\\-1&amp;1&amp;-1&amp;1\end{pmatrix}$.&lt;/p&gt;
+
+&lt;p&gt;(1) 试求可逆矩阵 $P$ 使得 $PA$ 是简化行阶梯形.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;通过行初等变换, 作 $(A \mid I) \to (ref(A)\mid P)$:&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+ \begin{array}{l}
+\begin{pmatrix}
+3 &amp; -2 &amp; 2 &amp; -3 &amp; \mid  &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+2 &amp; -1 &amp; 1 &amp; -2 &amp; \mid  &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+2 &amp; -2 &amp; 2 &amp; -2 &amp; \mid  &amp; 0 &amp; 0 &amp; 1 &amp; 0\\
+-1 &amp; 1 &amp; -1 &amp; 1 &amp; \mid  &amp; 0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}\\
+\\
+\begin{pmatrix}
+0 &amp; 1 &amp; -1 &amp; 0 &amp; \mid  &amp; 1 &amp; 0 &amp; 0 &amp; 3\\
+0 &amp; 1 &amp; -1 &amp; 0 &amp; \mid  &amp; 0 &amp; 1 &amp; 0 &amp; 2\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mid  &amp; 0 &amp; 0 &amp; 1 &amp; 2\\
+-1 &amp; 1 &amp; -1 &amp; 1 &amp; \mid  &amp; 0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}\\
+\\
+\begin{pmatrix}
+0 &amp; 1 &amp; -1 &amp; 0 &amp; \mid  &amp; 1 &amp; 0 &amp; 0 &amp; 3\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mid  &amp; -1 &amp; 1 &amp; 0 &amp; -1\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mid  &amp; 0 &amp; 0 &amp; 1 &amp; 2\\
+-1 &amp; 0 &amp; 0 &amp; 1 &amp; \mid  &amp; -1 &amp; 0 &amp; 0 &amp; -2
+\end{pmatrix}\\
+\\
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; -1 &amp; \mid  &amp; 1 &amp; 0 &amp; 0 &amp; 2\\
+0 &amp; 1 &amp; -1 &amp; 0 &amp; \mid  &amp; 1 &amp; 0 &amp; 0 &amp; 3\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mid  &amp; -1 &amp; 1 &amp; 0 &amp; -1\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; \mid  &amp; 0 &amp; 0 &amp; 1 &amp; 2
+\end{pmatrix}
+\end{array}
+\end{equation}$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(2) 设 $b = Ae_1 + Ae_2$, 求 $Ax=b$ 的所有解.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;我们知道解等于特殊解加上零解. 依照 $ref$, $Ax = 0$ 的形如列向量 $(a,b,b,a)$. 从而方程的解是 $(1+a,1+b,b,a)$, 其中 $a,b$ 是任意实数.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(3) 求矩阵 $L_{4 \times 2}$, $U_{2 \times 4}$ 使得 $A = LU$; 由此计算 $A^n$.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;我们知道&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A=\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 2\\
+1 &amp; 0 &amp; 0 &amp; 3\\
+-1 &amp; 1 &amp; 0 &amp; -1\\
+0 &amp; 0 &amp; 1 &amp; 2
+\end{pmatrix}\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; -1\\
+0 &amp; 1 &amp; -1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;从而&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A=\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 2\\
+1 &amp; 0 &amp; 0 &amp; 3\\
+-1 &amp; 1 &amp; 0 &amp; -1\\
+0 &amp; 0 &amp; 1 &amp; 2
+\end{pmatrix}\begin{pmatrix}
+1 &amp; 0\\
+0 &amp; 1\\
+0 &amp; 0\\
+0 &amp; 0
+\end{pmatrix}\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; -1\\
+0 &amp; 1 &amp; -1 &amp; 0
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;进而&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A=\begin{pmatrix}
+1 &amp; 0\\
+1 &amp; 0\\
+-1 &amp; 1\\
+0 &amp; 0
+\end{pmatrix}\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; -1\\
+0 &amp; 1 &amp; -1 &amp; 0
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;$A^n = L(UL)^{n-1} U = L\begin{pmatrix}1&amp;0\\2&amp;-1\end{pmatrix}^{n-1} U$. 其中 $(UL)^2 = I$. 这说明 $A$ 的奇数次幂是自身, 偶数次幂是&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A^2 =
+\begin{pmatrix}
+12 &amp; -11 &amp; 11 &amp; -12\\
+8 &amp; -7 &amp; 7 &amp; -8\\
+8 &amp; -8 &amp; 8 &amp; -8\\
+-4 &amp; 4 &amp; -4 &amp; 4
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(4) 求 $A$ 的四个子空间的各一组基并验证 Strang 的线性代数基本定理.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;注意到可逆行变换不改变行空间和零空间, 可逆列变换不改变列空间和左零空间. 因此, $A$ 与 $U$ 有相同的行空间和零空间, 与 $L$ 有相同的列空间和左零空间. 容易看出 (零空间随便猜即可)&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;行空间的基: $L$ 的两行.&lt;/li&gt;
+    &lt;li&gt;列空间的基: $U$ 的两列.&lt;/li&gt;
+    &lt;li&gt;零空间的基: $\{(1,0,0,1), (0,1,1,0)\}$ (列向量).&lt;/li&gt;
+    &lt;li&gt;左零空间的基: $\{(0,0,0,1), (1,-1,0,0)\}$ (行向量).&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;直接地, $C(A^T) \oplus N(A) = \mathbb R^4$, 且 $C(A) \oplus N(A^T) = \mathbb R^4$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;t3&quot;&gt;T3&lt;/h2&gt;
+
+&lt;p&gt;(1) 构造三阶非对角矩阵 $A$ 与 $B$ 使得 $A^3 = I$, $A^2 \neq I$, $B^3 = O$, $B^2 \neq O$.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;取$$\begin{equation}
+A=\begin{pmatrix}0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\\1 &amp; 0 &amp; 0\end{pmatrix}, B=\begin{pmatrix}0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\\0 &amp; 0 &amp; 0\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(2) 构造 $n \geq 4$ 阶非对角矩阵 $A,B$ 使得 $A^n = I$, $A^{n-1} \neq I$, $B^n = O$, $B^{n-1} \neq O$.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;同上. $B$ 是次对角线全 $1$ 的矩阵, $A$ 是 $B$ 加上左下角的 $1$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(3) 设 $B$ 是 (2) 中的矩阵, 证明 $I+B$ 可逆并求其逆.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;由数学分析, $(1+x)^{-1} = 1-x+x^2-x^3+\cdots$. 忽略 $x^n$ 以上的项, 得&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+(I+B)(I+(-B)+(-B)^2 - \cdots + (-B)^{n-1}) = I.
+\end{equation}$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(4) 设 $A,B$ 是 (2) 中的矩阵, 判断 $A+B$ 是否可逆并说明理由.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;这是开放问题. 我们修改 (2) 中构造使得本题易于回答: $A$ 不变, $B$ 加上负号. 那么 $A+B$ 是左下角为 $1$ 剩余位置为 $0$ 的矩阵, 因此不可逆.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;t4&quot;&gt;T4&lt;/h2&gt;
+
+&lt;p&gt;设 $v_1,v_2,\ldots ,v_s \in \mathbb R^n$. 证明或否定: $v_1,v_2,\ldots,v_n$ 线性无关当且仅当 $v_1-v_2$, $v_2-v_3$, $v_3-v_4$, $\ldots$, $v_{s}-v_1$ 线性无关.&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;错误. 右侧总是线性相关的, 因为全加起来是 $0$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;t5&quot;&gt;T5&lt;/h2&gt;
+
+&lt;p&gt;设所有矩阵均可逆, 证明华罗庚恒等式 (1949年):&lt;/p&gt;
+
+&lt;p&gt;$$\begin{equation}
+A - (A^{-1} + (B^{-1} - A)^{-1})^{-1} = ABA.
+\end{equation}$$&lt;/p&gt;
+
+&lt;div class=&quot;solution&quot;&gt;
+  &lt;p&gt;即证 $(A-ABA)$ 与 $(A^{-1} + (B^{-1} - A)^{-1})$ 互逆:&lt;/p&gt;
+  &lt;p&gt;$$\begin{aligned}
+&amp; (A-ABA)(A^{-1} + (B^{-1} - A)^{-1}) \\
+=\ &amp;I-AB+AB(B^{-1}-A)(B^{-1} - A)^{-1}  = I.
+\end{aligned}$$&lt;/p&gt;
+  &lt;p&gt;对方阵而言, 左逆等于右逆, 证毕.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-11-09T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/EX8</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/EX8</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Exersice Class 7</title>
           <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
 
