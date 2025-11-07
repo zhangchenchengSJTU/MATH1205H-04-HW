@@ -29,6 +29,10 @@
 
 &lt;h2 id=&quot;t1-判断题&quot;&gt;T1 判断题&lt;/h2&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;总结:&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;考虑以下 10 个命题:&lt;/p&gt;
 
 &lt;p&gt;(1) 若 $A,B,C$ 是同阶方阵且满足 $AB = AC$, 则 $A=O$ 或 $B=C$.&lt;/p&gt;
@@ -52,7 +56,7 @@
 &lt;p&gt;(4) 设 $Ax=b$ 有解. 则 $Ax=b$ 与 $A^TAx = A^Tb$ 同解.&lt;/p&gt;
 
 &lt;div class=&quot;solution&quot;&gt;
-  &lt;p&gt;若 $Ax=b$, 则 $A^TAx = A^Tb$. 若 $A^TAx = A^Tb$, 则 $A^T(Ax - b) = 0$. 依题设记 $b = Ax_0$, 则 $A^TA(x-x_0) = 0$. 因此 $(x-x_0)A^TA(x-x_0) = 0$, 从而 $A(x-x_0)$ 是零向量. 这说明 $Ax = b$.&lt;/p&gt;
+  &lt;p&gt;正确! 若 $Ax=b$, 则 $A^TAx = A^Tb$. 若 $A^TAx = A^Tb$, 则 $A^T(Ax - b) = 0$. 依题设记 $b = Ax_0$, 则 $A^TA(x-x_0) = 0$. 因此 $(x-x_0)A^TA(x-x_0) = 0$, 从而 $A(x-x_0)$ 是零向量. 这说明 $Ax = b$. 可对照&lt;a href=&quot;HW4-solu#配完全平方&quot;&gt;此作业题&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;(5) 设 $AB$ 有意义. 则 $r(AB) = r(B)$ $\iff$ $A$ 列满秩.&lt;/p&gt;
@@ -70,13 +74,16 @@
 &lt;p&gt;(7) 向量 $u,v,w$ 线性相关 $\iff$ $u+v,v+w,w+u$ 线性相关.&lt;/p&gt;
 
 &lt;div class=&quot;solution&quot;&gt;
-  &lt;p&gt;正确! 设 $u,v,w$ 线性相关, 则存在不全为零的 $\alpha,\beta,\gamma$ 使得 $\alpha u + \beta v + \gamma w = 0$. 则 $(\alpha - \gamma)(u+v) + (\beta - \alpha)(v+w) + (\gamma - \beta)(w+u) = 0$. 注意到不全为零. 反之亦然.&lt;/p&gt;
+  &lt;p&gt;正确! 注意到 $u = \frac{1}{2}((u+v)+(v+w)-(u+w))$. 依照对称性, 左侧向量可以被右侧向量线性表出. 两个向量组可以彼此线性表出, 从而两个向量组秩相同.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;(8) 设 $A \in \mathbb R^{n \times n}$. 若 $AX=XA$, $\forall X \in \mathbb R^{n \times n}$, 则 $A$ 是纯量矩阵.&lt;/p&gt;
 
 &lt;div class=&quot;solution&quot;&gt;
-  &lt;p&gt;正确! 记 $E_{i,j}$ 是仅在 $(i,j)$ 位置为 1 的矩阵, 其余位置为 0 的矩阵. 考虑 $AE_{i,j} = E_{i,j}A$, 则 $a_{i,i} = a_{j,j}$, 同时 $A$ 第 $i$ 列与第 $j$ 行的其余元素均为 0. 因此 $A$ 是纯量矩阵.&lt;/p&gt;
+  &lt;p&gt;正确! 记 $E_{i,j}$ 是仅在 $(i,j)$ 位置为 $1$ 的矩阵, 其余位置为 $0$ 的矩阵. 考虑 $AE_{i,j} = E_{i,j}A$, 则 $a_{i,i} = a_{j,j}$, 同时 $A$ 第 $i$ 列与第 $j$ 行的其余元素均为 $0$. 因此 $A$ 是纯量矩阵.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;注: 纯量矩阵是指形如 $kI$ 的矩阵, 此处 $k \in \mathbb R$, $I$ 是单位矩阵.&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;p&gt;(9) $Ax = b$ 有解 $\iff$ $A^Ty = 0$, $y^T b = 1$ 无解.&lt;/p&gt;
@@ -88,7 +95,7 @@
 &lt;p&gt;(10) 任何方阵都是两个可逆矩阵的和.&lt;/p&gt;
 
 &lt;div class=&quot;solution&quot;&gt;
-  &lt;p&gt;正确! 取 $x \in \mathbb R$, 作分解 $A =  (A+xI) - xI$. 当 $x$ 足够大时, $(A+xI)$ 可逆.&lt;/p&gt;
+  &lt;p&gt;正确! 取 $x \in \mathbb R$, 作分解 $A =  (A+xI) - xI$. 当 $x$ 足够大时, $(A+xI)$ 可逆. 可对照&lt;a href=&quot;HW7-solu#行满秩矩阵的一个例子&quot;&gt;此作业题&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&quot;t2&quot;&gt;T2&lt;/h2&gt;
@@ -130,70 +137,31 @@
 \end{pmatrix}
 \end{array}
 \end{equation}$$&lt;/p&gt;
+  &lt;p&gt;此题答案不唯一, 因为 $P$ 的后两行可以随意线性组合 (同时保持满秩) 并加至前两行.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;(2) 设 $b = Ae_1 + Ae_2$, 求 $Ax=b$ 的所有解.&lt;/p&gt;
 
 &lt;div class=&quot;solution&quot;&gt;
-  &lt;p&gt;我们知道解等于特殊解加上零解. 依照 $ref$, $Ax = 0$ 的形如列向量 $(a,b,b,a)$. 从而方程的解是 $(1+a,1+b,b,a)$, 其中 $a,b$ 是任意实数.&lt;/p&gt;
+  &lt;p&gt;我们知道解等于特殊解加上零解. 依照 $ref$, $Ax = 0$ 的解形如列向量 $(a,b,b,a)$. 从而方程的解是 $(1+a,1+b,b,a)$, 其中 $a,b$ 是任意实数.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;(3) 求矩阵 $L_{4 \times 2}$, $U_{2 \times 4}$ 使得 $A = LU$; 由此计算 $A^n$.&lt;/p&gt;
 
 &lt;div class=&quot;solution&quot;&gt;
-  &lt;p&gt;我们知道&lt;/p&gt;
+  &lt;p&gt;试观察行初等变换 $(A \mid I ) \to (ref(A) \mid P)$. 由于 $ref(A)$ 的前两列是 $\begin{pmatrix}1 &amp; 0\\0 &amp; 1\\0 &amp; 0\\0 &amp; 0\end{pmatrix}$, 从而 $P^{-1}$ 的前两列就是 $A$ 的前两列. 此时得到分解&lt;/p&gt;
   &lt;p&gt;$$\begin{equation}
 A=\begin{pmatrix}
-1 &amp; 0 &amp; 0 &amp; 2\\
-1 &amp; 0 &amp; 0 &amp; 3\\
--1 &amp; 1 &amp; 0 &amp; -1\\
-0 &amp; 0 &amp; 1 &amp; 2
-\end{pmatrix}\begin{pmatrix}
-1 &amp; 0 &amp; 0 &amp; -1\\
-0 &amp; 1 &amp; -1 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 0\\
-0 &amp; 0 &amp; 0 &amp; 0
-\end{pmatrix}.
-\end{equation}$$&lt;/p&gt;
-  &lt;p&gt;从而&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-A=\begin{pmatrix}
-1 &amp; 0 &amp; 0 &amp; 2\\
-1 &amp; 0 &amp; 0 &amp; 3\\
--1 &amp; 1 &amp; 0 &amp; -1\\
-0 &amp; 0 &amp; 1 &amp; 2
-\end{pmatrix}\begin{pmatrix}
-1 &amp; 0\\
-0 &amp; 1\\
-0 &amp; 0\\
-0 &amp; 0
+3 &amp; -2\\
+2 &amp; -1\\
+2 &amp; -2\\
+-1 &amp; 1
 \end{pmatrix}\begin{pmatrix}
 1 &amp; 0 &amp; 0 &amp; -1\\
 0 &amp; 1 &amp; -1 &amp; 0
-\end{pmatrix}.
+\end{pmatrix} = : LU.
 \end{equation}$$&lt;/p&gt;
-  &lt;p&gt;进而&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-A=\begin{pmatrix}
-1 &amp; 0\\
-1 &amp; 0\\
--1 &amp; 1\\
-0 &amp; 0
-\end{pmatrix}\begin{pmatrix}
-1 &amp; 0 &amp; 0 &amp; -1\\
-0 &amp; 1 &amp; -1 &amp; 0
-\end{pmatrix}.
-\end{equation}$$&lt;/p&gt;
-  &lt;p&gt;$A^n = L(UL)^{n-1} U = L\begin{pmatrix}1&amp;0\\2&amp;-1\end{pmatrix}^{n-1} U$. 其中 $(UL)^2 = I$. 这说明 $A$ 的奇数次幂是自身, 偶数次幂是&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-A^2 =
-\begin{pmatrix}
-12 &amp; -11 &amp; 11 &amp; -12\\
-8 &amp; -7 &amp; 7 &amp; -8\\
-8 &amp; -8 &amp; 8 &amp; -8\\
--4 &amp; 4 &amp; -4 &amp; 4
-\end{pmatrix}.
-\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;$A^n = L(UL)^{n-1} U = L\begin{pmatrix}4&amp;-3\\0&amp;1\end{pmatrix}^{n-1} U$. 由初中方法知 $(UL)^k = \begin{pmatrix}4^k&amp;1-4^k\\0&amp;1\end{pmatrix}$. 写至此步即可.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;(4) 求 $A$ 的四个子空间的各一组基并验证 Strang 的线性代数基本定理.&lt;/p&gt;
@@ -201,12 +169,17 @@ A^2 =
 &lt;div class=&quot;solution&quot;&gt;
   &lt;p&gt;注意到可逆行变换不改变行空间和零空间, 可逆列变换不改变列空间和左零空间. 因此, $A$ 与 $U$ 有相同的行空间和零空间, 与 $L$ 有相同的列空间和左零空间. 容易看出 (零空间随便猜即可)&lt;/p&gt;
   &lt;ol&gt;
-    &lt;li&gt;行空间的基: $L$ 的两行.&lt;/li&gt;
-    &lt;li&gt;列空间的基: $U$ 的两列.&lt;/li&gt;
-    &lt;li&gt;零空间的基: $\{(1,0,0,1), (0,1,1,0)\}$ (列向量).&lt;/li&gt;
-    &lt;li&gt;左零空间的基: $\{(0,0,0,1), (1,-1,0,0)\}$ (行向量).&lt;/li&gt;
+    &lt;li&gt;行空间的基: $U$ 的两行. 注意到 $U$ 与 $A$ 通过行变换彼此得到, 从而行空间相同.&lt;/li&gt;
+    &lt;li&gt;列空间的基: $L$ 的两列. 注意到 $L$ 与 $A$ 通过列变换彼此得到, 从而列空间相同.&lt;/li&gt;
+    &lt;li&gt;零空间的基: $\{(1,0,0,1), (0,1,1,0)\}$ (列向量). 注意到 $Ax=0$ 等价于 $Ux=0$.&lt;/li&gt;
+    &lt;li&gt;左零空间的基: $\{(1,0,-2,0), (1,0,0,1)\}$ (行向量). 注意到 $y^TA=0$ 等价于 $y^TL=0$. 如果觉得左零空间难以看出, 则可以通过初等列变换将 $L$ 化作 $\begin{pmatrix}1&amp;0\\0&amp;1\\2&amp;0\\-1&amp;0\end{pmatrix}$&lt;/li&gt;
   &lt;/ol&gt;
-  &lt;p&gt;直接地, $C(A^T) \oplus N(A) = \mathbb R^4$, 且 $C(A) \oplus N(A^T) = \mathbb R^4$.&lt;/p&gt;
+  &lt;p&gt;直接地,&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$\dim C(A) + \dim N(A) = 4$ (列秩 + 零空间维数 = 列数),&lt;/li&gt;
+    &lt;li&gt;$\dim C(A^T) + \dim N(A^T) = 4$ (行秩 + 左零空间维数 = 行数),&lt;/li&gt;
+    &lt;li&gt;$\dim C(A) = \dim C(A^T) = 2$ (秩).&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&quot;t3&quot;&gt;T3&lt;/h2&gt;
@@ -222,15 +195,15 @@ A=\begin{pmatrix}0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 1\\1 &amp; 0 &amp; 0\end{pma
 &lt;p&gt;(2) 构造 $n \geq 4$ 阶非对角矩阵 $A,B$ 使得 $A^n = I$, $A^{n-1} \neq I$, $B^n = O$, $B^{n-1} \neq O$.&lt;/p&gt;
 
 &lt;div class=&quot;solution&quot;&gt;
-  &lt;p&gt;同上. $B$ 是次对角线全 $1$ 的矩阵, $A$ 是 $B$ 加上左下角的 $1$.&lt;/p&gt;
+  &lt;p&gt;同上. $B$ 是次对角线全 $1$, 其余位置为 $0$ 的矩阵. $A$ 即 $B$ 加上左下角的 $1$. 构造不唯一.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;(3) 设 $B$ 是 (2) 中的矩阵, 证明 $I+B$ 可逆并求其逆.&lt;/p&gt;
 
 &lt;div class=&quot;solution&quot;&gt;
-  &lt;p&gt;由数学分析, $(1+x)^{-1} = 1-x+x^2-x^3+\cdots$. 忽略 $x^n$ 以上的项, 得&lt;/p&gt;
+  &lt;p&gt;由数学分析, $(1+x)^{-1} = 1-x+x^2-x^3+\cdots$. 依照余项,&lt;/p&gt;
   &lt;p&gt;$$\begin{equation}
-(I+B)(I+(-B)+(-B)^2 - \cdots + (-B)^{n-1}) = I.
+(I+B)(I+(-B)+(-B)^2 - \cdots + (-B)^{n-1}) = I + (-B)^n\cdot( \cdots).
 \end{equation}$$&lt;/p&gt;
 &lt;/div&gt;
 
@@ -262,7 +235,7 @@ A - (A^{-1} + (B^{-1} - A)^{-1})^{-1} = ABA.
 &amp; (A-ABA)(A^{-1} + (B^{-1} - A)^{-1}) \\
 =\ &amp;I-AB+AB(B^{-1}-A)(B^{-1} - A)^{-1}  = I.
 \end{aligned}$$&lt;/p&gt;
-  &lt;p&gt;对方阵而言, 左逆等于右逆, 证毕.&lt;/p&gt;
+  &lt;p&gt;对方阵而言, 左逆等于右逆 (见&lt;a href=&quot;HW7-solu#初等变换的使用&quot;&gt;作业&lt;/a&gt;), 证毕.&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-11-09T00:00:00+08:00</pubDate>
