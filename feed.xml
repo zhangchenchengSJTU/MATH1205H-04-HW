@@ -35,11 +35,43 @@
 
 &lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-09-%E7%AC%AC%E5%85%AB%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;习题课思考题&quot;&gt;习题课思考题&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;记 $A \in \mathbb R^{n \times n}$. 假定 $R$ 是对角元为 $0$, 剩余位置为 $1$ 的矩阵. 若 $A+A^T = R$, 试证明 $r(A) \geq n-1$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;只需证明 $r(\binom {1^T}A) = n$. 此时, 删去一行后即有 $r(A) \geq n-1$. 记 $x \in N(\binom {1^T}A)$. 则 $1^Tx = 0$, 同时 $Ax = 0$. 注意到&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+0 = x^T Ax+x^T A^T x = x^T R x = x^T(11^T - I)x = -x^Tx,
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;得 $x=0$. 因此 $r(\binom {1^T}A) = n$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;记 $A \in \mathbb R^{n \times n}$. 假定 $A$ 的对角元素和 $tr(A):= \sum_{i=1}^na_{i,i} = 0$, 则存在 $X,Y \in A$ 使得 $A = XY - YX$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;记 $\Lambda$ 是 $A$ 的对角部分. 此时存在置换矩阵 $P$ 与对角元相异的对角阵 $D$, 使得 $P^{-1}DP - D = \Lambda$.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;这相当于说, 给定一个相加为 $0$ 的数组 $(\lambda_1,\lambda_2,\ldots,\lambda_n)$, 则存在一个元素两两相异的数组 $(d_1, d_2, \ldots, d_n)$ 与置换 $\tau$, 使得 $d_{\tau(i)} - d_i = \lambda_i$ 对任意 $i$ 成立.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;取 $A = L-U$, 使得 $(L-D)$ 是对角为 $0$ 的下三角矩阵, $U$ 是上三角矩阵. 依照构造, $L$ 是对角元两两不同的矩阵, $U$ 与 $D$ 亦然. 依照 $P^{-1}DP - D = \Lambda$, 则 $L$, $D$ 与 $U$ 三者的对角元在相差一个置换的意义下相同. 依照相似对角化, 存在可逆矩阵 $Q,R$ 使得 $R^{-1}LR = S^{-1}US = D$. 这说明&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+A = L-U = (RS^{-1})\cdot (SR^{-1}L) - (SR^{-1}L)\cdot(RS^{-1}).
+\end{equation}$$&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;问题: 能否避免使用相似矩阵, 找到更直接的证法?&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;期中考试试题分析&quot;&gt;期中考试试题分析&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;注意 1: 本试卷所有问题均属于实数域.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;致谢: 感谢滕伟和曾楚笑协助编辑本答案, 有问题找他们就行. (实际上, T1-9 还真有问题.)&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;致谢&quot;&gt;致谢&lt;/h3&gt;
+
+&lt;p&gt;感谢滕伟和曾楚笑协助编辑本答案, 有问题找他们就行. (实际上, T1-9 还真有问题.)&lt;/p&gt;
 
 &lt;h3 id=&quot;t1-判断题&quot;&gt;T1 判断题&lt;/h3&gt;
 
@@ -315,6 +347,20 @@ A - (A^{-1} + (B^{-1} - A)^{-1})^{-1} = ABA.
 
 &lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-02-%E7%AC%AC%E4%B8%83%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;习题课思考题&quot;&gt;习题课思考题&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;记 $S \subseteq \mathbb C$ 是任意子集. 证明, 存在包含 $S$ 的最小的数域.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;记 $\mathscr X := \{\mathbb F \ \text{是数域}\mid S \subseteq \mathbb F\}$. 由 $\mathbb C \in \mathscr X$, 故 $\mathscr X$ 非空. 若能证明 $\bigcap _{\mathbb F \in \mathscr X} \mathbb F$ 是数域, 则它显然是包含 $S$ 的最小数域. 我们记 $\mathbb S := \bigcap _{\mathbb F \in \mathscr X} \mathbb F$.&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;对任意 $\mathbb F \in \mathscr X$, 总有 $0,1 \in \mathbb F$. 因此 $0,1 \in \mathbb S$.&lt;/li&gt;
+      &lt;li&gt;给定任意 $a,b \in \mathbb S$ ($b\neq 0$). 则 $a,b$ 属于一切 $\mathbb F \in \mathscr X$. 因此, $a+b, a-b, ab, ab^{-1}\in \mathbb F$ 对任意 $\mathbb F \in \mathscr X$ 成立. 从而 $a+b, a-b, ab, ab^{-1}\in \mathbb S$.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;另一证明方法是使用多元有理多项式, 比较繁琐.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;typos&quot;&gt;Typos&lt;/h2&gt;
 
 &lt;p&gt;Page 5, Line 10&lt;/p&gt;
@@ -332,7 +378,6 @@ A - (A^{-1} + (B^{-1} - A)^{-1})^{-1} = ABA.
   &lt;li&gt;Corrected: 分块矩阵右侧 $\begin{pmatrix}1+t^Tx &amp; -t^T \\ -x &amp; I\end{pmatrix}$;&lt;/li&gt;
   &lt;li&gt;Reason: 该步骤将第二行左乘 $-y^T$ 并加到第一行, 因此第二行不变. 该行附近蓝色注释无误.&lt;/li&gt;
 &lt;/ul&gt;
-
 </description>
           <pubDate>2025-11-02T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/EX7</link>

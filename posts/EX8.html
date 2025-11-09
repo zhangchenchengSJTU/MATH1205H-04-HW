@@ -95,11 +95,43 @@ MathJax = {
 
 <p>文档: <a href="https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-09-%E7%AC%AC%E5%85%AB%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf">地址</a></p>
 
+<h2 id="习题课思考题">习题课思考题</h2>
+
+<div class="problem">
+  <p>记 $A \in \mathbb R^{n \times n}$. 假定 $R$ 是对角元为 $0$, 剩余位置为 $1$ 的矩阵. 若 $A+A^T = R$, 试证明 $r(A) \geq n-1$.</p>
+  <div class="proof">
+    <p>只需证明 $r(\binom {1^T}A) = n$. 此时, 删去一行后即有 $r(A) \geq n-1$. 记 $x \in N(\binom {1^T}A)$. 则 $1^Tx = 0$, 同时 $Ax = 0$. 注意到</p>
+    <p>$$\begin{equation}
+0 = x^T Ax+x^T A^T x = x^T R x = x^T(11^T - I)x = -x^Tx,
+\end{equation}$$</p>
+    <p>得 $x=0$. 因此 $r(\binom {1^T}A) = n$.</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>记 $A \in \mathbb R^{n \times n}$. 假定 $A$ 的对角元素和 $tr(A):= \sum_{i=1}^na_{i,i} = 0$, 则存在 $X,Y \in A$ 使得 $A = XY - YX$.</p>
+  <div class="proof">
+    <p>记 $\Lambda$ 是 $A$ 的对角部分. 此时存在置换矩阵 $P$ 与对角元相异的对角阵 $D$, 使得 $P^{-1}DP - D = \Lambda$.</p>
+    <ul>
+      <li>这相当于说, 给定一个相加为 $0$ 的数组 $(\lambda_1,\lambda_2,\ldots,\lambda_n)$, 则存在一个元素两两相异的数组 $(d_1, d_2, \ldots, d_n)$ 与置换 $\tau$, 使得 $d_{\tau(i)} - d_i = \lambda_i$ 对任意 $i$ 成立.</li>
+    </ul>
+    <p>取 $A = L-U$, 使得 $(L-D)$ 是对角为 $0$ 的下三角矩阵, $U$ 是上三角矩阵. 依照构造, $L$ 是对角元两两不同的矩阵, $U$ 与 $D$ 亦然. 依照 $P^{-1}DP - D = \Lambda$, 则 $L$, $D$ 与 $U$ 三者的对角元在相差一个置换的意义下相同. 依照相似对角化, 存在可逆矩阵 $Q,R$ 使得 $R^{-1}LR = S^{-1}US = D$. 这说明</p>
+    <p>$$\begin{equation}
+A = L-U = (RS^{-1})\cdot (SR^{-1}L) - (SR^{-1}L)\cdot(RS^{-1}).
+\end{equation}$$</p>
+    <ul>
+      <li><em>问题: 能否避免使用相似矩阵, 找到更直接的证法?</em></li>
+    </ul>
+  </div>
+</div>
+
 <h2 id="期中考试试题分析">期中考试试题分析</h2>
 
 <p><strong>注意 1: 本试卷所有问题均属于实数域.</strong></p>
 
-<p><strong>致谢: 感谢滕伟和曾楚笑协助编辑本答案, 有问题找他们就行. (实际上, T1-9 还真有问题.)</strong></p>
+<h3 id="致谢">致谢</h3>
+
+<p>感谢滕伟和曾楚笑协助编辑本答案, 有问题找他们就行. (实际上, T1-9 还真有问题.)</p>
 
 <h3 id="t1-判断题">T1 判断题</h3>
 
@@ -470,8 +502,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#期中考试试题分析">
+      <a href="#习题课思考题">
         <span class="toc-number">2.</span>
+        <span class="toc-title">习题课思考题</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-2">
+      <a href="#期中考试试题分析">
+        <span class="toc-number">3.</span>
         <span class="toc-title">期中考试试题分析</span>
       </a>
     </div>
@@ -487,8 +536,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-3">
+      <a href="#致谢">
+        <span class="toc-number">3.1.</span>
+        <span class="toc-title">致谢</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
       <a href="#t1-判断题">
-        <span class="toc-number">2.1.</span>
+        <span class="toc-number">3.2.</span>
         <span class="toc-title">T1 判断题</span>
       </a>
     </div>
@@ -505,7 +571,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-3">
       <a href="#t2-计算基本空间">
-        <span class="toc-number">2.2.</span>
+        <span class="toc-number">3.3.</span>
         <span class="toc-title">T2 计算基本空间</span>
       </a>
     </div>
@@ -522,7 +588,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-3">
       <a href="#t3-构造幂等与幂零方阵">
-        <span class="toc-number">2.3.</span>
+        <span class="toc-number">3.4.</span>
         <span class="toc-title">T3 构造幂等与幂零方阵</span>
       </a>
     </div>
@@ -539,7 +605,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-3">
       <a href="#t4-送分题">
-        <span class="toc-number">2.4.</span>
+        <span class="toc-number">3.5.</span>
         <span class="toc-title">T4 送分题</span>
       </a>
     </div>
@@ -556,7 +622,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-3">
       <a href="#t5-直接验证题">
-        <span class="toc-number">2.5.</span>
+        <span class="toc-number">3.6.</span>
         <span class="toc-title">T5 直接验证题</span>
       </a>
     </div>
@@ -573,7 +639,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-3">
       <a href="#t6-略">
-        <span class="toc-number">2.6.</span>
+        <span class="toc-number">3.7.</span>
         <span class="toc-title">T6 略</span>
       </a>
     </div>
@@ -590,7 +656,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-2">
       <a href="#评分">
-        <span class="toc-number">3.</span>
+        <span class="toc-number">4.</span>
         <span class="toc-title">评分</span>
       </a>
     </div>
@@ -607,7 +673,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-3">
       <a href="#评分标准">
-        <span class="toc-number">3.1.</span>
+        <span class="toc-number">4.1.</span>
         <span class="toc-title">评分标准</span>
       </a>
     </div>
@@ -624,7 +690,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-3">
       <a href="#得分情况">
-        <span class="toc-number">3.2.</span>
+        <span class="toc-number">4.2.</span>
         <span class="toc-title">得分情况</span>
       </a>
     </div>
