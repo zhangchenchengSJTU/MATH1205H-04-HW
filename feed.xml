@@ -12,7 +12,9 @@
 
 &lt;p&gt;请自行选题完成, 总结行列式的计算技巧.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-11-%E8%A1%8C%E5%88%97%E5%BC%8FA.pdf&quot;&gt;练习题 A&lt;/a&gt;, &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-11-%E8%A1%8C%E5%88%97%E5%BC%8FA%20(%E8%A7%A3%E7%AD%94).pdf&quot;&gt;练习题 A 解答&lt;/a&gt;. &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-11-%E8%A1%8C%E5%88%97%E5%BC%8FB.pdf&quot;&gt;练习题 B (含解答)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-11-%E8%A1%8C%E5%88%97%E5%BC%8FA.pdf&quot;&gt;练习题 A&lt;/a&gt;, &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-11-%E8%A1%8C%E5%88%97%E5%BC%8FA%20(%E8%A7%A3%E7%AD%94).pdf&quot;&gt;练习题 A 解答&lt;/a&gt;. 推荐习题: Ex1 (1-10), Ex2, Ex3, Ex5(1), Ex6(1,4), Ex7, Ex8, Ex9, Ex11, Ex15, Ex17, Ex18.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-11-%E8%A1%8C%E5%88%97%E5%BC%8FB.pdf&quot;&gt;练习题 B (含解答)&lt;/a&gt;. 推荐习题: Ex2, Ex3, Ex6(1-3).&lt;/p&gt;
 </description>
           <pubDate>2025-11-11T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/HW13</link>
@@ -23,18 +25,26 @@
       
         <item>
           <title>Exersice Class 8</title>
-          <description>&lt;h2 id=&quot;期中考试试题分析&quot;&gt;期中考试试题分析&lt;/h2&gt;
+          <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
+
+&lt;p&gt;录制：09-Nov-25 线性代数习题课&lt;/p&gt;
+
+&lt;p&gt;日期：2025-11-09 18:00-21:00&lt;/p&gt;
+
+&lt;p&gt;录制文件：&lt;a href=&quot;https://pan.sjtu.edu.cn/web/share/afff28eaa01a24570243ac19d6d2beaa&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-09-%E7%AC%AC%E5%85%AB%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;期中考试试题分析&quot;&gt;期中考试试题分析&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;注意 1: 本试卷所有问题均属于实数域.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;致谢: 感谢滕伟和曾楚笑协助编辑本答案, 有问题找他们就行.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://space.bilibili.com/691509037&quot;&gt;出卷人&lt;/a&gt;的&lt;a href=&quot;2025-11-07-MidTermSolution.pdf&quot;&gt;解答&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;致谢: 感谢滕伟和曾楚笑协助编辑本答案, 有问题找他们就行. (实际上, T1-9 还真有问题.)&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;t1-判断题&quot;&gt;T1 判断题&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;总结: 3, 4, 6, 7, 8, 10 正确.&lt;/li&gt;
+  &lt;li&gt;总结: 3, 4, 6, 7, 8, (9), 10 正确.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;考虑以下 10 个命题:&lt;/p&gt;
@@ -93,7 +103,14 @@
 &lt;p&gt;(9) $Ax = b$ 有解 $\iff$ $A^Ty = 0$, $y^T b = 1$ 无解.&lt;/p&gt;
 
 &lt;div class=&quot;solution&quot;&gt;
-  &lt;p&gt;错误! $A = O$, $b = 0$.&lt;/p&gt;
+  &lt;p&gt;所有回答均给分. 题目本意是指右侧方程组 $\left\{\begin{aligned}A^Ty &amp; = 0, \\ y^Tb &amp; = 1.\end{aligned}\right.$ 无解, 并非方程 $A^T y = b$ 与 $y^Tb = 1$ 均无解. &lt;br /&gt; 我们证明原命题. 即证 $Ax = b$ 无解当且仅当 $y^T (A \mid b) = (0^T \mid 1)$ 有解. 记 $ref(A \mid b) = (ref(A) \mid b')$, 则&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$y^T (A \mid b) = (0^T \mid 1)$ 有解, 当且仅当&lt;/li&gt;
+    &lt;li&gt;$z^T (ref(A) \mid b') = (0^T \mid 1)$ 有解, 当且仅当&lt;/li&gt;
+    &lt;li&gt;$b'$ 在 $ref(A)$ 的零行所在行有非零取值, 当且仅当&lt;/li&gt;
+    &lt;li&gt;$r((A \mid b)) &gt; r(A)$, 当且仅当&lt;/li&gt;
+    &lt;li&gt;$Ax = b$ 无解.&lt;/li&gt;
+  &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;p&gt;(10) 任何方阵都是两个可逆矩阵的和.&lt;/p&gt;
