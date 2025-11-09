@@ -135,7 +135,7 @@ A = L-U = (RS^{-1})\cdot (SR^{-1}L) - (SR^{-1}L)\cdot(RS^{-1}).
 &lt;p&gt;(9) $Ax = b$ 有解 $\iff$ $A^Ty = 0$, $y^T b = 1$ 无解.&lt;/p&gt;
 
 &lt;div class=&quot;solution&quot;&gt;
-  &lt;p&gt;所有回答均给分. 题目本意是指右侧方程组 $\left\{\begin{aligned}A^Ty &amp; = 0, \\ y^Tb &amp; = 1.\end{aligned}\right.$ 无解, 并非方程 $A^T y = b$ 与 $y^Tb = 1$ 均无解. &lt;br /&gt; 我们证明原命题. 即证 $Ax = b$ 无解当且仅当 $y^T (A \mid b) = (0^T \mid 1)$ 有解. 记 $ref(A \mid b) = (ref(A) \mid b')$, 则&lt;/p&gt;
+  &lt;p&gt;所有回答均给分. 题目本意是指右侧方程组 $\left\{\begin{aligned}A^Ty &amp; = 0, \\ y^Tb &amp; = 1.\end{aligned}\right.$ 无解, 并非方程 $A^T y = 0$ 与 $y^Tb = 1$ 均无解. &lt;br /&gt; 我们证明原命题. 即证 $Ax = b$ 无解当且仅当 $y^T (A \mid b) = (0^T \mid 1)$ 有解. 记 $ref(A \mid b) = (ref(A) \mid b')$, 则&lt;/p&gt;
   &lt;ul&gt;
     &lt;li&gt;$y^T (A \mid b) = (0^T \mid 1)$ 有解, 当且仅当&lt;/li&gt;
     &lt;li&gt;$z^T (ref(A) \mid b') = (0^T \mid 1)$ 有解, 当且仅当&lt;/li&gt;
