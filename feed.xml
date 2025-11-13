@@ -109,7 +109,7 @@ e^n &amp; e^{2n} &amp; e^{3n} &amp; \cdots &amp; e^{n^2}
     &lt;li&gt;上一问的逆命题;&lt;/li&gt;
     &lt;li&gt;若 $f$ 是满射, 则任意线性无关组的像仍是线性无关组;&lt;/li&gt;
     &lt;li&gt;上一问的逆命题;&lt;/li&gt;
-    &lt;li&gt;若 $f$ 是满射, 则任意线性无关组的像仍是线性生成组;&lt;/li&gt;
+    &lt;li&gt;若 $f$ 是满射, 则任意线性生成组的像仍是线性生成组;&lt;/li&gt;
     &lt;li&gt;上一问的逆命题;&lt;/li&gt;
     &lt;li&gt;若 $\{f(x_i)\}_{i \in I}$ 是线性无关组, 则 $\{x_i\}_{i \in I}$ 也是线性无关组;&lt;/li&gt;
     &lt;li&gt;若 $\{f(x_i)\}_{i \in I}$ 是线性生成组, 则 $\{x_i\}_{i \in I}$ 也是线性生成组;&lt;/li&gt;
