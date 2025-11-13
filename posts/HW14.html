@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>HW14
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="线性映射巩固练习">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
+<link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
+<link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW14">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/MATH1205H-04-HW/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/MATH1205H-04-HW";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main class="container">
+  <!-- Main Content Column -->
+  <article class="content-column">
+    <div class="center">
+      <h1>HW14</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        November 13, 2025
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="线性映射巩固练习">线性映射巩固练习</h2>
+
+<h3 id="一个构造线性无关组的技巧">一个构造线性无关组的技巧</h3>
+
+<div class="theorem">
+  <p>$\det((x_i^j)_{n \times n}) = \prod_{1 \leq i < j \leq n}(x_j - x_i)$.</p>
+</div>
+
+<div class="corollary">
+  <p>给定 $\mathbb F^n$. 对任意 $x \in \mathbb F$, 记 $v_x := (1,x,x^2,\ldots ,x^{n-1})$. 若 $x_1, x_2, \ldots, x_n$ 两两互不相等时, 则向量组 $\{v_{x_1}, v_{x_2}, \ldots, v_{x_n}\}$ 线性无关.</p>
+</div>
+
+<div class="example">
+  <p>假定 $\mathbb F$ 是数域. 任意给定有限个真子空间 $\{U_k \subsetneq \mathbb F^n \mid 1 \leq k \leq m\}$, 则 $\bigcup_{1 \leq k \leq m} U_k \neq \mathbb F^n$. 实际上, $(\mathbb F^n \setminus \bigcup_{1 \leq k \leq m} U_k)$ 中包含了一组基.</p>
+  <div class="proof">
+    <p>$\{v_x \mid x \in \mathbb F\}$ 中任意 $n$ 个不同的向量都是基. 因此, 每个 $U_k$ 包含 $\{v_x \mid x \in \mathbb F\}$ 中至多 $n-1$ 个向量. 由于 $\mathbb F$ 是无限集, 故 $\bigcup_{1 \leq k \leq m} U_k$ 也只能包含 $\{v_x \mid x \in \mathbb F\}$ 中有限个向量. 往后验证容易.</p>
+  </div>
+</div>
+
+<div class="definition">
+  <p>(函数空间). 所有 $\mathbb R$ 到 $\mathbb R$ 的映射构成一个线性空间, 记作 $\mathbb R^{\mathbb R}$. 其加法与数乘定义如下:</p>
+  <ul>
+    <li>$(f+g) : \mathbb R \to \mathbb R,\quad x \mapsto f(x) + g(x)$;</li>
+    <li>$(\alpha f) : \mathbb R \to \mathbb R,\quad x \mapsto \alpha \cdot f(x)$.</li>
+  </ul>
+</div>
+
+<div class="example">
+  <p>$\{e^x, e^{2x}, e^{3x},\ldots\}$ 是 $\mathbb R^{\mathbb R}$ 中的线性无关组.</p>
+  <div class="proof">
+    <p>任意取定线性组合式 $\alpha_1 e^x + \alpha_2 e^{2x} + \cdots + \alpha_n e^{nx} = 0$ (注意: 线性组合是有限和). 代入 $x = 1,2,3,4,\ldots$, 得到关于 $\alpha$ 的线性方程组</p>
+    <p>$$\begin{equation}
+\begin{pmatrix}
+e^1 & e^2 & e^3 & \cdots & e^n \\
+e^2 & e^4 & e^6 & \cdots & e^{2n} \\
+e^3 & e^6 & e^9 & \cdots & e^{3n} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+e^n & e^{2n} & e^{3n} & \cdots & e^{n^2}
+\end{pmatrix}
+\begin{pmatrix}
+\alpha_1 \\
+\alpha_2 \\
+\alpha_3 \\
+\vdots \\
+\alpha_n
+\end{pmatrix}
+= 0.
+\end{equation}$$</p>
+    <p>左侧矩阵可逆, 故 $\alpha_1 = \alpha_2 = \cdots = \alpha_n = 0$. 证毕.</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>请使用高中知识, 求导, 或是特殊值代入等技巧, 证明以下是 $\mathbb R^{\mathbb R}$ 中的线性无关组.</p>
+  <ol>
+    <li>$\{1^x,2^x,3^x,\dots\}$;</li>
+    <li>$\{\sin x, \sin 2x, \sin 3x, \dots\}$;</li>
+    <li>$\{\tan x, \tan 2x, \tan 3x, \dots\}$;</li>
+    <li>尝试证明或否定: 对任意 $n$, $\{\sin \frac{\pi}{2n},\sin \frac{2\pi}{2n},\dots,\sin \frac{(n-1)\pi}{2n}\}$ 是否是 $\mathbb Q$-线性无关的?</li>
+  </ol>
+</div>
+
+<h3 id="线性映射的定义">线性映射的定义</h3>
+
+<div class="definition">
+  <p>(线性映射). 称映射 $f: \mathbb F^n \to \mathbb F^n,\quad x \mapsto f(x)$ 是一个线性映射, 若 $f$ 满足如下规则:</p>
+  <ul>
+    <li>对任意 $x,y \in \mathbb F^n$, 有 $f(x+y) = f(x) + f(y)$;</li>
+    <li>对任意 $x \in \mathbb F^n$ 及 $\alpha \in \mathbb F$, 有 $f(\alpha x) = \alpha f(x)$.</li>
+  </ul>
+  <p>换言之, 线性映射是保持线性组合的映射.</p>
+</div>
+
+<p>注意: 我们不能直接称 $V$ 为线性空间, 应当称 $V$ 是域 $\mathbb F$ 上的线性空间. 同样地, 以上定义的线性映射应当称作域 $\mathbb F$ 上的线性映射. 若取定域 $\mathbb F$, 则可以简单地将 $V$ 称为线性空间, 将 $f$ 称为线性映射.</p>
+
+<div class="problem">
+  <p>判断以下是否是线性映射 (此题比较简单, 只给答案即可, 不必给出证明或反例).</p>
+  <ol>
+    <li>$\mathbb F^{m \times n} \to \mathbb F^{n \times m},\quad X \mapsto X^T$;</li>
+    <li>$\mathbb F^{m \times n} \to \mathbb F^{m \times n},\quad X \mapsto ref(X)$;</li>
+    <li>$\mathbb F^{n \times n} \to \mathbb F^{n \times n},\quad X \mapsto X^2$;</li>
+    <li>$\mathbb F^{n \times n} \to \mathbb F,\quad X \mapsto \det(X)$, 也就是取行列式;</li>
+    <li>$\mathbb F^{n \times n} \to \mathbb F,\quad (x_{i,j})_{1 \leq i,j \leq n} \mapsto \sum_{i=1}^n x_{i,i}$;</li>
+    <li>$\mathbb F^{m \times n} \to \mathbb F^{p \times q},\quad X \mapsto AXB$ 其中 $A\in \mathbb F^{p \times m}$ 与 $B\in \mathbb F^{n \times q}$ 都是固定的矩阵;</li>
+    <li>若 $f:U \to V$ 与 $g:V \to U$ 是线性映射, 试判断 $g \circ f$ 是否是线性映射;</li>
+    <li>若 $f:U \to V$ 与 $g:U \to V$ 是线性映射, 试判断 $f + g$ 是否是线性映射;</li>
+    <li>若 $f:U \to V$ 是线性映射, $\alpha \in \mathbb F$ 是给定的数, 试判断 $\alpha f$ 是否是线性映射;</li>
+    <li>判断 $\mathbb C \to \mathbb C,\quad z \mapsto \overline z$ 是否是 $\mathbb Q$-线性映射? 是否是 $\mathbb R$-线性映射? 是否是 $\mathbb C$-线性映射?</li>
+  </ol>
+</div>
+
+<h3 id="线性映射的性质">线性映射的性质</h3>
+
+<div class="problem">
+  <p>若向量组 $S$ 满足<a href="HW11#基的定义">P1-HW11</a>中的性质一, 则称之线性生成组; 若向量组 $S$ 满足<a href="HW11#基的定义">P1-HW11</a>中的性质二, 则称之线性无关组. 给定线性映射 $f: U \to V$, 试判断以下论述 (此题比较简单, 只给答案即可, 不必给出证明或反例).</p>
+  <ol>
+    <li>若 $f$ 是单射, 则任意线性无关组的像仍是线性无关组;</li>
+    <li>上一问的逆命题;</li>
+    <li>若 $f$ 是单射, 则任意线性生成组的像仍是线性生成组;</li>
+    <li>上一问的逆命题;</li>
+    <li>若 $f$ 是满射, 则任意线性无关组的像仍是线性无关组;</li>
+    <li>上一问的逆命题;</li>
+    <li>若 $f$ 是满射, 则任意线性无关组的像仍是线性生成组;</li>
+    <li>上一问的逆命题;</li>
+    <li>若 $\{f(x_i)\}_{i \in I}$ 是线性无关组, 则 $\{x_i\}_{i \in I}$ 也是线性无关组;</li>
+    <li>若 $\{f(x_i)\}_{i \in I}$ 是线性生成组, 则 $\{x_i\}_{i \in I}$ 也是线性生成组;</li>
+    <li>若 $\{x_i\}_{i \in I}$ 是线性无关组, 则 $\{f(x_i)\}_{i \in I}$ 也是线性无关组;</li>
+    <li>若 $\{x_i\}_{i \in I}$ 是线性生成组, 则 $\{f(x_i)\}_{i \in I}$ 也是线性生成组;</li>
+  </ol>
+</div>
+
+<h3 id="基变换">基变换</h3>
+
+<div class="example">
+  <p>为描述一个 (非空) 集合间的映射 $f:U \to V$, 我们需要知道所有 $u \in U$ 的像. 若 $f$ 是一个线性映射, 则 $\alpha \cdot u$ 的像由 $u$ 的像唯一确定, $u_1 + u_2$ 的像由 $u_1, u_2$ 的像唯一确定. <br /> 假定 $U$ 中所有向量可以被某个子集 $S \subseteq U$ 线性表出, 则线性映射 $f$ 由映射 $$\begin{equation}
+S \to V,\quad s \mapsto f(s)
+\end{equation}$$ 唯一确定.</p>
+</div>
+
+<p>条件允许时, 可以取 $S$ 为 $U$ 的一组基. 得如下定理.</p>
+
+<div class="theorem">
+  <p>给定线性空间 $U$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 若 $f: U \to V$ 是一个线性映射, 则 $f$ 由 $f(u_1), f(u_2), \dots, f(u_n)$ 唯一确定.</p>
+  <ul>
+    <li>例如, 对 $u \in U$, 我们通过如下方式求解 $f(u)$. 由基的定义, 我们将 $u$ 唯一地表示为 $u = \alpha_1 u_1 + \alpha_2 u_2 + \cdots + \alpha_n u_n$, 则 $f(u) = \alpha_1 f(u_1) + \alpha_2 f(u_2) + \cdots + \alpha_n f(u_n)$.</li>
+  </ul>
+</div>
+
+<div class="example">
+  <p>给定线性空间 $U = \mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$, 以及线性空间 $V = \mathbb F^m$ 的一组基 $\{v_1, v_2, \dots, v_m\}$. 若 $f: U \to V$ 是一个线性映射, 则所有 $f(u_i)$ 都能唯一写作 $\{v_1, v_2, \dots, v_m\}$ 的线性组合. 此时有等式:</p>
+  <p>$$\begin{equation}
+(f(u_1) \mid f(u_2) \mid \dots \mid f(u_n)) = (v_1 \mid v_2 \mid \dots \mid v_m) \cdot A.
+\end{equation}$$</p>
+  <p>此处, $A$ 是一个 $m \times n$ 矩阵. 对任意 $1\leq i \leq n$, $f(u_i)$ 是 $\{v_1, v_2, \dots, v_m\}$ 的线性组合, 其线性组合系数正是矩阵 $A$ 的第 $i$ 列.</p>
+</div>
+
+<div class="theorem">
+  <p>给定线性空间 $\mathbb F^n$ 的一组基, 不妨以列向量的形式排列作可逆方阵 $U:= (u_1\mid u_2\mid \dots\mid u_n)$. 给定线性空间 $\mathbb F^m$ 的一组基, 不妨以列向量的形式排列作可逆方阵 $V:= (v_1\mid v_2\mid \dots\mid v_m)$. 则</p>
+  <p>一个 $\mathbb F^n \to \mathbb F^m$ 类型的线性映射对应一个 $m \times n$ 规格的矩阵 $A$. 这个对应描述作如下双射:</p>
+  <p>$$\begin{equation}
+\Phi _{U,V} : \begin{bmatrix}
+\text{全体} \mathbb F^n \to \mathbb F^m \text{ 类型的线性映射} & \to & \mathbb F^{m \times n} \\
+f & \mapsto & V^{-1} \cdot (f(u_1) \mid f(u_2) \mid \dots \mid f(u_n))
+\end{bmatrix}.
+\end{equation}$$</p>
+</div>
+
+<div class="problem">
+  <p>如以上定理所示, 我们给定线性空间 $\mathbb F^n$ 与 $\mathbb F^m$ 的基, 分别为 $U$ 与 $V$ 的列向量. 此时有双射 $\Phi_{U,V}$, 它将一个线性映射 $f: \mathbb F^n \to \mathbb F^m$ 映至一个矩阵 $\Phi_{U,V}(f) \in \mathbb F^{m \times n}$. 请简要回答以下问题.</p>
+  <ol>
+    <li>我们通过右乘可逆矩阵的方式, 将 $V$ 变换为另一组基 $VQ$. 对任意线性映射 $f$, 矩阵 $\Phi_{U,V}(f)$ 与 $\Phi_{U,VQ}(f)$ 有何关联? 换言之, 若改变线性映射去向处的基, 则线性映射对应的矩阵有何变化?</li>
+    <li>我们通过右乘可逆矩阵的方式, 将 $U$ 变换为另一组基 $PU$. 对任意线性映射 $f$, 矩阵 $\Phi_{U,V}(f)$ 与 $\Phi_{PU,V}(f)$ 有何关联? 换言之, 若改变线性映射来源处的基, 则线性映射对应的矩阵有何变化?</li>
+    <li>假定 $m=n$, $U = V$. 我们通过右乘可逆矩阵的方式, 将 $U$ 变换为另一组基 $PU$. 对任意线性映射 $f$, 矩阵 $\Phi_{U,U}(f)$ 与 $\Phi_{PU,PU}(f)$ 有何关联? 换言之, 若同步改变线性映射的来源处与去向处的基, 则线性映射对应的矩阵有何变化?</li>
+  </ol>
+</div>
+
+<h2 id="基变换的例题">基变换的例题</h2>
+
+<p>我们给出一些经典例子.</p>
+
+<div class="example">
+  <p>若 $A \in \mathbb F^{n \times n}$ 满足 $A^n = O$ 且 $A^{n-1}\neq O$, 则存在可逆矩阵 $P$ 使得</p>
+  <p>$$\begin{equation}
+P^{-1}AP = \begin{pmatrix}
+0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & 1 \\
+0 & 0 & 0 & \cdots & 0
+\end{pmatrix}.
+\end{equation}$$</p>
+  <div class="proof">
+    <p>我们定义线性映射 $f : \mathbb F^n \to \mathbb F^n$, 使得 $f(e_i)$ 是 $A$ 的第 $i$ 列. 在标准坐标基下,</p>
+    <p>$$\begin{equation}
+(f(e_1) \mid f(e_2) \mid \dots \mid f(e_n)) = (e_1 \mid e_2 \mid \dots \mid e_n) \cdot A.
+\end{equation}$$</p>
+    <p>由题设, 映射 $f$ 复合 $n$ 次后变为零映射, 复合 $n-1$ 次后非零. 我们记 $f^{(k)}$ 为 $f$ 的 $k$ 次复合, 此时有一列线性子空间</p>
+    <p>$$\begin{equation}
+0 = f^{(n)}(\mathbb F^n) \subseteq f^{(n-1)}(\mathbb F^n) \subseteq f^{(n-2)}(\mathbb F^n) \subseteq \cdots \subseteq f(\mathbb F^n) \subseteq \mathbb F^n.
+\end{equation}$$</p>
+    <p>子空间 $f^{(k)}(\mathbb F^n)$ 的维数就是 $A^k$ 的列秩. 由秩不等式 $r(XYZ) + r(Y) \geq r(XY) + r(YZ)$, 我们得到</p>
+    <p>$$\begin{equation}
+\dim f^{(k-1)}(\mathbb F^n) - \dim f^{(k)}(\mathbb F^n) \geq  \dim f^{(k)}(\mathbb F^n) - \dim f^{(k+1)}(\mathbb F^n).
+\end{equation}$$</p>
+    <p>从而只能有 $\dim f^{(k-1)}(\mathbb F^n) - \dim f^{(k)}(\mathbb F^n) = 1$. 我们构造 $\mathbb F^n$ 的另一组基, 进而构造 $P$ 矩阵. 在编号上, 我们使用上标表示向量所属的子空间层次, 也就是 $w^{(k)} \in f^{(k)}(\mathbb F^n)$.</p>
+    <ul>
+      <li>记 $u_1^{(n-1)}$ 是一维空间 $f^{(n-1)}(\mathbb F^n)$ 的基向量.</li>
+      <li>存在 $u_1^{(n-2)} \in f^{(n-2)}(\mathbb F^n)$ 使得 $f(u_1^{(n-2)}) = u_1^{(n-1)}$. 由于 $f^{(n-2)}(\mathbb F^n)$ 是二维空间, 我们将 $u_1^{(n-2)}$ 扩展成基 $\{u_1^{(n-2)}, u_2^{(n-2)}\}$.</li>
+      <li>存在 $u_i^{(n-3)} \in f^{(n-3)}(\mathbb F^n)$ 使得 $f(u_i^{(n-3)}) = u_i^{(n-2)}$. 由于 $f^{(n-3)}(\mathbb F^n)$ 是三维空间, 我们将 $u_1^{(n-3)}$ 扩展成基 $\{u_1^{(n-3)}, u_2^{(n-3)}, u_3^{(n-3)}\}$.</li>
+      <li>依此类推, 直到 $f^{(0)}(\mathbb F^n) = \mathbb F^n$. 最终我们得到 $\mathbb F^n$ 的一组基 $\{u_1^{(0)}, u_2^{(0)}, \dots, u_n^{(0)}\}$. 简单地记作 $\{u_1, u_2, \dots, u_n\}$.</li>
+    </ul>
+    <p>依照构造, 我们发现</p>
+    <p>$$\begin{equation}
+(f(u_1) \mid f(u_2) \mid \dots \mid f(u_n)) = (u_1 \mid u_2 \mid \dots \mid u_n) \cdot \begin{pmatrix}
+0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & 1 \\
+0 & 0 & 0 & \cdots & 0
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>记 $P := (u_1 \mid u_2 \mid \dots \mid u_n)$, 回代至下式即可:</p>
+    <p>$$\begin{equation}
+(f(e_1) \mid f(e_2) \mid \dots \mid f(e_n)) = (e_1 \mid e_2 \mid \dots \mid e_n) \cdot A.
+\end{equation}$$</p>
+  </div>
+</div>
+
+<p>之后的例题省略部分细节, 可仿照上一问补全.</p>
+
+<div class="example">
+  <p>矩阵 $A$ 存在相抵标准型 $A = P \begin{pmatrix}I_r & O \\ O & O \end{pmatrix} Q$, 其中 $P, Q$ 均为可逆矩阵, $r = r(A)$.</p>
+  <div class="proof">
+    <p>假定 $A \in \mathbb F^{m \times n}$. 此时存在线性映射 $f: \mathbb F^n \to \mathbb F^m$, 其在某组基下的矩阵表示为 $A$. 也就是</p>
+    <p>$$\begin{equation}
+(f(x_1) \mid f(x_2) \mid \dots \mid f(x_n)) = (y_1 \mid y_2 \mid \dots \mid y_m) \cdot A.
+\end{equation}$$</p>
+    <p>取 $f(\mathbb F^n)$ 的一组基 $\{v_1, v_2, \dots, v_r\}$, 并将其扩展成 $\mathbb F^m$ 的一组基 $\{v_1, v_2, \dots, v_m\}$. 取 $\{v_1, v_2, \dots, v_r\}$ 的任意一组原像 (这是线性无关组) $\{u_1, u_2, \dots, u_r\}$, 并将其扩展成 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 在这两组基下,</p>
+    <p>$$\begin{equation}
+(f(u_1) \mid f(u_2) \mid \dots \mid f(u_n)) = (v_1 \mid v_2 \mid \dots \mid v_m) \cdot \begin{pmatrix}
+I_r & O \\ O & O
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>由基变换, 存在可逆矩阵 $P, Q$ 使得</p>
+    <ul>
+      <li>$(u_1 \mid u_2 \mid \dots \mid u_n) = (x_1 \mid x_2 \mid \dots \mid x_n) \cdot Q^{-1}$;</li>
+      <li>$(v_1 \mid v_2 \mid \dots \mid v_m) = (y_1 \mid y_2 \mid \dots \mid y_m) \cdot P$.</li>
+    </ul>
+    <p>得证.</p>
+  </div>
+</div>
+
+<div class="example">
+  <p>选定 $(m \times n)$ 规格的矩阵. 若 $r(A+B) = r(A) + r(B)$, 则存在可逆矩阵 $P, Q$ 使得$$\begin{equation}
+A = P \begin{pmatrix}I_{r(A)} & O & O \\ O & O & O \\ O & O & O \end{pmatrix} Q,\quad B = P \begin{pmatrix}O & O & O \\ O & I_{r(B)} & O \\ O & O & O \end{pmatrix} Q.
+\end{equation}$$</p>
+  <div class="proof">
+    <p>假定标准坐标 $\{e_i\}$ 与 $\{f_j\}$. 定义映射 $\varphi_A, \varphi_B : \mathbb F^n \to \mathbb F^m$ 如下:</p>
+    <p>$$\begin{equation}
+(\varphi_A(e_1) \mid \varphi_A(e_2) \mid \dots \mid \varphi_A(e_n)) = (f_1 \mid f_2 \mid \dots \mid f_m) \cdot A,
+\end{equation}$$</p>
+    <p>$$\begin{equation}
+(\varphi_B(e_1) \mid \varphi_B(e_2) \mid \dots \mid \varphi_B(e_n)) = (f_1 \mid f_2 \mid \dots \mid f_m) \cdot B.
+\end{equation}$$</p>
+    <p>由题设, $r(A+B) \leq r(A+B \mid B) \leq r(A\mid B) \leq r(A)+r(B)$ 取等号. 因此</p>
+    <p>$$\begin{equation}
+r(cef(A + B)) = r(cef(A) \mid cef(B)) = r(cef(A)) + r(cef (B))
+\end{equation}$$</p>
+    <p>这说明 $C(A) \oplus C(B) = C(A + B)$, 即 $\varphi_{A}(\mathbb F^n) \oplus \varphi_{B}(\mathbb F^n) = \varphi_{A+B}(\mathbb F^n)$. 由直和, 取 $\varphi_{A}(\mathbb F^n)$ 的一组基 $\{v_1, v_2, \dots, v_{r(A)}\}$ 与 $\varphi_{B}(\mathbb F^n)$ 的一组基 $\{v_{r(A)+1}, v_{r(A)+2}, \dots, v_{r(A)+r(B)}\}$. 最后, 将其扩展成 $\mathbb F^m$ 的一组基 $\{v_1, v_2, \dots, v_m\}$. 取 $\{v_1, v_2, \dots, v_{r(A)}\}$ 的任意一组原像 (这是线性无关组) $\{u_1, u_2, \dots, u_{r(A)}\}$, 取 $\{v_{r(A)+1}, v_{r(A)+2}, \dots, v_{r(A)+r(B)}\}$ 的任意一组原像 (这是线性无关组) $\{u_{r(A)+1}, u_{r(A)+2}, \dots, u_{r(A)+r(B)}\}$, 并将其扩展成 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 在这两组基下,</p>
+    <p>$$\begin{equation}
+(\varphi_A(u_1) \mid \varphi_A(u_2) \mid \dots \mid \varphi_A(u_n)) = (v_1 \mid v_2 \mid \dots \mid v_m) \cdot \begin{pmatrix}
+I_{r(A)} & O & O \\ O & O & O \\ O & O & O
+\end{pmatrix},
+\end{equation}$$ $$\begin{equation}
+(\varphi_B(u_1) \mid \varphi_B(u_2) \mid \dots \mid \varphi_B(u_n)) = (v_1 \mid v_2 \mid \dots \mid v_m) \cdot \begin{pmatrix}
+O & O & O \\ O & I_{r(B)} & O \\ O & O & O
+\end{pmatrix}.
+\end{equation}$$</p>
+  </div>
+</div>
+
+<div class="example">
+  <p>若 $A^2 = O$, 则存在可逆矩阵 $P$ 使得</p>
+  <p>$$\begin{equation}
+P^{-1}AP = \begin{pmatrix}
+O&I&O\\
+O&O&O\\ O&O&O
+\end{pmatrix}
+\end{equation}$$</p>
+  <div class="proof">
+    <p>存在映射 $f : \mathbb F^n \to \mathbb F^n$ 使得 $f$ 在标准基下的矩阵表示为 $A$. 由题设, 映射 $f \circ f = 0$. 取定 $f(\mathbb F^n)$ 的一组基 $\{u_1, u_2, \dots, u_k\}$, 任取关于 $f$ 原像 $\{u_{k+1}, u_{k+2}, \dots, u_{k+k}\}$.</p>
+    <ul>
+      <li>(简要说明 $\{u_1, u_2, \dots, u_{2k}\}$ 是线性无关组). 若有线性组合式 $\alpha_1 u_1 + \alpha_2 u_2 + \cdots + \alpha_{2k} u_{2k} = 0$, 作用 $f$ 后得到 $\alpha_1 f(u_1) + \alpha_2 f(u_2) + \cdots + \alpha_k f(u_k) = 0$. 由 $\{u_1, u_2, \dots, u_k\}$ 的线性无关性, 得 $\alpha_1 = \alpha_2 = \cdots = \alpha_k = 0$. 回代至原式, 由 $\{u_{k+1}, u_{k+2}, \dots, u_{2k}\}$ 的线性无关性, 得 $\alpha_{k+1} = \alpha_{k+2} = \cdots = \alpha_{2k} = 0$.</li>
+    </ul>
+    <p>将 $\{u_1, u_2, \dots, u_{2k}\}$ 扩展成 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 在这组基下, 映射 $f$ 的矩阵表示为所需形式.</p>
+  </div>
+</div>
+
+<div class="example">
+  <p>若 $A \in \mathbb F^{n \times n}$ 幂零, 则 $A$ 具有 Jordan 标准型. 这无关域的选择.</p>
+  <div class="proof">
+    <p>存在映射 $f : \mathbb F^n \to \mathbb F^n$ 使得 $f$ 在标准基下的矩阵表示为 $A$. 由题设, 映射 $f$ 复合 $n$ 次后变为零映射. 我们记 $f^{(k)}$ 为 $f$ 的 $k$ 次复合, 此时有一列线性子空间</p>
+    <p>$$\begin{equation}
+0 = f^{(n)}(\mathbb F^n) \subseteq f^{(n-1)}(\mathbb F^n) \subseteq f^{(n-2)}(\mathbb F^n) \subseteq \cdots \subseteq f(\mathbb F^n) \subseteq \mathbb F^n.
+\end{equation}$$</p>
+    <p>取最大的 $m$ 使得 $f^{(m)}(\mathbb F^n) \neq 0$. 取 $f^{(m)}(\mathbb F^n) \neq 0$ 的一组基 $\{u_1^{(m)}, \dots, u_{k_m}^{(m)}\}$, 任取其原像 $\{u_1^{(m-1)}, \dots, u_{k_m}^{(m-1)}\}$, 并将其扩展成 $f^{(m-1)}(\mathbb F^n)$ 的一组基 $\{u_1^{(m-1)}, \dots, u_{k_{m-1}}^{(m-1)}\}$. 依此类推, 直到 $f^{(0)}(\mathbb F^n) = \mathbb F^n$. 最终我们得到 $\mathbb F^n$ 的一组基 $\{u_1^{(0)}, u_2^{(0)}, \dots, u_n^{(0)}\}$. 简单地记作 $\{u_1, u_2, \dots, u_n\}$.</p>
+    <ul>
+      <li>在这组基下, 映射 $f$ 的矩阵表示为 Jordan 标准型.</li>
+      <li>称 $u_i \Rightarrow u_j$, 若存在 $k$ 使得 $f^{}(u_i^{(k)}) = u_j^{(k+1)}$. 这给出以 $\{u_i\}$ 为点, 以 $\Rightarrow$ 为边的定向图. 该图是若干定向链的不交并, 每条链对应 Jordan 标准型中的一个 Jordan 块.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="example">
+  <p>对任意矩阵 $A \in \mathbb F^{n \times n}$, 存在可逆矩阵 $P$ 使得</p>
+  <p>$$\begin{equation}
+P^{-1}AP = \begin{pmatrix}
+N&O\\ O&D
+\end{pmatrix},
+\end{equation}$$</p>
+  <p>其中 $N$ 是幂零矩阵, $D$ 是可逆矩阵. 这无关域的选择.</p>
+  <div class="proof">
+    <p>存在映射 $f : \mathbb F^n \to \mathbb F^n$ 使得 $f$ 在标准基下的矩阵表示为 $A$. 定义空间</p>
+    <ul>
+      <li>$V_N:= (f^{-1})^{(n)}(0)$, 实际上, $(f^{-1})^{(n)}(0) = (f^{-1})^{(n+1)}(0) = \cdots$;</li>
+      <li>$V_D:= f^{(n)}(V)$, 实际上, $f^{(n)}(V) = f^{(n+1)}(V) = \cdots$.</li>
+    </ul>
+    <p>若能证明 $\mathbb F^n = V_N \oplus N_D$, 则取 $V_N$ 的一组基 $\{u_1, u_2, \dots, u_k\}$ 与 $V_D$ 的一组基 $\{u_{k+1}, u_{k+2}, \dots, u_n\}$ 组成 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 在这组基下, 映射 $f$ 的矩阵表示为所需形式.</p>
+    <ul>
+      <li>(证明 $V_N \cap V_D = 0$). 取定 $x \in V_N \cap V_D$. 由 $x \in V_D$, 则存在 $y$ 使得 $x = f^{(n)}(y)$. 由 $x \in V_N$, 得 $f^{(2n)}(y) = f^{(n)}(x) = 0$. 由 $(f^{-1})^{(n)}(0) = (f^{-1})^{(2n)}(0)$, 得 $f^{(n)} (y) = 0$. 从而 $x = 0$.</li>
+      <li>(证明 $\mathbb F^n = V_N + V_D$). 取定 $x \in \mathbb F^n$. 由 $f^{(2n)}(\mathbb F^n) = f^{(n)}(\mathbb F^n)$, 则存在 $y$ 使得 $f^{(2n)}(y) = f^{(n)}(x)$. 直接地, $(x - f^{(n)}(y)) \in V_N$. 从而 $x = (x - f^{(n)}(y)) + f^{(n)}(y) \in V_N + V_D$.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="example">
+  <p>给定矩阵 $A \in \mathbb F^{n \times n}$. 假定存在 $n$ 个不同的数 $\lambda_1, \lambda_2, \dots, \lambda_n \in \mathbb F$ 与非零向量 $x_1, x_2, \dots , x_n \in \mathbb F^n$, 使得对任意 $1 \leq i \leq n$ 都有 $Ax_i = \lambda_i x_i$ 对任意 $1 \leq i \leq n$. 则存在可逆矩阵 $P$ 使得</p>
+  <p>$$\begin{equation}
+P^{-1}AP = \begin{pmatrix}
+\lambda_1 & 0 & \cdots & 0 \\
+0 & \lambda_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \lambda_n
+\end{pmatrix}.
+\end{equation}$$</p>
+  <div class="proof">
+    <p>将左乘 $A$ 视作线性映射, 则</p>
+    <p>$$\begin{equation}
+(Ax_1 \mid Ax_2 \mid \dots \mid Ax_n) = (x_1 \mid x_2 \mid \dots \mid x_n) \cdot \begin{pmatrix}
+\lambda_1 & 0 & \cdots & 0 \\
+0 & \lambda_2 & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \lambda_n
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>只需证明 $\{x_1, x_2, \dots , x_n\}$ 是线性空间 $\mathbb F^n$ 的一组基即可, 即证线性无关.</p>
+  </div>
+</div>
+
+  </article>
+
+  <!-- New Sidebar Column -->
+  <aside class="sidebar-column">
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tocLinks = document.querySelectorAll('.numbered-toc a[href^="#"]');
+  const sections = Array.from(tocLinks).map(link => {
+    return document.querySelector(link.getAttribute('href'));
+  });
+  const headerOffset = 80; // adjust for fixed header
+
+  function onScroll() {
+    const scrollPos = window.scrollY + headerOffset + 5; // small buffer
+    let currentSectionIndex = sections.length - 1;
+
+    for (let i = 0; i < sections.length; i++) {
+      if (sections[i].offsetTop > scrollPos) {
+        currentSectionIndex = i - 1;
+        break;
+      }
+    }
+
+    tocLinks.forEach(link => link.classList.remove('active'));
+    if (currentSectionIndex >= 0) {
+      tocLinks[currentSectionIndex].classList.add('active');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll);
+  onScroll(); // initialize on page load
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tocLinks = document.querySelectorAll('.numbered-toc a[href^="#"]');
+  const headerOffset = 80; // Adjust to your fixed header height if any
+
+  tocLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (!targetElement) return;
+
+      // Calculate scroll position with header offset
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      // Smooth scroll to position
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+
+      // Update URL after scrolling (slightly delayed)
+      setTimeout(() => {
+        history.pushState(null, null, targetId);
+      }, 600);
+    });
+  });
+});
+</script>
+
+<div class="sidebar-column">
+
+  <div class="sidebar-section">
+    <h3>Catalog</h3>
+    
+
+
+
+
+
+
+
+<nav class="numbered-toc">
+  
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-2">
+      <a href="#线性映射巩固练习">
+        <span class="toc-number">1.</span>
+        <span class="toc-title">线性映射巩固练习</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#一个构造线性无关组的技巧">
+        <span class="toc-number">1.1.</span>
+        <span class="toc-title">一个构造线性无关组的技巧</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#线性映射的定义">
+        <span class="toc-number">1.2.</span>
+        <span class="toc-title">线性映射的定义</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#线性映射的性质">
+        <span class="toc-number">1.3.</span>
+        <span class="toc-title">线性映射的性质</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#基变换">
+        <span class="toc-number">1.4.</span>
+        <span class="toc-title">基变换</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-2">
+      <a href="#基变换的例题">
+        <span class="toc-number">2.</span>
+        <span class="toc-title">基变换的例题</span>
+      </a>
+    </div>
+  
+</nav>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>Links</h3>
+    <a href="/MATH1205H-04-HW/">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="home-icon">
+  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/></svg>
+    Home Page;
+    </a>
+    <p></p>
+    <a href="#" onclick="window.print(); return false;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+        <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+      </svg>
+      Print Me;
+    </a>
+    <p></p>
+    <a href="/MATH1205H-04-HW/posts/Collection_of_Websites">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="tools-icon">
+  <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"/>
+</svg>
+      Useful Tools;
+    </a>
+    <p></p>
+    <a href="https://github.com/zhangchenchengSJTU/jekyll-latex">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="repo-icon">
+  <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 0 1 1-1h8zM5 12.25v3.25a.25.25 0 0 0 .4.2l1.45-1.087a.25.25 0 0 1 .3 0L8.6 15.7a.25.25 0 0 0 .4-.2v-3.25a.25.25 0 0 0-.25-.25h-3.5a.25.25 0 0 0-.25.25z"/>
+</svg>
+      Repository;
+    </a>
+    <p></p>
+    <a href="https://www.zotero.org/groups/6107450/zcclib/library">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="repo-icon">
+  <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+</svg>
+    File Folder.
+    </a>
+  </p>
+  </div>
+
+</div>
+  <!-- Sidebar content -->
+  </aside>
+
+  <!-- Navigation (below both columns) -->
+  <div class="page-navigation">
+    
+    <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
+    
+      <span>&middot;</span>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW14-solu" title="PREV: HW14-solu">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>
