@@ -168,6 +168,24 @@ f &amp; \mapsto &amp; V^{-1} \cdot (f(u_1) \mid f(u_2) \mid \dots \mid f(u_n))
 &lt;p&gt;我们给出一些经典例子.&lt;/p&gt;
 
 &lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;我们解释矩阵语言与映射语言的转化. 以下两条表述等价.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;给定矩阵 $A,B \in \mathbb F^{n \times n}$, 存在可逆矩阵 $P$ 使得 $B = P^{-1}AP$.&lt;/li&gt;
+    &lt;li&gt;定义线性映射 $f : \mathbb F^n \to \mathbb F^n$ 使得它在某组基下的矩阵表示是 $A$. 以列向量的形式将这组基记作矩阵 $U$, 则 $f$ 在基 $UP^{-1}$ 下的矩阵表示是 $B$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;作为推论, 以下两条表述等价.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;给定矩阵 $A$, 存在可逆矩阵 $P$ 使得 $P^{-1}AP = \binom{X \ Y}{O \ Z}$.&lt;/li&gt;
+    &lt;li&gt;定义线性映射 $f : \mathbb F^n \to \mathbb F^n$ 使得它在某组基下的矩阵表示是 $A$. 则存在子空间 $U \subseteq \mathbb F^n$ 使得 $f(U) \subseteq U$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;以下两条表述等价.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;给定矩阵 $A$, 存在可逆矩阵 $P$ 使得 $P^{-1}AP = \binom{X \ O}{O \ Y}$.&lt;/li&gt;
+    &lt;li&gt;定义线性映射 $f : \mathbb F^n \to \mathbb F^n$ 使得它在某组基下的矩阵表示是 $A$. 则存在子空间 $U,W \subseteq \mathbb F^n$ 使得 $\mathbb F^n = U \oplus W$, 且 $f(U) \subseteq U$, $f(W) \subseteq W$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;若 $A \in \mathbb F^{n \times n}$ 满足 $A^n = O$ 且 $A^{n-1}\neq O$, 则存在可逆矩阵 $P$ 使得&lt;/p&gt;
   &lt;p&gt;$$\begin{equation}
 P^{-1}AP = \begin{pmatrix}
