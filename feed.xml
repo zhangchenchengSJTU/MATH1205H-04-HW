@@ -191,16 +191,15 @@ P^{-1}AP = \begin{pmatrix}
     &lt;p&gt;$$\begin{equation}
 \dim f^{(k-1)}(\mathbb F^n) - \dim f^{(k)}(\mathbb F^n) \geq  \dim f^{(k)}(\mathbb F^n) - \dim f^{(k+1)}(\mathbb F^n).
 \end{equation}$$&lt;/p&gt;
-    &lt;p&gt;从而只能有 $\dim f^{(k-1)}(\mathbb F^n) - \dim f^{(k)}(\mathbb F^n) = 1$. 我们构造 $\mathbb F^n$ 的另一组基, 进而构造 $P$ 矩阵. 在编号上, 我们使用上标表示向量所属的子空间层次, 也就是 $w^{(k)} \in f^{(k)}(\mathbb F^n)$.&lt;/p&gt;
+    &lt;p&gt;从而只能有 $\dim f^{(k-1)}(\mathbb F^n) - \dim f^{(k)}(\mathbb F^n) = 1$. 我们构造 $\mathbb F^n$ 的另一组基, 进而构造 $P$ 矩阵.&lt;/p&gt;
     &lt;ul&gt;
-      &lt;li&gt;记 $u_1^{(n-1)}$ 是一维空间 $f^{(n-1)}(\mathbb F^n)$ 的基向量.&lt;/li&gt;
-      &lt;li&gt;存在 $u_1^{(n-2)} \in f^{(n-2)}(\mathbb F^n)$ 使得 $f(u_1^{(n-2)}) = u_1^{(n-1)}$. 由于 $f^{(n-2)}(\mathbb F^n)$ 是二维空间, 我们将 $u_1^{(n-2)}$ 扩展成基 $\{u_1^{(n-2)}, u_2^{(n-2)}\}$.&lt;/li&gt;
-      &lt;li&gt;存在 $u_i^{(n-3)} \in f^{(n-3)}(\mathbb F^n)$ 使得 $f(u_i^{(n-3)}) = u_i^{(n-2)}$. 由于 $f^{(n-3)}(\mathbb F^n)$ 是三维空间, 我们将 $u_1^{(n-3)}$ 扩展成基 $\{u_1^{(n-3)}, u_2^{(n-3)}, u_3^{(n-3)}\}$.&lt;/li&gt;
-      &lt;li&gt;依此类推, 直到 $f^{(0)}(\mathbb F^n) = \mathbb F^n$. 最终我们得到 $\mathbb F^n$ 的一组基 $\{u_1^{(0)}, u_2^{(0)}, \dots, u_n^{(0)}\}$. 简单地记作 $\{u_1, u_2, \dots, u_n\}$.&lt;/li&gt;
+      &lt;li&gt;取非零向量 $u_n \in f^{(n-1)}(\mathbb F^n)$ 使得 $\{u_n\}$ 是 $f^{(n-1)}(\mathbb F^n)$ 的一组基.&lt;/li&gt;
+      &lt;li&gt;取 $u_{n-1} \in f^{(n-2)}(\mathbb F^n)$ 使得 $f(u_{n-1}) = u_n$. 今断言 $\{u_{n-1}, u_n\}$ 是 $f^{(n-2)}(\mathbb F^n)$ 的一组基, 即证这是线性无关组. 事实上, 若有 $\alpha_{n-1} u_{n-1} + \alpha_n u_n = 0$, 则 $f(\alpha_{n-1} u_{n-1} + \alpha_n u_n) = \alpha_{n-1} u_n = 0$, 故 $\alpha_{n-1} = 0$, 进而 $\alpha_n = 0$. 因此, $\{u_{n-1}, u_n\}$ 是 $f^{(n-2)}(\mathbb F^n)$ 的一组基.&lt;/li&gt;
+      &lt;li&gt;依此类推, 假定我们构造了 $f^{(k)}(\mathbb F^n)$ 的一组基 $\{u_{k+1},u_{k+2},\ldots, u_n\}$, 满足 $f(u_{t}) = u_{t+1}$. 则取 $u_k \in f^{(k-1)}(\mathbb F^n)$ 使得 $f(u_k) = u_{k+1}$. 同样地, 需要说明 $\{u_k, u_{k+1}, \ldots, u_n\}$ 是 $f^{(k-1)}(\mathbb F^n)$ 的一组基, 即证这是线性无关组. 事实上, 若有 $\alpha_k u_k + \alpha_{k+1} u_{k+1} + \cdots + \alpha_n u_n = 0$, 则 $f^{(n-k)}(\alpha_k u_k + \alpha_{k+1} u_{k+1} + \cdots + \alpha_n u_n) = \alpha_k u_n = 0$. 故 $\alpha_k = 0$. 由归纳假设, $\alpha_{k+1} = \cdots = \alpha_n = 0$. 因此, $\{u_k, u_{k+1}, \ldots, u_n\}$ 是 $f^{(k-1)}(\mathbb F^n)$ 的一组基.&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;p&gt;依照构造, 我们发现&lt;/p&gt;
+    &lt;p&gt;最终, 我们得到 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \ldots, u_n\}$, 满足 $f(u_i) = u_{i+1}$ (其中 $1 \leq i \leq n-1$), 且 $f(u_n) = 0$. 在这组基下,&lt;/p&gt;
     &lt;p&gt;$$\begin{equation}
-(f(u_1) \mid f(u_2) \mid \dots \mid f(u_n)) = (u_1 \mid u_2 \mid \dots \mid u_n) \cdot \begin{pmatrix}
+(f(u_n) \mid f(u_{n-1}) \mid \dots \mid f(u_1)) = (u_{n} \mid u_{n-1} \mid \dots \mid u_1) \cdot \begin{pmatrix}
 0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\
 0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 \\
 \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
@@ -208,7 +207,7 @@ P^{-1}AP = \begin{pmatrix}
 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0
 \end{pmatrix}.
 \end{equation}$$&lt;/p&gt;
-    &lt;p&gt;记 $P := (u_1 \mid u_2 \mid \dots \mid u_n)$, 回代至下式即可:&lt;/p&gt;
+    &lt;p&gt;记 $P := (u_{n} \mid u_{n-1} \mid \dots \mid u_1) $, 回代至下式即可:&lt;/p&gt;
     &lt;p&gt;$$\begin{equation}
 (f(e_1) \mid f(e_2) \mid \dots \mid f(e_n)) = (e_1 \mid e_2 \mid \dots \mid e_n) \cdot A.
 \end{equation}$$&lt;/p&gt;
@@ -292,11 +291,17 @@ O&amp;O&amp;O\\ O&amp;O&amp;O
     &lt;p&gt;$$\begin{equation}
 0 = f^{(n)}(\mathbb F^n) \subseteq f^{(n-1)}(\mathbb F^n) \subseteq f^{(n-2)}(\mathbb F^n) \subseteq \cdots \subseteq f(\mathbb F^n) \subseteq \mathbb F^n.
 \end{equation}$$&lt;/p&gt;
-    &lt;p&gt;取最大的 $m$ 使得 $f^{(m)}(\mathbb F^n) \neq 0$. 取 $f^{(m)}(\mathbb F^n) \neq 0$ 的一组基 $\{u_1^{(m)}, \dots, u_{k_m}^{(m)}\}$, 任取其原像 $\{u_1^{(m-1)}, \dots, u_{k_m}^{(m-1)}\}$, 并将其扩展成 $f^{(m-1)}(\mathbb F^n)$ 的一组基 $\{u_1^{(m-1)}, \dots, u_{k_{m-1}}^{(m-1)}\}$. 依此类推, 直到 $f^{(0)}(\mathbb F^n) = \mathbb F^n$. 最终我们得到 $\mathbb F^n$ 的一组基 $\{u_1^{(0)}, u_2^{(0)}, \dots, u_n^{(0)}\}$. 简单地记作 $\{u_1, u_2, \dots, u_n\}$.&lt;/p&gt;
+    &lt;p&gt;取最大的 $m$ 使得 $f^{(m)}(\mathbb F^n) \neq 0$. 下构造 $\mathbb F^n$ 的一组基.&lt;/p&gt;
     &lt;ul&gt;
-      &lt;li&gt;在这组基下, 映射 $f$ 的矩阵表示为 Jordan 标准型.&lt;/li&gt;
-      &lt;li&gt;称 $u_i \Rightarrow u_j$, 若存在 $k$ 使得 $f^{}(u_i^{(k)}) = u_j^{(k+1)}$. 这给出以 $\{u_i\}$ 为点, 以 $\Rightarrow$ 为边的定向图. 该图是若干定向链的不交并, 每条链对应 Jordan 标准型中的一个 Jordan 块.&lt;/li&gt;
+      &lt;li&gt;取 $f^{(m)}(\mathbb F^n)$ 的一组基, 记作集合 $\mathcal{B}_1$.&lt;/li&gt;
+      &lt;li&gt;取 $\mathcal{B}_1'$ 为 $\mathcal{B}_1$ 的一组原像. 可以证明, 不交并 $\mathcal{B}_1 \cup \mathcal{B}_1'$ 是 $f^{(m-1)}(\mathbb F^n)$ 中的线性无关组. 将其扩展为 $f^{(m-1)}(\mathbb F^n)$ 的一组基, 记作 集合 $\mathcal{B}_2$.&lt;/li&gt;
+      &lt;li&gt;给定 $\mathcal{B}_k$, 取 $\mathcal{B}_k'$ 为 $\mathcal{B}_k$ 的一组原像. 可以证明, 不交并 $\mathcal{B}_k \cup \mathcal{B}_k'$ 是 $f^{(m-k)}(\mathbb F^n)$ 中的线性无关组. 将其扩展为 $f^{(m-k)}(\mathbb F^n)$ 的一组基, 记作 集合 $\mathcal{B}_{k+1}$.&lt;/li&gt;
     &lt;/ul&gt;
+    &lt;p&gt;我们最终构造了 $\mathbb F^n$ 的一组基 $\mathcal{B}$. 在这组基下, $x \in \mathcal{B}$ 在 $f$ 下的像要么为零, 要么为 $\mathcal{B}$ 中的另一个向量. 我们记 $\mathcal{B} = \{x_i\}_{i=1}^n$. 定义矩阵 $J \in \mathbb F^{n\times n}$, 其中 $J_{i,j} = 1$ 若 $f(x_j) = x_i$, 否则 $J_{i,j} = 0$. 则在这组基下,&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+(f(x_1) \mid f(x_2) \mid \dots \mid f(x_n)) = (x_1 \mid x_2 \mid \dots \mid x_n) \cdot J.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;此处的 $J$ 即为所需的 Jordan 标准型矩阵.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
