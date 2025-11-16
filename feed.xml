@@ -14,11 +14,50 @@
 
 &lt;p&gt;日期：2025-11-16 18:00-21:00&lt;/p&gt;
 
-&lt;p&gt;录制文件：&lt;a href=&quot;-&quot;&gt;地址(待补充)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;录制文件：&lt;a href=&quot;https://pan.sjtu.edu.cn/web/share/8a7443aa16d52492c820fa36ff38c698&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-02-%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址(待补充)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-16-%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;例题见&lt;a href=&quot;HW14#基变换的例题&quot;&gt;HW14&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;typos&quot;&gt;Typos&lt;/h2&gt;
+
+&lt;p&gt;Page 7, Line 2&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Original: 技巧 6;&lt;/li&gt;
+  &lt;li&gt;Corrected: 技巧 5;&lt;/li&gt;
+  &lt;li&gt;Reason: 编号错误.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;思考题&quot;&gt;思考题&lt;/h2&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;记 $\mathbb F$ 与 $\mathbb K$ 是数域, 满足 $\mathbb F \subseteq \mathbb K$. 给定 $\mathbb F$ 中矩阵 $A$, 定义&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$ref_{\mathbb F} (A)$ 是 $A$ 在 $\mathbb F$ 上的行最简阶梯形;&lt;/li&gt;
+    &lt;li&gt;$ref_{\mathbb K} (A)$ 是 $A$ 在 $\mathbb K$ 上的行最简阶梯形.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;证明 $ref_{\mathbb F} (A) = ref_{\mathbb K}(A)$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;我们曾经提到一个不起眼的事实.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;若 $A$ 能通过可逆行变换变为某个行最简阶梯形矩阵 $M$, 则 $ref(A) = M$.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;证明很容易: 由可逆行变换不改变 $ref$, 得 $ref(A) = ref(M) = M$. &lt;br /&gt; 由定义, $ref_{\mathbb F}(A)$ 是 $\mathbb K$ 中的行最简阶梯形矩阵. 注意到 $A$ 能通过可逆行变换得到 $ref_{\mathbb F}(A)$, 因此 $ref_{\mathbb K}(A) = ref_{\mathbb F}(A)$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;若 $A \in \mathbb F^{n \times n}$ 有 $n$ 个不同的特征根, 则存在 $P$ 使得 $P^{-1} A P$ 是对角矩阵.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;记 $A$ 的不同特征根为 $\lambda_1, \lambda_2, \ldots, \lambda_n$, 对应的特征向量分别为 $v_1, v_2, \ldots, v_n$.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;(验证 $\{v_1, \ldots, v_n\}$ 线性无关). 若存在 $a_1, \ldots, a_n \in \mathbb F$ 使得 $\sum_{i=1}^n a_i v_i = 0$, 则对上式两边同时作用 $A^k$, 得 $\sum_{i=1}^n a_i A^k v_i = \sum_{i=1}^n a_i \lambda_i^k v_i = 0$. 由 Vandermonde 行列式, 所有 $a_i = 0$.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;记 $P = (v_1, v_2, \ldots, v_n)$. 则 $P$ 可逆且 $A P = P \mathrm{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$. 故 $P^{-1} A P = \mathrm{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-11-16T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/EX9</link>
@@ -44,7 +83,7 @@
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;假定 $\mathbb F$ 是数域. 任意给定有限个真子空间 $\{U_k \subsetneq \mathbb F^n \mid 1 \leq k \leq m\}$, 则 $\bigcup_{1 \leq k \leq m} U_k \neq \mathbb F^n$. 实际上, $(\mathbb F^n \setminus \bigcup_{1 \leq k \leq m} U_k)$ 中包含了一组基.&lt;/p&gt;
   &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;$\{v_x \mid x \in \mathbb F\}$ 中任意 $n$ 个不同的向量都是基. 因此, 每个 $U_k$ 包含 $\{v_x \mid x \in \mathbb F\}$ 中至多 $n-1$ 个向量. 由于 $\mathbb F$ 是无限集, 故 $\bigcup_{1 \leq k \leq m} U_k$ 也只能包含 $\{v_x \mid x \in \mathbb F\}$ 中有限个向量. 往后验证容易.&lt;/p&gt;
+    &lt;p&gt;$\{v_x \mid x \in \mathbb F\}$ 中任意 $n$ 个不同的向量都是基. 因此, 每个 $U_k$ 包含 $\{v_x \mid x \in \mathbb F\}$ 中至多 $n-1$ 个向量. 故 $\bigcup_{1 \leq k \leq m} U_k$ 也只能包含 $\{v_x \mid x \in \mathbb F\}$ 中有限个向量. 由于 $\{v_x \mid x \in \mathbb F\}$ 是无限集, 故 $\bigcup_{1 \leq k \leq m} U_k$ 只能包含有限个 $\{v_x \mid x \in \mathbb F\}$ 中的向量. 这说明 $\bigcup_{1 \leq k \leq m} U_k \neq \mathbb F^n$.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 

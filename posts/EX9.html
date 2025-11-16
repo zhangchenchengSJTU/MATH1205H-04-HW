@@ -91,11 +91,50 @@ MathJax = {
 
 <p>日期：2025-11-16 18:00-21:00</p>
 
-<p>录制文件：<a href="-">地址(待补充)</a></p>
+<p>录制文件：<a href="https://pan.sjtu.edu.cn/web/share/8a7443aa16d52492c820fa36ff38c698">地址</a></p>
 
-<p>文档: <a href="https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-02-%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf">地址(待补充)</a></p>
+<p>文档: <a href="https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-16-%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf">地址</a></p>
 
 <p>例题见<a href="HW14#基变换的例题">HW14</a>.</p>
+
+<h2 id="typos">Typos</h2>
+
+<p>Page 7, Line 2</p>
+
+<ul>
+  <li>Original: 技巧 6;</li>
+  <li>Corrected: 技巧 5;</li>
+  <li>Reason: 编号错误.</li>
+</ul>
+
+<h2 id="思考题">思考题</h2>
+
+<div class="example">
+  <p>记 $\mathbb F$ 与 $\mathbb K$ 是数域, 满足 $\mathbb F \subseteq \mathbb K$. 给定 $\mathbb F$ 中矩阵 $A$, 定义</p>
+  <ul>
+    <li>$ref_{\mathbb F} (A)$ 是 $A$ 在 $\mathbb F$ 上的行最简阶梯形;</li>
+    <li>$ref_{\mathbb K} (A)$ 是 $A$ 在 $\mathbb K$ 上的行最简阶梯形.</li>
+  </ul>
+  <p>证明 $ref_{\mathbb F} (A) = ref_{\mathbb K}(A)$.</p>
+  <div class="proof">
+    <p>我们曾经提到一个不起眼的事实.</p>
+    <ul>
+      <li>若 $A$ 能通过可逆行变换变为某个行最简阶梯形矩阵 $M$, 则 $ref(A) = M$.</li>
+    </ul>
+    <p>证明很容易: 由可逆行变换不改变 $ref$, 得 $ref(A) = ref(M) = M$. <br /> 由定义, $ref_{\mathbb F}(A)$ 是 $\mathbb K$ 中的行最简阶梯形矩阵. 注意到 $A$ 能通过可逆行变换得到 $ref_{\mathbb F}(A)$, 因此 $ref_{\mathbb K}(A) = ref_{\mathbb F}(A)$.</p>
+  </div>
+</div>
+
+<div class="example">
+  <p>若 $A \in \mathbb F^{n \times n}$ 有 $n$ 个不同的特征根, 则存在 $P$ 使得 $P^{-1} A P$ 是对角矩阵.</p>
+  <div class="proof">
+    <p>记 $A$ 的不同特征根为 $\lambda_1, \lambda_2, \ldots, \lambda_n$, 对应的特征向量分别为 $v_1, v_2, \ldots, v_n$.</p>
+    <ul>
+      <li>(验证 $\{v_1, \ldots, v_n\}$ 线性无关). 若存在 $a_1, \ldots, a_n \in \mathbb F$ 使得 $\sum_{i=1}^n a_i v_i = 0$, 则对上式两边同时作用 $A^k$, 得 $\sum_{i=1}^n a_i A^k v_i = \sum_{i=1}^n a_i \lambda_i^k v_i = 0$. 由 Vandermonde 行列式, 所有 $a_i = 0$.</li>
+    </ul>
+    <p>记 $P = (v_1, v_2, \ldots, v_n)$. 则 $P$ 可逆且 $A P = P \mathrm{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$. 故 $P^{-1} A P = \mathrm{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$.</p>
+  </div>
+</div>
 
   </article>
 
@@ -197,6 +236,40 @@ document.addEventListener('DOMContentLoaded', function() {
       <a href="#files">
         <span class="toc-number">1.</span>
         <span class="toc-title">Files</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-2">
+      <a href="#typos">
+        <span class="toc-number">2.</span>
+        <span class="toc-title">Typos</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-2">
+      <a href="#思考题">
+        <span class="toc-number">3.</span>
+        <span class="toc-title">思考题</span>
       </a>
     </div>
   
