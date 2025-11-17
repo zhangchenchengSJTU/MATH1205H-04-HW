@@ -14,7 +14,7 @@
 
 &lt;p&gt;日期：2025-11-16 18:00-21:00&lt;/p&gt;
 
-&lt;p&gt;录制文件：&lt;a href=&quot;https://pan.sjtu.edu.cn/web/share/8a7443aa16d52492c820fa36ff38c698&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;录制文件：&lt;a href=&quot;https://pan.sjtu.edu.cn/web/share/8d3946f1c89be191be623ed6d69f3c50&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-16-%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
 
@@ -231,7 +231,7 @@ f &amp; \mapsto &amp; V^{-1} \cdot (f(u_1) \mid f(u_2) \mid \dots \mid f(u_n))
   &lt;p&gt;我们解释矩阵语言与映射语言的转化. 以下两条表述等价.&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;给定矩阵 $A,B \in \mathbb F^{n \times n}$, 存在可逆矩阵 $P$ 使得 $B = P^{-1}AP$.&lt;/li&gt;
-    &lt;li&gt;定义线性映射 $f : \mathbb F^n \to \mathbb F^n$ 使得它在某组基下的矩阵表示是 $A$. 以列向量的形式将这组基记作矩阵 $U$, 则 $f$ 在基 $UP^{-1}$ 下的矩阵表示是 $B$.&lt;/li&gt;
+    &lt;li&gt;定义线性映射 $f : \mathbb F^n \to \mathbb F^n$ 使得它在某组基下的矩阵表示是 $A$. 以列向量的形式将这组基记作矩阵 $U$, 则 $f$ 在基 $UP$ 下的矩阵表示是 $B$.&lt;/li&gt;
   &lt;/ol&gt;
   &lt;p&gt;作为推论, 以下两条表述等价.&lt;/p&gt;
   &lt;ol&gt;
