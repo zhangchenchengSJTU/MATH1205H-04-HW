@@ -7,6 +7,62 @@
     
       
         <item>
+          <title>HW15</title>
+          <description>&lt;h2 id=&quot;特征根与特征向量&quot;&gt;特征根与特征向量&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(特征根 (也叫特征值), 特征向量). 给定方阵 $A$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;若存在 $\lambda$ 使得 $N(\lambda I - A) \neq 0$, 则称 $\lambda$ 为 $A$ 的特征根.&lt;/li&gt;
+    &lt;li&gt;假定 $\lambda$ 是 $A$ 的特征根, 则称 $N(\lambda I - A)$ 中的非零向量为 $A$ 关于 $\lambda$ 的特征向量.&lt;/li&gt;
+    &lt;li&gt;称 $(\lambda, v)$ 是一个特征对, 若 $v \neq 0$, 且 $A v = \lambda v$.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;判断题, 直接给出答案.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;任何矩阵都有特征根.&lt;/li&gt;
+    &lt;li&gt;若 $(\lambda, u)$ 与 $(\mu, u)$ 是特征对, 则 $\lambda = \mu$.&lt;/li&gt;
+    &lt;li&gt;若 $(\lambda, u)$ 是特征对, 则 $(\alpha \lambda, \alpha u)$ 必然也是特征对 ($\alpha$ 是非零常数).&lt;/li&gt;
+    &lt;li&gt;选定 $\lambda$, 则 $\{v \mid (\lambda, v) \ \text{是特征对}\}$ 必然是线性空间.&lt;/li&gt;
+    &lt;li&gt;若 $\lambda_i \neq \lambda_j$, 且 $\{(\lambda _i , v_i)\}_{i=1}^n$ 是特征对, 则 $\{v_i\}_{i =1}^n$ 必然线性无关.&lt;/li&gt;
+    &lt;li&gt;若 $(\lambda, u)$ 与 $(\lambda, v)$ 是特征对, 则 $\{u,v\}$ 必然线性相关.&lt;/li&gt;
+    &lt;li&gt;假定 $A$ 是复数域上的矩阵, 则任何向量都能写作特征向量的线性组合.&lt;/li&gt;
+    &lt;li&gt;多项式 $\det(xI - A)$ 的零点恰好是 $A$ 的特征根.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;回顾 &lt;a href=&quot;HW5-solu&quot;&gt;HW5&lt;/a&gt; 中的三类初等矩阵, 任取定常数 $a \notin \{0,1\}$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;写出 $S_{1,2}$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - S_{1,2})$.&lt;/li&gt;
+    &lt;li&gt;$D_1^a$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - D_1^\lambda)$.&lt;/li&gt;
+    &lt;li&gt;$T_{1,2}^a$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - T_{1,2}^\lambda)$.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;复矩阵的上三角化&quot;&gt;复矩阵的上三角化&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;以下习题将证明: 对任意复矩阵 $A \in\mathbb C^{n \times n}$, 存在可逆矩阵 $P \in \mathbb C^{n \times n}$, 使得 $P^{-1}AP$ 为上三角矩阵.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;证明 $A$ 存在特征根. 提示: (非常数值的)复系数多项式必有根.&lt;/li&gt;
+    &lt;li&gt;使用&lt;a href=&quot;HW14#基变换&quot;&gt;基变换&lt;/a&gt;证明, 任取 $A$ 的特征根 $\lambda$, 总存在可逆矩阵 $Q$ 使得 $QAQ^{-1} = \begin{pmatrix}\lambda &amp; u^T \\ 0 &amp; A' \end{pmatrix}$.&lt;/li&gt;
+    &lt;li&gt;使用数学归纳法完成证明.&lt;/li&gt;
+    &lt;li&gt;(给出例子即可). 找到 $2 \times 2$ 规格的实矩阵 $A$, 使得对任意实可逆实矩阵 $P$, $P^{-1} A P$ 不是上三角矩阵.&lt;/li&gt;
+    &lt;li&gt;(简要说明即可). 对任意域上的矩阵 $A$, 若多项式 $\det (x I - A)$ 能分解为一次多项式的乘积, 则存在可逆矩阵 $P$ 使得 $P^{-1} A P$ 为上三角矩阵.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-11-18T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW15</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW15</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Exersice Class 9</title>
           <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
 

@@ -9,12 +9,12 @@
 
 
 
-  <title>Exersice Class 9
+  <title>HW15
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="Files">
+<meta name="description" content="特征根与特征向量">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/EX9">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW15">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,65 +75,61 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>Exersice Class 9</h1>
+      <h1>HW15</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
-        November 16, 2025
+        November 18, 2025
       </p>
     </div>
 
     <div class="divider"></div>
 
-    <h2 id="files">Files</h2>
+    <h2 id="特征根与特征向量">特征根与特征向量</h2>
 
-<p>录制：16-Nov-25 线性代数习题课</p>
-
-<p>日期：2025-11-16 18:00-21:00</p>
-
-<p>录制文件：<a href="https://pan.sjtu.edu.cn/web/share/8d3946f1c89be191be623ed6d69f3c50">地址</a></p>
-
-<p>文档: <a href="https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-16-%E7%AC%AC%E4%B9%9D%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf">地址</a></p>
-
-<p>例题见<a href="HW14#基变换的例题">HW14</a>.</p>
-
-<h2 id="typos">Typos</h2>
-
-<p>Page 7, Line 2</p>
-
-<ul>
-  <li>Original: 技巧 6;</li>
-  <li>Corrected: 技巧 5;</li>
-  <li>Reason: 编号错误.</li>
-</ul>
-
-<h2 id="思考题">思考题</h2>
-
-<div class="example">
-  <p>记 $\mathbb F$ 与 $\mathbb K$ 是数域, 满足 $\mathbb F \subseteq \mathbb K$. 给定 $\mathbb F$ 中矩阵 $A$, 定义</p>
+<div class="definition">
+  <p>(特征根 (也叫特征值), 特征向量). 给定方阵 $A$.</p>
   <ul>
-    <li>$ref_{\mathbb F} (A)$ 是 $A$ 在 $\mathbb F$ 上的行最简阶梯形;</li>
-    <li>$ref_{\mathbb K} (A)$ 是 $A$ 在 $\mathbb K$ 上的行最简阶梯形.</li>
+    <li>若存在 $\lambda$ 使得 $N(\lambda I - A) \neq 0$, 则称 $\lambda$ 为 $A$ 的特征根.</li>
+    <li>假定 $\lambda$ 是 $A$ 的特征根, 则称 $N(\lambda I - A)$ 中的非零向量为 $A$ 关于 $\lambda$ 的特征向量.</li>
+    <li>称 $(\lambda, v)$ 是一个特征对, 若 $v \neq 0$, 且 $A v = \lambda v$.</li>
   </ul>
-  <p>证明 $ref_{\mathbb F} (A) = ref_{\mathbb K}(A)$.</p>
-  <div class="proof">
-    <p>我们曾经提到一个不起眼的事实.</p>
-    <ul>
-      <li>若 $A$ 能通过可逆行变换变为某个行最简阶梯形矩阵 $M$, 则 $ref(A) = M$.</li>
-    </ul>
-    <p>证明很容易: 由可逆行变换不改变 $ref$, 得 $ref(A) = ref(M) = M$. <br /> 由定义, $ref_{\mathbb F}(A)$ 是 $\mathbb K$ 中的行最简阶梯形矩阵. 注意到 $A$ 能通过可逆行变换得到 $ref_{\mathbb F}(A)$, 因此 $ref_{\mathbb K}(A) = ref_{\mathbb F}(A)$.</p>
-  </div>
 </div>
 
-<div class="example">
-  <p>若 $A \in \mathbb F^{n \times n}$ 有 $n$ 个不同的特征根, 则存在 $P$ 使得 $P^{-1} A P$ 是对角矩阵.</p>
-  <div class="proof">
-    <p>记 $A$ 的不同特征根为 $\lambda_1, \lambda_2, \ldots, \lambda_n$, 对应的特征向量分别为 $v_1, v_2, \ldots, v_n$.</p>
-    <ul>
-      <li>(验证 $\{v_1, \ldots, v_n\}$ 线性无关). 若存在 $a_1, \ldots, a_n \in \mathbb F$ 使得 $\sum_{i=1}^n a_i v_i = 0$, 则对上式两边同时作用 $A^k$, 得 $\sum_{i=1}^n a_i A^k v_i = \sum_{i=1}^n a_i \lambda_i^k v_i = 0$. 由 Vandermonde 行列式, 所有 $a_i = 0$.</li>
-    </ul>
-    <p>记 $P = (v_1, v_2, \ldots, v_n)$. 则 $P$ 可逆且 $A P = P \mathrm{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$. 故 $P^{-1} A P = \mathrm{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$.</p>
-  </div>
+<div class="problem">
+  <p>判断题, 直接给出答案.</p>
+  <ol>
+    <li>任何矩阵都有特征根.</li>
+    <li>若 $(\lambda, u)$ 与 $(\mu, u)$ 是特征对, 则 $\lambda = \mu$.</li>
+    <li>若 $(\lambda, u)$ 是特征对, 则 $(\alpha \lambda, \alpha u)$ 必然也是特征对 ($\alpha$ 是非零常数).</li>
+    <li>选定 $\lambda$, 则 $\{v \mid (\lambda, v) \ \text{是特征对}\}$ 必然是线性空间.</li>
+    <li>若 $\lambda_i \neq \lambda_j$, 且 $\{(\lambda _i , v_i)\}_{i=1}^n$ 是特征对, 则 $\{v_i\}_{i =1}^n$ 必然线性无关.</li>
+    <li>若 $(\lambda, u)$ 与 $(\lambda, v)$ 是特征对, 则 $\{u,v\}$ 必然线性相关.</li>
+    <li>假定 $A$ 是复数域上的矩阵, 则任何向量都能写作特征向量的线性组合.</li>
+    <li>多项式 $\det(xI - A)$ 的零点恰好是 $A$ 的特征根.</li>
+  </ol>
+</div>
+
+<div class="problem">
+  <p>回顾 <a href="HW5-solu">HW5</a> 中的三类初等矩阵, 任取定常数 $a \notin \{0,1\}$.</p>
+  <ul>
+    <li>写出 $S_{1,2}$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - S_{1,2})$.</li>
+    <li>$D_1^a$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - D_1^\lambda)$.</li>
+    <li>$T_{1,2}^a$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - T_{1,2}^\lambda)$.</li>
+  </ul>
+</div>
+
+<h2 id="复矩阵的上三角化">复矩阵的上三角化</h2>
+
+<div class="problem">
+  <p>以下习题将证明: 对任意复矩阵 $A \in\mathbb C^{n \times n}$, 存在可逆矩阵 $P \in \mathbb C^{n \times n}$, 使得 $P^{-1}AP$ 为上三角矩阵.</p>
+  <ol>
+    <li>证明 $A$ 存在特征根. 提示: (非常数值的)复系数多项式必有根.</li>
+    <li>使用<a href="HW14#基变换">基变换</a>证明, 任取 $A$ 的特征根 $\lambda$, 总存在可逆矩阵 $Q$ 使得 $QAQ^{-1} = \begin{pmatrix}\lambda & u^T \\ 0 & A' \end{pmatrix}$.</li>
+    <li>使用数学归纳法完成证明.</li>
+    <li>(给出例子即可). 找到 $2 \times 2$ 规格的实矩阵 $A$, 使得对任意实可逆实矩阵 $P$, $P^{-1} A P$ 不是上三角矩阵.</li>
+    <li>(简要说明即可). 对任意域上的矩阵 $A$, 若多项式 $\det (x I - A)$ 能分解为一次多项式的乘积, 则存在可逆矩阵 $P$ 使得 $P^{-1} A P$ 为上三角矩阵.</li>
+  </ol>
 </div>
 
   </article>
@@ -233,9 +229,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#files">
+      <a href="#特征根与特征向量">
         <span class="toc-number">1.</span>
-        <span class="toc-title">Files</span>
+        <span class="toc-title">特征根与特征向量</span>
       </a>
     </div>
   
@@ -250,26 +246,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#typos">
+      <a href="#复矩阵的上三角化">
         <span class="toc-number">2.</span>
-        <span class="toc-title">Typos</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-2">
-      <a href="#思考题">
-        <span class="toc-number">3.</span>
-        <span class="toc-title">思考题</span>
+        <span class="toc-title">复矩阵的上三角化</span>
       </a>
     </div>
   
@@ -322,13 +301,10 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW15" title="NEXT: HW15">&lt;&lt;</a>
-      <span>&middot;</span>
-    
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW14" title="PREV: HW14">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/EX9" title="PREV: Exersice Class 9">&gt;&gt;</a>
     
   </div>
 </main>
