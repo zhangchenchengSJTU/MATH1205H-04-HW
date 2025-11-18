@@ -37,8 +37,8 @@
   &lt;p&gt;回顾 &lt;a href=&quot;HW5-solu&quot;&gt;HW5&lt;/a&gt; 中的三类初等矩阵, 任取定常数 $a \notin \{0,1\}$.&lt;/p&gt;
   &lt;ul&gt;
     &lt;li&gt;写出 $S_{1,2}$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - S_{1,2})$.&lt;/li&gt;
-    &lt;li&gt;$D_1^a$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - D_1^\lambda)$.&lt;/li&gt;
-    &lt;li&gt;$T_{1,2}^a$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - T_{1,2}^\lambda)$.&lt;/li&gt;
+    &lt;li&gt;写出 $D_1^a$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - D_1^\lambda)$.&lt;/li&gt;
+    &lt;li&gt;写出 $T_{1,2}^a$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - T_{1,2}^\lambda)$.&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
