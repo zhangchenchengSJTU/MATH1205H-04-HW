@@ -7,6 +7,214 @@
     
       
         <item>
+          <title>HW16-solu</title>
+          <description>&lt;h2 id=&quot;特征根拾遗&quot;&gt;特征根拾遗&lt;/h2&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(线性映射的特征根). 选定 $\mathbb F$-线性空间 $V$ 到自身的线性映射&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+f : V \to V,\quad v \mapsto f(v).
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;称 $\lambda$ 是映射 $f$ 的特征向量, 若存在非零向量 $v$ 使得 $f(v) = \lambda v$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;求导运算&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+D: C(\mathbb R) \to C(\mathbb R),\quad f \mapsto f'
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;的特征根可以为任何实数 $\lambda \in \mathbb R$. 因为 $D(e^{\lambda x}) = \lambda \cdot e^{\lambda x}$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;假定线性空间维数有限. 若线性映射 $f$ 在某组基下有矩阵表示 $A$, 则 $A$ 的特征值等于 $f$ 的特征值.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;相似上三角化的应用&quot;&gt;相似上三角化的应用&lt;/h2&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;对任意 $A \in \mathbb C^{n \times n}$, 存在可逆矩阵 $P$ 使得 $PQP^{-1}$ 是上三角矩阵.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;见 &lt;a href=&quot;HW15&quot;&gt;HW15&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;给定以 $\mathbb F$ 为系数的多项式 $p(x) = x^n + a_1 x^{n-1} + a_2 x^{n-2} + \cdots + a_n$. 存在 $A \in \mathbb F^{n \times n}$ 使得 $\det (xI - A) = p(x)$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;见 &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-11-%E8%A1%8C%E5%88%97%E5%BC%8FA.pdf&quot;&gt;Ex-4, 练习题 A, HW13&lt;/a&gt;. 可能需要改变部分角标与符号.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;记 $f$ 是整系数的多项式, $p(x) = x^n + a_1 x^{n-1} + a_2 x^{n-2} + \cdots + a_n$ 也是整系数的多项式. 将 $p(x)$ 在 $\mathbb C$ 中分解作一次因子的乘积, 即 $(x-x_1)(x-x_2)\cdots (x-x_n)$. 试证明, $(x-f(x_1))(x-f(x_2))\cdots (f-f(x_n))$ 仍是整系数多项式.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;提示: 此题一两句话就能说明白, 请不要想复杂.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;jordan-标准型&quot;&gt;Jordan 标准型&lt;/h2&gt;
+
+&lt;h3 id=&quot;熟悉-jordan-块的结构&quot;&gt;熟悉 Jordan 块的结构&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Jordan 块). 将一个以 $\lambda$ 为特征根的 $n$ 阶 Jordan 块为&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+J_n (\lambda) =
+\begin{pmatrix}
+\lambda &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; \lambda &amp; 1 &amp; \cdots &amp; 0 \\
+0 &amp; 0 &amp; \lambda &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; \lambda
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;&lt;a href=&quot;HW14&quot;&gt;EX-10, HW14&lt;/a&gt; 说明任意幂零矩阵相似于某个分块对角矩阵, 各分块形如 $J_s(0)$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;特别注意: 幂零矩阵的 Jordan 型不依赖域的选取.&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;幂零矩阵的秩与 Jordan 块. 假定 $A$ 是幂零矩阵, 约定 $A^0 = I$. 记 $r_k = r(A^k)$, 可以证明 $\{r_k - r_{k+1}\}$ 是. 以下结论是直接的:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$r_0 - r_1$ 是 Jordan 块总数. 因为两者都等于零空间维数;&lt;/li&gt;
+    &lt;li&gt;$r_1 - r_2$ 是阶数 $\geq 1$ 的 Jordan 块总数;&lt;/li&gt;
+    &lt;li&gt;$r_k - r_{k+1}$ 是阶数 $\geq k$ 的 Jordan 块总数.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;因此,&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;$r_0 - 2r_1 + r_2$ 是 $0$ 阶 Jordan 块数量;&lt;/li&gt;
+    &lt;li&gt;$r_1 - 2r_2 + r_3$ 是 $1$ 阶 Jordan 块数量;&lt;/li&gt;
+    &lt;li&gt;$r_k - 2r_{k+1} + r_{k+2}$ 是 $k$ 阶 Jordan 块数量.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;请写出以下矩阵的 Jordan 标准型 (或写出所有的 Jordan 块).&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$A$ 是 $3$ 阶矩阵. 满足 $A^2 \neq O$, $A^3 = O$.&lt;/li&gt;
+    &lt;li&gt;$A$ 是 $4$ 阶矩阵. 满足 $r(A) = 2$, $A^2 = O$.&lt;/li&gt;
+    &lt;li&gt;$A$ 是 $5$ 阶矩阵. 满足 $r(A) = 2$, $A^2 \neq O$.&lt;/li&gt;
+    &lt;li&gt;$A$ 是 $6$ 阶矩阵. 满足 $r(A^2) - r(A^3) &gt; r(A^3) - r(A^4) = 1$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;根空间&quot;&gt;根空间&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;给定 $n$ 阶矩阵 $A$. 对 $\lambda \in \mathbb F$, 定义 $\mathbb F^n$ 的子空间&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+V_\lambda := \{v \mid \exists n \in \mathbb N, \ (\lambda I - A)^n v = 0\}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;简单地说, $V_\lambda$ 包含一切经 $(\lambda I - A)$ 反复作用后能化为 $0$ 的向量.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;直接地, $V_\lambda = 0$ 当且仅当 $\lambda$ 是特征根.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;若 $\lambda$ 是特征根, 则对应的特征向量属于 $V_\lambda$; 但 $V_\lambda$ 中的非零向量未必是特征向量, 例如取 $A = \binom{0 \ 1}{0 \ 0}$, 则 $V_0 = \mathbb F^2$, 但 $A$ 的特征向量 (与 $0$) 构成一维空间.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;若 $\lambda \neq \mu$, 则线性映射&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+V_\lambda \to V_\lambda, \quad x \mapsto (\mu I - A)x
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;是双射.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;该线性映射的来源与去向维数相同. 因此单, 满, 同构等价. 只需证明单射. 若 $(\mu I - A)x = 0$, 则 $Ax = \mu x$. 由 $V_\lambda$ 的定义, 对足够大的 $k$ 应有&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+0 = (\lambda I - A)^k x = (\lambda - \mu)^k x.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;此时只能有 $x = 0$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;若 $A$ 是复矩阵, 且特征根只有 $\lambda$ 与 $\mu$ ($\lambda \neq \mu$, 不考虑重数). 证明 $\mathbb F^n = V_\lambda \oplus V_\mu$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;提示: 乘积式 $(\lambda I - A)(\mu I - A)$ 是一个幂零矩阵. 由上三角化即可证明.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;若 $A$ 是复矩阵, 且特征根只有 $\lambda$ 与 $\mu$ ($\lambda \neq \mu$, 不考虑重数). 此时存在可逆矩阵 $P$ 使得 $PAP^{-1} = \binom{B \ O }{O \ C}$. 其中 $B$ 的特征值只有 $\lambda$, $C$ 的特征值只有 $\mu$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;取 $V_\lambda$ 与 $V_\mu$ 的基, 并将其合并为 $\mathbb F^n$ 的基. 左乘 $A$ 这一线性映射在该组基下的矩阵表示为 $\binom{B \ O }{O \ C}$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;推论-jordan-标准型&quot;&gt;推论: Jordan 标准型&lt;/h3&gt;
+
+&lt;p&gt;类似的论证给出以下推论.&lt;/p&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;假定复矩阵 $A$ 的所有特征根为 $\lambda_1, \lambda_2, \ldots, \lambda _m$ (不考虑重数). 则&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\mathbb F^n = V_{\lambda _1} \oplus V_{\lambda _2} \oplus \cdots \oplus V_{\lambda_m}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;此时存在可逆矩阵 $P$ 使得 $PAP^{-1}$ 是分块对角矩阵, 且第 $k$ 个分块 (记作 $B_k$) 的特征值仅有 $\lambda _k$. 前文表明, $(B_k - \lambda _k I)$ 相似于由若干 $J_t(0)$ 组成的分块对角矩阵, 因此 $B_k$ 相似于由若干 $J_t(\lambda_k)$ 组成的分块对角矩阵. 以上给出 Jordan 型的求解.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;练习题&quot;&gt;练习题&lt;/h3&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;若复矩阵满足 $AB = BA$, 则存在 $v$ 使得 $(\lambda, v)$ 是 $A$ 的特征对, $(\mu, v)$ 是 $B$ 的特征对.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;复矩阵 $A$ 有特征根, 取作 $Ax = \lambda x$. 交换性表明 $ABx = BAx = \lambda (Bx)$, 归纳得 $AB^kv = \lambda B^kv$. 记 $V$ 是 $\{x,Bx,B^2,\ldots\}$ 生成的线性空间, 特别地, $V$ 中非零向量都是 $A$ 的特征根. 由于线性映射&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+V \to V,\quad v \mapsto Bv
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;总有特征根, 取作特征对 $(\mu, v)$. 则 $(\lambda, v)$ 也是 $A$ 的特征对.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;证明 $r\binom{A \ B}{O \ D} \geq r\binom{A \ O}{O \ D}$. 取等当且仅当关于 $X$ 与 $Y$ 的方程 $B = AX + YD$ 有解.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;($\gets$). 若 $B = AX + YD$, 则 $\binom{A \ B}{O \ D}$ 通过可逆行, 列变换化为 $\binom{A \ O}{O \ D}$. &lt;br /&gt; ($\to$). 假定 $A$ 有 $m$ 列. 对 $\binom{A \ B}{O \ D}$ 与 $\binom{A \ O}{O \ D}$ 同步进行 $ref$ 算法, 则两者 $ref$ 的前 $m$ 列相同. 若 $\binom{A \ B}{O \ D}$ 的第 $m + k$ 列能被前面的列线性表示, 取作 $\binom{A \ B}{O \ D} \cdot \binom{x_i}{v_i}$, 则 $\binom{A \ O}{O \ D}$ 的第 $m + k$ 列也能被前面的列线性表示, 取作 $\binom{A \ O}{O \ D} \cdot \binom{0}{v_i}$. 这说明:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;若 $\binom{A \ B}{O \ D}$ 的第 $s$ 列非主元列, 则 $\binom{A \ O}{O \ D}$ 的第 $s$ 列也非主元列.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;从而 $ref\binom{A \ B}{O \ D}$ 的非零行数大于 $ref\binom{A \ O}{O \ D}$ 的非零行数, 即 $r\binom{A \ B}{O \ D} \geq r\binom{A \ O}{O \ D}$. &lt;br /&gt; 取等时, $ref\binom{A \ B}{O \ D}$ 与 $ref\binom{A \ O}{O \ D}$ 主元列位置相同. 记 $X = (x_1 \mid x_2 \mid \cdots \mid x_n)$. 比较 $\binom{A \ O}{O \ D}$ 与 $\binom{A \quad B-AX}{O \quad\quad  D\ \ \ \ }$ (抄写前文):&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;若 $\binom{A \quad B-AX}{O \quad\quad  D\ \ \ \ }$ 的第 $m + k$ 列能被前面的列线性表示, 取作 $\binom{A \quad B-AX}{O \quad\quad  D\ \ \ \ } \cdot \binom{0}{v_i}$, 则 $\binom{A \ O}{O \ D}$ 的第 $m + k$ 列也能被前面的列线性表示, 取作 $\binom{A \ O}{O \ D} \cdot \binom{0}{v_i}$&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;从而 $ref\binom{A \quad B-AX}{O \quad\quad  D\ \ \ \ } = ref\binom{A \ O}{O \ D}$. 比较行空间, $B-AX$ 的各行能通过 $D$ 各行的线性组合得到. 因此有 $B-AX = YD$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;考虑复矩阵. 假定 $\det(xI - A)$ 与 $\det (xI - D)$ 没有相同的根. 则 $\binom{A \ B}{O \ D}$ 与 $\binom{A \ O}{O \ D}$ 必然相似.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;下证明单射:&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\varphi : \mathbb F^{m \times n} \to \mathbb F^{m \times n},\quad M \mapsto AM - MD.
+\end{equation}$$&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;(证明 $\varphi$ 是单射). 考虑三角化 $A = P^{-1}UP$ 与 $D = QWQ^{-1}$. 若 $AM = MD$, 则 $U(PMQ)=(PMQ)W$. 记 $f(x) = \det (xI-A)$, 则 $f(U)^{(n)}(PMQ) = (PMQ)f(W)^{(n)}$. 由假定, $U$ 与 $W$ 的对角元没有相同的元素, 从而 $f(U)^{(n)} = O$ 且 $f(W)^{(n)}$ 可逆. 因此 $PMQ = O$, 即 $M = O$.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;线性映射 $\varphi$ 的来源与去向有相同维数, 从而 $\varphi$ 单意味着 $\varphi$ 满. 因此, 关于 $M$ 的方程&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\binom{A \ B}{O \ D} \cdot \binom{I \ M}{O \ I} = \binom{I \ M}{O \ I} \cdot \binom{A \ O}{O \ D}
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;有解. 这说明了相似关系.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-11-20T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW16</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW16</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>HW15</title>
           <description>&lt;h2 id=&quot;特征根与特征向量&quot;&gt;特征根与特征向量&lt;/h2&gt;
 
@@ -388,7 +596,7 @@ A = P \begin{pmatrix}I_{r(A)} &amp; O &amp; O \\ O &amp; O &amp; O \\ O &amp; O 
     &lt;p&gt;$$\begin{equation}
 r(cef(A + B)) = r(cef(A) \mid cef(B)) = r(cef(A)) + r(cef (B))
 \end{equation}$$&lt;/p&gt;
-    &lt;p&gt;这说明 $C(A) \oplus C(B) = C(A + B)$, 即 $\varphi_{A}(\mathbb F^n) \oplus \varphi_{B}(\mathbb F^n) = \varphi_{A+B}(\mathbb F^n)$. 由直和, 取 $\varphi_{A}(\mathbb F^n)$ 的一组基 $\{v_1, v_2, \dots, v_{r(A)}\}$ 与 $\varphi_{B}(\mathbb F^n)$ 的一组基 $\{v_{r(A)+1}, v_{r(A)+2}, \dots, v_{r(A)+r(B)}\}$. 最后, 将其扩展成 $\mathbb F^m$ 的一组基 $\{v_1, v_2, \dots, v_m\}$. 取 $\{v_1, v_2, \dots, v_{r(A)}\}$ 的任意一组原像 (这是线性无关组) $\{u_1, u_2, \dots, u_{r(A)}\}$, 取 $\{v_{r(A)+1}, v_{r(A)+2}, \dots, v_{r(A)+r(B)}\}$ 的任意一组原像 (这是线性无关组) $\{u_{r(A)+1}, u_{r(A)+2}, \dots, u_{r(A)+r(B)}\}$, 并将其扩展成 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 在这两组基下,&lt;/p&gt;
+    &lt;p&gt;这说明 $C(A) \oplus C(B) = C(A + B)$, 即 $\varphi_{A}(\mathbb F^n) \oplus \varphi_{B}(\mathbb F^n) = \varphi_{A+B}(\mathbb F^n)$. 由直和, 取 $\varphi_{A}(\mathbb F^n)$ 的一组基 $\{v_1, v_2, \dots, v_{r(A)}\}$ 与 $\varphi_{B}(\mathbb F^n)$ 的一组基 $\{v_{r(A)+1}, v_{r(A)+2}, \dots, v_{r(A)+r(B)}\}$. 最后, 将其扩展成 $\mathbb F^m$ 的一组基 $\{v_1, v_2, \dots, v_m\}$. 取 $\{v_1, v_2, \dots, v_{r(A)}\}$ 的任意一组原像 (这是线性无关组) $\{u_1, u_2, \dots, u_{r(A)}\}$, 取 $\{v_{r(A)+1}, v_{r(A)+2}, \dots, v_{r(A)+r(B)}\}$ 的任意一组原像 (这是线性无关组) $\{u_{r(A)+1}, u_{r(A)+2}, \dots, u_{r(A)+r(B)}\}$, 并将其扩展成 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 通常而言 $f(u_{r(A) + r(B) + k}) \neq 0$, 但 $f(u_{r(A) + r(B) + k})$ 一定是 $\{f(u_i)\}_{i \leq r(A) + r(B)}$ 的线性组合, 从而可以假定 $f(u_{r(A) + r(B) + k}) = 0$. 在这两组基下,&lt;/p&gt;
     &lt;p&gt;$$\begin{equation}
 (\varphi_A(u_1) \mid \varphi_A(u_2) \mid \dots \mid \varphi_A(u_n)) = (v_1 \mid v_2 \mid \dots \mid v_m) \cdot \begin{pmatrix}
 I_{r(A)} &amp; O &amp; O \\ O &amp; O &amp; O \\ O &amp; O &amp; O
@@ -414,7 +622,7 @@ O&amp;O&amp;O\\ O&amp;O&amp;O
     &lt;ul&gt;
       &lt;li&gt;(简要说明 $\{u_1, u_2, \dots, u_{2k}\}$ 是线性无关组). 若有线性组合式 $\alpha_1 u_1 + \alpha_2 u_2 + \cdots + \alpha_{2k} u_{2k} = 0$, 作用 $f$ 后得到 $\alpha_1 f(u_1) + \alpha_2 f(u_2) + \cdots + \alpha_k f(u_k) = 0$. 由 $\{u_1, u_2, \dots, u_k\}$ 的线性无关性, 得 $\alpha_1 = \alpha_2 = \cdots = \alpha_k = 0$. 回代至原式, 由 $\{u_{k+1}, u_{k+2}, \dots, u_{2k}\}$ 的线性无关性, 得 $\alpha_{k+1} = \alpha_{k+2} = \cdots = \alpha_{2k} = 0$.&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;p&gt;将 $\{u_1, u_2, \dots, u_{2k}\}$ 扩展成 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 在这组基下, 映射 $f$ 的矩阵表示为所需形式.&lt;/p&gt;
+    &lt;p&gt;将 $\{u_1, u_2, \dots, u_{2k}\}$ 扩展成 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 由于 $f(u_{2r+k})$ 是 $\{f(u_i)\}_{i \leq 2k}$ 的线性组合, 从而可以假定 $f(u_{2r+k}) = 0$. 在这组基下, 映射 $f$ 的矩阵表示为所需形式.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -428,8 +636,8 @@ O&amp;O&amp;O\\ O&amp;O&amp;O
     &lt;p&gt;取最大的 $m$ 使得 $f^{(m)}(\mathbb F^n) \neq 0$. 下构造 $\mathbb F^n$ 的一组基.&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;取 $f^{(m)}(\mathbb F^n)$ 的一组基, 记作集合 $\mathcal{B}_1$.&lt;/li&gt;
-      &lt;li&gt;取 $\mathcal{B}_1'$ 为 $\mathcal{B}_1$ 的一组原像. 可以证明, 不交并 $\mathcal{B}_1 \cup \mathcal{B}_1'$ 是 $f^{(m-1)}(\mathbb F^n)$ 中的线性无关组. 将其扩展为 $f^{(m-1)}(\mathbb F^n)$ 的一组基, 记作 集合 $\mathcal{B}_2$.&lt;/li&gt;
-      &lt;li&gt;给定 $\mathcal{B}_k$, 取 $\mathcal{B}_k'$ 为 $\mathcal{B}_k$ 的一组原像. 可以证明, 不交并 $\mathcal{B}_k \cup \mathcal{B}_k'$ 是 $f^{(m-k)}(\mathbb F^n)$ 中的线性无关组. 将其扩展为 $f^{(m-k)}(\mathbb F^n)$ 的一组基, 记作 集合 $\mathcal{B}_{k+1}$.&lt;/li&gt;
+      &lt;li&gt;取 $\mathcal{B}_1'$ 为 $\mathcal{B}_1$ 的一组原像. 可以证明, 不交并 $\mathcal{B}_1 \cup \mathcal{B}_1'$ 是 $f^{(m-1)}(\mathbb F^n)$ 中的线性无关组. 将其扩展为 $f^{(m-1)}(\mathbb F^n)$ 的一组基, 记作集合 $\mathcal{B}_2$.&lt;/li&gt;
+      &lt;li&gt;给定 $\mathcal{B}_k$, 取 $\mathcal{B}_k'$ 为 $\mathcal{B}_k$ 的一组原像. 可以证明, 不交并 $\mathcal{B}_k \cup \mathcal{B}_k'$ 是 $f^{(m-k)}(\mathbb F^n)$ 中的线性无关组. 将其扩展为 $f^{(m-k)}(\mathbb F^n)$ 的一组基, 使得新添加的向量被 $f$ 映至 $0$. 记以上构造的 $f^{(m-k)}(\mathbb F^n)$ 的一组基为 $\mathcal{B}_{k+1}$.&lt;/li&gt;
     &lt;/ul&gt;
     &lt;p&gt;我们最终构造了 $\mathbb F^n$ 的一组基 $\mathcal{B}$. 在这组基下, $x \in \mathcal{B}$ 在 $f$ 下的像要么为零, 要么为 $\mathcal{B}$ 中的另一个向量. 我们记 $\mathcal{B} = \{x_i\}_{i=1}^n$. 定义矩阵 $J \in \mathbb F^{n\times n}$, 其中 $J_{i,j} = 1$ 若 $f(x_j) = x_i$, 否则 $J_{i,j} = 0$. 则在这组基下,&lt;/p&gt;
     &lt;p&gt;$$\begin{equation}

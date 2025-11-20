@@ -349,7 +349,7 @@ A = P \begin{pmatrix}I_{r(A)} & O & O \\ O & O & O \\ O & O & O \end{pmatrix} Q,
     <p>$$\begin{equation}
 r(cef(A + B)) = r(cef(A) \mid cef(B)) = r(cef(A)) + r(cef (B))
 \end{equation}$$</p>
-    <p>这说明 $C(A) \oplus C(B) = C(A + B)$, 即 $\varphi_{A}(\mathbb F^n) \oplus \varphi_{B}(\mathbb F^n) = \varphi_{A+B}(\mathbb F^n)$. 由直和, 取 $\varphi_{A}(\mathbb F^n)$ 的一组基 $\{v_1, v_2, \dots, v_{r(A)}\}$ 与 $\varphi_{B}(\mathbb F^n)$ 的一组基 $\{v_{r(A)+1}, v_{r(A)+2}, \dots, v_{r(A)+r(B)}\}$. 最后, 将其扩展成 $\mathbb F^m$ 的一组基 $\{v_1, v_2, \dots, v_m\}$. 取 $\{v_1, v_2, \dots, v_{r(A)}\}$ 的任意一组原像 (这是线性无关组) $\{u_1, u_2, \dots, u_{r(A)}\}$, 取 $\{v_{r(A)+1}, v_{r(A)+2}, \dots, v_{r(A)+r(B)}\}$ 的任意一组原像 (这是线性无关组) $\{u_{r(A)+1}, u_{r(A)+2}, \dots, u_{r(A)+r(B)}\}$, 并将其扩展成 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 在这两组基下,</p>
+    <p>这说明 $C(A) \oplus C(B) = C(A + B)$, 即 $\varphi_{A}(\mathbb F^n) \oplus \varphi_{B}(\mathbb F^n) = \varphi_{A+B}(\mathbb F^n)$. 由直和, 取 $\varphi_{A}(\mathbb F^n)$ 的一组基 $\{v_1, v_2, \dots, v_{r(A)}\}$ 与 $\varphi_{B}(\mathbb F^n)$ 的一组基 $\{v_{r(A)+1}, v_{r(A)+2}, \dots, v_{r(A)+r(B)}\}$. 最后, 将其扩展成 $\mathbb F^m$ 的一组基 $\{v_1, v_2, \dots, v_m\}$. 取 $\{v_1, v_2, \dots, v_{r(A)}\}$ 的任意一组原像 (这是线性无关组) $\{u_1, u_2, \dots, u_{r(A)}\}$, 取 $\{v_{r(A)+1}, v_{r(A)+2}, \dots, v_{r(A)+r(B)}\}$ 的任意一组原像 (这是线性无关组) $\{u_{r(A)+1}, u_{r(A)+2}, \dots, u_{r(A)+r(B)}\}$, 并将其扩展成 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 通常而言 $f(u_{r(A) + r(B) + k}) \neq 0$, 但 $f(u_{r(A) + r(B) + k})$ 一定是 $\{f(u_i)\}_{i \leq r(A) + r(B)}$ 的线性组合, 从而可以假定 $f(u_{r(A) + r(B) + k}) = 0$. 在这两组基下,</p>
     <p>$$\begin{equation}
 (\varphi_A(u_1) \mid \varphi_A(u_2) \mid \dots \mid \varphi_A(u_n)) = (v_1 \mid v_2 \mid \dots \mid v_m) \cdot \begin{pmatrix}
 I_{r(A)} & O & O \\ O & O & O \\ O & O & O
@@ -375,7 +375,7 @@ O&O&O\\ O&O&O
     <ul>
       <li>(简要说明 $\{u_1, u_2, \dots, u_{2k}\}$ 是线性无关组). 若有线性组合式 $\alpha_1 u_1 + \alpha_2 u_2 + \cdots + \alpha_{2k} u_{2k} = 0$, 作用 $f$ 后得到 $\alpha_1 f(u_1) + \alpha_2 f(u_2) + \cdots + \alpha_k f(u_k) = 0$. 由 $\{u_1, u_2, \dots, u_k\}$ 的线性无关性, 得 $\alpha_1 = \alpha_2 = \cdots = \alpha_k = 0$. 回代至原式, 由 $\{u_{k+1}, u_{k+2}, \dots, u_{2k}\}$ 的线性无关性, 得 $\alpha_{k+1} = \alpha_{k+2} = \cdots = \alpha_{2k} = 0$.</li>
     </ul>
-    <p>将 $\{u_1, u_2, \dots, u_{2k}\}$ 扩展成 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 在这组基下, 映射 $f$ 的矩阵表示为所需形式.</p>
+    <p>将 $\{u_1, u_2, \dots, u_{2k}\}$ 扩展成 $\mathbb F^n$ 的一组基 $\{u_1, u_2, \dots, u_n\}$. 由于 $f(u_{2r+k})$ 是 $\{f(u_i)\}_{i \leq 2k}$ 的线性组合, 从而可以假定 $f(u_{2r+k}) = 0$. 在这组基下, 映射 $f$ 的矩阵表示为所需形式.</p>
   </div>
 </div>
 
@@ -389,8 +389,8 @@ O&O&O\\ O&O&O
     <p>取最大的 $m$ 使得 $f^{(m)}(\mathbb F^n) \neq 0$. 下构造 $\mathbb F^n$ 的一组基.</p>
     <ul>
       <li>取 $f^{(m)}(\mathbb F^n)$ 的一组基, 记作集合 $\mathcal{B}_1$.</li>
-      <li>取 $\mathcal{B}_1'$ 为 $\mathcal{B}_1$ 的一组原像. 可以证明, 不交并 $\mathcal{B}_1 \cup \mathcal{B}_1'$ 是 $f^{(m-1)}(\mathbb F^n)$ 中的线性无关组. 将其扩展为 $f^{(m-1)}(\mathbb F^n)$ 的一组基, 记作 集合 $\mathcal{B}_2$.</li>
-      <li>给定 $\mathcal{B}_k$, 取 $\mathcal{B}_k'$ 为 $\mathcal{B}_k$ 的一组原像. 可以证明, 不交并 $\mathcal{B}_k \cup \mathcal{B}_k'$ 是 $f^{(m-k)}(\mathbb F^n)$ 中的线性无关组. 将其扩展为 $f^{(m-k)}(\mathbb F^n)$ 的一组基, 记作 集合 $\mathcal{B}_{k+1}$.</li>
+      <li>取 $\mathcal{B}_1'$ 为 $\mathcal{B}_1$ 的一组原像. 可以证明, 不交并 $\mathcal{B}_1 \cup \mathcal{B}_1'$ 是 $f^{(m-1)}(\mathbb F^n)$ 中的线性无关组. 将其扩展为 $f^{(m-1)}(\mathbb F^n)$ 的一组基, 记作集合 $\mathcal{B}_2$.</li>
+      <li>给定 $\mathcal{B}_k$, 取 $\mathcal{B}_k'$ 为 $\mathcal{B}_k$ 的一组原像. 可以证明, 不交并 $\mathcal{B}_k \cup \mathcal{B}_k'$ 是 $f^{(m-k)}(\mathbb F^n)$ 中的线性无关组. 将其扩展为 $f^{(m-k)}(\mathbb F^n)$ 的一组基, 使得新添加的向量被 $f$ 映至 $0$. 记以上构造的 $f^{(m-k)}(\mathbb F^n)$ 的一组基为 $\mathcal{B}_{k+1}$.</li>
     </ul>
     <p>我们最终构造了 $\mathbb F^n$ 的一组基 $\mathcal{B}$. 在这组基下, $x \in \mathcal{B}$ 在 $f$ 下的像要么为零, 要么为 $\mathcal{B}$ 中的另一个向量. 我们记 $\mathcal{B} = \{x_i\}_{i=1}^n$. 定义矩阵 $J \in \mathbb F^{n\times n}$, 其中 $J_{i,j} = 1$ 若 $f(x_j) = x_i$, 否则 $J_{i,j} = 0$. 则在这组基下,</p>
     <p>$$\begin{equation}
