@@ -81,14 +81,14 @@ J_n (\lambda) =
   &lt;p&gt;幂零矩阵的秩与 Jordan 块. 假定 $A$ 是幂零矩阵, 约定 $A^0 = I$. 记 $r_k = r(A^k)$, 可以证明 $\{r_k - r_{k+1}\}$ 是. 以下结论是直接的:&lt;/p&gt;
   &lt;ul&gt;
     &lt;li&gt;$r_0 - r_1$ 是 Jordan 块总数. 因为两者都等于零空间维数;&lt;/li&gt;
-    &lt;li&gt;$r_1 - r_2$ 是阶数 $\geq 1$ 的 Jordan 块总数;&lt;/li&gt;
-    &lt;li&gt;$r_k - r_{k+1}$ 是阶数 $\geq k$ 的 Jordan 块总数.&lt;/li&gt;
+    &lt;li&gt;$r_1 - r_2$ 是阶数 $\geq 2$ 的 Jordan 块总数;&lt;/li&gt;
+    &lt;li&gt;$r_k - r_{k+1}$ 是阶数 $\geq k+1$ 的 Jordan 块总数.&lt;/li&gt;
   &lt;/ul&gt;
   &lt;p&gt;因此,&lt;/p&gt;
   &lt;ul&gt;
-    &lt;li&gt;$r_0 - 2r_1 + r_2$ 是 $0$ 阶 Jordan 块数量;&lt;/li&gt;
-    &lt;li&gt;$r_1 - 2r_2 + r_3$ 是 $1$ 阶 Jordan 块数量;&lt;/li&gt;
-    &lt;li&gt;$r_k - 2r_{k+1} + r_{k+2}$ 是 $k$ 阶 Jordan 块数量.&lt;/li&gt;
+    &lt;li&gt;$r_0 - 2r_1 + r_2$ 是 Jordan 块 $J_1(0)$ 的数量;&lt;/li&gt;
+    &lt;li&gt;$r_1 - 2r_2 + r_3$ 是 Jordan 块 $J_2(0)$ 的数量;&lt;/li&gt;
+    &lt;li&gt;$r_k - 2r_{k+1} + r_{k+2}$ 是 Jordan 块 $J_{k+1}(0)$ 的数量.&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
