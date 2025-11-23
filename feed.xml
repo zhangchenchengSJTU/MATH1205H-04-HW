@@ -766,9 +766,7 @@ e^n &amp; e^{2n} &amp; e^{3n} &amp; \cdots &amp; e^{n^2}
     &lt;p&gt;$$\begin{equation}
 \int_0^{2\pi} (\alpha_1 \sin x + \alpha_2 \sin 2x + \cdots + \alpha_n \sin nx) \sin kx \, dx = 0
 \end{equation}$$&lt;/p&gt;
-    &lt;p&gt;由交流电等工科知识 (或者积化和差公式), $\int_0^{2\pi}\sin px \sin qx \ dx = 0$ 当且仅当 $p \neq q$. 得 $\alpha_k = 0$.&lt;/p&gt;
-    &lt;p&gt;\&lt;/p&gt;
-    &lt;p&gt;(3). 否定. 由和差化积公式, $\sin \frac{(2k+1) \pi}{6k} - \sin \frac{(2k-1) \pi}{6k} = \sin \frac{\pi}{6k}$.&lt;/p&gt;
+    &lt;p&gt;由交流电等工科知识 (或者积化和差公式), $\int_0^{2\pi}\sin px \sin qx \ dx = 0$ 当且仅当 $p \neq q$. 得 $\alpha_k = 0$. &lt;br /&gt; (3). 否定. 由和差化积公式, $\sin \frac{(2k+1) \pi}{6k} - \sin \frac{(2k-1) \pi}{6k} = \sin \frac{\pi}{6k}$.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -800,14 +798,14 @@ e^n &amp; e^{2n} &amp; e^{3n} &amp; \cdots &amp; e^{n^2}
     &lt;li&gt;判断 $\mathbb C \to \mathbb C,\quad z \mapsto \overline z$ 是否是 $\mathbb Q$-线性映射? 是否是 $\mathbb R$-线性映射? 是否是 $\mathbb C$-线性映射?&lt;/li&gt;
   &lt;/ol&gt;
   &lt;div class=&quot;solution&quot;&gt;
-    &lt;p&gt;TFFFT, TTTT(TTF).&lt;/p&gt;
+    &lt;p&gt;TFFFT, TTTT, 最后一题 TTF.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;线性映射的性质&quot;&gt;线性映射的性质&lt;/h3&gt;
 
 &lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;若向量组 $S$ 满足&lt;a href=&quot;HW11#基的定义&quot;&gt;P1-HW11&lt;/a&gt;中的性质一, 则称之线性生成组; 若向量组 $S$ 满足&lt;a href=&quot;HW11#基的定义&quot;&gt;P1-HW11&lt;/a&gt;中的性质二, 则称之线性无关组. 给定线性映射 $f: U \to V$, 试判断以下论述 (此题比较简单, 只给答案即可, 不必给出证明或反例).&lt;/p&gt;
+  &lt;p&gt;若向量组 $S$ 满足 &lt;a href=&quot;HW11#基的定义&quot;&gt;P1-HW11&lt;/a&gt; 中的性质一, 则称之线性生成组; 若向量组 $S$ 满足 &lt;a href=&quot;HW11#基的定义&quot;&gt;P1-HW11&lt;/a&gt; 中的性质二, 则称之线性无关组. 给定线性映射 $f: U \to V$, 试判断以下论述 (此题比较简单, 只给答案即可, 不必给出证明或反例).&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;若 $f$ 是单射, 则任意线性无关组的像仍是线性无关组;&lt;/li&gt;
     &lt;li&gt;上一问的逆命题;&lt;/li&gt;
