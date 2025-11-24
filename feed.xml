@@ -7,6 +7,41 @@
     
       
         <item>
+          <title>Exersice Class 10</title>
+          <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
+
+&lt;p&gt;录制：23-Nov-25 线性代数习题课&lt;/p&gt;
+
+&lt;p&gt;日期：2025-11-23 18:00-21:00&lt;/p&gt;
+
+&lt;p&gt;录制文件：&lt;a href=&quot;https://pan.sjtu.edu.cn/web/share/87fefdd74408890c9ad3dc8a9f9d1dee&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-23-%E7%AC%AC%E5%8D%81%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;typos&quot;&gt;Typos&lt;/h2&gt;
+
+&lt;p&gt;Page 7, Line 4&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Original: $(n-i,n-j)$;&lt;/li&gt;
+  &lt;li&gt;Corrected: $(n+1-i,n+1-j)$;&lt;/li&gt;
+  &lt;li&gt;Reason: 编号错误.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;思考题&quot;&gt;思考题&lt;/h2&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;假定 $A, B \in \mathbb Q$, 存在复矩阵 $P$ 使得 $P^{-1} A P = B$. 证明存在有理矩阵 $Q$ 使得 $Q^{-1} A Q = B$.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-11-23T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/EX10</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/EX10</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>HW16-solu</title>
           <description>&lt;h2 id=&quot;特征根拾遗&quot;&gt;特征根拾遗&lt;/h2&gt;
 
