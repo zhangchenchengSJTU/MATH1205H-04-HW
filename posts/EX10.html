@@ -109,7 +109,20 @@ MathJax = {
 
 <div class="example">
   <p>假定 $A, B \in \mathbb Q$, 存在复矩阵 $P$ 使得 $P^{-1} A P = B$. 证明存在有理矩阵 $Q$ 使得 $Q^{-1} A Q = B$.</p>
+  <div class="proof">
+    <p>将 $\mathbb C$ 视作 $\mathbb Q$-线性空间, 则存在一个线性无关组 $\{w_i\}_{i=1}^n$ 使得 $P = \sum_{i=1}^n w_i Q_i$, 其中 $Q_i$ 均为有理矩阵.</p>
+    <ul>
+      <li>一个显然的事实: 如果 $f(x_1, x_2, \ldots, x_n)$ 是含有 $n$ 个变元的有理系数多项式. 若 $f(z_1, z_2, \ldots, z_n) = 0$ 对任意复数 $z_i$ 都成立, 则 $f$ 是零多项式.</li>
+    </ul>
+    <p>记 $f(x_1, x_2, \ldots, x_n) := \det (\sum_{i=1}^n x_i Q_i)$, 显然这不是零多项式. 从而存在一组非零有理数 $(a_1, a_2, \ldots, a_n)$ 使得 $f(a_1, a_2, \ldots, a_n) \neq 0$. $Q := \sum_{i=1}^n a_i Q_i$ 即为所求.</p>
+  </div>
+  <p>特别注释: 此题使用了一个事实</p>
+  <ul>
+    <li>若数域上的多项式取值恒为 $0$, 则该多项式为零多项式.</li>
+  </ul>
+  <p>上述证明对有限域不再适用, 但可以通过域扩张的方法给出替代证明. 如不嫌麻烦, 也可以使用初等因子组 (smith 标准型).</p>
 </div>
+
 
   </article>
 
