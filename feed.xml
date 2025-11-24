@@ -45,7 +45,6 @@
   &lt;/ul&gt;
   &lt;p&gt;上述证明对有限域不再适用, 但可以通过域扩张的方法给出替代证明. 如不嫌麻烦, 也可以使用初等因子组 (smith 标准型).&lt;/p&gt;
 &lt;/div&gt;
-
 </description>
           <pubDate>2025-11-23T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/EX10</link>
@@ -55,7 +54,7 @@
     
       
         <item>
-          <title>HW16-solu</title>
+          <title>HW16</title>
           <description>&lt;h2 id=&quot;特征根拾遗&quot;&gt;特征根拾遗&lt;/h2&gt;
 
 &lt;div class=&quot;definition&quot;&gt;
