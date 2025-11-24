@@ -7,6 +7,37 @@
     
       
         <item>
+          <title>HW17</title>
+          <description>&lt;h2 id=&quot;特征根估计-圆盘定理&quot;&gt;特征根估计: 圆盘定理&lt;/h2&gt;
+
+&lt;p&gt;圆盘定理用于估计矩阵的特征根. 以下所有矩阵是 $\mathbb C$ 上方阵.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;设 $A=(a_{ij})$ 是 $n\times n$ 矩阵. 对每个 $i$, 总有&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+|a_{ii}| &gt; \sum_{j\neq i} |a_{ij}|.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;则 $A$ 可逆.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;见 &lt;a href=&quot;HW7-solu#行满秩矩阵的一个例子&quot;&gt;HW7&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以此为契机, 尝试完成圆盘定理的练习题 (P5-1, 2, 3, 6 与 P6-2, 3, 4.):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-25-%E5%9C%86%E7%9B%98%E5%AE%9A%E7%90%86.pdf&quot;&gt;习题&lt;/a&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-25-%E5%9C%86%E7%9B%98%E5%AE%9A%E7%90%86%20(%E8%A7%A3%E7%AD%94).pdf&quot;&gt;解答&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          <pubDate>2025-11-25T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW17</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW17</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Exersice Class 10</title>
           <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
 
