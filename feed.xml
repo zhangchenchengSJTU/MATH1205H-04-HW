@@ -74,7 +74,21 @@
   &lt;ul&gt;
     &lt;li&gt;若数域上的多项式取值恒为 $0$, 则该多项式为零多项式.&lt;/li&gt;
   &lt;/ul&gt;
-  &lt;p&gt;上述证明对有限域不再适用, 但可以通过域扩张的方法给出替代证明. 如不嫌麻烦, 也可以使用初等因子组 (smith 标准型).&lt;/p&gt;
+  &lt;p&gt;上述证明对有限域不再适用, 但可以通过域扩张的方法给出替代证明. 如不嫌麻烦, 也可以使用初等因子组 (Smith 标准型).&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;若数域上矩阵 $\binom{A \ O}{O \ A}$ 与 $\binom{B \ O}{O \ B}$ 相似, 则 $A$ 与 $B$ 相似.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;由 Jordan 型, 这个结论在 $\mathbb C$ 上成立, 从而在 $\mathbb F$ 上成立.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;给定数域上矩阵 $A$, 则 $A$ 与 $A^T$ 相似.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;由 Jordan 型, 这个结论在 $\mathbb C$ 上成立, 从而在 $\mathbb F$ 上成立.&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-11-23T00:00:00+08:00</pubDate>
