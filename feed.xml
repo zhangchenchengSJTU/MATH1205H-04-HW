@@ -38,6 +38,176 @@
     
       
         <item>
+          <title>HW17-solu</title>
+          <description>&lt;h2 id=&quot;特征根估计-圆盘定理&quot;&gt;特征根估计: 圆盘定理&lt;/h2&gt;
+
+&lt;p&gt;圆盘定理用于估计矩阵的特征根. 以下所有矩阵是 $\mathbb C$ 上方阵.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;设 $A=(a_{ij})$ 是 $n\times n$ 矩阵. 对每个 $i$, 总有&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+|a_{ii}| &gt; \sum_{j\neq i} |a_{ij}|.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;则 $A$ 可逆.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;见 &lt;a href=&quot;HW7-solu#行满秩矩阵的一个例子&quot;&gt;HW7&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(复矩阵的 Gershgorin 圆盘). 给定 $A\in \mathbb C^{n\times n}$. 对 $1\leq k\leq n$, 定义 $A$ 的第 $i$ 个列圆盘为&lt;/p&gt;
+  &lt;p&gt;$$
+D_i= \left\{z: |z-a_{i,i}|\leq \sum_{1\leq j\leq n,\text{ 且 }j\neq i} |a_{i,j}| \right\}.
+$$&lt;/p&gt;
+  &lt;p&gt;以上,&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;圆盘的中心是 $a_{i,i}\in \mathbb C$,&lt;/li&gt;
+    &lt;li&gt;圆盘的半径是 $\sum_{1\leq j\leq n,\text{ 且 }j\neq i} |a_{i,j}|$​.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;矩阵 $\begin{pmatrix}5+i&amp; 3-2i&amp; i\\ 2-i &amp; 7i&amp; -2+i \\ 2i-1 &amp; i &amp; -1-i\end{pmatrix}$, 特征根与 Gershgorin 圆盘分布如下图所示:&lt;/p&gt;
+  &lt;center&gt;&lt;img src=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/svg/G_Disc_Sample.svg&quot; /&gt;&lt;/center&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定复方阵的特征对 $(\lambda, v)$. 假定 $v$ 中第 $i$ 个分量模长最大, 证明 $\lambda \in D_i$​.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;设 $v=(v_1, v_2, \ldots, v_n)^T$. 考虑 $\lambda v = Av$ 的第 $i$ 行:&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\lambda v_i = \sum_{j=1}^n a_{i,j} v_j = a_{i,i} v_i + \sum_{j\neq i} a_{i,j} v_j.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;从而&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+|\lambda - a_{ii}| = \left|\sum_{j\neq i} a_{i,j} \frac {v_j}{v_i}\right| \leq \sum_{j\neq i} |a_{i,j}| \left|\frac {v_j}{v_i}\right| \leq \sum_{j\neq i} |a_{i,j}|.
+\end{equation}$$&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;$\bigcup_{i=1}^nD_i$ 中包含了 $A$​​ 的所有特征值.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;对角矩阵的所有圆盘半径为 $0$. 圆盘定理显然成立.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;请计算&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+    4i+12&amp;6i-2&amp;-2i-6\\
+    6i+8&amp;-2i+10&amp;5i-3\\
+    -14i-2&amp;12i-12&amp;8i+18
+\end{pmatrix}
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;的特征根, 并画出相应的 Gershgorin 圆盘. 以此验证 Gershgorin 圆盘定理.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;若 $A \in \mathbb C^{n \times n}$ 的 $n$ 个圆盘互不相交, 则每个圆盘中有且仅有一个特征根. 从而 $A$ 有 $n$ 个两两不同的特征根. 作为推论, $A$ 可对角化.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;记 $D$ 是 $A$ 的对角线. 考虑连续函数&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+F: [0,1] \to \mathbb C^{n\times n},\quad t\mapsto D + t(A-D).
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;特别地, $F(0) = D$, $F(1) = A$. 直接地, $F(t)$ 的 $n$ 个圆盘不交.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;一个分析学常识 (自行用 $\varepsilon$-$\delta$ 语言证明): 含参多项式 $\det (xI - F(t))$ 在复数域上的 $n$ 个根 $\{x_i(t)\}_{i=1}^n$ 关于 $t$ 连续.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;$D = F(0)$ 的所有圆盘中各有且仅有一个特征根 (即对角线元). 由连续性, 每个圆盘中始终有且仅有一个特征根. 由于圆盘互不相交, 故 $A=F(1)$ 有 $n$ 个两两不同的特征根. 因此 $A$ 可对角化.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem 6&lt;/strong&gt; 以下研究复矩阵的幂方问题.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;找出所有 $2\times 2$ 的复矩阵 $A$, 使得不存在 $B^2=A$.  使用 Jordan 标准型, 将这个结论推广至 $n\times n$​ 阶的复矩阵.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;提供一个计算矩阵级数的一般方法: 
+$$
+   &gt; f(J_n(\lambda))={\begin{pmatrix}f(\lambda )&amp;f'(\lambda )&amp;{\tfrac {f''(\lambda )}{2}}&amp;\cdots &amp;{\tfrac {f^{(n-1)}(\lambda )}{(n-1)!}}\\0&amp;f(\lambda )&amp;f'(\lambda )&amp;\cdots &amp;{\tfrac {f^{(n-2)}(\lambda )}{(n-2)!}}\\\vdots &amp;\vdots &amp;\ddots &amp;\ddots &amp;\vdots \\0&amp;0&amp;0&amp;f(\lambda )&amp;f'(\lambda )\\0&amp;0&amp;0&amp;0&amp;f(\lambda )\end{pmatrix}}.
+   &gt; $$
+假定 $A$ 是 $n$ 阶矩阵, $f$ 是解析函数 (依照收敛的形式幂级数定义的函数). 那么 $f(A)$ 仅与 $f$ 的前 $(n-1)$​ 阶导数相关.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;假定 $A\in \mathbb R^{n\times n}$. 若对一切 $1\leq i\leq n$ 都有 
+$$
+   2|a_{i,i}|&gt; \sum_{i=1}^n |a_{i,j}|,
+   $$
+则 $A$ 是可逆矩阵.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;假定 $A\in \mathbb R^{n\times n}$. 称 $A$ 是有趣的, 当且仅当对一切 $1\leq i\leq n$, 都有
+$$
+   2a_{i,i}&gt; \sum_{i=1}^n |a_{i,j}|.
+   $$
+试用圆盘定理证明以下是单射: 
+$$
+   \text{$n$-阶有趣矩阵}\to \mathbb R^{n\times n},\quad A\mapsto A^2. 
+   $$&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;假定 $A\in \mathbb R^{n\times n}$. 称 $A$ 是奇妙的, 当且仅当对一切 $1\leq i\leq n$, 都有
+$$
+   3|a_{i,i}|&gt; \sum_{i=1}^n |a_{i,j}|.
+   $$
+试用圆盘定理证明以下是单射: 
+$$
+   \text{$n$-阶奇妙矩阵}\to \mathbb R^{n\times n},\quad A\mapsto A^3.
+   $$&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;称一个复方阵 $A$ 是本质正的, 若 $A$ 的所有特征根都是正实数. 试证明: 若 $A$ 与 $B$ 都是本质正的矩阵, 且 $A^2=B^2$, 则 $A=B$.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;提示: 对等式 $A(A-B)=(A-B)(-B)$​ 使用 Problem 3 中的某些结论.&lt;/p&gt;
+
+      &lt;p&gt;特别地, 可以对本质正的条件做一些弱化, 例如本题第 3 小问.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;若 $A$ 与 $B$ 是本质正的, 且 $A^3=B^3$, 则 $A=B$.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;提示: 记 $\omega_{1,2}=\frac {-1\pm \sqrt 3}2$ 是三次单位根, 考虑​​方程组
+$$
+   &gt; \left\{\begin{align*}
+   &gt; A(A^2+\omega_1 AB+\omega_1^2 B^2)&amp;=(A^2+\omega_1 AB+\omega_1^2 B^2)(\omega B);\\[6pt]
+   &gt; A(A^2+\omega_2 AB+\omega_2^2 B^2)&amp;=(A^2+\omega_2 AB+\omega_2^2 B^2)(\omega B).
+   &gt; \end{align*}\right.
+   &gt; $$
+特别地, 可以对本质正的条件做一些弱化, 例如本题第 4 小问.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;证明: 本质正的矩阵有唯一的本质正的 $n$​-次方根.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;作为推论, 对任意本质正的方阵 $A$, 可以唯一地定义 $A$ 的实数次幂, 使得幂函数是连续函数, 且一切 $A^x$ 都是本质正的.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;以此为契机, 尝试完成圆盘定理的练习题 (P5-1, 2, 3, 6 与 P6-2, 3, 4.):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-25-%E5%9C%86%E7%9B%98%E5%AE%9A%E7%90%86.pdf&quot;&gt;习题&lt;/a&gt;,&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-25-%E5%9C%86%E7%9B%98%E5%AE%9A%E7%90%86%20(%E8%A7%A3%E7%AD%94).pdf&quot;&gt;解答&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+          <pubDate>2025-11-25T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW17-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW17-solu</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Exersice Class 10</title>
           <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
 
@@ -345,8 +515,8 @@ V \to V,\quad v \mapsto Bv
   &lt;p&gt;回顾 &lt;a href=&quot;HW5-solu&quot;&gt;HW5&lt;/a&gt; 中的三类初等矩阵, 任取定常数 $a \notin \{0,1\}$.&lt;/p&gt;
   &lt;ul&gt;
     &lt;li&gt;写出 $S_{1,2}$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - S_{1,2})$.&lt;/li&gt;
-    &lt;li&gt;写出 $D_1^a$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - D_1^\lambda)$.&lt;/li&gt;
-    &lt;li&gt;写出 $T_{1,2}^a$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - T_{1,2}^\lambda)$.&lt;/li&gt;
+    &lt;li&gt;写出 $D_1^a$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - D_1^a)$.&lt;/li&gt;
+    &lt;li&gt;写出 $T_{1,2}^a$ 的所有特征对. 对每个特征值 $\lambda$, 写出 $\dim N(\lambda I - T_{1,2}^a)$.&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 
