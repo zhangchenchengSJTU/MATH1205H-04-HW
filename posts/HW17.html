@@ -223,7 +223,32 @@ X = g(A)p_A(A)X + h(A)p_B(A)X = O.
 \end{equation}$$</p>
   <p>是双射. 换言之, 每个 $\mathscr P$-中的矩阵有唯一的 $\mathscr P$ 中的 $n$ 次方根.</p>
   <div class="proof">
-    <p>类似每个正实数有唯一的 $n$ 次正实数根.</p>
+    <p>记上述命题为 $\mathfrak P(n)$. 考虑以下归纳法:</p>
+    <ol>
+      <li>$\mathfrak P(2)$ 正确,</li>
+      <li>若 $\mathfrak P(a)$ 与 $\mathfrak P(b)$ 正确, 则 $\mathfrak P(a\cdot b)$ 正确,</li>
+      <li>对素数 $p$, 若 $\mathfrak P(p-1)$ 正确, 则 $\mathfrak P(p)$ 正确.</li>
+    </ol>
+    <p>显然 1. 与 2. 成立. 下证明 3. 即可. 记 $w$ 是 $p$-次单位根, 则对一切 $1\leq k\leq p-1$,</p>
+    <p>$$
+\begin{align*}
+&A(A^{p-1}+w^k A^{p-2}B +w^{2k}A^{p-3}B^2+\cdots + w^{(p-1)k}B^{p-1})\\
+= \ &(A^{p-1}+w^k A^{p-2}B +w^{2k}A^{p-3}B^2+\cdots + w^{(p-1)k}B^{p-1})(w^k B).
+\end{align*}
+$$</p>
+    <p>因此, $A^{p-1}+w^k A^{p-2}B +w^{2k}A^{p-3}B^2+\cdots + w^{(p-1)k}B^{p-1}=O$. 写作线性方程组, 得</p>
+    <p>$$
+(w^{i\cdot (j-1)})_{1\leq i\leq (p-1), \ 1\leq j\leq p}\cdot \begin{pmatrix}A^{p-1}\\ A^{p-1}B\\\vdots \\ B^{p-1}\end{pmatrix}_{p}
+=\begin{pmatrix}O\\ O\\\vdots \\ O\end{pmatrix}_{p-1}.  
+$$</p>
+    <p>此处, $\{A^{l}B^{p-1-l}\}_{0\leq l\leq p-1}$ 是 $p$ 个未知量. 左侧矩阵 $W_{(p-1)\times p}=(w^{i\cdot (j-1)})$ 形如增广矩阵 $(\mathbf 1 \ \ V)$, $V$ 是 $p$-阶 Vandermonde 方阵 (可逆). 因此, 存在行初等变换, 使得</p>
+    <p>$$
+W=(\mathbf 1  \ \ V)\xrightarrow{\text{行初等变换}} (\mathbf v  \ \ I)\quad (\mathbf v \ \text{唯一, 由反方向的 $ref$ 算法}).
+$$</p>
+    <p>由于行变换不改变列线性关系, 结合 $\mathbf 1\in N(W)$ 知 $\mathbf v= - \mathbf 1$. 此时, 方阵组的最后一个等式是 $A^{p-1}-B^{p-1}=O$. 这证明归纳步骤</p>
+    <ul>
+      <li>对素数 $p$, 若 $\mathfrak P(p-1)$ 正确, 则 $\mathfrak P(p)$ 正确.</li>
+    </ul>
   </div>
 </div>
 
@@ -416,7 +441,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW17-solu" title="PREV: HW17-solu">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/EX10" title="PREV: Exersice Class 10">&gt;&gt;</a>
     
   </div>
 </main>
