@@ -87,6 +87,8 @@ MathJax = {
 
     <h2 id="特征根估计-圆盘定理">特征根估计: 圆盘定理</h2>
 
+<h3 id="圆盘定理的证明">圆盘定理的证明</h3>
+
 <p>圆盘定理用于估计矩阵的特征根. 以下所有矩阵是 $\mathbb C$ 上方阵.</p>
 
 <div class="theorem">
@@ -100,12 +102,130 @@ MathJax = {
   </div>
 </div>
 
-<p>以此为契机, 尝试完成圆盘定理的练习题 (P5-1, 2, 3, 6 与 P6-2, 3, 4.):</p>
+<div class="definition">
+  <p>(复矩阵的 Gershgorin 圆盘). 给定 $A\in \mathbb C^{n\times n}$. 对 $1\leq k\leq n$, 定义 $A$ 的第 $i$ 个列圆盘为</p>
+  <p>$$
+D_i= \left\{z: |z-a_{i,i}|\leq \sum_{1\leq j\leq n,\text{ 且 }j\neq i} |a_{i,j}| \right\}.
+$$</p>
+  <p>以上,</p>
+  <ul>
+    <li>圆盘的中心是 $a_{i,i}\in \mathbb C$,</li>
+    <li>圆盘的半径是 $\sum_{1\leq j\leq n,\text{ 且 }j\neq i} |a_{i,j}|$​.</li>
+  </ul>
+</div>
 
-<ul>
-  <li><a href="https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-25-%E5%9C%86%E7%9B%98%E5%AE%9A%E7%90%86.pdf">习题</a>,</li>
-  <li><a href="https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-25-%E5%9C%86%E7%9B%98%E5%AE%9A%E7%90%86%20(%E8%A7%A3%E7%AD%94).pdf">解答</a>.</li>
-</ul>
+<div class="example">
+  <p>矩阵 $\begin{pmatrix}5+i& 3-2i& i\\ 2-i & 7i& -2+i \\ 2i-1 & i & -1-i\end{pmatrix}$, 特征根与 Gershgorin 圆盘分布如下图所示:</p>
+  <center><img src="https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/svg/G_Disc_Sample.svg" /></center>
+</div>
+
+<div class="problem">
+  <p>给定复方阵的特征对 $(\lambda, v)$. 假定 $v$ 中第 $i$ 个分量模长最大, 证明 $\lambda \in D_i$​.</p>
+</div>
+
+<div class="corollary">
+  <p>$\bigcup_{i=1}^nD_i$ 中包含了 $A$​​ 的所有特征值.</p>
+</div>
+
+<div class="example">
+  <p>对角矩阵的所有圆盘半径为 $0$. 圆盘定理显然成立.</p>
+</div>
+
+<div class="problem">
+  <p>请计算</p>
+  <p>$$\begin{equation}
+\begin{pmatrix}
+    4i+12&6i-2&-2i-6\\
+    6i+8&-2i+10&5i-3\\
+    -14i-2&12i-12&8i+18
+\end{pmatrix}
+\end{equation}$$</p>
+  <p>的特征根, 并画出相应的 Gershgorin 圆盘. 以此验证 Gershgorin 圆盘定理.</p>
+</div>
+
+<div class="theorem">
+  <p>若 $A \in \mathbb C^{n \times n}$ 的 $n$ 个圆盘互不相交, 则每个圆盘中有且仅有一个特征根. 从而 $A$ 有 $n$ 个两两不同的特征根. 作为推论, $A$ 可对角化.</p>
+  <div class="proof">
+    <p>记 $D$ 是 $A$ 的对角线. 考虑连续函数</p>
+    <p>$$\begin{equation}
+F: [0,1] \to \mathbb C^{n\times n},\quad t\mapsto D + t(A-D).
+\end{equation}$$</p>
+    <p>特别地, $F(0) = D$, $F(1) = A$. 直接地, $F(t)$ 的 $n$ 个圆盘不交.</p>
+    <ul>
+      <li>一个分析学常识 (自行用 $\varepsilon$-$\delta$ 语言证明): 含参多项式 $\det (xI - F(t))$ 在复数域上的 $n$ 个根 $\{x_i(t)\}_{i=1}^n$ 关于 $t$ 连续.</li>
+    </ul>
+    <p>$D = F(0)$ 的所有圆盘中各有且仅有一个特征根 (即对角线元). 由连续性, 每个圆盘中始终有且仅有一个特征根. 由于圆盘互不相交, 故 $A=F(1)$ 有 $n$ 个两两不同的特征根. 因此 $A$ 可对角化.</p>
+  </div>
+</div>
+
+<h3 id="与-hamilton-cayley-定理的结合">与 Hamilton Cayley 定理的结合</h3>
+
+<div class="theorem">
+  <p>(Hamilton-Cayley 定理). 设 $A\in \mathbb C^{n\times n}$, 其特征多项式为 $p_A(x)=\det (xI - A)$. 则 $p_A(A)=0$​.</p>
+  <div class="proof">
+    <p>对任意多项式 $f$, 总有 $f(PAP^{-1}) = Pf(A)P^{-1}$. 只需考虑 $A$ 的 Jordan 标准型. 这是显然的.</p>
+  </div>
+  <p>注: 一般域上的 Hamilton-Cayley 定理有以下几种证明方式. 最自然的想法是引入有限域扩张, 使得 $\det(xI - A)$ 能分解成一次因式的乘积, 然后对扩域上的 Jordan 标准型使用类似的证明. 另一种思路是使用伴随矩阵 (adjoint matrix)​ 的概念, 许多教材使用这种证明, 但动机不明. 这一定理的本质是 $\mathbb F^n$ 上的 $(n+1)$-次反对称形式消失, 见<a href="https://www.mathcha.io/editor/9zzq8sn3tL2SVqI63wm4nIp3W50rsPxpdY0tpdL8Z">去年习题课</a>.</p>
+</div>
+
+<div class="proposition">
+  <p>若 $AX = XB$, 且 $p_A(x) := \det(xI-A)$ 与 $p_B(x) := \det (xI - B)$ 互素, 则 $X = O$.</p>
+  <ul>
+    <li>称 $p_A$ 与 $p_B$ 互素, 当且仅当存在多项式 $g$ 与 $h$ 使得 $g(x)p_A(x) + h(x)p_B(x) = 1$​.</li>
+  </ul>
+  <div class="proof">
+    <p>由特征多项式互素, $A$ 与 $B$ 至少一者可逆, 不妨假定为 $A$. 由归纳, 对任意多项式 $f$, 总有 $f(A)X = X f(B)$. 将 $f$ 取作 $B$ 的特征多项式, 得 $p_B(A)X = O$. 由互素, 存在 $g$ 与 $h$ 使得</p>
+    <p>$$\begin{equation}
+X = g(A)p_A(A)X + h(A)p_B(A)X = O.
+\end{equation}$$</p>
+  </div>
+</div>
+
+<div class="corollary">
+  <p>若 $A$ 与 $B$ 的特征多项式互素, 则对任意 $M$, $\binom{A \ M}{O \ B}$ 与 $\binom{A \ O}{O \ B}$ 总是相似的.</p>
+  <div class="proof">
+    <p>由特征多项式互素, 线性映射</p>
+    <p>$$\begin{equation}
+\mathbb C^{m\times n} \to \mathbb C^{m\times n},\quad X\mapsto AX - XB
+\end{equation}$$</p>
+    <p>是单射, 从而是满射. 假定 $M$ 的原像是 $P$, 则</p>
+    <p>$$\begin{equation}
+\binom{A \ O}{O \ B}\cdot \binom{I \ P}{O \ I} = \binom{I \ P}{O \ I} \cdot \binom{A \ M}{O \ B}.
+\end{equation}$$</p>
+  </div>
+</div>
+
+<div class="example">
+  <p>考虑以下主对角占优的复矩阵构成的集合</p>
+  <p>$$\begin{equation}
+\mathscr S := \{A \in \mathbb C^{n \times n} \mid a_{ii} > \sum_{j\neq i} |a_{ij}|,\ \forall 1\leq i\leq n\}.
+\end{equation}$$</p>
+  <p>依照圆盘定理, $A \in \mathscr S$ 的所有特征根都有正的实部. <br /> 对任意 $A,B \in \mathscr S$, 若 $A^2 = B^2$, 则 $A=B$.</p>
+  <ul>
+    <li>证明: $A$ 与 $B$ 的特征根不同, 从而 $AX=X(-B)$ 只有零解. 有题设, $A(A-B)=(A-B)(-B)$. 从而 $A-B = O$.</li>
+  </ul>
+</div>
+
+<p>仿照上述证明, 试解决下列问题.</p>
+
+<div class="problem">
+  <p>定义集合</p>
+  <p>$$\begin{equation}
+\mathscr T:= \{A \in \mathbb C^{n \times n} \mid 2|a_{ii}| > \sum_{j\neq i} |a_{ij}|,\ \forall 1\leq i\leq n\}.
+\end{equation}$$</p>
+  <p>对任意 $A,B\in\mathscr S$, 若 $A^3=B^3$, 则 $A=B$.</p>
+</div>
+
+<div class="theorem">
+  <p>记 $\mathscr P$ 是特征值全为正实数的复矩阵构成的集合. 则对任意 $n$,</p>
+  <p>$$\begin{equation}
+\mathscr P \to \mathscr P, \quad X \mapsto X^n
+\end{equation}$$</p>
+  <p>是双射. 换言之, 每个 $\mathscr P$-中的矩阵有唯一的 $\mathscr P$ 中的 $n$ 次方根.</p>
+  <div class="proof">
+    <p>类似每个正实数有唯一的 $n$ 次正实数根.</p>
+  </div>
+</div>
 
   </article>
 
@@ -210,6 +330,40 @@ document.addEventListener('DOMContentLoaded', function() {
       </a>
     </div>
   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#圆盘定理的证明">
+        <span class="toc-number">1.1.</span>
+        <span class="toc-title">圆盘定理的证明</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#与-hamilton-cayley-定理的结合">
+        <span class="toc-number">1.2.</span>
+        <span class="toc-title">与 Hamilton Cayley 定理的结合</span>
+      </a>
+    </div>
+  
 </nav>
   </div>
 
@@ -262,7 +416,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/EX10" title="PREV: Exersice Class 10">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW17-solu" title="PREV: HW17-solu">&gt;&gt;</a>
     
   </div>
 </main>
