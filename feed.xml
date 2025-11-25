@@ -59,6 +59,14 @@
   &lt;li&gt;Reason: 编号错误.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;Page 14, Line 1&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Original: $V_\mu = N\left((\lambda I - A)^n \right)$;&lt;/li&gt;
+  &lt;li&gt;Corrected: $V_\mu = N\left((\mu I - A)^n \right)$;&lt;/li&gt;
+  &lt;li&gt;Reason: 抄写错误.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;思考题&quot;&gt;思考题&lt;/h2&gt;
 
 &lt;div class=&quot;example&quot;&gt;
