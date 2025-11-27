@@ -575,7 +575,7 @@ J_n (\lambda) =
 &lt;/div&gt;
 
 &lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;请写出以下矩阵的 Jordan 标准型 (或写出所有的 Jordan 块).&lt;/p&gt;
+  &lt;p&gt;以下 $A$ 是幂零矩阵. 请写出以下矩阵的 Jordan 标准型 (或写出所有的 Jordan 块).&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;$A$ 是 $3$ 阶矩阵. 满足 $A^2 \neq O$, $A^3 = O$.&lt;/li&gt;
     &lt;li&gt;$A$ 是 $4$ 阶矩阵. 满足 $r(A) = 2$, $A^2 = O$.&lt;/li&gt;
