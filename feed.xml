@@ -7,6 +7,244 @@
     
       
         <item>
+          <title>HW18</title>
+          <description>&lt;h2 id=&quot;空间的正交性&quot;&gt;空间的正交性&lt;/h2&gt;
+
+&lt;h3 id=&quot;euclidean-距离&quot;&gt;Euclidean 距离&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(距离函数). 集合 $X$ 上的一种距离函数是一个二元映射&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+d : X \times  X \to [0,+\infty),\quad (x,y) \mapsto d(x,y)
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;且满足以下三条性质:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;对任意 $x,y \in X$, $d(x,y) = 0$ 当且仅当 $x=y$;&lt;/li&gt;
+    &lt;li&gt;对任意 $x,y \in X$, $d(x,y) = d(y,x)$;&lt;/li&gt;
+    &lt;li&gt;对任意 $x,y,z \in X$, $d(x,z) \leq d(x,y) + d(y,z)$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;集合 $\mathbb R^n$ 上存在很多种类的距离函数. 最常用的是&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\mathbb R^n \times \mathbb R^n \to [0,+\infty),\quad (x,y) \mapsto \sqrt{\sum_{i=1}^n (x_i - y_i)^2}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;容易验证这是一个距离函数. 我们将这一函数称作 Euclidean 距离函数.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;对大小相同的列向量 $u$ 与 $v$, 记 $\braket{x,y} := x^Ty$. 记 $\|x\| := \sqrt{\braket{x,x}}$ 是向量 $x$ 的模长.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;选定 $\mathbb R^n$. 试验证以下式子:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;对任意 $x$, 函数 $\braket{x,-} : \mathbb R^n \to \mathbb R,\quad y \mapsto \braket{x,y}$ 是线性的;&lt;/li&gt;
+    &lt;li&gt;对任意 $y$, 函数 $\braket{-,y} : \mathbb R^n \to \mathbb R,\quad x \mapsto \braket{x,y}$ 是线性的;&lt;/li&gt;
+    &lt;li&gt;$\braket{x,y} = \frac{1}{2}(\|x+y\|^2 - \|x\|^2 - \|y\|^2)$;&lt;/li&gt;
+    &lt;li&gt;$\braket{x,y} = \frac{1}{4}(\|x+y\|^2 - \|x-y\|^2)$;&lt;/li&gt;
+    &lt;li&gt;$2\|x\|^2 + 2\|y\|^2 = \|x+y\|^2 + \|x-y\|^2$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;高中题.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;证明以下等价:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\braket{x,y} = 0$;&lt;/li&gt;
+    &lt;li&gt;$\|u\| \leq \|u + \lambda v\|$ 对任意 $\lambda \in \mathbb R$ 成立.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;并说明其几何意义.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;正交补&quot;&gt;正交补&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(正交补). 选定 $\mathbb R^n$, 考虑 Euclidean 距离函数 $\braket{-,-}$. 定义子空间 $V$ 的正交补为&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+V^\perp := \{x \in \mathbb R^n \mid \braket{x,y} = 0,\ \forall y \in V\}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;显然 $V^\perp$ 也是线性子空间.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;对任意子空间 $V$, 总有 $\mathbb R^n = V \oplus V^\perp$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;先证明 $V \cap (V^\perp) = 0$. 任取 $x \in V \cap (V^\perp)$, 则有 $\braket{x,x} = 0$. 因此 $x = 0$. &lt;br /&gt; 再证明 $\dim V + \dim V^\perp = n$. 假定 $V$ 是列满秩矩阵 $M_{n \times r}$ 的列空间, 则 $V^\perp = N(M^T)$. 最后使用线性代数基本定理即可. &lt;br /&gt; 综上, $\mathbb R^n = V \oplus V^\perp$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;将四大基本空间统一写作列向量. 矩阵的零空间 $N(A)$ 与行空间 $C(A^T)$ 互为正交补, 左零空间 $N(A^T)$ 与列空间 $C(A)$ 互为正交补.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;以下映射是映射&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+(-)^\perp :\quad \text{$\mathbb R$ 的子空间} \to  \text{$\mathbb R$ 的子空间},\quad V \mapsto V^\perp.
+\end{equation}$$&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;只需证明 $((-)^\perp)^\perp$ 是恒同映射. 由定义知 $V \subseteq (V^\perp)^\perp$. 由维数知 $\dim V = \dim (V^\perp)^\perp$. 从而 $V = (V^\perp)^\perp$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;假定 $U$ 与 $V$ 是 $\mathbb R^n$ 的子空间. 证明 $(U \cap V)^\perp = (U^\perp) + (V^\perp)$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;例子-farkas-理论&quot;&gt;例子: Farkas 理论&lt;/h3&gt;
+
+&lt;p&gt;Farkas 理论可简单视作 Fredholm 理论在 Euclidean 空间上的推广.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Fredholm 二择). 对任意域 $\mathbb F$, 以下有且仅有一者发生:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$Ax = b$ 有解,&lt;/li&gt;
+    &lt;li&gt;$y^T (A \mid b) = (0^T \mid 1)$ 有解.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;下证明 $Ax = b$ 无解当且仅当 $y^T (A \mid b) = (0^T \mid 1)$ 有解. 记 $ref(A \mid b) = (ref(A) \mid b')$, 则&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;$y^T (A \mid b) = (0^T \mid 1)$ 有解, 当且仅当&lt;/li&gt;
+      &lt;li&gt;$z^T (ref(A) \mid b') = (0^T \mid 1)$ 有解,&lt;/li&gt;
+      &lt;li&gt;当且仅当 $b'$ 在 $ref(A)$ 的零行所在行有非零取值,&lt;/li&gt;
+      &lt;li&gt;当且仅当 $r((A \mid b)) &gt; r(A)$,&lt;/li&gt;
+      &lt;li&gt;当且仅当 $Ax = b$ 无解.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;p&gt;简单地说, 从横, 竖两种方向观察阶梯形即可.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以下选定实数域上的矩阵与向量. 约定:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;称向量 $v$ 是非负的, 若 $v$ 中每一项都是非负的, 记作 $v \geq 0$,&lt;/li&gt;
+  &lt;li&gt;称向量 $v$ 是正的, 若 $v$ 中每一项都是正的, 记作 $v &gt; 0$,&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Farkas 二择). (试比较 Fredholm 二择的表述). 以下有且仅有一者发生:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$Ax = b$ 有非负解,&lt;/li&gt;
+    &lt;li&gt;存在非正向量 $u$ 使得 $y^T (A \mid b) = (u^T \mid 1)$ 有解.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;显然两者无法同时成立. 只需证明, 若 1. 不成立, 则 2. 成立. 实际上, 可以构造具体的 $y$. &lt;br /&gt; &lt;strong&gt;Step 1&lt;/strong&gt; 记 $S= \{A y \mid y \geq 0\}$. 由于 1. 不成立, 得 $b \notin S$. 考虑 $b$ 与 $S$ 中各点的距离, 下证明存在 $x_0 \in S$ 使得 $b$ 到 $x_0$ 距离最短, 且 $x_0$ 唯一.&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;(存在性). 试回忆数学分析: $\inf_{x\in S}\|x-b\|$ 存在, 但 $\min_{x\in S}\|x-b\|$ 未必能定义. 记 $\inf_{x\in S}\|x-b\| = D$, 则对任意 $n$, 闭球 $B(b,D+n^{-1})$ 与 $S$ 的交 $B(b,D+n^{-1}) \cap S$ 是非空闭集. 由闭集套定理, $\bigcap_{n \geq 1} (B(b,D+n^{-1}) \cap S) \neq \varnothing$. 该集合中的点即为所求.&lt;/li&gt;
+      &lt;li&gt;(唯一性). 假定存在 $x_0, x_0' \in S$ 符合条件, $x_0 \neq x_0'$. 容易发现 $\frac{1}{2}(x_0 + x_0') \in S$. 由极化恒等式, $\frac{1}{2}(x_0 + x_0')$ 距 $b$ 更近, 矛盾.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;&lt;strong&gt;Step 2&lt;/strong&gt; 由以上, 可微函数 $\|Ax - b\|^2$ 在 $x = x_0$ 处取最小值. 对 $1 \leq k \leq n$, 有以下两种情况:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;(Case I). $(x_0)_k &gt; 0$, 且 $\frac{\partial}{\partial x_k}|_{x_k = (x_k)_0}(\|Ax-b\|^2) = 0$;&lt;/li&gt;
+      &lt;li&gt;(Case II). $(x_0)_k = 0$, 且 $\frac{\partial}{\partial x_k}|_{x_k = (x_k)_0}(\|Ax-b\|^2) \geq 0$.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;整理得以下结论: 式 $(x_0)_k$ 与 $\braket{Ax_0-b, Ae_k}$ 中恰好一者为 $0$, 另一者为负. &lt;br /&gt; &lt;strong&gt;Step 3&lt;/strong&gt; 记 $y = (b-Ax_0)$. 由 &lt;strong&gt;Step 2&lt;/strong&gt; 得 $y^TA \leq 0$. 另一方面,&lt;/p&gt;
+    &lt;p&gt;$$\begin{aligned}
+y^Tb &amp;= \braket{b-Ax_0,b}\\
+&amp;= \braket{b-Ax_0,b-Ax_0} + \braket{b-Ax_0,Ax_0}\\
+&amp;= \|b-Ax_0\|^2 + \sum_{i=1}^n (x_0)_i \braket{b-Ax_0,Ae_i}\\
+&amp;&gt; 0 + 0 = 0.
+\end{aligned}$$&lt;/p&gt;
+    &lt;p&gt;对 $y$ 乘以适当的常数, 得到 $y^T (A \mid b) = (u^T \mid 1)$, 其中 $u \leq 0$.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;该定理存在 analysis-free 的简单证明, 但需要凸优化学科的知识, 此处从略.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;Farkas 二择的自然语言表述如下: $A$-列向量的非负线性组合无法表示 $b$, 当且仅当这一方程组能通过行变换得到&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+c_1 x_1 + c_2 x_2 + \cdots + c_n x_n = d,\quad d &gt; 0,\quad c_i \leq 0.
+\end{equation}$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;对任意子空间 $U \subseteq \mathbb R^n$, 有且仅有一者成立:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;存在非负向量 $x \in U$, $x$ 的最后一项为正数;&lt;/li&gt;
+    &lt;li&gt;存在非负向量 $x \in U^\perp$, $x$ 的最后一项为正数.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;若 $U^\perp$ 中的任意非零向量既有正项也有负项, 则 $U^\perp$ 中存在正的向量.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;正交矩阵&quot;&gt;正交矩阵&lt;/h2&gt;
+
+&lt;h3 id=&quot;基本定义&quot;&gt;基本定义&lt;/h3&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(正交矩阵). 矩阵 $Q$ 称作正交矩阵, 若线性映射&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\varphi : \mathbb R^n \to \mathbb R^n,\quad x \mapsto Qx
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;满足 $\|x\| = \|Qx\|$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;由定义, 旋转矩阵是正交的.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;找到所有 $3$ 阶正交矩阵 $Q$, 使得 $Q\left(\substack{1\\2\\2}\right)=\left(\substack{3\\0\\0}\right)$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;实方阵 $Q$ 是正交的, 当且仅当 $Q^TQ = I$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;$\|x\| = \|Qx\|$ 恒成立, 当且仅当&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+0 = \braket{Qx,Qx}-\braket{x,x} = x^T (Q^TQ - I) x,\quad \forall x.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;对实对称矩阵 $A$, $A=O$ 当且仅当 $x^TAx = 0$ 恒成立.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;特别注意: 有些地方将满足 $Q^TQ = \lambda I$ 的矩阵也称作正交矩阵.&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;假定所有矩阵是 $\mathbb R^{n \times n}$ 中的. 以下是一些基本事实.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;正交矩阵的行列式是 $\pm 1$.&lt;/li&gt;
+    &lt;li&gt;$Q$ 是正交矩阵, 当且仅当 $Q^{-1} = Q^T$.&lt;/li&gt;
+    &lt;li&gt;两个正交矩阵相乘还是正交矩阵.&lt;/li&gt;
+    &lt;li&gt;正交矩阵的转置也是正交矩阵.&lt;/li&gt;
+    &lt;li&gt;正交矩阵的逆矩阵也是正交矩阵.&lt;/li&gt;
+    &lt;li&gt;正交矩阵的 $\mathrm{Adj}$-矩阵也是正交矩阵.&lt;/li&gt;
+    &lt;li&gt;置换矩阵是正交矩阵.&lt;/li&gt;
+    &lt;li&gt;若 $B=-B^T$ 则 $I+B$ 可逆, 且 $(I-B)(I+B)^{-1}$ 是正交矩阵.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;假定 $Q$ 是正交矩阵. 记 $Q'$ 是 $Q$ 左上方的 $(k\times k)$-子式. 假定 $\lambda$ 是 $Q'$ 在复数域上的特征值, 则 $|\lambda| \leq 1$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;例子-实矩阵的正交对角化&quot;&gt;例子: 实矩阵的正交对角化&lt;/h3&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定实对称矩阵 $A$. 试依次证明以下命题, 或直接证明 4..&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;试证明 $A$ 的 Jordan 标准型是对角矩阵, 且对角元是实数.&lt;/li&gt;
+    &lt;li&gt;证明存在实矩阵 $P$ 使得 $PAP^{-1}$ 是对角矩阵 $D$.&lt;/li&gt;
+    &lt;li&gt;接上问. 若 $D$ 的特征值两两不同, 则存在正交矩阵 $Q$ 使得 $Q^{-1}AQ = D$.&lt;/li&gt;
+    &lt;li&gt;接上问. 若不对 $D$ 的特征值作任何要求, 则仍存在正交矩阵 $Q$ 使得 $Q^{-1}AQ = D$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-11-27T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW18</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW18</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>HW17</title>
           <description>&lt;h2 id=&quot;特征根估计-圆盘定理&quot;&gt;特征根估计: 圆盘定理&lt;/h2&gt;
 
