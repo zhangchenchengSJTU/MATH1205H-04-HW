@@ -91,7 +91,7 @@ V^\perp := \{x \in \mathbb R^n \mid \braket{x,y} = 0,\ \forall y \in V\}.
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;proposition&quot;&gt;
+&lt;div class=&quot;problem&quot;&gt;
   &lt;p&gt;假定 $U$ 与 $V$ 是 $\mathbb R^n$ 的子空间. 证明 $(U \cap V)^\perp = (U^\perp) + (V^\perp)$.&lt;/p&gt;
 &lt;/div&gt;
 
@@ -188,10 +188,6 @@ c_1 x_1 + c_2 x_2 + \cdots + c_n x_n = d,\quad d &gt; 0,\quad c_i \leq 0.
 
 &lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;由定义, 旋转矩阵是正交的.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;找到所有 $3$ 阶正交矩阵 $Q$, 使得 $Q\left(\substack{1\\2\\2}\right)=\left(\substack{3\\0\\0}\right)$.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;lemma&quot;&gt;
