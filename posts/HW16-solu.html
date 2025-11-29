@@ -9,7 +9,7 @@
 
 
 
-  <title>HW16
+  <title>HW16-solu
     ·
     Jekyll Latex</title>
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW16">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW16-solu">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,7 +75,7 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW16</h1>
+      <h1>HW16-solu</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
@@ -105,6 +105,26 @@ D: C(\mathbb R) \to C(\mathbb R),\quad f \mapsto f'
 
 <div class="problem">
   <p>假定线性空间维数有限. 若线性映射 $f$ 在某组基下有矩阵表示 $A$, 则 $A$ 的特征值等于 $f$ 的特征值.</p>
+  <div class="proof">
+    <p>取定</p>
+    <p>$$\begin{equation}
+(f(u_1), f(u_2), \ldots , f(u_n)) = (u_1, u_2, \ldots , u_n)A.
+\end{equation}$$</p>
+    <p>若 $(\lambda, v)$ 是 $A$ 的特征对, 则</p>
+    <p>$$\begin{equation}
+f((u_1, u_2, \ldots , u_n) v) = (f(u_1), f(u_2), \ldots , f(u_n)) v = (u_1, u_2, \ldots , u_n)Av = \lambda (u_1, u_2, \ldots , u_n)v.
+\end{equation}$$</p>
+    <p>若 $(\lambda, u)$ 是 $f$ 的特征对, 则存在系数向量 $y$ 使得</p>
+    <p>$$\begin{equation}
+u = (u_1, u_2, \ldots , u_n)y.
+\end{equation}$$</p>
+    <p>此时</p>
+    <ul>
+      <li>$f(u) = (f(u_1), f(u_2), \ldots , f(u_n)) y = (u_1, u_2, \ldots , u_n)Ay$,</li>
+      <li>$f(u) = \lambda u = (u_1, u_2, \ldots , u_n) \lambda y$.</li>
+    </ul>
+    <p>这说明 $ (u_1, u_2, \ldots , u_n)(Ay - \lambda y) = 0$, 即 $Ay = \lambda y$.</p>
+  </div>
 </div>
 
 <h2 id="相似上三角化的应用">相似上三角化的应用</h2>
@@ -128,6 +148,13 @@ D: C(\mathbb R) \to C(\mathbb R),\quad f \mapsto f'
   <ul>
     <li>提示: 此题一两句话就能说明白, 请不要想复杂.</li>
   </ul>
+  <div class="proof">
+    <p>存在整数矩阵 $A$ 使得 $\det (xI - A) = p(x)$, 取相似上三角化 $A = PUP^{-1}$. 由 $\det (xI - A) = \det (xI - U)$, 则 $U$ 的对角元是 $(x_1,\ldots, x_n)$. 从而, $f(U)$ 的对角元是 $(f(x_1), f(x_2), \ldots, f(x_n))$. 注意到</p>
+    <p>$$\begin{equation}
+(x-f(x_1))(x-f(x_2))\cdots (f-f(x_n)) = \det(xI - f(U)) = \det (xI - f(A))
+\end{equation}$$</p>
+    <p>是整系数多项式.</p>
+  </div>
 </div>
 
 <h2 id="jordan-标准型">Jordan 标准型</h2>
@@ -158,14 +185,14 @@ J_n (\lambda) =
   <p>幂零矩阵的秩与 Jordan 块. 假定 $A$ 是幂零矩阵, 约定 $A^0 = I$. 记 $r_k = r(A^k)$, 可以证明 $\{r_k - r_{k+1}\}$ 是. 以下结论是直接的:</p>
   <ul>
     <li>$r_0 - r_1$ 是 Jordan 块总数. 因为两者都等于零空间维数;</li>
-    <li>$r_1 - r_2$ 是阶数 $\geq 2$ 的 Jordan 块总数;</li>
-    <li>$r_k - r_{k+1}$ 是阶数 $\geq k+1$ 的 Jordan 块总数.</li>
+    <li>$r_1 - r_2$ 是阶数 $\geq 1$ 的 Jordan 块总数;</li>
+    <li>$r_k - r_{k+1}$ 是阶数 $\geq k$ 的 Jordan 块总数.</li>
   </ul>
   <p>因此,</p>
   <ul>
-    <li>$r_0 - 2r_1 + r_2$ 是 Jordan 块 $J_1(0)$ 的数量;</li>
-    <li>$r_1 - 2r_2 + r_3$ 是 Jordan 块 $J_2(0)$ 的数量;</li>
-    <li>$r_k - 2r_{k+1} + r_{k+2}$ 是 Jordan 块 $J_{k+1}(0)$ 的数量.</li>
+    <li>$r_0 - 2r_1 + r_2$ 是 $0$ 阶 Jordan 块数量;</li>
+    <li>$r_1 - 2r_2 + r_3$ 是 $1$ 阶 Jordan 块数量;</li>
+    <li>$r_k - 2r_{k+1} + r_{k+2}$ 是 $k$ 阶 Jordan 块数量.</li>
   </ul>
 </div>
 
@@ -177,6 +204,9 @@ J_n (\lambda) =
     <li>$A$ 是 $5$ 阶矩阵. 满足 $r(A) = 2$, $A^2 \neq O$.</li>
     <li>$A$ 是 $7$ 阶矩阵. 满足 $r(A^2) - r(A^3) > r(A^3) - r(A^4) = 1$.</li>
   </ol>
+  <div class="proof">
+    <p>(1). 由 $A^2 \neq 0$, Jordan 块只能是 $J_3(0)$. <br /> (2). 由 $r(A) = 2$ 知有两个 Jordan 块. 由 $A^2 = O$, 这两个 Jordan 块都是 $J_2(0)$. <br /> (3). 由 $r(A) = 2$ 知有三个 Jordan 块. 由 $A^2 \neq O$, 这三个 Jordan 块中有阶数 $\geq 3$ 的, 从而这三个 Jordan 块是 $J_1(0)$, $J_1(0)$ 与 $J_{3}(0)$. <br /> (4). 直接地, 有且仅有一个 $3$ 阶 Jordan 块. 由 $r(A^3) \neq 0$, 存在阶数大于等于 $4$ 的 Jordan 块. 答案只能是 $J_3(0)$ 与 $J_4(0)$.</p>
+  </div>
 </div>
 
 <h3 id="根空间">根空间</h3>
@@ -190,7 +220,7 @@ V_\lambda := \{v \mid \exists n \in \mathbb N, \ (\lambda I - A)^n v = 0\}.
 </div>
 
 <div class="example">
-  <p>直接地, $V_\lambda \neq 0$ 当且仅当 $\lambda$ 是特征根.</p>
+  <p>直接地, $V_\lambda = 0$ 当且仅当 $\lambda$ 是特征根.</p>
 </div>
 
 <div class="example">
@@ -217,6 +247,13 @@ V_\lambda \to V_\lambda, \quad x \mapsto (\mu I - A)x
   <ul>
     <li>提示: 乘积式 $(\lambda I - A)(\mu I - A)$ 是一个幂零矩阵. 由上三角化即可证明.</li>
   </ul>
+  <div class="proof">
+    <p>下证明 $\mathbb F^n = V_\lambda + V_\mu$ 与 $V_\lambda \cap V_\mu = 0$.</p>
+    <ul>
+      <li>($\mathbb F^n = V_\lambda + V_\mu$). 任取 $u \in \mathbb F^n$. 直接地, $(\lambda I - A)^n(\mu I - A)^n u = 0$, 因此 $(\mu I - A)^n u \in V_\lambda$. 由引理, 左乘 $(\mu I - A)^n$ 是 $V_\lambda$ 到自身的双射, 从而存在 $u_1 \in V_\lambda$ 使得 $(\mu I - A)^nu_1 = (\mu I - A)^nu$. 我们得到 $u = u_1 + (u - u_1) \in V_\lambda + V_\mu$.</li>
+      <li>($V_\lambda \cap V_\mu = 0$). 假定有非零向量 $x \in V_\lambda \cap V_\mu$. 由 $x \in V_\lambda$ 与引理, 得 $(\mu I - A)^n x \neq 0$, 矛盾.</li>
+    </ul>
+  </div>
 </div>
 
 <div class="corollary">
@@ -538,13 +575,13 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/EX10" title="NEXT: Exersice Class 10">&lt;&lt;</a>
+      <a class="next" href="/MATH1205H-04-HW/posts/HW16" title="NEXT: HW16">&lt;&lt;</a>
       <span>&middot;</span>
     
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW16-solu" title="PREV: HW16-solu">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW15" title="PREV: HW15">&gt;&gt;</a>
     
   </div>
 </main>
