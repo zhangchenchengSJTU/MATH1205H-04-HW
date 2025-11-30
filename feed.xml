@@ -21,7 +21,21 @@
 &lt;h2 id=&quot;思考题&quot;&gt;思考题&lt;/h2&gt;
 
 &lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;给定矩阵&lt;/p&gt;
+  &lt;p&gt;若矩阵 $A \in \mathbb F^{n \times n}$ 存在 Jordan 标准型, 求&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\dim \{X \in \mathbb F^{n \times } \mid AX = XA\}
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;的所有可能值.&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;试回顾习题课中的构造. 记 $\sigma (A)$ 是 $A$ 的特征值集合, $\mathcal{J}_\lambda$ 是 $A$ 的特征值为 $\lambda$ 的 Jordan 块集合, 则&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\sum_{\lambda \in \sigma (A)} \sum _{M \in \mathcal{J}_\lambda}\sum_{N \in \mathcal{J}_\lambda} \min \{\text{$M$ 的阶, $N$ 的阶数}\}.
+\end{equation}$$&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;上式的最小值是 $n$. 假定存在 Jordan 标准型, 则上式取等当且仅当 $A$ 的所有 Jordan 块特征值互异 (无论大小).&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-11-30T00:00:00+08:00</pubDate>
