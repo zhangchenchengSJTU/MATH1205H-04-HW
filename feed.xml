@@ -12,61 +12,13 @@
 
 &lt;p&gt;录制：30-Nov-25 线性代数习题课&lt;/p&gt;
 
-&lt;p&gt;日期：2025-11-23 18:00-21:00&lt;/p&gt;
+&lt;p&gt;日期：2025-11-30 18:00-21:00&lt;/p&gt;
 
-&lt;p&gt;录制文件：&lt;a href=&quot;https://pan.sjtu.edu.cn/web/share/87fefdd74408890c9ad3dc8a9f9d1dee&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;录制文件：&lt;a href=&quot;https://pan.sjtu.edu.cn/web/share/8acc5ebe22babca71297b57169def178&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-23-%E7%AC%AC%E5%8D%81%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;typos&quot;&gt;Typos&lt;/h2&gt;
-
-&lt;p&gt;Page 7, Line 4&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Original: $(n-i,n-j)$;&lt;/li&gt;
-  &lt;li&gt;Corrected: $(n+1-i,n+1-j)$;&lt;/li&gt;
-  &lt;li&gt;Reason: 编号错误.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Page 14, Line 1&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Original: $V_\mu = N\left((\lambda I - A)^n \right)$;&lt;/li&gt;
-  &lt;li&gt;Corrected: $V_\mu = N\left((\mu I - A)^n \right)$;&lt;/li&gt;
-  &lt;li&gt;Reason: 抄写错误.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-30-%E7%AC%AC%E5%8D%81%E4%B8%80%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;思考题&quot;&gt;思考题&lt;/h2&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;假定 $A, B \in \mathbb Q$, 存在复矩阵 $P$ 使得 $P^{-1} A P = B$. 证明存在有理矩阵 $Q$ 使得 $Q^{-1} A Q = B$.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;将 $\mathbb C$ 视作 $\mathbb Q$-线性空间, 则存在一个线性无关组 $\{w_i\}_{i=1}^n$ 使得 $P = \sum_{i=1}^n w_i Q_i$, 其中 $Q_i$ 均为有理矩阵.&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;一个显然的事实: 如果 $f(x_1, x_2, \ldots, x_n)$ 是含有 $n$ 个变元的有理系数多项式. 若 $f(z_1, z_2, \ldots, z_n) = 0$ 对任意复数 $z_i$ 都成立, 则 $f$ 是零多项式.&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;记 $f(x_1, x_2, \ldots, x_n) := \det (\sum_{i=1}^n x_i Q_i)$, 显然这不是零多项式. 从而存在一组非零有理数 $(a_1, a_2, \ldots, a_n)$ 使得 $f(a_1, a_2, \ldots, a_n) \neq 0$. $Q := \sum_{i=1}^n a_i Q_i$ 即为所求.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;p&gt;特别注释: 此题使用了一个事实&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;若数域上的多项式取值恒为 $0$, 则该多项式为零多项式.&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;p&gt;上述证明对有限域不再适用, 但可以通过域扩张的方法给出替代证明. 如不嫌麻烦, 也可以使用初等因子组 (Smith 标准型).&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;corollary&quot;&gt;
-  &lt;p&gt;若数域上矩阵 $\binom{A \ O}{O \ A}$ 与 $\binom{B \ O}{O \ B}$ 相似, 则 $A$ 与 $B$ 相似.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;由 Jordan 型, 这个结论在 $\mathbb C$ 上成立, 从而在 $\mathbb F$ 上成立.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;corollary&quot;&gt;
-  &lt;p&gt;给定数域上矩阵 $A$, 则 $A$ 与 $A^T$ 相似.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;由 Jordan 型, 这个结论在 $\mathbb C$ 上成立, 从而在 $\mathbb F$ 上成立.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
 </description>
           <pubDate>2025-11-30T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/EX11</link>
