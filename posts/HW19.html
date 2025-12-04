@@ -361,17 +361,6 @@ v_{k+1} := u - \sum_{i=1}^k \frac{\braket {u,v_i}}{\|v_i\|^2} v_i
   <p>也可以从右往左正交化. 从而任意矩阵是某个正交矩阵与下三角矩阵的乘积. 也可以对行向量正交化, 从而任意矩阵是某个下三角矩阵与正交矩阵的乘积, 也是某个上三角矩阵与正交矩阵的乘积.</p>
 </div>
 
-<div class="corollary">
-  <p>(奇异值分解). 任意矩阵 $A \in \mathbb R^{m \times n}$ 可分解作</p>
-  <p>$$\begin{equation}
-A = U \Sigma V,
-\end{equation}$$</p>
-  <p>其中 $U \in \mathbb R^{m \times m}$ 与 $V \in \mathbb R^{n \times n}$ 是正交矩阵, $\Sigma \in \mathbb R^{m \times n}$ 在 $(i,i)$ 个分量取值 $\geq 0$, 其余分量为 $0$. 这一分解称作 $A$ 的奇异值分解.</p>
-  <div class="proof">
-    <p>先作正交化 $A = UL$ ($L$ 下三角), 对 $L$ 的行向量从上至下地正交化时, 得到的结果是对角矩阵, 即 $L = \Sigma V$. 由此可得所需分解.</p>
-  </div>
-</div>
-
 <h3 id="正交简化型">正交简化型</h3>
 
 <p><strong>提示: 正交简化型不是通用名词, 不能直接使用.</strong></p>

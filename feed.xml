@@ -284,17 +284,6 @@ v_{k+1} := u - \sum_{i=1}^k \frac{\braket {u,v_i}}{\|v_i\|^2} v_i
   &lt;p&gt;也可以从右往左正交化. 从而任意矩阵是某个正交矩阵与下三角矩阵的乘积. 也可以对行向量正交化, 从而任意矩阵是某个下三角矩阵与正交矩阵的乘积, 也是某个上三角矩阵与正交矩阵的乘积.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;corollary&quot;&gt;
-  &lt;p&gt;(奇异值分解). 任意矩阵 $A \in \mathbb R^{m \times n}$ 可分解作&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-A = U \Sigma V,
-\end{equation}$$&lt;/p&gt;
-  &lt;p&gt;其中 $U \in \mathbb R^{m \times m}$ 与 $V \in \mathbb R^{n \times n}$ 是正交矩阵, $\Sigma \in \mathbb R^{m \times n}$ 在 $(i,i)$ 个分量取值 $\geq 0$, 其余分量为 $0$. 这一分解称作 $A$ 的奇异值分解.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;先作正交化 $A = UL$ ($L$ 下三角), 对 $L$ 的行向量从上至下地正交化时, 得到的结果是对角矩阵, 即 $L = \Sigma V$. 由此可得所需分解.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
 &lt;h3 id=&quot;正交简化型&quot;&gt;正交简化型&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;提示: 正交简化型不是通用名词, 不能直接使用.&lt;/strong&gt;&lt;/p&gt;
@@ -576,7 +565,7 @@ V^\perp := \{x \in \mathbb R^n \mid \braket{x,y} = 0,\ \forall y \in V\}.
 &lt;/div&gt;
 
 &lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;以下映射是映射&lt;/p&gt;
+  &lt;p&gt;以下映射是双射&lt;/p&gt;
   &lt;p&gt;$$\begin{equation}
 (-)^\perp :\quad \text{$\mathbb R$ 的子空间} \to  \text{$\mathbb R$ 的子空间},\quad V \mapsto V^\perp.
 \end{equation}$$&lt;/p&gt;
@@ -916,6 +905,214 @@ $$&lt;/p&gt;
     
       
         <item>
+          <title>HW17-solu</title>
+          <description>&lt;h2 id=&quot;特征根估计-圆盘定理&quot;&gt;特征根估计: 圆盘定理&lt;/h2&gt;
+
+&lt;h3 id=&quot;圆盘定理的证明&quot;&gt;圆盘定理的证明&lt;/h3&gt;
+
+&lt;p&gt;圆盘定理用于估计矩阵的特征根. 以下所有矩阵是 $\mathbb C$ 上方阵.&lt;/p&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;设 $A=(a_{ij})$ 是 $n\times n$ 矩阵. 对每个 $i$, 总有&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+|a_{ii}| &gt; \sum_{j\neq i} |a_{ij}|.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;则 $A$ 可逆.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;见 &lt;a href=&quot;HW7-solu#行满秩矩阵的一个例子&quot;&gt;HW7&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(复矩阵的 Gershgorin 圆盘). 给定 $A\in \mathbb C^{n\times n}$. 对 $1\leq k\leq n$, 定义 $A$ 的第 $i$ 个列圆盘为&lt;/p&gt;
+  &lt;p&gt;$$
+D_i= \left\{z: |z-a_{i,i}|\leq \sum_{1\leq j\leq n,\text{ 且 }j\neq i} |a_{i,j}| \right\}.
+$$&lt;/p&gt;
+  &lt;p&gt;以上,&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;圆盘的中心是 $a_{i,i}\in \mathbb C$,&lt;/li&gt;
+    &lt;li&gt;圆盘的半径是 $\sum_{1\leq j\leq n,\text{ 且 }j\neq i} |a_{i,j}|$​.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;注意: 可以类似地定义行圆盘. 行, 列圆盘的选取不影响 &lt;strong&gt;Problem&lt;/strong&gt; 的证明.&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;矩阵 $\begin{pmatrix}5+i&amp; 3-2i&amp; i\\ 2-i &amp; 7i&amp; -2+i \\ 2i-1 &amp; i &amp; -1-i\end{pmatrix}$, 特征根与 Gershgorin 行圆盘分布如下图所示:&lt;/p&gt;
+  &lt;center&gt;&lt;img src=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/svg/G_Disc_Sample.svg&quot; /&gt;&lt;/center&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定复方阵的特征对 $(\lambda, v)$. 假定 $v$ 中第 $i$ 个分量模长最大, 证明 $\lambda \in D_i$​.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;设 $v=(v_1, v_2, \ldots, v_n)^T$. 考虑 $\lambda v = Av$ 的第 $i$ 行:&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\lambda v_i = \sum_{j=1}^n a_{i,j} v_j = a_{i,i} v_i + \sum_{j\neq i} a_{i,j} v_j.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;从而&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+|\lambda - a_{ii}| = \left|\sum_{j\neq i} a_{i,j} \frac {v_j}{v_i}\right| \leq \sum_{j\neq i} |a_{i,j}| \left|\frac {v_j}{v_i}\right| \leq \sum_{j\neq i} |a_{i,j}|.
+\end{equation}$$&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;$\bigcup_{i=1}^nD_i$ 中包含了 $A$​​ 的所有特征值.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;对角矩阵的所有圆盘半径为 $0$. 圆盘定理显然成立.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;请计算&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+    4i+12&amp;6i-2&amp;-2i-6\\
+    6i+8&amp;-2i+10&amp;5i-3\\
+    -14i-2&amp;12i-12&amp;8i+18
+\end{pmatrix}
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;的特征根, 并画出相应的 Gershgorin 圆盘 (行, 列圆盘均可). 以此验证 Gershgorin 圆盘定理.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;$10-10i$, $10+10i$ 与 $20+10i$ 是特征根.&lt;/p&gt;
+    &lt;center&gt;&lt;img src=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/svg/G_Disc_Ans.svg&quot; /&gt;&lt;/center&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;若 $A \in \mathbb C^{n \times n}$ 的 $n$ 个圆盘互不相交, 则每个圆盘中有且仅有一个特征根. 从而 $A$ 有 $n$ 个两两不同的特征根. 作为推论, $A$ 可对角化.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;记 $D$ 是 $A$ 的对角线. 考虑连续函数&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+F: [0,1] \to \mathbb C^{n\times n},\quad t\mapsto D + t(A-D).
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;特别地, $F(0) = D$, $F(1) = A$. 直接地, $F(t)$ 的 $n$ 个圆盘不交.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;一个分析学常识 (自行用 $\varepsilon$-$\delta$ 语言证明): 记 $\det (xI - F(t))$ 是一个关于 $x$ 的多项式, 其系数是参数 $t$ 的连续函数. 该多项式在复数域上的 $n$ 个根表示为 $n$ 个关于 $t$ 的函数, 记作 $\{x_i(t)\}_{i=1}^n$. 则每个 $x_i(t)$ 关于 $t$ 连续.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;$D = F(0)$ 的所有圆盘中各有且仅有一个特征根 (即对角线元). 由连续性, 每个圆盘中始终有且仅有一个特征根. 由于圆盘互不相交, 故 $A=F(1)$ 有 $n$ 个两两不同的特征根. 因此 $A$ 可对角化.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;与-hamilton-cayley-定理的结合&quot;&gt;与 Hamilton Cayley 定理的结合&lt;/h3&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Hamilton-Cayley 定理). 设 $A\in \mathbb C^{n\times n}$, 其特征多项式为 $p_A(x)=\det (xI - A)$. 则 $p_A(A)=0$​.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;对任意多项式 $f$, 总有 $f(PAP^{-1}) = Pf(A)P^{-1}$. 只需考虑 $A$ 的 Jordan 标准型. 这是显然的.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;注: 一般域上的 Hamilton-Cayley 定理有以下几种证明方式. 最自然的想法是引入有限域扩张, 使得 $\det(xI - A)$ 能分解成一次因式的乘积, 然后对扩域上的 Jordan 标准型使用类似的证明. 另一种思路是使用伴随矩阵 (adjoint matrix)​ 的概念, 许多教材使用这种证明, 但动机不明. 这一定理的本质是 $\mathbb F^n$ 上的 $(n+1)$-次反对称形式消失, 见&lt;a href=&quot;https://www.mathcha.io/editor/9zzq8sn3tL2SVqI63wm4nIp3W50rsPxpdY0tpdL8Z&quot;&gt;去年习题课&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;若 $AX = XB$, 且 $p_A(x) := \det(xI-A)$ 与 $p_B(x) := \det (xI - B)$ 互素, 则 $X = O$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;称 $p_A$ 与 $p_B$ 互素, 当且仅当存在多项式 $g$ 与 $h$ 使得 $g(x)p_A(x) + h(x)p_B(x) = 1$​.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;由特征多项式互素, $A$ 与 $B$ 至少一者可逆, 不妨假定为 $A$. 由归纳, 对任意多项式 $f$, 总有 $f(A)X = X f(B)$. 将 $f$ 取作 $B$ 的特征多项式, 得 $p_B(A)X = O$. 由互素, 存在 $g$ 与 $h$ 使得&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+X = g(A)p_A(A)X + h(A)p_B(A)X = O.
+\end{equation}$$&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;若 $A$ 与 $B$ 的特征多项式互素, 则对任意 $M$, $\binom{A \ M}{O \ B}$ 与 $\binom{A \ O}{O \ B}$ 总是相似的.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;由特征多项式互素, 线性映射&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\mathbb C^{m\times n} \to \mathbb C^{m\times n},\quad X\mapsto AX - XB
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;是单射, 从而是满射. 假定 $M$ 的原像是 $P$, 则&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\binom{A \ O}{O \ B}\cdot \binom{I \ P}{O \ I} = \binom{I \ P}{O \ I} \cdot \binom{A \ M}{O \ B}.
+\end{equation}$$&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;考虑以下主对角占优的复矩阵 (对角元是正实数) 构成的集合&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\mathscr S := \{A \in \mathbb C^{n \times n} \mid a_{ii} &gt; \sum_{j\neq i} |a_{ij}|,\ \forall 1\leq i\leq n\}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;依照圆盘定理, $A \in \mathscr S$ 的所有特征根都有正的实部. &lt;br /&gt; 对任意 $A,B \in \mathscr S$, 若 $A^2 = B^2$, 则 $A=B$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;证明: $A$ 与 $-B$ 的特征根不同, 其特征多项式必互素. 由上文引理, $AX=X(-B)$ 只有零解. 由题设, $A(A-B)=(A-B)(-B)$. 从而 $A-B = O$.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;仿照上述证明, 试解决下列问题.&lt;/p&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;定义集合&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\mathscr T:= \{A \in \mathbb C^{n \times n} \mid \forall 1\leq i\leq n, \ a_{ii} \in \mathbb R,\ \text{且} \ |a_{ii}| &gt;2\sum_{j\neq i} |a_{ij}|\}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;对任意 $A,B\in\mathscr S$, 若 $A^3=B^3$, 则 $A=B$.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;若嫌麻烦, 可以简单地取 $\mathscr T:= \{A \in \mathbb R^{n \times n} \mid  |a_{ii}| &gt; 2\sum_{j\neq i} |a_{ij}|\}$. 证明过程没区别.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;$A,B \in \mathscr T$ 中矩阵的特征根落在 $(-\pi/6,\pi/6) \cup (5\pi/6,7\pi/6)$ 这个区段 (极坐标下). 记 $\omega = \frac{-1+\sqrt 3 i}{2}$, 则 $A$ 与 $\omega B$ 没有相同的特征根, $A$ 与 $\omega^2 B$ 也没有相同的特征根. 考虑等式&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;$A(A^2+\omega AB+\omega^2 B^2) = (A^2+\omega AB+\omega^2 B^2)\omega B$,&lt;/li&gt;
+      &lt;li&gt;$A(A^2+\omega^2 AB+\omega B^2) = (A^2+\omega^2 AB+\omega B^2)\omega^2 B$.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;从而&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;$(A^2+\omega AB+\omega^2 B^2) = O$,&lt;/li&gt;
+      &lt;li&gt;$(A^2+\omega^2 AB+\omega B^2) = O$.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;相减得 $AB=B^2$. 由矩阵可逆, 得 $A=B$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;记 $\mathscr P$ 是特征值全为正实数的复矩阵构成的集合. 则对任意 $n$,&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\mathscr P \to \mathscr P, \quad X \mapsto X^n
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;是双射. 换言之, 每个 $\mathscr P$-中的矩阵有唯一的 $\mathscr P$ 中的 $n$ 次方根.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;记上述命题为 $\mathfrak P(n)$. 考虑以下归纳法:&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;$\mathfrak P(2)$ 正确,&lt;/li&gt;
+      &lt;li&gt;若 $\mathfrak P(a)$ 与 $\mathfrak P(b)$ 正确, 则 $\mathfrak P(a\cdot b)$ 正确,&lt;/li&gt;
+      &lt;li&gt;对素数 $p$, 若 $\mathfrak P(p-1)$ 正确, 则 $\mathfrak P(p)$ 正确.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;显然 1. 与 2. 成立. 下证明 3. 即可. 记 $w$ 是 $p$-次单位根, 则对一切 $1\leq k\leq p-1$,&lt;/p&gt;
+    &lt;p&gt;$$
+\begin{align*}
+&amp;A(A^{p-1}+w^k A^{p-2}B +w^{2k}A^{p-3}B^2+\cdots + w^{(p-1)k}B^{p-1})\\
+= \ &amp;(A^{p-1}+w^k A^{p-2}B +w^{2k}A^{p-3}B^2+\cdots + w^{(p-1)k}B^{p-1})(w^k B).
+\end{align*}
+$$&lt;/p&gt;
+    &lt;p&gt;因此, $A^{p-1}+w^k A^{p-2}B +w^{2k}A^{p-3}B^2+\cdots + w^{(p-1)k}B^{p-1}=O$. 写作线性方程组, 得&lt;/p&gt;
+    &lt;p&gt;$$
+(w^{i\cdot (j-1)})_{1\leq i\leq (p-1), \ 1\leq j\leq p}\cdot \begin{pmatrix}A^{p-1}\\ A^{p-1}B\\\vdots \\ B^{p-1}\end{pmatrix}_{p}
+=\begin{pmatrix}O\\ O\\\vdots \\ O\end{pmatrix}_{p-1}.  
+$$&lt;/p&gt;
+    &lt;p&gt;此处, $\{A^{l}B^{p-1-l}\}_{0\leq l\leq p-1}$ 是 $p$ 个未知量. 左侧矩阵 $W_{(p-1)\times p}=(w^{i\cdot (j-1)})$ 形如增广矩阵 $(\mathbf 1 \ \ V)$, $V$ 是 $p$-阶 Vandermonde 方阵 (可逆). 因此, 存在行初等变换, 使得&lt;/p&gt;
+    &lt;p&gt;$$
+W=(\mathbf 1  \ \ V)\xrightarrow{\text{行初等变换}} (\mathbf v  \ \ I)\quad (\mathbf v \ \text{唯一, 由反方向的 $ref$ 算法}).
+$$&lt;/p&gt;
+    &lt;p&gt;由于行变换不改变列线性关系, 结合 $\mathbf 1\in N(W)$ 知 $\mathbf v= - \mathbf 1$. 此时, 方阵组的最后一个等式是 $A^{p-1}-B^{p-1}=O$. 这证明归纳步骤&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;对素数 $p$, 若 $\mathfrak P(p-1)$ 正确, 则 $\mathfrak P(p)$ 正确.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-11-25T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW17-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW17-solu</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Exersice Class 10</title>
           <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
 
@@ -1196,22 +1393,6 @@ V \to V,\quad v \mapsto Bv
           <title>HW16-solu</title>
           <description>&lt;h2 id=&quot;特征根拾遗&quot;&gt;特征根拾遗&lt;/h2&gt;
 
-&lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;(线性映射的特征根). 选定 $\mathbb F$-线性空间 $V$ 到自身的线性映射&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-f : V \to V,\quad v \mapsto f(v).
-\end{equation}$$&lt;/p&gt;
-  &lt;p&gt;称 $\lambda$ 是映射 $f$ 的特征向量, 若存在非零向量 $v$ 使得 $f(v) = \lambda v$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;求导运算&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-D: C(\mathbb R) \to C(\mathbb R),\quad f \mapsto f'
-\end{equation}$$&lt;/p&gt;
-  &lt;p&gt;的特征根可以为任何实数 $\lambda \in \mathbb R$. 因为 $D(e^{\lambda x}) = \lambda \cdot e^{\lambda x}$.&lt;/p&gt;
-&lt;/div&gt;
-
 &lt;div class=&quot;problem&quot;&gt;
   &lt;p&gt;假定线性空间维数有限. 若线性映射 $f$ 在某组基下有矩阵表示 $A$, 则 $A$ 的特征值等于 $f$ 的特征值.&lt;/p&gt;
   &lt;div class=&quot;proof&quot;&gt;
@@ -1238,20 +1419,6 @@ u = (u_1, u_2, \ldots , u_n)y.
 
 &lt;h2 id=&quot;相似上三角化的应用&quot;&gt;相似上三角化的应用&lt;/h2&gt;
 
-&lt;div class=&quot;theorem&quot;&gt;
-  &lt;p&gt;对任意 $A \in \mathbb C^{n \times n}$, 存在可逆矩阵 $P$ 使得 $PQP^{-1}$ 是上三角矩阵.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;见 &lt;a href=&quot;HW15&quot;&gt;HW15&lt;/a&gt;.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;给定以 $\mathbb F$ 为系数的多项式 $p(x) = x^n + a_1 x^{n-1} + a_2 x^{n-2} + \cdots + a_n$. 存在 $A \in \mathbb F^{n \times n}$ 使得 $\det (xI - A) = p(x)$.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;见 &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-11-11-%E8%A1%8C%E5%88%97%E5%BC%8FA.pdf&quot;&gt;Ex-4, 练习题 A, HW13&lt;/a&gt;. 可能需要改变部分角标与符号.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
 &lt;div class=&quot;problem&quot;&gt;
   &lt;p&gt;记 $f$ 是整系数的多项式, $p(x) = x^n + a_1 x^{n-1} + a_2 x^{n-2} + \cdots + a_n$ 也是整系数的多项式. 将 $p(x)$ 在 $\mathbb C$ 中分解作一次因子的乘积, 即 $(x-x_1)(x-x_2)\cdots (x-x_n)$. 试证明, $(x-f(x_1))(x-f(x_2))\cdots (f-f(x_n))$ 仍是整系数多项式.&lt;/p&gt;
   &lt;ul&gt;
@@ -1270,41 +1437,6 @@ u = (u_1, u_2, \ldots , u_n)y.
 
 &lt;h3 id=&quot;熟悉-jordan-块的结构&quot;&gt;熟悉 Jordan 块的结构&lt;/h3&gt;
 
-&lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;(Jordan 块). 将一个以 $\lambda$ 为特征根的 $n$ 阶 Jordan 块为&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-J_n (\lambda) =
-\begin{pmatrix}
-\lambda &amp; 1 &amp; 0 &amp; \cdots &amp; 0 \\
-0 &amp; \lambda &amp; 1 &amp; \cdots &amp; 0 \\
-0 &amp; 0 &amp; \lambda &amp; \cdots &amp; 0 \\
-\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; 1 \\
-0 &amp; 0 &amp; 0 &amp; \cdots &amp; \lambda
-\end{pmatrix}.
-\end{equation}$$&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;&lt;a href=&quot;HW14&quot;&gt;EX-10, HW14&lt;/a&gt; 说明任意幂零矩阵相似于某个分块对角矩阵, 各分块形如 $J_s(0)$.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;特别注意: 幂零矩阵的 Jordan 型不依赖域的选取.&lt;/p&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;幂零矩阵的秩与 Jordan 块. 假定 $A$ 是幂零矩阵, 约定 $A^0 = I$. 记 $r_k = r(A^k)$, 可以证明 $\{r_k - r_{k+1}\}$ 是. 以下结论是直接的:&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;$r_0 - r_1$ 是 Jordan 块总数. 因为两者都等于零空间维数;&lt;/li&gt;
-    &lt;li&gt;$r_1 - r_2$ 是阶数 $\geq 1$ 的 Jordan 块总数;&lt;/li&gt;
-    &lt;li&gt;$r_k - r_{k+1}$ 是阶数 $\geq k$ 的 Jordan 块总数.&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;p&gt;因此,&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;$r_0 - 2r_1 + r_2$ 是 $0$ 阶 Jordan 块数量;&lt;/li&gt;
-    &lt;li&gt;$r_1 - 2r_2 + r_3$ 是 $1$ 阶 Jordan 块数量;&lt;/li&gt;
-    &lt;li&gt;$r_k - 2r_{k+1} + r_{k+2}$ 是 $k$ 阶 Jordan 块数量.&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-
 &lt;div class=&quot;problem&quot;&gt;
   &lt;p&gt;以下 $A$ 是幂零矩阵. 请写出以下矩阵的 Jordan 标准型 (或写出所有的 Jordan 块).&lt;/p&gt;
   &lt;ol&gt;
@@ -1320,37 +1452,6 @@ J_n (\lambda) =
 
 &lt;h3 id=&quot;根空间&quot;&gt;根空间&lt;/h3&gt;
 
-&lt;div class=&quot;definition&quot;&gt;
-  &lt;p&gt;给定 $n$ 阶矩阵 $A$. 对 $\lambda \in \mathbb F$, 定义 $\mathbb F^n$ 的子空间&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-V_\lambda := \{v \mid \exists n \in \mathbb N, \ (\lambda I - A)^n v = 0\}.
-\end{equation}$$&lt;/p&gt;
-  &lt;p&gt;简单地说, $V_\lambda$ 包含一切经 $(\lambda I - A)$ 反复作用后能化为 $0$ 的向量.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;直接地, $V_\lambda = 0$ 当且仅当 $\lambda$ 是特征根.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;若 $\lambda$ 是特征根, 则对应的特征向量属于 $V_\lambda$; 但 $V_\lambda$ 中的非零向量未必是特征向量, 例如取 $A = \binom{0 \ 1}{0 \ 0}$, 则 $V_0 = \mathbb F^2$, 但 $A$ 的特征向量 (与 $0$) 构成一维空间.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;lemma&quot;&gt;
-  &lt;p&gt;若 $\lambda \neq \mu$, 则线性映射&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-V_\lambda \to V_\lambda, \quad x \mapsto (\mu I - A)x
-\end{equation}$$&lt;/p&gt;
-  &lt;p&gt;是双射.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;该线性映射的来源与去向维数相同. 因此单, 满, 同构等价. 只需证明单射. 若 $(\mu I - A)x = 0$, 则 $Ax = \mu x$. 由 $V_\lambda$ 的定义, 对足够大的 $k$ 应有&lt;/p&gt;
-    &lt;p&gt;$$\begin{equation}
-0 = (\lambda I - A)^k x = (\lambda - \mu)^k x.
-\end{equation}$$&lt;/p&gt;
-    &lt;p&gt;此时只能有 $x = 0$.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
 &lt;div class=&quot;problem&quot;&gt;
   &lt;p&gt;若 $A$ 是复矩阵, 且特征根只有 $\lambda$ 与 $\mu$ ($\lambda \neq \mu$, 不考虑重数). 证明 $\mathbb F^n = V_\lambda \oplus V_\mu$.&lt;/p&gt;
   &lt;ul&gt;
@@ -1362,71 +1463,6 @@ V_\lambda \to V_\lambda, \quad x \mapsto (\mu I - A)x
       &lt;li&gt;($\mathbb F^n = V_\lambda + V_\mu$). 任取 $u \in \mathbb F^n$. 直接地, $(\lambda I - A)^n(\mu I - A)^n u = 0$, 因此 $(\mu I - A)^n u \in V_\lambda$. 由引理, 左乘 $(\mu I - A)^n$ 是 $V_\lambda$ 到自身的双射, 从而存在 $u_1 \in V_\lambda$ 使得 $(\mu I - A)^nu_1 = (\mu I - A)^nu$. 我们得到 $u = u_1 + (u - u_1) \in V_\lambda + V_\mu$.&lt;/li&gt;
       &lt;li&gt;($V_\lambda \cap V_\mu = 0$). 假定有非零向量 $x \in V_\lambda \cap V_\mu$. 由 $x \in V_\lambda$ 与引理, 得 $(\mu I - A)^n x \neq 0$, 矛盾.&lt;/li&gt;
     &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;corollary&quot;&gt;
-  &lt;p&gt;若 $A$ 是复矩阵, 且特征根只有 $\lambda$ 与 $\mu$ ($\lambda \neq \mu$, 不考虑重数). 此时存在可逆矩阵 $P$ 使得 $PAP^{-1} = \binom{B \ O }{O \ C}$. 其中 $B$ 的特征值只有 $\lambda$, $C$ 的特征值只有 $\mu$.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;取 $V_\lambda$ 与 $V_\mu$ 的基, 并将其合并为 $\mathbb F^n$ 的基. 左乘 $A$ 这一线性映射在该组基下的矩阵表示为 $\binom{B \ O }{O \ C}$.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;推论-jordan-标准型&quot;&gt;推论: Jordan 标准型&lt;/h3&gt;
-
-&lt;p&gt;类似的论证给出以下推论.&lt;/p&gt;
-
-&lt;div class=&quot;corollary&quot;&gt;
-  &lt;p&gt;假定复矩阵 $A$ 的所有特征根为 $\lambda_1, \lambda_2, \ldots, \lambda _m$ (不考虑重数). 则&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-\mathbb F^n = V_{\lambda _1} \oplus V_{\lambda _2} \oplus \cdots \oplus V_{\lambda_m}.
-\end{equation}$$&lt;/p&gt;
-  &lt;p&gt;此时存在可逆矩阵 $P$ 使得 $PAP^{-1}$ 是分块对角矩阵, 且第 $k$ 个分块 (记作 $B_k$) 的特征值仅有 $\lambda _k$. 前文表明, $(B_k - \lambda _k I)$ 相似于由若干 $J_t(0)$ 组成的分块对角矩阵, 因此 $B_k$ 相似于由若干 $J_t(\lambda_k)$ 组成的分块对角矩阵. 以上给出 Jordan 型的求解.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;练习题&quot;&gt;练习题&lt;/h3&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;若复矩阵满足 $AB = BA$, 则存在 $v$ 使得 $(\lambda, v)$ 是 $A$ 的特征对, $(\mu, v)$ 是 $B$ 的特征对.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;复矩阵 $A$ 有特征根, 取作 $Ax = \lambda x$. 交换性表明 $ABx = BAx = \lambda (Bx)$, 归纳得 $AB^kv = \lambda B^kv$. 记 $V$ 是 $\{x,Bx,B^2,\ldots\}$ 生成的线性空间, 特别地, $V$ 中非零向量都是 $A$ 的特征根. 由于线性映射&lt;/p&gt;
-    &lt;p&gt;$$\begin{equation}
-V \to V,\quad v \mapsto Bv
-\end{equation}$$&lt;/p&gt;
-    &lt;p&gt;总有特征根, 取作特征对 $(\mu, v)$. 则 $(\lambda, v)$ 也是 $A$ 的特征对.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;证明 $r\binom{A \ B}{O \ D} \geq r\binom{A \ O}{O \ D}$. 取等当且仅当关于 $X$ 与 $Y$ 的方程 $B = AX + YD$ 有解.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;($\gets$). 若 $B = AX + YD$, 则 $\binom{A \ B}{O \ D}$ 通过可逆行, 列变换化为 $\binom{A \ O}{O \ D}$. &lt;br /&gt; ($\to$). 假定 $A$ 有 $m$ 列. 对 $\binom{A \ B}{O \ D}$ 与 $\binom{A \ O}{O \ D}$ 同步进行 $ref$ 算法, 则两者 $ref$ 的前 $m$ 列相同. 若 $\binom{A \ B}{O \ D}$ 的第 $m + k$ 列能被前面的列线性表示, 取作 $\binom{A \ B}{O \ D} \cdot \binom{x_i}{v_i}$, 则 $\binom{A \ O}{O \ D}$ 的第 $m + k$ 列也能被前面的列线性表示, 取作 $\binom{A \ O}{O \ D} \cdot \binom{0}{v_i}$. 这说明:&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;若 $\binom{A \ B}{O \ D}$ 的第 $s$ 列非主元列, 则 $\binom{A \ O}{O \ D}$ 的第 $s$ 列也非主元列.&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;从而 $ref\binom{A \ B}{O \ D}$ 的非零行数大于 $ref\binom{A \ O}{O \ D}$ 的非零行数, 即 $r\binom{A \ B}{O \ D} \geq r\binom{A \ O}{O \ D}$. &lt;br /&gt; 取等时, $ref\binom{A \ B}{O \ D}$ 与 $ref\binom{A \ O}{O \ D}$ 主元列位置相同. 记 $X = (x_1 \mid x_2 \mid \cdots \mid x_n)$. 比较 $\binom{A \ O}{O \ D}$ 与 $\binom{A \quad B-AX}{O \quad\quad  D\ \ \ \ }$ (抄写前文):&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;若 $\binom{A \quad B-AX}{O \quad\quad  D\ \ \ \ }$ 的第 $m + k$ 列能被前面的列线性表示, 取作 $\binom{A \quad B-AX}{O \quad\quad  D\ \ \ \ } \cdot \binom{0}{v_i}$, 则 $\binom{A \ O}{O \ D}$ 的第 $m + k$ 列也能被前面的列线性表示, 取作 $\binom{A \ O}{O \ D} \cdot \binom{0}{v_i}$&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;从而 $ref\binom{A \quad B-AX}{O \quad\quad  D\ \ \ \ } = ref\binom{A \ O}{O \ D}$. 比较行空间, $B-AX$ 的各行能通过 $D$ 各行的线性组合得到. 因此有 $B-AX = YD$.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;考虑复矩阵. 假定 $\det(xI - A)$ 与 $\det (xI - D)$ 没有相同的根. 则 $\binom{A \ B}{O \ D}$ 与 $\binom{A \ O}{O \ D}$ 必然相似.&lt;/p&gt;
-  &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;下证明单射:&lt;/p&gt;
-    &lt;p&gt;$$\begin{equation}
-\varphi : \mathbb F^{m \times n} \to \mathbb F^{m \times n},\quad M \mapsto AM - MD.
-\end{equation}$$&lt;/p&gt;
-    &lt;ul&gt;
-      &lt;li&gt;(证明 $\varphi$ 是单射). 考虑三角化 $A = P^{-1}UP$ 与 $D = QWQ^{-1}$. 若 $AM = MD$, 则 $U(PMQ)=(PMQ)W$. 记 $f(x) = \det (xI-A)$, 则 $f(U)^{(n)}(PMQ) = (PMQ)f(W)^{(n)}$. 由假定, $U$ 与 $W$ 的对角元没有相同的元素, 从而 $f(U)^{(n)} = O$ 且 $f(W)^{(n)}$ 可逆. 因此 $PMQ = O$, 即 $M = O$.&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;p&gt;线性映射 $\varphi$ 的来源与去向有相同维数, 从而 $\varphi$ 单意味着 $\varphi$ 满. 因此, 关于 $M$ 的方程&lt;/p&gt;
-    &lt;p&gt;$$\begin{equation}
-\binom{A \ B}{O \ D} \cdot \binom{I \ M}{O \ I} = \binom{I \ M}{O \ I} \cdot \binom{A \ O}{O \ D}
-\end{equation}$$&lt;/p&gt;
-    &lt;p&gt;有解. 这说明了相似关系.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </description>

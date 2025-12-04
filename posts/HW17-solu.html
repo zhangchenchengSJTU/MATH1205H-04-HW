@@ -9,7 +9,7 @@
 
 
 
-  <title>HW17
+  <title>HW17-solu
     ·
     Jekyll Latex</title>
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW17">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW17-solu">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,7 +75,7 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW17</h1>
+      <h1>HW17-solu</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
@@ -123,6 +123,16 @@ $$</p>
 
 <div class="problem">
   <p>给定复方阵的特征对 $(\lambda, v)$. 假定 $v$ 中第 $i$ 个分量模长最大, 证明 $\lambda \in D_i$​.</p>
+  <div class="proof">
+    <p>设 $v=(v_1, v_2, \ldots, v_n)^T$. 考虑 $\lambda v = Av$ 的第 $i$ 行:</p>
+    <p>$$\begin{equation}
+\lambda v_i = \sum_{j=1}^n a_{i,j} v_j = a_{i,i} v_i + \sum_{j\neq i} a_{i,j} v_j.
+\end{equation}$$</p>
+    <p>从而</p>
+    <p>$$\begin{equation}
+|\lambda - a_{ii}| = \left|\sum_{j\neq i} a_{i,j} \frac {v_j}{v_i}\right| \leq \sum_{j\neq i} |a_{i,j}| \left|\frac {v_j}{v_i}\right| \leq \sum_{j\neq i} |a_{i,j}|.
+\end{equation}$$</p>
+  </div>
 </div>
 
 <div class="corollary">
@@ -143,6 +153,10 @@ $$</p>
 \end{pmatrix}
 \end{equation}$$</p>
   <p>的特征根, 并画出相应的 Gershgorin 圆盘 (行, 列圆盘均可). 以此验证 Gershgorin 圆盘定理.</p>
+  <div class="proof">
+    <p>$10-10i$, $10+10i$ 与 $20+10i$ 是特征根.</p>
+    <center><img src="https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/svg/G_Disc_Ans.svg" /></center>
+  </div>
 </div>
 
 <div class="theorem">
@@ -154,7 +168,7 @@ F: [0,1] \to \mathbb C^{n\times n},\quad t\mapsto D + t(A-D).
 \end{equation}$$</p>
     <p>特别地, $F(0) = D$, $F(1) = A$. 直接地, $F(t)$ 的 $n$ 个圆盘不交.</p>
     <ul>
-      <li>一个分析学常识 (自行用 $\varepsilon$-$\delta$ 语言证明): 含参多项式 $\det (xI - F(t))$ 在复数域上的 $n$ 个根 $\{x_i(t)\}_{i=1}^n$ 关于 $t$ 连续.</li>
+      <li>一个分析学常识 (自行用 $\varepsilon$-$\delta$ 语言证明): 记 $\det (xI - F(t))$ 是一个关于 $x$ 的多项式, 其系数是参数 $t$ 的连续函数. 该多项式在复数域上的 $n$ 个根表示为 $n$ 个关于 $t$ 的函数, 记作 $\{x_i(t)\}_{i=1}^n$. 则每个 $x_i(t)$ 关于 $t$ 连续.</li>
     </ul>
     <p>$D = F(0)$ 的所有圆盘中各有且仅有一个特征根 (即对角线元). 由连续性, 每个圆盘中始终有且仅有一个特征根. 由于圆盘互不相交, 故 $A=F(1)$ 有 $n$ 个两两不同的特征根. 因此 $A$ 可对角化.</p>
   </div>
@@ -204,7 +218,7 @@ X = g(A)p_A(A)X + h(A)p_B(A)X = O.
 \end{equation}$$</p>
   <p>依照圆盘定理, $A \in \mathscr S$ 的所有特征根都有正的实部. <br /> 对任意 $A,B \in \mathscr S$, 若 $A^2 = B^2$, 则 $A=B$.</p>
   <ul>
-    <li>证明: $A$ 与 $-B$ 的特征根不同, 从而 $AX=X(-B)$ 只有零解. 有题设, $A(A-B)=(A-B)(-B)$. 从而 $A-B = O$.</li>
+    <li>证明: $A$ 与 $-B$ 的特征根不同, 其特征多项式必互素. 由上文引理, $AX=X(-B)$ 只有零解. 由题设, $A(A-B)=(A-B)(-B)$. 从而 $A-B = O$.</li>
   </ul>
 </div>
 
@@ -219,6 +233,19 @@ X = g(A)p_A(A)X + h(A)p_B(A)X = O.
   <ul>
     <li>若嫌麻烦, 可以简单地取 $\mathscr T:= \{A \in \mathbb R^{n \times n} \mid  |a_{ii}| > 2\sum_{j\neq i} |a_{ij}|\}$. 证明过程没区别.</li>
   </ul>
+  <div class="proof">
+    <p>$A,B \in \mathscr T$ 中矩阵的特征根落在 $(-\pi/6,\pi/6) \cup (5\pi/6,7\pi/6)$ 这个区段 (极坐标下). 记 $\omega = \frac{-1+\sqrt 3 i}{2}$, 则 $A$ 与 $\omega B$ 没有相同的特征根, $A$ 与 $\omega^2 B$ 也没有相同的特征根. 考虑等式</p>
+    <ul>
+      <li>$A(A^2+\omega AB+\omega^2 B^2) = (A^2+\omega AB+\omega^2 B^2)\omega B$,</li>
+      <li>$A(A^2+\omega^2 AB+\omega B^2) = (A^2+\omega^2 AB+\omega B^2)\omega^2 B$.</li>
+    </ul>
+    <p>从而</p>
+    <ul>
+      <li>$(A^2+\omega AB+\omega^2 B^2) = O$,</li>
+      <li>$(A^2+\omega^2 AB+\omega B^2) = O$.</li>
+    </ul>
+    <p>相减得 $AB=B^2$. 由矩阵可逆, 得 $A=B$.</p>
+  </div>
 </div>
 
 <div class="theorem">
@@ -443,13 +470,13 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW18" title="NEXT: HW18">&lt;&lt;</a>
+      <a class="next" href="/MATH1205H-04-HW/posts/HW17" title="NEXT: HW17">&lt;&lt;</a>
       <span>&middot;</span>
     
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW17-solu" title="PREV: HW17-solu">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/EX10" title="PREV: Exersice Class 10">&gt;&gt;</a>
     
   </div>
 </main>
