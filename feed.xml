@@ -181,6 +181,9 @@ A_1 = \begin{pmatrix}
     2 &amp; -5 &amp; 2 &amp; -10 &amp; -1
 \end{pmatrix}.
 \end{equation}$$&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;在 &lt;a href=&quot;https://www.wolframalpha.com/&quot;&gt;Wolfram&lt;/a&gt; 搜索 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jordan form { {2, -2, 1, -2, -1},  {0,  1, 0, -2,  0},  {1, -2, 2, -2, -1},  {0,  0, 0,  3,  0},  {2, -4, 2, -8, -1}}&lt;/code&gt;. 细节略.&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;计算奇异值分解&quot;&gt;计算奇异值分解&lt;/h3&gt;
@@ -277,6 +280,9 @@ A_1 = \begin{pmatrix}
     1 &amp; -4 &amp; 3
 \end{pmatrix}.
 \end{equation}$$&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;在 &lt;a href=&quot;https://www.wolframalpha.com/&quot;&gt;Wolfram&lt;/a&gt; 搜索 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;singular value decomposition { {3,4,1},{1,-4,3}}&lt;/code&gt;. 细节略.&lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;kronecker-积&quot;&gt;Kronecker 积&lt;/h3&gt;
