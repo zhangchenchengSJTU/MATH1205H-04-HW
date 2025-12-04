@@ -274,11 +274,7 @@ V \to \mathbb R^{n \times n},\quad f \mapsto \left(a_{i,j} = f(e_i,e_j)\right).
   <p>$$\begin{equation}
 P^T \begin{pmatrix} A & B \\ B^T & C \end{pmatrix} P = \begin{pmatrix} A & 0 \\ 0 & D \end{pmatrix}.
 \end{equation}$$</p>
-  <p>对 $A$ 与 $D$ 重复此过程, 则可以将矩阵变成对角形式. 对角元中正数, 负数, 以及 $0$ 的个数一齐称作惯性指数.</p>
-</div>
-
-<div class="corollary">
-  <p>由反证法, 惯性指数的与 $P$ 的选取无关. 由于实对称矩阵正交相似与对角矩阵, 故惯性指数就是特征值 (含重数) 的符号数.</p>
+  <p>对 $A$ 与 $D$ 重复此过程, 则可以将矩阵变成对角形式.</p>
 </div>
 
 <h3 id="rayleigh-商">Rayleigh 商</h3>
@@ -435,6 +431,26 @@ A = Q^T \begin{pmatrix}
 \det (M^2) = \det (MM^T + NN^T) \neq 0.
 \end{equation}$$</p>
     <p>依照 Cauchy-Binet 公式展开右式, 可知 $N$ 必须为零矩阵. 因此 $M$ 可逆, 由 $M^4 = (MM^T)^2$ 知 $M = M^T$. 从而 $A = A^T$.</p>
+  </div>
+</div>
+
+<h3 id="奇异值分解">奇异值分解</h3>
+
+<div class="definition">
+  <p>(奇异值分解). 实矩阵 $A \in \mathbb R^{m \times n}$ 的奇异值分解形如</p>
+  <p>$$\begin{equation}
+A = U\Sigma V^T = U \cdot \begin{pmatrix}
+    \sigma _1 & \\ &\sigma _2 \\ &&\ddots
+\end{pmatrix}_{m \times n}
+\cdot V^T.
+\end{equation}$$</p>
+  <p>其中, $U$ 与 $V$ 分别是 $m$ 阶与 $n$ 阶的正交矩阵. $\Sigma$ 在 $(i,i)$-位置非负, 在其余位置为零.</p>
+</div>
+
+<div class="theorem">
+  <p>任意实矩阵 $A$ 的奇异值分解存在.</p>
+  <div class="proof">
+    <p>先做实对称矩阵的正交分解 $A^TA = VDV^T$. 由 $(AV)^T(AV) = D$, 因此 $AV$ 的不同列向量内积为 $0$. 这说明 $AV$ 的列向量来自某个正交矩阵 $U$ 各列的放缩, 即存在 $m\times n$ 阶主对角元非负的矩阵矩阵 $\Sigma$ 使得 $AV = U\Sigma$. 这证明了奇异值分解.</p>
   </div>
 </div>
 
@@ -787,8 +803,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-3">
-      <a href="#极分解">
+      <a href="#奇异值分解">
         <span class="toc-number">2.3.</span>
+        <span class="toc-title">奇异值分解</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#极分解">
+        <span class="toc-number">2.4.</span>
         <span class="toc-title">极分解</span>
       </a>
     </div>
@@ -805,7 +838,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-3">
       <a href="#正交相似">
-        <span class="toc-number">2.4.</span>
+        <span class="toc-number">2.5.</span>
         <span class="toc-title">正交相似</span>
       </a>
     </div>
@@ -822,7 +855,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="toc-row toc-level-3">
       <a href="#注-实与复的问题">
-        <span class="toc-number">2.5.</span>
+        <span class="toc-number">2.6.</span>
         <span class="toc-title">注: 实与复的问题</span>
       </a>
     </div>
