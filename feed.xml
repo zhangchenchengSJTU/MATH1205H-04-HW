@@ -553,7 +553,7 @@ d : X \times  X \to [0,+\infty),\quad (x,y) \mapsto d(x,y)
 &lt;div class=&quot;problem&quot;&gt;
   &lt;p&gt;证明以下等价:&lt;/p&gt;
   &lt;ol&gt;
-    &lt;li&gt;$\braket{x,y} = 0$;&lt;/li&gt;
+    &lt;li&gt;$\braket{u,v} = 0$;&lt;/li&gt;
     &lt;li&gt;$\|u\| \leq \|u + \lambda v\|$ 对任意 $\lambda \in \mathbb R$ 成立.&lt;/li&gt;
   &lt;/ol&gt;
   &lt;p&gt;并说明其几何意义.&lt;/p&gt;
