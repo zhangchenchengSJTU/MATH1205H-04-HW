@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+
+
+
+  <title>HW20
+    ·
+    Jekyll Latex</title>
+
+
+<meta name="description" content="计算题训练">
+
+
+  <meta name="google-site-verification" content="abc123">
+
+
+<link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
+<link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
+<link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW20">
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  title="Jekyll Latex"
+  href="/MATH1205H-04-HW/feed.xml" />
+
+
+
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+  },
+  chtml: {
+    scale: 0.95,  // Adjust size
+    // No need for fontURL if you're using tex-chtml.js — TeX font is default
+  },
+  svg: {
+    scale: 0.95  // Only applies if you switch to tex-svg.js
+  }
+};
+</script>
+
+<script
+  async
+  id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "/MATH1205H-04-HW";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>
+
+
+	<main class="container">
+  <!-- Main Content Column -->
+  <article class="content-column">
+    <div class="center">
+      <h1>HW20</h1>
+      <p class="author">
+        Chencheng Zhang
+        <br/>
+        December 4, 2025
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2 id="计算题训练">计算题训练</h2>
+
+<h3 id="计算-jordan-标准型与过渡矩阵">计算 Jordan 标准型与过渡矩阵</h3>
+
+<div class="example">
+  <p>计算以下矩阵的 Jordan 标准型以及过渡矩阵：</p>
+  <p>$$\begin{equation}
+A = \begin{pmatrix}
+ -6& 2& 4 &-10& 5\\
+-14& 5& 8 &-19& 9\\
+  3&-1&-1& 5&-3\\
+  8&-2&-4&12&-5\\
+  8&-2&-4&10&-3
+\end{pmatrix}.
+\end{equation}$$</p>
+  <div class="proof">
+    <p><strong>Step 1 (计算特征根)</strong> 计算特征多项式. 我们对 $(xI - A)$ 进行任意可逆行列初等变换, 最后结果差一个数乘, 但这不重要.</p>
+    <p>$$\begin{equation}
+xI - A = \begin{pmatrix}
+ x+6& -2& -4 &10& -5\\
+14& x-5& -8 &19& -9\\
+ -3&1&x+1&-5&3\\
+    -8&2&4&x-12&5\\
+    -8&2&4&-10&x+3
+\end{pmatrix},
+\end{equation}$$</p>
+    <p>该矩阵左下角是非常规律的, 不妨使用 $\binom 22$ 所在的一列进行列消元, 得</p>
+    <p>$$\begin{equation}
+\begin{pmatrix}
+x-2 & -2 & 0   & 10  & -5\\
+4x-6& x-5& 2-2x& 19  & -9\\
+ 1  & 1  & x-1 & -5  &3\\
+ 0  & 2  & 0   &x-12 &5\\
+ 0  & 2  & 0   &-10  &x+3
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>再依次把 $-c_1$ 加到 $c_2$, 把 $-r_4$ 加到 $r_5$, 把 $c_5$ 加到 $c_4$, 得</p>
+    <p>$$\begin{equation}
+\begin{pmatrix}
+x-2 & -x & 0   & 5  & -5\\
+4x-6& 1-3x& 2-2x& 10  & -9\\
+ 1  & 0  & x-1 & -2  &3\\
+ 0  & 2  & 0   &x-7 &5\\
+ 0  & 0  & 0   &0  &x-2
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>提出因子 $(x-2)$, 得左上方 $4\times 4$ 矩阵:</p>
+    <p>$$\begin{equation}
+\begin{pmatrix}
+x-2 & -x & 0   & 5 \\
+4x-6& 1-3x& 2-2x& 10 \\
+ 1  & 0  & x-1 & -2 \\
+ 0  & 2  & 0   &x-7
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>注意到第三列两项差一个数乘. 将 $2r_3$ 加至 $r_2$, 得</p>
+    <p>$$\begin{equation}
+\begin{pmatrix}
+x-2 & -x & 0   & 5 \\
+4x-4& 1-3x& 0& 6 \\
+ 1  & 0  & x-1 & -2 \\
+ 0  & 2  & 0   &x-7
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>提出因子 $(x-1)$, 得剩下的 $3\times 3$ 阶子式:</p>
+    <p>$$\begin{equation}
+\begin{pmatrix}
+x-2 & -x &  5 \\
+4x-4& 1-3x& 6 \\
+ 0  & 2  &x-7
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>对最后一行展开, 目测得到 (可能差一个负号)</p>
+    <p>$$\begin{equation}
+2(6(x-2)-5(4x-4))-(x-7)((x-2)(1-3x)+x(4x-4)) = -(x-1)^2(x-2).
+\end{equation}$$</p>
+    <p>综上, 特征多项式为 $(x-1)^3(x-2)^2$. 我们知道根空间分解 $\mathbb  R^5 = V_1 \oplus V_2$. 由特征多项式知, 其维数分别是 $3$ 与 $2$. <br /> <strong>Step 2 (计算 $J_?(1)$)</strong> 我们先找 $N(A-I)$ 的基, $A-I$ 即</p>
+    <p>$$\begin{equation}
+\begin{pmatrix}
+ -7& 2& 4 &-10& 5\\
+-14& 4& 8 &-19& 9\\
+  3&-1&-2& 5&-3\\
+  8&-2&-4&11&-5\\
+  8&-2&-4&10&-4
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>可逆行变换不改变零空间. 中间两列明显成比例, 我们用 $r_3$ 消去上下两行的第二与第三列, 得</p>
+    <p>$$\begin{equation}
+\begin{pmatrix}
+ -1& 0& 0 &0& -1\\
+ -2& 0& 0 &1&-3\\
+  3&-1&-2& 5&-3\\
+  2& 0& 0& 1& 1\\
+  2& 0& 0& 0&2
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>依照 $ref$ 算法, 我们发现前两列线性无关, $c_3 = 2c_2$, $\{c_1,c_2,c_4\}$ 线性无关 (比较 $0$ 的位置), $c_5 = c_1-c_4+c_2$, 从而 $ref$ 是</p>
+    <p>$$\begin{equation}
+\begin{pmatrix}
+ 1& 0& 0& 0& 1\\
+ 0& 1& 2& 0& 1\\
+ 0& 0& 0& 1& -1\\
+ 0& 0& 0& 0& 0\\
+ 0& 0& 0& 0& 0
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>我们发现 $N(I-A)$ 比 $V_1$ 少一维, 从而 Jordan 块是 $J_2(1)$ 和 $J_1(1)$. 由幂零标准型算法, $C(I-A) \cap N(I - A)$ 是一维空间, 即 $N(I - A)$ 中形如 $(I-A)x$ 的向量构成一维空间. 注意到 $A-I$ 的第二列 (记作 $u$) 即为所求. 由 $u$ 的选取, 方程 $(A-I)x = u$ 的一个解是 $(0,1,0,0,0)$, 记作 $v_1$. 记 $(A-I)v_1 = v_2$, 再取 $v_3$ 使得 $\{v_2,v_3\}$ 是 $N(I-A)$ 的一组基, 比如 $v_3 = (0,2,-1,0,0)$. 此时</p>
+    <p>$$\begin{equation}
+(A-I)(v_2 \mid v_1 \mid v_3) = (0 \mid v_2 \mid 0).
+\end{equation}$$</p>
+    <p>这说明</p>
+    <p>$$\begin{equation}
+A \cdot (v_2 \mid v_1 \mid v_3 \mid ? \mid ?) = (v_2 \mid v_1 \mid v_3 \mid ? \mid ?)\cdot \begin{pmatrix}
+    1&1\\&1\\ &&1 \\ &&&2 & ?\\ &&&&2
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p><strong>Step 3 (计算 $J_?(2)$)</strong> 类似地, 我们计算 $N(A-2I)$ 的基, $A-2I$ 即</p>
+    <p>$$\begin{equation}
+\begin{pmatrix}
+ -8& 2& 4 &-10& 5\\
+-14& 3& 8 &-19& 9\\
+  3&-1&-3& 5&-3\\
+  8&-2&-4&10&-5\\
+  8&-2&-4&10&-5
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>显然 $r_4$ 与 $r_5$ 是 $r_1$ 的数乘倍, 因此矩阵的零空间由前三列所在的子矩阵决定. 我们求以下矩阵的零空间:</p>
+    <p>$$\begin{equation}
+\begin{pmatrix}
+ -8& 2& 4 &-10& 5\\
+-14& 3& 8 &-19& 9\\
+  3&-1&-3& 5&-3
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>阶梯形</p>
+    <p>$$\begin{equation}
+\begin{pmatrix}
+1&&&1&-1/8\\
+&1&&1&3/4\\
+&&1&-1&5/8\\
+\end{pmatrix}
+\end{equation}$$</p>
+    <p>记 $v_4$ 与 $v_5$ 为 $\binom {F}{-I}$ 的两列. $N(A-2I)$ 与 $V_2$ 同是二维空间, 因此 Jordan 块为两个 $J_1(2)$.</p>
+    <p><strong>Step 4</strong> 综上,</p>
+    <p>$$\begin{equation}
+(v_2\mid v_1\mid v_3\mid v_4\mid v_5)\cdot \begin{pmatrix}
+    1&1&&&\\
+    &1&&&\\
+    &&1&&\\
+    &&&2&\\
+    &&&&2
+\end{pmatrix} = A \cdot (v_2\mid v_1\mid v_3\mid v_4\mid v_5).
+\end{equation}$$</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>算 $P$ 和 $J$:</p>
+  <p>$$\begin{equation}
+A_1 = \begin{pmatrix}
+2 & -2 & 1 & -2 & -1 \\
+0 & 1 & 0 & -2 & 0 \\
+1 & -2 & 2 & -2 & -1 \\
+0 & 0 & 0 & 3 & 0 \\
+2 & -4 & 2 & -8 & -1
+\end{pmatrix},\quad A_2 = \begin{pmatrix}
+    2 & 0 & -1 & 2 & 0 \\
+    0 & 2 & 0 & 1 & 0 \\
+    1 & -2 & 2 & -3 & -1 \\
+    0 & 0 & 0 & 2 & 0 \\
+    2 & -5 & 2 & -10 & -1
+\end{pmatrix}.
+\end{equation}$$</p>
+</div>
+
+<h3 id="计算奇异值分解">计算奇异值分解</h3>
+
+<p>奇异值分解的原理见 <a href="HW19#奇异值分解">HW19</a>.</p>
+
+<div class="example">
+  <p>计算以下矩阵的奇异值分解:</p>
+  <p>$$\begin{equation}
+A = \begin{pmatrix}
+ 3 & 2 & 2 \\
+ 2 & 3 & -2
+\end{pmatrix}.
+\end{equation}$$</p>
+  <div class="proof">
+    <p>计算奇异值分解可以从 $AA^T$ 或 $A^TA$ 入手. 这里我们计算 $AA^T$, 因为阶数更小:</p>
+    <p>$$\begin{equation}
+AA^T = \begin{pmatrix}
+17 & 8 \\
+8 & 17
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>矩阵的特征值 $25$ 和 $9$. 取正交对角分解</p>
+    <p>$$\begin{equation}
+AA^T = U D U^T = \frac{1}{\sqrt 2}\begin{pmatrix}
+    1 & 1 \\
+    1 & -1
+\end{pmatrix}
+\begin{pmatrix}
+    25 & 0 \\
+    0 & 9
+\end{pmatrix}
+\left(\frac{1}{\sqrt 2}\begin{pmatrix}
+    1 & 1 \\
+    1 & -1
+\end{pmatrix}\right)^{-1}.
+\end{equation}$$</p>
+    <p>奇异值分解 $A = U\Sigma V^T$ 中的矩阵</p>
+    <p>$$\begin{equation}
+U = \frac{1}{\sqrt 2}\begin{pmatrix}
+    1 & 1 \\
+    1 & -1
+\end{pmatrix},\quad \Sigma = \begin{pmatrix}
+    5 & 0 & 0 \\
+    0 & 3 & 0
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>考虑矩阵 $M = \sqrt 2 U A$. 此处 $M$ 的相异行向量必垂直, 因为 $MM^T$ 是对角矩阵. 我们将</p>
+    <p>$$\begin{equation}
+M = \begin{pmatrix}
+    5 & 5 & 0 \\
+    1 & -1 & 4
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>扩充成 $3 \times 3$ 行正交矩阵, 并放缩其行向量使之模长为 $1$, 得</p>
+    <p>$$\begin{equation}
+M = (I \mid 0) \cdot \begin{pmatrix}
+    5 & 5 & 0 \\
+    1 & -1 & 4 \\
+    2 & -2 & -1
+\end{pmatrix} = \sqrt 2 \cdot \begin{pmatrix}
+    5&0&0\\0&3&0
+\end{pmatrix} \cdot \begin{pmatrix}
+    \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 \\
+    \frac{1}{3\sqrt{2}} & -\frac{1}{3\sqrt{2}} & \frac{4}{3\sqrt{2}} \\
+    \frac{2}{3} & -\frac{2}{3} & -\frac{1}{3}
+\end{pmatrix}.
+\end{equation}$$</p>
+    <p>综上,</p>
+    <p>$$\begin{equation}
+A = U \Sigma V^T = \begin{pmatrix}
+    \frac{1}{\sqrt 2} & \frac{1}{\sqrt 2} \\
+    \frac{1}{\sqrt 2} & -\frac{1}{\sqrt 2}
+\end{pmatrix}\begin{pmatrix}
+    5 & 0 & 0 \\
+    0 & 3 & 0
+\end{pmatrix}\begin{pmatrix}
+    \frac{1}{\sqrt{2}} & \frac{1}{3\sqrt{2}} & \frac{2}{3} \\
+    \frac{1}{\sqrt{2}} & -\frac{1}{3\sqrt{2}} & -\frac{2}{3} \\
+    0 & \frac{4}{3\sqrt{2}} & -\frac{1}{3}
+\end{pmatrix}^T.
+\end{equation}$$</p>
+  </div>
+</div>
+
+<div class="problem">
+  <p>计算奇异值分解:</p>
+  <p>$$\begin{equation}
+A_1 = \begin{pmatrix}
+1 & 0 & 2\\
+0 & 1 & 2
+\end{pmatrix},\quad A_2 = \begin{pmatrix}
+    3 & 4 & 1\\
+    1 & -4 & 3
+\end{pmatrix}.
+\end{equation}$$</p>
+</div>
+
+<h3 id="kronecker-积">Kronecker 积</h3>
+
+<p>Kronecker 积用于解释矩阵方程 $AX - XB +CXD = F$.</p>
+
+<div class="definition">
+  <p>(Kronercker 积).给定矩阵 $A \in \mathbb F^{p \times q}$ 与 $B \in \mathbb F^{m \times n}$, 则它们的 Kronecker 积定义为分块矩阵 $$\begin{equation}
+A \otimes B = \begin{pmatrix}
+a_{11}B & a_{12}B & \cdots & a_{1q}B \\
+a_{21}B & a_{22}B & \cdots & a_{2q}B \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+a_{p1}B & a_{p2}B & \cdots & a_{pq}B
+\end{pmatrix} \in \mathbb F^{pm \times qn}.
+\end{equation}$$</p>
+</div>
+
+<p>矩阵 $A \otimes B$ 中的分量可以用四元数组 $((i,j);(k,l))$ 标记, 表示 $((i-1)p+k, (j-1)q+l)$ 位置的元素, 即 $a_{ij} b_{kl}$.</p>
+
+<div class="lemma">
+  <p>容易检验</p>
+  <ol>
+    <li>$\otimes$ 是双线性映射. 换言之, $(A+\lambda A')\otimes B = A\otimes B + \lambda A' \otimes B$, $A \otimes (B + \lambda B') = A \otimes B + \lambda A \otimes B'$.</li>
+    <li>$(A\otimes B) \otimes C = A \otimes (B \otimes C)$.</li>
+    <li>$(A \otimes B)(C \otimes D) = (AC) \otimes (BD)$, 其中矩阵乘法均有定义.</li>
+    <li>$(A \otimes B)^T = A^T \otimes B^T$.</li>
+    <li>如果 $A$ 与 $B$ 可逆, 则 $A \otimes B$ 也可逆, 且 $(A \otimes B)^{-1} = A^{-1} \otimes B^{-1}$.</li>
+    <li>…</li>
+  </ol>
+  <div class="proof">
+    <p>(1). 下比较 $(A+\lambda A')\otimes B$ 与 $A\otimes B + \lambda A' \otimes B$ 在 $((i,j);(k,l))$ 位置的分量, 它们均为 $(a_{ij} + \lambda a'_{ij})b_{kl}$. <br /> (2). 写成大矩阵即可直接看出. <br /> (3). 下比较 $(A\otimes B)(C \otimes D)$ 与 $(AC) \otimes (BD)$ 在 $((i,j),(k,l))$ 位置的分量. $$\begin{equation}
+((A\otimes B)(C \otimes D))_{((i,j);(k,l))} = \sum_{r=1}^q \sum_{s=1}^n (a_{ir} b_{ks})(c_{rj} d_{sl}) = \left(\sum_{r=1}^q a_{ir} c_{rj}\right) \left(\sum_{s=1}^n b_{ks} d_{sl}\right) = ((AC) \otimes (BD))_{((i,j);(k,l))}.
+\end{equation}$$ (4). 直接地, $A^T \otimes B^T$ 在 $((i,j);(k,l))$ 位置的分量是 $a_{ji} b_{lk}$, 而 $(A \otimes B)^T$ 在 $((i,j);(k,l))$ 位置的分量是 $(A \otimes B)_{((j,i);(l,k))} = a_{ji} b_{lk}$. <br /> (5). 由 (3) 可知 $(A \otimes B)(A^{-1} \otimes B^{-1}) = (AA^{-1}) \otimes (BB^{-1}) = I \otimes I = I$.</p>
+  </div>
+</div>
+
+<div class="example">
+  <p>若 $A,B \in \mathbb R^{n \times n}$ 是正定矩阵, 则</p>
+  <p>$$\begin{equation}
+(a_{i,j}\cdot b_{i,j})_{n\times n} \in \mathbb R^{n \times n}
+\end{equation}$$</p>
+  <p>也是正定矩阵.</p>
+  <div class="proof">
+    <p>$A$ 正定, 则存在可逆矩阵 $P$ 使得 $A = P^TP$. 同理, 存在可逆矩阵 $Q$ 使得 $B = Q^TQ$. 因此</p>
+    <p>$$\begin{equation}
+A\otimes B = (P^TP) \otimes (Q^TQ) = (P \otimes Q)^T (P \otimes Q)
+\end{equation}$$</p>
+    <p>也是正定矩阵. 注意到 $(a_{i,j}\cdot b_{i,j})_{n\times n}$ 是 $A \otimes B$ 的主子式, 从而也正定.</p>
+  </div>
+</div>
+
+<div class="corollary">
+  <p>若 $A$ 与 $B$ 满足性质 $\mathfrak P$, 则 $A \otimes B$ 也满足性质 $\mathfrak P$. 此处的 $\mathfrak P$ 可以是可逆性, 对称性, 正定性, 半正定性, 正交性, 幂零性, 可对角化性, 可上三角化性.</p>
+</div>
+
+<div class="corollary">
+  <p>有些矩阵具看上去有成比例的分块, 即能写成 $A \otimes B$ 的形式. 对这类矩阵求逆, 幂, Schur 上三角化, 正交相似对角化, 奇异值分解, LU 分解等时, 都可以化简为对 $A$ 与 $B$ 分别进行相应的运算, 然后再取 Kronecker 积.</p>
+</div>
+
+<div class="problem">
+  <p>记 $vec(M)$ 是矩阵拉直成列向量的操作. 若 $M \in \mathbb F^{m \times n}$, 则</p>
+  <p>$$\begin{equation}
+vec(v_1 \mid v_2 \mid \cdots \mid v_n) = \begin{pmatrix}
+v_1\\ v_2\\ \vdots \\ v_n
+\end{pmatrix} \in \mathbb F^{mn \times 1}.
+\end{equation}$$</p>
+  <p>试验证 (验证容易):</p>
+  <ol>
+    <li>矩阵方程 $A X = B$ 可写成 $(I_n \otimes A) \cdot vec(X) = vec(B)$,</li>
+    <li>矩阵方程 $X D = C$ 可写成 $(D^T \otimes I_m) \cdot vec(X) = vec(C)$,</li>
+    <li>矩阵方程 $P X Q = Y$ 可写成 $(Q^T \otimes P) \cdot vec(X) = vec(Y)$.</li>
+  </ol>
+</div>
+
+  </article>
+
+  <!-- New Sidebar Column -->
+  <aside class="sidebar-column">
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tocLinks = document.querySelectorAll('.numbered-toc a[href^="#"]');
+  const sections = Array.from(tocLinks).map(link => {
+    return document.querySelector(link.getAttribute('href'));
+  });
+  const headerOffset = 80; // adjust for fixed header
+
+  function onScroll() {
+    const scrollPos = window.scrollY + headerOffset + 5; // small buffer
+    let currentSectionIndex = sections.length - 1;
+
+    for (let i = 0; i < sections.length; i++) {
+      if (sections[i].offsetTop > scrollPos) {
+        currentSectionIndex = i - 1;
+        break;
+      }
+    }
+
+    tocLinks.forEach(link => link.classList.remove('active'));
+    if (currentSectionIndex >= 0) {
+      tocLinks[currentSectionIndex].classList.add('active');
+    }
+  }
+
+  window.addEventListener('scroll', onScroll);
+  onScroll(); // initialize on page load
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tocLinks = document.querySelectorAll('.numbered-toc a[href^="#"]');
+  const headerOffset = 80; // Adjust to your fixed header height if any
+
+  tocLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (!targetElement) return;
+
+      // Calculate scroll position with header offset
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      // Smooth scroll to position
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+
+      // Update URL after scrolling (slightly delayed)
+      setTimeout(() => {
+        history.pushState(null, null, targetId);
+      }, 600);
+    });
+  });
+});
+</script>
+
+<div class="sidebar-column">
+
+  <div class="sidebar-section">
+    <h3>Catalog</h3>
+    
+
+
+
+
+
+
+
+<nav class="numbered-toc">
+  
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-2">
+      <a href="#计算题训练">
+        <span class="toc-number">1.</span>
+        <span class="toc-title">计算题训练</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#计算-jordan-标准型与过渡矩阵">
+        <span class="toc-number">1.1.</span>
+        <span class="toc-title">计算 Jordan 标准型与过渡矩阵</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#计算奇异值分解">
+        <span class="toc-number">1.2.</span>
+        <span class="toc-title">计算奇异值分解</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#kronecker-积">
+        <span class="toc-number">1.3.</span>
+        <span class="toc-title">Kronecker 积</span>
+      </a>
+    </div>
+  
+</nav>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>Links</h3>
+    <a href="/MATH1205H-04-HW/">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="home-icon">
+  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/></svg>
+    Home Page;
+    </a>
+    <p></p>
+    <a href="#" onclick="window.print(); return false;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+        <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/>
+      </svg>
+      Print Me;
+    </a>
+    <p></p>
+    <a href="/MATH1205H-04-HW/posts/Collection_of_Websites">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="tools-icon">
+  <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"/>
+</svg>
+      Useful Tools;
+    </a>
+    <p></p>
+    <a href="https://github.com/zhangchenchengSJTU/jekyll-latex">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="repo-icon">
+  <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 0 1 1-1h8zM5 12.25v3.25a.25.25 0 0 0 .4.2l1.45-1.087a.25.25 0 0 1 .3 0L8.6 15.7a.25.25 0 0 0 .4-.2v-3.25a.25.25 0 0 0-.25-.25h-3.5a.25.25 0 0 0-.25.25z"/>
+</svg>
+      Repository;
+    </a>
+    <p></p>
+    <a href="https://www.zotero.org/groups/6107450/zcclib/library">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="repo-icon">
+  <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+</svg>
+    File Folder.
+    </a>
+  </p>
+  </div>
+
+</div>
+  <!-- Sidebar content -->
+  </aside>
+
+  <!-- Navigation (below both columns) -->
+  <div class="page-navigation">
+    
+    <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
+    
+      <span>&middot;</span>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW19" title="PREV: HW19">&gt;&gt;</a>
+    
+  </div>
+</main>
+
+	<div class="footer">
+  <span class="block">&copy;
+    2025
+    Chencheng Zhang</span>
+</div>
+
+
+</body>
+
+
+</html>
