@@ -1098,6 +1098,90 @@ c_1 x_1 + c_2 x_2 + \cdots + c_n x_n = d,\quad d &gt; 0,\quad c_i \leq 0.
     
       
         <item>
+          <title>HW18-solu</title>
+          <description>&lt;h2 id=&quot;空间的正交性&quot;&gt;空间的正交性&lt;/h2&gt;
+
+&lt;h3 id=&quot;euclidean-距离&quot;&gt;Euclidean 距离&lt;/h3&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;证明以下等价:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\braket{u,v} = 0$;&lt;/li&gt;
+    &lt;li&gt;$\|u\| \leq \|u + \lambda v\|$ 对任意 $\lambda \in \mathbb R$ 成立.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;并说明其几何意义.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;($1 \to 2$). 对第二式平方, 等式右侧减去左侧为 $\lambda^2\|v\|^2$. &lt;br /&gt; ($2 \to 1$). 对第二式平方, 等式右侧减去左侧为 $\lambda^2\|v\|^2 + 2 \lambda \braket{u,v}$. 由初中知识, 该过原点的二次函数恒正当且仅当 $\braket{u,v} = 0$. \&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;正交补&quot;&gt;正交补&lt;/h3&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;假定 $U$ 与 $V$ 是 $\mathbb R^n$ 的子空间. 证明 $(U \cap V)^\perp = (U^\perp) + (V^\perp)$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;先证 $\supseteq$. 直接地,&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+(U \cap V)^\perp \supseteq U^\perp, \quad (U \cap V)^\perp \supseteq V^\perp.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;从而得证. &lt;br /&gt; 再证明 $\subseteq$. 对两式同时取 $(-)^\perp$, 结合 $(W^\perp)^\perp =W$, 只需证&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+U \cap V \supseteq ((U^\perp) + (V^\perp))^\perp.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;直接地,&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+U = ((U^\perp) + 0)^\perp \supseteq ((U^\perp) + (V^\perp))^\perp.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;同理可证 $V \supseteq ((U^\perp) + (V^\perp))^\perp$. 由此得证.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;正交矩阵&quot;&gt;正交矩阵&lt;/h2&gt;
+
+&lt;h3 id=&quot;基本定义&quot;&gt;基本定义&lt;/h3&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;假定 $Q$ 是正交矩阵. 记 $Q'$ 是 $Q$ 左上方的 $(k\times k)$-子式. 假定 $\lambda$ 是 $Q'$ 在复数域上的特征值, 则 $|\lambda| \leq 1$.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;取 $\lambda v' = Q' v'$. 记分块 $\begin{pmatrix}Q' &amp; A\\ B&amp;C\end{pmatrix}$, $v = \binom{v'}{0}$. 此时&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\|v'\|^2 = \|v\|^2 = v^TQ^TQv = \|\binom{Q'v'}{Bv'}\|^2 \geq \|Q'v'\|^2 = |\lambda|^2 \|v'\|^2.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;因此 $|\lambda| \leq 1$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;例子-实矩阵的正交对角化&quot;&gt;例子: 实矩阵的正交对角化&lt;/h3&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;给定实对称矩阵 $A$. 试依次证明以下命题, 或直接证明 4..&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;试证明 $A$ 的 Jordan 标准型是对角矩阵, 且对角元是实数.&lt;/li&gt;
+    &lt;li&gt;证明存在实矩阵 $P$ 使得 $PAP^{-1}$ 是对角矩阵 $D$.&lt;/li&gt;
+    &lt;li&gt;接上问. 若 $D$ 的特征值两两不同, 则存在正交矩阵 $Q$ 使得 $Q^{-1}AQ = D$.&lt;/li&gt;
+    &lt;li&gt;接上问. 若不对 $D$ 的特征值作任何要求, 则仍存在正交矩阵 $Q$ 使得 $Q^{-1}AQ = D$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;(1). 先说明实对称矩阵的特征值是实数. 设 $(\lambda, v)$ 是对应的特征对, 则&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\overline v^TAv =\overline v^T\overline Av = \overline{\overline v^TAv}^T.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;左侧是 $\lambda \overline v^Tv$, 右侧是 $\overline \lambda \overline v^Tv$. 由于 $\overline v^Tv &gt;0$, 故 $\lambda = \overline \lambda$ 是实数. &lt;br /&gt; 再说明 Jordan 块只能是 $1$ 阶的. 若不然, 则存在 $\lambda \in \mathbb R$ 使得 $N((\lambda I-A)^2) \neq N(\lambda I - A)$. 试回忆 $N(M^TM) = N(M)$, 矛盾. &lt;br /&gt; (4). 记 $\sigma (A)$ 是 $A$ 特征值构成的集合. 依照 &lt;a href=&quot;HW16&quot;&gt;HW16&lt;/a&gt; 或&lt;a href=&quot;EX10&quot;&gt;习题课&lt;/a&gt;内容, 有子空间的直和 $\mathbb F^n = \bigoplus _{\lambda \in \sigma (A)}V_\lambda$. 特别地, 若 $\lambda \neq \mu$, 则 $V_\lambda \perp V_\mu$.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;证明: 对 $u \in V_\lambda$ 与 $v \in V_\mu$, 有 $\lambda u^Tv = u^TAv = \mu u^T v$. 从而 $u^Tv = 0$.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;由 (1), $V_\lambda$ 中所有非零向量都是特征向量. 取 $V_\lambda$ 的任一标准正交基, 将各 $V_\lambda$ 的标准正交基底合并即得正交矩阵.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-11-27T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW18-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW18-solu</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>HW17</title>
           <description>&lt;h2 id=&quot;特征根估计-圆盘定理&quot;&gt;特征根估计: 圆盘定理&lt;/h2&gt;
 

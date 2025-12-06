@@ -9,12 +9,12 @@
 
 
 
-  <title>HW17
+  <title>HW18-solu
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="特征根估计: 圆盘定理">
+<meta name="description" content="空间的正交性">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW17">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW18-solu">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,185 +75,88 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW17</h1>
+      <h1>HW18-solu</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
-        November 25, 2025
+        November 27, 2025
       </p>
     </div>
 
     <div class="divider"></div>
 
-    <h2 id="特征根估计-圆盘定理">特征根估计: 圆盘定理</h2>
+    <h2 id="空间的正交性">空间的正交性</h2>
 
-<h3 id="圆盘定理的证明">圆盘定理的证明</h3>
+<h3 id="euclidean-距离">Euclidean 距离</h3>
 
-<p>圆盘定理用于估计矩阵的特征根. 以下所有矩阵是 $\mathbb C$ 上方阵.</p>
-
-<div class="theorem">
-  <p>设 $A=(a_{ij})$ 是 $n\times n$ 矩阵. 对每个 $i$, 总有</p>
-  <p>$$\begin{equation}
-|a_{ii}| > \sum_{j\neq i} |a_{ij}|.
-\end{equation}$$</p>
-  <p>则 $A$ 可逆.</p>
+<div class="problem">
+  <p>证明以下等价:</p>
+  <ol>
+    <li>$\braket{u,v} = 0$;</li>
+    <li>$\|u\| \leq \|u + \lambda v\|$ 对任意 $\lambda \in \mathbb R$ 成立.</li>
+  </ol>
+  <p>并说明其几何意义.</p>
   <div class="proof">
-    <p>见 <a href="HW7-solu#行满秩矩阵的一个例子">HW7</a>.</p>
+    <p>($1 \to 2$). 对第二式平方, 等式右侧减去左侧为 $\lambda^2\|v\|^2$. <br /> ($2 \to 1$). 对第二式平方, 等式右侧减去左侧为 $\lambda^2\|v\|^2 + 2 \lambda \braket{u,v}$. 由初中知识, 该过原点的二次函数恒正当且仅当 $\braket{u,v} = 0$. \</p>
   </div>
 </div>
 
-<div class="definition">
-  <p>(复矩阵的 Gershgorin 圆盘). 给定 $A\in \mathbb C^{n\times n}$. 对 $1\leq k\leq n$, 定义 $A$ 的第 $i$ 个列圆盘为</p>
-  <p>$$
-D_i= \left\{z: |z-a_{i,i}|\leq \sum_{1\leq j\leq n,\text{ 且 }j\neq i} |a_{i,j}| \right\}.
-$$</p>
-  <p>以上,</p>
-  <ul>
-    <li>圆盘的中心是 $a_{i,i}\in \mathbb C$,</li>
-    <li>圆盘的半径是 $\sum_{1\leq j\leq n,\text{ 且 }j\neq i} |a_{i,j}|$​.</li>
-  </ul>
-</div>
-
-<p>注意: 可以类似地定义行圆盘. 行, 列圆盘的选取不影响 <strong>Problem</strong> 的证明.</p>
-
-<div class="example">
-  <p>矩阵 $\begin{pmatrix}5+i& 3-2i& i\\ 2-i & 7i& -2+i \\ 2i-1 & i & -1-i\end{pmatrix}$, 特征根与 Gershgorin 行圆盘分布如下图所示:</p>
-  <center><img src="https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/svg/G_Disc_Sample.svg" /></center>
-</div>
+<h3 id="正交补">正交补</h3>
 
 <div class="problem">
-  <p>给定复方阵的特征对 $(\lambda, v)$. 假定 $v$ 中第 $i$ 个分量模长最大, 证明 $\lambda \in D_i$​.</p>
-</div>
-
-<div class="corollary">
-  <p>$\bigcup_{i=1}^nD_i$ 中包含了 $A$​​ 的所有特征值.</p>
-</div>
-
-<div class="example">
-  <p>对角矩阵的所有圆盘半径为 $0$. 圆盘定理显然成立.</p>
-</div>
-
-<div class="problem">
-  <p>请计算</p>
-  <p>$$\begin{equation}
-\begin{pmatrix}
-    4i+12&6i-2&-2i-6\\
-    6i+8&-2i+10&5i-3\\
-    -14i-2&12i-12&8i+18
-\end{pmatrix}
-\end{equation}$$</p>
-  <p>的特征根, 并画出相应的 Gershgorin 圆盘 (行, 列圆盘均可). 以此验证 Gershgorin 圆盘定理.</p>
-</div>
-
-<div class="theorem">
-  <p>若 $A \in \mathbb C^{n \times n}$ 的 $n$ 个圆盘互不相交, 则每个圆盘中有且仅有一个特征根. 从而 $A$ 有 $n$ 个两两不同的特征根. 作为推论, $A$ 可对角化.</p>
+  <p>假定 $U$ 与 $V$ 是 $\mathbb R^n$ 的子空间. 证明 $(U \cap V)^\perp = (U^\perp) + (V^\perp)$.</p>
   <div class="proof">
-    <p>记 $D$ 是 $A$ 的对角线. 考虑连续函数</p>
+    <p>先证 $\supseteq$. 直接地,</p>
     <p>$$\begin{equation}
-F: [0,1] \to \mathbb C^{n\times n},\quad t\mapsto D + t(A-D).
+(U \cap V)^\perp \supseteq U^\perp, \quad (U \cap V)^\perp \supseteq V^\perp.
 \end{equation}$$</p>
-    <p>特别地, $F(0) = D$, $F(1) = A$. 直接地, $F(t)$ 的 $n$ 个圆盘不交.</p>
+    <p>从而得证. <br /> 再证明 $\subseteq$. 对两式同时取 $(-)^\perp$, 结合 $(W^\perp)^\perp =W$, 只需证</p>
+    <p>$$\begin{equation}
+U \cap V \supseteq ((U^\perp) + (V^\perp))^\perp.
+\end{equation}$$</p>
+    <p>直接地,</p>
+    <p>$$\begin{equation}
+U = ((U^\perp) + 0)^\perp \supseteq ((U^\perp) + (V^\perp))^\perp.
+\end{equation}$$</p>
+    <p>同理可证 $V \supseteq ((U^\perp) + (V^\perp))^\perp$. 由此得证.</p>
+  </div>
+</div>
+
+<h2 id="正交矩阵">正交矩阵</h2>
+
+<h3 id="基本定义">基本定义</h3>
+
+<div class="problem">
+  <p>假定 $Q$ 是正交矩阵. 记 $Q'$ 是 $Q$ 左上方的 $(k\times k)$-子式. 假定 $\lambda$ 是 $Q'$ 在复数域上的特征值, 则 $|\lambda| \leq 1$.</p>
+  <div class="proof">
+    <p>取 $\lambda v' = Q' v'$. 记分块 $\begin{pmatrix}Q' & A\\ B&C\end{pmatrix}$, $v = \binom{v'}{0}$. 此时</p>
+    <p>$$\begin{equation}
+\|v'\|^2 = \|v\|^2 = v^TQ^TQv = \|\binom{Q'v'}{Bv'}\|^2 \geq \|Q'v'\|^2 = |\lambda|^2 \|v'\|^2.
+\end{equation}$$</p>
+    <p>因此 $|\lambda| \leq 1$.</p>
+  </div>
+</div>
+
+<h3 id="例子-实矩阵的正交对角化">例子: 实矩阵的正交对角化</h3>
+
+<div class="problem">
+  <p>给定实对称矩阵 $A$. 试依次证明以下命题, 或直接证明 4..</p>
+  <ol>
+    <li>试证明 $A$ 的 Jordan 标准型是对角矩阵, 且对角元是实数.</li>
+    <li>证明存在实矩阵 $P$ 使得 $PAP^{-1}$ 是对角矩阵 $D$.</li>
+    <li>接上问. 若 $D$ 的特征值两两不同, 则存在正交矩阵 $Q$ 使得 $Q^{-1}AQ = D$.</li>
+    <li>接上问. 若不对 $D$ 的特征值作任何要求, 则仍存在正交矩阵 $Q$ 使得 $Q^{-1}AQ = D$.</li>
+  </ol>
+  <div class="proof">
+    <p>(1). 先说明实对称矩阵的特征值是实数. 设 $(\lambda, v)$ 是对应的特征对, 则</p>
+    <p>$$\begin{equation}
+\overline v^TAv =\overline v^T\overline Av = \overline{\overline v^TAv}^T.
+\end{equation}$$</p>
+    <p>左侧是 $\lambda \overline v^Tv$, 右侧是 $\overline \lambda \overline v^Tv$. 由于 $\overline v^Tv >0$, 故 $\lambda = \overline \lambda$ 是实数. <br /> 再说明 Jordan 块只能是 $1$ 阶的. 若不然, 则存在 $\lambda \in \mathbb R$ 使得 $N((\lambda I-A)^2) \neq N(\lambda I - A)$. 试回忆 $N(M^TM) = N(M)$, 矛盾. <br /> (4). 记 $\sigma (A)$ 是 $A$ 特征值构成的集合. 依照 <a href="HW16">HW16</a> 或<a href="EX10">习题课</a>内容, 有子空间的直和 $\mathbb F^n = \bigoplus _{\lambda \in \sigma (A)}V_\lambda$. 特别地, 若 $\lambda \neq \mu$, 则 $V_\lambda \perp V_\mu$.</p>
     <ul>
-      <li>一个分析学常识 (自行用 $\varepsilon$-$\delta$ 语言证明): 含参多项式 $\det (xI - F(t))$ 在复数域上的 $n$ 个根 $\{x_i(t)\}_{i=1}^n$ 关于 $t$ 连续.</li>
+      <li>证明: 对 $u \in V_\lambda$ 与 $v \in V_\mu$, 有 $\lambda u^Tv = u^TAv = \mu u^T v$. 从而 $u^Tv = 0$.</li>
     </ul>
-    <p>$D = F(0)$ 的所有圆盘中各有且仅有一个特征根 (即对角线元). 由连续性, 每个圆盘中始终有且仅有一个特征根. 由于圆盘互不相交, 故 $A=F(1)$ 有 $n$ 个两两不同的特征根. 因此 $A$ 可对角化.</p>
-  </div>
-</div>
-
-<h3 id="与-hamilton-cayley-定理的结合">与 Hamilton Cayley 定理的结合</h3>
-
-<div class="theorem">
-  <p>(Hamilton-Cayley 定理). 设 $A\in \mathbb C^{n\times n}$, 其特征多项式为 $p_A(x)=\det (xI - A)$. 则 $p_A(A)=0$​.</p>
-  <div class="proof">
-    <p>对任意多项式 $f$, 总有 $f(PAP^{-1}) = Pf(A)P^{-1}$. 只需考虑 $A$ 的 Jordan 标准型. 这是显然的.</p>
-  </div>
-  <p>注: 一般域上的 Hamilton-Cayley 定理有以下几种证明方式. 最自然的想法是引入有限域扩张, 使得 $\det(xI - A)$ 能分解成一次因式的乘积, 然后对扩域上的 Jordan 标准型使用类似的证明. 另一种思路是使用伴随矩阵 (adjoint matrix)​ 的概念, 许多教材使用这种证明, 但动机不明. 这一定理的本质是 $\mathbb F^n$ 上的 $(n+1)$-次反对称形式消失, 见<a href="https://www.mathcha.io/editor/9zzq8sn3tL2SVqI63wm4nIp3W50rsPxpdY0tpdL8Z">去年习题课</a>.</p>
-</div>
-
-<div class="proposition">
-  <p>若 $AX = XB$, 且 $p_A(x) := \det(xI-A)$ 与 $p_B(x) := \det (xI - B)$ 互素, 则 $X = O$.</p>
-  <ul>
-    <li>称 $p_A$ 与 $p_B$ 互素, 当且仅当存在多项式 $g$ 与 $h$ 使得 $g(x)p_A(x) + h(x)p_B(x) = 1$​.</li>
-  </ul>
-  <div class="proof">
-    <p>由特征多项式互素, $A$ 与 $B$ 至少一者可逆, 不妨假定为 $A$. 由归纳, 对任意多项式 $f$, 总有 $f(A)X = X f(B)$. 将 $f$ 取作 $B$ 的特征多项式, 得 $p_B(A)X = O$. 由互素, 存在 $g$ 与 $h$ 使得</p>
-    <p>$$\begin{equation}
-X = g(A)p_A(A)X + h(A)p_B(A)X = O.
-\end{equation}$$</p>
-  </div>
-</div>
-
-<div class="corollary">
-  <p>若 $A$ 与 $B$ 的特征多项式互素, 则对任意 $M$, $\binom{A \ M}{O \ B}$ 与 $\binom{A \ O}{O \ B}$ 总是相似的.</p>
-  <div class="proof">
-    <p>由特征多项式互素, 线性映射</p>
-    <p>$$\begin{equation}
-\mathbb C^{m\times n} \to \mathbb C^{m\times n},\quad X\mapsto AX - XB
-\end{equation}$$</p>
-    <p>是单射, 从而是满射. 假定 $M$ 的原像是 $P$, 则</p>
-    <p>$$\begin{equation}
-\binom{A \ O}{O \ B}\cdot \binom{I \ P}{O \ I} = \binom{I \ P}{O \ I} \cdot \binom{A \ M}{O \ B}.
-\end{equation}$$</p>
-  </div>
-</div>
-
-<div class="example">
-  <p>考虑以下主对角占优的复矩阵 (对角元是正实数) 构成的集合</p>
-  <p>$$\begin{equation}
-\mathscr S := \{A \in \mathbb C^{n \times n} \mid a_{ii} > \sum_{j\neq i} |a_{ij}|,\ \forall 1\leq i\leq n\}.
-\end{equation}$$</p>
-  <p>依照圆盘定理, $A \in \mathscr S$ 的所有特征根都有正的实部. <br /> 对任意 $A,B \in \mathscr S$, 若 $A^2 = B^2$, 则 $A=B$.</p>
-  <ul>
-    <li>证明: $A$ 与 $-B$ 的特征根不同, 从而 $AX=X(-B)$ 只有零解. 有题设, $A(A-B)=(A-B)(-B)$. 从而 $A-B = O$.</li>
-  </ul>
-</div>
-
-<p>仿照上述证明, 试解决下列问题.</p>
-
-<div class="problem">
-  <p>定义集合</p>
-  <p>$$\begin{equation}
-\mathscr T:= \{A \in \mathbb C^{n \times n} \mid \forall 1\leq i\leq n, \ a_{ii} \in \mathbb R,\ \text{且} \ |a_{ii}| >2\sum_{j\neq i} |a_{ij}|\}.
-\end{equation}$$</p>
-  <p>对任意 $A,B\in\mathscr S$, 若 $A^3=B^3$, 则 $A=B$.</p>
-  <ul>
-    <li>若嫌麻烦, 可以简单地取 $\mathscr T:= \{A \in \mathbb R^{n \times n} \mid  |a_{ii}| > 2\sum_{j\neq i} |a_{ij}|\}$. 证明过程没区别.</li>
-  </ul>
-</div>
-
-<div class="theorem">
-  <p>记 $\mathscr P$ 是特征值全为正实数的复矩阵构成的集合. 则对任意 $n$,</p>
-  <p>$$\begin{equation}
-\mathscr P \to \mathscr P, \quad X \mapsto X^n
-\end{equation}$$</p>
-  <p>是双射. 换言之, 每个 $\mathscr P$-中的矩阵有唯一的 $\mathscr P$ 中的 $n$ 次方根.</p>
-  <div class="proof">
-    <p>记上述命题为 $\mathfrak P(n)$. 考虑以下归纳法:</p>
-    <ol>
-      <li>$\mathfrak P(2)$ 正确,</li>
-      <li>若 $\mathfrak P(a)$ 与 $\mathfrak P(b)$ 正确, 则 $\mathfrak P(a\cdot b)$ 正确,</li>
-      <li>对素数 $p$, 若 $\mathfrak P(p-1)$ 正确, 则 $\mathfrak P(p)$ 正确.</li>
-    </ol>
-    <p>显然 1. 与 2. 成立. 下证明 3. 即可. 记 $w$ 是 $p$-次单位根, 则对一切 $1\leq k\leq p-1$,</p>
-    <p>$$
-\begin{align*}
-&A(A^{p-1}+w^k A^{p-2}B +w^{2k}A^{p-3}B^2+\cdots + w^{(p-1)k}B^{p-1})\\
-= \ &(A^{p-1}+w^k A^{p-2}B +w^{2k}A^{p-3}B^2+\cdots + w^{(p-1)k}B^{p-1})(w^k B).
-\end{align*}
-$$</p>
-    <p>因此, $A^{p-1}+w^k A^{p-2}B +w^{2k}A^{p-3}B^2+\cdots + w^{(p-1)k}B^{p-1}=O$. 写作线性方程组, 得</p>
-    <p>$$
-(w^{i\cdot (j-1)})_{1\leq i\leq (p-1), \ 1\leq j\leq p}\cdot \begin{pmatrix}A^{p-1}\\ A^{p-1}B\\\vdots \\ B^{p-1}\end{pmatrix}_{p}
-=\begin{pmatrix}O\\ O\\\vdots \\ O\end{pmatrix}_{p-1}.  
-$$</p>
-    <p>此处, $\{A^{l}B^{p-1-l}\}_{0\leq l\leq p-1}$ 是 $p$ 个未知量. 左侧矩阵 $W_{(p-1)\times p}=(w^{i\cdot (j-1)})$ 形如增广矩阵 $(\mathbf 1 \ \ V)$, $V$ 是 $p$-阶 Vandermonde 方阵 (可逆). 因此, 存在行初等变换, 使得</p>
-    <p>$$
-W=(\mathbf 1  \ \ V)\xrightarrow{\text{行初等变换}} (\mathbf v  \ \ I)\quad (\mathbf v \ \text{唯一, 由反方向的 $ref$ 算法}).
-$$</p>
-    <p>由于行变换不改变列线性关系, 结合 $\mathbf 1\in N(W)$ 知 $\mathbf v= - \mathbf 1$. 此时, 方阵组的最后一个等式是 $A^{p-1}-B^{p-1}=O$. 这证明归纳步骤</p>
-    <ul>
-      <li>对素数 $p$, 若 $\mathfrak P(p-1)$ 正确, 则 $\mathfrak P(p)$ 正确.</li>
-    </ul>
+    <p>由 (1), $V_\lambda$ 中所有非零向量都是特征向量. 取 $V_\lambda$ 的任一标准正交基, 将各 $V_\lambda$ 的标准正交基底合并即得正交矩阵.</p>
   </div>
 </div>
 
@@ -354,9 +257,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#特征根估计-圆盘定理">
+      <a href="#空间的正交性">
         <span class="toc-number">1.</span>
-        <span class="toc-title">特征根估计: 圆盘定理</span>
+        <span class="toc-title">空间的正交性</span>
       </a>
     </div>
   
@@ -371,9 +274,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-3">
-      <a href="#圆盘定理的证明">
+      <a href="#euclidean-距离">
         <span class="toc-number">1.1.</span>
-        <span class="toc-title">圆盘定理的证明</span>
+        <span class="toc-title">Euclidean 距离</span>
       </a>
     </div>
   
@@ -388,9 +291,60 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-3">
-      <a href="#与-hamilton-cayley-定理的结合">
+      <a href="#正交补">
         <span class="toc-number">1.2.</span>
-        <span class="toc-title">与 Hamilton Cayley 定理的结合</span>
+        <span class="toc-title">正交补</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-2">
+      <a href="#正交矩阵">
+        <span class="toc-number">2.</span>
+        <span class="toc-title">正交矩阵</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#基本定义">
+        <span class="toc-number">2.1.</span>
+        <span class="toc-title">基本定义</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#例子-实矩阵的正交对角化">
+        <span class="toc-number">2.2.</span>
+        <span class="toc-title">例子: 实矩阵的正交对角化</span>
       </a>
     </div>
   
@@ -443,13 +397,13 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW18-solu" title="NEXT: HW18-solu">&lt;&lt;</a>
+      <a class="next" href="/MATH1205H-04-HW/posts/HW18" title="NEXT: HW18">&lt;&lt;</a>
       <span>&middot;</span>
     
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW17-solu" title="PREV: HW17-solu">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW17" title="PREV: HW17">&gt;&gt;</a>
     
   </div>
 </main>
