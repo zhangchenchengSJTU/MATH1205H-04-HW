@@ -542,8 +542,8 @@ V \to \mathbb R^{n \times n},\quad f \mapsto \left(a_{i,j} = f(e_i,e_j)\right).
     &lt;p&gt;等价于证明左零空间相同.&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;$u^T(A\quad B)=0$, 当且仅当&lt;/li&gt;
-      &lt;li&gt;$(u,0)^T\begin{pmatrix} A &amp; B \\ B^T &amp; C \end{pmatrix} =0$, 当且仅当&lt;/li&gt;
-      &lt;li&gt;$(u,0)^T\begin{pmatrix} A &amp; B \\ B^T &amp; C \end{pmatrix}\binom u0 =0$, 当且仅当&lt;/li&gt;
+      &lt;li&gt;$(u^T,0)\begin{pmatrix} A &amp; B \\ B^T &amp; C \end{pmatrix} =0$, 当且仅当&lt;/li&gt;
+      &lt;li&gt;$(u^T,0)\begin{pmatrix} A &amp; B \\ B^T &amp; C \end{pmatrix}\binom u0 =0$, 当且仅当&lt;/li&gt;
       &lt;li&gt;$u^TAu=0$, 当且仅当&lt;/li&gt;
       &lt;li&gt;$u^T A = 0$.&lt;/li&gt;
     &lt;/ul&gt;
