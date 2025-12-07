@@ -421,14 +421,6 @@ U \times U \to U,\quad (u_1,u_2) \mapsto u_1 + u_2
 &lt;/div&gt;
 
 &lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;把 $2$/双 改成 $n$, 那么行列式&lt;/p&gt;
-  &lt;p&gt;$$\begin{equation}
-\mathbb R^n \times \mathbb R^n \to \mathbb R,\quad (v_1,v_2,\cdots,v_n) \mapsto \det(v_1,v_2,\cdots,v_n)
-\end{equation}$$&lt;/p&gt;
-  &lt;p&gt;就是 $n$-重双线性映射.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;example&quot;&gt;
   &lt;p&gt;给定线性空间 $U_1$, $U_2$ 与 $U_3$, 定义&lt;/p&gt;
   &lt;ul&gt;
     &lt;li&gt;$V_{1,2} := \{f \mid f : U_1 \to U_2\ \text{是线性映射}\}$;&lt;/li&gt;
@@ -589,9 +581,9 @@ A = \begin{pmatrix}0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 &amp; 1 \\ 1 &amp; 0 &
     &lt;p&gt;$$\begin{equation}
 \lambda_k = w^k + w^{-k} = 2\cos\frac{2k\pi}{n},\quad k=0,1,\ldots,n-1.
 \end{equation}$$&lt;/p&gt;
-    &lt;p&gt;$A$ 的最大特征值为 $2$, 对应 $1$ 维的特征空间 $\{c\mathbf 1 \mid c \in \mathbb R\}$. 待求式即&lt;/p&gt;
+    &lt;p&gt;$A$ 的最大特征值为 $2$, 对应 $1$ 维的特征空间 $\{c\mathbf 1 \mid c \in \mathbb R\}$. $2T$ 的最小值即&lt;/p&gt;
     &lt;p&gt;$$\begin{equation}
-2T = \min _{\|x\| = 1, \ x \perp \mathbf 1} {x^TAx}
+\min _{\|x\| = 1, \ x \perp \mathbf 1} {x^TAx}.
 \end{equation}$$&lt;/p&gt;
     &lt;p&gt;实对称矩阵的特征空间垂直, 从而 $2T$ 的最大值为第二大特征值. 因此 $T$ 的最大值为 $\cos\frac{2\pi}{n}$.&lt;/p&gt;
   &lt;/div&gt;
@@ -620,7 +612,7 @@ v_{k+1} := u - \sum_{i=1}^k \frac{\braket {u,v_i}}{\|v_i\|^2} v_i
 &lt;/div&gt;
 
 &lt;div class=&quot;corollary&quot;&gt;
-  &lt;p&gt;(数学归纳, 正交化的过程). 任取 $\mathbb R^n$ 的一组基 $\{u_1, u_2, \ldots, u_n\}$, 则存在对角元为 $1$ 的上三角矩阵 $R$ 使得&lt;/p&gt;
+  &lt;p&gt;(数学归纳, 正交化的过程). 任取 $\mathbb R^n$ 的一组基 $\{v_1, v_2, \ldots, v_n\}$, 则存在对角元为 $1$ 的上三角矩阵 $R$ 使得&lt;/p&gt;
   &lt;p&gt;$$\begin{equation}
 (u_1, u_2, \ldots, u_n) = (v_1, v_2, \ldots, v_n) R,
 \end{equation}$$&lt;/p&gt;
