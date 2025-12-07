@@ -7,6 +7,48 @@
     
       
         <item>
+          <title>Exersice Class 11</title>
+          <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
+
+&lt;p&gt;录制：07-Dec-25 线性代数习题课&lt;/p&gt;
+
+&lt;p&gt;日期：2025-12-07 18:00-20:30&lt;/p&gt;
+
+&lt;p&gt;录制文件：&lt;a href=&quot;https://pan.sjtu.edu.cn/web/share/9a26f981cb5aff1cf16e5ec984dc5761&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;文档: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-12-07-%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf&quot;&gt;地址&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;思考题&quot;&gt;思考题&lt;/h2&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;给定 $A \in \mathbb C^{n \times n}$. 证明存在唯一的幂零矩阵 $N$ 与可对角化矩阵 $D$ 使得&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+ND = DN,\quad A = D + N.
+\end{equation}$$&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;$N$ 与 $D$ 存在性由 Jordan 标准型得到. 下证明唯一性. 设 $A = N' + D'$ 是另一种分解, 则容易发现存在多项式 $f$ 与 $g$ 使得&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+f(A) = N, \quad g(A) = D.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;因此 $N - N' = D-D'$ 是可对角化的幂零矩阵, 这只能是零矩阵. 由此得到唯一性.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;若数域上的矩阵 $A$ 与 $X$ 满足 $AX-XA = X$, 证明 $X$ 幂零.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;直接地, $tr(X) = tr(AX)-tr(XA) = 0$. 可以归纳地证明 $tr(X^k) = 0$ 对任意正整数 $k$ 成立. 由 Vitae 定理知 $X$ 的特征值多项式为 $x^n$. 因此 $X$ 幂零.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-12-07T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/EX12</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/EX12</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>HW20</title>
           <description>&lt;h2 id=&quot;计算题训练&quot;&gt;计算题训练&lt;/h2&gt;
 
