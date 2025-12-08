@@ -7,7 +7,51 @@
     
       
         <item>
-          <title>Exersice Class 11</title>
+          <title>HW21-solu</title>
+          <description>&lt;h2 id=&quot;简答题&quot;&gt;简答题&lt;/h2&gt;
+
+&lt;p&gt;请用清晰的语言回答以下问题.&lt;/p&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;请用线性映射与基变换的观点解释, 任何 $A \in \mathbb F^{n \times m}$ 形如&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A = P \begin{pmatrix}
+I_r &amp; 0 \\
+0 &amp; 0
+\end{pmatrix} Q.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;其中, $P \in \mathbb F^{n \times n}, Q \in \mathbb F^{m \times m}$ 均为可逆矩阵, $r = \mathrm{rank}(A)$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;线性方程组的解-flip-puzzle&quot;&gt;线性方程组的解: Flip Puzzle&lt;/h2&gt;
+
+&lt;p&gt;请自行研究以下问题.&lt;/p&gt;
+
+&lt;html lang=&quot;en&quot;&gt;&lt;body&gt;
+    &lt;iframe src=&quot;https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/flip.html&quot; width=&quot;100%&quot; height=&quot;500&quot; title=&quot;Flip Puzzle&quot;&gt;
+ 
+    &lt;/iframe&gt;
+  &lt;/body&gt;&lt;/html&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;问题: 给定 $5 \times 5$ 的 Flip Puzzle, 如何判断其解的存在性? 以下是一种求解思路.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;(约化). 给定任意 Flip Puzzle, 存在一种自上而下的点击顺序, 可以将其约化为只在最后一行有黑块的形式. 具体地, 对于每一行, 从上到下扫描每一个格子, 如果该格子是黑色的, 则点击该格子正下方的格子. 这样处理完前四行后, 最后一行的状态完全由初始状态决定.&lt;/li&gt;
+    &lt;li&gt;(映射). 假设棋盘全白, 我们可以随意点击第一行的方块, 接着使用上述约化方法, 最终会得到一个只有最后一行可能有黑块的棋盘. 每输入一种打乱第一行的方式, 都会得到一种最后一行的状态. 这就定义了一个从第一行点击方式到最后一行状态的一个映射.&lt;/li&gt;
+    &lt;li&gt;(线性代数). 由于每个格子只有黑白两种状态, 我们可以将黑色视为奇数, 白色视为偶数, 那么上述映射实际上是一个从 $\mathbb F_2^5$ 到 $\mathbb F_2^5$ 的线性映射. 这里 $\mathbb F_2 = \{\text{奇数}, \text{偶数}\}$, 由小学知识知, $\mathbb F_2$ 对四则运算封闭, 所以是一个大小为 $2$ 的域.&lt;/li&gt;
+    &lt;li&gt;(求解). 若 1. 的约化结果在 2. 中映射的像中, 则原始的 Flip Puzzle 有解; 反之则无解. 进一步地, 可以通过求解线性方程组来找到具体的解.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-12-09T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW21-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW21-solu</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Exersice Class 12</title>
           <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
 
 &lt;p&gt;录制：07-Dec-25 线性代数习题课&lt;/p&gt;
@@ -443,7 +487,7 @@ L \to \mathbb F^{m \times n},\quad f \mapsto \left(\text{$f(u_i)$ 在 $v_j$ 上�
   &lt;p&gt;$$\begin{equation}
 U \times U \to U,\quad (u_1,u_2) \mapsto u_1 + u_2
 \end{equation}$$&lt;/p&gt;
-  &lt;p&gt;是一个双线性映射.&lt;/p&gt;
+  &lt;p&gt;不是一个双线性映射.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;example&quot;&gt;
