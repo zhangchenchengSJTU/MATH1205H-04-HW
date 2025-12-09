@@ -7,45 +7,75 @@
     
       
         <item>
-          <title>HW21-solu</title>
-          <description>&lt;h2 id=&quot;简答题&quot;&gt;简答题&lt;/h2&gt;
-
-&lt;p&gt;请用清晰的语言回答以下问题.&lt;/p&gt;
+          <title>HW21</title>
+          <description>&lt;h2 id=&quot;计算题训练&quot;&gt;计算题训练&lt;/h2&gt;
 
 &lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;请用线性映射与基变换的观点解释, 任何 $A \in \mathbb F^{n \times m}$ 形如&lt;/p&gt;
+  &lt;p&gt;求以下方程的所有解:&lt;/p&gt;
   &lt;p&gt;$$\begin{equation}
-A = P \begin{pmatrix}
-I_r &amp; 0 \\
-0 &amp; 0
-\end{pmatrix} Q.
+\begin{pmatrix}
+  2&amp;0\\1&amp;3
+\end{pmatrix}
+\cdot X = X \cdot 
+\begin{pmatrix}
+  1&amp;0&amp;2\\
+  -1&amp;1&amp;3\\
+  1&amp;-1&amp;1
+\end{pmatrix}.
 \end{equation}$$&lt;/p&gt;
-  &lt;p&gt;其中, $P \in \mathbb F^{n \times n}, Q \in \mathbb F^{m \times m}$ 均为可逆矩阵, $r = \mathrm{rank}(A)$.&lt;/p&gt;
+  &lt;p&gt;提示: 通过适当的行列变换简化方阵, 同时将 $X$ 换元.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;线性方程组的解-flip-puzzle&quot;&gt;线性方程组的解: Flip Puzzle&lt;/h2&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;求 $A$ 的特征多项式, 极小零化多项式. 以及向量 $v$ 的极小零化多项式 (极小的 $g$ 使得 $g(A)v = 0$).&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A = \begin{pmatrix}
+ 2&amp; -3&amp;  3&amp; -3\\
+ 2&amp; -4&amp;  6&amp; -3\\
+ 1&amp; -2&amp;  4&amp;  0\\
+-1&amp;  3&amp; -3&amp;  4
+\end{pmatrix},\quad v = \begin{pmatrix}
+  -1\\0\\1\\1
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;提示: 通过特征多项式与 $\dim (A - \lambda I)$ 猜出 Jordan 型, 再计算极小多项式. 研究 $\{v,Av,A^2v,\ldots\}$ 的线性相关性, 从而求出 $v$ 的极小零化多项式.&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;p&gt;请自行研究以下问题.&lt;/p&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;作分解 $A = QR$, $$\begin{equation}
+A = \begin{pmatrix}
+  1&amp;1&amp;4&amp;2\\
+  2&amp;1&amp;5&amp;0\\
+  3&amp;4&amp;10&amp;1
+\end{pmatrix}.
+\end{equation}$$ 其中 $Q$ 是 $3\times 3$ 正交矩阵, $R$ 形如以下:&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+R =
+\begin{pmatrix}
+\ast_{&gt;0} &amp; \ast &amp; \ast &amp; \ast\\
+0 &amp; \ast_{&gt;0} &amp; \ast &amp; \ast\\
+0 &amp; 0 &amp; 0 &amp; \ast_{&gt;0}
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;提示: 先通过列变换, 将 $A$ 分解作列正交矩阵 $Q'$ 与上三角矩阵 $R'$ 的乘积. 最后将 $Q'$ 化为正交矩阵.&lt;/p&gt;
+&lt;/div&gt;
 
-&lt;html lang=&quot;en&quot;&gt;&lt;body&gt;
-    &lt;iframe src=&quot;https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/flip.html&quot; width=&quot;100%&quot; height=&quot;500&quot; title=&quot;Flip Puzzle&quot;&gt;
- 
-    &lt;/iframe&gt;
-  &lt;/body&gt;&lt;/html&gt;
-
-&lt;div class=&quot;example&quot;&gt;
-  &lt;p&gt;问题: 给定 $5 \times 5$ 的 Flip Puzzle, 如何判断其解的存在性? 以下是一种求解思路.&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;(约化). 给定任意 Flip Puzzle, 存在一种自上而下的点击顺序, 可以将其约化为只在最后一行有黑块的形式. 具体地, 对于每一行, 从上到下扫描每一个格子, 如果该格子是黑色的, 则点击该格子正下方的格子. 这样处理完前四行后, 最后一行的状态完全由初始状态决定.&lt;/li&gt;
-    &lt;li&gt;(映射). 假设棋盘全白, 我们可以随意点击第一行的方块, 接着使用上述约化方法, 最终会得到一个只有最后一行可能有黑块的棋盘. 每输入一种打乱第一行的方式, 都会得到一种最后一行的状态. 这就定义了一个从第一行点击方式到最后一行状态的一个映射.&lt;/li&gt;
-    &lt;li&gt;(线性代数). 由于每个格子只有黑白两种状态, 我们可以将黑色视为奇数, 白色视为偶数, 那么上述映射实际上是一个从 $\mathbb F_2^5$ 到 $\mathbb F_2^5$ 的线性映射. 这里 $\mathbb F_2 = \{\text{奇数}, \text{偶数}\}$, 由小学知识知, $\mathbb F_2$ 对四则运算封闭, 所以是一个大小为 $2$ 的域.&lt;/li&gt;
-    &lt;li&gt;(求解). 若 1. 的约化结果在 2. 中映射的像中, 则原始的 Flip Puzzle 有解; 反之则无解. 进一步地, 可以通过求解线性方程组来找到具体的解.&lt;/li&gt;
-  &lt;/ol&gt;
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;将以下方阵分解成正交方阵 $Q$ 与对称矩阵 $S$ 的乘积, 即 $A = QS$. 其中&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A = \begin{pmatrix}
+3&amp; 6&amp;1&amp; 2\\
+3&amp; 0&amp;1&amp; 0\\
+1&amp; 2&amp;2&amp; 4\\
+1&amp; 0&amp;2&amp; 0
+\end{pmatrix}
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;提示: 以上方阵形如 $X \otimes Y$. 最后只需对两个 $2 \times 2$ 矩阵作极分解. 特别地, 极分解来自奇异值分解.&lt;/p&gt;
 &lt;/div&gt;
 </description>
           <pubDate>2025-12-09T00:00:00+08:00</pubDate>
-          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW21-solu</link>
-          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW21-solu</guid>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW21</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW21</guid>
         </item>
       
     

@@ -9,12 +9,12 @@
 
 
 
-  <title>Exersice Class 12
+  <title>HW21
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="Files">
+<meta name="description" content="计算题训练">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/EX12">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW21">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,47 +75,79 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>Exersice Class 12</h1>
+      <h1>HW21</h1>
       <p class="author">
         Chencheng Zhang
         <br/>
-        December 7, 2025
+        December 9, 2025
       </p>
     </div>
 
     <div class="divider"></div>
 
-    <h2 id="files">Files</h2>
+    <h2 id="计算题训练">计算题训练</h2>
 
-<p>录制：07-Dec-25 线性代数习题课</p>
-
-<p>日期：2025-12-07 18:00-20:30</p>
-
-<p>录制文件：<a href="https://pan.sjtu.edu.cn/web/share/9a26f981cb5aff1cf16e5ec984dc5761">地址</a></p>
-
-<p>文档: <a href="https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-12-07-%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%91%A8%E4%B9%A0%E9%A2%98%E8%AF%BE.pdf">地址</a></p>
-
-<h2 id="思考题">思考题</h2>
-
-<div class="example">
-  <p>给定 $A \in \mathbb C^{n \times n}$. 证明存在唯一的幂零矩阵 $N$ 与可对角化矩阵 $D$ 使得</p>
+<div class="problem">
+  <p>求以下方程的所有解:</p>
   <p>$$\begin{equation}
-ND = DN,\quad A = D + N.
+\begin{pmatrix}
+  2&0\\1&3
+\end{pmatrix}
+\cdot X = X \cdot 
+\begin{pmatrix}
+  1&0&2\\
+  -1&1&3\\
+  1&-1&1
+\end{pmatrix}.
 \end{equation}$$</p>
-  <div class="proof">
-    <p>$N$ 与 $D$ 存在性由 Jordan 标准型得到. 下证明唯一性. 设 $A = N' + D'$ 是另一种分解, 则容易发现存在多项式 $f$ 与 $g$ 使得</p>
-    <p>$$\begin{equation}
-f(A) = N, \quad g(A) = D.
-\end{equation}$$</p>
-    <p>因此 $N - N' = D-D'$ 是可对角化的幂零矩阵, 这只能是零矩阵. 由此得到唯一性.</p>
-  </div>
+  <p>提示: 通过适当的行列变换简化方阵, 同时将 $X$ 换元.</p>
 </div>
 
-<div class="example">
-  <p>若数域上的矩阵 $A$ 与 $X$ 满足 $AX-XA = X$, 证明 $X$ 幂零.</p>
-  <div class="proof">
-    <p>直接地, $tr(X) = tr(AX)-tr(XA) = 0$. 可以归纳地证明 $tr(X^k) = 0$ 对任意正整数 $k$ 成立. 由 Vitae 定理知 $X$ 的特征值多项式为 $x^n$. 因此 $X$ 幂零.</p>
-  </div>
+<div class="problem">
+  <p>求 $A$ 的特征多项式, 极小零化多项式. 以及向量 $v$ 的极小零化多项式 (极小的 $g$ 使得 $g(A)v = 0$).</p>
+  <p>$$\begin{equation}
+A = \begin{pmatrix}
+ 2& -3&  3& -3\\
+ 2& -4&  6& -3\\
+ 1& -2&  4&  0\\
+-1&  3& -3&  4
+\end{pmatrix},\quad v = \begin{pmatrix}
+  -1\\0\\1\\1
+\end{pmatrix}.
+\end{equation}$$</p>
+  <p>提示: 通过特征多项式与 $\dim (A - \lambda I)$ 猜出 Jordan 型, 再计算极小多项式. 研究 $\{v,Av,A^2v,\ldots\}$ 的线性相关性, 从而求出 $v$ 的极小零化多项式.</p>
+</div>
+
+<div class="problem">
+  <p>作分解 $A = QR$, $$\begin{equation}
+A = \begin{pmatrix}
+  1&1&4&2\\
+  2&1&5&0\\
+  3&4&10&1
+\end{pmatrix}.
+\end{equation}$$ 其中 $Q$ 是 $3\times 3$ 正交矩阵, $R$ 形如以下:</p>
+  <p>$$\begin{equation}
+R =
+\begin{pmatrix}
+\ast_{>0} & \ast & \ast & \ast\\
+0 & \ast_{>0} & \ast & \ast\\
+0 & 0 & 0 & \ast_{>0}
+\end{pmatrix}.
+\end{equation}$$</p>
+  <p>提示: 先通过列变换, 将 $A$ 分解作列正交矩阵 $Q'$ 与上三角矩阵 $R'$ 的乘积. 最后将 $Q'$ 化为正交矩阵.</p>
+</div>
+
+<div class="problem">
+  <p>将以下方阵分解成正交方阵 $Q$ 与对称矩阵 $S$ 的乘积, 即 $A = QS$. 其中</p>
+  <p>$$\begin{equation}
+A = \begin{pmatrix}
+3& 6&1& 2\\
+3& 0&1& 0\\
+1& 2&2& 4\\
+1& 0&2& 0
+\end{pmatrix}
+\end{equation}$$</p>
+  <p>提示: 以上方阵形如 $X \otimes Y$. 最后只需对两个 $2 \times 2$ 矩阵作极分解. 特别地, 极分解来自奇异值分解.</p>
 </div>
 
   </article>
@@ -215,26 +247,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#files">
+      <a href="#计算题训练">
         <span class="toc-number">1.</span>
-        <span class="toc-title">Files</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-2">
-      <a href="#思考题">
-        <span class="toc-number">2.</span>
-        <span class="toc-title">思考题</span>
+        <span class="toc-title">计算题训练</span>
       </a>
     </div>
   
@@ -287,13 +302,10 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW21" title="NEXT: HW21">&lt;&lt;</a>
-      <span>&middot;</span>
-    
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW20" title="PREV: HW20">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/EX12" title="PREV: Exersice Class 12">&gt;&gt;</a>
     
   </div>
 </main>
