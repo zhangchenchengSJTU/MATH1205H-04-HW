@@ -76,7 +76,7 @@ f(y_0 + t u) - f(y_0) = 2t (A y_0 - b)^T A u + t^2 (Au)^T (Au) \geq 0.
 &lt;/div&gt;
 
 &lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;求最小二乘法的解与误差.&lt;/p&gt;
+  &lt;p&gt;求最小平方法的解与误差.&lt;/p&gt;
   &lt;p&gt;$$\begin{equation}
 \begin{pmatrix}
   1 &amp; 0 &amp; 0\\
@@ -144,7 +144,7 @@ f(y_0 + t u) - f(y_0) = 2t (A y_0 - b)^T A u + t^2 (Au)^T (Au) \geq 0.
 &lt;/div&gt;
 
 &lt;div class=&quot;problem&quot;&gt;
-  &lt;p&gt;记 $f(x) = (\pi-x)$. 请使用最小二乘法解方程&lt;/p&gt;
+  &lt;p&gt;记 $f(x) = (\pi-x)$. 请使用最小平方法解方程&lt;/p&gt;
   &lt;p&gt;$$\begin{equation}
 (1\mid \cos x \mid \cos 2x \mid \cos 3x) \cdot \begin{pmatrix}
   a \\ b \\ c \\ d
