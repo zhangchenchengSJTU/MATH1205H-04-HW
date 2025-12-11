@@ -396,27 +396,13 @@ A = Q^T \begin{pmatrix}
 <div class="example">
   <p>若实矩阵 $A$ 满足 $A^3 = AA^TA$, 则 $A = A^T$.</p>
   <div class="proof">
-    <p>取正交简化型. 由 $A^4 = AA^TAA^T$ 得</p>
+    <p>直接地, $A^3 A^T = (AA^T)^2$. 取正交简化型, 得</p>
     <p>$$\begin{equation}
 \begin{pmatrix}
-    M&N\\ O&O
-\end{pmatrix}^4 = \begin{pmatrix}
-    M&N\\ O&O
-\end{pmatrix}\begin{pmatrix}
-    M&N\\ O&O
-\end{pmatrix}^T\begin{pmatrix}
-    M&N\\ O&O
-\end{pmatrix}\begin{pmatrix}
-    M&N\\ O&O
-\end{pmatrix}^T.
-\end{equation}$$</p>
-    <p>化简得</p>
-    <p>$$\begin{equation}
-\begin{pmatrix}
-    M^4 & M^3N \\ O & O
+    M^2(MM^T+NN^T) & O \\ O & O
 \end{pmatrix} = \begin{pmatrix}
-    (MM^T + NN^T)^2 & O \\ O & O
-\end{pmatrix}.
+    (MM^T+NN^T)^2 & O \\ O & O
+\end{pmatrix}
 \end{equation}$$</p>
     <p>由 $(M\quad N)$ 行满秩, 故 $(M\quad N)(M\quad N)^T$ 可逆, 从而</p>
     <p>$$\begin{equation}
@@ -907,7 +893,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/EX11" title="PREV: Exersice Class 11">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW19-solu" title="PREV: HW19-solu">&gt;&gt;</a>
     
   </div>
 </main>
