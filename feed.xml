@@ -636,6 +636,364 @@ v_1\\ v_2\\ \vdots \\ v_n
     
       
         <item>
+          <title>HW20-solu</title>
+          <description>&lt;h2 id=&quot;计算题训练&quot;&gt;计算题训练&lt;/h2&gt;
+
+&lt;h3 id=&quot;计算-jordan-标准型与过渡矩阵&quot;&gt;计算 Jordan 标准型与过渡矩阵&lt;/h3&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;计算以下矩阵的 Jordan 标准型以及过渡矩阵：&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A = \begin{pmatrix}
+ -6&amp; 2&amp; 4 &amp;-10&amp; 5\\
+-14&amp; 5&amp; 8 &amp;-19&amp; 9\\
+  3&amp;-1&amp;-1&amp; 5&amp;-3\\
+  8&amp;-2&amp;-4&amp;12&amp;-5\\
+  8&amp;-2&amp;-4&amp;10&amp;-3
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;&lt;strong&gt;Step 1 (计算特征根)&lt;/strong&gt; 计算特征多项式. 我们对 $(xI - A)$ 进行任意可逆行列初等变换, 最后结果差一个数乘, 但这不重要.&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+xI - A = \begin{pmatrix}
+ x+6&amp; -2&amp; -4 &amp;10&amp; -5\\
+14&amp; x-5&amp; -8 &amp;19&amp; -9\\
+ -3&amp;1&amp;x+1&amp;-5&amp;3\\
+    -8&amp;2&amp;4&amp;x-12&amp;5\\
+    -8&amp;2&amp;4&amp;-10&amp;x+3
+\end{pmatrix},
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;该矩阵左下角是非常规律的, 不妨使用 $\binom 22$ 所在的一列进行列消元, 得&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+x-2 &amp; -2 &amp; 0   &amp; 10  &amp; -5\\
+4x-6&amp; x-5&amp; 2-2x&amp; 19  &amp; -9\\
+ 1  &amp; 1  &amp; x-1 &amp; -5  &amp;3\\
+ 0  &amp; 2  &amp; 0   &amp;x-12 &amp;5\\
+ 0  &amp; 2  &amp; 0   &amp;-10  &amp;x+3
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;再依次把 $-c_1$ 加到 $c_2$, 把 $-r_4$ 加到 $r_5$, 把 $c_5$ 加到 $c_4$, 得&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+x-2 &amp; -x &amp; 0   &amp; 5  &amp; -5\\
+4x-6&amp; 1-3x&amp; 2-2x&amp; 10  &amp; -9\\
+ 1  &amp; 0  &amp; x-1 &amp; -2  &amp;3\\
+ 0  &amp; 2  &amp; 0   &amp;x-7 &amp;5\\
+ 0  &amp; 0  &amp; 0   &amp;0  &amp;x-2
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;提出因子 $(x-2)$, 得左上方 $4\times 4$ 矩阵:&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+x-2 &amp; -x &amp; 0   &amp; 5 \\
+4x-6&amp; 1-3x&amp; 2-2x&amp; 10 \\
+ 1  &amp; 0  &amp; x-1 &amp; -2 \\
+ 0  &amp; 2  &amp; 0   &amp;x-7
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;注意到第三列两项差一个数乘. 将 $2r_3$ 加至 $r_2$, 得&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+x-2 &amp; -x &amp; 0   &amp; 5 \\
+4x-4&amp; 1-3x&amp; 0&amp; 6 \\
+ 1  &amp; 0  &amp; x-1 &amp; -2 \\
+ 0  &amp; 2  &amp; 0   &amp;x-7
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;提出因子 $(x-1)$, 得剩下的 $3\times 3$ 阶子式:&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+x-2 &amp; -x &amp;  5 \\
+4x-4&amp; 1-3x&amp; 6 \\
+ 0  &amp; 2  &amp;x-7
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;对最后一行展开, 目测得到 (可能差一个负号)&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+2(6(x-2)-5(4x-4))-(x-7)((x-2)(1-3x)+x(4x-4)) = -(x-1)^2(x-2).
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;综上, 特征多项式为 $(x-1)^3(x-2)^2$. 我们知道根空间分解 $\mathbb  R^5 = V_1 \oplus V_2$. 由特征多项式知, 其维数分别是 $3$ 与 $2$. &lt;br /&gt; &lt;strong&gt;Step 2 (计算 $J_?(1)$)&lt;/strong&gt; 我们先找 $N(A-I)$ 的基, $A-I$ 即&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+ -7&amp; 2&amp; 4 &amp;-10&amp; 5\\
+-14&amp; 4&amp; 8 &amp;-19&amp; 9\\
+  3&amp;-1&amp;-2&amp; 5&amp;-3\\
+  8&amp;-2&amp;-4&amp;11&amp;-5\\
+  8&amp;-2&amp;-4&amp;10&amp;-4
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;可逆行变换不改变零空间. 中间两列明显成比例, 我们用 $r_3$ 消去上下两行的第二与第三列, 得&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+ -1&amp; 0&amp; 0 &amp;0&amp; -1\\
+ -2&amp; 0&amp; 0 &amp;1&amp;-3\\
+  3&amp;-1&amp;-2&amp; 5&amp;-3\\
+  2&amp; 0&amp; 0&amp; 1&amp; 1\\
+  2&amp; 0&amp; 0&amp; 0&amp;2
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;依照 $ref$ 算法, 我们发现前两列线性无关, $c_3 = 2c_2$, $\{c_1,c_2,c_4\}$ 线性无关 (比较 $0$ 的位置), $c_5 = c_1-c_4+c_2$, 从而 $ref$ 是&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+ 1&amp; 0&amp; 0&amp; 0&amp; 1\\
+ 0&amp; 1&amp; 2&amp; 0&amp; 1\\
+ 0&amp; 0&amp; 0&amp; 1&amp; -1\\
+ 0&amp; 0&amp; 0&amp; 0&amp; 0\\
+ 0&amp; 0&amp; 0&amp; 0&amp; 0
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;我们发现 $N(I-A)$ 比 $V_1$ 少一维, 从而 Jordan 块是 $J_2(1)$ 和 $J_1(1)$. 由幂零标准型算法, $C(I-A) \cap N(I - A)$ 是一维空间, 即 $N(I - A)$ 中形如 $(I-A)x$ 的向量构成一维空间. 注意到 $A-I$ 的第二列 (记作 $u$) 即为所求. 由 $u$ 的选取, 方程 $(A-I)x = u$ 的一个解是 $(0,1,0,0,0)$, 记作 $v_1$. 记 $(A-I)v_1 = v_2$, 再取 $v_3$ 使得 $\{v_2,v_3\}$ 是 $N(I-A)$ 的一组基, 比如 $v_3 = (0,2,-1,0,0)$. 此时&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+(A-I)(v_2 \mid v_1 \mid v_3) = (0 \mid v_2 \mid 0).
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;这说明&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+A \cdot (v_2 \mid v_1 \mid v_3 \mid ? \mid ?) = (v_2 \mid v_1 \mid v_3 \mid ? \mid ?)\cdot \begin{pmatrix}
+    1&amp;1\\&amp;1\\ &amp;&amp;1 \\ &amp;&amp;&amp;2 &amp; ?\\ &amp;&amp;&amp;&amp;2
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Step 3 (计算 $J_?(2)$)&lt;/strong&gt; 类似地, 我们计算 $N(A-2I)$ 的基, $A-2I$ 即&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+ -8&amp; 2&amp; 4 &amp;-10&amp; 5\\
+-14&amp; 3&amp; 8 &amp;-19&amp; 9\\
+  3&amp;-1&amp;-3&amp; 5&amp;-3\\
+  8&amp;-2&amp;-4&amp;10&amp;-5\\
+  8&amp;-2&amp;-4&amp;10&amp;-5
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;显然 $r_4$ 与 $r_5$ 是 $r_1$ 的数乘倍, 因此矩阵的零空间由前三列所在的子矩阵决定. 我们求以下矩阵的零空间:&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+ -8&amp; 2&amp; 4 &amp;-10&amp; 5\\
+-14&amp; 3&amp; 8 &amp;-19&amp; 9\\
+  3&amp;-1&amp;-3&amp; 5&amp;-3
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;阶梯形&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+1&amp;&amp;&amp;1&amp;-1/8\\
+&amp;1&amp;&amp;1&amp;3/4\\
+&amp;&amp;1&amp;-1&amp;5/8\\
+\end{pmatrix}
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;记 $v_4$ 与 $v_5$ 为 $\binom {F}{-I}$ 的两列. $N(A-2I)$ 与 $V_2$ 同是二维空间, 因此 Jordan 块为两个 $J_1(2)$.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Step 4&lt;/strong&gt; 综上,&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+(v_2\mid v_1\mid v_3\mid v_4\mid v_5)\cdot \begin{pmatrix}
+    1&amp;1&amp;&amp;&amp;\\
+    &amp;1&amp;&amp;&amp;\\
+    &amp;&amp;1&amp;&amp;\\
+    &amp;&amp;&amp;2&amp;\\
+    &amp;&amp;&amp;&amp;2
+\end{pmatrix} = A \cdot (v_2\mid v_1\mid v_3\mid v_4\mid v_5).
+\end{equation}$$&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;算 $P$ 和 $J$:&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A_1 = \begin{pmatrix}
+2 &amp; -2 &amp; 1 &amp; -2 &amp; -1 \\
+0 &amp; 1 &amp; 0 &amp; -2 &amp; 0 \\
+1 &amp; -2 &amp; 2 &amp; -2 &amp; -1 \\
+0 &amp; 0 &amp; 0 &amp; 3 &amp; 0 \\
+2 &amp; -4 &amp; 2 &amp; -8 &amp; -1
+\end{pmatrix},\quad A_2 = \begin{pmatrix}
+    2 &amp; 0 &amp; -1 &amp; 2 &amp; 0 \\
+    0 &amp; 2 &amp; 0 &amp; 1 &amp; 0 \\
+    1 &amp; -2 &amp; 2 &amp; -3 &amp; -1 \\
+    0 &amp; 0 &amp; 0 &amp; 2 &amp; 0 \\
+    2 &amp; -5 &amp; 2 &amp; -10 &amp; -1
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;在 &lt;a href=&quot;https://www.wolframalpha.com/&quot;&gt;Wolfram&lt;/a&gt; 搜索 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jordan form { {2, -2, 1, -2, -1},  {0,  1, 0, -2,  0},  {1, -2, 2, -2, -1},  {0,  0, 0,  3,  0},  {2, -4, 2, -8, -1}}&lt;/code&gt;. 细节略.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;计算奇异值分解&quot;&gt;计算奇异值分解&lt;/h3&gt;
+
+&lt;p&gt;奇异值分解的原理见 &lt;a href=&quot;HW19#奇异值分解&quot;&gt;HW19&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;计算以下矩阵的奇异值分解:&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A = \begin{pmatrix}
+ 3 &amp; 2 &amp; 2 \\
+ 2 &amp; 3 &amp; -2
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;计算奇异值分解可以从 $AA^T$ 或 $A^TA$ 入手. 这里我们计算 $AA^T$, 因为阶数更小:&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+AA^T = \begin{pmatrix}
+17 &amp; 8 \\
+8 &amp; 17
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;矩阵的特征值 $25$ 和 $9$. 取正交对角分解&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+AA^T = U D U^T = \frac{1}{\sqrt 2}\begin{pmatrix}
+    1 &amp; 1 \\
+    1 &amp; -1
+\end{pmatrix}
+\begin{pmatrix}
+    25 &amp; 0 \\
+    0 &amp; 9
+\end{pmatrix}
+\left(\frac{1}{\sqrt 2}\begin{pmatrix}
+    1 &amp; 1 \\
+    1 &amp; -1
+\end{pmatrix}\right)^{-1}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;奇异值分解 $A = U\Sigma V^T$ 中的矩阵&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+U = \frac{1}{\sqrt 2}\begin{pmatrix}
+    1 &amp; 1 \\
+    1 &amp; -1
+\end{pmatrix},\quad \Sigma = \begin{pmatrix}
+    5 &amp; 0 &amp; 0 \\
+    0 &amp; 3 &amp; 0
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;考虑矩阵 $M = \sqrt 2 U A$. 此处 $M$ 的相异行向量必垂直, 因为 $MM^T$ 是对角矩阵. 我们将&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+M = \begin{pmatrix}
+    5 &amp; 5 &amp; 0 \\
+    1 &amp; -1 &amp; 4
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;扩充成 $3 \times 3$ 行正交矩阵, 并放缩其行向量使之模长为 $1$, 得&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+M = (I \mid 0) \cdot \begin{pmatrix}
+    5 &amp; 5 &amp; 0 \\
+    1 &amp; -1 &amp; 4 \\
+    2 &amp; -2 &amp; -1
+\end{pmatrix} = \sqrt 2 \cdot \begin{pmatrix}
+    5&amp;0&amp;0\\0&amp;3&amp;0
+\end{pmatrix} \cdot \begin{pmatrix}
+    \frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} &amp; 0 \\
+    \frac{1}{3\sqrt{2}} &amp; -\frac{1}{3\sqrt{2}} &amp; \frac{4}{3\sqrt{2}} \\
+    \frac{2}{3} &amp; -\frac{2}{3} &amp; -\frac{1}{3}
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;综上,&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+A = U \Sigma V^T = \begin{pmatrix}
+    \frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2} \\
+    \frac{1}{\sqrt 2} &amp; -\frac{1}{\sqrt 2}
+\end{pmatrix}\begin{pmatrix}
+    5 &amp; 0 &amp; 0 \\
+    0 &amp; 3 &amp; 0
+\end{pmatrix}\begin{pmatrix}
+    \frac{1}{\sqrt{2}} &amp; \frac{1}{3\sqrt{2}} &amp; \frac{2}{3} \\
+    \frac{1}{\sqrt{2}} &amp; -\frac{1}{3\sqrt{2}} &amp; -\frac{2}{3} \\
+    0 &amp; \frac{4}{3\sqrt{2}} &amp; -\frac{1}{3}
+\end{pmatrix}^T.
+\end{equation}$$&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;计算奇异值分解:&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A_1 = \begin{pmatrix}
+1 &amp; 0 &amp; 2\\
+0 &amp; 1 &amp; 2
+\end{pmatrix},\quad A_2 = \begin{pmatrix}
+    3 &amp; 4 &amp; 1\\
+    1 &amp; -4 &amp; 3
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;在 &lt;a href=&quot;https://www.wolframalpha.com/&quot;&gt;Wolfram&lt;/a&gt; 搜索 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;singular value decomposition { {3,4,1},{1,-4,3}}&lt;/code&gt;. 细节略.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;kronecker-积&quot;&gt;Kronecker 积&lt;/h3&gt;
+
+&lt;p&gt;Kronecker 积用于解释矩阵方程 $AX - XB +CXD = F$.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(Kronercker 积).给定矩阵 $A \in \mathbb F^{p \times q}$ 与 $B \in \mathbb F^{m \times n}$, 则它们的 Kronecker 积定义为分块矩阵 $$\begin{equation}
+A \otimes B = \begin{pmatrix}
+a_{11}B &amp; a_{12}B &amp; \cdots &amp; a_{1q}B \\
+a_{21}B &amp; a_{22}B &amp; \cdots &amp; a_{2q}B \\
+\vdots  &amp; \vdots  &amp; \ddots &amp; \vdots  \\
+a_{p1}B &amp; a_{p2}B &amp; \cdots &amp; a_{pq}B
+\end{pmatrix} \in \mathbb F^{pm \times qn}.
+\end{equation}$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;矩阵 $A \otimes B$ 中的分量可以用四元数组 $((i,j);(k,l))$ 标记, 表示 $((i-1)p+k, (j-1)q+l)$ 位置的元素, 即 $a_{ij} b_{kl}$.&lt;/p&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;容易检验&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\otimes$ 是双线性映射. 换言之, $(A+\lambda A')\otimes B = A\otimes B + \lambda A' \otimes B$, $A \otimes (B + \lambda B') = A \otimes B + \lambda A \otimes B'$.&lt;/li&gt;
+    &lt;li&gt;$(A\otimes B) \otimes C = A \otimes (B \otimes C)$.&lt;/li&gt;
+    &lt;li&gt;$(A \otimes B)(C \otimes D) = (AC) \otimes (BD)$, 其中矩阵乘法均有定义.&lt;/li&gt;
+    &lt;li&gt;$(A \otimes B)^T = A^T \otimes B^T$.&lt;/li&gt;
+    &lt;li&gt;如果 $A$ 与 $B$ 可逆, 则 $A \otimes B$ 也可逆, 且 $(A \otimes B)^{-1} = A^{-1} \otimes B^{-1}$.&lt;/li&gt;
+    &lt;li&gt;…&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;(1). 下比较 $(A+\lambda A')\otimes B$ 与 $A\otimes B + \lambda A' \otimes B$ 在 $((i,j);(k,l))$ 位置的分量, 它们均为 $(a_{ij} + \lambda a'_{ij})b_{kl}$. &lt;br /&gt; (2). 写成大矩阵即可直接看出. &lt;br /&gt; (3). 下比较 $(A\otimes B)(C \otimes D)$ 与 $(AC) \otimes (BD)$ 在 $((i,j),(k,l))$ 位置的分量. $$\begin{equation}
+((A\otimes B)(C \otimes D))_{((i,j);(k,l))} = \sum_{r=1}^q \sum_{s=1}^n (a_{ir} b_{ks})(c_{rj} d_{sl}) = \left(\sum_{r=1}^q a_{ir} c_{rj}\right) \left(\sum_{s=1}^n b_{ks} d_{sl}\right) = ((AC) \otimes (BD))_{((i,j);(k,l))}.
+\end{equation}$$ (4). 直接地, $A^T \otimes B^T$ 在 $((i,j);(k,l))$ 位置的分量是 $a_{ji} b_{lk}$, 而 $(A \otimes B)^T$ 在 $((i,j);(k,l))$ 位置的分量是 $(A \otimes B)_{((j,i);(l,k))} = a_{ji} b_{lk}$. &lt;br /&gt; (5). 由 (3) 可知 $(A \otimes B)(A^{-1} \otimes B^{-1}) = (AA^{-1}) \otimes (BB^{-1}) = I \otimes I = I$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;若 $A,B \in \mathbb R^{n \times n}$ 是正定矩阵, 则&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+(a_{i,j}\cdot b_{i,j})_{n\times n} \in \mathbb R^{n \times n}
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;也是正定矩阵.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;$A$ 正定, 则存在可逆矩阵 $P$ 使得 $A = P^TP$. 同理, 存在可逆矩阵 $Q$ 使得 $B = Q^TQ$. 因此&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+A\otimes B = (P^TP) \otimes (Q^TQ) = (P \otimes Q)^T (P \otimes Q)
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;也是正定矩阵. 注意到 $(a_{i,j}\cdot b_{i,j})_{n\times n}$ 是 $A \otimes B$ 的主子式, 从而也正定.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;若 $A$ 与 $B$ 满足性质 $\mathfrak P$, 则 $A \otimes B$ 也满足性质 $\mathfrak P$. 此处的 $\mathfrak P$ 可以是可逆性, 对称性, 正定性, 半正定性, 正交性, 幂零性, 可对角化性, 可上三角化性.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;corollary&quot;&gt;
+  &lt;p&gt;有些矩阵具看上去有成比例的分块, 即能写成 $A \otimes B$ 的形式. 对这类矩阵求逆, 幂, Schur 上三角化, 正交相似对角化, 奇异值分解, LU 分解等时, 都可以化简为对 $A$ 与 $B$ 分别进行相应的运算, 然后再取 Kronecker 积.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;记 $vec(M)$ 是矩阵拉直成列向量的操作. 若 $M \in \mathbb F^{m \times n}$, 则&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+vec(v_1 \mid v_2 \mid \cdots \mid v_n) = \begin{pmatrix}
+v_1\\ v_2\\ \vdots \\ v_n
+\end{pmatrix} \in \mathbb F^{mn \times 1}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;试验证 (验证容易):&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;矩阵方程 $A X = B$ 可写成 $(I_n \otimes A) \cdot vec(X) = vec(B)$,&lt;/li&gt;
+    &lt;li&gt;矩阵方程 $X D = C$ 可写成 $(D^T \otimes I_m) \cdot vec(X) = vec(C)$,&lt;/li&gt;
+    &lt;li&gt;矩阵方程 $P X Q = Y$ 可写成 $(Q^T \otimes P) \cdot vec(X) = vec(Y)$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-12-04T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW20-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW20-solu</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>HW19</title>
           <description>&lt;h2 id=&quot;二次型&quot;&gt;二次型&lt;/h2&gt;
 
@@ -1254,12 +1612,13 @@ V \to \mathbb R^{n \times n},\quad f \mapsto \left(a_{i,j} = f(e_i,e_j)\right).
 &lt;div class=&quot;problem&quot;&gt;
   &lt;p&gt;试证明: 若 $A^T + A$ 正定, 则 $\det A &gt; 0$.&lt;/p&gt;
   &lt;div class=&quot;proof&quot;&gt;
-    &lt;p&gt;构造连续函数 $f(x) := \det (2A + x(A^T-A))$. 由定义知 $f(1)&gt;0$. 对任意 $v \neq 0$,&lt;/p&gt;
+    &lt;p&gt;构造连续函数 $f(x) := 2A + x(A^T-A)$. 由定义知 $\det f(1)&gt;0$. 对任意 $v \neq 0$,&lt;/p&gt;
     &lt;p&gt;$$\begin{equation}
 v^Tf(x)v = v^Tf(1)v \neq 0.
 \end{equation}$$&lt;/p&gt;
-    &lt;p&gt;因此, 连续函数 $f$ 没有零点, 从而 $f(0) &gt; 0$.&lt;/p&gt;
+    &lt;p&gt;因此, 连续函数 $\det f(x)$ 没有零点, 从而 $\det A = \det f(0) &gt; 0$.&lt;/p&gt;
   &lt;/div&gt;
+  &lt;p&gt;注: 类似可证 $A$ 在 $\mathbb C$-中的所有特征根均有正的实部. 由连续性, 只需证明 $f(t)$ 的特征根永远不在虚轴 $i \mathbb R$ 上. 若不然, 假设 $A' := f(t_0)$ 在 $\mathbb C$ 中有特征对 $(ci, u+iv)$, 则有 $A'u = -cv$ 与 $A'v = cu$. 因此 $u^TAu$ 与 $v^TAv$ 互为相反数. 由于 $u$ 与 $v$ 一者非零, 矛盾!&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h3 id=&quot;相合标准型&quot;&gt;相合标准型&lt;/h3&gt;

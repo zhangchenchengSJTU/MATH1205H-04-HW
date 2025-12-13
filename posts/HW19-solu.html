@@ -264,12 +264,13 @@ V \to \mathbb R^{n \times n},\quad f \mapsto \left(a_{i,j} = f(e_i,e_j)\right).
 <div class="problem">
   <p>试证明: 若 $A^T + A$ 正定, 则 $\det A > 0$.</p>
   <div class="proof">
-    <p>构造连续函数 $f(x) := \det (2A + x(A^T-A))$. 由定义知 $f(1)>0$. 对任意 $v \neq 0$,</p>
+    <p>构造连续函数 $f(x) := 2A + x(A^T-A)$. 由定义知 $\det f(1)>0$. 对任意 $v \neq 0$,</p>
     <p>$$\begin{equation}
 v^Tf(x)v = v^Tf(1)v \neq 0.
 \end{equation}$$</p>
-    <p>因此, 连续函数 $f$ 没有零点, 从而 $f(0) > 0$.</p>
+    <p>因此, 连续函数 $\det f(x)$ 没有零点, 从而 $\det A = \det f(0) > 0$.</p>
   </div>
+  <p>注: 类似可证 $A$ 在 $\mathbb C$-中的所有特征根均有正的实部. 由连续性, 只需证明 $f(t)$ 的特征根永远不在虚轴 $i \mathbb R$ 上. 若不然, 假设 $A' := f(t_0)$ 在 $\mathbb C$ 中有特征对 $(ci, u+iv)$, 则有 $A'u = -cv$ 与 $A'v = cu$. 因此 $u^TAu$ 与 $v^TAv$ 互为相反数. 由于 $u$ 与 $v$ 一者非零, 矛盾!</p>
 </div>
 
 <h3 id="相合标准型">相合标准型</h3>
