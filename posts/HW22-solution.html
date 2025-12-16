@@ -136,6 +136,21 @@ MathJax = {
   </div>
 </div>
 
+<div class="example">
+  <p>若对上一问的结果并不满意, 则可以使用 $\{1,\sin x, \sin^2 x, \sin ^3 x\}$ 拟合函数.</p>
+  <ol>
+    <li>$(x-\pi)$ 与 $1$ 垂直.</li>
+    <li>$\frac{\braket{\sin x, (x-\pi)}}{\braket{\sin x, \sin x}} = -2$. 因此, $(x-\pi)$ 在 $\sin x$ 方向上的投影为 $-2\sin x$.</li>
+    <li>$\frac{\braket{\sin 2x, (x-\pi)}}{\braket{\sin 2x, \sin 2x}} = -1$. 因此, $(x-\pi)$ 在 $\sin 2x$ 方向上的投影为 $-\sin 2x$.</li>
+    <li>$\frac{\braket{\sin 3x, (x-\pi)}}{\braket{\sin 3x, \sin 3x}} = -\frac{2}{3}$. 因此, $(x-\pi)$ 在 $\sin 3x$ 方向上的投影为 $-\frac{2}{3}\sin 3x$.</li>
+    <li>$\frac{\braket{\sin 4x, (x-\pi)}}{\braket{\sin 4x, \sin 4x}} = -\frac{1}{2}$. 因此, $(x-\pi)$ 在 $\sin 4x$ 方向上的投影为 $-\frac{1}{2}\sin 4x$.</li>
+    <li>$\frac{\braket{\sin 5x, (x-\pi)}}{\braket{\sin 5x, \sin 5x}} = -\frac{2}{5}$. 因此, $(x-\pi)$ 在 $\sin 5x$ 方向上的投影为 $-\frac{2}{5}\sin 5x$.</li>
+    <li>…</li>
+  </ol>
+  <p>归纳地, 可以用级数 $\sum_{n=1}^N -\frac{2}{n} \sin nx$ 近似 $(x-\pi)$. 图示:</p>
+  <center><img src="https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/svg/Sin_Approximation.svg" /></center>
+</div>
+
   </article>
 
   <!-- New Sidebar Column -->

@@ -213,6 +213,21 @@ f(y_0 + t u) - f(y_0) = 2t (A y_0 - b)^T A u + t^2 (Au)^T (Au) \geq 0.
     &lt;p&gt;容易想到, 用偶函数拟合奇函数的结果永远是 $0$. 从而 $a,b,c,d = 0$.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;若对上一问的结果并不满意, 则可以使用 $\{1,\sin x, \sin^2 x, \sin ^3 x\}$ 拟合函数.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$(x-\pi)$ 与 $1$ 垂直.&lt;/li&gt;
+    &lt;li&gt;$\frac{\braket{\sin x, (x-\pi)}}{\braket{\sin x, \sin x}} = -2$. 因此, $(x-\pi)$ 在 $\sin x$ 方向上的投影为 $-2\sin x$.&lt;/li&gt;
+    &lt;li&gt;$\frac{\braket{\sin 2x, (x-\pi)}}{\braket{\sin 2x, \sin 2x}} = -1$. 因此, $(x-\pi)$ 在 $\sin 2x$ 方向上的投影为 $-\sin 2x$.&lt;/li&gt;
+    &lt;li&gt;$\frac{\braket{\sin 3x, (x-\pi)}}{\braket{\sin 3x, \sin 3x}} = -\frac{2}{3}$. 因此, $(x-\pi)$ 在 $\sin 3x$ 方向上的投影为 $-\frac{2}{3}\sin 3x$.&lt;/li&gt;
+    &lt;li&gt;$\frac{\braket{\sin 4x, (x-\pi)}}{\braket{\sin 4x, \sin 4x}} = -\frac{1}{2}$. 因此, $(x-\pi)$ 在 $\sin 4x$ 方向上的投影为 $-\frac{1}{2}\sin 4x$.&lt;/li&gt;
+    &lt;li&gt;$\frac{\braket{\sin 5x, (x-\pi)}}{\braket{\sin 5x, \sin 5x}} = -\frac{2}{5}$. 因此, $(x-\pi)$ 在 $\sin 5x$ 方向上的投影为 $-\frac{2}{5}\sin 5x$.&lt;/li&gt;
+    &lt;li&gt;…&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;归纳地, 可以用级数 $\sum_{n=1}^N -\frac{2}{n} \sin nx$ 近似 $(x-\pi)$. 图示:&lt;/p&gt;
+  &lt;center&gt;&lt;img src=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/svg/Sin_Approximation.svg&quot; /&gt;&lt;/center&gt;
+&lt;/div&gt;
 </description>
           <pubDate>2025-12-11T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/HW22-solution</link>
