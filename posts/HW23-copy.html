@@ -9,12 +9,12 @@
 
 
 
-  <title>HW22
+  <title>HW23
     ·
     Jekyll Latex</title>
 
 
-<meta name="description" content="最小平方法">
+<meta name="description" content="投影矩阵">
 
 
   <meta name="google-site-verification" content="abc123">
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW22">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW23-copy">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,161 +75,226 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW22</h1>
+      <h1>HW23</h1>
       <p class="author">
         Chenchen Zhang
         <br/>
-        December 11, 2025
+        December 16, 2025
       </p>
     </div>
 
     <div class="divider"></div>
 
-    <h2 id="最小平方法">最小平方法</h2>
+    <h2 id="投影矩阵">投影矩阵</h2>
 
-<p>最小平方法 (英文: Least Squares Method, 日文: 最小二乗法 (さいしょうにじょうほう)) 用于拟合线性方程组的解, 其基本思想是通过最小化误差平方和来找到最佳拟合线性模型. <strong>以下所有问题都是实数域上的</strong>.</p>
+<h3 id="投影矩阵的性质">投影矩阵的性质</h3>
 
-<h3 id="线性方程组的解">线性方程组的解</h3>
+<p>以下仅谈论实数域上的情况.</p>
 
-<p>方程 $Ax = b$ 未必有解. 我们退而求其次地寻找一个 $y$ 使得 $Ay$ 与 $b$ 的距离最小, 相应的误差即</p>
-
-<p>$$\begin{equation}
-\min_{y} (Ay - b)^T (Ay - b).
-\end{equation}$$</p>
-
-<div class="example">
-  <p>我们求解方程 $\binom 12x = \binom 11$ (记作 $Ax = b$). 从几何意义上看, $A$ 的列空间即过原点的直线 $\{(t,2t) \mid t \in \mathbb R\}$. 试回顾, 解方程即用 $A$ 的列向量表示 $b$. 此处 $b$ 不属于直线, 因此 $Ax = b$ 无解. 我们退而求其次地寻找一个 $y$ 使得 $Ay$ 与 $b$ 的距离最小, 即求解</p>
+<div class="definition">
+  <p>(投影矩阵). 称 $P \in \mathbb R^{n \times n}$ 是投影矩阵, 若</p>
   <p>$$\begin{equation}
-\min_{y} (Ay - b)^T (Ay - b) = \min (y-1)^2 + (2y - 1)^2.
+P^2 = P = P^T.
 \end{equation}$$</p>
-  <p>取达到的最小值即误差.</p>
 </div>
 
-<p>我们需要解释分析学中的问题:</p>
+<p>特别注意, 我们将满足 $P^2 = P$ 的矩阵称作幂等矩阵, 将满足 $P^2 = P = P^T$ 的矩阵称作投影矩阵. 有些地方将满足 $P^2 = P$ 的矩阵称作投影矩阵, 将满足 $P^2 = P = P^T$ 的矩阵称作正交幂等矩阵.</p>
 
-<ol>
-  <li>由实数的完备性, 我们总是可以放心地写 $\inf$; 但是 $\min$ 未必存在. 若能说明 $\min$ 存在, 则 $\min = \inf$.</li>
-  <li>当取达到最小值时, $y$ 的取值是唯一的吗? 也就是说, 是否存在多个 $y$ 使得 $\|Ay - b\| \min \|Ax - b\|$?</li>
-</ol>
+<div class="example">
+  <p>投影矩阵正交相似于一个对角矩阵, 其对角线元素仅为 $0$ 和 $1$.</p>
+</div>
 
-<p>试证明以下问题.</p>
-
-<div class="problem">
-  <p>给定真子空间 $U \subseteq \mathbb R^n$ 与子空间外的一点 $v \notin U$. 证明:</p>
+<div class="example">
+  <p>解释 $P^2 = P$ 与 $P = P^T$ 的含义.</p>
   <ol>
-    <li>存在 $u \in U$ 使得 $\|v - u\| = \inf_{u' \in U} \|v - u'\|$.</li>
-    <li>以上 $u$ 是唯一的.</li>
-    <li>从类似垂线段的角度解释其几何意义.</li>
+    <li>$P^2 = P$ 即 $P$ 幂等. 试想, 将向量 $v$ 投影到某子空间 $U$ 上, 则投影两次等于投影一次.</li>
+    <li>$P = P^T$ 即 $x^T(Py) = (Px)^Ty$ 恒成立. 试回顾中学课本对内积 $u\cdot v$ 的计算: 既可以计算 $u$ 在 $v$ 方向上的投影再乘以 $\|v\|$, 也可以计算 $v$ 在 $u$ 方向上的投影再乘以 $\|u\|$.</li>
   </ol>
 </div>
 
-<p>SVD 分解可以让我们看清这一分解这一问题.</p>
+<div class="problem">
+  <p>判断题 (假定所有矩阵是 $\mathbb R^{n \times n}$ 中的).</p>
+  <ol>
+    <li>若 $P$ 是投影矩阵, 则 $I - P$ 也是投影矩阵.</li>
+    <li>投影矩阵的分量必须要有 $0$ 和 $1$.</li>
+    <li>若 $P$ 是投影矩阵, 则 $\det(P)$ 必为 $0$ 或 $1$.</li>
+    <li>若 $P$ 是投影矩阵, 则 $\dim C(P) = \mathrm{tr}(P)$.</li>
+    <li>若 $P, Q$ 是投影矩阵, 则 $C(P+Q) = C(P) + C(Q)$, 此处 $C(\cdot)$ 表示列空间.</li>
+    <li>若 $P, Q$ 是投影矩阵, 则 $N(P+Q) = N(P) \cap N(Q)$, 此处 $N(\cdot)$ 表示零空间.</li>
+    <li>若 $P, Q$ 是投影矩阵, 则 $C(PQ) = C(P) \cap C(Q)$.</li>
+    <li>若 $P, Q$ 是投影矩阵, 则 $N(PQ) = N(P) + N(Q)$.</li>
+    <li>若 $P$ 是投影矩阵, 则 $N(I - P) = C(P)$.</li>
+    <li>若 $P$ 是投影矩阵, 则全空间具有直和分解 $N(P) \oplus C(P)$.</li>
+  </ol>
+</div>
 
-<div class="example">
-  <p>记奇异值分解 $A = U\Sigma V^T$, 则方程 $Ax = b$ 与 $\Sigma V^Tx = U^Tb$ 同解. 之所以使用 SVD 而非相抵标准型, 是因为左乘 $V$ 与 $U$ 保持长度等几何信息, 即 $\|V^Tx\| = \|x\|$ 与 $\|U^T b\| = \|b\|$ 成立.</p>
+<div class="problem">
+  <p>请用简单的反例说明以下事情:</p>
+  <ol>
+    <li>以下三个条件两两独立: $P^2 = P$, $P = P^T$, 以及 $P^2 = P^T$. 简单地说, 可以找到三个例子, 分别满足其中一个条件但不满足剩下两个条件.</li>
+    <li>$P$ 与 $Q$ 是投影矩阵, 但 $PQ$ 未必是投影矩阵.</li>
+    <li>$P$ 与 $Q$ 是投影矩阵, 但 $P+Q$ 未必是投影矩阵.</li>
+    <li>$P_1, P_2, P_3$ 是投影矩阵, 满足 $P_1P_2 = P_2P_1$ 与 $P_2P_3 = P_3P_2$, 但未必有 $P_3P_1 = P_1P_3$.</li>
+  </ol>
 </div>
 
 <div class="lemma">
-  <p>若 $\|Ax_0 - b\| = \min_x \|Ax - b\|$, 则 $A^TAx_0 = A^Tb$.</p>
+  <p>若 $P, Q$ 是投影矩阵, 则以下条件等价.</p>
+  <ol>
+    <li>$P+Q$ 是投影矩阵.</li>
+    <li>$PQ = O$.</li>
+    <li>$QP = O$.</li>
+    <li>$C(P) \perp C(Q)$.</li>
+  </ol>
   <div class="proof">
-    <p>记函数</p>
+    <p>考虑转置, 2. 与 3. 等价. 式 $P^TQ = O$ 等价于 $C(P)\perp C(Q)$. 我们最后给出 $1 \leftrightarrow 2$ 的直接证明. <br /> ($2 \to 1$). 假定 $PQ = O$, 则 $QP = O$. 显然 $(P+Q)^T = P^T + Q^T = P + Q$. 同时</p>
     <p>$$\begin{equation}
-f : \mathbb R^n \to \mathbb R, \quad f(x) = (Ax-b)^T (Ax - b).
+(P+Q)^2 = P^2 + PQ + QP + Q^2 = P + O + O + Q.
 \end{equation}$$</p>
-    <p>$f$ 是一个多元多项式函数. 观察二次项系数, $f$ 在 $\|x\|$ 充分大时一致地趋向无穷大, 从而 $f$ 存在极小值. 假定 $f$ 在 $y_0$ 处取最小值, 则我们使用熟悉的 $\varepsilon$-$\delta$ 语言描述之:</p>
-    <ul>
-      <li>对任意 $\varepsilon >0$, 存在 $\delta >0$, 使得对一切 $t \in (0,\delta)$ 与单位向量 (即模长为 $1$ 的向量) $u$, 总有 $f(y_0+ t u) \geq f(y_0)$.</li>
-    </ul>
-    <p>作减法, 应有</p>
+    <p>这说明 $P+Q$ 是投影矩阵. <br /> ($1 \to 2$). 若 $P+Q$ 是投影矩阵, 则</p>
     <p>$$\begin{equation}
-f(y_0 + t u) - f(y_0) = 2t (A y_0 - b)^T A u + t^2 (Au)^T (Au) \geq 0.
+P^2 + Q^2 = P+Q = (P+Q)^2 = P^2 + PQ + QP + Q^2.
 \end{equation}$$</p>
-    <p>这说明一次项系数 $(A y_0 - b)^T A u$ 恒为 $0$. 由 $u$ 的任意性, 只能有 $A^T (A y_0 - b) = 0$, 即 $A^TA y_0 = A^Tb$.</p>
+    <p>因此 $PQ =  -QP$. 注意到</p>
+    <p>$$\begin{equation}
+PQ = PPQ = - PQP = QQP = QP,
+\end{equation}$$</p>
+    <p>从而 $PQ=QP =O$. <br /> ($4 \to 2$). 设 $u \in C(Q)$, 则 $u = Qv$ 对某 $v$ 成立. 由于 $C(P) \perp C(Q)$, 故 $Pu \perp u$. 因此</p>
   </div>
 </div>
 
-<div class="corollary">
-  <p>若 $A^TA x = bx$ 有唯一解 (例如 $A$ 列满秩), 则该解就是最小平方法的解.</p>
+<div class="lemma">
+  <p>若 $P, Q$ 是投影矩阵, 则以下条件等价.</p>
+  <ol>
+    <li>$P-Q$ 是投影矩阵.</li>
+    <li>$PQ = Q$.</li>
+    <li>$QP = Q$.</li>
+    <li>$C(Q) \subseteq C(P)$.</li>
+    <li>$N(P) \subseteq N(Q)$.</li>
+    <li>$\|Px\| \geq \|Qx\|$ 对一切 $x$ 成立.</li>
+  </ol>
+  <div class="proof">
+    <p>前四条等价. 在 $P, Q$ 是投影矩阵的前提下, $P-Q$ 是投影矩阵当且仅当 $(I-P)+Q$ 是投影矩阵, 往后使用上一问的结论即可. 假设证明了判断题 $10$, 那么 $4$ 与 $5$ 等价. 最后证明 $6$ 与剩余条件等价. <br /> ($1 \to 6$). 若 $P-Q$ 是投影矩阵, 则</p>
+    <p>$$\begin{equation}
+\|Px\|^2 - \|Qx\|^2 = x^T(P^TP-Q^TQ)x = x^T(P-Q)x \geq 0
+\end{equation}$$</p>
+    <p>($6 \to 5$). 显然.</p>
+  </div>
+</div>
+
+<div class="lemma">
+  <p>若 $P, Q$ 是投影矩阵, 则以下条件等价.</p>
+  <ol>
+    <li>$PQ$ 是投影矩阵.</li>
+    <li>$PQ = QP$.</li>
+    <li>$P+Q-PQ$ 是投影矩阵.</li>
+  </ol>
+  <div class="proof">
+    <p>($2 \to 1$). 依定义直接验证即可. <br /> ($3 \to 2$). $PQ = (PQ)^T = Q^TP^T=QP$. <br /> ($1 \to 3$). 若 $PQ$ 是投影矩阵, 则 $PQ = (PQ)^T =QP$. 依照 $P^2=P$, $Q^2=Q$ 以及 $PQ=QP$, 可化简下式:</p>
+    <p>$$\begin{equation}
+(P+Q - PQ)^2 = \cdots = P+Q - PQ
+\end{equation}$$</p>
+    <p>以及有</p>
+    <p>$$\begin{equation}
+(P+Q - PQ)^T = P^T + Q^T - (PQ)^T = P + Q - PQ.
+\end{equation}$$</p>
+    <p>因此, $P+Q - PQ$ 是投影矩阵.</p>
+  </div>
+</div>
+
+<h3 id="投影矩阵与子空间">投影矩阵与子空间</h3>
+
+<div class="theorem">
+  <p>以下是双射</p>
+  <p>$$\begin{equation}
+\mathbb R^{n\times n}\ \text{中的投影矩阵} \to \mathbb R^n\ \text{的子空间}, \quad P \mapsto C(P).
+\end{equation}$$</p>
+  <div class="proof">
+    <p>只需给出以上映射的逆. 即证, 给定子空间 $U$, 则存在唯一的投影矩阵 $P$ 使得 $C(P) = U$.</p>
+    <ol>
+      <li>
+        <p>(存在性). 存在 $U$ 的标准正交基 $\{u_1, u_2, \ldots, u_k\}$. 此时,</p>
+        <p>$$\begin{equation}
+   (u_1 \mid \cdots \mid u_k) \cdot (u_1 \mid \cdots \mid u_k)^T
+   \end{equation}$$</p>
+        <p>是以 $U$ 为列空间的投影矩阵.</p>
+      </li>
+      <li>
+        <p>(唯一性). 设 $P, Q$ 是投影矩阵, 且 $C(P) = C(Q) = U$. 将上述 $U$ 的标准正交基扩展为 $\mathbb R^n$ 的标准正交基 $\{u_1, \ldots, u_n\}$, 则恒有 $Pu_i = Qu_i$. 这说明 $P = Q$.</p>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<p>这说明, 子空间与投影矩阵一一对应.</p>
+
+<h3 id="moore-penrose-广义逆">Moore-Penrose 广义逆</h3>
+
+<div class="theorem">
+  <p>(Moore-Penrose 广义逆). 给定矩阵 $A \in \mathbb R^{m \times n}$, 则存在唯一的矩阵 $A^+ \in \mathbb R^{n \times m}$, 满足</p>
+  <ol>
+    <li>$A A^+ A = A$,</li>
+    <li>$A^+ A A^+ = A^+$,</li>
+    <li>$(A A^+)^T = A A^+$,</li>
+    <li>$(A^+ A)^T = A^+ A$.</li>
+  </ol>
+  <div class="proof">
+    <p>若 $D$ 是可逆的对角矩阵, 容易证明 $\begin{pmatrix}D&O \\ O&O\end{pmatrix}^+ = \begin{pmatrix}D^{-1}&O \\ O&O\end{pmatrix}$.</p>
+    <ol>
+      <li>$A^+$ 的存在性. 记 $A$ 的奇异值分解为 $A = U \Sigma V^T$. 则取 $A^+ = V \Sigma^+ U^T$ 即可.</li>
+      <li>
+        <p>$A^+$ 的唯一性. 设 $B,C$ 都满足上述四个条件. 则</p>
+        <p>$$\begin{aligned}
+   B & = BAB\\
+   & = A^TB^TB\\
+   & = A^TC^TA^TB^TB\\
+   & = A^TC^TBAB\\
+   & = A^TC^TB\\
+   & = CAB\\
+   & = CB^TA^T\\
+   & = CACB^TA^T\\
+   & = CC^TA^TB^TA^T\\
+   & = CC^TA^T\\
+   & = CAC \quad = C.
+   \end{aligned}$$</p>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="proposition">
+  <p>直接地, $A$ 的广义逆等于</p>
+  <p>$$\begin{equation}
+\lim_{t \to 0} (A^TA + tI)^{-1} A^T.
+\end{equation}$$</p>
+  <p>备注.</p>
+  <ol>
+    <li>对 $A$ 作奇异值分解知, 以上极限存在.</li>
+    <li>$(A^TA + tI)^{-1} A^T = A^T (AA^T + tI)^{-1}$.</li>
+  </ol>
+</div>
+
+<div class="example">
+  <p>以下性质容易验证.</p>
+  <ol>
+    <li>若 $A$ 可逆, 则 $A^+ = A^{-1}$.</li>
+    <li>$(A^T)^+ = (A^+)^T$.</li>
+    <li>$(A^+)^+ = A$.</li>
+    <li>$AA^+$ 是投影矩阵, 投影至 $C(A)$; $I-AA^+$ 是投影矩阵, 投影至 $N(A^T)$.</li>
+    <li>$A^+A$ 是投影矩阵, 投影至 $C(A^T)$; $I - A^+A$ 是投影矩阵, 投影至 $N(A)$.</li>
+    <li>$(A \mid B)(A \mid B)^+$ 是投影矩阵, 列空间是 $C(A) + C(B)$.</li>
+    <li>$2AA^T(AA^T+BB^T)^+BB^+$ 是投影矩阵, 列空间是 $C(A) \cap C(B)$.</li>
+  </ol>
 </div>
 
 <div class="problem">
-  <p>求最小平方法的解与误差.</p>
-  <p>$$\begin{equation}
-\begin{pmatrix}
-  1 & 0 & 0\\
-  1 & 1 & 1\\
-  1 & 2 & 4\\
-  1 & 3 & 9
-\end{pmatrix}
-\cdot \begin{pmatrix}
-  c \\ b\\ a
-\end{pmatrix} = \begin{pmatrix}
-  1\\-1\\2\\4
-\end{pmatrix}.
-\end{equation}$$</p>
+  <p>回顾线性方程组 $Ax = b$.</p>
+  <ol>
+    <li>简要说明, 方程组有解当且仅当 $AA^+ b = b$.</li>
+    <li>假定方程组有解, 则解必然形如 $A^+b + (I - A^+A)y$. 此处 $y$ 是任意向量.</li>
+    <li>假定方程组有解, 则方程组有唯一解当且仅当 $A^+A = I$.</li>
+  </ol>
 </div>
-
-<div class="example">
-  <p>给定映射</p>
-  <p>$$\begin{equation}
-\varphi : \{0,1,2,3\} \to \mathbb R,\quad \begin{bmatrix}
-0 & \mapsto & 1\\
-1 & \mapsto & -1\\
-2 & \mapsto & 2\\
-3 & \mapsto & 4
-\end{bmatrix}.
-\end{equation}$$</p>
-  <p>我们希望使用二次函数 $f(x) = a x^2 + b x + c$ 拟合该映射, 即使得 $f(i)$ 尽可能接近映射在 $\varphi (i)$, ($i = 0,1,2,3$). 不难理解 $(a,b,c) = (a_0,b_0,c_0)$ 即为所求.</p>
-</div>
-
-<h3 id="函数拟合">函数拟合</h3>
-
-<p>以下考虑 $[0, 2 \pi] \to \mathbb R$ 类型的 (连续) 函数.</p>
-
-<div class="definition">
-  <p>(函数的模长, 点乘). 给定函数 $f : [0, 2\pi] \to \mathbb R$, 定义其模长为</p>
-  <p>$$\begin{equation}
-\|f\| = \sqrt{\int_0^{2\pi} f^2(x) \, dx}.
-\end{equation}$$</p>
-  <p>点乘由极化恒等式定义:</p>
-  <p>$$\begin{equation}
-\braket{f,g} = \frac{1}{4} \left( \|f+g\|^2 - \|f-g\|^2 \right) = \int_0^{2\pi} f(x) g(x) \, dx.
-\end{equation}$$</p>
-</div>
-
-<div class="example">
-  <p>也可以将模长定义为 ${\int_0^{2\pi} |f(x)| \, dx}$, 但这会使得点乘运算难以定义.</p>
-</div>
-
-<div class="example">
-  <p>容易验证 $\sin x \perp \sin 2x$. 以及 $\braket{x,3x} = 8\pi^3$.</p>
-</div>
-
-<div class="example">
-  <p>可以对线性无关组 $\{1,x,x^2,x^3,\ldots \}$ 作<a href="HW19#正交化">正交化运算</a>. 由正交化结论, 存在一组多项式 $\{f_0, f_1, f_2, \ldots\}$ ($f_n$ 次数为 $n$) 使得 $f_i \perp f_j$ ($i \neq j$). 此处省略计算过程, 因为我们的重点不是多项式.</p>
-</div>
-
-<div class="example">
-  <p>可以对线性无关组 $\{1, \cos x, \cos^2 x, \cos ^3 x, \ldots\}$ 作<a href="HW19#正交化">正交化运算</a>. 由分析学常识, 结果是</p>
-  <p>$$\begin{equation}
-1, \cos x, \cos 2x, \cos 3x, \ldots.
-\end{equation}$$</p>
-  <p>若考虑模长为 $1$, 则结果是</p>
-  <p>$$\begin{equation}
-\frac{1}{\sqrt {2\pi}}, \frac{1}{\sqrt \pi} \cos x, \frac{1}{\sqrt {\pi}} \cos 2x, \frac{1}{\sqrt {\pi}} \cos 3x, \ldots.
-\end{equation}$$</p>
-</div>
-
-<div class="problem">
-  <p>记 $f(x) = (\pi-x)$. 请使用最小平方法解方程</p>
-  <p>$$\begin{equation}
-(1\mid \cos x \mid \cos 2x \mid \cos 3x) \cdot \begin{pmatrix}
-  a \\ b \\ c \\ d
-\end{pmatrix} = f(x).
-\end{equation}$$</p>
-  <p>并将 $a_0 + b_0 \cos x + c_0 \cos 2x+ d_0 \cos 3x$ 与 $f(x)$ 作图比较.</p>
-</div>
-
 
   </article>
 
@@ -328,9 +393,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-2">
-      <a href="#最小平方法">
+      <a href="#投影矩阵">
         <span class="toc-number">1.</span>
-        <span class="toc-title">最小平方法</span>
+        <span class="toc-title">投影矩阵</span>
       </a>
     </div>
   
@@ -345,9 +410,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-3">
-      <a href="#线性方程组的解">
+      <a href="#投影矩阵的性质">
         <span class="toc-number">1.1.</span>
-        <span class="toc-title">线性方程组的解</span>
+        <span class="toc-title">投影矩阵的性质</span>
       </a>
     </div>
   
@@ -362,9 +427,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     <div class="toc-row toc-level-3">
-      <a href="#函数拟合">
+      <a href="#投影矩阵与子空间">
         <span class="toc-number">1.2.</span>
-        <span class="toc-title">函数拟合</span>
+        <span class="toc-title">投影矩阵与子空间</span>
+      </a>
+    </div>
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="toc-row toc-level-3">
+      <a href="#moore-penrose-广义逆">
+        <span class="toc-number">1.3.</span>
+        <span class="toc-title">Moore-Penrose 广义逆</span>
       </a>
     </div>
   
@@ -417,13 +499,13 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW23-copy" title="NEXT: HW23">&lt;&lt;</a>
+      <a class="next" href="/MATH1205H-04-HW/posts/HW23" title="NEXT: HW23">&lt;&lt;</a>
       <span>&middot;</span>
     
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW21" title="PREV: HW21">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW22" title="PREV: HW22">&gt;&gt;</a>
     
   </div>
 </main>

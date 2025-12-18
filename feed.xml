@@ -227,6 +227,226 @@ PQ = PPQ = - PQP = QQP = QP,
     
       
         <item>
+          <title>HW23</title>
+          <description>&lt;h2 id=&quot;投影矩阵&quot;&gt;投影矩阵&lt;/h2&gt;
+
+&lt;h3 id=&quot;投影矩阵的性质&quot;&gt;投影矩阵的性质&lt;/h3&gt;
+
+&lt;p&gt;以下仅谈论实数域上的情况.&lt;/p&gt;
+
+&lt;div class=&quot;definition&quot;&gt;
+  &lt;p&gt;(投影矩阵). 称 $P \in \mathbb R^{n \times n}$ 是投影矩阵, 若&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+P^2 = P = P^T.
+\end{equation}$$&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;特别注意, 我们将满足 $P^2 = P$ 的矩阵称作幂等矩阵, 将满足 $P^2 = P = P^T$ 的矩阵称作投影矩阵. 有些地方将满足 $P^2 = P$ 的矩阵称作投影矩阵, 将满足 $P^2 = P = P^T$ 的矩阵称作正交幂等矩阵.&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;投影矩阵正交相似于一个对角矩阵, 其对角线元素仅为 $0$ 和 $1$.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;解释 $P^2 = P$ 与 $P = P^T$ 的含义.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$P^2 = P$ 即 $P$ 幂等. 试想, 将向量 $v$ 投影到某子空间 $U$ 上, 则投影两次等于投影一次.&lt;/li&gt;
+    &lt;li&gt;$P = P^T$ 即 $x^T(Py) = (Px)^Ty$ 恒成立. 试回顾中学课本对内积 $u\cdot v$ 的计算: 既可以计算 $u$ 在 $v$ 方向上的投影再乘以 $\|v\|$, 也可以计算 $v$ 在 $u$ 方向上的投影再乘以 $\|u\|$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;判断题 (假定所有矩阵是 $\mathbb R^{n \times n}$ 中的).&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;若 $P$ 是投影矩阵, 则 $I - P$ 也是投影矩阵.&lt;/li&gt;
+    &lt;li&gt;投影矩阵的分量必须要有 $0$ 和 $1$.&lt;/li&gt;
+    &lt;li&gt;若 $P$ 是投影矩阵, 则 $\det(P)$ 必为 $0$ 或 $1$.&lt;/li&gt;
+    &lt;li&gt;若 $P$ 是投影矩阵, 则 $\dim C(P) = \mathrm{tr}(P)$.&lt;/li&gt;
+    &lt;li&gt;若 $P, Q$ 是投影矩阵, 则 $C(P+Q) = C(P) + C(Q)$, 此处 $C(\cdot)$ 表示列空间.&lt;/li&gt;
+    &lt;li&gt;若 $P, Q$ 是投影矩阵, 则 $N(P+Q) = N(P) \cap N(Q)$, 此处 $N(\cdot)$ 表示零空间.&lt;/li&gt;
+    &lt;li&gt;若 $P, Q$ 是投影矩阵, 则 $C(PQ) = C(P) \cap C(Q)$.&lt;/li&gt;
+    &lt;li&gt;若 $P, Q$ 是投影矩阵, 则 $N(PQ) = N(P) + N(Q)$.&lt;/li&gt;
+    &lt;li&gt;若 $P$ 是投影矩阵, 则 $N(I - P) = C(P)$.&lt;/li&gt;
+    &lt;li&gt;若 $P$ 是投影矩阵, 则全空间具有直和分解 $N(P) \oplus C(P)$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;请用简单的反例说明以下事情:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;以下三个条件两两独立: $P^2 = P$, $P = P^T$, 以及 $P^2 = P^T$. 简单地说, 可以找到三个例子, 分别满足其中一个条件但不满足剩下两个条件.&lt;/li&gt;
+    &lt;li&gt;$P$ 与 $Q$ 是投影矩阵, 但 $PQ$ 未必是投影矩阵.&lt;/li&gt;
+    &lt;li&gt;$P$ 与 $Q$ 是投影矩阵, 但 $P+Q$ 未必是投影矩阵.&lt;/li&gt;
+    &lt;li&gt;$P_1, P_2, P_3$ 是投影矩阵, 满足 $P_1P_2 = P_2P_1$ 与 $P_2P_3 = P_3P_2$, 但未必有 $P_3P_1 = P_1P_3$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;若 $P, Q$ 是投影矩阵, 则以下条件等价.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$P+Q$ 是投影矩阵.&lt;/li&gt;
+    &lt;li&gt;$PQ = O$.&lt;/li&gt;
+    &lt;li&gt;$QP = O$.&lt;/li&gt;
+    &lt;li&gt;$C(P) \perp C(Q)$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;考虑转置, 2. 与 3. 等价. 式 $P^TQ = O$ 等价于 $C(P)\perp C(Q)$. 我们最后给出 $1 \leftrightarrow 2$ 的直接证明. &lt;br /&gt; ($2 \to 1$). 假定 $PQ = O$, 则 $QP = O$. 显然 $(P+Q)^T = P^T + Q^T = P + Q$. 同时&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+(P+Q)^2 = P^2 + PQ + QP + Q^2 = P + O + O + Q.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;这说明 $P+Q$ 是投影矩阵. &lt;br /&gt; ($1 \to 2$). 若 $P+Q$ 是投影矩阵, 则&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+P^2 + Q^2 = P+Q = (P+Q)^2 = P^2 + PQ + QP + Q^2.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;因此 $PQ =  -QP$. 注意到&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+PQ = PPQ = - PQP = QQP = QP,
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;从而 $PQ=QP =O$. &lt;br /&gt; ($4 \to 2$). 设 $u \in C(Q)$, 则 $u = Qv$ 对某 $v$ 成立. 由于 $C(P) \perp C(Q)$, 故 $Pu \perp u$. 因此&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;若 $P, Q$ 是投影矩阵, 则以下条件等价.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$P-Q$ 是投影矩阵.&lt;/li&gt;
+    &lt;li&gt;$PQ = Q$.&lt;/li&gt;
+    &lt;li&gt;$QP = Q$.&lt;/li&gt;
+    &lt;li&gt;$C(Q) \subseteq C(P)$.&lt;/li&gt;
+    &lt;li&gt;$N(P) \subseteq N(Q)$.&lt;/li&gt;
+    &lt;li&gt;$\|Px\| \geq \|Qx\|$ 对一切 $x$ 成立.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;前四条等价. 在 $P, Q$ 是投影矩阵的前提下, $P-Q$ 是投影矩阵当且仅当 $(I-P)+Q$ 是投影矩阵, 往后使用上一问的结论即可. 假设证明了判断题 $10$, 那么 $4$ 与 $5$ 等价. 最后证明 $6$ 与剩余条件等价. &lt;br /&gt; ($1 \to 6$). 若 $P-Q$ 是投影矩阵, 则&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\|Px\|^2 - \|Qx\|^2 = x^T(P^TP-Q^TQ)x = x^T(P-Q)x \geq 0
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;($6 \to 5$). 显然.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;lemma&quot;&gt;
+  &lt;p&gt;若 $P, Q$ 是投影矩阵, 则以下条件等价.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$PQ$ 是投影矩阵.&lt;/li&gt;
+    &lt;li&gt;$PQ = QP$.&lt;/li&gt;
+    &lt;li&gt;$P+Q-PQ$ 是投影矩阵.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;($2 \to 1$). 依定义直接验证即可. &lt;br /&gt; ($3 \to 2$). $PQ = (PQ)^T = Q^TP^T=QP$. &lt;br /&gt; ($1 \to 3$). 若 $PQ$ 是投影矩阵, 则 $PQ = (PQ)^T =QP$. 依照 $P^2=P$, $Q^2=Q$ 以及 $PQ=QP$, 可化简下式:&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+(P+Q - PQ)^2 = \cdots = P+Q - PQ
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;以及有&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+(P+Q - PQ)^T = P^T + Q^T - (PQ)^T = P + Q - PQ.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;因此, $P+Q - PQ$ 是投影矩阵.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;投影矩阵与子空间&quot;&gt;投影矩阵与子空间&lt;/h3&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;以下是双射&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\mathbb R^{n\times n}\ \text{中的投影矩阵} \to \mathbb R^n\ \text{的子空间}, \quad P \mapsto C(P).
+\end{equation}$$&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;只需给出以上映射的逆. 即证, 给定子空间 $U$, 则存在唯一的投影矩阵 $P$ 使得 $C(P) = U$.&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;(存在性). 存在 $U$ 的标准正交基 $\{u_1, u_2, \ldots, u_k\}$. 此时,&lt;/p&gt;
+        &lt;p&gt;$$\begin{equation}
+   (u_1 \mid \cdots \mid u_k) \cdot (u_1 \mid \cdots \mid u_k)^T
+   \end{equation}$$&lt;/p&gt;
+        &lt;p&gt;是以 $U$ 为列空间的投影矩阵.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;(唯一性). 设 $P, Q$ 是投影矩阵, 且 $C(P) = C(Q) = U$. 将上述 $U$ 的标准正交基扩展为 $\mathbb R^n$ 的标准正交基 $\{u_1, \ldots, u_n\}$, 则恒有 $Pu_i = Qu_i$. 这说明 $P = Q$.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这说明, 子空间与投影矩阵一一对应.&lt;/p&gt;
+
+&lt;h3 id=&quot;moore-penrose-广义逆&quot;&gt;Moore-Penrose 广义逆&lt;/h3&gt;
+
+&lt;div class=&quot;theorem&quot;&gt;
+  &lt;p&gt;(Moore-Penrose 广义逆). 给定矩阵 $A \in \mathbb R^{m \times n}$, 则存在唯一的矩阵 $A^+ \in \mathbb R^{n \times m}$, 满足&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$A A^+ A = A$,&lt;/li&gt;
+    &lt;li&gt;$A^+ A A^+ = A^+$,&lt;/li&gt;
+    &lt;li&gt;$(A A^+)^T = A A^+$,&lt;/li&gt;
+    &lt;li&gt;$(A^+ A)^T = A^+ A$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;若 $D$ 是可逆的对角矩阵, 容易证明 $\begin{pmatrix}D&amp;O \\ O&amp;O\end{pmatrix}^+ = \begin{pmatrix}D^{-1}&amp;O \\ O&amp;O\end{pmatrix}$.&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;$A^+$ 的存在性. 记 $A$ 的奇异值分解为 $A = U \Sigma V^T$. 则取 $A^+ = V \Sigma^+ U^T$ 即可.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;$A^+$ 的唯一性. 设 $B,C$ 都满足上述四个条件. 则&lt;/p&gt;
+        &lt;p&gt;$$\begin{aligned}
+   B &amp; = BAB\\
+   &amp; = A^TB^TB\\
+   &amp; = A^TC^TA^TB^TB\\
+   &amp; = A^TC^TBAB\\
+   &amp; = A^TC^TB\\
+   &amp; = CAB\\
+   &amp; = CB^TA^T\\
+   &amp; = CACB^TA^T\\
+   &amp; = CC^TA^TB^TA^T\\
+   &amp; = CC^TA^T\\
+   &amp; = CAC \quad = C.
+   \end{aligned}$$&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;proposition&quot;&gt;
+  &lt;p&gt;直接地, $A$ 的广义逆等于&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\lim_{t \to 0} (A^TA + tI)^{-1} A^T.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;备注.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;对 $A$ 作奇异值分解知, 以上极限存在.&lt;/li&gt;
+    &lt;li&gt;$(A^TA + tI)^{-1} A^T = A^T (AA^T + tI)^{-1}$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;以下性质容易验证.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;若 $A$ 可逆, 则 $A^+ = A^{-1}$.&lt;/li&gt;
+    &lt;li&gt;$(A^T)^+ = (A^+)^T$.&lt;/li&gt;
+    &lt;li&gt;$(A^+)^+ = A$.&lt;/li&gt;
+    &lt;li&gt;$AA^+$ 是投影矩阵, 投影至 $C(A)$; $I-AA^+$ 是投影矩阵, 投影至 $N(A^T)$.&lt;/li&gt;
+    &lt;li&gt;$A^+A$ 是投影矩阵, 投影至 $C(A^T)$; $I - A^+A$ 是投影矩阵, 投影至 $N(A)$.&lt;/li&gt;
+    &lt;li&gt;$(A \mid B)(A \mid B)^+$ 是投影矩阵, 列空间是 $C(A) + C(B)$.&lt;/li&gt;
+    &lt;li&gt;$2AA^T(AA^T+BB^T)^+BB^+$ 是投影矩阵, 列空间是 $C(A) \cap C(B)$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;回顾线性方程组 $Ax = b$.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;简要说明, 方程组有解当且仅当 $AA^+ b = b$.&lt;/li&gt;
+    &lt;li&gt;假定方程组有解, 则解必然形如 $A^+b + (I - A^+A)y$. 此处 $y$ 是任意向量.&lt;/li&gt;
+    &lt;li&gt;假定方程组有解, 则方程组有唯一解当且仅当 $A^+A = I$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-12-16T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW23-copy</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW23-copy</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>HW22</title>
           <description>&lt;h2 id=&quot;最小平方法&quot;&gt;最小平方法&lt;/h2&gt;
 
@@ -451,6 +671,148 @@ A = \begin{pmatrix}
           <pubDate>2025-12-09T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/HW21</link>
           <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW21</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>HW21-solu</title>
+          <description>&lt;h2 id=&quot;计算题训练&quot;&gt;计算题训练&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;求以下方程的所有解:&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+\begin{pmatrix}
+  2&amp;0\\1&amp;3
+\end{pmatrix}
+\cdot X = X \cdot 
+\begin{pmatrix}
+  1&amp;0&amp;2\\
+  -1&amp;1&amp;3\\
+  1&amp;-1&amp;1
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;提示: 通过适当的行列变换简化方阵, 同时将 $X$ 换元.&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;容易解出&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+X = \begin{pmatrix}
+  -2&amp;1&amp;-1\\
+  2&amp;-1&amp;1
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;求 $A$ 的特征多项式, 极小零化多项式. 以及向量 $v$ 的极小零化多项式 (极小的 $g$ 使得 $g(A)v = 0$).&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A = \begin{pmatrix}
+ 2&amp; -3&amp;  3&amp; -3\\
+ 2&amp; -4&amp;  6&amp; -3\\
+ 1&amp; -2&amp;  4&amp;  0\\
+-1&amp;  3&amp; -3&amp;  4
+\end{pmatrix},\quad v = \begin{pmatrix}
+  -1\\0\\1\\1
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;提示: 通过特征多项式与 $\dim (A - \lambda I)$ 猜出 Jordan 型, 再计算极小多项式. 研究 $\{v,Av,A^2v,\ldots\}$ 的线性相关性, 从而求出 $v$ 的极小零化多项式.&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;Jordan 型 $J_2(2) \oplus J_1 (1)^2$. 特征多项式 $(\lambda - 2)^2 (\lambda - 1)^2$. 极小多项式 $(\lambda - 2)^2 (\lambda - 1)$. 注意到&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+(v\mid Av \mid A^2 v) = \begin{pmatrix}
+-1 &amp; -2 &amp; -4\\
+0 &amp; -1 &amp; 4\\
+1 &amp; 3 &amp; 8 \\
+1 &amp; 2 &amp; 4
+\end{pmatrix},
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;因此 $(A^2-4A+4)v=0$. 故 $v$ 的极小零化多项式为 $(\lambda - 2)^2$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;作分解 $A = QR$, $$\begin{equation}
+A = \begin{pmatrix}
+  1&amp;1&amp;3&amp;2\\
+  2&amp;1&amp;5&amp;0\\
+  3&amp;4&amp;10&amp;1
+\end{pmatrix}.
+\end{equation}$$ 其中 $Q$ 是 $3\times 3$ 正交矩阵, $R$ 形如以下:&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+R =
+\begin{pmatrix}
+\ast_{&gt;0} &amp; \ast &amp; \ast &amp; \ast\\
+0 &amp; \ast_{&gt;0} &amp; \ast &amp; \ast\\
+0 &amp; 0 &amp; 0 &amp; \ast_{&gt;0}
+\end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;提示: 先通过列变换, 将 $A$ 分解作列正交矩阵 $Q'$ 与上三角矩阵 $R'$ 的乘积. 最后将 $Q'$ 化为正交矩阵.&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;记 $A = (v_1 \mid v_2 \mid v_3 \mid v_4)$ 直接地, $v_3 = 2\cdot v_1+v_2$. 下对 $(v_1 \mid v_2 \mid v_4)$ 作正交化.&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;计算得 $v_1 \perp (v_2 - \frac{15}{14}v_1)$;&lt;/li&gt;
+      &lt;li&gt;下计算 $a$ 与 $b$ 使得 $(v_4-av_1-bv_2) \perp \{v_1,v_2\}$. 直接地解出 $a = 0, b = \frac 13$. 因此 $(v_4 - \frac 13 v_2) \perp \{v_1, v_2 - \frac{15}{14}v_1\}$.&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;整合得&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+A = \begin{pmatrix}
+  1&amp;1&amp;3&amp;2\\
+  2&amp;1&amp;5&amp;0\\
+  3&amp;4&amp;10&amp;1
+\end{pmatrix} =
+\begin{pmatrix}
+  1&amp;-\frac{1}{14}&amp;\frac{5}{3}\\
+  2&amp;-\frac{8}{7}&amp;-\frac{1}{3}\\
+  3&amp;\frac{11}{14}&amp;-\frac{1}{3}
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+  1&amp;\frac{15}{14}&amp;\frac{43}{14}&amp;\frac{5}{14}\\
+  0&amp;1&amp;1&amp;\frac{1}{3}\\
+  0&amp;0&amp;0&amp;1
+\end{pmatrix} =: Q'R'.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;最后将 $Q'$ 化作正交矩阵&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+Q' = Q \cdot \text{diag}(\sqrt{14}, \sqrt{\frac{27}{14}}, \sqrt{3}).
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;往后略.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;将以下方阵分解成正交方阵 $Q$ 与对称矩阵 $S$ 的乘积, 即 $A = QS$. 其中&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A = \begin{pmatrix}
+3&amp; 6&amp;1&amp; 2\\
+3&amp; 0&amp;1&amp; 0\\
+1&amp; 2&amp;2&amp; 4\\
+1&amp; 0&amp;2&amp; 0
+\end{pmatrix}
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;提示: 以上方阵形如 $X \otimes Y$. 最后只需对两个 $2 \times 2$ 矩阵作极分解. 特别地, 极分解来自奇异值分解.&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;注意到 $$\begin{equation}
+A = \begin{pmatrix}
+3&amp;1\\
+1&amp;2
+\end{pmatrix} \otimes \begin{pmatrix}
+1&amp;2\\
+1&amp;0
+\end{pmatrix} =: X \otimes Y.
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;记 $Q_X S_X$ 与 $Q_Y S_Y$ 分别为 $X$ 与 $Y$ 的极分解. 由 $X$ 对称, $X$ 的极分解就是 $I\cdot X$. $S_Y$ 是 $Y^TY$ 唯一的正定平方根, 即&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\begin{pmatrix} 2&amp;2\\2&amp;4 \end{pmatrix} = \begin{pmatrix} 2\sqrt{\frac 25}&amp;\sqrt{\frac 25}\\\sqrt{\frac 25}&amp;3\sqrt{\frac 25} \end{pmatrix}^2
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;从而 $Q_Y = Y\cdot S_Y^{-1}$. 最终得 $A = (Q_X \otimes Q_Y) \cdot (S_X \otimes S_Y)$.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-12-09T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW21-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW21-solu</guid>
         </item>
       
     
