@@ -17,7 +17,7 @@
   &lt;li&gt;存在正交矩阵 $Q$, 使得 $A = Q\Lambda Q^T$, 其中 $\Lambda$ 是对角矩阵.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;对于复矩阵, 我们需要将正交相似应拓展至酉相似. 以上两个条件在复情形下不再等价, 分别对应 Hermit 矩阵 (更少) 和正规矩阵 (更多).&lt;/p&gt;
+&lt;p&gt;对于复矩阵, 我们需要将正交相似拓展至酉相似. 以上两个条件在复情形下不再等价, 分别对应 Hermit 矩阵 (更少) 和正规矩阵 (更多).&lt;/p&gt;
 
 &lt;p&gt;试完成去年习题: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-12-18-%E6%AD%A3%E8%A7%84%E7%9F%A9%E9%98%B5.pdf&quot;&gt;习题&lt;/a&gt;, &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-12-18-%E6%AD%A3%E8%A7%84%E7%9F%A9%E9%98%B5%20(%E8%A7%A3%E7%AD%94).pdf&quot;&gt;习题解答&lt;/a&gt;.&lt;/p&gt;
 </description>
