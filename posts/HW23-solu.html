@@ -9,7 +9,7 @@
 
 
 
-  <title>HW23
+  <title>HW23-solu
     ·
     Jekyll Latex</title>
 
@@ -23,7 +23,7 @@
 <link rel="icon" href="/MATH1205H-04-HW/assets/favicon.png">
 <link rel="apple-touch-icon" href="/MATH1205H-04-HW/assets/touch-icon.png">
 <link rel="stylesheet" href="/MATH1205H-04-HW/assets/core.css">
-<link rel="canonical" href="/MATH1205H-04-HW/posts/HW23">
+<link rel="canonical" href="/MATH1205H-04-HW/posts/HW23-solu">
 <link
   rel="alternate"
   type="application/atom+xml"
@@ -75,7 +75,7 @@ MathJax = {
   <!-- Main Content Column -->
   <article class="content-column">
     <div class="center">
-      <h1>HW23</h1>
+      <h1>HW23-solu</h1>
       <p class="author">
         Chenchen Zhang
         <br/>
@@ -86,31 +86,6 @@ MathJax = {
     <div class="divider"></div>
 
     <h2 id="投影矩阵">投影矩阵</h2>
-
-<h3 id="投影矩阵的性质">投影矩阵的性质</h3>
-
-<p>以下仅谈论实数域上的情况.</p>
-
-<div class="definition">
-  <p>(投影矩阵). 称 $P \in \mathbb R^{n \times n}$ 是投影矩阵, 若</p>
-  <p>$$\begin{equation}
-P^2 = P = P^T.
-\end{equation}$$</p>
-</div>
-
-<p>特别注意, 我们将满足 $P^2 = P$ 的矩阵称作幂等矩阵, 将满足 $P^2 = P = P^T$ 的矩阵称作投影矩阵. 有些地方将满足 $P^2 = P$ 的矩阵称作投影矩阵, 将满足 $P^2 = P = P^T$ 的矩阵称作正交幂等矩阵.</p>
-
-<div class="example">
-  <p>投影矩阵正交相似于一个对角矩阵, 其对角线元素仅为 $0$ 和 $1$.</p>
-</div>
-
-<div class="example">
-  <p>解释 $P^2 = P$ 与 $P = P^T$ 的含义.</p>
-  <ol>
-    <li>$P^2 = P$ 即 $P$ 幂等. 试想, 将向量 $v$ 投影到某子空间 $U$ 上, 则投影两次等于投影一次.</li>
-    <li>$P = P^T$ 即 $x^T(Py) = (Px)^Ty$ 恒成立. 试回顾中学课本对内积 $u\cdot v$ 的计算: 既可以计算 $u$ 在 $v$ 方向上的投影再乘以 $\|v\|$, 也可以计算 $v$ 在 $u$ 方向上的投影再乘以 $\|u\|$.</li>
-  </ol>
-</div>
 
 <div class="problem">
   <p>判断题 (假定所有矩阵是 $\mathbb R^{n \times n}$ 中的).</p>
@@ -126,6 +101,21 @@ P^2 = P = P^T.
     <li>若 $P$ 是投影矩阵, 则 $N(I - P) = C(P)$.</li>
     <li>若 $P$ 是投影矩阵, 则全空间具有直和分解 $N(P) \oplus C(P)$.</li>
   </ol>
+  <div class="solution">
+    <p>依次解答如下.</p>
+    <ol>
+      <li>正确. 直接验证.</li>
+      <li>错误. 比如 $\binom{0.5 \ 0.5}{0.5 \ 0.5}$.</li>
+      <li>正确. 投影矩阵的特征值只能是 $0$ 或 $1$, 因此行列式只能是 $0$ 或 $1$.</li>
+      <li>正确. 相似变换不改变迹. 依照实对称矩阵的正交相似对角化, 所有投影矩阵正交相似于某个对角矩阵, 其对角线元素为 $0$ 或 $1$. 因此迹等于 $1$ 的个数, 即列空间的维数.</li>
+      <li>正确. $P+Q = PP^T+QQ^T=(P\mid Q)(P \mid Q)^T$. 对实矩阵, $C(AA^T)=C(A)$.</li>
+      <li>正确. $N(P+Q) = N(PP^T+QQ^T) = N\binom {P^T}{Q^T} = N(P) \cap N(Q)$. 也可以对上一问的结论使用正交补.</li>
+      <li>错误. 反例: $P = \binom{1 \ 0}{0 \ 0}$, $Q = \binom{0.5 \ 0.5}{0.5 \ 0.5}$. 则 $C(PQ) = \{\binom k0\}$, 而 $C(P) \cap C(Q) = \{0\}$.</li>
+      <li>错误. 反例同上. 也可以对上一问的结论使用正交补.</li>
+      <li>正确. 由 $(I-P)Px = 0$ 知 $C(P) \subseteq (I - P)$. 另一方面, 若 $(I-P)x = 0$, 则 $x = Px \in C(P)$.</li>
+      <li>正确. 我们知道 $N(A) \oplus C(A^T)$ 总是直和分解. 结合 $P = P^T$ 即可.</li>
+    </ol>
+  </div>
 </div>
 
 <div class="problem">
@@ -136,155 +126,15 @@ P^2 = P = P^T.
     <li>$P$ 与 $Q$ 是投影矩阵, 但 $P+Q$ 未必是投影矩阵.</li>
     <li>$P_1, P_2, P_3$ 是投影矩阵, 满足 $P_1P_2 = P_2P_1$ 与 $P_2P_3 = P_3P_2$, 但未必有 $P_3P_1 = P_1P_3$.</li>
   </ol>
-</div>
-
-<div class="lemma">
-  <p>若 $P, Q$ 是投影矩阵, 则以下条件等价.</p>
-  <ol>
-    <li>$P+Q$ 是投影矩阵.</li>
-    <li>$PQ = O$.</li>
-    <li>$QP = O$.</li>
-    <li>$C(P) \perp C(Q)$.</li>
-  </ol>
-  <div class="proof">
-    <p>考虑转置, 2. 与 3. 等价. 式 $P^TQ = O$ 等价于 $C(P)\perp C(Q)$. 我们最后给出 $1 \leftrightarrow 2$ 的直接证明. <br /> ($2 \to 1$). 假定 $PQ = O$, 则 $QP = O$. 显然 $(P+Q)^T = P^T + Q^T = P + Q$. 同时</p>
-    <p>$$\begin{equation}
-(P+Q)^2 = P^2 + PQ + QP + Q^2 = P + O + O + Q.
-\end{equation}$$</p>
-    <p>这说明 $P+Q$ 是投影矩阵. <br /> ($1 \to 2$). 若 $P+Q$ 是投影矩阵, 则</p>
-    <p>$$\begin{equation}
-P^2 + Q^2 = P+Q = (P+Q)^2 = P^2 + PQ + QP + Q^2.
-\end{equation}$$</p>
-    <p>因此 $PQ =  -QP$. 注意到</p>
-    <p>$$\begin{equation}
-PQ = PPQ = - PQP = QQP = QP,
-\end{equation}$$</p>
-    <p>从而 $PQ=QP =O$. <br /> ($4 \to 2$). 设 $u \in C(Q)$, 则 $u = Qv$ 对某 $v$ 成立. 由于 $C(P) \perp C(Q)$, 故 $Pu \perp u$. 因此</p>
-  </div>
-</div>
-
-<div class="lemma">
-  <p>若 $P, Q$ 是投影矩阵, 则以下条件等价.</p>
-  <ol>
-    <li>$P-Q$ 是投影矩阵.</li>
-    <li>$PQ = Q$.</li>
-    <li>$QP = Q$.</li>
-    <li>$C(Q) \subseteq C(P)$.</li>
-    <li>$N(P) \subseteq N(Q)$.</li>
-    <li>$\|Px\| \geq \|Qx\|$ 对一切 $x$ 成立.</li>
-  </ol>
-  <div class="proof">
-    <p>前四条等价. 在 $P, Q$ 是投影矩阵的前提下, $P-Q$ 是投影矩阵当且仅当 $(I-P)+Q$ 是投影矩阵, 往后使用上一问的结论即可. 假设证明了判断题 $10$, 那么 $4$ 与 $5$ 等价. 最后证明 $6$ 与剩余条件等价. <br /> ($1 \to 6$). 若 $P-Q$ 是投影矩阵, 则</p>
-    <p>$$\begin{equation}
-\|Px\|^2 - \|Qx\|^2 = x^T(P^TP-Q^TQ)x = x^T(P-Q)x \geq 0
-\end{equation}$$</p>
-    <p>($6 \to 5$). 显然.</p>
-  </div>
-</div>
-
-<div class="lemma">
-  <p>若 $P, Q$ 是投影矩阵, 则以下条件等价.</p>
-  <ol>
-    <li>$PQ$ 是投影矩阵.</li>
-    <li>$PQ = QP$.</li>
-    <li>$P+Q-PQ$ 是投影矩阵.</li>
-  </ol>
-  <div class="proof">
-    <p>($2 \to 1$). 依定义直接验证即可. <br /> ($3 \to 2$). $PQ = (PQ)^T = Q^TP^T=QP$. <br /> ($1 \to 3$). 若 $PQ$ 是投影矩阵, 则 $PQ = (PQ)^T =QP$. 依照 $P^2=P$, $Q^2=Q$ 以及 $PQ=QP$, 可化简下式:</p>
-    <p>$$\begin{equation}
-(P+Q - PQ)^2 = \cdots = P+Q - PQ
-\end{equation}$$</p>
-    <p>以及有</p>
-    <p>$$\begin{equation}
-(P+Q - PQ)^T = P^T + Q^T - (PQ)^T = P + Q - PQ.
-\end{equation}$$</p>
-    <p>因此, $P+Q - PQ$ 是投影矩阵.</p>
-  </div>
-</div>
-
-<h3 id="投影矩阵与子空间">投影矩阵与子空间</h3>
-
-<div class="theorem">
-  <p>以下是双射</p>
-  <p>$$\begin{equation}
-\mathbb R^{n\times n}\ \text{中的投影矩阵} \to \mathbb R^n\ \text{的子空间}, \quad P \mapsto C(P).
-\end{equation}$$</p>
-  <div class="proof">
-    <p>只需给出以上映射的逆. 即证, 给定子空间 $U$, 则存在唯一的投影矩阵 $P$ 使得 $C(P) = U$.</p>
+  <div class="solution">
+    <p>依次给出反例如下.</p>
     <ol>
-      <li>
-        <p>(存在性). 存在 $U$ 的标准正交基 $\{u_1, u_2, \ldots, u_k\}$. 此时,</p>
-        <p>$$\begin{equation}
-   (u_1 \mid \cdots \mid u_k) \cdot (u_1 \mid \cdots \mid u_k)^T
-   \end{equation}$$</p>
-        <p>是以 $U$ 为列空间的投影矩阵.</p>
-      </li>
-      <li>
-        <p>(唯一性). 设 $P, Q$ 是投影矩阵, 且 $C(P) = C(Q) = U$. 将上述 $U$ 的标准正交基扩展为 $\mathbb R^n$ 的标准正交基 $\{u_1, \ldots, u_n\}$, 则恒有 $Pu_i = Qu_i$. 这说明 $P = Q$.</p>
-      </li>
+      <li>一阶矩阵 $A = (2)$ 仅满足 $A=A^T$. 矩阵 $B = \binom{1 \ 1}{0 \ 0}$ 仅满足 $B^2 = B$. 三阶轮换矩阵 $C = \begin{pmatrix}0 & 1 & 0\\ 0 & 0 & 1\\ 1 & 0 & 0\end{pmatrix}$ 仅满足 $C^2 = C^T$.</li>
+      <li>取 $P = \binom{1 \ 0}{0 \ 0}$, $Q = \binom{0.5 \ 0.5}{0.5 \ 0.5}$.</li>
+      <li>取 $P = Q \neq O$.</li>
+      <li>任取 $P_1P_3 \neq P_3P_1$, 以及 $P_2 = O$.</li>
     </ol>
   </div>
-</div>
-
-<p>这说明, 子空间与投影矩阵一一对应.</p>
-
-<h3 id="moore-penrose-广义逆">Moore-Penrose 广义逆</h3>
-
-<div class="theorem">
-  <p>(Moore-Penrose 广义逆). 给定矩阵 $A \in \mathbb R^{m \times n}$, 则存在唯一的矩阵 $A^+ \in \mathbb R^{n \times m}$, 满足</p>
-  <ol>
-    <li>$A A^+ A = A$,</li>
-    <li>$A^+ A A^+ = A^+$,</li>
-    <li>$(A A^+)^T = A A^+$,</li>
-    <li>$(A^+ A)^T = A^+ A$.</li>
-  </ol>
-  <div class="proof">
-    <p>若 $D$ 是可逆的对角矩阵, 容易证明 $\begin{pmatrix}D&O \\ O&O\end{pmatrix}^+ = \begin{pmatrix}D^{-1}&O \\ O&O\end{pmatrix}$.</p>
-    <ol>
-      <li>$A^+$ 的存在性. 记 $A$ 的奇异值分解为 $A = U \Sigma V^T$. 则取 $A^+ = V \Sigma^+ U^T$ 即可.</li>
-      <li>
-        <p>$A^+$ 的唯一性. 设 $B,C$ 都满足上述四个条件. 则</p>
-        <p>$$\begin{aligned}
-   B & = BAB\\
-   & = A^TB^TB\\
-   & = A^TC^TA^TB^TB\\
-   & = A^TC^TBAB\\
-   & = A^TC^TB\\
-   & = CAB\\
-   & = CB^TA^T\\
-   & = CACB^TA^T\\
-   & = CC^TA^TB^TA^T\\
-   & = CC^TA^T\\
-   & = CAC \quad = C.
-   \end{aligned}$$</p>
-      </li>
-    </ol>
-  </div>
-</div>
-
-<div class="proposition">
-  <p>直接地, $A$ 的广义逆等于</p>
-  <p>$$\begin{equation}
-\lim_{t \to 0} (A^TA + tI)^{-1} A^T.
-\end{equation}$$</p>
-  <p>备注.</p>
-  <ol>
-    <li>对 $A$ 作奇异值分解知, 以上极限存在.</li>
-    <li>$(A^TA + tI)^{-1} A^T = A^T (AA^T + tI)^{-1}$.</li>
-  </ol>
-</div>
-
-<div class="example">
-  <p>以下性质容易验证.</p>
-  <ol>
-    <li>若 $A$ 可逆, 则 $A^+ = A^{-1}$.</li>
-    <li>$(A^T)^+ = (A^+)^T$.</li>
-    <li>$(A^+)^+ = A$.</li>
-    <li>$AA^+$ 是投影矩阵, 投影至 $C(A)$; $I-AA^+$ 是投影矩阵, 投影至 $N(A^T)$.</li>
-    <li>$A^+A$ 是投影矩阵, 投影至 $C(A^T)$; $I - A^+A$ 是投影矩阵, 投影至 $N(A)$.</li>
-    <li>$(A \mid B)(A \mid B)^+$ 是投影矩阵, 列空间是 $C(A) + C(B)$.</li>
-    <li>$2AA^T(AA^T+BB^T)^+BB^+$ 是投影矩阵, 列空间是 $C(A) \cap C(B)$.</li>
-  </ol>
 </div>
 
 <div class="problem">
@@ -294,6 +144,14 @@ PQ = PPQ = - PQP = QQP = QP,
     <li>假定方程组有解, 则解必然形如 $A^+b + (I - A^+A)y$. 此处 $y$ 是任意向量.</li>
     <li>假定方程组有解, 则方程组有唯一解当且仅当 $A^+A = I$.</li>
   </ol>
+  <div class="solution">
+    <p>依次解答如下.</p>
+    <ol>
+      <li>$A^+A$ 是向 $C(A)$ 的投影矩阵. 因此 $A^+A b = b$ 等价于 $b \in C(A)$, 即方程组有解.</li>
+      <li>设 $x_0$ 是某个解. 则任意解可表示为 $x_0 + N(A)$. 注意到 $N(A) = N(A^+A) = C(I - A^+A)$.</li>
+      <li>方程组有唯一解当且仅当 $N(A) = \{0\}$, 即 $A^+A$ 是满秩的投影矩阵, 即 $I$.</li>
+    </ol>
+  </div>
 </div>
 
   </article>
@@ -399,57 +257,6 @@ document.addEventListener('DOMContentLoaded', function() {
       </a>
     </div>
   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-3">
-      <a href="#投影矩阵的性质">
-        <span class="toc-number">1.1.</span>
-        <span class="toc-title">投影矩阵的性质</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-3">
-      <a href="#投影矩阵与子空间">
-        <span class="toc-number">1.2.</span>
-        <span class="toc-title">投影矩阵与子空间</span>
-      </a>
-    </div>
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="toc-row toc-level-3">
-      <a href="#moore-penrose-广义逆">
-        <span class="toc-number">1.3.</span>
-        <span class="toc-title">Moore-Penrose 广义逆</span>
-      </a>
-    </div>
-  
 </nav>
   </div>
 
@@ -499,13 +306,13 @@ document.addEventListener('DOMContentLoaded', function() {
   <!-- Navigation (below both columns) -->
   <div class="page-navigation">
     
-      <a class="next" href="/MATH1205H-04-HW/posts/HW24" title="NEXT: HW24">&lt;&lt;</a>
+      <a class="next" href="/MATH1205H-04-HW/posts/HW23" title="NEXT: HW23">&lt;&lt;</a>
       <span>&middot;</span>
     
     <a class="home" href="/MATH1205H-04-HW/" title="Back to Homepage">Home</a>
     
       <span>&middot;</span>
-      <a class="prev" href="/MATH1205H-04-HW/posts/HW23-solu" title="PREV: HW23-solu">&gt;&gt;</a>
+      <a class="prev" href="/MATH1205H-04-HW/posts/HW22" title="PREV: HW22">&gt;&gt;</a>
     
   </div>
 </main>
