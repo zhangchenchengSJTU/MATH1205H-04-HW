@@ -216,6 +216,142 @@ PAP^{-1} = \begin{pmatrix}I_m &amp; O \\ O &amp; -I_m\end{pmatrix},\quad PBP^{-1
     
       
         <item>
+          <title>HW25-solu</title>
+          <description>&lt;h2 id=&quot;线性空间巩固&quot;&gt;线性空间巩固&lt;/h2&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;定义数列空间的左移与右移映射:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$L: \mathbb C[[x]] \to \mathbb C[[x]],\quad (x_0,x_1,\ldots ) \mapsto (x_1,x_2,\ldots)$;&lt;/li&gt;
+    &lt;li&gt;$R: \mathbb C[[x]] \to \mathbb C[[x]],\quad (x_0,x_1,\ldots ) \mapsto (0,x_0,x_1,\ldots)$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;试解决以下问题 (主要是 4, 5 两题).&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;试说明, $L$ 满而不单, $R$ 单而不满.       &lt;ul&gt;
+        &lt;li&gt;这告诉我们, 对无限维线性空间的自同态, 单/满/同构未必等价!&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;试说明, $L$ 与 $R$ 也是 $\mathbb C[x] \to \mathbb C[x]$ 的线性映射. 换言之, 子空间 $\mathbb C[x] \subseteq \mathbb C[[x]]$ 是 $L$ 与 $R$ 的不变子空间.&lt;/li&gt;
+    &lt;li&gt;记 $id$ 是恒等映射. 试说明, $L R = id$, 但 $R L \neq id$.       &lt;ul&gt;
+        &lt;li&gt;这告诉我们, 若无限维线性空间的自同态有左逆, 则不一定有右逆 (反之亦然).&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;求 $L$ 与 $R$ 的特征对, 以及特征空间的维数.       &lt;ul&gt;
+        &lt;li&gt;这告诉我们, 无限维线性空间的线性映射未必有特征值, 即便是在复数域上.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;(1), (2) 与 (3) 直接可证. &lt;br /&gt; (4). 设 $\lambda$ 是 $L$ 的一个特征值, 则存在非零数列 $(x_0,x_1,\ldots)$ 使得&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\lambda (x_0,x_1,\ldots) = L(x_0,x_1,\ldots) = (x_1,x_2,\ldots).
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;从而 $x$ 是以 $\lambda$ 为公比的等比数列. 这说明所有 $\lambda \in \mathbb C$ 都是 $L$ 的特征值, 且对应的特征向量是&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+(x_0, \lambda x_0, \lambda^2 x_0, \ldots) \quad (x_0 \neq 0).
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;设 $\mu$ 是 $R$ 的一个特征值, 则存在非零数列 $(y_0,y_1,\ldots)$ 使得&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\mu (y_0,y_1,\ldots) = R(y_0,y_1,\ldots) = (0,y_0,y_1,\ldots).
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;上式的解只能是零数列, 因此 $R$ 没有特征值.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;记 $V$ 是收敛实数列构成的空间, 则 $\mathbb R[x] \subseteq V \subseteq \mathbb R[[x]]$. 请找一个单而不满的线性映射 $\varphi : V \to V$ 与一个满而不单的线性映射 $\psi : V \to V$, 使得 $\varphi + \psi$ 是双射.&lt;/p&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;记 $V_0$ 是收敛至 $0$ 的数列构成的子空间. 容易验证 $V_0$ 是左移算子 $L$ 的不变子空间, 且 $L|_{V_0} : V_0 \to V_0$ 是满而不单的线性映射. 下证明 $1_{V_0} - L|_{V_0}$ 是单而不满的线性映射.&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;(单). 假定 $(1_{V_0} - L|_{V_0})(x) = 0$, 则 $x$ 是常数数列. 由于 $x \in V_0$, 故 $x$ 是零数列.&lt;/li&gt;
+      &lt;li&gt;(不满). 容易计算 $(1_{V_0} - L|_{V_0})(x) = (1,\frac 12, \frac 13, \ldots)$ 没有原像, 因为 $\sum _{n\geq 1} \frac{1}{n} = \infty$.&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;以下公式的检验较为无聊, 供查漏补缺用.&lt;/p&gt;
+
+&lt;div class=&quot;example&quot;&gt;
+  &lt;p&gt;以下的线性空间都是某个给定线性空间的子空间. 视个人偏好完成.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;给定一族以指标集 $I$ 标记的 $\{U_i\}_{i \in I}$, 则 $\bigcap_{i \in I} U_i$ 也是子空间.&lt;/li&gt;
+    &lt;li&gt;给定一族以指标集 $I$ 标记的 $\{U_i\}_{i \in I}$, 则 $\bigcup_{I_0 \subseteq I} (\sum _{i \in I_0}U_i)$ 也是子空间. 此处 $I_0$ 取遍 $I$ 的有限子集.&lt;/li&gt;
+    &lt;li&gt;给定子空间 $U_1 \subseteq U_2 \subseteq \cdots$, 则 $\bigcup_{i=1}^{\infty} U_i$ 也是子空间.&lt;/li&gt;
+    &lt;li&gt;给定子空间 $U_1 \subseteq U_2 \subseteq \cdots$, 则 $V \cap (\bigcup_{i=1}^{\infty} U_i) = \bigcup_{i=1}^\infty (V \cap U_i)$.&lt;/li&gt;
+    &lt;li&gt;给定子空间 $U_1 \supseteq U_2 \supseteq \cdots$, 则 $V + (\bigcap_{i=1}^{\infty} U_i) \subseteq \bigcap_{i=1}^\infty (V + U_i)$. 找一个无法取等号的例子. (提示: 可从数列空间入手.)&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;solution&quot;&gt;
+    &lt;p&gt;仅给出 (5) 的例子. 取 $V$ 为数列空间, $R$ 为右移算子, $V_{00}$ 为有限项非零项数列构成的子空间. 换言之, $V \cong \mathbb R[[x]]$, $V_{00} \cong \mathbb R[x]$. 记 $U_{i+1} = L(U_i)$. 则 $\bigcap _{i=1}^\infty U_i = 0$; 对任意 $i$, 总有 $V_{00} + U_i = V$. 因此, (5) 中的等号无法成立.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;假定 $f : U \to V$ 是线性映射, $U', U''$ 是 $U$ 的子空间, $V', V''$ 是 $V$ 的子空间. 试证明以下命题.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$U' \subseteq f^{-1}(f(U'))$;&lt;/li&gt;
+    &lt;li&gt;$f(f^{-1}(V')) \subseteq V'$;&lt;/li&gt;
+    &lt;li&gt;$f (f^{-1} (f (U'))) = f(U')$;&lt;/li&gt;
+    &lt;li&gt;$f^{-1} (f (f^{-1} (V'))) = f^{-1} (V')$;&lt;/li&gt;
+    &lt;li&gt;$f(U' + U'') = f(U') + f(U'')$;&lt;/li&gt;
+    &lt;li&gt;$f^{-1}(V' \cap V'') = f^{-1}(V') \cap f^{-1}(V'')$;&lt;/li&gt;
+    &lt;li&gt;$f((f^{-1}(V')) \cap U') = V' \cap f(U')$;&lt;/li&gt;
+    &lt;li&gt;$f^{-1}((f(U')) + V') = U' + f^{-1}(V')$;&lt;/li&gt;
+    &lt;li&gt;$f (f^{-1}(U' \oplus U'')) = f (f^{-1}(U')) \oplus f (f^{-1}(U''))$;&lt;/li&gt;
+    &lt;li&gt;$f^{-1} (f (V' \oplus V'')) = f^{-1} (f (V')) \oplus f^{-1} (f (V''))$.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;假定矩阵 $A, B \in \mathbb Q^{2m \times 2m}$ 满足&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+A^2 = B^2 = I_{2m},\quad AB+BA = O_{2m}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;试证明, 存在可逆矩阵 $P$ 使得&lt;/p&gt;
+  &lt;p&gt;$$\begin{equation}
+PAP^{-1} = \begin{pmatrix}I_m &amp; O \\ O &amp; -I_m\end{pmatrix},\quad PBP^{-1} = \begin{pmatrix}O&amp;I_m \\ I_m &amp; O \end{pmatrix}.
+\end{equation}$$&lt;/p&gt;
+  &lt;p&gt;提示: 说明 $A$ 可对角化, 选用合适的基变换.&lt;/p&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;$A$ 与 $B$ 的某个零化多项式 $(x-1)(x+1)$ 可分解成无重根的一次因式的乘积, 从而可以对角化. 由 $AB+BA = O$, 若 $(\lambda , v )$ 是 $A$ 的一个特征对, 则 $(- \lambda, Bv)$ 是 $A$ 的特征对. 因此&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;$A$ 的特征值是 $1$ 与 $-1$, 其重数相同.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;记 $(v_1 \mid \cdots \mid v_m)$ 是 $N(I - A)$ 的一组基. 此时, $P^{-1}:= (v_1\mid \cdots \mid v_m \mid Bv_1 \mid \cdots \mid Bv_m)$ 即为所求.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;problem&quot;&gt;
+  &lt;p&gt;假定 $U \xrightarrow f V \xrightarrow g W$ 是有限维线性空间的线性映射. 证明以下问题.&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;$\dim f(U) + \dim g(V) \leq \dim g(f(U)) + \dim V$.&lt;/li&gt;
+    &lt;li&gt;$\dim f^{-1}(0) \leq \dim (g\circ f)^{-1}(0) \leq \dim g^{-1}(0) + \dim f^{-1}(0)$.&lt;/li&gt;
+    &lt;li&gt;$\dim (g\circ f)(U) \leq \min (\dim g(V), \dim f(U))$.&lt;/li&gt;
+    &lt;li&gt;$g^{-1}(g(f(U))) = f(U) + g^{-1}(0)$.&lt;/li&gt;
+    &lt;li&gt;$f(f^{-1}(g^{-1}(0))) = f(U) \cap g^{-1}(0)$.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div class=&quot;proof&quot;&gt;
+    &lt;p&gt;(1). 依照定理,&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;$\dim V - \dim g(V)$ 是 $g^{-1}(0)$ 的维数;&lt;/li&gt;
+      &lt;li&gt;$\dim f(U) - \dim g(f(U))$ 是 $(g|_{f(U)})^{-1}(0)$ 的维数.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;后者不大于前者. &lt;br /&gt; (2). 往去向处复合线性映射, 不会减小零空间. 因此, $\dim f^{-1}(0) \leq \dim (g\circ f)^{-1}(0)$. 另一方面, 考虑满射&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+f|_{(gf)^{-1}(0)}: (gf)^{-1}(0) \to g^{-1}(0),\quad u \mapsto f(u).
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;因此&lt;/p&gt;
+    &lt;p&gt;$$\begin{equation}
+\dim (gf)^{-1}(0) - \dim g^{-1}(0) = \dim (f|_{(gf)^{-1}(0)})^{-1}(0) \leq \dim f^{-1}(0).
+\end{equation}$$&lt;/p&gt;
+    &lt;p&gt;(3). 由 $(gf)(U) \subseteq g(U)$, 得 $\dim (gf)(U) \leq \dim g(V)$. 由 $(gf)(U) = g(f(U))$, 得 $\dim (gf)(U) \leq \dim f(U)$. &lt;br /&gt; (4,5). 直接取元素验证即可.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>2025-12-23T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW25-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW25-solu</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Exersice Class 14</title>
           <description>&lt;h2 id=&quot;files&quot;&gt;Files&lt;/h2&gt;
 
@@ -701,6 +837,28 @@ PAP^{-1} = \begin{pmatrix}I_m &amp; O \\ O &amp; -I_m\end{pmatrix},\quad PBP^{-1
           <pubDate>2025-12-18T00:00:00+08:00</pubDate>
           <link>http://localhost:4000/MATH1205H-04-HW/posts/HW24</link>
           <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW24</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>HW24-solu</title>
+          <description>&lt;h2 id=&quot;正规矩阵&quot;&gt;正规矩阵&lt;/h2&gt;
+
+&lt;p&gt;正规矩阵是实对称矩阵在复数域上的推广. 试回忆, 以下两个关于实矩阵 $A$ 的论断等价:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;$A = A^T$, 即 $A$ 是实对称矩阵;&lt;/li&gt;
+  &lt;li&gt;存在正交矩阵 $Q$, 使得 $A = Q\Lambda Q^T$, 其中 $\Lambda$ 是对角矩阵.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;对于复矩阵, 我们需要将正交相似拓展至酉相似. 以上两个条件在复情形下不再等价, 分别对应 Hermit 矩阵 (更少) 和正规矩阵 (更多).&lt;/p&gt;
+
+&lt;p&gt;试完成去年习题: &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-12-18-%E6%AD%A3%E8%A7%84%E7%9F%A9%E9%98%B5.pdf&quot;&gt;习题&lt;/a&gt;, &lt;a href=&quot;https://zhangchenchengsjtu.github.io/MATH1205H-04-HW/assets/PDF/2025-12-18-%E6%AD%A3%E8%A7%84%E7%9F%A9%E9%98%B5%20(%E8%A7%A3%E7%AD%94).pdf&quot;&gt;习题解答&lt;/a&gt;.&lt;/p&gt;
+</description>
+          <pubDate>2025-12-18T00:00:00+08:00</pubDate>
+          <link>http://localhost:4000/MATH1205H-04-HW/posts/HW24-solu</link>
+          <guid isPermaLink="true">http://localhost:4000/MATH1205H-04-HW/posts/HW24-solu</guid>
         </item>
       
     
